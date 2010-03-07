@@ -124,9 +124,13 @@ href="#ref-WA1">WA1</a>]</cite> to define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#inter-element-whitespace"><dfn>inter-element whitespace</dfn></a>,
 
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handler-content-attributes"><dfn>event handler content attributes</dfn></a>,
+
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#url"><dfn>URL</dfn></a>,
+
 and
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#url"><dfn>URL</dfn></a>.
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#absolute-url"><dfn>absolute URL</dfn></a>.
 
 </div>
 
@@ -224,6 +228,81 @@ official reference material, <var>a</var>'s expected usage in that
 material should be formalized as requirements.
 
 </ol>
+
+</div>
+
+<div class=section>
+<h2>Obsolete HTML elements and attributes</h2>
+
+<div class=section>
+<h3>Scripting</h3>
+
+<p>Requirements for the <code
+title=attr-script-language>language</code> attribute is defined in Web
+Applications 1.0 specification, as an obsolete but conforming feature.
+
+<p class=ed>XXX <code title=attr-script-for>for</code> attribute<!--
+WA1 UA reqs -->
+
+<p>If the <code title>name</code> attribute of an <code>applet</code>
+or <code>img</code> element is present, they <em
+class=rfc2119>MUST</em> be treated as if the element were an
+<code>a</code> element for the purpose of conformance checking.  <!--
+WA1 UA reqs
+e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
+HTML4 -->
+
+</div>
+
+<div class=section>
+<h3>Embedded contents</h3>
+
+<p>If the <code title=attr-object-classid>classid</code> attribute of
+an <code>object</code> element is present, its value <em
+class=rfc2119>MUST NOT</em> be the empty string and <em
+class=rfc2119>MUST</em> be an <span>absolute URL</span>.<!-- WA1 UA
+reqs and HTML4 def -->
+
+<p>The following attributes of the <code>frameset</code> element <a
+href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handlers-on-elements,-document-objects,-and-window-objects">are</a>
+<span>event handler content attributes</span>:
+
+<!-- This is normatively defined in WA1 in fact. -->
+<code title=handler-window-onafterprint>onafterprint</code>,
+<code title=handler-window-onbeforeprint>onbeforeprint</code>,
+<code title=handler-window-onbeforeunload>onbeforeunload</code>,
+<code title=handler-window-onblur>onblur</code>,
+<code title=handler-window-onerror>onerror</code>,
+<code title=handler-window-onfocus>onfocus</code>,
+<code title=handler-window-onhashchange>onhashchange</code>,
+<code title=handler-window-onload>onload</code>,
+<code title=handler-window-onmessage>onmessage</code>,
+<code title=handler-window-onoffline>onoffline</code>,
+<code title=handler-window-onpagehide>onpagehide</code>,
+<code title=handler-window-onpageshow>onpageshow</code>,
+<code title=handler-window-onpopstate>onpopstate</code>,
+<code title=handler-window-onredo>onredo</code>,
+<code title=handler-window-onresize>onresize</code>,
+<code title=handler-window-onstorage>onstorage</code>,
+<code title=handler-window-onundo>onundo</code>, and
+<code title=handler-window-onunload>onunload</code>.
+
+</div>
+
+<div class=section>
+<h3>Forms</h3>
+
+<p>If the <code title=attr-isindex-prompt>prompt</code> attribute of
+an <code>isindex</code> element is present, its value <em
+class=rfc2119>MAY</em> be any string.<!-- WA1 parsing -->
+
+<p>If the <code title=attr-isindex-action>action</code> attribute of
+an <code>isindex</code> element is present, its value <em
+class=rfc2119>MUST</em> obey the requirements for the <code
+title=attr-fs-action>action</code> attribute of the <code>form</code>
+element.<!-- WA1 parsing -->
+
+</div>
 
 </div>
 

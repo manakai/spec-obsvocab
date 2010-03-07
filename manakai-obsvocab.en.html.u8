@@ -67,6 +67,11 @@ version of the document is the only normative version.</p>
    <li><a href=#namespaces><span class=secno>2.3 </span>Namespaces</a></li></ol></li>
  <li><a href=#how-to-define-conformance-requirements-for-non-conforming-elements-and-attributes><span class=secno>3 </span>How to define conformance requirements for non-conforming elements
 and attributes</a></li>
+ <li><a href=#obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</a>
+  <ol>
+   <li><a href=#scripting><span class=secno>4.1 </span>Scripting</a></li>
+   <li><a href=#embedded-contents><span class=secno>4.2 </span>Embedded contents</a></li>
+   <li><a href=#forms><span class=secno>4.3 </span>Forms</a></li></ol></li>
  <li><a class=no-num href=#references>References</a>
   <ol>
    <li><a class=no-num href=#normative-references>Normative references</a></li></ol></li></ol>
@@ -125,9 +130,13 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#inter-element-whitespace><dfn id=inter-element-whitespace>inter-element whitespace</dfn></a>,
 
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handler-content-attributes><dfn id=event-handler-content-attributes>event handler content attributes</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#url><dfn id=url>URL</dfn></a>,
+
 and
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#url><dfn id=url>URL</dfn></a>.
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#absolute-url><dfn id=absolute-url>absolute URL</dfn></a>.
 
 </p></div>
 
@@ -223,6 +232,73 @@ official reference material, <var>a</var>'s expected usage in that
 material should be formalized as requirements.
 
 </li></ol>
+
+</div>
+
+<div class=section>
+<h2 id=obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</h2>
+
+<div class=section>
+<h3 id=scripting><span class=secno>4.1 </span>Scripting</h3>
+
+<p>Requirements for the <code title=attr-script-language>language</code> attribute is defined in Web
+Applications 1.0 specification, as an obsolete but conforming feature.
+
+</p><p class=ed>XXX <code title=attr-script-for>for</code> attribute<!--
+WA1 UA reqs -->
+
+</p><p>If the <code title="">name</code> attribute of an <code>applet</code>
+or <code>img</code> element is present, they <em class=rfc2119>MUST</em> be treated as if the element were an
+<code>a</code> element for the purpose of conformance checking.  <!--
+WA1 UA reqs
+e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
+HTML4 -->
+
+</p></div>
+
+<div class=section>
+<h3 id=embedded-contents><span class=secno>4.2 </span>Embedded contents</h3>
+
+<p>If the <code title=attr-object-classid>classid</code> attribute of
+an <code>object</code> element is present, its value <em class=rfc2119>MUST NOT</em> be the empty string and <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>.<!-- WA1 UA
+reqs and HTML4 def -->
+
+</p><p>The following attributes of the <code>frameset</code> element <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handlers-on-elements,-document-objects,-and-window-objects>are</a>
+<a href=#event-handler-content-attributes>event handler content attributes</a>:
+
+<!-- This is normatively defined in WA1 in fact. -->
+<code title=handler-window-onafterprint>onafterprint</code>,
+<code title=handler-window-onbeforeprint>onbeforeprint</code>,
+<code title=handler-window-onbeforeunload>onbeforeunload</code>,
+<code title=handler-window-onblur>onblur</code>,
+<code title=handler-window-onerror>onerror</code>,
+<code title=handler-window-onfocus>onfocus</code>,
+<code title=handler-window-onhashchange>onhashchange</code>,
+<code title=handler-window-onload>onload</code>,
+<code title=handler-window-onmessage>onmessage</code>,
+<code title=handler-window-onoffline>onoffline</code>,
+<code title=handler-window-onpagehide>onpagehide</code>,
+<code title=handler-window-onpageshow>onpageshow</code>,
+<code title=handler-window-onpopstate>onpopstate</code>,
+<code title=handler-window-onredo>onredo</code>,
+<code title=handler-window-onresize>onresize</code>,
+<code title=handler-window-onstorage>onstorage</code>,
+<code title=handler-window-onundo>onundo</code>, and
+<code title=handler-window-onunload>onunload</code>.
+
+</p></div>
+
+<div class=section>
+<h3 id=forms><span class=secno>4.3 </span>Forms</h3>
+
+<p>If the <code title=attr-isindex-prompt>prompt</code> attribute of
+an <code>isindex</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- WA1 parsing -->
+
+</p><p>If the <code title=attr-isindex-action>action</code> attribute of
+an <code>isindex</code> element is present, its value <em class=rfc2119>MUST</em> obey the requirements for the <code title=attr-fs-action>action</code> attribute of the <code>form</code>
+element.<!-- WA1 parsing -->
+
+</p></div>
 
 </div>
 
