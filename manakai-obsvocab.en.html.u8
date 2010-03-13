@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 7 March 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 13 March 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -69,9 +69,15 @@ version of the document is the only normative version.</p>
 and attributes</a></li>
  <li><a href=#obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</a>
   <ol>
-   <li><a href=#scripting><span class=secno>4.1 </span>Scripting</a></li>
-   <li><a href=#embedded-contents><span class=secno>4.2 </span>Embedded contents</a></li>
-   <li><a href=#forms><span class=secno>4.3 </span>Forms</a></li></ol></li>
+   <li><a href=#flow-content><span class=secno>4.1 </span>Flow content</a></li>
+   <li><a href=#phrasing-content><span class=secno>4.2 </span>Phrasing content</a></li>
+   <li><a href=#embedded-content><span class=secno>4.3 </span>Embedded content</a></li>
+   <li><a href=#scripting><span class=secno>4.4 </span>Scripting</a></li>
+   <li><a href=#forms><span class=secno>4.5 </span>Forms</a></li>
+   <li><a href=#boxes-and-alignments><span class=secno>4.6 </span>Boxes and alignments</a></li>
+   <li><a href=#background-images-and-colors><span class=secno>4.7 </span>Background images and colors</a></li>
+   <li><a href=#line-breaks><span class=secno>4.8 </span>Line breaks</a></li>
+   <li><a href=#fonts><span class=secno>4.9 </span>Fonts</a></li></ol></li>
  <li><a class=no-num href=#references>References</a>
   <ol>
    <li><a class=no-num href=#normative-references>Normative references</a></li></ol></li></ol>
@@ -87,8 +93,8 @@ and attributes</a></li>
 normative">[<a href=#ref-WA1>WA1</a>]</cite> defines the language
 vocabulary of HTML, i.e. a set of conforming HTML elements and
 attributes.  Any other elements and attributes are non-conforming
-unless otherwise defined by an <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications>applicable
-specification</a>.  In particular, the Web Applications 1.0
+unless otherwise defined by <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications>applicable
+specifications</a>.  In particular, the Web Applications 1.0
 specification identifies a number of non-conforming elements and
 attributes as <i>obsolete</i>.  It does not define any specific
 conformance requirement for such elements and attributes, as the use
@@ -128,15 +134,35 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 </p><p>Web Applications 1.0 defines the terms
 
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#ascii-case-insensitive><dfn id=ascii-case-insensitive>ASCII case-insensitive</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-namespace-0><dfn id=html-namespace>HTML namespace</dfn></a>,
+
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative integer"><dfn id=valid-non-negative-integer>valid non-negative integer</dfn></a>,
+
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#inter-element-whitespace><dfn id=inter-element-whitespace>inter-element whitespace</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#boolean-attribute><dfn id=boolean-attribute>boolean attribute</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#enumerated-attribute><dfn id=enumerated-attribute>enumerated attribute</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handler-content-attributes><dfn id=event-handler-content-attributes>event handler content attributes</dfn></a>,
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#url><dfn id=url>URL</dfn></a>,
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-url><dfn id=valid-url>valid URL</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-empty-url><dfn id=valid-non-empty-url>valid non-empty URL</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#absolute-url><dfn id=absolute-url>absolute URL</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-pixel-length-property><dfn id=maps-to-pixel-length-property>maps to pixel length property</dfn></a>,
 
 and
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#absolute-url><dfn id=absolute-url>absolute URL</dfn></a>.
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-dimension-property><dfn id=maps-to-dimension-property>maps to dimension property</dfn></a>.
+
+</p><p>The term <dfn id=valid-dimension-value>valid dimension value</dfn> is <a href="http://html5.org/tools/web-apps-tracker?from=2749&amp;to=2750">defined
+in a commented out paragraph</a> of the Web Applications 1.0
+specification.
 
 </p></div>
 
@@ -183,10 +209,7 @@ specification.
 <div class=section>
 <h3 id=namespaces><span class=secno>2.3 </span>Namespaces</h3>
 
-<p>The <dfn id=html-namespace>HTML namespace</dfn> is
-<code>http://www.w3.org/1999/xhtml</code>.
-
-</p><p>Except where otherwise stated, all elements defined or mentioned in
+<p>Except where otherwise stated, all elements defined or mentioned in
 this specification are in the <a href=#html-namespace>HTML namespace</a>, and all
 attributes deinfed or mentioned in this specification have no
 namespace.
@@ -233,35 +256,60 @@ material should be formalized as requirements.
 
 </li></ol>
 
-</div>
+<p>If an attribute <span>maps to the pixel length property</span>, the
+attribute value has to be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>. <!-- WA1 rendering -->
+
+</p><p>If an attribute <span>maps to the dimension property</span>, the
+attribute value has to be a <a href=#valid-dimension-value>valid dimension value</a>.<!--
+WA1 rendering -->
+
+</p></div>
 
 <div class=section>
 <h2 id=obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</h2>
 
 <div class=section>
-<h3 id=scripting><span class=secno>4.1 </span>Scripting</h3>
+<h3 id=flow-content><span class=secno>4.1 </span>Flow content</h3>
 
-<p>Requirements for the <code title=attr-script-language>language</code> attribute is defined in Web
-Applications 1.0 specification, as an obsolete but conforming feature.
+<p>The <code>dir</code> element <em class=rfc2119>MUST</em> be treated
+as if it is a <code>ul</code> element for the purpose of conformance
+of content of the element.<!-- WA1 rendering -->
 
-</p><p class=ed>XXX <code title=attr-script-for>for</code> attribute<!--
-WA1 UA reqs -->
+</p><p>The <code>center</code> element <em class=rfc2119>MUST</em> be
+treated as if it is a <code>div</code> element for the purpose of
+conformance of content of the element.<!-- WA1 rendering -->
 
-</p><p>If the <code title="">name</code> attribute of an <code>applet</code>
-or <code>img</code> element is present, they <em class=rfc2119>MUST</em> be treated as if the element were an
-<code>a</code> element for the purpose of conformance checking.  <!--
-WA1 UA reqs
-e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
-HTML4 -->
+</p><p>Content of the <code>xmp</code>, <code>listing</code>, or
+<code>plaintext</code> element <em class=rfc2119>MUST</em> be
+<i>text</i>.<!-- WA1 rendering -->
+
+</p><p>If the <code title=attr-ol-type>type</code> attribute of an
+<code>ol</code> element is present, its value <em class=rfc2119>MUST</em> be one of <code title="">1</code>, <code title="">a</code>, <code title="">A</code>, <code title="">i</code>, and <code title="">I</code>.  If the <code title=attr-ul-type>type</code> attribute
+of a <code>ul</code> element is present, its value <em class=rfc2119>MUST</em> be equal to one of <code title="">disc</code>,
+<code title="">circle</code>, and <code title="">square</code>, <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a>.  If
+the <code title=attr-li-type>type</code> attribute of an
+<code>li</code> element is present, its value <em class=rfc2119>MUST</em> be one of values allowed for <code title="">type</code> attribute of a <code>ul</code> or <code>ol</code>
+element.<!-- WA1 rendering -->
 
 </p></div>
 
 <div class=section>
-<h3 id=embedded-contents><span class=secno>4.2 </span>Embedded contents</h3>
+<h3 id=phrasing-content><span class=secno>4.2 </span>Phrasing content</h3>
+
+<p>The <code>big</code>, <code>s</code>, <code>strike</code>,
+<code>blink</code>, or <code>nobr</code> element <em class=rfc2119>MUST</em> be treated as if it is a <code>small</code>
+element for the purpose of conformance of content of the element.<!--
+WA1 rendering -->
+
+</p></div>
+
+<div class=section>
+<h3 id=embedded-content><span class=secno>4.3 </span>Embedded content</h3>
 
 <p>If the <code title=attr-object-classid>classid</code> attribute of
-an <code>object</code> element is present, its value <em class=rfc2119>MUST NOT</em> be the empty string and <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>.<!-- WA1 UA
-reqs and HTML4 def -->
+an <code>object</code> element is present, its value <em class=rfc2119>MUST NOT</em> be the empty string and <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a> that is an
+<a href=#absolute-url>absolute URL</a>.<!-- WA1 UA reqs and HTML4 def -->
 
 </p><p>The following attributes of the <code>frameset</code> element <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handlers-on-elements,-document-objects,-and-window-objects>are</a>
 <a href=#event-handler-content-attributes>event handler content attributes</a>:
@@ -289,7 +337,25 @@ reqs and HTML4 def -->
 </p></div>
 
 <div class=section>
-<h3 id=forms><span class=secno>4.3 </span>Forms</h3>
+<h3 id=scripting><span class=secno>4.4 </span>Scripting</h3>
+
+<p>Requirements for the <code title=attr-script-language>language</code> attribute is defined in Web
+Applications 1.0 specification, as an obsolete but conforming feature.
+
+</p><p class=ed>XXX <code title=attr-script-for>for</code> attribute<!--
+WA1 UA reqs -->
+
+</p><p>If the <code title="">name</code> attribute of an <code>applet</code>
+or <code>img</code> element is present, they <em class=rfc2119>MUST</em> be treated as if the element were an
+<code>a</code> element for the purpose of conformance checking.  <!--
+WA1 UA reqs
+e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
+HTML4 -->
+
+</p></div>
+
+<div class=section>
+<h3 id=forms><span class=secno>4.5 </span>Forms</h3>
 
 <p>If the <code title=attr-isindex-prompt>prompt</code> attribute of
 an <code>isindex</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- WA1 parsing -->
@@ -297,6 +363,186 @@ an <code>isindex</code> element is present, its value <em class=rfc2119>MAY</em>
 </p><p>If the <code title=attr-isindex-action>action</code> attribute of
 an <code>isindex</code> element is present, its value <em class=rfc2119>MUST</em> obey the requirements for the <code title=attr-fs-action>action</code> attribute of the <code>form</code>
 element.<!-- WA1 parsing -->
+
+</p></div>
+
+<div class=section>
+<h3 id=boxes-and-alignments><span class=secno>4.6 </span>Boxes and alignments</h3>
+
+<p>The <code>body</code> element's <code title=attr-body-marginheight>marginheight</code>, <code title=attr-body-marginwidth>marginwidth</code>, <code title=attr-body-topmargin>topmargin</code>, and <code title=attr-body-rightmargin>rightmargin</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-non-negative-integer title="valid non-negative
+integer">valid non-negative integers</a>.  The <code>table</code>
+element's <code title=attr-table-cellspacing>cellspacing</code> and
+<code title=attr-table-cellpadding>cellpadding</code> attribute values
+<em class=rfc2119>MUST</em> be <a href=#valid-non-negative-integer title="valid non-negative
+integer">valid non-negative integers</a>.<!-- WA1 rendering -->
+
+</p><p>The <code>hr</code> element's <code title=attr-hr-size>size</code>
+attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
+non-negative integer</a>.
+
+</p><p>If the <code title="">height</code> or <code title="">width</code>
+attribute of an <code>applet</code>, <code>table</code>,
+<code>td</code>, or <code>th</code> element is specified, its value
+<em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.  The <code>col</code> element's <code title=attr-col-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
+The <code>hr</code> element's <code title=attr-hr-width>width</code>
+attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
+non-negative integer</a>.  The <code>tr</code> element's <code title=attr-tr-height>height</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.<!-- HTML5's embedded content's |width| and |height|
+attributes -->
+
+</p><p>If the <code title="">hspace</code> or <code title="">vspace</code>
+attribute of an <code>applet</code>, <code>embed</code>,
+<code>iframe</code>, <code>img</code>, or <code>object</code> element,
+or of an <code>input</code> element whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state, is specified,
+its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension
+value</a>.<!-- WA1 rendering -->
+
+</p><p>The <code title=attr-table-align>align</code> attribute of a
+<code>table</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code title="">left</code>, <code title="">right</code>, <code title="">center</code>, <code title="">middle</code>, <code title="">abscenter</code>, and <code title="">absmiddle</code>.  Keywords
+<code title="">middle</code>, <code title="">abscenter</code>, and <code title="">absmiddle</code> are non-conforming.<!-- WA1 rendering , HTML4
+-->
+
+</p><p>The <code title=attr-caption-align>align</code> attribute of a
+<code>caption</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, and <code title="">bottom</code>,<!-- WA1 rendering,
+HTML4 -->
+
+</p><p>The <code title=attr-legend-align>align</code> attribute of a
+<code>legend</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code title="">left</code>, <code title="">right</code>, and
+<code title="">center</code>.<!-- WA1 rendering -->
+
+</p><p>The <code title="">align</code> attribute of a <code>div</code>,
+<code>p</code>, <code>h1</code>, <code>h2</code>, <code>h3</code>,
+<code>h4</code>, <code>h5</code>, or <code>h6</code> element is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">center</code>, and <code title="">justify</code>.<!-- WA1 rendering
+-->
+
+</p><p>The <code title=attr-hr-align>align</code> attribute of a
+<code>hr</code> element is an <a href=#enumerated-attribute>enumerated attribute</a> with
+keywords <code title="">left</code>, <code title="">right</code>, and <code title="">center</code>.<!-- WA1 rendering -->
+
+</p><p>The <code title="">align</code> attribute of a <code>thead</code>,
+<code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
+<code>th</code>, or <code>td</code> element is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">left</code>, <code title="">center</code>, <code title="">right</code>, <code title="">justify</code>, and <code title="">char</code>.<!-- WA1 rendering,
+HTML4 -->
+
+</p><p>The <code title="">align</code> attribute of an <code>applet</code>,
+<code>embed</code>, <code>iframe</code>, <code>img</code>, or
+<code>object</code> element, or of an <code>input</code> element whoes
+<code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state, is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">top</code>,
+<code title="">bottom</code>, <code title="">baseline</code>, <code title="">center</code>, <code title="">middle</code>, <code title="">texttop</code> <code title="">absmiddle</code>, <code title="">abscenter</code>, and <code title="">bottom</code>.  Keywords other
+than <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, <code title="">middle</code>, and <code title="">bottom</code> are non-conforming.<!-- WA1 rendering -->
+
+</p><p>The <code title="">valign</code> attribute of a <code>col</code>,
+<code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
+<code>tr</code>, <code>th</code>, or <code>td</code> attribute is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">top</code>, <code title="">middle</code>, <code title="">bottom</code>, and <code title="">baseline</code>.<!-- WA1
+rendering -->
+
+</p><p>The <code title=attr-table-rules>rules</code> attribute of a
+<code>table</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code title="">none</code>, <code title="">groups</code>,
+<code title="">rows</code>, <code title="">cols</code>, and <code title="">all</code>.<!-- WA1 rendering -->
+
+</p><p>The <code title=attr-table-frame>frame</code> attribute of a
+<code>table</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code title="">void</code>, <code title="">above</code>, <code title="">below</code>, <code title="">hsides</code>, <code title="">lhs</code>,
+<code title="">rhs</code>, <code title="">vsides</code>, <code title="">box</code>, and <code title="">border</code>.<!-- WA1 rendering -->
+
+</p><p>The <code>table</code> element's <code title=attr-table-border>border</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
+or the empty string.<!-- WA1 rendering, HTML4 -->
+
+</p><p>If the <code title=attr-dim-border>border</code> attribute of an
+<code>img</code> element, an <code>object</code> element, or an
+<code>input</code> element whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state is specified,
+its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.<!-- WA1 rendering -->
+
+</p><p>The <code>iframe</code> element's <code title=attr-iframe-frameborder>frameborder</code> attribute value <span class=ed>... 0, no</span>.
+
+</p><p>The <code>hr</code> element's <code title=attr-hr-noshade>noshade</code> attribute is a <a href=#boolean-attribute>boolean
+attribute</a>.<!-- WA1 rendering -->
+
+</p><p>The <code title=attr-frames-scrolling>scrolling</code> attribute of
+a <code>frame</code> or <code>iframe</code> element is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">on</code>,
+<code title="">scroll</code>, <code title="">yes</code>, <code title="">off</code>, <code title="">noscroll</code>, <code title="">no</code>,
+and <code title="">auto</code>. Keywords other than <code title="">yes</code>, <code title="">no</code>, and <code>auto</code> are
+non-conforming.<!-- WA1 rendering, HTML4 -->
+
+</p></div>
+
+<div class=section>
+<h3 id=background-images-and-colors><span class=secno>4.7 </span>Background images and colors</h3>
+
+<p>The <code>body</code>, <code>table</code>, <code>thead</code>,
+<code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
+<code>td</code>, and <code>th</code> elements' <code title=attr-background>background</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-non-empty-url title="valid non-empty URL">valid
+non-empty URLs</a>.<!-- WA1 rendering -->
+
+</p><p>A <dfn id=valid-legacy-color-value>valid legacy color value</dfn> is either a U+0023 <code class=charname>NUMBER SIGN</code> character (#) followed by six (6)
+characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
+(0) to U+0039 <code class=charname>DIGIT NINE</code> (9), U+0041 <code class=charname>LATIN CAPITAL LETTER A</code> to U+0046 <code class=charname>LATIN CAPITAL LETTER F</code>, and U+0061 <code class=charname>LATIN SMALL LETTER A</code> to U+0066 <code class=charname>LATIN SMALL LETTER F</code>, or one of the keywords
+listed in the <a href=http://dev.w3.org/csswg/css3-color/#svg-color>SVG color
+keywords</a> section of the CSS Color specification <cite class="bibref normative">[<a href=#ref-CSSCOLOR>CSSCOLOR</a>]</cite>.<!-- WA1
+<http://www.whatwg.org/specs/web-apps/current-work/complete.html#rules-for-parsing-a-legacy-color-value>
+(Note that HTML4 definition is very, very vague.  WA1 also supports
+CSS2 System Colors keywords, but they are deprecated by CSS3 Color
+specification.)  -->
+
+</p><p>The <code>body</code>, <code>table</code>, <code>thead</code>,
+<code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
+<code>td</code>, and <code>th</code> elements' <code title=attr-bgcolor>bgcolor</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
+value">valid legacy color values</a>.  The <code>body</code>
+element's <code title=attr-body-text>text</code>, <code title=attr-body-link>link</code>, <code title=attr-body-vlink>vlink</code>, and <code title=attr-body-alink>alink</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
+value">valid legacy color values</a>.  The <code>table</code>
+element's <code title=attr-table-bordercolor>bordercolor</code>
+attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-legacy-color-value>valid legacy
+color value</a>.  The <code>font</code> and <code>basefont</code>
+elements' <code title=attr-font-color>color</code> attribute values
+<em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
+value">valid legacy color values</a>.  The <code>hr</code>
+element's <code title=attr-hr-color>color</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-legacy-color-value>valid legacy color
+value</a>.<!-- WA1 rendering, HTML4 -->
+
+</p></div>
+
+<div class=section>
+<h3 id=line-breaks><span class=secno>4.8 </span>Line breaks</h3>
+
+<p>The <code title=attr-tdth-nowrap>nowrap</code> attributes of
+<code>td</code> and <code>th</code> elements and the <code title=attr-pre-wrap>wrap</code> attribute of the <code>pre</code>
+element are <a href=#boolean-attribute title="boolean attribute">boolean attributes</a>.
+
+</p><p>The <code title=attr-br-clear>clear</code> attribute of a
+<code>br</code> element is an <a href=#enumerated-attribute>enumerated attribute</a> with
+keywords <code title="">left</code>, <code title="">right</code>, <code title="">all</code>, and <code title="">both</code>, where <code title="">both</code> is non-conforming.<!-- WA1 rendering, HTML4 -->
+
+</p><p>Content of the <code>wbr</code> element <em class=rfc2119>MUST</em>
+be <i>empty</i>.<!-- WA1 parsing -->
+
+</p></div>
+
+<div class=section>
+<h3 id=fonts><span class=secno>4.9 </span>Fonts</h3>
+
+<p>If the <code title=attr-font-face>face</code> attribute of a
+<code>font</code> or <code>basefont</code> element is present, its
+value <em class=rfc2119>MAY</em> be any string.<!-- (WA1 rendering
+section and HTML4 do not specigy explicit rules to map the attribute
+value to the CSS property...) -->
+
+</p><p>If the <code title=attr-font-size>size</code> attribute of a
+<code>font</code> or <code>basefont</code> element is present, its
+value <em class=rfc2119>MUST</em> be an optional U+002B <code class=charname>PLUS SIGN</code> character (+) or an optional <code class=charname>U+002D HYPHEN-MINUS</code> character (-), followed by a
+character in the range U+0030 <code class=charname>DIGIT ZERO</code>
+(0) to U+0037 <code class=charname>DIGIT SEVEN</code> (7).<!-- WA1
+rendering of <font size>, HTML4 -->
 
 </p></div>
 
@@ -310,7 +556,13 @@ element.<!-- WA1 parsing -->
 
 <dl>
 
-<dt id=ref-DOM>DOM
+<dt id=ref-CSSCOLOR>CSSCOLOR
+
+</dt><dd><cite><a href=http://dev.w3.org/csswg/css3-color/>CSS Color
+Module Level 3</a></cite>, Tantek Çelik, Chris Lilley, L. David Baron,
+W3C Editor's Draft.
+
+</dd><dt id=ref-DOM>DOM
 
 </dt><dd class=ed>Web DOM Core? DOM3 Core?
 
