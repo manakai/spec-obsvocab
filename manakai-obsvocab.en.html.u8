@@ -333,7 +333,7 @@ specified for an <span>HTML element</span>.<!-- M12N 1.1, ROLE, XHTML2
 <i>empty</i>.<!-- WA1 parsing -->
 
 </p><p>If there is a <code>nextid</code> element element with its <code title=attr-nextid-n>n</code> attribute <cite class="bibref
-normative">[<a href=#ref-HTML20>HTML20</a>]</cite> specified, the
+informative">[<a href=#ref-HTML20>HTML20</a>]</cite> specified, the
 element <em class=rfc2119>MUST</em> be treated as if the element were
 an <code>a</code> element and the attribute was the <code>name</code>
 attribute for the purpose of conformance of <code title="">name</code>
@@ -377,11 +377,16 @@ elements of the <code>dir</code> elements, is same as the
 <code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
 -->
 
-</p><p>The <a href=#content-model>content model</a> of <code>center</code>,
-<code>div1</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div2</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div3</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div4</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div5</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div6</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, and <code>multicol</code>
-elements is same as the <code>div</code> element.<!-- WA1 parsing, WA1
-rendering, ISOHTMLUG; divn requires hn+1, e.g. div1 requires h2 child,
-but we don't copy it.  -->
+</p><p>The <a href=#content-model>content model</a> of <code>center</code> and
+<code>multicol</code> elements is same as the <code>div</code>
+element.<!-- WA1 parsing, WA1 rendering -->
+
+</p><p>The <a href=#content-model>content model</a> of <code>div1</code>,
+<code>div2</code>, <code>div3</code>, <code>div4</code>,
+<code>div5</code>, and <code>div6</code> elements <cite class="bibref
+informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite> is same
+as the <code>div</code> element.<!-- ISOHTMLUG; divn requires hn+1,
+e.g. div1 requires h2 child, but we don't copy it.  -->
 
 </p><p>The <a href=#content-model>content model</a> of <code>xmp</code>,
 <code>listing</code>, and <code>plaintext</code> elements are
@@ -395,9 +400,10 @@ the <code title=attr-li-type>type</code> attribute of an
 <code>li</code> element is present, its value <em class=rfc2119>MUST</em> be one of values allowed for <code title="">type</code> attribute of a <code>ul</code> or <code>ol</code>
 element.<!-- WA1 rendering -->
 
-</p><p>The <code title="">compact</code> attribute of the <code>dl</code>,
-<code>menu</code>, <code>ol</code>, or <code>ul</code> element is a
-<a href=#boolean-attribute>boolean attribute</a>.<!-- HTML4 -->
+</p><p>The <code title="">compact</code> attribute of the <code>dir</code>,
+<code>dl</code>, <code>menu</code>, <code>ol</code>, or
+<code>ul</code> element is a <a href=#boolean-attribute>boolean attribute</a>.<!-- HTML4
+-->
 
 </p><hr>
 
@@ -428,7 +434,7 @@ integer</a>.<!-- HTML5 obsolete -->
 
 </p><p>If the <code title=attr-marquee-loop>loop</code> attribute of a
 <code>marquee</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a> that
-represents −1, 1, or a number greater than 1.<!-- HTML5 obsolete
+represents −1, or an integer greater than 0.<!-- HTML5 obsolete
 -->
 
 </p><p>The <code title=attr-marquee-truespeed>truespeed</code> attribute
@@ -753,8 +759,9 @@ applies to the element.  The attribute value <em class=rfc2119>MUST</em> be a <a
 a <code>map</code> element.<!-- Old HTML5 definition -->
 
 </p><p>If the <code title="">longdesc</code> attribute of the
-<code>frame</code> <cite class="bibref informative">[<a href=#ref-HTML4>HTML4</a>]</cite>, <code>iframe</code>, or
-<code>img</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.<!-- HTML4 -->
+<code>frame</code>, <code>iframe</code>, or <code>img</code> element
+is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
+URL</a>.<!-- HTML4 -->
 
 </p><p>The <a href=#content-model>content model</a> of the <code>noembed</code> element
 is same as the <code>iframe</code> element.
