@@ -118,12 +118,13 @@ specifications</a>.  In particular, the Web Applications 1.0
 specification identifies a number of non-conforming elements and
 attributes as <i>obsolete</i>.  It does not define any specific
 conformance requirement for such elements and attributes, as the use
-of them it is non-conforming by itself.
+of them is by itself non-conforming.
 
 </p><p>However, authors are sometimes forced to use such non-conforming
-elements and attributes, for compatibility with legacy or <i lang=es>Galápagos</i> user agents and authoring practices.  A
-conformance checker that reports a non-conforming elements and
-attributes just as <i>non-conforming</i> is not useful in those cases.
+elements and attributes, for compatibility with legacy or <i lang=es>Galápagos</i> user agents and/or historical authoring
+practices.  A conformance checker that reports a non-conforming
+elements and attributes just as <i>non-conforming</i> is not useful
+enough to ease the authoring process in such legacy circumstances.
 
 </p><p>This specification defines conformance requirements for elements
 and attributes not defined in the Web Applications 1.0 specification
@@ -131,10 +132,11 @@ or those marked as <i>obsolete</i>, such that conformance checkers can
 find authoring errors against these requirements.  The scope of this
 specification is explicitly limited to the conformance checking of
 documents (or parts of documents) that contains obsolete elements and
-attributes for comaptibility reason.  Elements and attributes
-conforming to these requirements are still non-conforming.
-Especially, this specification is <em>not</em> an <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications>applicable
-specification</a>.
+attributes for comaptibility.  Elements and attributes conforming to
+these requirements are still non-conforming.  Especially, this
+specification is <em>not</em> an <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications>applicable
+specification</a> in the context of the Web Applications 1.0
+specification.
 
 </p><p>This specification is developed as part of the <a href=http://suika.fam.cx/www/manakai-core/doc/web/>manakai</a>
 project.  Although it might be useful to other parties, the only
@@ -755,7 +757,7 @@ integer</a>.<!--
 <p>The <a href=#content-model>content model</a> of the <code>frameset</code> element
 is one or more <code>frame</code> or <code>frameset</code> elements.
 Additionally, if the <code>frameset</code> element is a child of a
-<code>body</code> element, the element <em class=rfc2119>MAY</em>
+<code>html</code> element, the element <em class=rfc2119>MAY</em>
 contain a <code>noframes</code> element as a child.<!-- WA1 parsing,
 WA1 rendering, HTML4 -->
 
@@ -795,6 +797,8 @@ dimensions</a>.<!-- WA1 rendering -->
 <code title=handler-window-onstorage>onstorage</code>,
 <code title=handler-window-onundo>onundo</code>, and
 <code title=handler-window-onunload>onunload</code>.
+<!-- But in fact has no effect if the |frameset| element is not
+"the body element". -->
 
 </p></div>
 
@@ -883,7 +887,10 @@ element.<!-- WA1 parsing -->
 <div class="section reference">
 <h2 class=no-num id=references>References</h2>
 
-<div class="section reference normative">
+<p class=ed>@@@ TODO: HTML 2.0, HTML 2.x, HTML 3.2, Ruby, ISO-HTML,
+MSDN, Netscape's reference, i-mode HTML, ezweb, softbank
+
+</p><div class="section reference normative">
 <h3 class=no-num id=normative-references>Normative references</h3>
 
 <dl>
@@ -927,6 +934,12 @@ Applications 1.0</a></cite>, Ian Hickson, WHATWG Draft Standard.
 </dt><dd><cite><a href=http://tools.ietf.org/html/rfc1866>Hypertext
 Markup Language - 2.0</a></cite>, Tim Berners-Lee, Daniel W. Connolly,
 IETF Proposed Standard (obsolete), November 1995.
+
+</dd><dt id=ref-HTML4>HTML4
+
+</dt><dd><cite><a href=http://www.w3.org/TR/1999/REC-html401-19991224>HTML 4.01
+Specification</a></cite>, Dave Raggett, Arnaud Le Hors, Ian Jacobs,
+W3C Recommendation, <time datetime=1999-12-24>24 December 1999</time>.
 
 </dd></dl>
 
