@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 13 March 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 14 March 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -69,7 +69,9 @@ version of the document is the only normative version.</p>
 and attributes</a></li>
  <li><a href=#obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</a>
   <ol>
-   <li><a href=#flow-content><span class=secno>4.1 </span>Flow content</a></li>
+   <li><a href=#flow-content><span class=secno>4.1 </span>Flow content</a>
+    <ol>
+     <li><a href=#the-marquee-element><span class=secno>4.1.1 </span>The <code>marquee</code> element</a></li></ol></li>
    <li><a href=#phrasing-content><span class=secno>4.2 </span>Phrasing content</a></li>
    <li><a href=#embedded-content><span class=secno>4.3 </span>Embedded content</a></li>
    <li><a href=#scripting><span class=secno>4.4 </span>Scripting</a></li>
@@ -77,7 +79,12 @@ and attributes</a></li>
    <li><a href=#boxes-and-alignments><span class=secno>4.6 </span>Boxes and alignments</a></li>
    <li><a href=#background-images-and-colors><span class=secno>4.7 </span>Background images and colors</a></li>
    <li><a href=#line-breaks><span class=secno>4.8 </span>Line breaks</a></li>
-   <li><a href=#fonts><span class=secno>4.9 </span>Fonts</a></li></ol></li>
+   <li><a href=#fonts><span class=secno>4.9 </span>Fonts</a></li>
+   <li><a href=#frames><span class=secno>4.10 </span>Frames</a>
+    <ol>
+     <li><a href=#the-frameset-element><span class=secno>4.10.1 </span>The <code>frameset</code> element</a></li>
+     <li><a href=#the-frame-element><span class=secno>4.10.2 </span>The <code>frame</code> element</a></li>
+     <li><a href=#frame-borders><span class=secno>4.10.3 </span>Frame borders</a></li></ol></li></ol></li>
  <li><a class=no-num href=#references>References</a>
   <ol>
    <li><a class=no-num href=#normative-references>Normative references</a></li></ol></li></ol>
@@ -138,9 +145,9 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-namespace-0><dfn id=html-namespace>HTML namespace</dfn></a>,
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative integer"><dfn id=valid-non-negative-integer>valid non-negative integer</dfn></a>,
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative-integer><dfn id=valid-non-negative-integer>valid non-negative integer</dfn></a>,
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#inter-element-whitespace><dfn id=inter-element-whitespace>inter-element whitespace</dfn></a>,
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-set-of-comma-separated-tokens><dfn id=valid-set-of-comma-separated-tokens>valid set of comma-separated tokens</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#boolean-attribute><dfn id=boolean-attribute>boolean attribute</dfn></a>,
 
@@ -163,6 +170,10 @@ and
 </p><p>The term <dfn id=valid-dimension-value>valid dimension value</dfn> is <a href="http://html5.org/tools/web-apps-tracker?from=2749&amp;to=2750">defined
 in a commented out paragraph</a> of the Web Applications 1.0
 specification.
+
+</p><p>The concept of <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#content-models><dfn id=content-model>content
+model</dfn></a>, as well as the way to interpret it, is defined in the
+Web Applications 1.0 specification.
 
 </p></div>
 
@@ -292,7 +303,16 @@ the <code title=attr-li-type>type</code> attribute of an
 <code>li</code> element is present, its value <em class=rfc2119>MUST</em> be one of values allowed for <code title="">type</code> attribute of a <code>ul</code> or <code>ol</code>
 element.<!-- WA1 rendering -->
 
+</p><div class=section>
+<h4 id=the-marquee-element><span class=secno>4.1.1 </span>The <code>marquee</code> element</h4>
+
+<p>The <code>marquee</code> element <em class=rfc2119>MUST</em> be
+treated as if it is a <code>div</code> element for the purpose of
+conformance of content of the element.<!-- WA1 rendering -->
+
 </p></div>
+
+</div>
 
 <div class=section>
 <h3 id=phrasing-content><span class=secno>4.2 </span>Phrasing content</h3>
@@ -310,29 +330,6 @@ WA1 rendering -->
 <p>If the <code title=attr-object-classid>classid</code> attribute of
 an <code>object</code> element is present, its value <em class=rfc2119>MUST NOT</em> be the empty string and <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a> that is an
 <a href=#absolute-url>absolute URL</a>.<!-- WA1 UA reqs and HTML4 def -->
-
-</p><p>The following attributes of the <code>frameset</code> element <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handlers-on-elements,-document-objects,-and-window-objects>are</a>
-<a href=#event-handler-content-attributes>event handler content attributes</a>:
-
-<!-- This is normatively defined in WA1 in fact. -->
-<code title=handler-window-onafterprint>onafterprint</code>,
-<code title=handler-window-onbeforeprint>onbeforeprint</code>,
-<code title=handler-window-onbeforeunload>onbeforeunload</code>,
-<code title=handler-window-onblur>onblur</code>,
-<code title=handler-window-onerror>onerror</code>,
-<code title=handler-window-onfocus>onfocus</code>,
-<code title=handler-window-onhashchange>onhashchange</code>,
-<code title=handler-window-onload>onload</code>,
-<code title=handler-window-onmessage>onmessage</code>,
-<code title=handler-window-onoffline>onoffline</code>,
-<code title=handler-window-onpagehide>onpagehide</code>,
-<code title=handler-window-onpageshow>onpageshow</code>,
-<code title=handler-window-onpopstate>onpopstate</code>,
-<code title=handler-window-onredo>onredo</code>,
-<code title=handler-window-onresize>onresize</code>,
-<code title=handler-window-onstorage>onstorage</code>,
-<code title=handler-window-onundo>onundo</code>, and
-<code title=handler-window-onunload>onunload</code>.
 
 </p></div>
 
@@ -357,7 +354,13 @@ HTML4 -->
 <div class=section>
 <h3 id=forms><span class=secno>4.5 </span>Forms</h3>
 
-<p>If the <code title=attr-isindex-prompt>prompt</code> attribute of
+<p>The <code title=attr-textarea-wrap>wrap</code> attribute of a
+<code>textarea</code> element, for the purpose of conformance
+checking, <em class=rfc2119>MUST</em> be treated as if there is an
+additional keyword: <code title="">off</code>.  However, this keyword is
+non-conforming.<!-- WA1 rendering -->
+
+</p><p>If the <code title=attr-isindex-prompt>prompt</code> attribute of
 an <code>isindex</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- WA1 parsing -->
 
 </p><p>If the <code title=attr-isindex-action>action</code> attribute of
@@ -382,9 +385,9 @@ non-negative integer</a>.
 
 </p><p>If the <code title="">height</code> or <code title="">width</code>
 attribute of an <code>applet</code>, <code>table</code>,
-<code>td</code>, or <code>th</code> element is specified, its value
-<em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
-integer</a>.  The <code>col</code> element's <code title=attr-col-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
+<code>td</code>, <code>th</code>, or <code>marquee</code> element is
+specified, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
+non-negative integer</a>.  The <code>col</code> element's <code title=attr-col-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
 The <code>hr</code> element's <code title=attr-hr-width>width</code>
 attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
 non-negative integer</a>.  The <code>tr</code> element's <code title=attr-tr-height>height</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
@@ -393,10 +396,12 @@ attributes -->
 
 </p><p>If the <code title="">hspace</code> or <code title="">vspace</code>
 attribute of an <code>applet</code>, <code>embed</code>,
-<code>iframe</code>, <code>img</code>, or <code>object</code> element,
-or of an <code>input</code> element whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state, is specified,
-its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension
-value</a>.<!-- WA1 rendering -->
+<code>iframe</code>, <code>img</code>, <code>object</code>, or
+<code>marquee</code> element, or of an <code>input</code> element
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-image>Image Button</span> state, is
+specified, its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid
+dimension value</a>.<!-- WA1 rendering -->
 
 </p><p>The <code title=attr-table-align>align</code> attribute of a
 <code>table</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
@@ -463,8 +468,6 @@ or the empty string.<!-- WA1 rendering, HTML4 -->
 its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
 integer</a>.<!-- WA1 rendering -->
 
-</p><p>The <code>iframe</code> element's <code title=attr-iframe-frameborder>frameborder</code> attribute value <span class=ed>... 0, no</span>.
-
 </p><p>The <code>hr</code> element's <code title=attr-hr-noshade>noshade</code> attribute is a <a href=#boolean-attribute>boolean
 attribute</a>.<!-- WA1 rendering -->
 
@@ -487,17 +490,18 @@ non-empty URLs</a>.<!-- WA1 rendering -->
 
 </p><p>A <dfn id=valid-legacy-color-value>valid legacy color value</dfn> is either a U+0023 <code class=charname>NUMBER SIGN</code> character (#) followed by six (6)
 characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
-(0) to U+0039 <code class=charname>DIGIT NINE</code> (9), U+0041 <code class=charname>LATIN CAPITAL LETTER A</code> to U+0046 <code class=charname>LATIN CAPITAL LETTER F</code>, and U+0061 <code class=charname>LATIN SMALL LETTER A</code> to U+0066 <code class=charname>LATIN SMALL LETTER F</code>, or one of the keywords
-listed in the <a href=http://dev.w3.org/csswg/css3-color/#svg-color>SVG color
+(0) to U+0039 <code class=charname>DIGIT NINE</code> (9), U+0041 <code class=charname>LATIN CAPITAL LETTER A</code> to U+0046 <code class=charname>LATIN CAPITAL LETTER F</code>, and U+0061 <code class=charname>LATIN SMALL LETTER A</code> to U+0066 <code class=charname>LATIN SMALL LETTER F</code>, or a string that <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a> matches
+to one of the keywords listed in the <a href=http://dev.w3.org/csswg/css3-color/#svg-color>SVG color
 keywords</a> section of the CSS Color specification <cite class="bibref normative">[<a href=#ref-CSSCOLOR>CSSCOLOR</a>]</cite>.<!-- WA1
-<http://www.whatwg.org/specs/web-apps/current-work/complete.html#rules-for-parsing-a-legacy-color-value>
-(Note that HTML4 definition is very, very vague.  WA1 also supports
-CSS2 System Colors keywords, but they are deprecated by CSS3 Color
-specification.)  -->
+<http://www.whatwg.org/specs/web-apps/current-work/complete.html#rules-for-parsing-a-legacy-color-value>,
+HTML4 (Note that HTML4 definition is very, very vague.  WA1 also
+supports CSS2 System Colors keywords, but they are deprecated by CSS3
+Color specification.)  -->
 
 </p><p>The <code>body</code>, <code>table</code>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
-<code>td</code>, and <code>th</code> elements' <code title=attr-bgcolor>bgcolor</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
+<code>td</code>, <code>th</code>, and <code>marquee</code> elements'
+<code title=attr-bgcolor>bgcolor</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
 value">valid legacy color values</a>.  The <code>body</code>
 element's <code title=attr-body-text>text</code>, <code title=attr-body-link>link</code>, <code title=attr-body-vlink>vlink</code>, and <code title=attr-body-alink>alink</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
 value">valid legacy color values</a>.  The <code>table</code>
@@ -545,6 +549,84 @@ character in the range U+0030 <code class=charname>DIGIT ZERO</code>
 rendering of <font size>, HTML4 -->
 
 </p></div>
+
+<div class=section>
+<h3 id=frames><span class=secno>4.10 </span>Frames</h3>
+
+<div class=section>
+<h4 id=the-frameset-element><span class=secno>4.10.1 </span>The <code>frameset</code> element</h4>
+
+<p>The <a href=#content-model>content model</a> of the <code>frameset</code> element
+is one or more <code>frame</code> or <code>frameset</code> elements.
+Additionally, if the <code>frameset</code> element is a child of a
+<code>body</code> element, the element <em class=rfc2119>MAY</em>
+contain a <code>noframes</code> element as a child.<!-- WA1 parsing,
+WA1 rendering, HTML4 -->
+
+</p><hr>
+
+<p>A <dfn id=valid-list-of-dimensions>valid list of dimensions</dfn> is a <span>set of
+comma-separated tokens</span> where each token is a <a href=#valid-dimension-value>valid
+dimension value</a>.<!-- WA1 rendering -->
+
+</p><p>If the <code title=attr-frameset-cols>cols</code> or <code title=attr-frameset-rows>rows</code> attribute of a
+<code>frameset</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-list-of-dimensions>valid list of
+dimensions</a>.<!-- WA1 rendering -->
+
+</p><hr>
+
+<p>The following attributes of the <code>frameset</code> element <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handlers-on-elements,-document-objects,-and-window-objects>are</a>
+<a href=#event-handler-content-attributes>event handler content attributes</a>:
+
+<!-- This is normatively defined in WA1 in fact. -->
+<code title=handler-window-onafterprint>onafterprint</code>,
+<code title=handler-window-onbeforeprint>onbeforeprint</code>,
+<code title=handler-window-onbeforeunload>onbeforeunload</code>,
+<code title=handler-window-onblur>onblur</code>,
+<code title=handler-window-onerror>onerror</code>,
+<code title=handler-window-onfocus>onfocus</code>,
+<code title=handler-window-onhashchange>onhashchange</code>,
+<code title=handler-window-onload>onload</code>,
+<code title=handler-window-onmessage>onmessage</code>,
+<code title=handler-window-onoffline>onoffline</code>,
+<code title=handler-window-onpagehide>onpagehide</code>,
+<code title=handler-window-onpageshow>onpageshow</code>,
+<code title=handler-window-onpopstate>onpopstate</code>,
+<code title=handler-window-onredo>onredo</code>,
+<code title=handler-window-onresize>onresize</code>,
+<code title=handler-window-onstorage>onstorage</code>,
+<code title=handler-window-onundo>onundo</code>, and
+<code title=handler-window-onunload>onunload</code>.
+
+</p></div>
+
+<div class=section>
+<h4 id=the-frame-element><span class=secno>4.10.2 </span>The <code>frame</code> element</h4>
+
+<p>The content of a <code>frame</code> element <em class=rfc2110>MUST</em> be <i>empty</i>.<!-- WA1 parsing, WA1
+rendering -->
+
+</p><p>The <code title=attr-frame-noresize>noresize</code> attribute of a
+<code>frame</code> element is <a href=#boolean-attribute>boolean attribute</a>.<!-- WA1
+rendering -->
+
+</p></div>
+
+<div class=section>
+<h4 id=frame-borders><span class=secno>4.10.3 </span>Frame borders</h4>
+
+<p>The <code title=attr-frames-frameborder>frameborder</code>
+attribute of a <code>frame</code>, <code>frameset</code>, or
+<code>iframe</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>,
+with keywords <code title="">1</code>, <code title="">yes</code>, <code title="">0</code>, and <code title="">no</code>, where keywords <code title="">yes</code> and <code title="">no</code> are non-conforming.<!-- WA1
+rendering, HTML4 -->
+
+</p><p>The <code>frame</code> and <code>frameset</code> elements' <code title=attr-frames-bordercolor>bordercolor</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
+value">valid legacy color values</a>.<!-- WA1 rendering -->
+
+</p></div>
+
+</div>
 
 </div>
 

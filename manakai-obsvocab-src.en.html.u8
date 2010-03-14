@@ -126,9 +126,9 @@ href="#ref-WA1">WA1</a>]</cite> to define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-namespace-0"><dfn>HTML namespace</dfn></a>,
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative integer"><dfn>valid non-negative integer</dfn></a>,
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative-integer"><dfn>valid non-negative integer</dfn></a>,
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#inter-element-whitespace"><dfn>inter-element whitespace</dfn></a>,
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-set-of-comma-separated-tokens"><dfn>valid set of comma-separated tokens</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#boolean-attribute"><dfn>boolean attribute</dfn></a>,
 
@@ -152,6 +152,11 @@ and
 href="http://html5.org/tools/web-apps-tracker?from=2749&to=2750">defined
 in a commented out paragraph</a> of the Web Applications 1.0
 specification.
+
+<p>The concept of <a
+href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#content-models"><dfn>content
+model</dfn></a>, as well as the way to interpret it, is defined in the
+Web Applications 1.0 specification.
 
 </div>
 
@@ -290,6 +295,15 @@ class=rfc2119>MUST</em> be one of values allowed for <code
 title>type</code> attribute of a <code>ul</code> or <code>ol</code>
 element.<!-- WA1 rendering -->
 
+<div class=section>
+<h4>The <code>marquee</code> element</h4>
+
+<p>The <code>marquee</code> element <em class=rfc2119>MUST</em> be
+treated as if it is a <code>div</code> element for the purpose of
+conformance of content of the element.<!-- WA1 rendering -->
+
+</div>
+
 </div>
 
 <div class=section>
@@ -311,30 +325,6 @@ an <code>object</code> element is present, its value <em
 class=rfc2119>MUST NOT</em> be the empty string and <em
 class=rfc2119>MUST</em> be a <span>valid URL</span> that is an
 <span>absolute URL</span>.<!-- WA1 UA reqs and HTML4 def -->
-
-<p>The following attributes of the <code>frameset</code> element <a
-href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handlers-on-elements,-document-objects,-and-window-objects">are</a>
-<span>event handler content attributes</span>:
-
-<!-- This is normatively defined in WA1 in fact. -->
-<code title=handler-window-onafterprint>onafterprint</code>,
-<code title=handler-window-onbeforeprint>onbeforeprint</code>,
-<code title=handler-window-onbeforeunload>onbeforeunload</code>,
-<code title=handler-window-onblur>onblur</code>,
-<code title=handler-window-onerror>onerror</code>,
-<code title=handler-window-onfocus>onfocus</code>,
-<code title=handler-window-onhashchange>onhashchange</code>,
-<code title=handler-window-onload>onload</code>,
-<code title=handler-window-onmessage>onmessage</code>,
-<code title=handler-window-onoffline>onoffline</code>,
-<code title=handler-window-onpagehide>onpagehide</code>,
-<code title=handler-window-onpageshow>onpageshow</code>,
-<code title=handler-window-onpopstate>onpopstate</code>,
-<code title=handler-window-onredo>onredo</code>,
-<code title=handler-window-onresize>onresize</code>,
-<code title=handler-window-onstorage>onstorage</code>,
-<code title=handler-window-onundo>onundo</code>, and
-<code title=handler-window-onunload>onunload</code>.
 
 </div>
 
@@ -360,6 +350,12 @@ HTML4 -->
 
 <div class=section>
 <h3>Forms</h3>
+
+<p>The <code title=attr-textarea-wrap>wrap</code> attribute of a
+<code>textarea</code> element, for the purpose of conformance
+checking, <em class=rfc2119>MUST</em> be treated as if there is an
+additional keyword: <code title>off</code>.  However, this keyword is
+non-conforming.<!-- WA1 rendering -->
 
 <p>If the <code title=attr-isindex-prompt>prompt</code> attribute of
 an <code>isindex</code> element is present, its value <em
@@ -394,9 +390,9 @@ non-negative integer</span>.
 
 <p>If the <code title>height</code> or <code title>width</code>
 attribute of an <code>applet</code>, <code>table</code>,
-<code>td</code>, or <code>th</code> element is specified, its value
-<em class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.  The <code>col</code> element's <code
+<code>td</code>, <code>th</code>, or <code>marquee</code> element is
+specified, its value <em class=rfc2119>MUST</em> be a <span>valid
+non-negative integer</span>.  The <code>col</code> element's <code
 title=attr-col-width>width</code> attribute value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
 The <code>hr</code> element's <code title=attr-hr-width>width</code>
@@ -409,12 +405,12 @@ attributes -->
 
 <p>If the <code title>hspace</code> or <code title>vspace</code>
 attribute of an <code>applet</code>, <code>embed</code>,
-<code>iframe</code>, <code>img</code>, or <code>object</code> element,
-or of an <code>input</code> element whoes <code
-title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-image>Image Button</span> state, is specified,
-its value <em class=rfc2119>MUST</em> be a <span>valid dimension
-value</span>.<!-- WA1 rendering -->
+<code>iframe</code>, <code>img</code>, <code>object</code>, or
+<code>marquee</code> element, or of an <code>input</code> element
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-image>Image Button</span> state, is
+specified, its value <em class=rfc2119>MUST</em> be a <span>valid
+dimension value</span>.<!-- WA1 rendering -->
 
 <p>The <code title=attr-table-align>align</code> attribute of a
 <code>table</code> element is an <span>enumerated attribute</span>
@@ -506,10 +502,6 @@ title=attr-input-type-image>Image Button</span> state is specified,
 its value <em class=rfc2119>MUST</em> be a <span>valid non-negative
 integer</span>.<!-- WA1 rendering -->
 
-<p>The <code>iframe</code> element's <code
-title=attr-iframe-frameborder>frameborder</code> attribute value <span
-class=ed>... 0, no</span>.
-
 <p>The <code>hr</code> element's <code
 title=attr-hr-noshade>noshade</code> attribute is a <span>boolean
 attribute</span>.<!-- WA1 rendering -->
@@ -542,21 +534,22 @@ characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
 class=charname>LATIN CAPITAL LETTER A</code> to U+0046 <code
 class=charname>LATIN CAPITAL LETTER F</code>, and U+0061 <code
 class=charname>LATIN SMALL LETTER A</code> to U+0066 <code
-class=charname>LATIN SMALL LETTER F</code>, or one of the keywords
-listed in the <a
+class=charname>LATIN SMALL LETTER F</code>, or a string that <span
+title="ASCII case-insensitive">ASCII case-insensitively</span> matches
+to one of the keywords listed in the <a
 href="http://dev.w3.org/csswg/css3-color/#svg-color">SVG color
 keywords</a> section of the CSS Color specification <cite
 class="bibref normative">[<a
 href="#ref-CSSCOLOR">CSSCOLOR</a>]</cite>.<!-- WA1
-<http://www.whatwg.org/specs/web-apps/current-work/complete.html#rules-for-parsing-a-legacy-color-value>
-(Note that HTML4 definition is very, very vague.  WA1 also supports
-CSS2 System Colors keywords, but they are deprecated by CSS3 Color
-specification.)  -->
+<http://www.whatwg.org/specs/web-apps/current-work/complete.html#rules-for-parsing-a-legacy-color-value>,
+HTML4 (Note that HTML4 definition is very, very vague.  WA1 also
+supports CSS2 System Colors keywords, but they are deprecated by CSS3
+Color specification.)  -->
 
 <p>The <code>body</code>, <code>table</code>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
-<code>td</code>, and <code>th</code> elements' <code
-title=attr-bgcolor>bgcolor</code> attribute values <em
+<code>td</code>, <code>th</code>, and <code>marquee</code> elements'
+<code title=attr-bgcolor>bgcolor</code> attribute values <em
 class=rfc2119>MUST</em> be <span title="valid legacy color
 value">valid legacy color values</span>.  The <code>body</code>
 element's <code title=attr-body-text>text</code>, <code
@@ -613,6 +606,92 @@ class=charname>U+002D HYPHEN-MINUS</code> character (-), followed by a
 character in the range U+0030 <code class=charname>DIGIT ZERO</code>
 (0) to U+0037 <code class=charname>DIGIT SEVEN</code> (7).<!-- WA1
 rendering of <font size>, HTML4 -->
+
+</div>
+
+<div class=section>
+<h3>Frames</h3>
+
+<div class=section>
+<h4>The <code>frameset</code> element</h4>
+
+<p>The <span>content model</span> of the <code>frameset</code> element
+is one or more <code>frame</code> or <code>frameset</code> elements.
+Additionally, if the <code>frameset</code> element is a child of a
+<code>body</code> element, the element <em class=rfc2119>MAY</em>
+contain a <code>noframes</code> element as a child.<!-- WA1 parsing,
+WA1 rendering, HTML4 -->
+
+<hr>
+
+<p>A <dfn>valid list of dimensions</dfn> is a <span>set of
+comma-separated tokens</span> where each token is a <span>valid
+dimension value</span>.<!-- WA1 rendering -->
+
+<p>If the <code title=attr-frameset-cols>cols</code> or <code
+title=attr-frameset-rows>rows</code> attribute of a
+<code>frameset</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid list of
+dimensions</span>.<!-- WA1 rendering -->
+
+<hr>
+
+<p>The following attributes of the <code>frameset</code> element <a
+href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handlers-on-elements,-document-objects,-and-window-objects">are</a>
+<span>event handler content attributes</span>:
+
+<!-- This is normatively defined in WA1 in fact. -->
+<code title=handler-window-onafterprint>onafterprint</code>,
+<code title=handler-window-onbeforeprint>onbeforeprint</code>,
+<code title=handler-window-onbeforeunload>onbeforeunload</code>,
+<code title=handler-window-onblur>onblur</code>,
+<code title=handler-window-onerror>onerror</code>,
+<code title=handler-window-onfocus>onfocus</code>,
+<code title=handler-window-onhashchange>onhashchange</code>,
+<code title=handler-window-onload>onload</code>,
+<code title=handler-window-onmessage>onmessage</code>,
+<code title=handler-window-onoffline>onoffline</code>,
+<code title=handler-window-onpagehide>onpagehide</code>,
+<code title=handler-window-onpageshow>onpageshow</code>,
+<code title=handler-window-onpopstate>onpopstate</code>,
+<code title=handler-window-onredo>onredo</code>,
+<code title=handler-window-onresize>onresize</code>,
+<code title=handler-window-onstorage>onstorage</code>,
+<code title=handler-window-onundo>onundo</code>, and
+<code title=handler-window-onunload>onunload</code>.
+
+</div>
+
+<div class=section>
+<h4>The <code>frame</code> element</h4>
+
+<p>The content of a <code>frame</code> element <em
+class=rfc2110>MUST</em> be <i>empty</i>.<!-- WA1 parsing, WA1
+rendering -->
+
+<p>The <code title=attr-frame-noresize>noresize</code> attribute of a
+<code>frame</code> element is <span>boolean attribute</span>.<!-- WA1
+rendering -->
+
+</div>
+
+<div class=section>
+<h4>Frame borders</h4>
+
+<p>The <code title=attr-frames-frameborder>frameborder</code>
+attribute of a <code>frame</code>, <code>frameset</code>, or
+<code>iframe</code> element is an <span>enumerated attribute</span>,
+with keywords <code title>1</code>, <code title>yes</code>, <code
+title>0</code>, and <code title>no</code>, where keywords <code
+title>yes</code> and <code title>no</code> are non-conforming.<!-- WA1
+rendering, HTML4 -->
+
+<p>The <code>frame</code> and <code>frameset</code> elements' <code
+title=attr-frames-bordercolor>bordercolor</code> attribute values <em
+class=rfc2119>MUST</em> be <span title="valid legacy color
+value">valid legacy color values</span>.<!-- WA1 rendering -->
+
+</div>
 
 </div>
 
