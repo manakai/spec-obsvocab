@@ -69,32 +69,35 @@ version of the document is the only normative version.</p>
 and attributes</a></li>
  <li><a href=#obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</a>
   <ol>
-   <li><a href=#metadata-content><span class=secno>4.1 </span>Metadata content</a></li>
-   <li><a href=#flow-content><span class=secno>4.2 </span>Flow content</a>
+   <li><a href=#global-attributes><span class=secno>4.1 </span>Global attributes</a></li>
+   <li><a href=#metadata-content><span class=secno>4.2 </span>Metadata content</a></li>
+   <li><a href=#flow-content><span class=secno>4.3 </span>Flow content</a>
     <ol>
-     <li><a href=#the-marquee-element><span class=secno>4.2.1 </span>The <code>marquee</code> element</a></li></ol></li>
-   <li><a href=#boxes><span class=secno>4.3 </span>Boxes</a></li>
-   <li><a href=#background-images-and-colors><span class=secno>4.4 </span>Background images and colors</a></li>
-   <li><a href=#alignments><span class=secno>4.5 </span>Alignments</a></li>
-   <li><a href=#line-breaks><span class=secno>4.6 </span>Line breaks</a></li>
-   <li><a href=#phrasing-content><span class=secno>4.7 </span>Phrasing content</a>
+     <li><a href=#the-marquee-element><span class=secno>4.3.1 </span>The <code>marquee</code> element</a></li></ol></li>
+   <li><a href=#boxes><span class=secno>4.4 </span>Boxes</a></li>
+   <li><a href=#background-images-and-colors><span class=secno>4.5 </span>Background images and colors</a></li>
+   <li><a href=#alignments><span class=secno>4.6 </span>Alignments</a></li>
+   <li><a href=#line-breaks><span class=secno>4.7 </span>Line breaks</a></li>
+   <li><a href=#phrasing-content><span class=secno>4.8 </span>Phrasing content</a>
     <ol>
-     <li><a href=#the-font-element><span class=secno>4.7.1 </span>The <code>font</code> element</a></li></ol></li>
-   <li><a href=#hyperlinks><span class=secno>4.8 </span>Hyperlinks</a></li>
-   <li><a href=#embedded-content><span class=secno>4.9 </span>Embedded content</a>
+     <li><a href=#ruby><span class=secno>4.8.1 </span>Ruby</a></li>
+     <li><a href=#the-font-element><span class=secno>4.8.2 </span>The <code>font</code> element</a></li></ol></li>
+   <li><a href=#hyperlinks><span class=secno>4.9 </span>Hyperlinks</a></li>
+   <li><a href=#embedded-content><span class=secno>4.10 </span>Embedded content</a>
     <ol>
-     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>4.9.1 </span>The <code>applet</code>, <code>object</code>, and
+     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>4.10.1 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</a></li>
-     <li><a href=#embedded-data><span class=secno>4.9.2 </span>Embedded data</a></li></ol></li>
-   <li><a href=#frames><span class=secno>4.10 </span>Frames</a>
+     <li><a href=#embedded-data><span class=secno>4.10.2 </span>Embedded data</a></li></ol></li>
+   <li><a href=#frames><span class=secno>4.11 </span>Frames</a>
     <ol>
-     <li><a href=#the-frameset-element><span class=secno>4.10.1 </span>The <code>frameset</code> element</a></li>
-     <li><a href=#the-frame-element><span class=secno>4.10.2 </span>The <code>frame</code> element</a></li>
-     <li><a href=#frame-borders><span class=secno>4.10.3 </span>Frame borders</a></li></ol></li>
-   <li><a href=#scripting><span class=secno>4.11 </span>Scripting</a></li>
-   <li><a href=#forms><span class=secno>4.12 </span>Forms</a>
+     <li><a href=#the-frameset-element><span class=secno>4.11.1 </span>The <code>frameset</code> element</a></li>
+     <li><a href=#the-frame-element><span class=secno>4.11.2 </span>The <code>frame</code> element</a></li>
+     <li><a href=#frame-borders><span class=secno>4.11.3 </span>Frame borders</a></li></ol></li>
+   <li><a href=#scripting><span class=secno>4.12 </span>Scripting</a></li>
+   <li><a href=#forms><span class=secno>4.13 </span>Forms</a>
     <ol>
-     <li><a href=#the-isindex-element><span class=secno>4.12.1 </span>The <code>isindex</code> element</a></li></ol></li></ol></li>
+     <li><a href=#the-isindex-element><span class=secno>4.13.1 </span>The <code>isindex</code> element</a></li></ol></li></ol></li>
+ <li><a href=#elements-and-attributes-not-convered-by-this-specification><span class=secno>5 </span>Elements and attributes not convered by this specification</a></li>
  <li><a class=no-num href=#references>References</a>
   <ol>
    <li><a class=no-num href=#normative-references>Normative references</a></li>
@@ -308,11 +311,36 @@ WA1 rendering -->
 <h2 id=obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</h2>
 
 <div class=section>
-<h3 id=metadata-content><span class=secno>4.1 </span>Metadata content</h3>
+<h3 id=global-attributes><span class=secno>4.1 </span>Global attributes</h3>
+
+<p>Attributes <code title="">class</code>, <code title="">dir</code>, <code title="">id</code>, <code title="">title</code>, <code title="">onclick</code>,
+<code title="">ondblclick</code>, <code title="">onmousedown</code>, <code title="">onmouseup</code>, <code title="">onmouseover</code>, <code title="">onmousemove</code>, <code title="">onmouseout</code>, <code title="">onkeypress</code>, <code title="">onkeydown</code>, and <code title="">onkeyup</code> in the <a href=#html-namespace>HTML namespace</a> <cite class="bibref informative">[<a href=#ref-M12N11>M12N11</a>]</cite>,
+and the <code title="">role</code> attribute in the <a href=#html-namespace>HTML
+namespace</a> <cite class="bibref informative">[<a href=#ref-ROLE>ROLE</a>]</cite> and <span id=xhtml2-role>in the
+<code title="">http://www.w3.org/2002/06/xhtml2/</code> namespace <cite class="bibref informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite></span>, <em class=rfc2119>MUST</em> be treated as equivalent to attributes, in no
+namespace, of an <span>HTML element</span> for the purpose of the
+conformance checking.  They <em class=rfc2119>MUST NOT</em> be
+specified for an <span>HTML element</span>.<!-- M12N 1.1, ROLE, XHTML2
+-->
+
+</p></div>
+
+<div class=section>
+<h3 id=metadata-content><span class=secno>4.2 </span>Metadata content</h3>
 
 <p>The <a href=#content-model>content model</a> of <code>basefont</code>,
 <code>bgsound</code>, and <code>nextid</code> elements are
 <i>empty</i>.<!-- WA1 parsing -->
+
+</p><p>If there is a <code>nextid</code> element element with its <code title=attr-nextid-n>n</code> attribute <cite class="bibref
+normative">[<a href=#ref-HTML20>HTML20</a>]</cite> specified, the
+element <em class=rfc2119>MUST</em> be treated as if the element were
+an <code>a</code> element and the attribute was the <code>name</code>
+attribute for the purpose of conformance of <code title="">name</code>
+attributes of <code>a</code>, <code>applet</code>, and
+<code>img</code> elements and the <code title=attr-nextid-n>n</code>
+attribute of the <code>nextid</code> element in the document.<!--
+HTML2 -->
 
 </p><p>If the <code title=attr-meta-scheme>scheme</code> attribute of the
 <code>meta</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4,
@@ -332,10 +360,16 @@ of HTML and XHTML define their |version| attribute as |#FIXED| and
 gives their public identifiers as the value, but it had not been
 speced anywhere at all. -->
 
+</p><p>The <a href=#content-model>content model</a> of the <code>pre-html</code> element
+<cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite> is same as the
+<code>html</code> element.<!-- ISOHTMLUG; pre-html was also reused by
+some HTML geeks to emulate tagsoup in SGML framework, but we don't
+copy that usage. -->
+
 </p></div>
 
 <div class=section>
-<h3 id=flow-content><span class=secno>4.2 </span>Flow content</h3>
+<h3 id=flow-content><span class=secno>4.3 </span>Flow content</h3>
 
 <p>The <a href=#content-model>content model</a> of the <code>dir</code> element,
 including the <a href=#content-model>content model</a> of the child <code>li</code>
@@ -343,9 +377,11 @@ elements of the <code>dir</code> elements, is same as the
 <code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
 -->
 
-</p><p>The <a href=#content-model>content model</a> of <code>center</code> and
-<code>multicol</code> elements is same as the <code>div</code>
-element.<!-- WA1 parsing, WA1 rendering -->
+</p><p>The <a href=#content-model>content model</a> of <code>center</code>,
+<code>div1</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div2</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div3</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div4</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div5</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, <code>div6</code> <cite class="bibref informative">[<a href=#ref-ISOHTMLUG>ISOHTMLUG</a>]</cite>, and <code>multicol</code>
+elements is same as the <code>div</code> element.<!-- WA1 parsing, WA1
+rendering, ISOHTMLUG; divn requires hn+1, e.g. div1 requires h2 child,
+but we don't copy it.  -->
 
 </p><p>The <a href=#content-model>content model</a> of <code>xmp</code>,
 <code>listing</code>, and <code>plaintext</code> elements are
@@ -365,14 +401,18 @@ element.<!-- WA1 rendering -->
 
 </p><hr>
 
-<p>If the <code title=attr-tdth-abbr>abbr</code> attribute of a
+<p>If the <code title=attr-table-cols>cols</code> attribute <cite class="bibref informative">[<a href=#ref-RFC1942>RFC1942</a>]</cite>
+of a <code>table</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.<!-- RFC1942 -->
+
+</p><p>If the <code title=attr-tdth-abbr>abbr</code> attribute of a
 <code>td</code> or <code>th</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 
 </p><p>If the <code title=attr-tdth-axis>axis</code> attribute of a
 <code>td</code> or <code>th</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 
 </p><div class=section>
-<h4 id=the-marquee-element><span class=secno>4.2.1 </span>The <code>marquee</code> element</h4>
+<h4 id=the-marquee-element><span class=secno>4.3.1 </span>The <code>marquee</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>marquee</code> element
 is same as the <code>div</code> element.<!-- WA1 parsing, WA1
@@ -406,7 +446,7 @@ attribute</a>.<!-- HTML5 obsolete -->
 </div>
 
 <div class=section>
-<h3 id=boxes><span class=secno>4.3 </span>Boxes</h3>
+<h3 id=boxes><span class=secno>4.4 </span>Boxes</h3>
 
 <p>If the <code title="">height</code> or <code title="">width</code>
 attribute of an <code>applet</code>, <code>table</code>,
@@ -486,7 +526,7 @@ non-conforming.<!-- WA1 rendering, HTML4 -->
 </p></div>
 
 <div class=section>
-<h3 id=background-images-and-colors><span class=secno>4.4 </span>Background images and colors</h3>
+<h3 id=background-images-and-colors><span class=secno>4.5 </span>Background images and colors</h3>
 
 <p>The <code>body</code>, <code>table</code>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
@@ -522,7 +562,7 @@ value</a>.<!-- WA1 rendering, HTML4 -->
 </p></div>
 
 <div class=section>
-<h3 id=alignments><span class=secno>4.5 </span>Alignments</h3>
+<h3 id=alignments><span class=secno>4.6 </span>Alignments</h3>
 
 <p>The <code title=attr-table-align>align</code> attribute of a
 <code>table</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
@@ -540,11 +580,16 @@ HTML4 -->
 with keywords <code title="">left</code>, <code title="">right</code>, and
 <code title="">center</code>.<!-- WA1 rendering -->
 
-</p><p>The <code title="">align</code> attribute of a <code>div</code>,
-<code>p</code>, <code>h1</code>, <code>h2</code>, <code>h3</code>,
-<code>h4</code>, <code>h5</code>, or <code>h6</code> element is an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">center</code>, and <code title="">justify</code>.<!-- WA1 rendering
--->
+</p><p>The <code title="">align</code> attribute of an <code>address</code>
+<cite class="bibref informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>, <code>blockquote</code> <cite class="bibref informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>,
+<code>div</code>, <code>dir</code> <cite class="bibref
+informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>,
+<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>,
+<code>h5</code>, <code>h6</code>, <code>li</code> <cite class="bibref
+informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>,
+<code>menu</code> <cite class="bibref informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>, <code>ol</code> <cite class="bibref informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>,
+<code>p</code>, <code>ul</code> <cite class="bibref informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite> element is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">center</code>, and <code title="">justify</code>.<!-- WA1 rendering -->
 
 </p><p>The <code title=attr-hr-align>align</code> attribute of a
 <code>hr</code> element is an <a href=#enumerated-attribute>enumerated attribute</a> with
@@ -586,7 +631,7 @@ integer</a>.<!-- HTML4 -->
 </p></div>
 
 <div class=section>
-<h3 id=line-breaks><span class=secno>4.6 </span>Line breaks</h3>
+<h3 id=line-breaks><span class=secno>4.7 </span>Line breaks</h3>
 
 <p>The <code title=attr-tdth-nowrap>nowrap</code> attributes of
 <code>td</code> and <code>th</code> elements and the <code title=attr-pre-wrap>wrap</code> attribute of the <code>pre</code>
@@ -602,7 +647,7 @@ keywords <code title="">left</code>, <code title="">right</code>, <code title=""
 </p></div>
 
 <div class=section>
-<h3 id=phrasing-content><span class=secno>4.7 </span>Phrasing content</h3>
+<h3 id=phrasing-content><span class=secno>4.8 </span>Phrasing content</h3>
 
 <p>The <a href=#content-model>content model</a> of <code>acronym</code>,
 <code>big</code>, <code>blink</code>, <code>nobr</code>,
@@ -611,7 +656,24 @@ and <code>u</code> elements are same as the <code>span</code>
 element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete -->
 
 </p><div class=section>
-<h4 id=the-font-element><span class=secno>4.7.1 </span>The <code>font</code> element</h4>
+<h4 id=ruby><span class=secno>4.8.1 </span>Ruby</h4>
+
+<p>If the <code title=attr-rt-rbspan>rbspan</code> attribute <cite class="bibref informative">[<a href=#ref-RUBY>RUBY</a>]</cite> of an
+<code>rt</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
+that represents a number greater than zero (0).<!-- RUBY -->
+
+</p><p>The <a href=#content-model>content model</a> of the <code>rbc</code> element
+<cite class="bibref informative">[<a href=#ref-RUBY>RUBY</a>]</cite>
+is one or more <code>rb</code> elements.<!-- RUBY -->
+
+</p><p>The <a href=#content-model>content model</a> of the <code>rtc</code> element
+<cite class="bibref informative">[<a href=#ref-RUBY>RUBY</a>]</cite>
+is one or more <code>rt</code> elements.<!-- RUBY -->
+
+</p></div>
+
+<div class=section>
+<h4 id=the-font-element><span class=secno>4.8.2 </span>The <code>font</code> element</h4>
 
 <p><a href=#content-model>Content model</a> of the <code>font</code> element is
 <i>transparent</i>.<!-- WA1 parsing, Old HTML5 definition -->
@@ -634,7 +696,7 @@ rendering of <font size>, HTML4 -->
 </div>
 
 <div class=section>
-<h3 id=hyperlinks><span class=secno>4.8 </span>Hyperlinks</h3>
+<h3 id=hyperlinks><span class=secno>4.9 </span>Hyperlinks</h3>
 
 <p>If the <code title="">charset</code> attribute of an <code>a</code> or
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-script-charset>charset</code> attribute value for a
@@ -670,15 +732,15 @@ keyword</span>.<!-- HTML4 -->
 </p></div>
 
 <div class=section>
-<h3 id=embedded-content><span class=secno>4.9 </span>Embedded content</h3>
+<h3 id=embedded-content><span class=secno>4.10 </span>Embedded content</h3>
 
 <p>If there are <code>applet</code>, <code>embed</code>, and/or
 <code>img</code> elements with their <code title="">name</code>
 attributes specified, those elements <em class=rfc2119>MUST</em> be
 treated as if they were <code>a</code> elements for the purpose of
 conformance of <code title="">name</code> attributes of <code>a</code>,
-<code>applet</code>, and <code>img</code> elements in the
-document.<!-- WA1 UA reqs
+<code>applet</code>, and <code>img</code> elements and the <code title=attr-nextid-n>n</code> attribute of the <code>nextid</code>
+element in the document.<!-- WA1 UA reqs
 e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
 WA1 obsolete, HTML4 -->
 
@@ -698,7 +760,7 @@ a <code>map</code> element.<!-- Old HTML5 definition -->
 is same as the <code>iframe</code> element.
 
 </p><div class=section>
-<h4 id=the-applet,-object,-and-param-elements><span class=secno>4.9.1 </span>The <code>applet</code>, <code>object</code>, and
+<h4 id=the-applet,-object,-and-param-elements><span class=secno>4.10.1 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>applet</code> element
@@ -773,7 +835,7 @@ with keywords <code title="">data</code>, <code title="">ref</code>, and
 </p></div>
 
 <div class=section>
-<h4 id=embedded-data><span class=secno>4.9.2 </span>Embedded data</h4>
+<h4 id=embedded-data><span class=secno>4.10.2 </span>Embedded data</h4>
 
 <p>If the <code title=attr-datasrc>datasrc</code> attribute of an
 <a href=#html-elements title="HTML elements">HTML element</a> is present, its value
@@ -801,13 +863,13 @@ integer</a>.<!--
 </div>
 
 <div class=section>
-<h3 id=frames><span class=secno>4.10 </span>Frames</h3>
+<h3 id=frames><span class=secno>4.11 </span>Frames</h3>
 
 <p>The <a href=#content-model>content model</a> of the <code>noframes</code> element
 is same as the <code>iframe</code> element.
 
 </p><div class=section>
-<h4 id=the-frameset-element><span class=secno>4.10.1 </span>The <code>frameset</code> element</h4>
+<h4 id=the-frameset-element><span class=secno>4.11.1 </span>The <code>frameset</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>frameset</code> element
 is one or more <code>frame</code> or <code>frameset</code> elements.
@@ -861,7 +923,7 @@ dimensions</a>.<!-- WA1 rendering -->
 </p></div>
 
 <div class=section>
-<h4 id=the-frame-element><span class=secno>4.10.2 </span>The <code>frame</code> element</h4>
+<h4 id=the-frame-element><span class=secno>4.11.2 </span>The <code>frame</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>frame</code> element is
 <i>empty</i>.<!-- WA1 parsing, WA1 rendering -->
@@ -881,7 +943,7 @@ rendering -->
 </p></div>
 
 <div class=section>
-<h4 id=frame-borders><span class=secno>4.10.3 </span>Frame borders</h4>
+<h4 id=frame-borders><span class=secno>4.11.3 </span>Frame borders</h4>
 
 <p>The <code title=attr-frames-frameborder>frameborder</code>
 attribute of a <code>frame</code>, <code>frameset</code>, or
@@ -897,7 +959,7 @@ value">valid legacy color values</a>.<!-- WA1 rendering -->
 </div>
 
 <div class=section>
-<h3 id=scripting><span class=secno>4.11 </span>Scripting</h3>
+<h3 id=scripting><span class=secno>4.12 </span>Scripting</h3>
 
 <p>Requirements for the <code title=attr-script-language>language</code> attribute is defined in Web
 Applications 1.0 specification, as an obsolete but conforming feature.
@@ -916,7 +978,7 @@ HTML4 said this was a URL, but it is wrong. -->
 </p></div>
 
 <div class=section>
-<h3 id=forms><span class=secno>4.12 </span>Forms</h3>
+<h3 id=forms><span class=secno>4.13 </span>Forms</h3>
 
 <p>The <code title=attr-textarea-wrap>wrap</code> attribute of a
 <code>textarea</code> element, for the purpose of conformance
@@ -924,8 +986,13 @@ checking, <em class=rfc2119>MUST</em> be treated as if there is an
 additional keyword: <code title="">off</code>.  However, this keyword is
 non-conforming.<!-- WA1 rendering -->
 
+</p><p>If the <code title="">accept-charset</code> attribute of an
+<code>input</code> or <code>textarea</code> element is present, its
+value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-form-accept-charset>charset</code> attribute value for a
+<code>form</code> element.<!-- HTML 2.x -->
+
 </p><div class=section>
-<h4 id=the-isindex-element><span class=secno>4.12.1 </span>The <code>isindex</code> element</h4>
+<h4 id=the-isindex-element><span class=secno>4.13.1 </span>The <code>isindex</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>isindex</code> element
 is <i>empty</i>.<!-- WA1 parsing, only affects XHTML -->
@@ -943,11 +1010,44 @@ element.<!-- WA1 parsing -->
 
 </div>
 
+<div class=section>
+<h2 id=elements-and-attributes-not-convered-by-this-specification><span class=secno>5 </span>Elements and attributes not convered by this specification</h2>
+
+<p>Elements and attributes defined by the following specifications are
+not included in this specification, because they have not been
+implemented at all and are not useful.
+
+</p><ul>
+
+<li>Historical Internet Drafts and Working Drafts of HTML
+
+</li><li>RFC 2659 <cite class="bibref informative">[<a href=#ref-RFC2659>RFC2659</a>]</cite>
+
+</li><li>XHTML 2.0 which defines elements and attributes in the <a href=#html-namespace>HTML
+namespace</a> <cite class="bibref informative">[<a href=#ref-XHTML2ED>XHTML2ED</a>]</cite>
+
+</li><li>XHTML Access Module <cite class="bibref informative">[<a href=#ACCESS>ACCESS</a>]</cite>
+
+</li></ul>
+
+<p>Elements in the <code title="">http://www.w3.org/2002/06</code> and
+<code title="">http://www.w3.org/2002/06/</code> namespaces are outside
+of the scope of this specification (but there is <a href=#xhtml2-role>an exception</a>).
+
+</p><p>Attributes <code title=attr-sdaform>sdaform</code>, <code title=attr-sdapref>sdapref</code>, and <code title=attr-sdasuff>sdasuff</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> <cite class="bibref
+informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite> are not real
+attributes and therefore not included in this specification.
+
+</p><p>Attributes <code title=attr-htnames>htnames</code>, <code title=attr-htsupp>htsupp</code>, and <code title=attr-htign>htign</code> <cite class="bibref informative">[<a href=#ref-M12N11>M12N11</a>]</cite> are not real attributes and
+therefore not included in this specification.
+
+</p></div>
+
 <div class="section reference">
 <h2 class=no-num id=references>References</h2>
 
-<p class=ed>@@@ TODO: HTML 2.0, HTML 2.x, HTML 3.2, Ruby, ISO-HTML,
-MSDN, Netscape's reference, i-mode HTML, ezweb, softbank
+<p class=ed>@@@ TODO: WF2, RDFa, MSDN, Netscape's reference, i-mode
+HTML, ezweb, softbank
 
 </p><div class="section reference normative">
 <h3 class=no-num id=normative-references>Normative references</h3>
@@ -960,10 +1060,6 @@ MSDN, Netscape's reference, i-mode HTML, ezweb, softbank
 Module Level 3</a></cite>, Tantek Çelik, Chris Lilley, L. David Baron,
 W3C Editor's Draft.
 
-</dd><dt id=ref-DOM>DOM
-
-</dt><dd class=ed>Web DOM Core? DOM3 Core?
-
 </dd><dt id=ref-RFC2119>RFC2119
 
 </dt><dd><cite><a href=http://tools.ietf.org/html/rfc2119>Key words for
@@ -975,10 +1071,6 @@ IETF BCP 14, March 1997.
 </dt><dd><cite><a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html>Web
 Applications 1.0</a></cite>, Ian Hickson, WHATWG Draft Standard.
 
-</dd><dt id=ref-XML>XML
-
-</dt><dd class=ed>...
-
 </dd></dl>
 
 </div>
@@ -988,17 +1080,86 @@ Applications 1.0</a></cite>, Ian Hickson, WHATWG Draft Standard.
 
 <dl>
 
-<dt id=ref-HTML20>HTML20
+<dt id=ref-ACCESS>ACCESS
+
+</dt><dd><cite><a href=http://www.w3.org/MarkUp/2009/ED-xhtml-access-20090423/>XHTML
+Access Module</a></cite>, Mark Birbeck, Shane McCarron, Steven
+Pemberton, T. V. Raman, Richard Schwerdtfeger, W3C Editor's Draft,
+<time date=2009-04-23>23 April 2009</time>.
+
+</dd><dt id=ref-HTML20>HTML20
 
 </dt><dd><cite><a href=http://tools.ietf.org/html/rfc1866>Hypertext
 Markup Language - 2.0</a></cite>, Tim Berners-Lee, Daniel W. Connolly,
-IETF Proposed Standard (obsolete), November 1995.
+RFC 1866, IETF Proposed Standard (obsolete), November 1995.
+
+</dd><dt id=ref-HTML2x>HTML2x
+
+</dt><dd><cite><a href=http://tools.ietf.org/html/rfc2070>Internationalization of the
+Hypertext Markup Language</a></cite>, Frangois Yergeau, Gavin Thomas
+Nicol, Glenn Adams, Martin J. Dürst, RFC 2070, IETF Proposed
+Standard (obsolete), January 1997.
 
 </dd><dt id=ref-HTML4>HTML4
 
 </dt><dd><cite><a href=http://www.w3.org/TR/1999/REC-html401-19991224>HTML 4.01
 Specification</a></cite>, Dave Raggett, Arnaud Le Hors, Ian Jacobs,
 W3C Recommendation, <time datetime=1999-12-24>24 December 1999</time>.
+
+</dd><dt id=ref-ISOHTMLUG>ISOHTMLUG
+
+</dt><dd><cite><a href=http://purl.org/NET/ISO+IEC.15445/Users-Guide.html>User's Guide
+to ISO/IEC 15445:2000 HyperText Markup Language (HTML)</a></cite>,
+David M. Abrahamson, Roger Price, <time datetime=2003-04-24>24 April
+2003</time>.
+
+</dd><dt id=ref-M12N11>M12N11
+
+</dt><dd><cite><a href=http://www.w3.org/MarkUp/2010/PER-xhtml-modularization-20100213/>XHTML<sup>TM</sup>
+Modularization 1.1</a></cite>, Daniel Austin, Subramanian Peruvemba,
+Shane McCarron, Masayasu Ishikawa, Mark Birbeck, W3C Proposed Edited
+Recommendation, <time datetime=2010-02-13>13 February 2008</time>.
+
+</dd><dt id=ref-RFC1942>RFC1942
+
+</dt><dd><cite><a href=http://tools.ietf.org/html/rfc1942>HTML
+Tables</a></cite>, Dave Raggett, RFC 1942, IETF Experimental RFC
+(obsolete), May 1996.
+
+</dd><dt id=ref-RFC2659>RFC2659
+
+</dt><dd><cite><a href=http://tools.ietf.org/html/rfc2659>Security
+Extensions For HTML</a></cite>, Eric Rescorla, Allan M. Schiffman, RFC
+2659, IETF Experimental RFC, August 1999.
+
+</dd><dt id=ref-ROLE>ROLE
+
+</dt><dd><cite><a href=http://www.w3.org/MarkUp/2008/ED-xhtml-role-20081023/>XHTML
+Role Attribute Module</a></cite>, Mark Birbeck, Shane McCarron, Steven
+Pemberton, T. V. Raman, Richard Schwerdtfeger, W3C Editor's Draft,
+<time datetime=2008-10-23>23 October 2008</time>.
+
+</dd><dt id=ref-RUBY>RUBY
+
+</dt><dd><cite><a href=http://www.w3.org/TR/2001/REC-ruby-20010531/>Ruby
+Annotation</a></cite>, Marcin Sawicki Michel Suignard, Masayasu
+Ishikawa, Martin Dürst, Tex Texin, W3C Recommendation, <time datetime=2008-06-25>25 June 2008</time>.
+
+</dd><dt id=ref-XHTML2>XHTML2
+
+</dt><dd><cite><a href=http://www.w3.org/TR/2006/WD-xhtml2-20060726/>XHTML<sup>TM</sup>
+2.0</a></cite>, Jonny Axelsson, Mark Birbeck, Micah Dubinko, Beth
+Epperson, Masayasu Ishikawa, Shane McCarron, Ann Navarro, Steven
+Pemberton, W3C Working Draft, <time datetime=2006-07-26>26 July
+2006</time>.
+
+</dd><dt id=ref-XHTML2ED>XHTML2ED
+
+</dt><dd><cite><a href=http://www.w3.org/MarkUp/2010/ED-xhtml2-20100306/>XHTML<sup>TM</sup>
+2.0</a></cite>, Jonny Axelsson, Mark Birbeck, Micah Dubinko, Beth
+Epperson, Masayasu Ishikawa, Shane McCarron, Ann Navarro, Steven
+Pemberton, W3C Editor's Draft, <time datetime=2010-03-06>6 March
+2010</time>.
 
 </dd></dl>
 
