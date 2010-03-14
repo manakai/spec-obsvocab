@@ -130,9 +130,11 @@ href="#ref-WA1">WA1</a>]</cite> to define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-elements"><dfn>HTML elements</dfn></a>,
 
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-integer"><dfn>valid integer</dfn></a>,
+
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative-integer"><dfn>valid non-negative integer</dfn></a>,
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-set-of-comma-separated-tokens"><dfn>valid set of comma-separated tokens</dfn></a>,
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#set-of-comma-separated-tokens"><dfn>set of comma-separated tokens</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#set-of-space-separated-tokens"><dfn>set of space-separated tokens</dfn></a>,
 
@@ -296,7 +298,8 @@ the <code>head</code> element is present, its value <em
 class=rfc2119>MUST</em> be a <span>set of space-separated
 tokens</span>, each of which <em class=rfc2119>MUST</em> be a
 <span>valid non-empty URL</span>.<!-- HTML5 old definition
-<http://html5.org/tools/web-apps-tracker?from=421&to=422> -->
+<http://html5.org/tools/web-apps-tracker?from=421&to=422>, HTML5
+obsolete -->
 
 <p>If the <code title=attr-html-version>version</code> attribute of an
 <code>html</code> element is present, its value <em
@@ -360,6 +363,35 @@ class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 <p>The <span>content model</span> of the <code>marquee</code> element
 is same as the <code>div</code> element.<!-- WA1 parsing, WA1
 rendering -->
+
+<p>If the <code title=attr-marquee-scrolldelay>scrolldelay</code>
+attribute of a <code>marquee</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!-- HTML5 obsolete -->
+
+<p>If the <code title=attr-marquee-scrollamount>scrollamount</code>
+attribute of a <code>marquee</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!-- HTML5 obsolete -->
+
+<p>If the <code title=attr-marquee-loop>loop</code> attribute of a
+<code>marquee</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid integer</span> that
+represents &minus;1, 1, or a number greater than 1.<!-- HTML5 obsolete
+-->
+
+<p>The <code title=attr-marquee-truespeed>truespeed</code> attribute
+of the <code>marquee</code> element is a <span>boolean
+attribute</span>.<!-- HTML5 obsolete -->
+
+<p>The following attributes of the <code>marquee</code> element <a
+href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#the-marquee-element">are</a>
+<span>event handler content attributes</span>:
+
+<!-- This is normatively defined in WA1 in fact. -->
+<code title=handler-marquee-onbounce>onbounce</code>, <code
+title=handler-marquee-onfinish>onfinish</code>, and <code
+title=handler-marquee-onstart>onstart</code>.
 
 </div>
 
@@ -739,9 +771,35 @@ href="#ref-HTML4">HTML4</a>]</cite>, <code>iframe</code>, or
 <code>img</code> element is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid URL</span>.<!-- HTML4 -->
 
+<p>The <span>content model</span> of the <code>noembed</code> element
+is same as the <code>iframe</code> element.
+
 <div class=section>
 <h4>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</h4>
+
+<p>The <span>content model</span> of the <code>applet</code> element
+is same as the <code>object</code> element.<!-- WA1 obsolete, HTML4
+-->
+
+<p>If the <code title=attr-applet-alt>alt</code> attribute of the
+<code>applet</code> element is present, its value <em
+class=rfc2119>MAY</em> be any string.  This is not a required
+attribute.<!-- HTML4 (In HTML4 |alt| is REQUIRED. -->
+
+<p>The <code title=attr-applet-width>width</code> attribute and the
+<code title=attr-applet-height>height</code> attribute of the
+<code>applet</code> element <em class=rfc2119>MUST</em> be
+specified.<!-- HTML4 -->
+
+<hr>
+
+<p>If the <code title=attr-applet-archive>archive</code> attribute of
+the <code>applet</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>set of comma-separated
+tokens</span>, each of which <em class=rfc2119>MUST</em> be a
+<span>valid non-empty URL</span> that contains no U+002C <code
+class=charname>COMMA</code> character (,).<!-- HTML4 -->
 
 <p>If the <code title=attr-object-archive>archive</code> attribute of
 the <code>object</code> element is present, its value <em
@@ -756,15 +814,25 @@ class=rfc2119>MUST</em> be an <span>absolute URL</span>.<!-- WA1 UA
 reqs and HTML4 def -->
 
 <p>If the <code title=attr-object-code>code</code> attribute of an
-<code>object</code> element is present, its <em
+<code>applet</code> or <code>object</code> element is present, its <em
 class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!-- WA1
 obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533575%28VS.85%29.aspx> -->
 
-<p>If the <code title=attr-object-codebase>codebase</code> attribute
-of an <code>object</code> element is present, its <em
+<p>If the <code title=attr-applet-object>object</code> attribute of an
+<code>applet</code> element is present, its <em
 class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
 HTML4 -->
+
+<p>For an <code>applet</code> element at least one of <code
+title=attr-applet-code>code</code> and <code
+title=attr-applet-object>object</code> attribute <em
+class=rfc2119>MUST</em> be specified.<!-- HTML4 -->
+
+<p>If the <code title=attr-object-codebase>codebase</code> attribute
+of an <code>applet</code> or <code>object</code> element is present,
+its <em class=rfc2119>MUST</em> be a <span>valid non-empty
+URL</span>.<!-- HTML4 -->
 
 <p>If the <code title=attr-object-codetype>codetype</code> attribute
 of an <code>object</code> element is present, its <em
@@ -783,17 +851,15 @@ class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 
 <hr>
 
-<p>If the <code title=attr-param-type>type</code> attribute of an
+<p>If the <code title=attr-param-type>type</code> attribute of a
 <code>param</code> element is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid MIME type</span>.<!-- HTML4
 -->
 
-</div>
-
-<div class=section>
-<h4>The <code>noembed</code> element</h4>
-
-<p class=ed>@@
+<p>The <code title=attr-param-valuetype>valuetype</code> attribute of
+a <code>param</code> element is an <span>enumerated attribute</span>
+with keywords <code title>data</code>, <code title>ref</code>, and
+<code title>object</code>.<!-- HTML4 -->
 
 </div>
 
@@ -831,6 +897,9 @@ integer</span>.<!--
 <div class=section>
 <h3>Frames</h3>
 
+<p>The <span>content model</span> of the <code>noframes</code> element
+is same as the <code>iframe</code> element.
+
 <div class=section>
 <h4>The <code>frameset</code> element</h4>
 
@@ -840,6 +909,9 @@ Additionally, if the <code>frameset</code> element is a child of a
 <code>html</code> element, the element <em class=rfc2119>MAY</em>
 contain a <code>noframes</code> element as a child.<!-- WA1 parsing,
 WA1 rendering, HTML4 -->
+
+<!-- Maybe the number of child elements has to match to the slots
+calculated by |rows| and |cols| attributes... -->
 
 <hr>
 
@@ -892,16 +964,19 @@ href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-hand
 <p>The <span>content model</span> of the <code>frame</code> element is
 <i>empty</i>.<!-- WA1 parsing, WA1 rendering -->
 
+<p>If the <code title=attr-frame-src>src</code> attribute of a
+<code>frame</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!-- WA1
+obsolete; not required to align with <iframe src>. -->
+
+<p>If the <code title=attr-frame-name>name</code> attribute of a
+<code>frame</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid browsing context
+name</span>.<!-- WA1 obsolete -->
+
 <p>The <code title=attr-frame-noresize>noresize</code> attribute of a
 <code>frame</code> element is <span>boolean attribute</span>.<!-- WA1
 rendering -->
-
-</div>
-
-<div class=section>
-<h4>The <code>noframes</code> element</h4>
-
-<p class=ed>@@
 
 </div>
 

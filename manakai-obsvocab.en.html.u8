@@ -85,14 +85,12 @@ and attributes</a></li>
     <ol>
      <li><a href=#the-applet,-object,-and-param-elements><span class=secno>4.9.1 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</a></li>
-     <li><a href=#the-noembed-element><span class=secno>4.9.2 </span>The <code>noembed</code> element</a></li>
-     <li><a href=#embedded-data><span class=secno>4.9.3 </span>Embedded data</a></li></ol></li>
+     <li><a href=#embedded-data><span class=secno>4.9.2 </span>Embedded data</a></li></ol></li>
    <li><a href=#frames><span class=secno>4.10 </span>Frames</a>
     <ol>
      <li><a href=#the-frameset-element><span class=secno>4.10.1 </span>The <code>frameset</code> element</a></li>
      <li><a href=#the-frame-element><span class=secno>4.10.2 </span>The <code>frame</code> element</a></li>
-     <li><a href=#the-noframes-element><span class=secno>4.10.3 </span>The <code>noframes</code> element</a></li>
-     <li><a href=#frame-borders><span class=secno>4.10.4 </span>Frame borders</a></li></ol></li>
+     <li><a href=#frame-borders><span class=secno>4.10.3 </span>Frame borders</a></li></ol></li>
    <li><a href=#scripting><span class=secno>4.11 </span>Scripting</a></li>
    <li><a href=#forms><span class=secno>4.12 </span>Forms</a>
     <ol>
@@ -162,9 +160,11 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-elements><dfn id=html-elements>HTML elements</dfn></a>,
 
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-integer><dfn id=valid-integer>valid integer</dfn></a>,
+
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative-integer><dfn id=valid-non-negative-integer>valid non-negative integer</dfn></a>,
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-set-of-comma-separated-tokens><dfn id=valid-set-of-comma-separated-tokens>valid set of comma-separated tokens</dfn></a>,
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#set-of-comma-separated-tokens><dfn id=set-of-comma-separated-tokens>set of comma-separated tokens</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#set-of-space-separated-tokens><dfn id=set-of-space-separated-tokens>set of space-separated tokens</dfn></a>,
 
@@ -322,7 +322,8 @@ WA1 rendering -->
 the <code>head</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#set-of-space-separated-tokens>set of space-separated
 tokens</a>, each of which <em class=rfc2119>MUST</em> be a
 <a href=#valid-non-empty-url>valid non-empty URL</a>.<!-- HTML5 old definition
-<http://html5.org/tools/web-apps-tracker?from=421&to=422> -->
+<http://html5.org/tools/web-apps-tracker?from=421&to=422>, HTML5
+obsolete -->
 
 </p><p>If the <code title=attr-html-version>version</code> attribute of an
 <code>html</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- According to HTML4 prose,
@@ -376,6 +377,29 @@ element.<!-- WA1 rendering -->
 <p>The <a href=#content-model>content model</a> of the <code>marquee</code> element
 is same as the <code>div</code> element.<!-- WA1 parsing, WA1
 rendering -->
+
+</p><p>If the <code title=attr-marquee-scrolldelay>scrolldelay</code>
+attribute of a <code>marquee</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.<!-- HTML5 obsolete -->
+
+</p><p>If the <code title=attr-marquee-scrollamount>scrollamount</code>
+attribute of a <code>marquee</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.<!-- HTML5 obsolete -->
+
+</p><p>If the <code title=attr-marquee-loop>loop</code> attribute of a
+<code>marquee</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a> that
+represents −1, 1, or a number greater than 1.<!-- HTML5 obsolete
+-->
+
+</p><p>The <code title=attr-marquee-truespeed>truespeed</code> attribute
+of the <code>marquee</code> element is a <a href=#boolean-attribute>boolean
+attribute</a>.<!-- HTML5 obsolete -->
+
+</p><p>The following attributes of the <code>marquee</code> element <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#the-marquee-element>are</a>
+<a href=#event-handler-content-attributes>event handler content attributes</a>:
+
+<!-- This is normatively defined in WA1 in fact. -->
+<code title=handler-marquee-onbounce>onbounce</code>, <code title=handler-marquee-onfinish>onfinish</code>, and <code title=handler-marquee-onstart>onstart</code>.
 
 </p></div>
 
@@ -670,11 +694,34 @@ a <code>map</code> element.<!-- Old HTML5 definition -->
 <code>frame</code> <cite class="bibref informative">[<a href=#ref-HTML4>HTML4</a>]</cite>, <code>iframe</code>, or
 <code>img</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.<!-- HTML4 -->
 
+</p><p>The <a href=#content-model>content model</a> of the <code>noembed</code> element
+is same as the <code>iframe</code> element.
+
 </p><div class=section>
 <h4 id=the-applet,-object,-and-param-elements><span class=secno>4.9.1 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</h4>
 
-<p>If the <code title=attr-object-archive>archive</code> attribute of
+<p>The <a href=#content-model>content model</a> of the <code>applet</code> element
+is same as the <code>object</code> element.<!-- WA1 obsolete, HTML4
+-->
+
+</p><p>If the <code title=attr-applet-alt>alt</code> attribute of the
+<code>applet</code> element is present, its value <em class=rfc2119>MAY</em> be any string.  This is not a required
+attribute.<!-- HTML4 (In HTML4 |alt| is REQUIRED. -->
+
+</p><p>The <code title=attr-applet-width>width</code> attribute and the
+<code title=attr-applet-height>height</code> attribute of the
+<code>applet</code> element <em class=rfc2119>MUST</em> be
+specified.<!-- HTML4 -->
+
+</p><hr>
+
+<p>If the <code title=attr-applet-archive>archive</code> attribute of
+the <code>applet</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#set-of-comma-separated-tokens>set of comma-separated
+tokens</a>, each of which <em class=rfc2119>MUST</em> be a
+<a href=#valid-non-empty-url>valid non-empty URL</a> that contains no U+002C <code class=charname>COMMA</code> character (,).<!-- HTML4 -->
+
+</p><p>If the <code title=attr-object-archive>archive</code> attribute of
 the <code>object</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#set-of-space-separated-tokens>set of space-separated
 tokens</a>, each of which <em class=rfc2119>MUST</em> be a
 <a href=#valid-non-empty-url>valid non-empty URL</a>.<!-- HTML4 -->
@@ -684,13 +731,20 @@ an <code>object</code> element is present, its value <em class=rfc2119>MUST</em>
 reqs and HTML4 def -->
 
 </p><p>If the <code title=attr-object-code>code</code> attribute of an
-<code>object</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!-- WA1
+<code>applet</code> or <code>object</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!-- WA1
 obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533575%28VS.85%29.aspx> -->
 
-</p><p>If the <code title=attr-object-codebase>codebase</code> attribute
-of an <code>object</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
+</p><p>If the <code title=attr-applet-object>object</code> attribute of an
+<code>applet</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
 HTML4 -->
+
+</p><p>For an <code>applet</code> element at least one of <code title=attr-applet-code>code</code> and <code title=attr-applet-object>object</code> attribute <em class=rfc2119>MUST</em> be specified.<!-- HTML4 -->
+
+</p><p>If the <code title=attr-object-codebase>codebase</code> attribute
+of an <code>applet</code> or <code>object</code> element is present,
+its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty
+URL</a>.<!-- HTML4 -->
 
 </p><p>If the <code title=attr-object-codetype>codetype</code> attribute
 of an <code>object</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-mime-type>valid MIME type</a>.<!-- HTML4
@@ -707,21 +761,19 @@ the <code>object</code> element is present, its value <em class=rfc2119>MAY</em>
 
 </p><hr>
 
-<p>If the <code title=attr-param-type>type</code> attribute of an
+<p>If the <code title=attr-param-type>type</code> attribute of a
 <code>param</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-mime-type>valid MIME type</a>.<!-- HTML4
 -->
 
-</p></div>
-
-<div class=section>
-<h4 id=the-noembed-element><span class=secno>4.9.2 </span>The <code>noembed</code> element</h4>
-
-<p class=ed>@@
+</p><p>The <code title=attr-param-valuetype>valuetype</code> attribute of
+a <code>param</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code title="">data</code>, <code title="">ref</code>, and
+<code title="">object</code>.<!-- HTML4 -->
 
 </p></div>
 
 <div class=section>
-<h4 id=embedded-data><span class=secno>4.9.3 </span>Embedded data</h4>
+<h4 id=embedded-data><span class=secno>4.9.2 </span>Embedded data</h4>
 
 <p>If the <code title=attr-datasrc>datasrc</code> attribute of an
 <a href=#html-elements title="HTML elements">HTML element</a> is present, its value
@@ -751,7 +803,10 @@ integer</a>.<!--
 <div class=section>
 <h3 id=frames><span class=secno>4.10 </span>Frames</h3>
 
-<div class=section>
+<p>The <a href=#content-model>content model</a> of the <code>noframes</code> element
+is same as the <code>iframe</code> element.
+
+</p><div class=section>
 <h4 id=the-frameset-element><span class=secno>4.10.1 </span>The <code>frameset</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>frameset</code> element
@@ -761,10 +816,13 @@ Additionally, if the <code>frameset</code> element is a child of a
 contain a <code>noframes</code> element as a child.<!-- WA1 parsing,
 WA1 rendering, HTML4 -->
 
+<!-- Maybe the number of child elements has to match to the slots
+calculated by |rows| and |cols| attributes... -->
+
 </p><hr>
 
-<p>A <dfn id=valid-list-of-dimensions>valid list of dimensions</dfn> is a <span>set of
-comma-separated tokens</span>, each of which <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension value</a> or an
+<p>A <dfn id=valid-list-of-dimensions>valid list of dimensions</dfn> is a <a href=#set-of-comma-separated-tokens>set of
+comma-separated tokens</a>, each of which <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension value</a> or an
 optional <a href=#valid-non-negative-integer>valid non-negative integer</a> followed by a U+002A
 <code class=charname>ASTERISK</code> character (*).<!-- WA1 rendering,
 HTML4 -->
@@ -808,6 +866,14 @@ dimensions</a>.<!-- WA1 rendering -->
 <p>The <a href=#content-model>content model</a> of the <code>frame</code> element is
 <i>empty</i>.<!-- WA1 parsing, WA1 rendering -->
 
+</p><p>If the <code title=attr-frame-src>src</code> attribute of a
+<code>frame</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!-- WA1
+obsolete; not required to align with <iframe src>. -->
+
+</p><p>If the <code title=attr-frame-name>name</code> attribute of a
+<code>frame</code> element is present, its value <em class=rfc2119>MUST</em> be a <span>valid browsing context
+name</span>.<!-- WA1 obsolete -->
+
 </p><p>The <code title=attr-frame-noresize>noresize</code> attribute of a
 <code>frame</code> element is <a href=#boolean-attribute>boolean attribute</a>.<!-- WA1
 rendering -->
@@ -815,14 +881,7 @@ rendering -->
 </p></div>
 
 <div class=section>
-<h4 id=the-noframes-element><span class=secno>4.10.3 </span>The <code>noframes</code> element</h4>
-
-<p class=ed>@@
-
-</p></div>
-
-<div class=section>
-<h4 id=frame-borders><span class=secno>4.10.4 </span>Frame borders</h4>
+<h4 id=frame-borders><span class=secno>4.10.3 </span>Frame borders</h4>
 
 <p>The <code title=attr-frames-frameborder>frameborder</code>
 attribute of a <code>frame</code>, <code>frameset</code>, or
