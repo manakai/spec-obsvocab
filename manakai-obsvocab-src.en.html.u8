@@ -299,19 +299,45 @@ href="#ref-ROLE">ROLE</a>]</cite> and <span id=xhtml2-role>in the
 class="bibref informative">[<a
 href="#ref-XHTML2">XHTML2</a>]</cite></span>, <em
 class=rfc2119>MUST</em> be treated as equivalent to attributes, in no
-namespace, of an <span>HTML element</span> for the purpose of the
-conformance checking.  They <em class=rfc2119>MUST NOT</em> be
-specified for an <span>HTML element</span>.<!-- M12N 1.1, ROLE, XHTML2
--->
+namespace, of an <span title="HTML elements">HTML element</span> for
+the purpose of the conformance checking.  They <em class=rfc2119>MUST
+NOT</em> be specified for an <span title="HTML elements">HTML
+element</span>.<!-- M12N 1.1, ROLE, XHTML2 -->
+
+<p>The <code title=attr-atomicselection>atomicselection</code>
+attribute of an <span title="HTML elements">HTML element</span> <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code
+title>true</code> and <code title>false</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms537835%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-hidefocus>hidefocus</code> attribute of an
+<span title="HTML elements">HTML element</span> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is a <span>boolean
+attribute</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533783%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-unselectable>unselectable</code> attribute of
+an <span title="HTML elements">HTML element</span> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code title>on</code>
+and <code title>off</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms537840%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-disabled>disabled</code> attribute of an <span
+title="HTML elements">HTML element</span> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> that the <code
+title>disabled</code> attribute is not applied according to Web
+Applications 1.0 is a <span>boolean attribute</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533734%28VS.85%29.aspx> -->
 
 </div>
 
 <div class=section>
 <h3>Metadata content</h3>
 
-<p>The <span>content model</span> of <code>basefont</code>,
-<code>bgsound</code>, and <code>nextid</code> elements are
-<i>empty</i>.<!-- WA1 parsing -->
+<p>The <span>content model</span> of <code>basefont</code> and
+<code>nextid</code> elements are <i>empty</i>.<!-- WA1 parsing -->
 
 <p>If there is a <code>nextid</code> element element with its <code
 title=attr-nextid-n>n</code> attribute <cite class="bibref
@@ -351,6 +377,28 @@ href="#ref-ISOHTMLUG">ISOHTMLUG</a>]</cite> is same as the
 <code>html</code> element.<!-- ISOHTMLUG; pre-html was also reused by
 some HTML geeks to emulate tagsoup in SGML framework, but we don't
 copy that usage. -->
+
+<div class=section>
+<h4>The <code>bgsound</code> element</h4>
+<!-- <http://msdn.microsoft.com/en-us/library/ms535198%28VS.85%29.aspx> -->
+
+<p>The <span>content model</span> of the <code>bgsound</code> element
+is <i>empty</i>.<!-- WA1 parsing -->
+
+<p>If the <code title=attr-bgsound-src>src</code> attribute of a
+<code>bgsound</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms534641%28VS.85%29.aspx> -->
+
+<p>If the <code title=attr-bgsound-balance>balance</code> attribute of
+a <code>bgsound</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid integer</span> that
+represents an integer in the range &minus;10,000 to 10,000.<!--
+<http://msdn.microsoft.com/en-us/library/ms533500%28VS.85%29.aspx> -->
+
+</div>
 
 </div>
 
@@ -404,7 +452,8 @@ element.<!-- WA1 rendering -->
 class="bibref informative">[<a href="#ref-RFC1942">RFC1942</a>]</cite>
 of a <code>table</code> element is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.<!-- RFC1942 -->
+integer</span>.<!-- RFC1942,
+<http://msdn.microsoft.com/en-us/library/ms533583%28VS.85%29.aspx> -->
 
 <p>If the <code title=attr-tdth-abbr>abbr</code> attribute of a
 <code>td</code> or <code>th</code> element is present, its value <em
@@ -434,8 +483,11 @@ integer</span>.<!-- HTML5 obsolete -->
 <p>If the <code title=attr-marquee-loop>loop</code> attribute of a
 <code>marquee</code> element is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid integer</span> that
-represents &minus;1, or an integer greater than 0.<!-- HTML5 obsolete
--->
+represents &minus;1, or an integer greater than 0.<!-- HTML5 obsolete.
+According to MSDN (and HTML5) loop="" (the empty string) and loop=0
+are equivalent to loop=-1, but they are considered non-conforming in
+this specification because they does not seem to be explicitly
+allowed. -->
 
 <p>The <code title=attr-marquee-truespeed>truespeed</code> attribute
 of the <code>marquee</code> element is a <span>boolean
@@ -470,7 +522,10 @@ non-negative integer</span>.  The <code>tr</code> element's <code
 title=attr-tr-height>height</code> attribute value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative
 integer</span>.<!-- HTML5's embedded content's |width| and |height|
-attributes -->
+attributes,
+<http://msdn.microsoft.com/en-us/library/ms533781%28VS.85%29.aspx> (it
+says there is <nobr height>, but maybe it is wrong),
+<http://msdn.microsoft.com/en-us/library/ms535147%28VS.85%29.aspx> -->
 
 <p>If the <code title=attr-colgroup-width>width</code> attribute of a
 <code>colgroup</code> element <cite class="bibref informative">[<a
@@ -518,6 +573,13 @@ whoes <code title=attr-input-type>type</code> attribute is in the
 specified, its value <em class=rfc2119>MUST</em> be a <span>valid
 dimension value</span>.<!-- WA1 rendering -->
 
+<p>The <code title=attr-embed-units>units</code> attribute of the
+<code>embed</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is an <span>enumerated
+attribute</span> with keywords <code title>px</code> and <code
+title>em</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms534705%28VS.85%29.aspx> -->
+
 <hr>
 
 <p>The <code title=attr-table-rules>rules</code> attribute of a
@@ -561,6 +623,14 @@ and <code title>auto</code>. Keywords other than <code
 title>yes</code>, <code title>no</code>, and <code>auto</code> are
 non-conforming.<!-- WA1 rendering, HTML4 -->
 
+<p>The <code title=attr-scroll>scroll</code> attribute of a
+<code>body</code> or <code>html</code> element <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code
+title>yes</code>, <code title>no</code>, and <code
+title>auto</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms534393%28VS.85%29.aspx> -->
+
 </div>
 
 <div class=section>
@@ -603,16 +673,51 @@ title=attr-body-link>link</code>, <code
 title=attr-body-vlink>vlink</code>, and <code
 title=attr-body-alink>alink</code> attribute values <em
 class=rfc2119>MUST</em> be <span title="valid legacy color
-value">valid legacy color values</span>.  The <code>table</code>
-element's <code title=attr-table-bordercolor>bordercolor</code>
-attribute value <em class=rfc2119>MUST</em> be a <span>valid legacy
-color value</span>.  The <code>font</code> and <code>basefont</code>
-elements' <code title=attr-font-color>color</code> attribute values
-<em class=rfc2119>MUST</em> be <span title="valid legacy color
-value">valid legacy color values</span>.  The <code>hr</code>
-element's <code title=attr-hr-color>color</code> attribute value <em
+value">valid legacy color values</span>.<!-- WA1 rendering, HTML4 -->
+
+<p>The <code>table</code>, <code>tr</code> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, <code>td</code>
+<cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, and <code>th</code> <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite>
+elements' <code title=attr-table-bordercolor>bordercolor</code>
+attribute values <em class=rfc2119>MUST</em> be <span title="valid
+legacy color value">valid legacy color values</span>.  The
+<code>table</code>, <code>tr</code>, <code>td</code>, and
+<code>th</code> elements' <code
+title=attr-table-bordercolordark>bordercolordark</code> and <code
+title=attr-table-bordercolorlight>bordercolorlight</code> attribute
+values <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> <em class=rfc2119>MUST</em> be <span
+title="valid legacy color value">valid legacy color values</span>.<!--
+WA1 rendering, HTML4,
+<http://msdn.microsoft.com/en-us/library/ms533514%28VS.85%29.aspx>,
+<http://msdn.microsoft.com/en-us/library/ms533515%28VS.85%29.aspx> -->
+
+<p>The <code>font</code> and <code>basefont</code> elements' <code
+title=attr-font-color>color</code> attribute values <em
+class=rfc2119>MUST</em> be <span title="valid legacy color
+value">valid legacy color values</span>.<!-- WA1 rendering, HTML4 -->
+
+<p>The <code>hr</code> element's <code
+title=attr-hr-color>color</code> attribute value <em
 class=rfc2119>MUST</em> be a <span>valid legacy color
 value</span>.<!-- WA1 rendering, HTML4 -->
+
+<p>The <code
+title=attr-frames-allowtransparency>allowtransparency</code> attribute
+of <code>frame</code> and <code>iframe</code> element <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code
+title>true</code> and <code title>false</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533072%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-body-bgproperties>bgproperties</code>
+attribute of the <code>body</code> element <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with two keywords: <code
+title>fixed</code> and the empty string.<!--
+<http://msdn.microsoft.com/en-us/library/ms533507%28VS.85%29.aspx> -->
 
 </div>
 
@@ -695,6 +800,13 @@ title>top</code>, <code title>middle</code>, <code
 title>bottom</code>, and <code title>baseline</code>.<!-- WA1
 rendering -->
 
+<p>The <code title=attr-caption-valign>valign</code> attribute of a
+<code>caption</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is an <span>enumerated
+attribute</span> with keywords <code title>top</code> and <code
+title>bottom</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms534714%28VS.85%29.aspx> -->
+
 <p>If the <code title>char</code> attribute of a <code>col</code>,
 <code>colgroup</code> <cite class="bibref informative">[<a
 href="#ref-HTML4">HTML4</a>]</cite>, <code>thead</code>,
@@ -717,9 +829,17 @@ integer</span>.<!-- HTML4 -->
 <h3>Line breaks</h3>
 
 <p>The <code title=attr-tdth-nowrap>nowrap</code> attributes of
-<code>td</code> and <code>th</code> elements and the <code
+<code>td</code>, <code>th</code>, <code>body</code> <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite>,
+<code>dt</code> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, <code>dd</code> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, and
+<code>div</code> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> elements and the <code
 title=attr-pre-wrap>wrap</code> attribute of the <code>pre</code>
-element are <span title="boolean attribute">boolean attributes</span>.
+element are <span title="boolean attribute">boolean
+attributes</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms534196%28VS.85%29.aspx> -->
 
 <p>The <code title=attr-br-clear>clear</code> attribute of a
 <code>br</code> element is an <span>enumerated attribute</span> with
@@ -740,6 +860,15 @@ title>both</code> is non-conforming.<!-- WA1 rendering, HTML4 -->
 <code>rb</code>, <code>s</code>, <code>strike</code>, <code>tt</code>,
 and <code>u</code> elements are same as the <code>span</code>
 element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete -->
+
+<p>The <span>content model</span> of the <code>comment</code> element
+<cite class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite>
+is <i>text</i>.<!--
+<http://msdn.microsoft.com/en-us/library/ms535229%28VS.85%29.aspx> -->
+
+<!-- <comment data>
+<http://msdn.microsoft.com/en-us/library/ms533711%28VS.85%29.aspx> is
+not a real attribute. -->
 
 <div class=section>
 <h4>Ruby</h4>
@@ -843,6 +972,9 @@ element in the document.<!-- WA1 UA reqs
 e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
 WA1 obsolete, HTML4 -->
 
+<!-- <img href> is maybe wrong
+<http://msdn.microsoft.com/en-us/library/cc848861%28VS.85%29.aspx>. -->
+
 <p>The <code title=attr-input-usemap>usemap</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
@@ -852,10 +984,71 @@ applies to the element.  The attribute value <em
 class=rfc2119>MUST</em> be a <span>valid hash-name reference</span> to
 a <code>map</code> element.<!-- Old HTML5 definition -->
 
+<p>If the <code title=attr-dynsrc>dynsrc</code>, <code
+title=attr-lowsrc>lowsrc</code>, or <code title=attr-vrml>vrml</code>
+attribute of the <code>img</code> or <code>input</code> element <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is
+present, its value <em class=rfc2119>MUST</em> be a <span>valid
+non-empty URL</span>.  The <code title=attr-dynsrc>dynsrc</code>,
+<code title=attr-lowsrc>lowsrc</code>, or <code
+title=attr-vrml>vrml</code> attribute of the <code>input</code>
+element applies only to <code>input</code> elements whoes <code
+title=attr-input-type>type</code> attribute is in the <span
+title=attr-input-type-image>Image Button</span> state.  The attribute
+<em class=rfc2119>MUST NOT</em> be specified if it does not applies to
+the element.<!--
+<http://msdn.microsoft.com/en-us/library/ms533742%28VS.85%29.aspx>,
+<http://msdn.microsoft.com/en-us/library/ms534138%28VS.85%29.aspx>,
+<http://msdn.microsoft.com/en-us/library/dd347031%28VS.85%29.aspx> -->
+
+<p>If the <code title=attr-loop>loop</code> attribute of the
+<code>img</code>, <code>input</code>, or <code>bgsound</code> element
+<cite class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite>
+is present, its value <em class=rfc2119>MUST</em> be a <span>valid
+integer</span> that represents an integer greater than or equal to
+&minus;1.  The <code title=attr-loop>loop</code> attribute of the
+<code>input</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> applies only to <code>input</code>
+elements whoes <code title=attr-input-type>type</code> attribute is in
+the <span title=attr-input-type-image>Image Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!--
+<http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
+<img loop=""> (the empty string) is equivalent to loop=1 according to
+MSDN but not match the syntax of MSDN. -->
+
 <p>If the <code title>longdesc</code> attribute of the
 <code>frame</code>, <code>iframe</code>, or <code>img</code> element
 is present, its value <em class=rfc2119>MUST</em> be a <span>valid
 URL</span>.<!-- HTML4 -->
+
+<p>If the <code title=attr-embed-pluginspage>pluginspage</code>
+attribute of the <code>embed</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid URL</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms534341%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-img-galleryimg>galleryimg</code> attribute of
+the <code>img</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is a <span>enumerated
+attribute</span> with keywords <code title>yes</code>, <code
+title>true</code>, <code title>no</code>, and <code
+title>false</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533774%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-start>start</code> attribute of the
+<code>img</code> or <code>input</code> element <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code
+title>fileopen</code> and <code title>mouseover</code>.  The <code
+title=attr-start>start</code> attribute of the <code>input</code>
+element applies only to <code>input</code> elements whoes <code
+title=attr-input-type>type</code> attribute is in the <span
+title=attr-input-type-image>Image Button</span> state.  The attribute
+<em class=rfc2119>MUST NOT</em> be specified if it does not applies to
+the element.  The attribute <em class=rfc2119>MUST NOT</em> be
+specified unless the element also has the <code
+title=attr-dynsrc>dynsrc</code> attribute specified.<!--
+<http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
 
 <p>The <span>content model</span> of the <code>noembed</code> element
 is same as the <code>iframe</code> element.
@@ -925,6 +1118,12 @@ of an <code>object</code> element is present, its <em
 class=rfc2119>MUST</em> be a <span>valid MIME type</span>.<!-- HTML4
 -->
 
+<!-- <object basehref> is not a content attribute in fact.
+<http://msdn.microsoft.com/en-us/library/ms533501%28VS.85%29.aspx> -->
+
+<!-- <applet src> is maybe not exist
+<http://msdn.microsoft.com/en-us/library/ms534643%28VS.85%29.aspx> -->
+
 <hr>
 
 <p>The <code title=attr-object-declare>declare</code> attribute of the
@@ -975,6 +1174,17 @@ attribute of a <code>table</code> element is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative
 integer</span>.<!--
 <http://msdn.microsoft.com/en-us/library/ms533708%28VS.85%29.aspx> -->
+
+<p>The <span>content model</span> of the <code>xml</code> element
+<cite class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite>
+is <i>text</i>.<!--
+<http://msdn.microsoft.com/en-us/library/ms535918%28VS.85%29.aspx> -->
+
+<p>If the <code title=attr-xml-src>src</code> attribute of an
+<code>xml</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid URL</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms534643%28VS.85%29.aspx> -->
 
 </div>
 
@@ -1060,9 +1270,19 @@ obsolete; not required to align with <iframe src>. -->
 class=rfc2119>MUST</em> be a <span>valid browsing context
 name</span>.<!-- WA1 obsolete -->
 
-<p>The <code title=attr-frame-noresize>noresize</code> attribute of a
-<code>frame</code> element is <span>boolean attribute</span>.<!-- WA1
-rendering -->
+<p>The <code title=attr-frame-noresize>noresize</code> attribute of
+<code>frame</code> and <code>iframe</code> elements <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is
+<span title="boolean attribute">boolean attributes</span>.<!-- WA1
+rendering,
+<http://msdn.microsoft.com/en-us/library/ms534194%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-frames-security>security</code> attribute of
+<code>frame</code> and <code>iframe</code> elements <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with the keyword <code
+title>restricted</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms534622%28VS.85%29.aspx> -->
 
 </div>
 
@@ -1077,10 +1297,26 @@ title>0</code>, and <code title>no</code>, where keywords <code
 title>yes</code> and <code title>no</code> are non-conforming.<!-- WA1
 rendering, HTML4 -->
 
+<p>If the <code title=attr-frames-border>border</code> attribute of a
+<code>frameset</code> or <code>iframe</code> element <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is
+present, its value <em class=rfc2119>MUST</em> be a <span>valid
+non-negative integer</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533533%28VS.85%29.aspx> -->
+
 <p>The <code>frame</code> and <code>frameset</code> elements' <code
 title=attr-frames-bordercolor>bordercolor</code> attribute values <em
 class=rfc2119>MUST</em> be <span title="valid legacy color
 value">valid legacy color values</span>.<!-- WA1 rendering -->
+
+<p>If the <code title=attr-frames-framespacing>framespacing</code>
+attribute of <code>frame</code>, <code>frameset</code>, or
+<code>iframe</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533772%28VS.85%29.aspx> -->
+
 
 </div>
 
@@ -1090,8 +1326,15 @@ value">valid legacy color values</span>.<!-- WA1 rendering -->
 <h3>Scripting</h3>
 
 <p>Requirements for the <code
-title=attr-script-language>language</code> attribute is defined in Web
-Applications 1.0 specification, as an obsolete but conforming feature.
+title=attr-script-language>language</code> attribute of the
+<code>script</code> element is defined in Web Applications 1.0
+specification, as an obsolete but conforming feature.  The <code
+title=attr-language>language</code> attribute of the other <span
+title="HTML element">HTML elements</span>, if specified, <em
+class=rfc2119>MUST</em> have a value that is <span title="ASCII
+case-insensitive">ASCII case-insensitively</span> equal to
+<code>JavaScript</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533940%28VS.85%29.aspx> -->
 
 <p>If the <code title=attr-script-for>for</code> attribute of a
 <code>script</code> element is present, its value <em
@@ -1122,6 +1365,50 @@ non-conforming.<!-- WA1 rendering -->
 value <em class=rfc2119>MUST</em> be syntactically valid <code
 title=attr-form-accept-charset>charset</code> attribute value for a
 <code>form</code> element.<!-- HTML 2.x -->
+
+<p>The <code title=attr-input-vcard_name>vcard_name</code> attribute
+of the <code>input</code> element is an <span>enumerated
+attribute</span> with keywords
+
+<code title>vCard.Business.City</code>,
+<code title>vCard.Business.Country</code>,
+<code title>vCard.Business.Fax</code>,
+<code title>vCard.Business.Phone</code>,
+<code title>vCard.Business.State</code>,
+<code title>vCard.Business.StreetAddress</code>,
+<code title>vCard.Business.URL</code>,
+<code title>vCard.Business.Zipcode</code>,
+<code title>vCard.Cellular</code>,
+<code title>vCard.Company</code>,
+<code title>vCard.Department</code>,
+<code title>vCard.DisplayName</code>,
+<code title>vCard.Email</code>,
+<code title>vCard.FirstName</code>,
+<code title>vCard.Gender</code>,
+<code title>vCard.Home.City</code>,
+<code title>vCard.Home.Country</code>,
+<code title>vCard.Home.Fax</code>,
+<code title>vCard.Home.Phone</code>,
+<code title>vCard.Home.State</code>,
+<code title>vCard.Home.StreetAddress</code>,
+<code title>vCard.Home.Zipcode</code>,
+<code title>vCard.Homepage</code>,
+<code title>vCard.JobTitle</code>,
+<code title>vCard.LastName</code>,
+<code title>vCard.MiddleName</code>,
+<code title>vCard.Notes</code>,
+<code title>vCard.Office</code>, and
+<code title>vCard.Pager</code>.
+
+The <code title=attr-input-vcard_name>vcard_name</code> attribute of
+the <code>input</code> element applies only to <code>input</code>
+elements whoes <code title=attr-input-type>type</code> attribute is in
+the <span title=attr-input-type-text>Text</span> or <span
+title=attr-input-type-password>Password</span> state.<!--
+<http://msdn.microsoft.com/en-us/library/ms535130%28VS.85%29.aspx>.
+It says multiple values can be specified, but does not say how to
+(space-separated?) and HTML refereneces in the wild do not describe
+how to encode mutliple values, neither. -->
 
 <div class=section>
 <h4>The <code>isindex</code> element</h4>
@@ -1185,6 +1472,23 @@ title=attr-htsupp>htsupp</code>, and <code
 title=attr-htign>htign</code> <cite class="bibref informative">[<a
 href="#ref-M12N11">M12N11</a>]</cite> are not real attributes and
 therefore not included in this specification.
+
+<p>There has not been a <code>server</code> element in HTML.
+
+<p>The <a
+href="http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx"><code>IMPORT</code>
+processing instruction</a> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is not supported by this
+specification, as the HTML syntax as per Web Applications 1.0 cannot
+support processing instructions.
+
+<p>The <a
+href="http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx"><code>xmlns:<var>*</var></code>
+attributes</a> for Internet Explorer's namespace mechanism <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> are
+not supported by this specification.  Likewise, namespaced elements
+are not supported.  They do not fit the standard namespacing
+architecture of HTML, XML, and DOM.
 
 </div>
 
