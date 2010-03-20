@@ -195,6 +195,10 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#absolute-url><dfn id=absolute-url>absolute URL</dfn></a>,
 
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#url-scheme><dfn id=url-scheme title=url-scheme>&lt;scheme&gt;</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-e-mail-address><dfn id=valid-e-mail-address>valid e-mail address</dfn></a>,
+
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-pixel-length-property><dfn id=maps-to-pixel-length-property>maps to pixel length property</dfn></a>,
 
 and
@@ -441,11 +445,13 @@ e.g. div1 requires h2 child, but we don't copy it.  -->
 of a <code>ul</code> element is present, its value <em class=rfc2119>MUST</em> be equal to one of <code title="">disc</code>,
 <code title="">circle</code>, and <code title="">square</code>, <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a>.  If
 the <code title=attr-li-type>type</code> attribute of an
-<code>li</code>, <code>dir</code> <cite class="bibref
-informative">[IE]</cite>, or <code>menu</code> <cite class="bibref
-informative">[IE]</cite> element is present, its value <em class=rfc2119>MUST</em> be one of values allowed for <code title="">type</code> attribute of a <code>ul</code> or <code>ol</code>
-element.<!-- WA1 rendering,
-<http://code.google.com/p/doctype/wiki/DirTypeAttribute> -->
+<code>li</code>, <code>dir</code> <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite>, or <code>menu</code> <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite>
+element is present, its value <em class=rfc2119>MUST</em> be one of
+values allowed for <code title="">type</code> attribute of a
+<code>ul</code> or <code>ol</code> element.<!-- WA1 rendering,
+<http://code.google.com/p/doctype/wiki/DirTypeAttribute>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/type4.html>
+-->
 
 </p><p>The <code title="">compact</code> attribute of the <code>dir</code>,
 <code>dl</code>, <code>menu</code>, <code>ol</code>, or
@@ -1042,7 +1048,7 @@ a "space-separeted values" according to HTML2 -->
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
 space-separated tokens</a>.<!-- HTML4, HTML5 <a rel> -->
 
-</p><p>If the <code title=attr-a-urn>urn</code> attribute of an
+</p><p>If the <code title=attr-link-urn>urn</code> attribute of an
 <code>link</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
 present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
 URL</a>.<!-- HTML 2.0 -->
@@ -1059,6 +1065,102 @@ keyword</span>.<!-- HTML4 -->
 <code>link</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
 <http://web.archive.org/web/20030610040238/devedge.netscape.com/library/manuals/1998/htmlguide/tags3.html#1808466>
 -->
+
+</p><p>If the <code title=attr-a-cti>cti</code> attribute of the
+<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be one or more characters in the range U+0030
+<code class=charname>DIGIT ZERO</code> (0) to U+0039 <code class=charname>DIGIT NINE</code> (9), U+002A <code class=charname>ASTERISK</code> character (*), U+0023 <code class=charname>NUMBER SIGN</code> character (#), U+002C <code class=charname>COMMA</code> character (,), or U+002F <code class=charname>SOLIDUS</code> character (/).  There <em class=rfc2119>MUST NOT</em> be a U+002F <code class=charname>SOLIDUS</code> character (/) immediately following
+another U+002F <code class=charname>SOLIDUS</code> character (/) in
+the attribute value.  The length of the attribute value <em class=rfc2119>MUST NOT</em> be greater than 128.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/cti.html>
+-->
+
+</p><p>If the <code title=attr-a-ijam>ijam</code> attribute of the
+<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element or
+a <a href=#valid-hash-name-reference>valid hash-name reference</a> to an <code>object</code>
+element.  The <code title=attr-hyperlink-href>href</code> attribute
+<em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ijam>ijam</code> attribute is specified.  If <code title=attr-hyperlink-target>target</code> attribute is specified, the
+<code title=attr-a-ijam>ijam</code> attribute <em class=rfc2119>MUST
+NOT</em> be specified.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/object.html#p02>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/object3.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p07>
+-->
+
+</p><p>If the <code title=attr-a-ista>ista</code> attribute of the
+<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element.
+The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ista>ista</code> attribute is specified.  The <code title=attr-a-ista>ista</code> attribute <em class=rfc2119>MUST
+NOT</em> be specified if the <code title=attr-a-ijam>ijam</code>
+attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
+<code title=attr-a-ista>ista</code> attribute <em class=rfc2119>MUST
+NOT</em> be specified.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/ista.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p16>
+-->
+
+</p><p>If the <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or <code title=attr-a-irst>irst</code>
+attribute of the <code>a</code> element <cite class="bibref
+informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its
+value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name
+reference</a> to an <code>object</code> element.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or
+<code title=attr-a-irst>irst</code> attribute is specified.  If the
+<code title=attr-hyperlink-target>target</code> attribute is
+specified, the <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or <code title=attr-a-irst>irst</code>
+attribute <em class=rfc2119>MUST NOT</em> be specified.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/ilet.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/iswf.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tagshitei.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p08>
+-->
+
+</p><p>If the <code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code> attribute of the <code>a</code> element
+<cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code>
+attribute is specified.  If <code title=attr-hyperlink-target>target</code> attribute is specified, the
+<code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code>
+attribute <em class=rfc2119>MUST NOT</em> be specified.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/ifb.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p05>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p06>
+-->
+
+</p><p>The <code title=attr-utn>utn</code> attribute of the <code>a</code>
+or <code>form</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is a <a href=#boolean-attribute>boolean
+attribute</a>.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
+<code title=attr-utn>utn</code> attribute <em class=rfc2119>MUST
+NOT</em> be specified.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/utn.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p18>
+-->
+
+</p><p>The <code title=attr-lcs>lcs</code> attribute of the <code>a</code>
+or <code>form</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is a <a href=#boolean-attribute>boolean
+attribute</a>.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
+<code title=attr-lcs>lcs</code> attribute <em class=rfc2119>MUST
+NOT</em> be specified.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/location_info.html#p03>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p13>
+-->
+
+</p><p>If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute of an <code>a</code> element
+<cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute is specified, the
+<code>a</code> element <em class=rfc2119>MUST</em> have its <code title=attr-hyperlink-href>href</code> attribute specified and its
+value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>
+whoes <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII
+case-insensitive">ASCII case-insensitively</a> matches to <code title=tel:>tel</code>, <code title=tel-av:>tel-av</code>, or <code title=mailto:>mailto</code>.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel-av.html>
+- telbook cannot contain emoji symbols; kana can only contain
+halfwidth katakana characters; they have length constraint -->
+
+</p><p>If the <code title=attr-a-email>email</code> attribute of an
+<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-e-mail-address>valid e-mail address</a>.  If
+<code title=attr-a-email>email</code> attribute is specified, the
+<code>a</code> element <em class=rfc2119>MUST</em> have its <code title=attr-hyperlink-href>href</code> attribute specified and its
+value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>
+whoes <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII
+case-insensitive">ASCII case-insensitively</a> matches to <code title=tel:>tel</code> or <code title=tel-av:>tel-av</code>.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel.html>,
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel-av.html>
+- it has length constraint -->
 
 </p></div>
 
@@ -1113,9 +1215,9 @@ oversrc
 is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid
 integer</a> that represents an integer greater than or equal to
 −1.  The <code title=attr-loop>loop</code> attribute of the
-<code>input</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> applies only to <code>input</code>
-elements whoes <code title=attr-input-type>type</code> attribute is in
-the <span title=attr-input-type-image>Image Button</span> state.  The
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-image>Image Button</span> state.  The
 attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
 applies to the element.<!--
 <http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
@@ -1651,19 +1753,50 @@ It says multiple values can be specified, but does not say how to
 (space-separated?) and HTML refereneces in the wild do not describe
 how to encode mutliple values, neither. -->
 
-</p><p>The <code title=attr-keygen-keytype>keytype</code> attribute of a
+</p><p>If the <code title=attr-iprof>iprof</code> attribute of an
+<code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is
+present, its value <em class=rfc2119>MUST</em> be one of following
+keywords: <code title="">name1</code>, <code title="">name2</code>, <code title="">name</code>, <code title="">kana1</code>, <code title="">kana2</code>,
+<code title="">kana</code>, <code title="">tel1</code>, <code title="">tel2</code>, <code title="">mail1</code>, <code title="">mail2</code>,
+<code title="">zip</code>, <code title="">address1</code>, <code title="">address2</code>, <code title="">address3</code>, <code title="">address4</code>, <code title="">address</code>, <code title="">birthday1</code>, <code title="">birthday2</code>, <code title="">birthday3</code>, and <code title="">birthday</code>.  The <code title=attr-iprof>iprof</code> attribute of the <code>input</code>
+element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span> state.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
+-->
+
+</p><p>The <code title=attr-input-type>type</code> attribute of the
+<code>input</code> element <em class=rfc2119>MUST</em> be treated as
+if there is an additional keyword <code title=attr-input-type-quote-keyword>quote</code> <cite class="bibref
+informative">[<a href=#ref-IMODE>IMODE</a>]</cite>, which is mapped
+to the <span title=attr-input-type-quote>Quote</span> state.  This
+keyword is non-conforming.  For the purpose of conformance checking,
+the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-button>Button</span> state.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
+-->
+
+</p><p>The <code title=attr-istyle>istyle</code> attribute of an
+<code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is
+an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">1</code>, <code title="">2</code>, <code title="">3</code>, and <code title="">4</code>.  The <code title=attr-istyle>istyle</code> attribute
+of the <code>input</code> element applies only to <code>input</code>
+elements whoes <code title=attr-input-type>type</code> attribute is in
+the <span title=attr-input-type-text>Text</span> state.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>
+-->
+
+</p><hr>
+
+<p>The <code title=attr-keygen-keytype>keytype</code> attribute of a
 <code>keygen</code> element, for the purpose of conformance checking,
 <em class=rfc2119>MUST</em> be treated as if there are additional
 keywords: <code title="">dsa</code> <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> <cite class="bibref
-informative">[<a href=#ref-MDC>MDC</a>]</cite> and <code title="">ec</code>.  These keywords are non-conforming.<!--
+informative">[<a href=#ref-MDC>MDC</a>]</cite> and <code title="">ec</code> <cite class="bibref informative">[<a href=#ref-MDC>MDC</a>]</cite>.  These keywords are
+non-conforming.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-keytype>,
 <https://developer.mozilla.org/En/HTML/Element/keygen> -->
 
-</p><p>If the <code title=attr-keygen-keyparams>keyparams</code> or <code title=attr-keygen-pqg>pqg</code> attribute of an <code>keygen</code>
-element is present, its value <em class=rfc2119>MAY</em> be any
-string.  If the <code title=attr-keygen-keytype>keytype</code>
-attribute of the same element <a href=#ascii-case-insensitive title="ASCII
-case-insensitive">ASCII case-insensitively</a> matches to <code title="">dsa</code>, exactly one of <code title=attr-keygen-keyparams>keyparams</code> or <code title=attr-keygen-pqg>pqg</code> attribute <em class=rfc2119>MUST</em>
+</p><p>If <code title=attr-keygen-keyparams>keyparams</code> or <code title=attr-keygen-pqg>pqg</code> attribute of an <code>keygen</code>
+element <cite class="bibref informative">[<a href=#ref-MDC>MDC</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  If the <code title=attr-keygen-keytype>keytype</code> attribute of the same element
+<a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a>
+matches to <code title="">dsa</code>, exactly one of <code title=attr-keygen-keyparams>keyparams</code> or <code title=attr-keygen-pqg>pqg</code> attribute <em class=rfc2119>MUST</em>
 be specified.  Otherwise, if the <code title=attr-keygen-keytype>keytype</code> attribute of the element
 <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a>
 matches to <code title="">ec</code>, the <code title=attr-keygen-keyparams>keyparams</code> attribute <em class=rfc2119>MUST</em> be specified and the <code title=attr-keygen-pqg>pqg</code> attribute <em class=rfc2119>MUST
@@ -1812,6 +1945,11 @@ Standard (obsolete), January 1997.
 </dt><dd><cite><a href=http://www.w3.org/TR/1999/REC-html401-19991224>HTML 4.01
 Specification</a></cite>, Dave Raggett, Arnaud Le Hors, Ian Jacobs,
 W3C Recommendation, <time datetime=1999-12-24>24 December 1999</time>.
+
+</dd><dt id=ref-IMODE>IMODE
+
+</dt><dd><cite><a href=http://www.nttdocomo.co.jp/service/imode/make/content/browser/index.html>iMode
+Browser</a></cite>, NTT docomo.
 
 </dd><dt id=ref-ISOHTMLUG>ISOHTMLUG
 
