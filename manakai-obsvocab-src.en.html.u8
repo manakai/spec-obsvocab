@@ -612,38 +612,44 @@ href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is same as the
 
 <p>If the <code title>height</code> or <code title>width</code>
 attribute of an <code>applet</code>, <code>table</code>,
-<code>td</code>, <code>th</code>, <code>layer</code> <cite
-class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite>, <code>ilayer</code> <cite
-class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite>, <code>marquee</code>, or
-<code>spacer</code> <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> element is specified, its
-value <em class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.  The <code>col</code> element's <code
-title=attr-col-width>width</code> attribute value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
-The <code>hr</code> element's <code title=attr-hr-width>width</code>
-attribute value <em class=rfc2119>MUST</em> be a <span>valid
-non-negative integer</span>.  The <code>multicol</code> element's
-<code title=attr-multicol-width>width</code> attribute value <cite
-class="bibref informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite>
-<em class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.  The <code>tr</code> element's <code
-title=attr-tr-height>height</code> attribute value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.<!-- HTML5's embedded content's |width| and |height|
-attributes,
+<code>td</code>, <code>th</code>, or <code>marquee</code> element is
+specified, its value <em class=rfc2119>MUST</em> be a <span>valid
+non-negative integer</span>.<!-- HTML5's embedded content's |width|
+and |height| attributes,
 <http://msdn.microsoft.com/en-us/library/ms533781%28VS.85%29.aspx> (it
 says there is <nobr height>, but maybe it is wrong),
-<http://msdn.microsoft.com/en-us/library/ms535147%28VS.85%29.aspx>,
-layer/ilayer
+<http://msdn.microsoft.com/en-us/library/ms535147%28VS.85%29.aspx> -->
+
+<p>If the <code title>height</code> or <code title>width</code>
+attribute of a <code>layer</code>, <code>ilayer</code>, or
+<code>spacer</code> element <cite class="bibref informative">[<a
+href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is specified, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!-- layer/ilayer
 <http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1701761>,
-multicol
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077956>,
 spacer
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
+
+<p>The <code>col</code> element's <code
+title=attr-col-width>width</code> attribute value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
+
+<p>The <code>hr</code> element's <code
+title=attr-hr-width>width</code> attribute value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
+
+<p>The <code>multicol</code> element's <code
+title=attr-multicol-width>width</code> attribute value <cite
+class="bibref informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite>
+<em class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!--
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077956>
+-->
+
+<p>The <code>tr</code> element's <code
+title=attr-tr-height>height</code> attribute value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
 
 <p>If the <code title=attr-colgroup-width>width</code> attribute of a
 <code>colgroup</code> element <cite class="bibref informative">[<a
@@ -660,6 +666,15 @@ HTML4 -->
 <p>The <code>hr</code> element's <code title=attr-hr-size>size</code>
 attribute value <em class=rfc2119>MUST</em> be a <span>valid
 non-negative integer</span>.
+
+<p>Unless otherwise specified, if the <code title>width</code> or
+<code title>height</code> attribute <cite class="bibref
+informative">[<a href="#ref-DOCTYPE">DOCTYPE</a>]</cite> is specified
+for an <span title="HTML elements">HTML element</span>, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!--
+<http://code.google.com/p/doctype/wiki/DivWidthAttribute>,
+<http://code.google.com/p/doctype/wiki/AddressHeightAttribute> -->
 
 <p>The <code>spacer</code> element's <code
 title=attr-spacer-size>size</code> attribute value <cite class="bibref
@@ -1007,10 +1022,33 @@ wrap
 -->
 
 <p>The <code title=attr-br-clear>clear</code> attribute of a
-<code>br</code> element is an <span>enumerated attribute</span> with
-keywords <code title>left</code>, <code title>right</code>, <code
-title>all</code>, and <code title>both</code>, where <code
-title>both</code> is non-conforming.<!-- WA1 rendering, HTML4 -->
+<code>br</code>, <code>address</code> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite>,
+<code>blockquote</code> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, <code>center</code> <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite>,
+<code>h1</code> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, <code>h2</code> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, <code>h3</code>
+<cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, <code>h4</code> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, <code>h5</code>
+<cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, <code>h6</code> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite>,
+<code>listing</code> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, <code>p</code> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite>,
+<code>plaintext</code> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, <code>pre</code> <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, or
+<code>xmp</code> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> element is an <span>enumerated
+attribute</span> with keywords <code title>left</code>, <code
+title>right</code>, <code title>all</code>, and <code
+title>both</code>, where <code title>both</code> is
+non-conforming.<!-- WA1 rendering, HTML4,
+<http://msdn.microsoft.com/en-us/library/ms533562%28VS.85%29.aspx> -->
 
 <p>The <span>content model</span> of <code>spacer</code> and
 <code>wbr</code> elements is <i>empty</i>.<!-- WA1 parsing, wbr
@@ -1996,6 +2034,11 @@ href="http://web.archive.org/web/20030604191931/http://devedge.netscape.com/libr
 Tag Reference</a></cite>, <a
 href="http://web.archive.org/web/20030604191931/http://devedge.netscape.com/">netscape
 devedge</a>, <time datetime=1998-01-26>26 January 1998</time>.
+
+<dt id=ref-DOCTYPE>DOCTYPE
+
+<dd><cite><a href="http://code.google.com/p/doctype/">Google
+Doctype</a></cite>.
 
 <dt id=ref-HTML20>HTML20
 
