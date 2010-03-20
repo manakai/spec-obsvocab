@@ -100,7 +100,9 @@ and attributes</a></li>
    <li><a href=#scripting><span class=secno>4.12 </span>Scripting</a></li>
    <li><a href=#forms><span class=secno>4.13 </span>Forms</a>
     <ol>
-     <li><a href=#the-isindex-element><span class=secno>4.13.1 </span>The <code>isindex</code> element</a></li></ol></li></ol></li>
+     <li><a href=#autocomplete><span class=secno>4.13.1 </span>Autocomplete</a></li>
+     <li><a href=#the-keygen-element><span class=secno>4.13.2 </span>The <code>keygen</code> element</a></li>
+     <li><a href=#the-isindex-element><span class=secno>4.13.3 </span>The <code>isindex</code> element</a></li></ol></li></ol></li>
  <li><a href=#elements-and-attributes-not-convered-by-this-specification><span class=secno>5 </span>Elements and attributes not convered by this specification</a></li>
  <li><a class=no-num href=#references>References</a>
   <ol>
@@ -1030,36 +1032,10 @@ that represents a number <code title="">100</code>, <code title="">200</code>, <
 <div class=section>
 <h3 id=hyperlinks><span class=secno>4.9 </span>Hyperlinks</h3>
 
-<p>If the <code title="">charset</code> attribute of an <code>a</code> or
-<code>link</code> element is present, its value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-script-charset>charset</code> attribute value for a
-<code>script</code> element.<!-- HTML4 -->
-
-</p><p>If the <code title="">coords</code> attribute and/or the <code title="">shape</code> attribute of an <code>a</code> element is present,
-their values, and their presence themselves, <em class=rfc2119>MUST</em> be valid if they were specified for an
-<code>area</code> element with appropriate <code>href</code> and
-<code>alt</code> attributes specified.<!-- HTML4, HTML5 obsolete -->
-
-</p><p>If the <code title=attr-a-methods>methods</code> attribute of an
-<code>link</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
-present, its value <em class=rfc2119>MAY</em> be any string.<!-- It is
-a "space-separeted values" according to HTML2 -->
-
-</p><p>If the <code title="">rev</code> attribute of an <code>a</code> or
-<code>link</code> element is present, its value <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
-space-separated tokens</a>.<!-- HTML4, HTML5 <a rel> -->
-
-</p><p>If the <code title=attr-link-urn>urn</code> attribute of an
+<p>If the <code title=attr-link-urn>urn</code> attribute of an
 <code>link</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
 present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
 URL</a>.<!-- HTML 2.0 -->
-
-</p><p>The <code title=attr-area-nohref>nohref</code> attribute of the
-<code>area</code> element is a <a href=#boolean-attribute>boolean attribute</a>.<!--
-HTML4 -->
-
-</p><p>If the <code title=attr-link-target>target</code> attribute of a
-<code>link</code> element is present, its value <em class=rfc2119>MUST</em> be a <span>valid browsing context name or
-keyword</span>.<!-- HTML4 -->
 
 </p><p>If the <code title=attr-link-src>src</code> attribute of the
 <code>link</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
@@ -1078,7 +1054,7 @@ the attribute value.  The length of the attribute value <em class=rfc2119>MUST N
 <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element or
 a <a href=#valid-hash-name-reference>valid hash-name reference</a> to an <code>object</code>
 element.  The <code title=attr-hyperlink-href>href</code> attribute
-<em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ijam>ijam</code> attribute is specified.  If <code title=attr-hyperlink-target>target</code> attribute is specified, the
+<em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ijam>ijam</code> attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
 <code title=attr-a-ijam>ijam</code> attribute <em class=rfc2119>MUST
 NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/object.html#p02>,
@@ -1097,26 +1073,26 @@ NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p16>
 -->
 
-</p><p>If the <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or <code title=attr-a-irst>irst</code>
+</p><p>If <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or <code title=attr-a-irst>irst</code>
 attribute of the <code>a</code> element <cite class="bibref
 informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its
 value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name
-reference</a> to an <code>object</code> element.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or
+reference</a> to an <code>object</code> element.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or
 <code title=attr-a-irst>irst</code> attribute is specified.  If the
 <code title=attr-hyperlink-target>target</code> attribute is
-specified, the <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or <code title=attr-a-irst>irst</code>
-attribute <em class=rfc2119>MUST NOT</em> be specified.<!--
+specified, <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, and <code title=attr-a-irst>irst</code>
+attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/ilet.html>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/iswf.html>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tagshitei.html>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p08>
 -->
 
-</p><p>If the <code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code> attribute of the <code>a</code> element
-<cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code>
-attribute is specified.  If <code title=attr-hyperlink-target>target</code> attribute is specified, the
-<code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code>
-attribute <em class=rfc2119>MUST NOT</em> be specified.<!--
+</p><p>If <code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code> attribute of the <code>a</code> element
+<cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if <code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code>
+attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified,
+<code title=attr-a-ifb>ifb</code> and <code title=attr-a-ib>ib</code>
+attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/ifb.html>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p05>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p06>
@@ -1140,6 +1116,30 @@ NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p13>
 -->
 
+</p><p>The <code title=attr-area-nohref>nohref</code> attribute of the
+<code>area</code> element is a <a href=#boolean-attribute>boolean attribute</a>.<!--
+HTML4 -->
+
+</p><hr>
+
+<p>If the <code title="">charset</code> attribute of an <code>a</code> or
+<code>link</code> element is present, its value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-script-charset>charset</code> attribute value for a
+<code>script</code> element.<!-- HTML4 -->
+
+</p><p>If the <code title="">coords</code> attribute and/or the <code title="">shape</code> attribute of an <code>a</code> element is present,
+their values, and their presence themselves, <em class=rfc2119>MUST</em> be valid if they were specified for an
+<code>area</code> element with appropriate <code>href</code> and
+<code>alt</code> attributes specified.<!-- HTML4, HTML5 obsolete -->
+
+</p><p>If the <code title=attr-a-methods>methods</code> attribute of an
+<code>link</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
+present, its value <em class=rfc2119>MAY</em> be any string.<!-- It is
+a "space-separeted values" according to HTML2 -->
+
+</p><p>If the <code title="">rev</code> attribute of an <code>a</code> or
+<code>link</code> element is present, its value <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
+space-separated tokens</a>.<!-- HTML4, HTML5 <a rel> -->
+
 </p><p>If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute of an <code>a</code> element
 <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute is specified, the
 <code>a</code> element <em class=rfc2119>MUST</em> have its <code title=attr-hyperlink-href>href</code> attribute specified and its
@@ -1161,6 +1161,10 @@ case-insensitive">ASCII case-insensitively</a> matches to <code title=tel:>tel</
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel.html>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel-av.html>
 - it has length constraint -->
+
+</p><p>If the <code title=attr-link-target>target</code> attribute of a
+<code>link</code> element is present, its value <em class=rfc2119>MUST</em> be a <span>valid browsing context name or
+keyword</span>.<!-- HTML4 -->
 
 </p></div>
 
@@ -1665,12 +1669,13 @@ keywords are non-conforming.<!-- WA1 rendering,
 value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-form-accept-charset>charset</code> attribute value for a
 <code>form</code> element.<!-- HTML 2.x -->
 
-</p><p>The <code title=attr-input-autocapitalize>autocapitalize</code>
-<code title=attr-input-autocorrect>autocorrect</code>, or <code title=attr-input-autosave>autosave</code> attribute of the
-<code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">off</code> and <code title="">on</code>.  The <code title=attr-input-autosave>autosave</code>
-attribute of the <code>input</code> element applies only to
-<code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-search>Search</span> state.<!-- autocapitalize
+</p><p>Attributes <code title=attr-input-autocapitalize>autocapitalize</code>, <code title=attr-input-autocorrect>autocorrect</code>, and <code title=attr-input-autosave>autosave</code> of the <code>input</code>
+element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> are <a href=#enumerated-attribute title="enumerated
+attribute">enumerated attributes</a> with keywords <code title="">off</code> and <code title="">on</code>.  The <code title=attr-input-autosave>autosave</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-search>Search</span> state.<!--
+autocapitalize
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize>,
 autocorrect
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>,
@@ -1701,7 +1706,19 @@ whoes <code title=attr-input-type>type</code> attribute is in the
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-precision>
 -->
 
-</p><p>If the <code title=attr-input-results>results</code> attribute of
+</p><p>The <code title=attr-istyle>istyle</code> attribute of an
+<code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is
+an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">1</code>, <code title="">2</code>, <code title="">3</code>, and <code title="">4</code>.  The <code title=attr-istyle>istyle</code> attribute
+of the <code>input</code> element applies only to <code>input</code>
+elements whoes <code title=attr-input-type>type</code> attribute is in
+the <span title=attr-input-type-text>Text</span> state.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>
+-->
+
+</p><div class=section>
+<h4 id=autocomplete><span class=secno>4.13.1 </span>Autocomplete</h4>
+
+<p>If the <code title=attr-input-results>results</code> attribute of
 an <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
 The <code title=attr-input-results>results</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
@@ -1773,16 +1790,10 @@ the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST<
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
 -->
 
-</p><p>The <code title=attr-istyle>istyle</code> attribute of an
-<code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is
-an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">1</code>, <code title="">2</code>, <code title="">3</code>, and <code title="">4</code>.  The <code title=attr-istyle>istyle</code> attribute
-of the <code>input</code> element applies only to <code>input</code>
-elements whoes <code title=attr-input-type>type</code> attribute is in
-the <span title=attr-input-type-text>Text</span> state.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>
--->
+</p></div>
 
-</p><hr>
+<div class=section>
+<h4 id=the-keygen-element><span class=secno>4.13.2 </span>The <code>keygen</code> element</h4>
 
 <p>The <code title=attr-keygen-keytype>keytype</code> attribute of a
 <code>keygen</code> element, for the purpose of conformance checking,
@@ -1803,8 +1814,10 @@ matches to <code title="">ec</code>, the <code title=attr-keygen-keyparams>keypa
 NOT</em> be specified.  Otherwise, these two attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
 <https://developer.mozilla.org/En/HTML/Element/keygen> -->
 
-</p><div class=section>
-<h4 id=the-isindex-element><span class=secno>4.13.1 </span>The <code>isindex</code> element</h4>
+</p></div>
+
+<div class=section>
+<h4 id=the-isindex-element><span class=secno>4.13.3 </span>The <code>isindex</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>isindex</code> element
 is <i>empty</i>.<!-- WA1 parsing, only affects XHTML -->
