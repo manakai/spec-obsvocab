@@ -1218,7 +1218,7 @@ a "space-separeted values" according to HTML2 -->
 class=rfc2119>MUST</em> be an <span>unordered set of unique
 space-separated tokens</span>.<!-- HTML4, HTML5 <a rel> -->
 
-<p>If the <code title=attr-a-urn>methods</code> attribute of an
+<p>If the <code title=attr-a-urn>urn</code> attribute of an
 <code>link</code> <cite class="bibref informative">[<a
 href="#ref-HTML20">HTML20</a>]</cite> or <code>a</code> element is
 present, its value <em class=rfc2119>MUST</em> be a <span>valid
@@ -1982,11 +1982,13 @@ element.<!-- WA1 parsing -->
 
 <p>Elements and attributes defined by the following specifications are
 not included in this specification, because they have not been
-implemented at all and are not useful.
+implemented at all (or might have been implemented in some minor user
+agents but has not affect the Web) and are not useful any more.
 
 <ul>
 
-<li>Historical Internet Drafts and Working Drafts of HTML
+<li>Historical Internet Drafts and Working Drafts of HTML, including
+HTML+ and HTML 3.0
 
 <li>RFC 2659 <cite class="bibref informative">[<a
 href="#ref-RFC2659">RFC2659</a>]</cite>
@@ -1997,6 +1999,11 @@ href="#ref-XHTML2ED">XHTML2ED</a>]</cite>
 
 <li>XHTML Access Module <cite class="bibref informative">[<a
 href="#ACCESS">ACCESS</a>]</cite>
+
+<li>Any other early proposals
+
+<li>Proprietary elements and attributes for WebTV, WebExplorer, mosaic
+variants, or authoring tools
 
 </ul>
 
