@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 14 March 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 20 March 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -75,7 +75,9 @@ and attributes</a></li>
      <li><a href=#the-bgsound-element><span class=secno>4.2.1 </span>The <code>bgsound</code> element</a></li></ol></li>
    <li><a href=#flow-content><span class=secno>4.3 </span>Flow content</a>
     <ol>
-     <li><a href=#the-marquee-element><span class=secno>4.3.1 </span>The <code>marquee</code> element</a></li></ol></li>
+     <li><a href=#the-marquee-element><span class=secno>4.3.1 </span>The <code>marquee</code> element</a></li>
+     <li><a href=#the-multicol-element><span class=secno>4.3.2 </span>The <code>multicol</code> element</a></li>
+     <li><a href=#the-layer-and-ilayer-elements><span class=secno>4.3.3 </span>The <code>layer</code> and <code>ilayer</code> elements</a></li></ol></li>
    <li><a href=#boxes><span class=secno>4.4 </span>Boxes</a></li>
    <li><a href=#background-images-and-colors><span class=secno>4.5 </span>Background images and colors</a></li>
    <li><a href=#alignments><span class=secno>4.6 </span>Alignments</a></li>
@@ -419,9 +421,9 @@ elements of the <code>dir</code> elements, is same as the
 <code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
 -->
 
-</p><p>The <a href=#content-model>content model</a> of <code>center</code> and
-<code>multicol</code> elements is same as the <code>div</code>
-element.<!-- WA1 parsing, WA1 rendering -->
+</p><p>The <a href=#content-model>content model</a> of the <code>center</code> element
+is same as the <code>div</code> element.<!-- WA1 parsing, WA1
+rendering -->
 
 </p><p>The <a href=#content-model>content model</a> of <code>div1</code>,
 <code>div2</code>, <code>div3</code>, <code>div4</code>,
@@ -452,6 +454,7 @@ element.<!-- WA1 rendering -->
 <p>If the <code title=attr-table-cols>cols</code> attribute <cite class="bibref informative">[<a href=#ref-RFC1942>RFC1942</a>]</cite>
 of a <code>table</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
 integer</a>.<!-- RFC1942,
+<http://web.archive.org/web/20030805031411/devedge.netscape.com/library/manuals/1998/htmlguide/tags9.html#1770509>,
 <http://msdn.microsoft.com/en-us/library/ms533583%28VS.85%29.aspx> -->
 
 </p><p>If the <code title=attr-tdth-abbr>abbr</code> attribute of a
@@ -495,6 +498,87 @@ attribute</a>.<!-- HTML5 obsolete -->
 
 </p></div>
 
+<div class=section>
+<h4 id=the-multicol-element><span class=secno>4.3.2 </span>The <code>multicol</code> element</h4>
+
+<p>The <a href=#content-model>content model</a> element of the <code>multicol</code>
+element is same as the <code>div</code> element.<!--
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077197>
+-->
+
+</p><p>If the <code title=attr-multicol-col>col</code> attribute of a
+<code>multicol</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
+that represents an integer greater than zero (0).  The <code title=attr-multicol-col>col</code> attribute <em class=rfc2119>MUST</em> be specified for a <code>multicol</code>
+element.
+
+</p><p>If the <code title=attr-multicol-gutter>gutter</code> attribute of
+a <code>multicol</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
+
+</p><p>The <code title=attr-multicol-baseline>baseline</code> attribute of
+a <code>multicol</code> element is an <a href=#enumerated-attribute>enumerated
+attribute</a> with the keyword <code title="">vert</code>.  This
+attribute was supported by <i>JustView</i> Web browser.
+
+</p></div>
+
+<div class=section>
+<h4 id=the-layer-and-ilayer-elements><span class=secno>4.3.3 </span>The <code>layer</code> and <code>ilayer</code> elements</h4>
+
+<p>The <a href=#content-model>content model</a> of the <code>layer</code> element
+<cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is same as the
+<code>div</code> element.<!--
+<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1703974>
+-->
+
+</p><p>The <a href=#content-model>content model</a> of the <code>ilayer</code> element
+<cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is same as the
+<code>span</code> element.<!--
+<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1703710>
+-->
+
+</p><p>If the <code title=attr-layer-left>left</code>, <code title=attr-layer-top>top</code>, <code title=attr-layer-pagex>pagex</code>, or <code title=attr-layer-pagey>pagey</code> attribute of a <code>layer</code>
+or <code>ilayer</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
+
+</p><p>If the <code title=attr-layer-src>src</code> attribute of a
+<code>layer</code> or <code>ilayer</code> element is present, its
+value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty
+URL</a>.
+
+</p><p>If the <code title=attr-layer-z-index>z-index</code> attribute of a
+<code>layer</code> or <code>ilayer</code> element is present, its
+value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a> that represents an integer greater than zero (0).
+
+</p><p>If the <code title=attr-layer-above>above</code> or <code title=attr-layer-below>below</code> attribute of a <code>layer</code>
+or <code>ilayer</code> element is present, its value <em class=rfc2119>MUST</em> be the ID of a <code>layer</code> or
+<code>ilayer</code> element.
+
+</p><p>At most one of <code title=attr-layer-above>above</code>, <code title=attr-layer-below>below</code>, and <code title=attr-layer-z-index>z-index</code> attributes <em class=rfc2119>MUST</em> be specified for a <code>layer</code> or
+<code>ilayer</code> element.
+
+</p><p>If the <code title=attr-layer-clip>clip</code> attribute of a
+<code>layer</code> or <code>ilayer</code> element is present, its
+value <em class=rfc2119>MUST</em> be four (4) <a href=#valid-non-negative-integer title="valid
+non-negative integer">valid non-negative integers</a> separated by
+U+002C <code class=charname>COMMA</code> character (,).<!-- "can be
+less than the width and height of the content of the layer" - this is
+not phrased out as a conformance requirement in this specification -->
+
+</p><p>The <code title=attr-layer-visibility>visibility</code> attribute
+of a <code>layer</code> or <code>ilayer</code> element is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">show</code><!-- not shown -->, <code title="">hidden</code>, and
+<code title="">inherit</code>.
+
+</p><hr>
+
+<p>The <a href=#content-model>content model</a> of the <code>nolayer</code> element
+<cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is same as the
+<code>span</code> element.<!--
+<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1323433>
+-->
+
+</p></div>
+
 </div>
 
 <div class=section>
@@ -502,17 +586,28 @@ attribute</a>.<!-- HTML5 obsolete -->
 
 <p>If the <code title="">height</code> or <code title="">width</code>
 attribute of an <code>applet</code>, <code>table</code>,
-<code>td</code>, <code>th</code>, or <code>marquee</code> element is
-specified, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
-non-negative integer</a>.  The <code>col</code> element's <code title=attr-col-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
+<code>td</code>, <code>th</code>, <code>layer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>, <code>ilayer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>, <code>marquee</code>, or
+<code>spacer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> element is specified, its
+value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.  The <code>col</code> element's <code title=attr-col-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
 The <code>hr</code> element's <code title=attr-hr-width>width</code>
 attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
-non-negative integer</a>.  The <code>tr</code> element's <code title=attr-tr-height>height</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+non-negative integer</a>.  The <code>multicol</code> element's
+<code title=attr-multicol-width>width</code> attribute value <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>
+<em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.  The <code>tr</code> element's <code title=attr-tr-height>height</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
 integer</a>.<!-- HTML5's embedded content's |width| and |height|
 attributes,
 <http://msdn.microsoft.com/en-us/library/ms533781%28VS.85%29.aspx> (it
 says there is <nobr height>, but maybe it is wrong),
-<http://msdn.microsoft.com/en-us/library/ms535147%28VS.85%29.aspx> -->
+<http://msdn.microsoft.com/en-us/library/ms535147%28VS.85%29.aspx>,
+layer/ilayer
+<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1701761>,
+multicol
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077956>,
+spacer
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
+-->
 
 </p><p>If the <code title=attr-colgroup-width>width</code> attribute of a
 <code>colgroup</code> element <cite class="bibref informative">[<a href=#ref-HTML4>HTML4</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension value</a> or an
@@ -525,6 +620,12 @@ HTML4 -->
 </p><p>The <code>hr</code> element's <code title=attr-hr-size>size</code>
 attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
 non-negative integer</a>.
+
+</p><p>The <code>spacer</code> element's <code title=attr-spacer-size>size</code> attribute value <cite class="bibref
+informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.<!--
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
+-->
 
 </p><hr>
 
@@ -546,8 +647,11 @@ specified, its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-v
 dimension value</a>.<!-- WA1 rendering -->
 
 </p><p>The <code title=attr-embed-units>units</code> attribute of the
-<code>embed</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">px</code> and <code title="">em</code>.<!--
+<code>embed</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> <cite class="bibref
+informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">pixels</code><!-- DEVEDGE -->, <code title="">px</code><!-- MSDN
+-->, <code title="">en</code><!-- DEVEDGE -->, and <code title="">em</code><!-- MSDN -->.<!--
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1553598>,
 <http://msdn.microsoft.com/en-us/library/ms534705%28VS.85%29.aspx> -->
 
 </p><hr>
@@ -566,10 +670,13 @@ with keywords <code title="">void</code>, <code title="">above</code>, <code tit
 or the empty string.<!-- WA1 rendering, HTML4 -->
 
 </p><p>If the <code title=attr-dim-border>border</code> attribute of an
-<code>img</code> element, an <code>object</code> element, or an
-<code>input</code> element whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state is specified,
+<code>embed</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>, <code>img</code>, or
+<code>object</code> element, or an <code>input</code> element whoes
+<code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state is specified,
 its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
-integer</a>.<!-- WA1 rendering -->
+integer</a>.<!-- WA1 rendering, embed
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1286394>
+-->
 
 </p><p>The <code>hr</code> element's <code title=attr-hr-noshade>noshade</code> attribute is a <a href=#boolean-attribute>boolean
 attribute</a>.<!-- WA1 rendering -->
@@ -596,8 +703,12 @@ informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
 
 <p>The <code>body</code>, <code>table</code>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
-<code>td</code>, and <code>th</code> elements' <code title=attr-background>background</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-non-empty-url title="valid non-empty URL">valid
-non-empty URLs</a>.<!-- WA1 rendering -->
+<code>td</code>, <code>th</code>, <code>layer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>, and <code>ilayer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>
+elements' <code title=attr-background>background</code> attribute
+values <em class=rfc2119>MUST</em> be <a href=#valid-non-empty-url title="valid non-empty
+URL">valid non-empty URLs</a>.<!-- WA1 rendering, layer/ilayer
+<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1701769>
+-->
 
 </p><p>A <dfn id=valid-legacy-color-value>valid legacy color value</dfn> is either a U+0023 <code class=charname>NUMBER SIGN</code> character (#) followed by six (6)
 characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
@@ -611,11 +722,14 @@ Color specification.)  -->
 
 </p><p>The <code>body</code>, <code>table</code>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
-<code>td</code>, <code>th</code>, and <code>marquee</code> elements'
-<code title=attr-bgcolor>bgcolor</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
+<code>td</code>, <code>th</code>, <code>layer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>, <code>ilayer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>, and <code>marquee</code>
+elements' <code title=attr-bgcolor>bgcolor</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
 value">valid legacy color values</a>.  The <code>body</code>
 element's <code title=attr-body-text>text</code>, <code title=attr-body-link>link</code>, <code title=attr-body-vlink>vlink</code>, and <code title=attr-body-alink>alink</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
-value">valid legacy color values</a>.<!-- WA1 rendering, HTML4 -->
+value">valid legacy color values</a>.<!-- WA1 rendering, HTML4,
+layer/ilayer
+<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1701768>
+-->
 
 </p><p>The <code>table</code>, <code>tr</code> <cite class="bibref
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>td</code>
@@ -691,12 +805,15 @@ attribute</a> with keywords <code title="">left</code>, <code title="">center</c
 HTML4 -->
 
 </p><p>The <code title="">align</code> attribute of an <code>applet</code>,
-<code>embed</code>, <code>iframe</code>, <code>img</code>, or
-<code>object</code> element, or of an <code>input</code> element whoes
-<code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state, is an
+<code>embed</code>, <code>iframe</code>, <code>img</code>,
+<code>object</code>, or <code>spacer</code> <cite class="bibref
+informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> element, or
+of an <code>input</code> element whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state, is an
 <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">top</code>,
 <code title="">bottom</code>, <code title="">baseline</code>, <code title="">center</code>, <code title="">middle</code>, <code title="">texttop</code> <code title="">absmiddle</code>, <code title="">abscenter</code>, and <code title="">bottom</code>.  Keywords other
-than <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, <code title="">middle</code>, and <code title="">bottom</code> are non-conforming.<!-- WA1 rendering -->
+than <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, <code title="">middle</code>, and <code title="">bottom</code> are non-conforming.<!-- WA1 rendering,
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
+-->
 
 </p><p>The <code title="">valign</code> attribute of a <code>col</code>,
 <code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
@@ -732,15 +849,36 @@ integer</a>.<!-- HTML4 -->
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, and
 <code>div</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> elements and the <code title=attr-pre-wrap>wrap</code> attribute of the <code>pre</code>
 element are <a href=#boolean-attribute title="boolean attribute">boolean
-attributes</a>.<!--
-<http://msdn.microsoft.com/en-us/library/ms534196%28VS.85%29.aspx> -->
+attributes</a>.<!-- nowrap
+<http://msdn.microsoft.com/en-us/library/ms534196%28VS.85%29.aspx>,
+wrap
+<http://web.archive.org/web/20030610040341/devedge.netscape.com/library/manuals/1998/htmlguide/tags4.html#1838240>
+-->
 
 </p><p>The <code title=attr-br-clear>clear</code> attribute of a
 <code>br</code> element is an <a href=#enumerated-attribute>enumerated attribute</a> with
 keywords <code title="">left</code>, <code title="">right</code>, <code title="">all</code>, and <code title="">both</code>, where <code title="">both</code> is non-conforming.<!-- WA1 rendering, HTML4 -->
 
 </p><p>The <a href=#content-model>content model</a> of <code>spacer</code> and
-<code>wbr</code> elements is <i>empty</i>.<!-- WA1 parsing -->
+<code>wbr</code> elements is <i>empty</i>.<!-- WA1 parsing, wbr
+<http://web.archive.org/web/20020607005007/http://wp.netscape.com/home/services_docs/html-extensions.html>,
+spacer
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
+-->
+
+</p><p>The <code title=attr-spacer-type>type</code> attribute of a
+<code>spacer</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">horizontal</code>, <code title="">vertical</code>, and <code title="">block</code>.<!--
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>;
+|horizontal| is default (according to actual implementations) -->
+
+</p><p>If the <code title=attr-spacer-type>type</code> attribute value of
+the <code>spacer</code> element does <em>not</em> <a href=#ascii-case-insensitive title="ASCII
+case-insensitive">ASCII case-insensitively</a> match to <code title="">block</code>, the <code title=attr-spacer-size>size</code>
+attribute <em class=rfc2119>MUST NOT</em> be specified.  Otherwise,
+the <code title=attr-spacer-width>width</code> and <code title=attr-spacer-height>height</code> attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
+-->
 
 </p></div>
 
@@ -751,7 +889,11 @@ keywords <code title="">left</code>, <code title="">right</code>, <code title=""
 <code>big</code>, <code>blink</code>, <code>nobr</code>,
 <code>rb</code>, <code>s</code>, <code>strike</code>, <code>tt</code>,
 and <code>u</code> elements are same as the <code>span</code>
-element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete -->
+element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete, nobr
+<http://web.archive.org/web/20020607005007/http://wp.netscape.com/home/services_docs/html-extensions.html>,
+blink
+<http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1595094>
+-->
 
 </p><p>The <a href=#content-model>content model</a> of the <code>comment</code> element
 <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>
@@ -798,6 +940,22 @@ character in the range U+0030 <code class=charname>DIGIT ZERO</code>
 (0) to U+0037 <code class=charname>DIGIT SEVEN</code> (7).<!-- WA1
 rendering of <font size>, HTML4 -->
 
+</p><p>If the <code title=attr-font-point-size>point-size</code> attribute
+<cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> of a <code>font</code> element
+is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
+non-negative integer</a> that represents a number greater than zero
+(0).<!--
+<http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1288958>,
+<font pointsize>
+<http://html5.org/tools/web-apps-tracker?from=4024&to=4025> -->
+
+</p><p>If the <code title=attr-font-weight>weight</code> attribute <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>
+of a <code>font</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
+that represents a number <code title="">100</code>, <code title="">200</code>, <code title="">300</code>, <code title="">400</code>,
+<code title="">500</code>, <code title="">600</code>, <code title="">700</code>, <code title="">800</code>, or <code title="">900</code>.<!--
+<http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1748506>
+-->
+
 </p></div>
 
 </div>
@@ -836,6 +994,11 @@ HTML4 -->
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be a <span>valid browsing context name or
 keyword</span>.<!-- HTML4 -->
 
+</p><p>If the <code title=attr-link-src>src</code> attribute of the
+<code>link</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
+<http://web.archive.org/web/20030610040238/devedge.netscape.com/library/manuals/1998/htmlguide/tags3.html#1808466>
+-->
+
 </p></div>
 
 <div class=section>
@@ -862,14 +1025,15 @@ attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
 applies to the element.  The attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
 a <code>map</code> element.<!-- Old HTML5 definition -->
 
-</p><p>If the <code title=attr-dynsrc>dynsrc</code>, <code title=attr-lowsrc>lowsrc</code>, or <code title=attr-vrml>vrml</code>
-attribute of the <code>img</code> or <code>input</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is
-present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid
-non-empty URL</a>.  The <code title=attr-dynsrc>dynsrc</code>,
-<code title=attr-lowsrc>lowsrc</code>, or <code title=attr-vrml>vrml</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.  The attribute
+</p><p>If the <code title=attr-dynsrc>dynsrc</code> <cite class="bibref
+informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code title=attr-lowsrc>lowsrc</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>, or <code title=attr-vrml>vrml</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> attribute of the <code>img</code> or
+<code>input</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.  The
+<code title=attr-dynsrc>dynsrc</code>, <code title=attr-lowsrc>lowsrc</code>, or <code title=attr-vrml>vrml</code>
+attribute of the <code>input</code> element applies only to
+<code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.  The attribute
 <em class=rfc2119>MUST NOT</em> be specified if it does not applies to
-the element.<!--
+the element.<!-- lowsrc
+<http://web.archive.org/web/20030622172358/devedge.netscape.com/library/manuals/1998/htmlguide/tags8.html#1455241>,
 <http://msdn.microsoft.com/en-us/library/ms533742%28VS.85%29.aspx>,
 <http://msdn.microsoft.com/en-us/library/ms534138%28VS.85%29.aspx>,
 <http://msdn.microsoft.com/en-us/library/dd347031%28VS.85%29.aspx> -->
@@ -894,8 +1058,10 @@ MSDN but not match the syntax of MSDN. -->
 is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
 URL</a>.<!-- HTML4 -->
 
-</p><p>If the <code title=attr-embed-pluginspage>pluginspage</code>
-attribute of the <code>embed</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.<!--
+</p><p>If the <code title=attr-embed-pluginspage>pluginspage</code> or
+<code title=attr-embed-pluginurl>pluginurl</code> attribute of the
+<code>embed</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.<!--
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1552022>,
 <http://msdn.microsoft.com/en-us/library/ms534341%28VS.85%29.aspx> -->
 
 </p><p>The <code title=attr-img-galleryimg>galleryimg</code> attribute of
@@ -912,6 +1078,12 @@ element applies only to <code>input</code> elements whoes <code title=attr-input
 the element.  The attribute <em class=rfc2119>MUST NOT</em> be
 specified unless the element also has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
 <http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
+
+</p><p>The <code title=attr-img-suppress>suppress</code> attribute of the
+<code>img</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is a <a href=#boolean-attribute>boolean
+attribute</a>.<!--
+<http://web.archive.org/web/20030622172358/devedge.netscape.com/library/manuals/1998/htmlguide/tags8.html#1310461>
+-->
 
 </p><p>The <a href=#content-model>content model</a> of the <code>noembed</code> element
 is same as the <code>iframe</code> element.
@@ -984,6 +1156,18 @@ HTML4 -->
 </p><p>If the <code title=attr-object-standby>standby</code> attribute of
 the <code>object</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 
+</p><p>The <code title=attr-applet-mayscript>mayscript</code> attribute of
+the <code>applet</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is a <a href=#boolean-attribute>boolean
+attribute</a>.<!--
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1237148>
+-->
+
+</p><p>The <code title=attr-embed-palette>palette</code> attribute of the
+<code>embed</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">foreground</code> and <code title="">background</code>.<!--
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1286409>
+-->
+
 </p><hr>
 
 <p>If the <code title=attr-param-type>type</code> attribute of a
@@ -1031,6 +1215,33 @@ is <i>text</i>.<!--
 <http://msdn.microsoft.com/en-us/library/ms534643%28VS.85%29.aspx> -->
 
 </p></div>
+
+<!-- HTML+TIME
+
+time2
+  accelerate http://msdn.microsoft.com/en-us/library/ms533127%28VS.85%29.aspx
+  autoreverse http://msdn.microsoft.com/en-us/library/ms533135(VS.85).aspx
+  begin http://msdn.microsoft.com/en-us/library/ms533140(VS.85).aspx
+  decelerate http://msdn.microsoft.com/en-us/library/ms533156(VS.85).aspx
+  dur http://msdn.microsoft.com/en-us/library/ms533159(VS.85).aspx
+  end http://msdn.microsoft.com/en-us/library/ms533163(VS.85).aspx
+  fill http://msdn.microsoft.com/en-us/library/ms533168(VS.85).aspx
+  mute http://msdn.microsoft.com/en-us/library/ms533296(VS.85).aspx
+  repeatcount http://msdn.microsoft.com/en-us/library/ms533407(VS.85).aspx
+  repeatdur http://msdn.microsoft.com/en-us/library/ms533408(VS.85).aspx
+  restart http://msdn.microsoft.com/en-us/library/ms533409(VS.85).aspx
+  speed http://msdn.microsoft.com/en-us/library/ms533415(VS.85).aspx
+  syncbehavior http://msdn.microsoft.com/en-us/library/ms533421(VS.85).aspx
+  syncmaster http://msdn.microsoft.com/en-us/library/ms533422(VS.85).aspx
+  timeaction http://msdn.microsoft.com/en-us/library/ms533429(VS.85).aspx
+  timecontainer http://msdn.microsoft.com/en-us/library/ms533430(VS.85).aspx
+  volume http://msdn.microsoft.com/en-us/library/ms533446(VS.85).aspx
+  systembitrate http://msdn.microsoft.com/en-us/library/ms533424(VS.85).aspx
+  systemcaptions http://msdn.microsoft.com/en-us/library/ms533425(VS.85).aspx
+  systemlanguage http://msdn.microsoft.com/en-us/library/ms533426(VS.85).aspx
+  systemoverduborsubtitle http://msdn.microsoft.com/en-us/library/ms533427(VS.85).aspx
+
+-->
 
 </div>
 
@@ -1125,15 +1336,20 @@ rendering,
 <h4 id=frame-borders><span class=secno>4.11.3 </span>Frame borders</h4>
 
 <p>The <code title=attr-frames-frameborder>frameborder</code>
-attribute of a <code>frame</code>, <code>frameset</code>, or
-<code>iframe</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>,
-with keywords <code title="">1</code>, <code title="">yes</code>, <code title="">0</code>, and <code title="">no</code>, where keywords <code title="">yes</code> and <code title="">no</code> are non-conforming.<!-- WA1
-rendering, HTML4 -->
+attribute of a <code>frame</code>, <code>frameset</code>,
+<code>iframe</code>, or <code>embed</code> <cite class="bibref
+informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> element is an
+<a href=#enumerated-attribute>enumerated attribute</a>, with keywords <code title="">1</code>,
+<code title="">yes</code>, <code title="">0</code>, and <code title="">no</code>, where keywords <code title="">yes</code> and <code title="">no</code> are non-conforming.<!-- WA1 rendering, HTML4, embed
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1286396>
+-->
 
 </p><p>If the <code title=attr-frames-border>border</code> attribute of a
-<code>frameset</code> or <code>iframe</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is
-present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
+<code>frameset</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> or <code>iframe</code> element
+<cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>
+is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid
 non-negative integer</a>.<!--
+<http://web.archive.org/web/20030622171224/devedge.netscape.com/library/manuals/1998/htmlguide/tags11.html#1294835>,
 <http://msdn.microsoft.com/en-us/library/ms533533%28VS.85%29.aspx> -->
 
 </p><p>The <code>frame</code> and <code>frameset</code> elements' <code title=attr-frames-bordercolor>bordercolor</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-legacy-color-value title="valid legacy color
@@ -1171,6 +1387,48 @@ HTML4 said this was a URL, but it is wrong. -->
 <http://msdn.microsoft.com/en-us/library/ms533746%28VS.85%29.aspx>
 (syntax restriction is unclear and seems complex) -->
 
+</p><p>The following attributes of <a href=#html-elements>HTML elements</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> <em class=rfc2119>MUST</em> be treated as <a href=#event-handler-content-attributes>event handler content
+attributes</a>:
+
+<code title=handler-onactivate>onactivate</code>,
+<code title=handler-onafterupdate>onafterupdate</code>,
+<code title=handler-onbeforeactivate>onbeforeactivate</code>,
+<code title=handler-onbeforecopy>onbeforecopy</code>,
+<code title=handler-onbeforecut>onbeforecut</code>,
+<code title=handler-onbeforedeactivate>onbeforedeactivate</code>,
+<code title=handler-onbeforeeditfocus>onbeforeeditfocus</code>,
+<code title=handler-onbeforepaste>onbeforepaste</code>,
+<code title=handler-onbeforeupdate>onbeforeupdate</code>,
+<code title=handler-oncellchange>oncellchange</code>,
+<code title=handler-oncontrolselect>oncontrolselect</code>,
+<code title=handler-oncopy>oncopy</code>,
+<code title=handler-oncut>oncut</code>,
+<code title=handler-ondataavailable>ondataavailable</code>,
+<code title=handler-ondatasetchanged>ondatasetchanged</code>,
+<code title=handler-ondatasetcomplete>ondatasetcomplete</code>,
+<code title=handler-ondeactivate>ondeactivate</code>,
+<code title=handler-onerrorupdate>onerrorupdate</code>,
+<code title=handler-onfilterchange>onfilterchange</code>,
+<code title=handler-onfocusin>onfocusin</code>,
+<code title=handler-onfocusout>onfocusout</code>,
+<code title=handler-onhelp>onhelp</code>,
+<code title=handler-onlayoutcomplete>onlayoutcomplete</code>,
+<code title=handler-onlosecapture>onlosecapture</code>,
+<code title=handler-onmouesenter>onmouseenter</code>,
+<code title=handler-onmouseleave>onmouseleave</code>,
+<code title=handler-onmove>onmove</code>,
+<code title=handler-onmoveend>onmoveend</code>,
+<code title=handler-onmovestart>onmovestart</code>,
+<code title=handler-onpaste>onpaste</code>,
+<code title=handler-onpropertychange>onpropertychange</code>,
+<code title=handler-onresizeend>onresizeend</code>,
+<code title=handler-onresizestart>onresizestart</code>,
+<code title=handler-onrowenter>onrowenter</code>,
+<code title=handler-onrowexit>onrowexit</code>,
+<code title=handler-onrowsdelete>onrowsdelete</code>,
+<code title=handler-onrowsinserted>onrowsinserted</code>, and
+<code title=handler-onselectstart>onselectstart</code>.
+
 </p></div>
 
 <div class=section>
@@ -1178,9 +1436,12 @@ HTML4 said this was a URL, but it is wrong. -->
 
 <p>The <code title=attr-textarea-wrap>wrap</code> attribute of a
 <code>textarea</code> element, for the purpose of conformance
-checking, <em class=rfc2119>MUST</em> be treated as if there is an
-additional keyword: <code title="">off</code>.  However, this keyword is
-non-conforming.<!-- WA1 rendering -->
+checking, <em class=rfc2119>MUST</em> be treated as if there are
+additional keywords: <code title="">off</code>, <code title="">virtual</code>, and <code title="">physical</code>.  However, these
+keywords are non-conforming.<!-- WA1 rendering,
+<http://web.archive.org/web/19970613222237/www82.netscape.com/assist/net_sites/new_html3_prop.html>,
+<http://web.archive.org/web/20030607191146/http://devedge.netscape.com/library/manuals/1998/htmlguide/tags10.html#1340390>
+-->
 
 </p><p>If the <code title="">accept-charset</code> attribute of an
 <code>input</code> or <code>textarea</code> element is present, its
@@ -1280,7 +1541,10 @@ attributes and therefore not included in this specification.
 </p><p>Attributes <code title=attr-htnames>htnames</code>, <code title=attr-htsupp>htsupp</code>, and <code title=attr-htign>htign</code> <cite class="bibref informative">[<a href=#ref-M12N11>M12N11</a>]</cite> are not real attributes and
 therefore not included in this specification.
 
-</p><p>There has not been a <code>server</code> element in HTML.
+</p><p>There has not been a <code>server</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>
+in HTML.<!--
+<http://web.archive.org/web/20030610034441/devedge.netscape.com/library/manuals/1998/htmlguide/tags13.html#1324086>
+-->
 
 </p><p>The <a href=http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx><code>IMPORT</code>
 processing instruction</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is not supported by this
@@ -1298,8 +1562,7 @@ architecture of HTML, XML, and DOM.
 <div class="section reference">
 <h2 class=no-num id=references>References</h2>
 
-<p class=ed>@@@ TODO: WF2, RDFa, MSDN, Netscape's reference, i-mode
-HTML, ezweb, softbank
+<p class=ed>@@@ TODO: WF2, RDFa, i-mode HTML, ezweb, softbank
 
 </p><div class="section reference normative">
 <h3 class=no-num id=normative-references>Normative references</h3>
@@ -1339,6 +1602,12 @@ Access Module</a></cite>, Mark Birbeck, Shane McCarron, Steven
 Pemberton, T. V. Raman, Richard Schwerdtfeger, W3C Editor's Draft,
 <time date=2009-04-23>23 April 2009</time>.
 
+</dd><dt id=ref-DEVEDGE>DEVEDGE
+
+</dt><dd><cite><a href=http://web.archive.org/web/20030604191931/http://devedge.netscape.com/library/manuals/1998/htmlguide/>HTML
+Tag Reference</a></cite>, <a href=http://web.archive.org/web/20030604191931/http://devedge.netscape.com/>netscape
+devedge</a>, <time datetime=1998-01-26>26 January 1998</time>.
+
 </dd><dt id=ref-HTML20>HTML20
 
 </dt><dd><cite><a href=http://tools.ietf.org/html/rfc1866>Hypertext
@@ -1371,6 +1640,12 @@ David M. Abrahamson, Roger Price, <time datetime=2003-04-24>24 April
 Modularization 1.1</a></cite>, Daniel Austin, Subramanian Peruvemba,
 Shane McCarron, Masayasu Ishikawa, Mark Birbeck, W3C Proposed Edited
 Recommendation, <time datetime=2010-02-13>13 February 2008</time>.
+
+</dd><dt id=ref-MSDN>MSDN
+
+</dt><dd><cite><a href=http://msdn.microsoft.com/en-us/library/aa737439.aspx>HTML and
+CSS</a></cite>, <a href=http://msdn.microsoft.com/>Microsoft
+Developer Network (<abbr>msdn</abbr>)</a>.
 
 </dd><dt id=ref-RFC1942>RFC1942
 
