@@ -436,10 +436,13 @@ class=rfc2119>MUST</em> be equal to one of <code title>disc</code>,
 <code title>circle</code>, and <code title>square</code>, <span
 title="ASCII case-insensitive">ASCII case-insensitively</span>.  If
 the <code title=attr-li-type>type</code> attribute of an
-<code>li</code> element is present, its value <em
+<code>li</code>, <code>dir</code> <cite class="bibref
+informative">[IE]</cite>, or <code>menu</code> <cite class="bibref
+informative">[IE]</cite> element is present, its value <em
 class=rfc2119>MUST</em> be one of values allowed for <code
 title>type</code> attribute of a <code>ul</code> or <code>ol</code>
-element.<!-- WA1 rendering -->
+element.<!-- WA1 rendering,
+<http://code.google.com/p/doctype/wiki/DirTypeAttribute> -->
 
 <p>The <code title>compact</code> attribute of the <code>dir</code>,
 <code>dl</code>, <code>menu</code>, <code>ol</code>, or
@@ -594,6 +597,10 @@ of a <code>layer</code> or <code>ilayer</code> element is an
 title>show</code><!-- not shown -->, <code title>hidden</code>, and
 <code title>inherit</code>.
 
+<!-- There was <layer overflow=none|clip> according to
+<http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> and
+<http://code.google.com/p/doctype/wiki/IlayerElement> -->
+
 <hr>
 
 <p>The <span>content model</span> of the <code>nolayer</code> element
@@ -667,15 +674,6 @@ HTML4 -->
 attribute value <em class=rfc2119>MUST</em> be a <span>valid
 non-negative integer</span>.
 
-<p>Unless otherwise specified, if the <code title>width</code> or
-<code title>height</code> attribute <cite class="bibref
-informative">[<a href="#ref-DOCTYPE">DOCTYPE</a>]</cite> is specified
-for an <span title="HTML elements">HTML element</span>, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.<!--
-<http://code.google.com/p/doctype/wiki/DivWidthAttribute>,
-<http://code.google.com/p/doctype/wiki/AddressHeightAttribute> -->
-
 <p>The <code>spacer</code> element's <code
 title=attr-spacer-size>size</code> attribute value <cite class="bibref
 informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> <em
@@ -709,6 +707,10 @@ integer">valid non-negative integers</span>.<!-- WA1 rendering,
 cellborder
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-cellborder>
 (cellborder is also in WebTV) -->
+
+<!-- According to
+<http://www.blooberry.com/indexdot/html/tagpages/t/table.htm>, there
+was toppadding, rightpadding, bottompadding, and leftpadding -->
 
 <p>If the <code title>hspace</code> or <code title>vspace</code>
 attribute of an <code>applet</code>, <code>embed</code>,
@@ -885,6 +887,13 @@ class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
 title>true</code> and <code title>false</code>.<!--
 <http://msdn.microsoft.com/en-us/library/ms533072%28VS.85%29.aspx> -->
 
+<p>The <code title=attr-frames-application>application</code>
+attribute of <code>frame</code> and <code>iframe</code> element <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code title>yes</code>
+and <code title>no</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms536474%28VS.85%29.aspx> -->
+
 <p>The <code title=attr-body-bgproperties>bgproperties</code>
 attribute of the <code>body</code> element <cite class="bibref
 informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
@@ -990,7 +999,15 @@ href="#ref-HTML4">HTML4</a>]</cite>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
 <code>th</code>, or <code>td</code> element is present, its value <em
 class=rfc2119>MUST</em> be a string whoes length is one (1), i.e. a
-character.<!-- HTML4 -->
+character.<!-- HTML4 -->If the <code title>choff</code> attribute of a
+<code>col</code>, <code>colgroup</code> <cite class="bibref
+informative">[IE]</cite>, <code>thead</code>, <code>tbody</code>,
+<code>tfoot</code>, <code>tr</code>, <code>th</code>, or
+<code>td</code> element <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a string whoes length is one (1), i.e. a
+character..<!--
+<http://msdn.microsoft.com/en-us/library/ms533552%28VS.85%29.aspx> -->
 
 <p>If the <code title>charoff</code> attribute of a <code>col</code>,
 <code>colgroup</code> <cite class="bibref informative">[<a
@@ -998,7 +1015,15 @@ href="#ref-HTML4">HTML4</a>]</cite>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
 <code>th</code>, or <code>td</code> element is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.<!-- HTML4 -->
+integer</span>.<!-- HTML4 -->  If the <code title>choff</code>
+attribute of a <code>col</code>, <code>colgroup</code> <cite
+class="bibref informative">[IE]</cite>, <code>thead</code>,
+<code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
+<code>th</code>, or <code>td</code> element <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is present, its
+value <em class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!--
+<http://msdn2.microsoft.com/en-us/library/ms533557.aspx> -->
 
 </div>
 
@@ -1229,7 +1254,8 @@ conformance of <code title>name</code> attributes of <code>a</code>,
 title=attr-nextid-n>n</code> attribute of the <code>nextid</code>
 element in the document.<!-- WA1 UA reqs
 e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
-WA1 obsolete, HTML4 -->
+WA1 obsolete, HTML4 --><!-- There was <layer name> according to
+<http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> -->
 
 <!-- <img href> is maybe wrong
 <http://msdn.microsoft.com/en-us/library/cc848861%28VS.85%29.aspx>. -->
@@ -1330,6 +1356,9 @@ the element.  The attribute <em class=rfc2119>MUST NOT</em> be
 specified unless the element also has the <code
 title=attr-dynsrc>dynsrc</code> attribute specified.<!--
 <http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
+
+<!-- There was <img controls> according to
+<http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
 
 <p>The <code title=attr-img-suppress>suppress</code> attribute of the
 <code>img</code> element <cite class="bibref informative">[<a
@@ -1704,6 +1733,15 @@ class=rfc2119>MAY</em> be any string.<!-- HTML4,
 <http://msdn.microsoft.com/en-us/library/ms533746%28VS.85%29.aspx>
 (syntax restriction is unclear and seems complex) -->
 
+<p>If the <code title=attr-script-archive>archive</code> attribute of
+a <code>script</code> element <cite class="bibref informative">[<a
+href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
+<http://web.archive.org/web/20030415223352/http://devedge.netscape.com/library/manuals/2000/javascript/1.3/guide/sec.html>
+-->
+
+<hr>
+
 <p>The following attributes of <span>HTML elements</span> <cite
 class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> <em
 class=rfc2119>MUST</em> be treated as <span>event handler content
@@ -1889,12 +1927,33 @@ how to encode mutliple values, neither. -->
 
 <p>The <code title=attr-keygen-keytype>keytype</code> attribute of a
 <code>keygen</code> element, for the purpose of conformance checking,
-<em class=rfc2119>MUST</em> be treated as if there is an additional
-keyword: <code title>dsa</code> <cite class="bibref informative">[<a
-href="#ref-SAFARI">SAFARI</a>]</cite>.  This keyword is
-non-conforming.<!--
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-keytype>
--->
+<em class=rfc2119>MUST</em> be treated as if there are additional
+keywords: <code title>dsa</code> <cite class="bibref informative">[<a
+href="#ref-SAFARI">SAFARI</a>]</cite> <cite class="bibref
+informative">[<a href="#ref-MDC">MDC</a>]</cite> and <code
+title>ec</code>.  These keywords are non-conforming.<!--
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-keytype>,
+<https://developer.mozilla.org/En/HTML/Element/keygen> -->
+
+<p>If the <code title=attr-keygen-keyparams>keyparams</code> or <code
+title=attr-keygen-pqg>pqg</code> attribute of an <code>keygen</code>
+element is present, its value <em class=rfc2119>MAY</em> be any
+string.  If the <code title=attr-keygen-keytype>keytype</code>
+attribute of the same element <span title="ASCII
+case-insensitive">ASCII case-insensitively</span> matches to <code
+title>dsa</code>, exactly one of <code
+title=attr-keygen-keyparams>keyparams</code> or <code
+title=attr-keygen-pqg>pqg</code> attribute <em class=rfc2119>MUST</em>
+be specified.  Otherwise, if the <code
+title=attr-keygen-keytype>keytype</code> attribute of the element
+<span title="ASCII case-insensitive">ASCII case-insensitively</span>
+matches to <code title>ec</code>, the <code
+title=attr-keygen-keyparams>keyparams</code> attribute <em
+class=rfc2119>MUST</em> be specified and the <code
+title=attr-keygen-pqg>pqg</code> attribute <em class=rfc2119>MUST
+NOT</em> be specified.  Otherwise, these two attributes <em
+class=rfc2119>MUST NOT</em> be specified.<!--
+<https://developer.mozilla.org/En/HTML/Element/keygen> -->
 
 <div class=section>
 <h4>The <code>isindex</code> element</h4>
@@ -2035,11 +2094,6 @@ Tag Reference</a></cite>, <a
 href="http://web.archive.org/web/20030604191931/http://devedge.netscape.com/">netscape
 devedge</a>, <time datetime=1998-01-26>26 January 1998</time>.
 
-<dt id=ref-DOCTYPE>DOCTYPE
-
-<dd><cite><a href="http://code.google.com/p/doctype/">Google
-Doctype</a></cite>.
-
 <dt id=ref-HTML20>HTML20
 
 <dd><cite><a href="http://tools.ietf.org/html/rfc1866">Hypertext
@@ -2076,6 +2130,11 @@ href="http://www.w3.org/MarkUp/2010/PER-xhtml-modularization-20100213/">XHTML<su
 Modularization 1.1</a></cite>, Daniel Austin, Subramanian Peruvemba,
 Shane McCarron, Masayasu Ishikawa, Mark Birbeck, W3C Proposed Edited
 Recommendation, <time datetime=2010-02-13>13 February 2008</time>.
+
+<dt id=ref-MDC>MDC
+
+<dd><cite><a href="https://developer.mozilla.org/en/HTML">HTML -
+MDC</a></cite>.
 
 <dt id=ref-MSDN>MSDN
 
