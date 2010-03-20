@@ -1669,28 +1669,19 @@ keywords are non-conforming.<!-- WA1 rendering,
 value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-form-accept-charset>charset</code> attribute value for a
 <code>form</code> element.<!-- HTML 2.x -->
 
-</p><p>Attributes <code title=attr-input-autocapitalize>autocapitalize</code>, <code title=attr-input-autocorrect>autocorrect</code>, and <code title=attr-input-autosave>autosave</code> of the <code>input</code>
-element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> are <a href=#enumerated-attribute title="enumerated
-attribute">enumerated attributes</a> with keywords <code title="">off</code> and <code title="">on</code>.  The <code title=attr-input-autosave>autosave</code> attribute of the
+</p><p>Attributes <code title=attr-input-autocapitalize>autocapitalize</code> and <code title=attr-input-autocorrect>autocorrect</code> of the
+<code>input</code> and <code>textarea</code> elements <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite>
+are <a href=#enumerated-attribute title="enumerated attribute">enumerated attributes</a>
+with keywords <code title="">on</code> and <code title="">off</code>.
+Attributes <code title=attr-input-autocapitalize>autocapitalize</code>
+and <code title=attr-input-autocorrect>autocorrect</code> of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-search>Search</span> state.<!--
-autocapitalize
+<span title=attr-input-type-text>Text</span> state<!-- only?? or,
+type=url and type=email and type=search? -->.<!-- autocapitalize
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize>,
 autocorrect
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>,
-autosave
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autosave>
--->
-
-</p><p>If the <code title=attr-input-incremental>incremental</code>
-attribute of an <code>input</code> element <cite class="bibref
-informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its
-value <em class=rfc2119>MAY</em> be any string.  The <code title=attr-input-incremental>incremental</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-search>Search</span> state.<!--
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/incremental>
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>
 -->
 
 </p><p>If the <code title=attr-input-precision>precision</code> attribute
@@ -1718,7 +1709,26 @@ the <span title=attr-input-type-text>Text</span> state.<!--
 </p><div class=section>
 <h4 id=autocomplete><span class=secno>4.13.1 </span>Autocomplete</h4>
 
-<p>If the <code title=attr-input-results>results</code> attribute of
+<p>If the <code title=attr-input-autosave>autosave</code> attribute of
+an <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  The <code title=attr-input-autosave>autosave</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-search>Search</span> state.<!--
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autosave>,
+<http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005890>
+-->
+
+</p><p>The <code title=attr-input-incremental>incremental</code> attribute
+of an <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is a <a href=#boolean-attribute>boolean
+attribute</a>. The <code title=attr-input-incremental>incremental</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-search>Search</span> state.<!--
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/incremental>,
+<http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005890>
+-->
+
+</p><p>If the <code title=attr-input-results>results</code> attribute of
 an <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
 The <code title=attr-input-results>results</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
