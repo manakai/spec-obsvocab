@@ -685,10 +685,15 @@ class=rfc2119>MUST</em> be <span title="valid non-negative
 integer">valid non-negative integers</span>.<!-- WA1 rendering -->
 
 <p>The <code>table</code> element's <code
-title=attr-table-cellspacing>cellspacing</code> and <code
-title=attr-table-cellpadding>cellpadding</code> attribute values <em
-class=rfc2119>MUST</em> be <span title="valid non-negative
-integer">valid non-negative integers</span>.<!-- WA1 rendering -->
+title=attr-table-cellspacing>cellspacing</code>, <code
+title=attr-table-cellpadding>cellpadding</code>, and <code
+title=attr-table-cellborder>cellborder</code> <cite class="bibref
+informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite> attribute
+values <em class=rfc2119>MUST</em> be <span title="valid non-negative
+integer">valid non-negative integers</span>.<!-- WA1 rendering,
+cellborder
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-cellborder>
+(cellborder is also in WebTV) -->
 
 <p>If the <code title>hspace</code> or <code title>vspace</code>
 attribute of an <code>applet</code>, <code>embed</code>,
@@ -729,6 +734,14 @@ title>box</code>, and <code title>border</code>.<!-- WA1 rendering -->
 title=attr-table-border>border</code> attribute value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>
 or the empty string.<!-- WA1 rendering, HTML4 -->
+
+<p>The <code>table</code> element's <code
+title=attr-table-tableborder>tableborder</code> attribute value <cite
+class="bibref informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite>
+<em class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!--
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/tableborder>
+-->
 
 <p>If the <code title=attr-dim-border>border</code> attribute of an
 <code>embed</code> <cite class="bibref informative">[<a
@@ -1195,7 +1208,8 @@ a <code>map</code> element.<!-- Old HTML5 definition -->
 <p>If the <code title=attr-dynsrc>dynsrc</code> <cite class="bibref
 informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, <code
 title=attr-lowsrc>lowsrc</code> <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite>, or <code
+href="#ref-DEVEDGE">DEVEDGE</a>]</cite> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, or <code
 title=attr-vrml>vrml</code> <cite class="bibref informative">[<a
 href="#ref-MSDN">MSDN</a>]</cite> attribute of the <code>img</code> or
 <code>input</code> element is present, its value <em
@@ -1212,6 +1226,14 @@ the element.<!-- lowsrc
 <http://msdn.microsoft.com/en-us/library/ms533742%28VS.85%29.aspx>,
 <http://msdn.microsoft.com/en-us/library/ms534138%28VS.85%29.aspx>,
 <http://msdn.microsoft.com/en-us/library/dd347031%28VS.85%29.aspx> -->
+
+<p>If the <code title=attr-img-oversrc>oversrc</code> <cite
+class="bibref informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite>
+attribute of the <code>img</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
+oversrc
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-oversrc>
+-->
 
 <p>If the <code title=attr-loop>loop</code> attribute of the
 <code>img</code>, <code>input</code>, or <code>bgsound</code> element
@@ -1234,12 +1256,18 @@ MSDN but not match the syntax of MSDN. -->
 is present, its value <em class=rfc2119>MUST</em> be a <span>valid
 URL</span>.<!-- HTML4 -->
 
-<p>If the <code title=attr-embed-pluginspage>pluginspage</code> or
-<code title=attr-embed-pluginurl>pluginurl</code> attribute of the
+<p>If the <code title=attr-embed-pluginpage>pluginpage</code> <cite
+class="bibref informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite>,
+<code title=attr-embed-pluginspage>pluginspage</code>, or <code
+title=attr-embed-pluginurl>pluginurl</code> attribute of the
 <code>embed</code> element <cite class="bibref informative">[<a
 href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid URL</span>.<!--
+pluginpage/pluginspage/pluginurl
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-pluginpage>,
+pluginspage/pluginurl
 <http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1552022>,
+pluginspage
 <http://msdn.microsoft.com/en-us/library/ms534341%28VS.85%29.aspx> -->
 
 <p>The <code title=attr-img-galleryimg>galleryimg</code> attribute of
@@ -1270,6 +1298,21 @@ title=attr-dynsrc>dynsrc</code> attribute specified.<!--
 href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is a <span>boolean
 attribute</span>.<!--
 <http://web.archive.org/web/20030622172358/devedge.netscape.com/library/manuals/1998/htmlguide/tags8.html#1310461>
+-->
+
+<p>The <code title=attr-img-composite>composite</code> attribute of
+the <code>img</code> element <cite class="bibref informative">[<a
+href="#ref-SAFARI">SAFARI</a>]</cite> is a <span>enumerated
+attribute</span> with the keyword <code>source-over</code>.<!--
+<http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913>,
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-composite>
+-->
+
+<p>The <code title=attr-img-nosave>nosave</code> attribute of the
+<code>img</code> element <cite class="bibref informative">[<a
+href="#ref-SAFARI">SAFARI</a>]</cite> is a <span>boolean
+attribute</span>.<!--
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/nosave>
 -->
 
 <p>The <span>content model</span> of the <code>noembed</code> element
@@ -1315,10 +1358,15 @@ class=rfc2119>MUST</em> be an <span>absolute URL</span>.<!-- WA1 UA
 reqs and HTML4 def -->
 
 <p>If the <code title=attr-object-code>code</code> attribute of an
-<code>applet</code> or <code>object</code> element is present, its <em
+<code>applet</code>, <code>embed</code> <cite class="bibref
+informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite>, or
+<code>object</code> element is present, its <em
 class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!-- WA1
 obsolete,
-<http://msdn.microsoft.com/en-us/library/ms533575%28VS.85%29.aspx> -->
+<http://msdn.microsoft.com/en-us/library/ms533575%28VS.85%29.aspx>,
+embed
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/HTMLTags.html#//apple_ref/doc/uid/30001262-embed>
+-->
 
 <p>If the <code title=attr-applet-object>object</code> attribute of an
 <code>applet</code> element is present, its <em
@@ -1662,6 +1710,22 @@ attributes</span>:
 <code title=handler-onrowsinserted>onrowsinserted</code>, and
 <code title=handler-onselectstart>onselectstart</code>.
 
+<p>The following attributes of <span>HTML elements</span> <cite
+class="bibref informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite> <em
+class=rfc2119>MUST</em> be treated as <span>event handler content
+attributes</span>:
+
+<!-- <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-SW12> -->
+<code title=handler-ongesturechange>ongesturechange</code>,
+<code title=handler-ongestureend>ongestureend</code>,
+<code title=handler-ongesturestart>ongesturestart</code>,
+<code title=handler-onorientationchange>onorientationchange</code>,
+<code title=handler-onsearch>onsearch</code>,
+<code title=handler-ontouchcancel>ontouchcancel</code>,
+<code title=handler-ontouchend>ontouchend</code>,
+<code title=handler-ontouchmove>ontouchmove</code>, and
+<code title=handler-ontouchstart>ontouchstart</code>.
+
 </div>
 
 <div class=section>
@@ -1682,6 +1746,64 @@ keywords are non-conforming.<!-- WA1 rendering,
 value <em class=rfc2119>MUST</em> be syntactically valid <code
 title=attr-form-accept-charset>charset</code> attribute value for a
 <code>form</code> element.<!-- HTML 2.x -->
+
+<p>The <code title=attr-input-autocapitalize>autocapitalize</code>
+<code title=attr-input-autocorrect>autocorrect</code>, or <code
+title=attr-input-autosave>autosave</code> attribute of the
+<code>input</code> element <cite class="bibref informative">[<a
+href="#ref-SAFARI">SAFARI</a>]</cite> is an <span>enumerated
+attribute</span> with keywords <code title>off</code> and <code
+title>on</code>.  The <code title=attr-input-autosave>autosave</code>
+attribute of the <code>input</code> element applies only to
+<code>input</code> elements whoes <code
+title=attr-input-type>type</code> attribute is in the <span
+title=attr-input-type-search>Search</span> state.<!-- autocapitalize
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize>,
+autocorrect
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>,
+autosave
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autosave>
+-->
+
+<p>If the <code title=attr-input-incremental>incremental</code>
+attribute of an <code>input</code> element <cite class="bibref
+informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite> is present, its
+value <em class=rfc2119>MAY</em> be any string.  The <code
+title=attr-input-incremental>incremental</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-search>Search</span> state.<!--
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/incremental>
+-->
+
+<p>If the <code title=attr-input-precision>precision</code> attribute
+of an <code>input</code> element <cite class="bibref informative">[<a
+href="#ref-SAFARI">SAFARI</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be given in one of the following forms: one or
+more of characters in the range U+0030 <code class=charname>DIGIT
+ZERO</code> (0) to U+0039 <code class=charname>DIGIT NINE</code> (9),
+followed by keyword <code title>dp</code> or <code title>sf</code>,
+keyword <code title>integer</code>, or keyword <code
+title>float</code>.  The <code
+title=attr-input-precision>precision</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-number>Number</span> or <span
+title=attr-input-type-range>Range</span> state.<!--
+<http://hixie.ch/specs/html/forms/web-forms-3#precision>,
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-precision>
+-->
+
+<p>If the <code title=attr-input-results>results</code> attribute of
+an <code>input</code> element <cite class="bibref informative">[<a
+href="#ref-SAFARI">SAFARI</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
+The <code title=attr-input-results>results</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-search>Search</span> state.<!--
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/results>
+-->
 
 <p>The <code title=attr-input-vcard_name>vcard_name</code> attribute
 of the <code>input</code> element is an <span>enumerated
@@ -1726,6 +1848,15 @@ title=attr-input-type-password>Password</span> state.<!--
 It says multiple values can be specified, but does not say how to
 (space-separated?) and HTML refereneces in the wild do not describe
 how to encode mutliple values, neither. -->
+
+<p>The <code title=attr-keygen-keytype>keytype</code> attribute of a
+<code>keygen</code> element, for the purpose of conformance checking,
+<em class=rfc2119>MUST</em> be treated as if there is an additional
+keyword: <code title>dsa</code> <cite class="bibref informative">[<a
+href="#ref-SAFARI">SAFARI</a>]</cite>.  This keyword is
+non-conforming.<!--
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-keytype>
+-->
 
 <div class=section>
 <h4>The <code>isindex</code> element</h4>
@@ -1933,9 +2064,16 @@ Pemberton, T. V. Raman, Richard Schwerdtfeger, W3C Editor's Draft,
 <dt id=ref-RUBY>RUBY
 
 <dd><cite><a href="http://www.w3.org/TR/2001/REC-ruby-20010531/">Ruby
-Annotation</a></cite>, Marcin Sawicki Michel Suignard, Masayasu
+Annotation</a></cite>, Marcin Sawicki, Michel Suignard, Masayasu
 Ishikawa, Martin D&uuml;rst, Tex Texin, W3C Recommendation, <time
 datetime=2008-06-25>25 June 2008</time>.
+
+<dt id=ref-SAFARI>SAFARI
+
+<dd><cite><a
+href="http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Introduction.html">Safari
+HTML Reference</a></cite>, <time datetime=2009-11-17>17 November
+2009</time>.
 
 <dt id=ref-XHTML2>XHTML2
 
