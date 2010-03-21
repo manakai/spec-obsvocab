@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 20 March 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 21 March 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -89,9 +89,10 @@ and attributes</a></li>
    <li><a href=#hyperlinks><span class=secno>4.9 </span>Hyperlinks</a></li>
    <li><a href=#embedded-content><span class=secno>4.10 </span>Embedded content</a>
     <ol>
-     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>4.10.1 </span>The <code>applet</code>, <code>object</code>, and
+     <li><a href=#the-img-element><span class=secno>4.10.1 </span>The <code>img</code> element</a></li>
+     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>4.10.2 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</a></li>
-     <li><a href=#embedded-data><span class=secno>4.10.2 </span>Embedded data</a></li></ol></li>
+     <li><a href=#embedded-data><span class=secno>4.10.3 </span>Embedded data</a></li></ol></li>
    <li><a href=#frames><span class=secno>4.11 </span>Frames</a>
     <ol>
      <li><a href=#the-frameset-element><span class=secno>4.11.1 </span>The <code>frameset</code> element</a></li>
@@ -1182,18 +1183,23 @@ e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window
 WA1 obsolete, HTML4 --><!-- There was <layer name> according to
 <http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> -->
 
-<!-- <img href> is maybe wrong
-<http://msdn.microsoft.com/en-us/library/cc848861%28VS.85%29.aspx>. -->
+</p><p>If the <code title=attr-embed-pluginpage>pluginpage</code> <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite>,
+<code title=attr-embed-pluginspage>pluginspage</code>, or <code title=attr-embed-pluginurl>pluginurl</code> attribute of the
+<code>embed</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.<!--
+pluginpage/pluginspage/pluginurl
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-pluginpage>,
+pluginspage/pluginurl
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1552022>,
+pluginspage
+<http://msdn.microsoft.com/en-us/library/ms534341%28VS.85%29.aspx> -->
 
-</p><p>The <code title=attr-input-usemap>usemap</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-image>Image Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.  The attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
-a <code>map</code> element.<!-- Old HTML5 definition -->
+</p><p>The <a href=#content-model>content model</a> of the <code>noembed</code> element
+is same as the <code>iframe</code> element.
 
-</p><p>If the <code title=attr-dynsrc>dynsrc</code> <cite class="bibref
+</p><div class=section>
+<h4 id=the-img-element><span class=secno>4.10.1 </span>The <code>img</code> element</h4>
+
+<p>If the <code title=attr-dynsrc>dynsrc</code> <cite class="bibref
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code title=attr-lowsrc>lowsrc</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> <cite class="bibref
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, or <code title=attr-vrml>vrml</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> attribute of the <code>img</code> or
 <code>input</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.  The
@@ -1207,11 +1213,39 @@ the element.<!-- lowsrc
 <http://msdn.microsoft.com/en-us/library/ms534138%28VS.85%29.aspx>,
 <http://msdn.microsoft.com/en-us/library/dd347031%28VS.85%29.aspx> -->
 
+<!-- <img href> is maybe wrong
+<http://msdn.microsoft.com/en-us/library/cc848861%28VS.85%29.aspx>. -->
+
 </p><p>If the <code title=attr-img-oversrc>oversrc</code> <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite>
 attribute of the <code>img</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
 oversrc
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-oversrc>
 -->
+
+</p><p>The <code title=attr-input-usemap>usemap</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-image>Image Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.  The attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
+a <code>map</code> element.<!-- Old HTML5 definition -->
+
+</p><p>If the <code title="">longdesc</code> attribute of the
+<code>frame</code>, <code>iframe</code>, or <code>img</code> element
+is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
+URL</a>.<!-- HTML4 -->
+
+</p><hr>
+
+<p>The <code title=attr-start>start</code> attribute of the
+<code>img</code> or <code>input</code> element <cite class="bibref
+informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">fileopen</code> and <code title="">mouseover</code>.  The <code title=attr-start>start</code> attribute of the <code>input</code>
+element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.  The attribute
+<em class=rfc2119>MUST NOT</em> be specified if it does not applies to
+the element.  The attribute <em class=rfc2119>MUST NOT</em> be
+specified unless the element also has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
+<http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
 
 </p><p>If the <code title=attr-loop>loop</code> attribute of the
 <code>img</code>, <code>input</code>, or <code>bgsound</code> element
@@ -1228,40 +1262,9 @@ applies to the element.<!--
 <img loop=""> (the empty string) is equivalent to loop=1 according to
 MSDN but not match the syntax of MSDN. -->
 
-</p><p>If the <code title="">longdesc</code> attribute of the
-<code>frame</code>, <code>iframe</code>, or <code>img</code> element
-is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
-URL</a>.<!-- HTML4 -->
+</p><hr>
 
-</p><p>If the <code title=attr-embed-pluginpage>pluginpage</code> <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite>,
-<code title=attr-embed-pluginspage>pluginspage</code>, or <code title=attr-embed-pluginurl>pluginurl</code> attribute of the
-<code>embed</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.<!--
-pluginpage/pluginspage/pluginurl
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-pluginpage>,
-pluginspage/pluginurl
-<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1552022>,
-pluginspage
-<http://msdn.microsoft.com/en-us/library/ms534341%28VS.85%29.aspx> -->
-
-</p><p>The <code title=attr-img-galleryimg>galleryimg</code> attribute of
-the <code>img</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is a <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">yes</code>, <code title="">true</code>, <code title="">no</code>, and <code title="">false</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms533774%28VS.85%29.aspx> -->
-
-</p><p>The <code title=attr-start>start</code> attribute of the
-<code>img</code> or <code>input</code> element <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">fileopen</code> and <code title="">mouseover</code>.  The <code title=attr-start>start</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.  The attribute
-<em class=rfc2119>MUST NOT</em> be specified if it does not applies to
-the element.  The attribute <em class=rfc2119>MUST NOT</em> be
-specified unless the element also has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
-<http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
-
-<!-- There was <img controls> according to
-<http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
-
-</p><p>The <code title=attr-img-suppress>suppress</code> attribute of the
+<p>The <code title=attr-img-suppress>suppress</code> attribute of the
 <code>img</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is a <a href=#boolean-attribute>boolean
 attribute</a>.<!--
 <http://web.archive.org/web/20030622172358/devedge.netscape.com/library/manuals/1998/htmlguide/tags8.html#1310461>
@@ -1274,17 +1277,26 @@ attribute</a> with the keyword <code>source-over</code>.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-composite>
 -->
 
-</p><p>The <code title=attr-img-nosave>nosave</code> attribute of the
+<!-- There was <img controls> according to
+<http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
+
+</p><p>The <code title=attr-img-galleryimg>galleryimg</code> attribute of
+the <code>img</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is a <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">yes</code>, <code title="">true</code>, <code title="">no</code>, and <code title="">false</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533774%28VS.85%29.aspx> -->
+
+</p><hr>
+
+<p>The <code title=attr-img-nosave>nosave</code> attribute of the
 <code>img</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is a <a href=#boolean-attribute>boolean
 attribute</a>.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/nosave>
 -->
 
-</p><p>The <a href=#content-model>content model</a> of the <code>noembed</code> element
-is same as the <code>iframe</code> element.
+</p></div>
 
-</p><div class=section>
-<h4 id=the-applet,-object,-and-param-elements><span class=secno>4.10.1 </span>The <code>applet</code>, <code>object</code>, and
+<div class=section>
+<h4 id=the-applet,-object,-and-param-elements><span class=secno>4.10.2 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>applet</code> element
@@ -1382,7 +1394,7 @@ with keywords <code title="">data</code>, <code title="">ref</code>, and
 </p></div>
 
 <div class=section>
-<h4 id=embedded-data><span class=secno>4.10.2 </span>Embedded data</h4>
+<h4 id=embedded-data><span class=secno>4.10.3 </span>Embedded data</h4>
 
 <p>If the <code title=attr-datasrc>datasrc</code> attribute of an
 <a href=#html-elements title="HTML elements">HTML element</a> is present, its value
