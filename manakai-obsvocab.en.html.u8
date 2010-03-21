@@ -101,9 +101,10 @@ and attributes</a></li>
    <li><a href=#scripting><span class=secno>4.12 </span>Scripting</a></li>
    <li><a href=#forms><span class=secno>4.13 </span>Forms</a>
     <ol>
-     <li><a href=#autocomplete><span class=secno>4.13.1 </span>Autocomplete</a></li>
-     <li><a href=#the-keygen-element><span class=secno>4.13.2 </span>The <code>keygen</code> element</a></li>
-     <li><a href=#the-isindex-element><span class=secno>4.13.3 </span>The <code>isindex</code> element</a></li></ol></li></ol></li>
+     <li><a href=#value-constraints-and-input-mode><span class=secno>4.13.1 </span>Value constraints and input mode</a></li>
+     <li><a href=#autocomplete><span class=secno>4.13.2 </span>Autocomplete</a></li>
+     <li><a href=#the-keygen-element><span class=secno>4.13.3 </span>The <code>keygen</code> element</a></li>
+     <li><a href=#the-isindex-element><span class=secno>4.13.4 </span>The <code>isindex</code> element</a></li></ol></li></ol></li>
  <li><a href=#elements-and-attributes-not-convered-by-this-specification><span class=secno>5 </span>Elements and attributes not convered by this specification</a></li>
  <li><a class=no-num href=#references>References</a>
   <ol>
@@ -496,7 +497,8 @@ represents −1, or an integer greater than 0.<!-- HTML5 obsolete.
 According to MSDN (and HTML5) loop="" (the empty string) and loop=0
 are equivalent to loop=-1, but they are considered non-conforming in
 this specification because they does not seem to be explicitly
-allowed. -->
+allowed. <http://msdn.microsoft.com/en-us/library/ms534135%28VS.85%29.aspx>
+(|infinite| is not part of the langauge.)  -->
 
 </p><p>The <code title=attr-marquee-truespeed>truespeed</code> attribute
 of the <code>marquee</code> element is a <a href=#boolean-attribute>boolean
@@ -1222,6 +1224,21 @@ oversrc
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-oversrc>
 -->
 
+</p><p>If the <code title=attr-img-localsrc>localsrc</code> attribute of
+the <code>img</code> element <cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a string consist of one or more characters
+in the range U+0030 <code class=charname>DIGIT ZERO</code> (0) to
+U+0039 <code class=charname>DIGIT NINE</code> (9), U+0041 <code class=charname>LATIN CAPITAL LETTER A</code> to U+005A <code class=charname>LATIN CAPITAL LETTER Z</code>, and U+0061 <code class=charname>LATIN SMALL LETTER A</code> to U+007A <code class=charname>LATIN SMALL LETTER Z</code>.  The value <em class=rfc2119>SHOULD</em> be a character in the range U+0031 <code class=charname>DIGIT ONE</code> (1) to U+0039 <code class=charname>DIGIT NINE</code> (9), followed by zero or more
+characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
+(0) to U+0039 <code class=charname>DIGIT NINE</code> (9)<!--
+<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag7.html> - according
+to this page, localsrc value is either "icon number" or "symbol name".
+The latest emoji list page
+<http://www.au.kddi.com/ezfactory/tec/spec/3.html> contains list of
+"icon numbers", but does not contain "symbol names".  "Symbol names"
+are included in older versions of the list - see
+<http://web.archive.org/web/*/www.au.kddi.com/ezfactory/tec/spec/3.html>.
+See also WML 2.0 |wml:localsrc|.  -->
+
 </p><p>The <code title=attr-input-usemap>usemap</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
@@ -1260,7 +1277,10 @@ attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
 applies to the element.<!--
 <http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
 <img loop=""> (the empty string) is equivalent to loop=1 according to
-MSDN but not match the syntax of MSDN. -->
+MSDN but not match the syntax of MSDN.  |infinite| is not part of the
+language according to MSDN.
+<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag6.html> allows
+|infinite|. -->
 
 </p><hr>
 
@@ -1292,6 +1312,13 @@ attribute</a> with keywords <code title="">yes</code>, <code title="">true</code
 attribute</a>.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/nosave>
 -->
+
+</p><p>The <code title=attr-img-copyright>copyright</code> attribute of
+<code>img</code> and <code>object</code> elements <cite class="bibref
+informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">yes</code>
+and <code title="">no</code>.<!--
+<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag4.html> -->
 
 </p></div>
 
@@ -1676,11 +1703,6 @@ keywords are non-conforming.<!-- WA1 rendering,
 <http://web.archive.org/web/20030607191146/http://devedge.netscape.com/library/manuals/1998/htmlguide/tags10.html#1340390>
 -->
 
-</p><p>If the <code title="">accept-charset</code> attribute of an
-<code>input</code> or <code>textarea</code> element is present, its
-value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-form-accept-charset>charset</code> attribute value for a
-<code>form</code> element.<!-- HTML 2.x -->
-
 </p><p>Attributes <code title=attr-input-autocapitalize>autocapitalize</code> and <code title=attr-input-autocorrect>autocorrect</code> of the
 <code>input</code> and <code>textarea</code> elements <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite>
 are <a href=#enumerated-attribute title="enumerated attribute">enumerated attributes</a>
@@ -1696,7 +1718,10 @@ autocorrect
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>
 -->
 
-</p><p>If the <code title=attr-input-precision>precision</code> attribute
+</p><div class=section>
+<h4 id=value-constraints-and-input-mode><span class=secno>4.13.1 </span>Value constraints and input mode</h4>
+
+<p>If the <code title=attr-input-precision>precision</code> attribute
 of an <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be given in one of the following forms: one or
 more of characters in the range U+0030 <code class=charname>DIGIT
 ZERO</code> (0) to U+0039 <code class=charname>DIGIT NINE</code> (9),
@@ -1718,8 +1743,45 @@ the <span title=attr-input-type-text>Text</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>
 -->
 
-</p><div class=section>
-<h4 id=autocomplete><span class=secno>4.13.1 </span>Autocomplete</h4>
+</p><p>If the <code title=attr-format>format</code> attribute of an
+<code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is
+present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-input-mask>valid input
+mask</a>.  A <dfn id=valid-input-mask>valid input mask</dfn> is a string consist of one
+or more <a href=#format-code title="format code">format codes</a>.  A <dfn id=format-code>format
+code</dfn> is an optional sequence of either a U+002A <code class=charname>ASTERISK</code> character (*) or characters in the
+range U+0030 <code class=charname>DIGIT ZERO</code> (0) to U+0039
+<code class=charname>DIGIT NINE</code> (9), followed by a character
+<code>A</code>, <code>a</code>, <code>N</code>, <code>n</code>,
+<code>X</code>, <code>x</code>, <code>M</code>, <code>m</code>.
+Alternatively, a <a href=#format-code>format code</a> can be a U+005C <code class=charname>REVERSE SOLIDUS</code> character (\) followed by a
+character.  The <code title=attr-format>format</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-text>Text</span> state.<!--
+<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
+2.0
+<http://www.google.com/search?q=cache%3AlUL3jRY2WmwJ%3Awww.openmobilealliance.org%2Ftech%2Faffiliates%2Fwap%2Fwap-238-wml-20010911-a.pdf>
+6.5.2.1. The |wml:format| Attribute, except that <lang:class> format
+is not supported; \c format is not mentioned in au's documentation but
+is supported by implementation according to
+<http://www001.upp.so-net.ne.jp/hdml/wap2/xhtml/input.html> -->
+
+</p><p>The <code title=attr-emptyok>emptyok</code> attribute of an
+<code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is
+an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">true</code> and <code title="">false</code>.<!--
+<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
+2.0 6.5.2.2. The |wml:emptyok| Attribute -->
+
+</p><p>If the <code title="">accept-charset</code> attribute of an
+<code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>
+is present, its value <em class=rfc2119>MUST</em> be syntactically
+valid <code title=attr-form-accept-charset>accept-charset</code>
+attribute value for a <code>form</code> element.<!-- HTML 2.x -->
+
+</p></div>
+
+<div class=section>
+<h4 id=autocomplete><span class=secno>4.13.2 </span>Autocomplete</h4>
 
 <p>If the <code title=attr-input-autosave>autosave</code> attribute of
 an <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  The <code title=attr-input-autosave>autosave</code> attribute of the
@@ -1792,12 +1854,11 @@ It says multiple values can be specified, but does not say how to
 (space-separated?) and HTML refereneces in the wild do not describe
 how to encode mutliple values, neither. -->
 
-</p><p>If the <code title=attr-iprof>iprof</code> attribute of an
+</p><p>The <code title=attr-iprof>iprof</code> attribute of an
 <code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is
-present, its value <em class=rfc2119>MUST</em> be one of following
-keywords: <code title="">name1</code>, <code title="">name2</code>, <code title="">name</code>, <code title="">kana1</code>, <code title="">kana2</code>,
-<code title="">kana</code>, <code title="">tel1</code>, <code title="">tel2</code>, <code title="">mail1</code>, <code title="">mail2</code>,
-<code title="">zip</code>, <code title="">address1</code>, <code title="">address2</code>, <code title="">address3</code>, <code title="">address4</code>, <code title="">address</code>, <code title="">birthday1</code>, <code title="">birthday2</code>, <code title="">birthday3</code>, and <code title="">birthday</code>.  The <code title=attr-iprof>iprof</code> attribute of the <code>input</code>
+an <a href=#enumerated-attribute>enumerated attribute</a> with keywords: <code title="">name1</code>, <code title="">name2</code>, <code title="">name</code>,
+<code title="">kana1</code>, <code title="">kana2</code>, <code title="">kana</code>, <code title="">tel1</code>, <code title="">tel2</code>,
+<code title="">mail1</code>, <code title="">mail2</code>, <code title="">zip</code>, <code title="">address1</code>, <code title="">address2</code>, <code title="">address3</code>, <code title="">address4</code>, <code title="">address</code>, <code title="">birthday1</code>, <code title="">birthday2</code>, <code title="">birthday3</code>, and <code title="">birthday</code>.  The <code title=attr-iprof>iprof</code> attribute of the <code>input</code>
 element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
 -->
@@ -1815,7 +1876,7 @@ the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST<
 </p></div>
 
 <div class=section>
-<h4 id=the-keygen-element><span class=secno>4.13.2 </span>The <code>keygen</code> element</h4>
+<h4 id=the-keygen-element><span class=secno>4.13.3 </span>The <code>keygen</code> element</h4>
 
 <p>The <code title=attr-keygen-keytype>keytype</code> attribute of a
 <code>keygen</code> element, for the purpose of conformance checking,
@@ -1839,7 +1900,7 @@ NOT</em> be specified.  Otherwise, these two attributes <em class=rfc2119>MUST N
 </p></div>
 
 <div class=section>
-<h4 id=the-isindex-element><span class=secno>4.13.3 </span>The <code>isindex</code> element</h4>
+<h4 id=the-isindex-element><span class=secno>4.13.4 </span>The <code>isindex</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>isindex</code> element
 is <i>empty</i>.<!-- WA1 parsing, only affects XHTML -->
@@ -1916,7 +1977,7 @@ architecture of HTML, XML, and DOM.
 <div class="section reference">
 <h2 class=no-num id=references>References</h2>
 
-<p class=ed>@@@ TODO: WF2, RDFa, i-mode HTML, ezweb, softbank
+<p class=ed>@@@ TODO: WF2, RDFa, softbank <!-- XXX HTML+/HTML3 ref -->
 
 </p><div class="section reference normative">
 <h3 class=no-num id=normative-references>Normative references</h3>
@@ -1933,7 +1994,7 @@ W3C Editor's Draft.
 
 </dt><dd><cite><a href=http://tools.ietf.org/html/rfc2119>Key words for
 use in RFCs to Indicate Requirement Levels</a></cite>, Scott Bradner,
-IETF BCP 14, March 1997.
+RFC 2119, IETF BCP 14, March 1997.
 
 </dd><dt id=ref-WA1>WA1
 
@@ -1960,7 +2021,14 @@ Pemberton, T. V. Raman, Richard Schwerdtfeger, W3C Editor's Draft,
 
 </dt><dd><cite><a href=http://web.archive.org/web/20030604191931/http://devedge.netscape.com/library/manuals/1998/htmlguide/>HTML
 Tag Reference</a></cite>, <a href=http://web.archive.org/web/20030604191931/http://devedge.netscape.com/>netscape
-devedge</a>, <time datetime=1998-01-26>26 January 1998</time>.
+devedge</a>, Netscape, <time datetime=1998-01-26>26 January
+1998</time>.
+
+</dd><dt id=ref-EZWEB>EZWEB
+
+</dt><dd><cite><a href=http://www.au.kddi.com/ezfactory/tec/spec/xhtml.html lang=ja>XHTML Basic について</a></cite> (About XHTML Basic), KDDI
+.
+(In Japanese)
 
 </dd><dt id=ref-HTML20>HTML20
 
@@ -1983,8 +2051,8 @@ W3C Recommendation, <time datetime=1999-12-24>24 December 1999</time>.
 
 </dd><dt id=ref-IMODE>IMODE
 
-</dt><dd><cite><a href=http://www.nttdocomo.co.jp/service/imode/make/content/browser/index.html>iMode
-Browser</a></cite>, NTT docomo.
+</dt><dd><cite><a href=http://www.nttdocomo.co.jp/service/imode/make/content/browser/index.html lang=ja>iモードブラウザ</a></cite> (i-mode browser), NTT docomo. (In
+Japanese)
 
 </dd><dt id=ref-ISOHTMLUG>ISOHTMLUG
 
@@ -2003,7 +2071,7 @@ Recommendation, <time datetime=2010-02-13>13 February 2008</time>.
 </dd><dt id=ref-MDC>MDC
 
 </dt><dd><cite><a href=https://developer.mozilla.org/en/HTML>HTML -
-MDC</a></cite>.
+MDC</a></cite>, Mozilla Developer Center (<abbr>MDC</abbr>).
 
 </dd><dt id=ref-MSDN>MSDN
 
@@ -2039,8 +2107,8 @@ Ishikawa, Martin Dürst, Tex Texin, W3C Recommendation, <time datetime=2008-06-2
 </dd><dt id=ref-SAFARI>SAFARI
 
 </dt><dd><cite><a href=http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Introduction.html>Safari
-HTML Reference</a></cite>, <time datetime=2009-11-17>17 November
-2009</time>.
+HTML Reference</a></cite>, Apple, <time datetime=2009-11-17>17
+November 2009</time>.
 
 </dd><dt id=ref-XHTML2>XHTML2
 
