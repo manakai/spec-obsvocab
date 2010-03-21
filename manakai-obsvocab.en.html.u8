@@ -86,10 +86,18 @@ and attributes</a></li>
     <ol>
      <li><a href=#ruby><span class=secno>4.8.1 </span>Ruby</a></li>
      <li><a href=#the-font-element><span class=secno>4.8.2 </span>The <code>font</code> element</a></li></ol></li>
-   <li><a href=#hyperlinks><span class=secno>4.9 </span>Hyperlinks</a></li>
+   <li><a href=#hyperlinks><span class=secno>4.9 </span>Hyperlinks</a>
+    <ol>
+     <li><a href=#link-destinations><span class=secno>4.9.1 </span>Link destinations</a></li>
+     <li><a href=#metadata><span class=secno>4.9.2 </span>Metadata</a></li>
+     <li><a href=#profile-data><span class=secno>4.9.3 </span>Profile data</a></li>
+     <li><a href=#activation-and-presentation><span class=secno>4.9.4 </span>Activation and presentation</a></li></ol></li>
    <li><a href=#embedded-content><span class=secno>4.10 </span>Embedded content</a>
     <ol>
-     <li><a href=#the-img-element><span class=secno>4.10.1 </span>The <code>img</code> element</a></li>
+     <li><a href=#the-img-element><span class=secno>4.10.1 </span>The <code>img</code> element</a>
+      <ol>
+       <li><a href=#image-sources><span class=secno>4.10.1.1 </span>Image sources</a></li>
+       <li><a href=#presentation><span class=secno>4.10.1.2 </span>Presentation</a></li></ol></li>
      <li><a href=#the-applet,-object,-and-param-elements><span class=secno>4.10.2 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</a></li>
      <li><a href=#embedded-data><span class=secno>4.10.3 </span>Embedded data</a></li></ol></li>
@@ -1044,6 +1052,9 @@ that represents a number <code title="">100</code>, <code title="">200</code>, <
 <div class=section>
 <h3 id=hyperlinks><span class=secno>4.9 </span>Hyperlinks</h3>
 
+<div class=section>
+<h4 id=link-destinations><span class=secno>4.9.1 </span>Link destinations</h4>
+
 <p>If the <code title=attr-link-urn>urn</code> attribute of an
 <code>link</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
 present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
@@ -1165,16 +1176,14 @@ than or equal to 128 bytes -->
 <code>area</code> element is a <a href=#boolean-attribute>boolean attribute</a>.<!--
 HTML4 -->
 
-</p><hr>
+</p></div>
+
+<div class=section>
+<h4 id=metadata><span class=secno>4.9.2 </span>Metadata</h4>
 
 <p>If the <code title="">charset</code> attribute of an <code>a</code> or
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-script-charset>charset</code> attribute value for a
 <code>script</code> element.<!-- HTML4 -->
-
-</p><p>If the <code title="">coords</code> attribute and/or the <code title="">shape</code> attribute of an <code>a</code> element is present,
-their values, and their presence themselves, <em class=rfc2119>MUST</em> be valid if they were specified for an
-<code>area</code> element with appropriate <code>href</code> and
-<code>alt</code> attributes specified.<!-- HTML4, HTML5 obsolete -->
 
 </p><p>If the <code title=attr-a-methods>methods</code> attribute of an
 <code>link</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
@@ -1185,7 +1194,10 @@ a "space-separeted values" according to HTML2 -->
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
 space-separated tokens</a>.<!-- HTML4, HTML5 <a rel> -->
 
-</p><hr>
+</p></div>
+
+<div class=section>
+<h4 id=profile-data><span class=secno>4.9.3 </span>Profile data</h4>
 
 <p>If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute of an <code>a</code> element
 <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute is specified, the
@@ -1220,7 +1232,10 @@ URL</a> whoes <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#a
 to <code title=tel:>tel</code> or <code title=mailto:>mailto</code>.<!-- Softbank 3.9.1.; Kana-or-kanji
 name, followed by a "-", followed by katakana name -->
 
-</p><hr>
+</p></div>
+
+<div class=section>
+<h4 id=activation-and-presentation><span class=secno>4.9.4 </span>Activation and presentation</h4>
 
 <p>If the <code title=attr-directkey>directkey</code> attribute of an
 <code>a</code> or <code>input</code> element <cite class="bibref
@@ -1245,6 +1260,11 @@ whoes <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-submit>Submit Button</span> state.  The
 attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
 applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+</p><p>If the <code title="">coords</code> attribute and/or the <code title="">shape</code> attribute of an <code>a</code> element is present,
+their values, and their presence themselves, <em class=rfc2119>MUST</em> be valid if they were specified for an
+<code>area</code> element with appropriate <code>href</code> and
+<code>alt</code> attributes specified.<!-- HTML4, HTML5 obsolete -->
 
 </p><p>If the <code title=attr-link-target>target</code> attribute of a
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be a <span>valid browsing context name or
@@ -1313,6 +1333,8 @@ it does not applies to the element.<!-- Softbank 3.9.1., 3.10.1.,
 
 </p></div>
 
+</div>
+
 <div class=section>
 <h3 id=embedded-content><span class=secno>4.10 </span>Embedded content</h3>
 
@@ -1342,6 +1364,23 @@ is same as the <code>iframe</code> element.
 
 </p><div class=section>
 <h4 id=the-img-element><span class=secno>4.10.1 </span>The <code>img</code> element</h4>
+
+<p>If the <code title=attr-input-usemap>usemap</code> attribute of the
+<code>input</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
+a <code>map</code> element.  The <code title=attr-input-usemap>usemap</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-image>Image Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!-- Old HTML5 definition -->
+
+</p><p>If the <code title="">longdesc</code> attribute of the
+<code>frame</code>, <code>iframe</code>, or <code>img</code> element
+is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
+URL</a>.<!-- HTML4 -->
+
+</p><div class=section>
+<h5 id=image-sources><span class=secno>4.10.1.1 </span>Image sources</h5>
 
 <p>If the <code title=attr-dynsrc>dynsrc</code> <cite class="bibref
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code title=attr-lowsrc>lowsrc</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> <cite class="bibref
@@ -1390,21 +1429,10 @@ specified (!) -->
 
 <!-- Softbank allows <input type=submit src> [SOFTBANK] 3.12.2. -->
 
-</p><p>If the <code title=attr-input-usemap>usemap</code> attribute of the
-<code>input</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
-a <code>map</code> element.  The <code title=attr-input-usemap>usemap</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-image>Image Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Old HTML5 definition -->
+</p></div>
 
-</p><p>If the <code title="">longdesc</code> attribute of the
-<code>frame</code>, <code>iframe</code>, or <code>img</code> element
-is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
-URL</a>.<!-- HTML4 -->
-
-</p><hr>
+<div class=section>
+<h5 id=presentation><span class=secno>4.10.1.2 </span>Presentation</h5>
 
 <p>The <code title=attr-start>start</code> attribute of the
 <code>img</code> or <code>input</code> element <cite class="bibref
@@ -1492,6 +1520,8 @@ keywords <code title="">yes</code> and <code title="">no</code>.<!--
 <http://developer.emnet.ne.jp/browser3-1.html> -->
 
 </p></div>
+
+</div>
 
 <div class=section>
 <h4 id=the-applet,-object,-and-param-elements><span class=secno>4.10.2 </span>The <code>applet</code>, <code>object</code>, and
@@ -2110,7 +2140,7 @@ agents but has not affect the Web) and are not useful any more.
 </p><ul>
 
 <li>Historical Internet Drafts and Working Drafts of HTML, including
-HTML+ and HTML 3.0
+HTML+ <cite class="bibref informative">[<a href=#ref-HTMLPLUS>HTMLPLUS</a>]</cite> and HTML 3.0 <cite class="bibref informative">[<a href=#ref-HTML30>HTML30</a>]</cite>
 
 </li><li>RFC 2659 <cite class="bibref informative">[<a href=#ref-RFC2659>RFC2659</a>]</cite>
 
@@ -2158,7 +2188,7 @@ architecture of HTML, XML, and DOM.
 <div class="section reference">
 <h2 class=no-num id=references>References</h2>
 
-<p class=ed>@@@ TODO: WF2, RDFa <!-- XXX HTML+/HTML3 ref -->
+<p class=ed>@@@ TODO: WF2, RDFa
 
 </p><div class="section reference normative">
 <h3 class=no-num id=normative-references>Normative references</h3>
@@ -2228,11 +2258,22 @@ Hypertext Markup Language</a></cite>, Frangois Yergeau, Gavin Thomas
 Nicol, Glenn Adams, Martin J. Dürst, RFC 2070, IETF Proposed
 Standard (obsolete), January 1997.
 
+</dd><dt id=ref-HTML30>HTML30
+
+</dt><dd><cite><a href=http://www.w3.org/MarkUp/html3/CoverPage.html>HyperText Markup
+Language Specification Version 3.0</a></cite>, David Raggett, March
+1995.
+
 </dd><dt id=ref-HTML4>HTML4
 
 </dt><dd><cite><a href=http://www.w3.org/TR/1999/REC-html401-19991224>HTML 4.01
 Specification</a></cite>, Dave Raggett, Arnaud Le Hors, Ian Jacobs,
 W3C Recommendation, <time datetime=1999-12-24>24 December 1999</time>.
+
+</dd><dt id=ref-HTMLPLUS>HTMLPLUS
+
+</dt><dd><cite><a href=http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html>A Review
+of the HTML+ Document Format</a></cite>, David Raggett.
 
 </dd><dt id=ref-IMODE>IMODE
 
