@@ -416,6 +416,14 @@ a <code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-MS
 represents an integer in the range −10,000 to 10,000.<!--
 <http://msdn.microsoft.com/en-us/library/ms533500%28VS.85%29.aspx> -->
 
+</p><p><code title=attr-bgsound-volume>volume</code> attribute of the
+<code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">high</code>, <code title="">middle</code>, <code title="">low</code>, and <code title="">0</code>.<!-- Softbank 3.10.2. -->
+
+</p><p>The <code title=attr-bgsound-as>as</code> attribute of the
+<code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a <a href=#boolean-attribute>boolean
+attribute</a>.<!-- Softbank 3.10.2. -->
+
 </p></div>
 
 </div>
@@ -498,7 +506,8 @@ According to MSDN (and HTML5) loop="" (the empty string) and loop=0
 are equivalent to loop=-1, but they are considered non-conforming in
 this specification because they does not seem to be explicitly
 allowed. <http://msdn.microsoft.com/en-us/library/ms534135%28VS.85%29.aspx>
-(|infinite| is not part of the langauge.)  -->
+(|infinite| is not part of the langauge (au, emobile, and softbank
+allows it and disallow -1).)  -->
 
 </p><p>The <code title=attr-marquee-truespeed>truespeed</code> attribute
 of the <code>marquee</code> element is a <a href=#boolean-attribute>boolean
@@ -904,14 +913,14 @@ integer</a>.<!--
 <p>The <code title=attr-tdth-nowrap>nowrap</code> attributes of
 <code>td</code>, <code>th</code>, <code>body</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>,
 <code>dt</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>dd</code> <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, and
-<code>div</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> elements and the <code title=attr-pre-wrap>wrap</code> attribute of the <code>pre</code>
+informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>div</code>
+<cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, and <code>table</code> <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> elements and the <code title=attr-pre-wrap>wrap</code> attribute of the <code>pre</code>
 element are <a href=#boolean-attribute title="boolean attribute">boolean
 attributes</a>.<!-- nowrap
 <http://msdn.microsoft.com/en-us/library/ms534196%28VS.85%29.aspx>,
 wrap
-<http://web.archive.org/web/20030610040341/devedge.netscape.com/library/manuals/1998/htmlguide/tags4.html#1838240>
--->
+<http://web.archive.org/web/20030610040341/devedge.netscape.com/library/manuals/1998/htmlguide/tags4.html#1838240>,
+Softbank 3.8.1. (historical) -->
 
 </p><p>The <code title=attr-br-clear>clear</code> attribute of a
 <code>br</code>, <code>address</code> <cite class="bibref
@@ -1045,6 +1054,10 @@ URL</a>.<!-- HTML 2.0 -->
 <http://web.archive.org/web/20030610040238/devedge.netscape.com/library/manuals/1998/htmlguide/tags3.html#1808466>
 -->
 
+</p><p>If the <code title=attr-a-src>src</code> attribute of the
+<code>a</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
+Softbank 3.9.1. -->
+
 </p><p>If the <code title=attr-a-cti>cti</code> attribute of the
 <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be one or more characters in the range U+0030
 <code class=charname>DIGIT ZERO</code> (0) to U+0039 <code class=charname>DIGIT NINE</code> (9), U+002A <code class=charname>ASTERISK</code> character (*), U+0023 <code class=charname>NUMBER SIGN</code> character (#), U+002C <code class=charname>COMMA</code> character (,), or U+002F <code class=charname>SOLIDUS</code> character (/).  There <em class=rfc2119>MUST NOT</em> be a U+002F <code class=charname>SOLIDUS</code> character (/) immediately following
@@ -1124,6 +1137,10 @@ NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p13>
 -->
 
+</p><p>The <code title=attr-z>z</code> attribute of <code>a</code> and
+<code>form</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a <a href=#boolean-attribute>boolean
+attribute</a>.<!-- Softbank 3.9.1., 3.12.1. (historical) -->
+
 </p><p>The <code title=attr-measure>measure</code> attribute of
 <code>a</code> and <code>form</code> elements <cite class="bibref
 informative">[<a href=#ref-EMNET>EMNET</a>]</cite> is an
@@ -1134,6 +1151,15 @@ attribute <em class=rfc2119>MUST</em> also be specified.  If the <code title=att
 element is specified, the <code title=attr-fs-action>action</code>
 attribute <em class=rfc2119>MUST</em> also be specified.<!--
 <http://developer.emnet.ne.jp/browser3-1.html> -->
+
+</p><p>If the <code title=attr-a-mailbody>mailbody</code> attribute of the
+<code>a</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> element is present, its
+value <em class=rfc2119>MAY</em> be any string.  If <code title=attr-a-email>email</code> attribute is specified, the
+<code>a</code> element <em class=rfc2119>MUST</em> have its <code title=attr-hyperlink-href>href</code> attribute specified and its
+value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>
+whoes <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII
+case-insensitive">ASCII case-insensitively</a> matches to <code title=mailto:>mailto</code>.<!-- Softbank 3.9.1., has to be less
+than or equal to 128 bytes -->
 
 </p><p>The <code title=attr-area-nohref>nohref</code> attribute of the
 <code>area</code> element is a <a href=#boolean-attribute>boolean attribute</a>.<!--
@@ -1159,7 +1185,9 @@ a "space-separeted values" according to HTML2 -->
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
 space-separated tokens</a>.<!-- HTML4, HTML5 <a rel> -->
 
-</p><p>If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute of an <code>a</code> element
+</p><hr>
+
+<p>If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute of an <code>a</code> element
 <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute is specified, the
 <code>a</code> element <em class=rfc2119>MUST</em> have its <code title=attr-hyperlink-href>href</code> attribute specified and its
 value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>
@@ -1181,9 +1209,107 @@ case-insensitive">ASCII case-insensitively</a> matches to <code title=tel:>tel</
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel-av.html>
 - it has length constraint -->
 
+</p><p>If the <code title=attr-a-memoryname>memoryname</code> attribute of
+an <code>a</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a string whoes lenght is greater than two
+(2).  The attribute value <em class=rfc2119>MUST</em> contain a <code class=charname>U+002D HYPHEN-MINUS</code> character (-) in the middle.
+If <code title=attr-a-memoryname>memoryname</code> attribute is
+specified, the <code>a</code> element <em class=rfc2119>MUST</em> have
+its <code title=attr-hyperlink-href>href</code> attribute specified
+and its value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute
+URL</a> whoes <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a> matches
+to <code title=tel:>tel</code> or <code title=mailto:>mailto</code>.<!-- Softbank 3.9.1.; Kana-or-kanji
+name, followed by a "-", followed by katakana name -->
+
+</p><hr>
+
+<p>If the <code title=attr-directkey>directkey</code> attribute of an
+<code>a</code> or <code>input</code> element <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present,
+its value <em class=rfc2119>MUST</em> be a string that is
+syntactically valid as an <code title=attr-accesskey>accesskey</code>
+attribute value.  The <code title=attr-directkey>directkey</code>
+attribute of the <code>input</code> element applies only to
+<code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.  If the <code title=attr-directkey>directkey</code> attribute is specified for an
+<code>input</code> element, the <code title="">value</code> attribute <em class=rfc2119>MUST</em> also be specified.<!-- Softbank 3.9.1.,
+3.12.2. -->
+
+</p><p>The <code title=attr-nonumber>nonumber</code> attribute of the
+<code>a</code> and <code>input</code> elements is a <a href=#boolean-attribute>boolean
+attribute</a>.  This attribute <em class=rfc2119>MUST NOT</em> be
+specified unless the <code title=attr-directkey>directkey</code>
+attribute is also specified.  The <code title=attr-nonumber>nonumber</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-submit>Submit Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
 </p><p>If the <code title=attr-link-target>target</code> attribute of a
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be a <span>valid browsing context name or
 keyword</span>.<!-- HTML4 -->
+
+</p><hr>
+
+<p>The <code title=attr-soundstart>soundstart</code> attribute of
+<code>a</code> or <code>input</code> element <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">select</code> and <code title="">focus</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-hyperlink-href>href</code> attribute of the <code>a</code>
+element or the <code title=attr-input-src>src</code> attribute of the
+<code>input</code> element is also specified.  The <code title=attr-soundstart>soundstart</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-submit>Submit Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+</p><p>If the <code title=attr-a-loop>loop</code> attribute of the
+<code>a</code> or <code>input</code> element <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present,
+its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a><!-- that represents a number less than or equal to
+50,--> or a string <code title="">infinite</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-a-href>href</code> attribute of the <code>a</code> element
+or the <code title=attr-input-src>src</code> attribute of the
+<code>input</code> element is also specified.  The <code title=attr-a-loop>loop</code> attribute of the <code>input</code>
+element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+</p><p>The <code title=attr-volume>volume</code> attribute of the
+<code>a</code> and <code>input</code> elements <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">high</code>, <code title="">middle</code>, and <code title="">low</code>.  This attribute <em class=rfc2119>MUST NOT</em> be
+specified unless the <code title=attr-a-href>href</code> attribute of
+the <code>a</code> element or the <code title=attr-input-src>src</code> attribute of the <code>input</code>
+element is also specified.  The <code title=attr-volume>volume</code>
+attribute of the <code>input</code> element applies only to
+<code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+</p><p>The <code title=attr-a-vibration>vibration</code> attribute of
+<code>a</code> and <code>input</code> elements <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> are an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">select</code> and <code title="">focus</code>.  The <code title=attr-a-vibration>vibration</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is
+<em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
+state.  The attribute <em class=rfc2119>MUST NOT</em> be specified if
+it does not applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+</p><p>If the <code title=attr-viblength>viblength</code> attribute of
+<code>a</code>, <code>input</code>, and <code>img</code> elements
+<cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
+that represents a number in the range 1 to 9 (inclusive).  This
+attribute <em class=rfc2119>MUST NOT</em> be specified unless the
+<code title="">vibration</code> attribute is also specified.  The <code title=attr-viblength>viblength</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is
+<em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
+state.  The attribute <em class=rfc2119>MUST NOT</em> be specified if
+it does not applies to the element.<!-- Softbank 3.9.1., 3.10.1.,
+3.12.2. -->
 
 </p></div>
 
@@ -1255,13 +1381,23 @@ are included in older versions of the list - see
 <http://web.archive.org/web/*/www.au.kddi.com/ezfactory/tec/spec/3.html>.
 See also WML 2.0 |wml:localsrc|.  -->
 
-</p><p>The <code title=attr-input-usemap>usemap</code> attribute of the
+</p><p>If the <code title=attr-img-motion>motion</code> attribute of the
+<code>img</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if the <code title=attr-img-src>src</code> attribute is specified.<!-- Softbank
+3.10.1. (historical); used like <img motion=frame1 motion=frame2
+motion=frame3 ...> and at least two motion="" attribute must be
+specified (!) -->
+
+<!-- Softbank allows <input type=submit src> [SOFTBANK] 3.12.2. -->
+
+</p><p>If the <code title=attr-input-usemap>usemap</code> attribute of the
+<code>input</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
+a <code>map</code> element.  The <code title=attr-input-usemap>usemap</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-image>Image Button</span> state.  The
 attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.  The attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
-a <code>map</code> element.<!-- Old HTML5 definition -->
+applies to the element.<!-- Old HTML5 definition -->
 
 </p><p>If the <code title="">longdesc</code> attribute of the
 <code>frame</code>, <code>iframe</code>, or <code>img</code> element
@@ -1298,6 +1434,18 @@ language according to MSDN.
 <http://www.au.kddi.com/ezfactory/tec/spec/wap_tag6.html> allows
 |infinite|. -->
 
+</p><p>The <code title=attr-img-direction>direction</code> attribute of
+the <code>img</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code title="">left</code> and <code title="">right</code>.
+The attribute <em class=rfc2119>MUST NOT</em> be specified unless the
+<code title=attr-img-motion>motion</code> attribute is also
+specified.<!-- Softbank 3.10.1. (historical) -->
+
+</p><p>The <code title=attr-img-flash>flash</code> attribute of the
+<code>img</code> element is an <a href=#enumerated-attribute>enumerated attribute</a> with
+keywords <code title="">0</code>, <code title="">1</code>, <code title="">2</code>, and <code title="">3</code>.  The attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-img-motion>motion</code> attribute is also specified.<!--
+Softbank 3.10.1. (historical) -->
+
 </p><hr>
 
 <p>The <code title=attr-img-suppress>suppress</code> attribute of the
@@ -1312,6 +1460,11 @@ attribute</a> with the keyword <code>source-over</code>.<!--
 <http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913>,
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-composite>
 -->
+
+</p><p>The <code title=attr-img-vibration>vibration</code> attribute of
+the <code>img</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">focus</code>.<!-- Softbank
+3.10.1.; spec's |force| is typo of |focus| -->
 
 <!-- There was <img controls> according to
 <http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
@@ -1758,8 +1911,16 @@ an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code ti
 of the <code>input</code> element applies only to <code>input</code>
 elements whoes <code title=attr-input-type>type</code> attribute is in
 the <span title=attr-input-type-text>Text</span> state.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>
--->
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>;
+au and emobile also implements this.  Softbank allows this attribute
+also to <input type=password>.  -->
+
+</p><p>The <code title=attr-mode>mode</code> attribute of
+<code>input</code> and <code>textarea</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">hiragana</code>, <code title="">katakana</code>, <code title="">hankakukana</code>, <code title="">alphabet</code>, <code title="">numeric</code>, <code title="">any</code>, <code title="">emailaddr</code>, <code title="">phonenumber</code>, and <code title="">url</code>.  The <code title=attr-mode>mode</code> attribute of the <code>input</code>
+element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span> or <span title=attr-input-type-password>Password</span> state.  If the <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-password>Password</span> state, keywords other
+than <code title="">alphanet</code> and <code title="">numeric</code> <em class=rfc2119>MUST NOT</em> be specified.<!-- Softbank 3.12.2.,
+3.12.5. -->
 
 </p><p>If the <code title=attr-format>format</code> attribute of an
 <code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is
@@ -1782,13 +1943,15 @@ whoes <code title=attr-input-type>type</code> attribute is in the
 6.5.2.1. The |wml:format| Attribute, except that <lang:class> format
 is not supported; \c format is not mentioned in au's documentation but
 is supported by implementation according to
-<http://www001.upp.so-net.ne.jp/hdml/wap2/xhtml/input.html> -->
+<http://www001.upp.so-net.ne.jp/hdml/wap2/xhtml/input.html>; also in
+Softbank 3.12.2./3.12.5. (historical) -->
 
 </p><p>The <code title=attr-emptyok>emptyok</code> attribute of an
 <code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is
 an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">true</code> and <code title="">false</code>.<!--
 <http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
-2.0 6.5.2.2. The |wml:emptyok| Attribute -->
+2.0 6.5.2.2. The |wml:emptyok| Attribute; also in Softbank
+3.12.2. (historical) -->
 
 </p><p>If the <code title="">accept-charset</code> attribute of an
 <code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>
@@ -1995,7 +2158,7 @@ architecture of HTML, XML, and DOM.
 <div class="section reference">
 <h2 class=no-num id=references>References</h2>
 
-<p class=ed>@@@ TODO: WF2, RDFa, softbank <!-- XXX HTML+/HTML3 ref -->
+<p class=ed>@@@ TODO: WF2, RDFa <!-- XXX HTML+/HTML3 ref -->
 
 </p><div class="section reference normative">
 <h3 class=no-num id=normative-references>Normative references</h3>
@@ -2131,6 +2294,14 @@ Ishikawa, Martin Dürst, Tex Texin, W3C Recommendation, <time datetime=2008-06-2
 </dt><dd><cite><a href=http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Introduction.html>Safari
 HTML Reference</a></cite>, Apple, <time datetime=2009-11-17>17
 November 2009</time>.
+
+</dd><dt id=ref-SOFTBANK>SOFTBANK
+
+</dt><dd><cite lang=en>ウェブコンテンツ開発ガイド [HTML 編] Version
+2.0.2</cite> (Web Content Development Guide [HTML] Version 2.0.2),
+<span lang=en>ソフトバンクモバイル株式会社</span>, <time datetime=2009-11-26>26 November 2009</time>.  Available from MC
+(Mobile Creation), <a href=http://creation.mb.softbank.jp/web/web_doc.html lang=ja>WEB &amp;
+NETWORK 技術資料</a>. (In Japanese)
 
 </dd><dt id=ref-XHTML2>XHTML2
 
