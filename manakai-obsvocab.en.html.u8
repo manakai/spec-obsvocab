@@ -100,7 +100,9 @@ and attributes</a></li>
        <li><a href=#presentation><span class=secno>4.10.1.2 </span>Presentation</a></li></ol></li>
      <li><a href=#the-applet,-object,-and-param-elements><span class=secno>4.10.2 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</a></li>
-     <li><a href=#embedded-data><span class=secno>4.10.3 </span>Embedded data</a></li></ol></li>
+     <li><a href=#audio-and-video><span class=secno>4.10.3 </span>Audio and video</a></li>
+     <li><a href=#vibration><span class=secno>4.10.4 </span>Vibration</a></li>
+     <li><a href=#embedded-data><span class=secno>4.10.5 </span>Embedded data</a></li></ol></li>
    <li><a href=#frames><span class=secno>4.11 </span>Frames</a>
     <ol>
      <li><a href=#the-frameset-element><span class=secno>4.11.1 </span>The <code>frameset</code> element</a></li>
@@ -1251,10 +1253,11 @@ applies to the element.  If the <code title=attr-directkey>directkey</code> attr
 3.12.2. -->
 
 </p><p>The <code title=attr-nonumber>nonumber</code> attribute of the
-<code>a</code> and <code>input</code> elements is a <a href=#boolean-attribute>boolean
-attribute</a>.  This attribute <em class=rfc2119>MUST NOT</em> be
-specified unless the <code title=attr-directkey>directkey</code>
-attribute is also specified.  The <code title=attr-nonumber>nonumber</code> attribute of the
+<code>a</code> and <code>input</code> elements <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a
+<a href=#boolean-attribute>boolean attribute</a>.  This attribute <em class=rfc2119>MUST
+NOT</em> be specified unless the <code title=attr-directkey>directkey</code> attribute is also specified.
+The <code title=attr-nonumber>nonumber</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-submit>Submit Button</span> state.  The
@@ -1269,67 +1272,6 @@ their values, and their presence themselves, <em class=rfc2119>MUST</em> be vali
 </p><p>If the <code title=attr-link-target>target</code> attribute of a
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be a <span>valid browsing context name or
 keyword</span>.<!-- HTML4 -->
-
-</p><hr>
-
-<p>The <code title=attr-soundstart>soundstart</code> attribute of
-<code>a</code> or <code>input</code> element <cite class="bibref
-informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">select</code> and <code title="">focus</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-hyperlink-href>href</code> attribute of the <code>a</code>
-element or the <code title=attr-input-src>src</code> attribute of the
-<code>input</code> element is also specified.  The <code title=attr-soundstart>soundstart</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-submit>Submit Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
-
-</p><p>If the <code title=attr-a-loop>loop</code> attribute of the
-<code>a</code> or <code>input</code> element <cite class="bibref
-informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present,
-its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
-integer</a><!-- that represents a number less than or equal to
-50,--> or a string <code title="">infinite</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-a-href>href</code> attribute of the <code>a</code> element
-or the <code title=attr-input-src>src</code> attribute of the
-<code>input</code> element is also specified.  The <code title=attr-a-loop>loop</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
-
-</p><p>The <code title=attr-volume>volume</code> attribute of the
-<code>a</code> and <code>input</code> elements <cite class="bibref
-informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">high</code>, <code title="">middle</code>, and <code title="">low</code>.  This attribute <em class=rfc2119>MUST NOT</em> be
-specified unless the <code title=attr-a-href>href</code> attribute of
-the <code>a</code> element or the <code title=attr-input-src>src</code> attribute of the <code>input</code>
-element is also specified.  The <code title=attr-volume>volume</code>
-attribute of the <code>input</code> element applies only to
-<code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
-
-</p><p>The <code title=attr-a-vibration>vibration</code> attribute of
-<code>a</code> and <code>input</code> elements <cite class="bibref
-informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> are an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">select</code> and <code title="">focus</code>.  The <code title=attr-a-vibration>vibration</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is
-<em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
-state.  The attribute <em class=rfc2119>MUST NOT</em> be specified if
-it does not applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
-
-</p><p>If the <code title=attr-viblength>viblength</code> attribute of
-<code>a</code>, <code>input</code>, and <code>img</code> elements
-<cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
-that represents a number in the range 1 to 9 (inclusive).  This
-attribute <em class=rfc2119>MUST NOT</em> be specified unless the
-<code title="">vibration</code> attribute is also specified.  The <code title=attr-viblength>viblength</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is
-<em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
-state.  The attribute <em class=rfc2119>MUST NOT</em> be specified if
-it does not applies to the element.<!-- Softbank 3.9.1., 3.10.1.,
-3.12.2. -->
 
 </p></div>
 
@@ -1434,48 +1376,6 @@ specified (!) -->
 <div class=section>
 <h5 id=presentation><span class=secno>4.10.1.2 </span>Presentation</h5>
 
-<p>The <code title=attr-start>start</code> attribute of the
-<code>img</code> or <code>input</code> element <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">fileopen</code> and <code title="">mouseover</code>.  The <code title=attr-start>start</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.  The attribute
-<em class=rfc2119>MUST NOT</em> be specified if it does not applies to
-the element.  The attribute <em class=rfc2119>MUST NOT</em> be
-specified unless the element also has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
-<http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
-
-</p><p>If the <code title=attr-loop>loop</code> attribute of the
-<code>img</code>, <code>input</code>, or <code>bgsound</code> element
-<cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>
-is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid
-integer</a> that represents an integer greater than or equal to
-−1.  The <code title=attr-loop>loop</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-image>Image Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!--
-<http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
-<img loop=""> (the empty string) is equivalent to loop=1 according to
-MSDN but not match the syntax of MSDN.  |infinite| is not part of the
-language according to MSDN.
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag6.html> allows
-|infinite|. -->
-
-</p><p>The <code title=attr-img-direction>direction</code> attribute of
-the <code>img</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
-with keywords <code title="">left</code> and <code title="">right</code>.
-The attribute <em class=rfc2119>MUST NOT</em> be specified unless the
-<code title=attr-img-motion>motion</code> attribute is also
-specified.<!-- Softbank 3.10.1. (historical) -->
-
-</p><p>The <code title=attr-img-flash>flash</code> attribute of the
-<code>img</code> element is an <a href=#enumerated-attribute>enumerated attribute</a> with
-keywords <code title="">0</code>, <code title="">1</code>, <code title="">2</code>, and <code title="">3</code>.  The attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-img-motion>motion</code> attribute is also specified.<!--
-Softbank 3.10.1. (historical) -->
-
-</p><hr>
-
 <p>The <code title=attr-img-suppress>suppress</code> attribute of the
 <code>img</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is a <a href=#boolean-attribute>boolean
 attribute</a>.<!--
@@ -1488,14 +1388,6 @@ attribute</a> with the keyword <code>source-over</code>.<!--
 <http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913>,
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-composite>
 -->
-
-</p><p>The <code title=attr-img-vibration>vibration</code> attribute of
-the <code>img</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">focus</code>.<!-- Softbank
-3.10.1.; spec's |force| is typo of |focus| -->
-
-<!-- There was <img controls> according to
-<http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
 
 </p><p>The <code title=attr-img-galleryimg>galleryimg</code> attribute of
 the <code>img</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is a <a href=#enumerated-attribute>enumerated
@@ -1622,7 +1514,124 @@ with keywords <code title="">data</code>, <code title="">ref</code>, and
 </p></div>
 
 <div class=section>
-<h4 id=embedded-data><span class=secno>4.10.3 </span>Embedded data</h4>
+<h4 id=audio-and-video><span class=secno>4.10.3 </span>Audio and video</h4>
+
+<p>The <code title=attr-start>start</code> attribute of the
+<code>img</code> or <code>input</code> element <cite class="bibref
+informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">fileopen</code> and <code title="">mouseover</code>.  The <code title=attr-start>start</code> attribute of the <code>input</code>
+element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.  The attribute
+<em class=rfc2119>MUST NOT</em> be specified if it does not applies to
+the element.  The attribute <em class=rfc2119>MUST NOT</em> be
+specified unless the element also has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
+<http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
+
+</p><p>The <code title=attr-soundstart>soundstart</code> attribute of
+<code>a</code> or <code>input</code> element <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">select</code> and <code title="">focus</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-hyperlink-href>href</code> attribute of the <code>a</code>
+element or the <code title=attr-input-src>src</code> attribute of the
+<code>input</code> element is also specified.  The <code title=attr-soundstart>soundstart</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-submit>Submit Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+</p><p>If the <code title=attr-loop>loop</code> attribute of the
+<code>img</code>, <code>input</code>, or <code>bgsound</code> element
+<cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>
+is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid
+integer</a> that represents an integer greater than or equal to
+−1.  The <code title=attr-loop>loop</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-image>Image Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!--
+<http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
+<img loop=""> (the empty string) is equivalent to loop=1 according to
+MSDN but not match the syntax of MSDN.  |infinite| is not part of the
+language according to MSDN.
+<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag6.html> allows
+|infinite|. -->
+
+</p><p>If the <code title=attr-a-loop>loop</code> attribute of the
+<code>a</code> or <code>input</code> element <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present,
+its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a><!-- that represents a number less than or equal to
+50,--> or a string <code title="">infinite</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-a-href>href</code> attribute of the <code>a</code> element
+or the <code title=attr-input-src>src</code> attribute of the
+<code>input</code> element is also specified.  The <code title=attr-a-loop>loop</code> attribute of the <code>input</code>
+element applies only to <code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+</p><p>The <code title=attr-img-direction>direction</code> attribute of
+the <code>img</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code title="">left</code> and <code title="">right</code>.
+The attribute <em class=rfc2119>MUST NOT</em> be specified unless the
+<code title=attr-img-motion>motion</code> attribute is also
+specified.<!-- Softbank 3.10.1. (historical) -->
+
+</p><p>The <code title=attr-img-flash>flash</code> attribute of the
+<code>img</code> element is an <a href=#enumerated-attribute>enumerated attribute</a> with
+keywords <code title="">0</code>, <code title="">1</code>, <code title="">2</code>, and <code title="">3</code>.  The attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-img-motion>motion</code> attribute is also specified.<!--
+Softbank 3.10.1. (historical) -->
+
+</p><p>The <code title=attr-volume>volume</code> attribute of the
+<code>a</code> and <code>input</code> elements <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">high</code>, <code title="">middle</code>, and <code title="">low</code>.  This attribute <em class=rfc2119>MUST NOT</em> be
+specified unless the <code title=attr-a-href>href</code> attribute of
+the <code>a</code> element or the <code title=attr-input-src>src</code> attribute of the <code>input</code>
+element is also specified.  The <code title=attr-volume>volume</code>
+attribute of the <code>input</code> element applies only to
+<code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.  The
+attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
+applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+<!-- There was <img controls> according to
+<http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
+
+</p></div>
+
+<div class=section>
+<h4 id=vibration><span class=secno>4.10.4 </span>Vibration</h4>
+
+<p>The <code title=attr-a-vibration>vibration</code> attribute of
+<code>a</code> and <code>input</code> elements <cite class="bibref
+informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> are an
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">select</code> and <code title="">focus</code>.  The <code title=attr-a-vibration>vibration</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is
+<em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
+state.  The attribute <em class=rfc2119>MUST NOT</em> be specified if
+it does not applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+
+</p><p>The <code title=attr-img-vibration>vibration</code> attribute of
+the <code>img</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">focus</code>.<!-- Softbank
+3.10.1.; spec's |force| is typo of |focus| -->
+
+</p><p>If the <code title=attr-viblength>viblength</code> attribute of
+<code>a</code>, <code>input</code>, and <code>img</code> elements
+<cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
+that represents a number in the range 1 to 9 (inclusive).  This
+attribute <em class=rfc2119>MUST NOT</em> be specified unless the
+<code title="">vibration</code> attribute is also specified.  The <code title=attr-viblength>viblength</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is
+<em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
+state.  The attribute <em class=rfc2119>MUST NOT</em> be specified if
+it does not applies to the element.<!-- Softbank 3.9.1., 3.10.1.,
+3.12.2. -->
+
+</p></div>
+
+<div class=section>
+<h4 id=embedded-data><span class=secno>4.10.5 </span>Embedded data</h4>
 
 <p>If the <code title=attr-datasrc>datasrc</code> attribute of an
 <a href=#html-elements title="HTML elements">HTML element</a> is present, its value
