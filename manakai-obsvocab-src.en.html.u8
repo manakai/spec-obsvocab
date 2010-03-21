@@ -1285,6 +1285,13 @@ attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p08>
 -->
 
+<p>If the <code title=attr-a-eswf>eswf</code> attribute of the
+<code>a</code> element <cite class="bibref informative">[<a
+href="#ref-EMNET">EMNET</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid hash-name reference</span> to
+an <code>object</code> element.<!--
+<http://developer.emnet.ne.jp/flashlite3.html> -->
+
 <p>If <code title=attr-a-ifb>ifb</code> or <code
 title=attr-a-ib>ib</code> attribute of the <code>a</code> element
 <cite class="bibref informative">[<a
@@ -1313,8 +1320,8 @@ NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p18>
 -->
 
-<p>The <code title=attr-lcs>lcs</code> attribute of the <code>a</code>
-or <code>form</code> element <cite class="bibref informative">[<a
+<p>The <code title=attr-lcs>lcs</code> attribute of <code>a</code> and
+<code>form</code> elements <cite class="bibref informative">[<a
 href="#ref-IMODE">IMODE</a>]</cite> is a <span>boolean
 attribute</span>.  If the <code
 title=attr-hyperlink-target>target</code> attribute is specified, the
@@ -1323,6 +1330,19 @@ NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/location_info.html#p03>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p13>
 -->
+
+<p>The <code title=attr-measure>measure</code> attribute of
+<code>a</code> and <code>form</code> elements <cite class="bibref
+informative">[<a href="#ref-EMNET">EMNET</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code title>cid</code>
+and <code title>auto</code>.  If the <code
+title=attr-measure>measure</code> attribute of an <code>a</code>
+element is specified, the <code title=attr-hyperlink-href>href</code>
+attribute <em class=rfc2119>MUST</em> also be specified.  If the <code
+title=attr-measure>measure</code> attribute of a <code>form</code>
+element is specified, the <code title=attr-fs-action>action</code>
+attribute <em class=rfc2119>MUST</em> also be specified.<!--
+<http://developer.emnet.ne.jp/browser3-1.html> -->
 
 <p>The <code title=attr-area-nohref>nohref</code> attribute of the
 <code>area</code> element is a <span>boolean attribute</span>.<!--
@@ -1573,12 +1593,17 @@ attribute</span>.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/nosave>
 -->
 
-<p>The <code title=attr-img-copyright>copyright</code> attribute of
-<code>img</code> and <code>object</code> elements <cite class="bibref
-informative">[<a href="#ref-EZWEB">EZWEB</a>]</cite> is an
-<span>enumerated attribute</span> with keywords <code title>yes</code>
-and <code title>no</code>.<!--
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag4.html> -->
+<p>Attributes <code title=attr-img-copyright>copyright</code> <cite
+class="bibref informative">[<a href="#ref-EZWEB">EZWEB</a>]</cite>,
+<code title=attr-img-private>private</code> <cite class="bibref
+informative">[<a href="#ref-EMNET">EMNET</a>]</cite>, and <code
+title=attr-img-mediaout>mediaout</code> <cite class="bibref
+informative">[<a href="#ref-EMNET">EMNET</a>]</cite> of
+<code>img</code> and <code>object</code> elements are <span
+title="enumerated attribute">enumerated attributes</span> with
+keywords <code title>yes</code> and <code title>no</code>.<!--
+<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag4.html>,
+<http://developer.emnet.ne.jp/browser3-1.html> -->
 
 </div>
 
@@ -2410,12 +2435,16 @@ href="http://web.archive.org/web/20030604191931/http://devedge.netscape.com/">ne
 devedge</a>, Netscape, <time datetime=1998-01-26>26 January
 1998</time>.
 
+<dt id=ref-EMNET>EMNET
+
+<dd><cite><a href="http://developer.emnet.ne.jp/index.html" lang=ja>技術情報
+TECHNICAL INFO</a></cite>, EMOBILE Ltd, 2007.  (In Japanese)
+
 <dt id=ref-EZWEB>EZWEB
 
 <dd><cite><a
 href="http://www.au.kddi.com/ezfactory/tec/spec/xhtml.html"
-lang=ja>XHTML Basic について</a></cite> (About XHTML Basic), KDDI
-.
+lang=ja>XHTML Basic について</a></cite> (About XHTML Basic), KDDI.
 (In Japanese)
 
 <dt id=ref-HTML20>HTML20
