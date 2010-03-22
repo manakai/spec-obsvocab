@@ -1595,50 +1595,6 @@ WA1 obsolete, HTML4 --><!-- There was <layer name> according to
 <http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> -->
 
 <div class=section>
-<h4>The <code>embed</code> element</h4>
-
-<p>Attributes <code title=attr-hspace>hspace</code>, <code
-title=attr-vspace>vspace</code>, <code
-title=attr-embed-units>units</code>, <code
-title=attr-dim-border>border</code>, <code
-title=attr-embed-pluginpage>pluginpage</code>, <code
-title=attr-embed-pluginspage>pluginspage</code>, <code
-title-attr-pluginurl>pluginurl</code>, <code
-title=attr-object-code>code</code>, <code
-title-attr-embed-border>palette</code>, <code
-title=attr-frames-frameborder>frameborder</code> of the
-<code>embed</code> element <em class=rfc2119>MUST NOT</em> be
-specified.
-
-<div class="note memo">
-
-<p>This is a <span>willful violation</span> of the Web Applications
-1.0 specification, which does not prohibit use of these attributes.
-
-</div>
-
-<p>If the <code title=attr-embed-pluginpage>pluginpage</code> <cite
-class="bibref informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite>,
-<code title=attr-embed-pluginspage>pluginspage</code>, or <code
-title=attr-embed-pluginurl>pluginurl</code> attribute of the
-<code>embed</code> element <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid URL</span>.<!--
-pluginpage/pluginspage/pluginurl
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-pluginpage>,
-pluginspage/pluginurl
-<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1552022>,
-pluginspage
-<http://msdn.microsoft.com/en-us/library/ms534341%28VS.85%29.aspx> -->
-
-<hr>
-
-<p>The <span>content model</span> of the <code>noembed</code> element
-is same as the <code>iframe</code> element.
-
-</div>
-
-<div class=section>
 <h4>The <code>img</code> element</h4>
 
 <p>If the <code title=attr-input-usemap>usemap</code> attribute of the
@@ -1776,6 +1732,50 @@ keywords <code title>yes</code> and <code title>no</code>.<!--
 <http://developer.emnet.ne.jp/browser3-1.html> -->
 
 </div>
+
+</div>
+
+<div class=section>
+<h4>The <code>embed</code> element</h4>
+
+<p>Attributes <code title=attr-hspace>hspace</code>, <code
+title=attr-vspace>vspace</code>, <code
+title=attr-embed-units>units</code>, <code
+title=attr-dim-border>border</code>, <code
+title=attr-embed-pluginpage>pluginpage</code>, <code
+title=attr-embed-pluginspage>pluginspage</code>, <code
+title-attr-pluginurl>pluginurl</code>, <code
+title=attr-object-code>code</code>, <code
+title-attr-embed-border>palette</code>, <code
+title=attr-frames-frameborder>frameborder</code> of the
+<code>embed</code> element <em class=rfc2119>MUST NOT</em> be
+specified.
+
+<div class="note memo">
+
+<p>This is a <span>willful violation</span> of the Web Applications
+1.0 specification, which does not prohibit use of these attributes.
+
+</div>
+
+<p>If the <code title=attr-embed-pluginpage>pluginpage</code> <cite
+class="bibref informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite>,
+<code title=attr-embed-pluginspage>pluginspage</code>, or <code
+title=attr-embed-pluginurl>pluginurl</code> attribute of the
+<code>embed</code> element <cite class="bibref informative">[<a
+href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid URL</span>.<!--
+pluginpage/pluginspage/pluginurl
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-pluginpage>,
+pluginspage/pluginurl
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1552022>,
+pluginspage
+<http://msdn.microsoft.com/en-us/library/ms534341%28VS.85%29.aspx> -->
+
+<hr>
+
+<p>The <span>content model</span> of the <code>noembed</code> element
+is same as the <code>iframe</code> element.
 
 </div>
 
