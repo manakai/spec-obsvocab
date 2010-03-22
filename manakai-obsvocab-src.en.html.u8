@@ -152,6 +152,8 @@ href="#ref-WA1">WA1</a>]</cite> to define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-mime-type"><dfn>valid MIME type</dfn></a>,
 
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#xml-mime-type"><dfn>XML MIME type</dfn></a>,
+
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-url"><dfn>valid URL</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-empty-url"><dfn>valid non-empty URL</dfn></a>,
@@ -267,8 +269,9 @@ should be used as requirements.
   </ul>
 
 <li>Otherwise, if <var>a</var> is described in the first implementor's
-official reference material, <var>a</var>'s expected usage in that
-material should be formalized as requirements.
+official reference documentation, a best effort attempt should be made
+to formalize <var>a</var>'s expected usage documented there as
+requirements.
 
 </ol>
 
@@ -1538,9 +1541,7 @@ attribute value.  The <code title=attr-directkey>directkey</code>
 attribute of the <code>input</code> element applies only to
 <code>input</code> elements whoes <code
 title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-submit>Submit Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.  If the <code
+title=attr-input-type-submit>Submit Button</span> state.  If the <code
 title=attr-directkey>directkey</code> attribute is specified for an
 <code>input</code> element, the <code title>value</code> attribute <em
 class=rfc2119>MUST</em> also be specified.<!-- Softbank 3.9.1.,
@@ -1555,9 +1556,8 @@ title=attr-directkey>directkey</code> attribute is also specified.
 The <code title=attr-nonumber>nonumber</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-submit>Submit Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+<span title=attr-input-type-submit>Submit Button</span> state.<!--
+Softbank 3.9.1., 3.12.2. -->
 
 <p>If the <code title>coords</code> attribute and/or the <code
 title>shape</code> attribute of an <code>a</code> element is present,
@@ -1617,9 +1617,8 @@ a <code>map</code> element.  The <code
 title=attr-input-usemap>usemap</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-image>Image Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Old HTML5 definition -->
+<span title=attr-input-type-image>Image Button</span> state.<!-- Old
+HTML5 definition -->
 
 <p>If the <code title>longdesc</code> attribute of the
 <code>frame</code>, <code>iframe</code>, or <code>img</code> element
@@ -1643,9 +1642,7 @@ title=attr-lowsrc>lowsrc</code>, or <code title=attr-vrml>vrml</code>
 attribute of the <code>input</code> element applies only to
 <code>input</code> elements whoes <code
 title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-image>Image Button</span> state.  The attribute
-<em class=rfc2119>MUST NOT</em> be specified if it does not applies to
-the element.<!-- lowsrc
+title=attr-input-type-image>Image Button</span> state.<!-- lowsrc
 <http://web.archive.org/web/20030622172358/devedge.netscape.com/library/manuals/1998/htmlguide/tags8.html#1455241>,
 <http://msdn.microsoft.com/en-us/library/ms533742%28VS.85%29.aspx>,
 <http://msdn.microsoft.com/en-us/library/ms534138%28VS.85%29.aspx>,
@@ -1878,10 +1875,8 @@ title=attr-start>start</code> attribute of the <code>input</code>
 element applies only to <code>input</code> elements whoes <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-image>Image Button</span> state.  The attribute
-<em class=rfc2119>MUST NOT</em> be specified if it does not applies to
-the element.  The attribute <em class=rfc2119>MUST NOT</em> be
-specified unless the element also has the <code
-title=attr-dynsrc>dynsrc</code> attribute specified.<!--
+<em class=rfc2119>MUST NOT</em> be specified unless the element also
+has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
 <http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
 
 <p>The <code title=attr-soundstart>soundstart</code> attribute of
@@ -1896,9 +1891,8 @@ element or the <code title=attr-input-src>src</code> attribute of the
 title=attr-soundstart>soundstart</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-submit>Submit Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+<span title=attr-input-type-submit>Submit Button</span> state.<!--
+Softbank 3.9.1., 3.12.2. -->
 
 <p>If the <code title=attr-loop>loop</code> attribute of the
 <code>img</code>, <code>input</code>, or <code>bgsound</code> element
@@ -1908,9 +1902,7 @@ integer</span> that represents an integer greater than or equal to
 &minus;1.  The <code title=attr-loop>loop</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-image>Image Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!--
+<span title=attr-input-type-image>Image Button</span> state.<!--
 <http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
 <img loop=""> (the empty string) is equivalent to loop=1 according to
 MSDN but not match the syntax of MSDN.  |infinite| is not part of the
@@ -1931,9 +1923,8 @@ or the <code title=attr-input-src>src</code> attribute of the
 title=attr-a-loop>loop</code> attribute of the <code>input</code>
 element applies only to <code>input</code> elements whoes <code
 title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-submit>Submit Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+title=attr-input-type-submit>Submit Button</span> state.<!-- Softbank
+3.9.1., 3.12.2. -->
 
 <p>The <code title=attr-img-direction>direction</code> attribute of
 the <code>img</code> element is an <span>enumerated attribute</span>
@@ -1963,9 +1954,8 @@ element is also specified.  The <code title=attr-volume>volume</code>
 attribute of the <code>input</code> element applies only to
 <code>input</code> elements whoes <code
 title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-submit>Submit Button</span> state.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified if it does not
-applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+title=attr-input-type-submit>Submit Button</span> state.<!-- Softbank
+3.9.1., 3.12.2. -->
 
 <!-- There was <img controls> according to
 <http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
@@ -1984,8 +1974,7 @@ title=attr-a-vibration>vibration</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is
 <em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
-state.  The attribute <em class=rfc2119>MUST NOT</em> be specified if
-it does not applies to the element.<!-- Softbank 3.9.1., 3.12.2. -->
+state.<!-- Softbank 3.9.1., 3.12.2. -->
 
 <p>The <code title=attr-img-vibration>vibration</code> attribute of
 the <code>img</code> element <cite class="bibref informative">[<a
@@ -2005,9 +1994,7 @@ title=attr-viblength>viblength</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whoes <code title=attr-input-type>type</code> attribute is
 <em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
-state.  The attribute <em class=rfc2119>MUST NOT</em> be specified if
-it does not applies to the element.<!-- Softbank 3.9.1., 3.10.1.,
-3.12.2. -->
+state.<!-- Softbank 3.9.1., 3.10.1., 3.12.2. -->
 
 </div>
 
@@ -2251,6 +2238,8 @@ class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
 <http://web.archive.org/web/20030415223352/http://devedge.netscape.com/library/manuals/2000/javascript/1.3/guide/sec.html>
 -->
 
+<p class=ed>@@ event-source
+
 <hr>
 
 <p>The following attributes of <span>HTML elements</span> <cite
@@ -2318,6 +2307,11 @@ attributes</span>:
 <div class=section>
 <h3>Forms</h3>
 
+<p>If this specification says an attribute applies to certain states
+of <code>input</code> or <code>button</code> elements, the attribute
+<em class=rfc2119>MUST NOT</em> be specified unless the attribute
+applies to the element.
+
 <p>The <code title=attr-textarea-wrap>wrap</code> attribute of a
 <code>textarea</code> element, for the purpose of conformance
 checking, <em class=rfc2119>MUST</em> be treated as if there are
@@ -2346,8 +2340,72 @@ autocorrect
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>
 -->
 
+<p>If the <code title=attr-form-data>data</code> attribute of a
+<code>form</code> element <cite class="bibref informative">[<a
+href="#ref-WF2">WF2</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.  The
+<span>URL</span> <em class=rfc2119>MUST</em> reference an <span>XML
+document</span> whoes <span>root element</span> is the <code
+title=formdata-formdata>formdata</code> element in the <code
+title>http://n.whatwg.org/formdata</code> namespace.  The document <em
+class=rfc2119>MUST</em> be labeled using a <span>XML MIME type</span>.
+It is encouraged to use the MIME type
+<code>application/xml</code>.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#data0> -->
+
+<p>If the <code title=attr-select-data>data</code> attribute of a
+<code>select</code> or <code>datalist</code> element <cite
+class="bibref informative">[<a href="#ref-WF2">WF2</a>]</cite> is
+present, its value <em class=rfc2119>MUST</em> be a <span>valid
+non-empty URL</span>.  The <span>URL</span> <em
+class=rfc2119>MUST</em> reference an <span>XML document</span> whoes
+<span>root element</span> is the <code>select</code> element.  It is
+encouraged to use the MIME type <code>application/xml</code>.  It <em
+class=rfc2119>SHOULD NOT</em> be labeled by media type
+<code>application/xhtml+xml</code>.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#data> -->
+
+<div class=section>
+<h4>Form submission</h4>
+
+<p>The <code title=attr-form-onreceived>onreceived</code> attribute of
+the <code>form</code> element <cite class="bibref informative">[<a
+href="#ref-WF2">WF2</a>]</cite> is an <span title="event handler
+content attributes">event handler content attribute</span>.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#onreceived> -->
+
+<p>The <code title=attr-fs-replace>replace</code> attribute of
+<code>form</code>, <code>input</code>, and <code>button</code>
+elements <cite class="bibref informative">[<a
+href="#ref-WF2">WF2</a>]</cite> are <span title="enumerated
+attribute">enumerated attributes</span> with keywords <code
+title>document</code> and <code title>values</code>.  The <code
+title=attr-fs-replace>replace</code> attribute of <code>input</code>
+or <code>button</code> element applies only to elements whoes <code
+title>type</code> attribute is in the <span title>Submit Button</span>
+state.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#replace> -->
+
+</div>
+
 <div class=section>
 <h4>Value constraints and input mode</h4>
+
+<p>If the <code title=attr-inputmode>inputmode</code> attribute of an
+<code>input</code> or <code>textarea</code> element <cite
+class="bibref informative">[<a href="#ref-WF2">WF2</a>]</cite> is
+present, its value <em class=rfc2119>MUST</em> be a <span>set of
+space-separated tokens</span>, each of which <em
+class=rfc2119>MUST</em> be a string consist of one or more characters
+in the range U+0030 <code class=charname>DIGIT ZERO</code> (0) to
+U+0039 <code class=charname>DIGIT NINE</code> (9), U+0041 <code
+class=charname>LATIN CAPITAL LETTER A</code> to U+005A <code
+class=charname>LATIN CAPITAL LETTER Z</code>, and U+0061 <code
+class=charname>LATIN SMALL LETTER A</code> to U+007A <code
+class=charname>LATIN SMALL LETTER Z</code>, or a <span>valid non-empty
+URL</span> that is an <span>absolute URL</span>.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#the-inputmode>
+and XForms 1.0 -->
 
 <p>If the <code title=attr-input-precision>precision</code> attribute
 of an <code>input</code> element <cite class="bibref informative">[<a
@@ -2618,6 +2676,74 @@ element.<!-- WA1 parsing -->
 
 </div>
 
+<div class=section>
+<h4>The repetition templates</h4>
+
+<p>If the <code title=attr-repeat>repeat</code> attribute <cite
+class="bibref informative">[<a href="#ref-WF2">WF2</a>]</cite> of an
+<span>element</span> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid integer</span> or equal to
+<code title>template</code>.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#repeat> -->
+
+<p>If <code title=attr-repeat-min>repeat-min</code>, <code
+title=attr-repeat-max>repeat-max</code>, or <code
+title=attr-repeat-start>repeat-start</code> attribute <cite
+class="bibref informative">[<a href="#ref-WF2">WF2</a>]</cite> of an
+<span>element</span> is present, its value <em class=rfc2119>MUST</em>
+be a <span>valid non-negative integer</span>.  These attributes <em
+class=rfc2119>MUST NOT</em> be specified unless the element has the
+<code title=attr-repeat>repeat</code> attribute whoes value is equal
+to <code title>template</code>.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#the-repeat-min>,
+<http://www.whatwg.org/specs/web-forms/current-work/#repeat-start> -->
+
+<p>The <code title>type</code> attribute of <code>input</code> or
+<code>button</code> element <em class=rfc2119>MUST</em> be treated as
+if there are additional keywords <code
+title=attr-input-type-add-keyword>add</code>, <code
+title=attr-input-type-remove-keyword>remove</code>, <code
+title=attr-input-type-move-up-keyword>move-up</code>, and <code
+title=attr-input-type-move-down-keyword>move-down</code> <cite
+class="bibref informative">[<a href="#ref-WF2">WF2</a>]</cite>, which
+are mapped to <span title=attr-input-type-add>Add Button</span>, <span
+title=attr-input-type-remove>Remove Button</span>, <span
+title=attr-input-type-move-up>Move-up Button</span>, <span
+title=attr-input-type-move-down>Move-down Button</span> state,
+respectively.  These keywords are non-conforming.  For the purpose of
+conformance checking, unless otherwise stated, these states <em
+class=rfc2119>MUST</em> be treated as equivalent to the <span
+title=attr-input-type-button>Button</span> state.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#new-form> -->
+
+<p>If the <code title=attr-repeat-template>repeat-template</code>
+attribute of an element or the <code
+title=attr-input-template>template</code> attribute of
+<code>input</code> or <code>button</code> element <cite class="bibref
+informative">[<a href="#ref-WF2">WF2</a>]</cite> is present, its value
+<em class=rfc2119>MUST</em> be the ID of an element.  The <code
+title=attr-input-template>template</code> attribute of
+<code>input</code> or <code>button</code> element applies only to
+elements whoes <code title>type</code> attribute is in the <span
+title=attr-input-type-text>Add Button</span> state.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#repeat-template>,
+<http://www.whatwg.org/specs/web-forms/current-work/#template>; the
+referenced element must be a repetition template. -->
+
+<p>If <code title=attr-repeat>repeat</code>, <code
+title=attr-repeat-min>repeat-min</code>, <code
+title=attr-repeat-max>repeat-max</code>, <code
+title=attr-repeat-start>repeat-start</code>, or <code
+title=attr-repeat-template>repeat-template</code> element is specified
+for an <span>HTML element</span>, it <em class=rfc2119>MUST</em> be in
+no namespace.  Otherwise, if such an attribute is specified for an
+element whoes namespace is different from the <span>HTML
+namespace</span>, it <em class=rfc2119>MUST</em> be in the <span>HTML
+namespace</span>.<!--
+<http://www.whatwg.org/specs/web-forms/current-work/#definitions> -->
+
+</div>
+
 </div>
 
 </div>
@@ -2647,10 +2773,27 @@ href="#ref-XHTML2ED">XHTML2ED</a>]</cite>
 <li>XHTML Access Module <cite class="bibref informative">[<a
 href="#ACCESS">ACCESS</a>]</cite>
 
-<li>Any other early proposals
+<li>Any other early informal proposals
+
+</ul>
+
+<p>For the same reason, following features are not included in this
+specification:
+
+<ul>
 
 <li>Proprietary elements and attributes for WebTV, WebExplorer, mosaic
 variants, or authoring tools
+
+<li>Elements and attributes that has defined in earlier HTML5
+specification but then dropped, including but not limited to:
+attributes <code title=attr-irrlevant>irrelevant</code>, <code
+title=attr-active>active</code>, <code
+title=attr-command-default>default</code>, <code
+title=attr-menu-autosubmit>autosubmit</code>, the <code
+title>cite</code> attribute of some sectioning elements, elements
+<code>eventsource</code>, <code>dialog</code>, and
+<code>sidebar</code>, <code>bb</code>, and the data template feature.
 
 </ul>
 
@@ -2697,8 +2840,6 @@ architecture of HTML, XML, and DOM.
 
 <div class="section reference">
 <h2 class=no-num>References</h2>
-
-<p class=ed>@@@ TODO: WF2
 
 <div class="section reference normative">
 <h3 class=no-num>Normative references</h3>
@@ -2883,6 +3024,13 @@ datetime=2009-11-26>26 November 2009</time>.  Available from MC
 (Mobile Creation), <a
 href="http://creation.mb.softbank.jp/web/web_doc.html" lang=ja>WEB &
 NETWORK 技術資料</a>. (In Japanese)
+
+<dt id=ref-WF2>WF2
+
+<dd><cite><a
+href="http://www.whatwg.org/specs/web-forms/current-work/">Web Forms
+2.0</a></cite>, Ian Hickson, WHATWG Working Draft (superceded), <time
+datetime=2009-01-05>5 January 2009</time>.
 
 <dt id=ref-XHTML2>XHTML2
 
