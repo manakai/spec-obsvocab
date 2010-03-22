@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 21 March 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 22 March 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -69,16 +69,27 @@ version of the document is the only normative version.</p>
 and attributes</a></li>
  <li><a href=#obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</a>
   <ol>
-   <li><a href=#global-attributes><span class=secno>4.1 </span>Global attributes</a></li>
-   <li><a href=#metadata-content><span class=secno>4.2 </span>Metadata content</a>
+   <li><a href=#global-attributes><span class=secno>4.1 </span>Global attributes</a>
     <ol>
-     <li><a href=#the-bgsound-element><span class=secno>4.2.1 </span>The <code>bgsound</code> element</a></li></ol></li>
+     <li><a href=#user-interaction><span class=secno>4.1.1 </span>User interaction</a></li></ol></li>
+   <li><a href=#metadata><span class=secno>4.2 </span>Metadata</a>
+    <ol>
+     <li><a href=#metadata-elements><span class=secno>4.2.1 </span>Metadata elements</a></li>
+     <li><a href=#the-bgsound-element><span class=secno>4.2.2 </span>The <code>bgsound</code> element</a></li>
+     <li><a href=#hidden-metadata><span class=secno>4.2.3 </span>Hidden metadata</a></li></ol></li>
    <li><a href=#flow-content><span class=secno>4.3 </span>Flow content</a>
     <ol>
-     <li><a href=#the-marquee-element><span class=secno>4.3.1 </span>The <code>marquee</code> element</a></li>
-     <li><a href=#the-multicol-element><span class=secno>4.3.2 </span>The <code>multicol</code> element</a></li>
-     <li><a href=#the-layer-and-ilayer-elements><span class=secno>4.3.3 </span>The <code>layer</code> and <code>ilayer</code> elements</a></li></ol></li>
-   <li><a href=#boxes><span class=secno>4.4 </span>Boxes</a></li>
+     <li><a href=#lists><span class=secno>4.3.1 </span>Lists</a></li>
+     <li><a href=#tables><span class=secno>4.3.2 </span>Tables</a></li>
+     <li><a href=#the-marquee-element><span class=secno>4.3.3 </span>The <code>marquee</code> element</a></li>
+     <li><a href=#the-multicol-element><span class=secno>4.3.4 </span>The <code>multicol</code> element</a></li>
+     <li><a href=#the-layer-and-ilayer-elements><span class=secno>4.3.5 </span>The <code>layer</code> and <code>ilayer</code> elements</a></li></ol></li>
+   <li><a href=#boxes><span class=secno>4.4 </span>Boxes</a>
+    <ol>
+     <li><a href=#dimension><span class=secno>4.4.1 </span>Dimension</a></li>
+     <li><a href=#margin-and-padding><span class=secno>4.4.2 </span>Margin and padding</a></li>
+     <li><a href=#borders><span class=secno>4.4.3 </span>Borders</a></li>
+     <li><a href=#overflow><span class=secno>4.4.4 </span>Overflow</a></li></ol></li>
    <li><a href=#background-images-and-colors><span class=secno>4.5 </span>Background images and colors</a></li>
    <li><a href=#alignments><span class=secno>4.6 </span>Alignments</a></li>
    <li><a href=#line-breaks><span class=secno>4.7 </span>Line breaks</a></li>
@@ -89,7 +100,7 @@ and attributes</a></li>
    <li><a href=#hyperlinks><span class=secno>4.9 </span>Hyperlinks</a>
     <ol>
      <li><a href=#link-destinations><span class=secno>4.9.1 </span>Link destinations</a></li>
-     <li><a href=#metadata><span class=secno>4.9.2 </span>Metadata</a></li>
+     <li><a href=#metadata-0><span class=secno>4.9.2 </span>Metadata</a></li>
      <li><a href=#profile-data><span class=secno>4.9.3 </span>Profile data</a></li>
      <li><a href=#activation-and-presentation><span class=secno>4.9.4 </span>Activation and presentation</a></li></ol></li>
    <li><a href=#embedded-content><span class=secno>4.10 </span>Embedded content</a>
@@ -345,7 +356,10 @@ the purpose of the conformance checking.  They <em class=rfc2119>MUST
 NOT</em> be specified for an <a href=#html-elements title="HTML elements">HTML
 element</a>.<!-- M12N 1.1, ROLE, XHTML2 -->
 
-</p><p>The <code title=attr-atomicselection>atomicselection</code>
+</p><div class=section>
+<h4 id=user-interaction><span class=secno>4.1.1 </span>User interaction</h4>
+
+<p>The <code title=attr-atomicselection>atomicselection</code>
 attribute of an <a href=#html-elements title="HTML elements">HTML element</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
 <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">true</code> and <code title="">false</code>.<!--
 <http://msdn.microsoft.com/en-us/library/ms537835%28VS.85%29.aspx> -->
@@ -370,27 +384,12 @@ Applications 1.0 is a <a href=#boolean-attribute>boolean attribute</a>.<!--
 
 </p></div>
 
+</div>
+
 <div class=section>
-<h3 id=metadata-content><span class=secno>4.2 </span>Metadata content</h3>
+<h3 id=metadata><span class=secno>4.2 </span>Metadata</h3>
 
-<p>The <a href=#content-model>content model</a> of <code>basefont</code> and
-<code>nextid</code> elements are <i>empty</i>.<!-- WA1 parsing -->
-
-</p><p>If there is a <code>nextid</code> element element with its <code title=attr-nextid-n>n</code> attribute <cite class="bibref
-informative">[<a href=#ref-HTML20>HTML20</a>]</cite> specified, the
-element <em class=rfc2119>MUST</em> be treated as if the element were
-an <code>a</code> element and the attribute was the <code>name</code>
-attribute for the purpose of conformance of <code title="">name</code>
-attributes of <code>a</code>, <code>applet</code>, and
-<code>img</code> elements and the <code title=attr-nextid-n>n</code>
-attribute of the <code>nextid</code> element in the document.<!--
-HTML2 -->
-
-</p><p>If the <code title=attr-meta-scheme>scheme</code> attribute of the
-<code>meta</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4,
-<http://suika.fam.cx/2007/html/standards#html-meta-scheme> -->
-
-</p><p>If the <code title=attr-head-profile>profile</code> attribute of
+<p>If the <code title=attr-head-profile>profile</code> attribute of
 the <code>head</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#set-of-space-separated-tokens>set of space-separated
 tokens</a>, each of which <em class=rfc2119>MUST</em> be a
 <a href=#valid-non-empty-url>valid non-empty URL</a>.<!-- HTML5 old definition
@@ -411,7 +410,29 @@ some HTML geeks to emulate tagsoup in SGML framework, but we don't
 copy that usage. -->
 
 </p><div class=section>
-<h4 id=the-bgsound-element><span class=secno>4.2.1 </span>The <code>bgsound</code> element</h4>
+<h4 id=metadata-elements><span class=secno>4.2.1 </span>Metadata elements</h4>
+
+<p>The <a href=#content-model>content model</a> of <code>basefont</code> and
+<code>nextid</code> elements are <i>empty</i>.<!-- WA1 parsing -->
+
+</p><p>If there is a <code>nextid</code> element element with its <code title=attr-nextid-n>n</code> attribute <cite class="bibref
+informative">[<a href=#ref-HTML20>HTML20</a>]</cite> specified, the
+element <em class=rfc2119>MUST</em> be treated as if the element were
+an <code>a</code> element and the attribute was the <code>name</code>
+attribute for the purpose of conformance of <code title="">name</code>
+attributes of <code>a</code>, <code>applet</code>, and
+<code>img</code> elements and the <code title=attr-nextid-n>n</code>
+attribute of the <code>nextid</code> element in the document.<!--
+HTML2 -->
+
+</p><p>If the <code title=attr-meta-scheme>scheme</code> attribute of the
+<code>meta</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4,
+<http://suika.fam.cx/2007/html/standards#html-meta-scheme> -->
+
+</p></div>
+
+<div class=section>
+<h4 id=the-bgsound-element><span class=secno>4.2.2 </span>The <code>bgsound</code> element</h4>
 <!-- <http://msdn.microsoft.com/en-us/library/ms535198%28VS.85%29.aspx> -->
 
 <p>The <a href=#content-model>content model</a> of the <code>bgsound</code> element
@@ -436,18 +457,35 @@ attribute</a>.<!-- Softbank 3.10.2. -->
 
 </p></div>
 
+<div class=section>
+<h4 id=hidden-metadata><span class=secno>4.2.3 </span>Hidden metadata</h4>
+
+<p>If <code title=attr-about>about</code> or <code title=attr-resource>resource</code> attribute <cite class="bibref
+informative">[<a href=#ref-RDFA>RDFA</a>]</cite> of an <span>HTML
+element</span> is present, its value <em class=rfc2119>MUST</em> be a
+<a href=#valid-url>valid URL</a> or a string whoes first character is a U+005B
+<code class=charname>LEFT SQUARE BRACKET</code> character ([) and
+whoes last character is a U+005D <code class=charname>RIGHT SQUARE
+BRACKET</code> character (]).<!-- RDFa; URIorSafeCURIE -->
+
+</p><p>Unless otherwise specified, attributes <code title=attr-content>content</code>, <code title=attr-datatype>datatype</code>, <code title=attr-typeof>typeof</code>, and <code title=attr-property>property</code> <cite class="bibref
+informative">[<a href=#ref-RDFA>RDFA</a>]</cite> of an <span>HTML
+element</span>, if present, <em class=rfc2119>MAY</em> have any
+value.<!-- RDFa; CDATA or CURIE or CURIEs -->
+
+</p><p>Unless otherwise specified, attributes <code title=attr-rel>rel</code> and <code title=attr-rev>rev</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> of an
+<span>HTML element</span>, if present, <em class=rfc2119>MUST</em> be
+an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique space-separated tokens</a>.<!--
+HTML4, RDFa (reserved word | CURIE) -> HTML5 <a rel> -->
+
+</p></div>
+
 </div>
 
 <div class=section>
 <h3 id=flow-content><span class=secno>4.3 </span>Flow content</h3>
 
-<p>The <a href=#content-model>content model</a> of the <code>dir</code> element,
-including the <a href=#content-model>content model</a> of the child <code>li</code>
-elements of the <code>dir</code> elements, is same as the
-<code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
--->
-
-</p><p>The <a href=#content-model>content model</a> of the <code>center</code> element
+<p>The <a href=#content-model>content model</a> of the <code>center</code> element
 is same as the <code>div</code> element.<!-- WA1 parsing, WA1
 rendering -->
 
@@ -461,6 +499,15 @@ e.g. div1 requires h2 child, but we don't copy it.  -->
 </p><p>The <a href=#content-model>content model</a> of <code>xmp</code>,
 <code>listing</code>, and <code>plaintext</code> elements are
 <i>text</i>.<!-- WA1 parsing, WA1 rendering, WA1 obsolete -->
+
+</p><div class=section>
+<h4 id=lists><span class=secno>4.3.1 </span>Lists</h4>
+
+<p>The <a href=#content-model>content model</a> of the <code>dir</code> element,
+including the <a href=#content-model>content model</a> of the child <code>li</code>
+elements of the <code>dir</code> elements, is same as the
+<code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
+-->
 
 </p><p>If the <code title=attr-ol-type>type</code> attribute of an
 <code>ol</code> element is present, its value <em class=rfc2119>MUST</em> be one of <code title="">1</code>, <code title="">a</code>, <code title="">A</code>, <code title="">i</code>, and <code title="">I</code>.  If the <code title=attr-ul-type>type</code> attribute
@@ -480,7 +527,10 @@ values allowed for <code title="">type</code> attribute of a
 <code>ul</code> element is a <a href=#boolean-attribute>boolean attribute</a>.<!-- HTML4
 -->
 
-</p><hr>
+</p></div>
+
+<div class=section>
+<h4 id=tables><span class=secno>4.3.2 </span>Tables</h4>
 
 <p>If the <code title=attr-table-cols>cols</code> attribute <cite class="bibref informative">[<a href=#ref-RFC1942>RFC1942</a>]</cite>
 of a <code>table</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
@@ -494,8 +544,10 @@ integer</a>.<!-- RFC1942,
 </p><p>If the <code title=attr-tdth-axis>axis</code> attribute of a
 <code>td</code> or <code>th</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 
-</p><div class=section>
-<h4 id=the-marquee-element><span class=secno>4.3.1 </span>The <code>marquee</code> element</h4>
+</p></div>
+
+<div class=section>
+<h4 id=the-marquee-element><span class=secno>4.3.3 </span>The <code>marquee</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>marquee</code> element
 is same as the <code>div</code> element.<!-- WA1 parsing, WA1
@@ -532,7 +584,7 @@ attribute</a>.<!-- HTML5 obsolete -->
 </p></div>
 
 <div class=section>
-<h4 id=the-multicol-element><span class=secno>4.3.2 </span>The <code>multicol</code> element</h4>
+<h4 id=the-multicol-element><span class=secno>4.3.4 </span>The <code>multicol</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> element of the <code>multicol</code>
 element is same as the <code>div</code> element.<!--
@@ -555,7 +607,7 @@ attribute was supported by <i>JustView</i> Web browser.
 </p></div>
 
 <div class=section>
-<h4 id=the-layer-and-ilayer-elements><span class=secno>4.3.3 </span>The <code>layer</code> and <code>ilayer</code> elements</h4>
+<h4 id=the-layer-and-ilayer-elements><span class=secno>4.3.5 </span>The <code>layer</code> and <code>ilayer</code> elements</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>layer</code> element
 <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is same as the
@@ -621,6 +673,9 @@ of a <code>layer</code> or <code>ilayer</code> element is an
 <div class=section>
 <h3 id=boxes><span class=secno>4.4 </span>Boxes</h3>
 
+<div class=section>
+<h4 id=dimension><span class=secno>4.4.1 </span>Dimension</h4>
+
 <p>If the <code title="">height</code> or <code title="">width</code>
 attribute of an <code>applet</code>, <code>table</code>,
 <code>td</code>, <code>th</code>, or <code>marquee</code> element is
@@ -670,7 +725,10 @@ integer</a>.<!--
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
 
-</p><hr>
+</p></div>
+
+<div class=section>
+<h4 id=margin-and-padding><span class=secno>4.4.2 </span>Margin and padding</h4>
 
 <p>The <code>body</code> element's <code title=attr-body-marginheight>marginheight</code>, <code title=attr-body-marginwidth>marginwidth</code>, <code title=attr-body-topmargin>topmargin</code>, and <code title=attr-body-rightmargin>rightmargin</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-non-negative-integer title="valid non-negative
 integer">valid non-negative integers</a>.  The <code>iframe</code>
@@ -706,7 +764,10 @@ informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
 <http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1553598>,
 <http://msdn.microsoft.com/en-us/library/ms534705%28VS.85%29.aspx> -->
 
-</p><hr>
+</p></div>
+
+<div class=section>
+<h4 id=borders><span class=secno>4.4.3 </span>Borders</h4>
 
 <p>The <code title=attr-table-rules>rules</code> attribute of a
 <code>table</code> element is an <a href=#enumerated-attribute>enumerated attribute</a>
@@ -739,7 +800,10 @@ integer</a>.<!-- WA1 rendering, embed
 </p><p>The <code>hr</code> element's <code title=attr-hr-noshade>noshade</code> attribute is a <a href=#boolean-attribute>boolean
 attribute</a>.<!-- WA1 rendering -->
 
-</p><hr>
+</p></div>
+
+<div class=section>
+<h4 id=overflow><span class=secno>4.4.4 </span>Overflow</h4>
 
 <p>The <code title=attr-frames-scrolling>scrolling</code> attribute of
 a <code>frame</code> or <code>iframe</code> element is an
@@ -755,6 +819,8 @@ informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
 <http://msdn.microsoft.com/en-us/library/ms534393%28VS.85%29.aspx> -->
 
 </p></div>
+
+</div>
 
 <div class=section>
 <h3 id=background-images-and-colors><span class=secno>4.5 </span>Background images and colors</h3>
@@ -1181,7 +1247,7 @@ HTML4 -->
 </p></div>
 
 <div class=section>
-<h4 id=metadata><span class=secno>4.9.2 </span>Metadata</h4>
+<h4 id=metadata-0><span class=secno>4.9.2 </span>Metadata</h4>
 
 <p>If the <code title="">charset</code> attribute of an <code>a</code> or
 <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-script-charset>charset</code> attribute value for a
@@ -1191,10 +1257,6 @@ HTML4 -->
 <code>link</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
 present, its value <em class=rfc2119>MAY</em> be any string.<!-- It is
 a "space-separeted values" according to HTML2 -->
-
-</p><p>If the <code title="">rev</code> attribute of an <code>a</code> or
-<code>link</code> element is present, its value <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
-space-separated tokens</a>.<!-- HTML4, HTML5 <a rel> -->
 
 </p></div>
 
@@ -2197,7 +2259,7 @@ architecture of HTML, XML, and DOM.
 <div class="section reference">
 <h2 class=no-num id=references>References</h2>
 
-<p class=ed>@@@ TODO: WF2, RDFa
+<p class=ed>@@@ TODO: WF2
 
 </p><div class="section reference normative">
 <h3 class=no-num id=normative-references>Normative references</h3>
@@ -2325,6 +2387,14 @@ Tables</a></cite>, Dave Raggett, RFC 1942, IETF Experimental RFC
 </dt><dd><cite><a href=http://tools.ietf.org/html/rfc2659>Security
 Extensions For HTML</a></cite>, Eric Rescorla, Allan M. Schiffman, RFC
 2659, IETF Experimental RFC, August 1999.
+
+</dd><dt id=ref-RDFA>RDFA
+
+</dt><dd><cite><a href=http://www.w3.org/TR/2008/REC-rdfa-syntax-20081014>RDFa in
+XHTML: Syntax and Processing</a></cite>, Ben Adida, Mark Birbeck,
+Shane McCarron, Steven Pemberton, W3C Recommendation, <time datetime=2008-10-14>14 October 2008</time>.<!-- 1.1
+<http://www.w3.org/MarkUp/2010/ED-rdfa-syntax-20100113/> is
+incompatible with 1.0 -->
 
 </dd><dt id=ref-ROLE>ROLE
 

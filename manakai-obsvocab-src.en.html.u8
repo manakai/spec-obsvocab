@@ -308,6 +308,9 @@ the purpose of the conformance checking.  They <em class=rfc2119>MUST
 NOT</em> be specified for an <span title="HTML elements">HTML
 element</span>.<!-- M12N 1.1, ROLE, XHTML2 -->
 
+<div class=section>
+<h4>User interaction</h4>
+
 <p>The <code title=attr-atomicselection>atomicselection</code>
 attribute of an <span title="HTML elements">HTML element</span> <cite
 class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
@@ -337,27 +340,10 @@ Applications 1.0 is a <span>boolean attribute</span>.<!--
 
 </div>
 
+</div>
+
 <div class=section>
-<h3>Metadata content</h3>
-
-<p>The <span>content model</span> of <code>basefont</code> and
-<code>nextid</code> elements are <i>empty</i>.<!-- WA1 parsing -->
-
-<p>If there is a <code>nextid</code> element element with its <code
-title=attr-nextid-n>n</code> attribute <cite class="bibref
-informative">[<a href="#ref-HTML20">HTML20</a>]</cite> specified, the
-element <em class=rfc2119>MUST</em> be treated as if the element were
-an <code>a</code> element and the attribute was the <code>name</code>
-attribute for the purpose of conformance of <code title>name</code>
-attributes of <code>a</code>, <code>applet</code>, and
-<code>img</code> elements and the <code title=attr-nextid-n>n</code>
-attribute of the <code>nextid</code> element in the document.<!--
-HTML2 -->
-
-<p>If the <code title=attr-meta-scheme>scheme</code> attribute of the
-<code>meta</code> element is present, its value <em
-class=rfc2119>MAY</em> be any string.<!-- HTML4,
-<http://suika.fam.cx/2007/html/standards#html-meta-scheme> -->
+<h3>Metadata</h3>
 
 <p>If the <code title=attr-head-profile>profile</code> attribute of
 the <code>head</code> element is present, its value <em
@@ -381,6 +367,30 @@ href="#ref-ISOHTMLUG">ISOHTMLUG</a>]</cite> is same as the
 <code>html</code> element.<!-- ISOHTMLUG; pre-html was also reused by
 some HTML geeks to emulate tagsoup in SGML framework, but we don't
 copy that usage. -->
+
+<div class=section>
+<h4>Metadata elements</h4>
+
+<p>The <span>content model</span> of <code>basefont</code> and
+<code>nextid</code> elements are <i>empty</i>.<!-- WA1 parsing -->
+
+<p>If there is a <code>nextid</code> element element with its <code
+title=attr-nextid-n>n</code> attribute <cite class="bibref
+informative">[<a href="#ref-HTML20">HTML20</a>]</cite> specified, the
+element <em class=rfc2119>MUST</em> be treated as if the element were
+an <code>a</code> element and the attribute was the <code>name</code>
+attribute for the purpose of conformance of <code title>name</code>
+attributes of <code>a</code>, <code>applet</code>, and
+<code>img</code> elements and the <code title=attr-nextid-n>n</code>
+attribute of the <code>nextid</code> element in the document.<!--
+HTML2 -->
+
+<p>If the <code title=attr-meta-scheme>scheme</code> attribute of the
+<code>meta</code> element is present, its value <em
+class=rfc2119>MAY</em> be any string.<!-- HTML4,
+<http://suika.fam.cx/2007/html/standards#html-meta-scheme> -->
+
+</div>
 
 <div class=section>
 <h4>The <code>bgsound</code> element</h4>
@@ -416,16 +426,40 @@ attribute</span>.<!-- Softbank 3.10.2. -->
 
 </div>
 
+<div class=section>
+<h4>Hidden metadata</h4>
+
+<p>If <code title=attr-about>about</code> or <code
+title=attr-resource>resource</code> attribute <cite class="bibref
+informative">[<a href="#ref-RDFA">RDFA</a>]</cite> of an <span>HTML
+element</span> is present, its value <em class=rfc2119>MUST</em> be a
+<span>valid URL</span> or a string whoes first character is a U+005B
+<code class=charname>LEFT SQUARE BRACKET</code> character ([) and
+whoes last character is a U+005D <code class=charname>RIGHT SQUARE
+BRACKET</code> character (]).<!-- RDFa; URIorSafeCURIE -->
+
+<p>Unless otherwise specified, attributes <code
+title=attr-content>content</code>, <code
+title=attr-datatype>datatype</code>, <code
+title=attr-typeof>typeof</code>, and <code
+title=attr-property>property</code> <cite class="bibref
+informative">[<a href="#ref-RDFA">RDFA</a>]</cite> of an <span>HTML
+element</span>, if present, <em class=rfc2119>MAY</em> have any
+value.<!-- RDFa; CDATA or CURIE or CURIEs -->
+
+<p>Unless otherwise specified, attributes <code
+title=attr-rel>rel</code> and <code title=attr-rev>rev</code> <cite
+class="bibref informative">[<a href="#ref-RDFA">RDFA</a>]</cite> of an
+<span>HTML element</span>, if present, <em class=rfc2119>MUST</em> be
+an <span>unordered set of unique space-separated tokens</span>.<!--
+HTML4, RDFa (reserved word | CURIE) -> HTML5 <a rel> -->
+
+</div>
+
 </div>
 
 <div class=section>
 <h3>Flow content</h3>
-
-<p>The <span>content model</span> of the <code>dir</code> element,
-including the <span>content model</span> of the child <code>li</code>
-elements of the <code>dir</code> elements, is same as the
-<code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
--->
 
 <p>The <span>content model</span> of the <code>center</code> element
 is same as the <code>div</code> element.<!-- WA1 parsing, WA1
@@ -441,6 +475,15 @@ e.g. div1 requires h2 child, but we don't copy it.  -->
 <p>The <span>content model</span> of <code>xmp</code>,
 <code>listing</code>, and <code>plaintext</code> elements are
 <i>text</i>.<!-- WA1 parsing, WA1 rendering, WA1 obsolete -->
+
+<div class=section>
+<h4>Lists</h4>
+
+<p>The <span>content model</span> of the <code>dir</code> element,
+including the <span>content model</span> of the child <code>li</code>
+elements of the <code>dir</code> elements, is same as the
+<code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
+-->
 
 <p>If the <code title=attr-ol-type>type</code> attribute of an
 <code>ol</code> element is present, its value <em
@@ -467,7 +510,10 @@ values allowed for <code title>type</code> attribute of a
 <code>ul</code> element is a <span>boolean attribute</span>.<!-- HTML4
 -->
 
-<hr>
+</div>
+
+<div class=section>
+<h4>Tables</h4>
 
 <p>If the <code title=attr-table-cols>cols</code> attribute <cite
 class="bibref informative">[<a href="#ref-RFC1942">RFC1942</a>]</cite>
@@ -484,6 +530,8 @@ class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 <p>If the <code title=attr-tdth-axis>axis</code> attribute of a
 <code>td</code> or <code>th</code> element is present, its value <em
 class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
+
+</div>
 
 <div class=section>
 <h4>The <code>marquee</code> element</h4>
@@ -637,6 +685,9 @@ href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is same as the
 <div class=section>
 <h3>Boxes</h3>
 
+<div class=section>
+<h4>Dimension</h4>
+
 <p>If the <code title>height</code> or <code title>width</code>
 attribute of an <code>applet</code>, <code>table</code>,
 <code>td</code>, <code>th</code>, or <code>marquee</code> element is
@@ -702,7 +753,10 @@ integer</span>.<!--
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
 
-<hr>
+</div>
+
+<div class=section>
+<h4>Margin and padding</h4>
 
 <p>The <code>body</code> element's <code
 title=attr-body-marginheight>marginheight</code>, <code
@@ -752,7 +806,10 @@ title>em</code><!-- MSDN -->.<!--
 <http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1553598>,
 <http://msdn.microsoft.com/en-us/library/ms534705%28VS.85%29.aspx> -->
 
-<hr>
+</div>
+
+<div class=section>
+<h4>Borders</h4>
 
 <p>The <code title=attr-table-rules>rules</code> attribute of a
 <code>table</code> element is an <span>enumerated attribute</span>
@@ -795,7 +852,10 @@ integer</span>.<!-- WA1 rendering, embed
 title=attr-hr-noshade>noshade</code> attribute is a <span>boolean
 attribute</span>.<!-- WA1 rendering -->
 
-<hr>
+</div>
+
+<div class=section>
+<h4>Overflow</h4>
 
 <p>The <code title=attr-frames-scrolling>scrolling</code> attribute of
 a <code>frame</code> or <code>iframe</code> element is an
@@ -813,6 +873,8 @@ informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
 title>yes</code>, <code title>no</code>, and <code
 title>auto</code>.<!--
 <http://msdn.microsoft.com/en-us/library/ms534393%28VS.85%29.aspx> -->
+
+</div>
 
 </div>
 
@@ -1406,11 +1468,6 @@ title=attr-script-charset>charset</code> attribute value for a
 href="#ref-HTML20">HTML20</a>]</cite> or <code>a</code> element is
 present, its value <em class=rfc2119>MAY</em> be any string.<!-- It is
 a "space-separeted values" according to HTML2 -->
-
-<p>If the <code title>rev</code> attribute of an <code>a</code> or
-<code>link</code> element is present, its value <em
-class=rfc2119>MUST</em> be an <span>unordered set of unique
-space-separated tokens</span>.<!-- HTML4, HTML5 <a rel> -->
 
 </div>
 
@@ -2641,7 +2698,7 @@ architecture of HTML, XML, and DOM.
 <div class="section reference">
 <h2 class=no-num>References</h2>
 
-<p class=ed>@@@ TODO: WF2, RDFa
+<p class=ed>@@@ TODO: WF2
 
 <div class="section reference normative">
 <h3 class=no-num>Normative references</h3>
@@ -2784,6 +2841,16 @@ Tables</a></cite>, Dave Raggett, RFC 1942, IETF Experimental RFC
 <dd><cite><a href="http://tools.ietf.org/html/rfc2659">Security
 Extensions For HTML</a></cite>, Eric Rescorla, Allan M. Schiffman, RFC
 2659, IETF Experimental RFC, August 1999.
+
+<dt id=ref-RDFA>RDFA
+
+<dd><cite><a
+href="http://www.w3.org/TR/2008/REC-rdfa-syntax-20081014">RDFa in
+XHTML: Syntax and Processing</a></cite>, Ben Adida, Mark Birbeck,
+Shane McCarron, Steven Pemberton, W3C Recommendation, <time
+datetime=2008-10-14>14 October 2008</time>.<!-- 1.1
+<http://www.w3.org/MarkUp/2010/ED-rdfa-syntax-20100113/> is
+incompatible with 1.0 -->
 
 <dt id=ref-ROLE>ROLE
 
