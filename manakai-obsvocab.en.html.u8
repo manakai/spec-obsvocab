@@ -2094,7 +2094,9 @@ present, its value <em class=rfc2119>MUST</em> be a <a href=#set-of-space-separa
 space-separated tokens</a>, each of which <em class=rfc2119>MUST</em> be a string consist of one or more characters
 in the range U+0030 <code class=charname>DIGIT ZERO</code> (0) to
 U+0039 <code class=charname>DIGIT NINE</code> (9), U+0041 <code class=charname>LATIN CAPITAL LETTER A</code> to U+005A <code class=charname>LATIN CAPITAL LETTER Z</code>, and U+0061 <code class=charname>LATIN SMALL LETTER A</code> to U+007A <code class=charname>LATIN SMALL LETTER Z</code>, or a <a href=#valid-non-empty-url>valid non-empty
-URL</a> that is an <a href=#absolute-url>absolute URL</a>.<!--
+URL</a> that is an <a href=#absolute-url>absolute URL</a>.  The <code title=attr-inputmode>inputmode</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in <span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#the-inputmode>
 and XForms 1.0 -->
 

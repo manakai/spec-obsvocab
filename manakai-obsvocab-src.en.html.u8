@@ -2484,7 +2484,16 @@ class=charname>LATIN CAPITAL LETTER A</code> to U+005A <code
 class=charname>LATIN CAPITAL LETTER Z</code>, and U+0061 <code
 class=charname>LATIN SMALL LETTER A</code> to U+007A <code
 class=charname>LATIN SMALL LETTER Z</code>, or a <span>valid non-empty
-URL</span> that is an <span>absolute URL</span>.<!--
+URL</span> that is an <span>absolute URL</span>.  The <code
+title=attr-inputmode>inputmode</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whoes <code title=attr-input-type>type</code> attribute is in <span
+title=attr-input-type-text>Text</span>, <span
+title=attr-input-type-search>Search</span>, <span
+title=attr-input-type-password>Password</span>, <span
+title=attr-input-type-url>URL</span>, <span
+title=attr-input-type-email>E-mail</span>, or <span
+title=attr-input-type-tel>Telephone</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#the-inputmode>
 and XForms 1.0 -->
 
