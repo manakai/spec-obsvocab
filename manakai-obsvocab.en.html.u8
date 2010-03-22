@@ -119,7 +119,9 @@ and attributes</a></li>
      <li><a href=#the-frameset-element><span class=secno>4.11.1 </span>The <code>frameset</code> element</a></li>
      <li><a href=#the-frame-element><span class=secno>4.11.2 </span>The <code>frame</code> element</a></li>
      <li><a href=#frame-borders><span class=secno>4.11.3 </span>Frame borders</a></li></ol></li>
-   <li><a href=#scripting><span class=secno>4.12 </span>Scripting</a></li>
+   <li><a href=#scripting><span class=secno>4.12 </span>Scripting</a>
+    <ol>
+     <li><a href=#the-event-source-element><span class=secno>4.12.1 </span>The <code>event-source</code> element</a></li></ol></li>
    <li><a href=#forms><span class=secno>4.13 </span>Forms</a>
     <ol>
      <li><a href=#form-submission><span class=secno>4.13.1 </span>Form submission</a></li>
@@ -195,6 +197,8 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-elements><dfn id=html-elements>HTML elements</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-integer><dfn id=valid-integer>valid integer</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-floating-point-number><dfn id=valid-floating-point-number>valid floating point number</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative-integer><dfn id=valid-non-negative-integer>valid non-negative integer</dfn></a>,
 
@@ -1650,6 +1654,26 @@ attribute of the <code>input</code> element applies only to
 <!-- There was <img controls> according to
 <http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
 
+</p><p>The <code title=attr-media-autobuffer>autobuffer</code> attribute
+of <code>audio</code> and <code>video</code> elements is a
+<span>booelan attribute</span>.<!-- HTML5 dropped -->
+
+</p><p>If <code title=attr-media-start>start</code>, <code title=attr-media-end>end</code>, <code title=attr-media-loopstart>loopstart</code>, or <code title=attr-media-loopend>loopend</code> attribute of
+<code>audio</code> and <code>video</code> elements is present, its
+value <em class=rfc2119>MUST</em> be a string consist of one or more
+characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
+(0) to U+0039 <code class=charname>DIGIT NINE</code> (9), and U+003A
+<code>COLON</code>.<!-- HTML5 dropped -->
+
+</p><p>If the <code title=attr-media-playcount>playcount</code> attribute
+of <code>audio</code> and <code>video</code> elements is present, its
+value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a>.<!--
+HTML5 dropped -->
+
+</p><p>If the <code title=attr-source-pixelratio>pixelratio</code>
+attribute of the <code>source</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-floating-point-number>valid floating point number</a>
+that represents a positive number.<!-- HTML5 dropped -->
+
 </p></div>
 
 <div class=section>
@@ -1893,8 +1917,6 @@ a <code>script</code> element <cite class="bibref informative">[<a href=#ref-DEV
 <http://web.archive.org/web/20030415223352/http://devedge.netscape.com/library/manuals/2000/javascript/1.3/guide/sec.html>
 -->
 
-</p><p class=ed>@@ event-source
-
 </p><hr>
 
 <p>The following attributes of <a href=#html-elements>HTML elements</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> <em class=rfc2119>MUST</em> be treated as <a href=#event-handler-content-attributes>event handler content
@@ -1953,7 +1975,21 @@ attributes</a>:
 <code title=handler-ontouchmove>ontouchmove</code>, and
 <code title=handler-ontouchstart>ontouchstart</code>.
 
+</p><div class=section>
+<h4 id=the-event-source-element><span class=secno>4.12.1 </span>The <code>event-source</code> element</h4>
+
+<!-- <http://html5.org/tools/web-apps-tracker?from=2869&to=2870>
+(eventsource) -->
+
+<p>The <a href=#content-model>content model</a> of the <code>event-source</code>
+element is <i>empty</i>.
+
+</p><p>If the <code title=attr-event-source-src>src</code> attribute of
+the <code>event-source</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.
+
 </p></div>
+
+</div>
 
 <div class=section>
 <h3 id=forms><span class=secno>4.13 </span>Forms</h3>
@@ -2019,6 +2055,12 @@ attribute">enumerated attributes</a> with keywords <code title="">document</code
 or <code>button</code> element applies only to elements whoes <code title="">type</code> attribute is in the <span title="">Submit Button</span>
 state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#replace> -->
+
+</p><p>Attributes <code title=attr-fs-action>action</code>, <code title=attr-fs-enctype>enctype</code>, <code title=attr-fs-method>method</code>, and <code title=attr-fs-target>target</code>, of <code>input</code> and
+<code>button</code> elements <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <!-- and merged into HTML5, then
+renamed --> <em class=rfc2119>MUST</em> be treated as equivalent to
+<code title=attr-fs-formaction>formaction</code>, <code title=attr-fs-formenctype>formenctype</code>, <code title=attr-fs-formmethod>formmethod</code>, and <code title=attr-fs-formtarget>formtarget</code> elements, respectively, for
+the purpose of conformance checking of values of these attributes.
 
 </p></div>
 
@@ -2101,6 +2143,21 @@ an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code ti
 is present, its value <em class=rfc2119>MUST</em> be syntactically
 valid <code title=attr-form-accept-charset>accept-charset</code>
 attribute value for a <code>form</code> element.<!-- HTML 2.x -->
+
+</p><p>If the <code title=attr-form-accept>accept</code> attribute of a
+<code>form</code> element <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <!-- and HTML5 but immediately dropped
+after introduction --> is present, its value <em class=rfc2119>MUST</em> be a string that is a valid as an <code title=attr-input-accept>accept</code> attribute value of the
+<code>input</code> element.
+
+</p><p>If the <code title=attr-textarea-accept>accept</code> attribute of
+a <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <!-- and HTML5 but immediately dropped
+after introduction --> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-mime-type>valid MIME type</a>.
+
+</p><p>If the <code title=attr-textarea-pattern>pattern</code> attribute
+of a <code>textarea</code> element <cite class="bibref
+informative">[<a href=#ref-WF2>WF2</a>]</cite> <!-- and HTML5 but
+immediately dropped after introduction --> is present, its value <em class=rfc2119>MUST</em> be a string tha is a valid as an <code title=attr-input-pattern>pattern</code> attribute value of the
+<code>input</code> element.
 
 </p></div>
 
@@ -2328,8 +2385,10 @@ attributes <code title=attr-irrlevant>irrelevant</code>, <code title=attr-active
 </li></ul>
 
 <p>Elements in the <code title="">http://www.w3.org/2002/06</code> and
-<code title="">http://www.w3.org/2002/06/</code> namespaces are outside
-of the scope of this specification (but there is <a href=#xhtml2-role>an exception</a>).
+<code title="">http://www.w3.org/2002/06/</code> <cite class="bibref
+informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite>
+namespaces are outside of the scope of this specification (but there
+is <a href=#xhtml2-role>an exception</a>).
 
 </p><p>Attributes <code title=attr-sdaform>sdaform</code>, <code title=attr-sdapref>sdapref</code>, and <code title=attr-sdasuff>sdasuff</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> <cite class="bibref
 informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite> are not real
@@ -2504,8 +2563,8 @@ Pemberton, T. V. Raman, Richard Schwerdtfeger, W3C Editor's Draft,
 </dd><dt id=ref-RUBY>RUBY
 
 </dt><dd><cite><a href=http://www.w3.org/TR/2001/REC-ruby-20010531/>Ruby
-Annotation</a></cite>, Marcin Sawicki, Michel Suignard, Masayasu
-Ishikawa, Martin Dürst, Tex Texin, W3C Recommendation, <time datetime=2008-06-25>25 June 2008</time>.
+Annotation</a></cite>, Marcin Sawicki, Michel Suignard, 石川雅康,
+Martin Dürst, Tex Texin, W3C Recommendation, <time datetime=2008-06-25>25 June 2008</time>.
 
 </dd><dt id=ref-SAFARI>SAFARI
 

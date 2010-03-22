@@ -132,6 +132,8 @@ href="#ref-WA1">WA1</a>]</cite> to define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-integer"><dfn>valid integer</dfn></a>,
 
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-floating-point-number"><dfn>valid floating point number</dfn></a>,
+
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative-integer"><dfn>valid non-negative integer</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#set-of-comma-separated-tokens"><dfn>set of comma-separated tokens</dfn></a>,
@@ -1960,6 +1962,30 @@ title=attr-input-type-submit>Submit Button</span> state.<!-- Softbank
 <!-- There was <img controls> according to
 <http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
 
+<p>The <code title=attr-media-autobuffer>autobuffer</code> attribute
+of <code>audio</code> and <code>video</code> elements is a
+<span>booelan attribute</span>.<!-- HTML5 dropped -->
+
+<p>If <code title=attr-media-start>start</code>, <code
+title=attr-media-end>end</code>, <code
+title=attr-media-loopstart>loopstart</code>, or <code
+title=attr-media-loopend>loopend</code> attribute of
+<code>audio</code> and <code>video</code> elements is present, its
+value <em class=rfc2119>MUST</em> be a string consist of one or more
+characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
+(0) to U+0039 <code class=charname>DIGIT NINE</code> (9), and U+003A
+<code>COLON</code>.<!-- HTML5 dropped -->
+
+<p>If the <code title=attr-media-playcount>playcount</code> attribute
+of <code>audio</code> and <code>video</code> elements is present, its
+value <em class=rfc2119>MUST</em> be a <span>valid integer</span>.<!--
+HTML5 dropped -->
+
+<p>If the <code title=attr-source-pixelratio>pixelratio</code>
+attribute of the <code>source</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid floating point number</span>
+that represents a positive number.<!-- HTML5 dropped -->
+
 </div>
 
 <div class=section>
@@ -2238,8 +2264,6 @@ class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
 <http://web.archive.org/web/20030415223352/http://devedge.netscape.com/library/manuals/2000/javascript/1.3/guide/sec.html>
 -->
 
-<p class=ed>@@ event-source
-
 <hr>
 
 <p>The following attributes of <span>HTML elements</span> <cite
@@ -2301,6 +2325,21 @@ attributes</span>:
 <code title=handler-ontouchend>ontouchend</code>,
 <code title=handler-ontouchmove>ontouchmove</code>, and
 <code title=handler-ontouchstart>ontouchstart</code>.
+
+<div class=section>
+<h4>The <code>event-source</code> element</h4>
+
+<!-- <http://html5.org/tools/web-apps-tracker?from=2869&to=2870>
+(eventsource) -->
+
+<p>The <span>content model</span> of the <code>event-source</code>
+element is <i>empty</i>.
+
+<p>If the <code title=attr-event-source-src>src</code> attribute of
+the <code>event-source</code> element is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.
+
+</div>
 
 </div>
 
@@ -2385,6 +2424,19 @@ or <code>button</code> element applies only to elements whoes <code
 title>type</code> attribute is in the <span title>Submit Button</span>
 state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#replace> -->
+
+<p>Attributes <code title=attr-fs-action>action</code>, <code
+title=attr-fs-enctype>enctype</code>, <code
+title=attr-fs-method>method</code>, and <code
+title=attr-fs-target>target</code>, of <code>input</code> and
+<code>button</code> elements <cite class="bibref informative">[<a
+href="#ref-WF2">WF2</a>]</cite> <!-- and merged into HTML5, then
+renamed --> <em class=rfc2119>MUST</em> be treated as equivalent to
+<code title=attr-fs-formaction>formaction</code>, <code
+title=attr-fs-formenctype>formenctype</code>, <code
+title=attr-fs-formmethod>formmethod</code>, and <code
+title=attr-fs-formtarget>formtarget</code> elements, respectively, for
+the purpose of conformance checking of values of these attributes.
 
 </div>
 
@@ -2500,6 +2552,28 @@ class="bibref informative">[<a href="#ref-HTML2x">HTML2x</a>]</cite>
 is present, its value <em class=rfc2119>MUST</em> be syntactically
 valid <code title=attr-form-accept-charset>accept-charset</code>
 attribute value for a <code>form</code> element.<!-- HTML 2.x -->
+
+<p>If the <code title=attr-form-accept>accept</code> attribute of a
+<code>form</code> element <cite class="bibref informative">[<a
+href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but immediately dropped
+after introduction --> is present, its value <em
+class=rfc2119>MUST</em> be a string that is a valid as an <code
+title=attr-input-accept>accept</code> attribute value of the
+<code>input</code> element.
+
+<p>If the <code title=attr-textarea-accept>accept</code> attribute of
+a <code>textarea</code> element <cite class="bibref informative">[<a
+href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but immediately dropped
+after introduction --> is present, its value <em
+class=rfc2119>MUST</em> be a <span>valid MIME type</span>.
+
+<p>If the <code title=attr-textarea-pattern>pattern</code> attribute
+of a <code>textarea</code> element <cite class="bibref
+informative">[<a href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but
+immediately dropped after introduction --> is present, its value <em
+class=rfc2119>MUST</em> be a string tha is a valid as an <code
+title=attr-input-pattern>pattern</code> attribute value of the
+<code>input</code> element.
 
 </div>
 
@@ -2798,9 +2872,10 @@ title>cite</code> attribute of some sectioning elements, elements
 </ul>
 
 <p>Elements in the <code title>http://www.w3.org/2002/06</code> and
-<code title>http://www.w3.org/2002/06/</code> namespaces are outside
-of the scope of this specification (but there is <a
-href="#xhtml2-role">an exception</a>).
+<code title>http://www.w3.org/2002/06/</code> <cite class="bibref
+informative">[<a href="#ref-XHTML2">XHTML2</a>]</cite></span>
+namespaces are outside of the scope of this specification (but there
+is <a href="#xhtml2-role">an exception</a>).
 
 <p>Attributes <code title=attr-sdaform>sdaform</code>, <code
 title=attr-sdapref>sdapref</code>, and <code
@@ -3004,8 +3079,8 @@ Pemberton, T. V. Raman, Richard Schwerdtfeger, W3C Editor's Draft,
 <dt id=ref-RUBY>RUBY
 
 <dd><cite><a href="http://www.w3.org/TR/2001/REC-ruby-20010531/">Ruby
-Annotation</a></cite>, Marcin Sawicki, Michel Suignard, Masayasu
-Ishikawa, Martin D&uuml;rst, Tex Texin, W3C Recommendation, <time
+Annotation</a></cite>, Marcin Sawicki, Michel Suignard, 石川雅康,
+Martin D&uuml;rst, Tex Texin, W3C Recommendation, <time
 datetime=2008-06-25>25 June 2008</time>.
 
 <dt id=ref-SAFARI>SAFARI
