@@ -1370,7 +1370,13 @@ WA1 obsolete, HTML4 --><!-- There was <layer name> according to
 </p><div class=section>
 <h4 id=the-img-element><span class=secno>4.10.1 </span>The <code>img</code> element</h4>
 
-<p>If the <code id=attr-input-usemap title=attr-input-usemap>usemap</code> attribute of the <code>input</code>
+<p>The <code id=image>image</code> element <em class=rfc2119>MUST</em>
+be treated as equivalent to the <code>img</code> element for the
+purpose of conformance checking of <a href=#content-model title="content
+model">content</a> and attributes of the element.<!-- HTML5
+parsing; only affects XHTML -->
+
+</p><p>If the <code id=attr-input-usemap title=attr-input-usemap>usemap</code> attribute of the <code>input</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
 <a href=#valid-hash-name-reference>valid hash-name reference</a> to a <code>map</code> element.
 The <code title=attr-input-usemap>usemap</code> attribute of the
@@ -2923,7 +2929,8 @@ architecture of HTML, XML, and DOM.
 </dd><dd><a href=#attr-width><code>width</code></a>
 </dd><dd><a href=#attr-layer-z-index><code>z-index</code></a>
 
-</dd><dt>The <code>img</code> element
+</dd><dt>The <a href=#image><code>image</code></a> element
+</dt><dt>The <code>img</code> element
 
 </dt><dd><a href=#attr-objects-align><code>align</code></a>
 </dd><dd><a href=#attr-dim-border><code>border</code></a>
