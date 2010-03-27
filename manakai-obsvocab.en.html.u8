@@ -490,6 +490,15 @@ of an <span>HTML element</span>, if present, <em class=rfc2119>MUST</em> be an <
 space-separated tokens</a>.<!-- HTML4, RDFa (reserved word | CURIE)
 -> HTML5 <a rel> -->
 
+</p><p>Attributes <code id=attr-global-about title=attr-global-about>about</code>, <code id=attr-global-typeof title=attr-global-typeof>typeof</code>, <code id=attr-global-property title=attr-global-property>property</code>, <code id=attr-global-resource title=attr-global-resource>resource</code>,
+<code id=attr-global-content title=attr-global-content>content</code>,
+<code title=attr-global-datatype>datatype</code>, <code id=attr-global-rel title=attr-global-rel>rel</code>, and <code id=attr-global-rev title=attr-global-rev>rev</code> in the <a href=#html-namespace>HTML
+namespace</a> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> <em class=rfc2119>MUST</em> be
+treated as equivalent to attributes, in no namespace, of an <a href=#html-elements title="HTML elements">HTML element</a> for the purpose of the
+conformance checking.  They <em class=rfc2119>MUST NOT</em> be
+specified for an <a href=#html-elements title="HTML elements">HTML element</a>.<!--
+RDFa (DTD) -->
+
 </p></div>
 
 </div>
@@ -2466,7 +2475,10 @@ architecture of HTML, XML, and DOM.
 
 <dt>Attributes in the <a href=#html-namespace>HTML namespace</a>
 
-</dt><dd><a href=#attr-global-class><code>class</code></a>
+</dt><dd><a href=#attr-global-about><code>about</code></a>
+</dd><dd><a href=#attr-global-class><code>class</code></a>
+</dd><dd><a href=#attr-global-content><code>content</code></a>
+</dd><dd><a href=#attr-global-datatype><code>datatype</code></a>
 </dd><dd><a href=#attr-global-dir><code>dir</code></a>
 </dd><dd><a href=#attr-global-id><code>id</code></a>
 </dd><dd><a href=#attr-global-onclick><code>onclick</code></a>
@@ -2479,13 +2491,18 @@ architecture of HTML, XML, and DOM.
 </dd><dd><a href=#attr-global-onmouseout><code>onmouseout</code></a>
 </dd><dd><a href=#attr-global-onmouseover><code>onmouseover</code></a>
 </dd><dd><a href=#attr-global-onmouseup><code>onmouseup</code></a>
+</dd><dd><a href=#attr-global-property><code>property</code></a>
+</dd><dd><a href=#attr-global-rel><code>rel</code></a>
+</dd><dd><a href=#attr-global-rev><code>rev</code></a>
 </dd><dd><a href=#attr-repeat><code>repeat</code></a>
 </dd><dd><a href=#attr-repeat-max><code>repeat-max</code></a>
 </dd><dd><a href=#attr-repeat-min><code>repeat-min</code></a>
 </dd><dd><a href=#attr-repeat-start><code>repeat-start</code></a>
 </dd><dd><a href=#attr-repeat-template><code>repeat-template</code></a>
+</dd><dd><a href=#attr-global-resource><code>resource</code></a>
 </dd><dd><a href=#attr-global-role><code>role</code></a>
 </dd><dd><a href=#attr-global-title><code>title</code></a>
+</dd><dd><a href=#attr-global-typeof><code>typeof</code></a>
 
 </dd><dt>Attribute in the namespace <code>http://www.w3.org/2002/06/xhtml2/</code>
 
