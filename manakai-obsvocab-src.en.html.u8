@@ -2990,9 +2990,14 @@ id=attr-repeat-start>repeat-start</code> attribute <cite class="bibref
 informative">[<a href="#ref-WF2">WF2</a>]</cite> of an
 <span>element</span> is present, its value <em class=rfc2119>MUST</em>
 be a <span>valid non-negative integer</span>.  These attributes <em
-class=rfc2119>MUST NOT</em> be specified unless the element has the
-<code title=attr-repeat>repeat</code> attribute whoes value is equal
-to <code title>template</code>.<!--
+class=rfc2119>MUST NOT</em> be specified unless either the element is
+an <span title="HTML elements">HTML element</span> and the element has
+the <code title=attr-repeat>repeat</code> attribute in no namespace
+whoes value is equal to <code title>template</code> or the element is
+not an <span title="HTML elements">HTML element</span> and the element
+has the <code title=attr-global-repeat>repeat</code> attribute in the
+<span>HTML namespace</span> whoes value is equal to <code
+title>template</code>.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#the-repeat-min>,
 <http://www.whatwg.org/specs/web-forms/current-work/#repeat-start> -->
 
