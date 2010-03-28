@@ -2211,8 +2211,10 @@ HTML4,
 id=attr-dataformatas>dataformatas</code> attribute of an <span
 title="HTML elements">HTML element</span> is an <span>enumerated
 attribute</span> with keywords <code title>text</code>, <code
-title>html</code>, and <code title>localized-text</code>.<!-- HTML4,
-<http://msdn.microsoft.com/en-us/library/ms533706%28VS.85%29.aspx> -->
+title>html</code>, and <code title>localized-text</code>.<!-- HTML4
+reserved (broken),
+<http://msdn.microsoft.com/en-us/library/ms533706%28VS.85%29.aspx>;
+see also <http://suika.fam.cx/%7Ewakaba/wiki/sw/n/dataformatas> -->
 
 <p>If the <code title=attr-table-datapagesize
 id=attr-table-datapagesize>datapagesize</code> attribute of a
