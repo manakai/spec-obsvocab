@@ -317,11 +317,13 @@ href="#ref-ROLE">ROLE</a>]</cite> and <span id=xhtml2-role>in the
 <code title>http://www.w3.org/2002/06/xhtml2/</code> namespace <cite
 class="bibref informative">[<a
 href="#ref-XHTML2">XHTML2</a>]</cite></span>, <em
-class=rfc2119>MUST</em> be treated as equivalent to attributes, in no
-namespace, of an <span title="HTML elements">HTML element</span> for
-the purpose of the conformance checking.  They <em class=rfc2119>MUST
-NOT</em> be specified for an <span title="HTML elements">HTML
-element</span>.<!-- M12N 1.1, ROLE, XHTML2 -->
+class=rfc2119>MUST</em> be treated as equivalent to attributes in no
+namespace specified for an <span title="HTML elements">HTML
+element</span> for the purpose of the conformance checking.<!-- They
+<em class=rfc2119>MUST NOT</em> be specified for an <span title="HTML
+elements">HTML element</span>. (This requirement is redundant, since
+they are not allowed at all, they are non-conforming.) --><!-- M12N
+1.1, ROLE, XHTML2 -->
 
 <div class=section>
 <h4>User interaction</h4>
@@ -490,11 +492,12 @@ title=attr-global-rel id=attr-global-rel>rel</code>, and <code
 title=attr-global-rev id=attr-global-rev>rev</code> in the <span>HTML
 namespace</span> <cite class="bibref informative">[<a
 href="#ref-RDFA">RDFA</a>]</cite> <em class=rfc2119>MUST</em> be
-treated as equivalent to attributes, in no namespace, of an <span
-title="HTML elements">HTML element</span> for the purpose of the
-conformance checking.  They <em class=rfc2119>MUST NOT</em> be
-specified for an <span title="HTML elements">HTML element</span>.<!--
-RDFa (DTD) -->
+treated as equivalent to attributes in no namespace specified for an
+<span title="HTML elements">HTML element</span> for the purpose of the
+conformance checking.<!-- They <em class=rfc2119>MUST NOT</em> be
+specified for an <span title="HTML elements">HTML
+element</span>. (This requirement is redundant, since they are not
+allowed at all, they are non-conforming.) --><!-- RDFa (DTD) -->
 
 </div>
 
@@ -3025,16 +3028,24 @@ title=attr-input-type-text>Add Button</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#template>; the
 referenced element must be a repetition template. -->
 
-<p>If <code title=attr-repeat>repeat</code>, <code
-title=attr-repeat-min>repeat-min</code>, <code
-title=attr-repeat-max>repeat-max</code>, <code
-title=attr-repeat-start>repeat-start</code>, or <code
-title=attr-repeat-template>repeat-template</code> element is specified
-for an <span>HTML element</span>, it <em class=rfc2119>MUST</em> be in
-no namespace.  Otherwise, if such an attribute is specified for an
-element whoes namespace is different from the <span>HTML
-namespace</span>, it <em class=rfc2119>MUST</em> be in the <span>HTML
-namespace</span>.<!--
+<p>Attributes <code title=attr-global-repeat
+id=attr-global-repeat>repeat</code>, <code
+title=attr-global-repeat-min
+id=attr-global-repeat-min>repeat-min</code>, <code
+title=attr-global-repeat-max
+id=attr-global-repeat-max>repeat-max</code>, <code
+title=attr-global-repeat-start
+id=attr-global-repeat-start>repeat-start</code>, and <code
+title=attr-global-repeat-template
+id=attr-global-repeat-template>repeat-template</code> in the
+<span>HTML namespace</span> <cite class="bibref informative">[<a
+href="#ref-WF2">WF2</a>]</cite> <em class=rfc2119>MUST</em> be treated
+as equivalent to attributes in no namespace specified for an <span
+title="HTML elements">HTML element</span> for the purpose of the
+conformance checking.<!-- They <em class=rfc2119>MUST NOT</em> be
+specified for an <span title="HTML elements">HTML
+element</span>. (This requirement is redundant, since they are not
+allowed at all, they are non-conforming.) --><!--
 <http://www.whatwg.org/specs/web-forms/current-work/#definitions> -->
 
 </div>
@@ -3160,11 +3171,11 @@ architecture of HTML, XML, and DOM.
 <dd><a href="#attr-global-property"><code>property</code></a>
 <dd><a href="#attr-global-rel"><code>rel</code></a>
 <dd><a href="#attr-global-rev"><code>rev</code></a>
-<dd><a href="#attr-repeat"><code>repeat</code></a>
-<dd><a href="#attr-repeat-max"><code>repeat-max</code></a>
-<dd><a href="#attr-repeat-min"><code>repeat-min</code></a>
-<dd><a href="#attr-repeat-start"><code>repeat-start</code></a>
-<dd><a href="#attr-repeat-template"><code>repeat-template</code></a>
+<dd><a href="#attr-global-repeat"><code>repeat</code></a>
+<dd><a href="#attr-global-repeat-max"><code>repeat-max</code></a>
+<dd><a href="#attr-global-repeat-min"><code>repeat-min</code></a>
+<dd><a href="#attr-global-repeat-start"><code>repeat-start</code></a>
+<dd><a href="#attr-global-repeat-template"><code>repeat-template</code></a>
 <dd><a href="#attr-global-resource"><code>resource</code></a>
 <dd><a href="#attr-global-role"><code>role</code></a>
 <dd><a href="#attr-global-title"><code>title</code></a>
