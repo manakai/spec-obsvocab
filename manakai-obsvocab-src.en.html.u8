@@ -295,6 +295,10 @@ WA1 rendering -->
 <div class=section>
 <h3>Global attributes</h3>
 
+<p id=namespaced-global-attr>Attributes in the <span>HTML
+namespace</span> <em class=rfc2119>MUST NOT</em> be specified for
+<span>HTML elements</span>.
+
 <p>Attributes <code title id=attr-global-class>class</code>, <code
 title id=attr-global-dir>dir</code>, <code title
 id=attr-global-id>id</code>, <code title
@@ -319,11 +323,14 @@ class="bibref informative">[<a
 href="#ref-XHTML2">XHTML2</a>]</cite></span>, <em
 class=rfc2119>MUST</em> be treated as equivalent to attributes in no
 namespace specified for an <span title="HTML elements">HTML
-element</span> for the purpose of the conformance checking.<!-- They
-<em class=rfc2119>MUST NOT</em> be specified for an <span title="HTML
-elements">HTML element</span>. (This requirement is redundant, since
-they are not allowed at all, they are non-conforming.) --><!-- M12N
+element</span> for the purpose of the conformance checking.<!-- M12N
 1.1, ROLE, XHTML2 -->
+
+<p>The <code title=attr-xmlspace id=attr-xmlspace>xml:space</code>
+attribute <em>in no namespace</em> specified for an <span>HTML
+element</span> is an <span>enumerated attribute</span> with keywords
+<code title>default</code> and <code title>preserve</code>.<!-- M12N
+1.1, XHTML 1.1, XML 1.0 -->
 
 <div class=section>
 <h4>User interaction</h4>
@@ -494,10 +501,7 @@ namespace</span> <cite class="bibref informative">[<a
 href="#ref-RDFA">RDFA</a>]</cite> <em class=rfc2119>MUST</em> be
 treated as equivalent to attributes in no namespace specified for an
 <span title="HTML elements">HTML element</span> for the purpose of the
-conformance checking.<!-- They <em class=rfc2119>MUST NOT</em> be
-specified for an <span title="HTML elements">HTML
-element</span>. (This requirement is redundant, since they are not
-allowed at all, they are non-conforming.) --><!-- RDFa (DTD) -->
+conformance checking.<!-- RDFa (DTD) -->
 
 </div>
 
@@ -3042,10 +3046,7 @@ id=attr-global-repeat-template>repeat-template</code> in the
 href="#ref-WF2">WF2</a>]</cite> <em class=rfc2119>MUST</em> be treated
 as equivalent to attributes in no namespace specified for an <span
 title="HTML elements">HTML element</span> for the purpose of the
-conformance checking.<!-- They <em class=rfc2119>MUST NOT</em> be
-specified for an <span title="HTML elements">HTML
-element</span>. (This requirement is redundant, since they are not
-allowed at all, they are non-conforming.) --><!--
+conformance checking.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#definitions> -->
 
 </div>
@@ -3150,7 +3151,8 @@ architecture of HTML, XML, and DOM.
 
 <dl>
 
-<dt>Attributes in the <span>HTML namespace</span>
+<dt><a href="#namespaced-global-attr">Attributes in the <span>HTML
+namespace</span></a>
 
 <dd><a href="#attr-global-about"><code>about</code></a>
 <dd><a href="#attr-global-class"><code>class</code></a>
@@ -3255,6 +3257,7 @@ architecture of HTML, XML, and DOM.
 <dd><a href="#attr-rev"><code>rev</code></a>
 <dd><a href="#attr-typeof"><code>typeof</code></a>
 <dd><a href="#attr-unselectable"><code>unselectable</code></a>
+<dd><a href="#attr-xmlspace"><code>xml:space</code></a>
 
 <dt>The <code>a</code> element
 

@@ -359,16 +359,23 @@ WA1 rendering -->
 <div class=section>
 <h3 id=global-attributes><span class=secno>4.1 </span>Global attributes</h3>
 
-<p>Attributes <code id=attr-global-class title="">class</code>, <code id=attr-global-dir title="">dir</code>, <code id=attr-global-id title="">id</code>, <code id=attr-global-title title="">title</code>, <code id=attr-global-onclick title="">onclick</code>, <code id=attr-global-ondblclick title="">ondblclick</code>, <code id=attr-global-onmousedown title="">onmousedown</code>, <code id=attr-global-onmouseup title="">onmouseup</code>, <code id=attr-global-onmouseover title="">onmouseover</code>, <code id=attr-global-onmousemove title="">onmousemove</code>, <code id=attr-global-onmouseout title="">onmouseout</code>, <code id=attr-global-onkeypress title="">onkeypress</code>, <code id=attr-global-onkeydown title="">onkeydown</code>, and <code id=attr-global-onkeyup title="">onkeyup</code> in the <a href=#html-namespace>HTML
+<p id=namespaced-global-attr>Attributes in the <a href=#html-namespace>HTML
+namespace</a> <em class=rfc2119>MUST NOT</em> be specified for
+<a href=#html-elements>HTML elements</a>.
+
+</p><p>Attributes <code id=attr-global-class title="">class</code>, <code id=attr-global-dir title="">dir</code>, <code id=attr-global-id title="">id</code>, <code id=attr-global-title title="">title</code>, <code id=attr-global-onclick title="">onclick</code>, <code id=attr-global-ondblclick title="">ondblclick</code>, <code id=attr-global-onmousedown title="">onmousedown</code>, <code id=attr-global-onmouseup title="">onmouseup</code>, <code id=attr-global-onmouseover title="">onmouseover</code>, <code id=attr-global-onmousemove title="">onmousemove</code>, <code id=attr-global-onmouseout title="">onmouseout</code>, <code id=attr-global-onkeypress title="">onkeypress</code>, <code id=attr-global-onkeydown title="">onkeydown</code>, and <code id=attr-global-onkeyup title="">onkeyup</code> in the <a href=#html-namespace>HTML
 namespace</a> <cite class="bibref informative">[<a href=#ref-M12N11>M12N11</a>]</cite>, and the <code id=attr-global-role title="">role</code> attribute in the <a href=#html-namespace>HTML
 namespace</a> <cite class="bibref informative">[<a href=#ref-ROLE>ROLE</a>]</cite> and <span id=xhtml2-role>in the
 <code title="">http://www.w3.org/2002/06/xhtml2/</code> namespace <cite class="bibref informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite></span>, <em class=rfc2119>MUST</em> be treated as equivalent to attributes in no
 namespace specified for an <a href=#html-elements title="HTML elements">HTML
-element</a> for the purpose of the conformance checking.<!-- They
-<em class=rfc2119>MUST NOT</em> be specified for an <span title="HTML
-elements">HTML element</span>. (This requirement is redundant, since
-they are not allowed at all, they are non-conforming.) --><!-- M12N
+element</a> for the purpose of the conformance checking.<!-- M12N
 1.1, ROLE, XHTML2 -->
+
+</p><p>The <code id=attr-xmlspace title=attr-xmlspace>xml:space</code>
+attribute <em>in no namespace</em> specified for an <span>HTML
+element</span> is an <a href=#enumerated-attribute>enumerated attribute</a> with keywords
+<code title="">default</code> and <code title="">preserve</code>.<!-- M12N
+1.1, XHTML 1.1, XML 1.0 -->
 
 </p><div class=section>
 <h4 id=user-interaction><span class=secno>4.1.1 </span>User interaction</h4>
@@ -498,10 +505,7 @@ space-separated tokens</a>.<!-- HTML4, RDFa (reserved word | CURIE)
 namespace</a> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> <em class=rfc2119>MUST</em> be
 treated as equivalent to attributes in no namespace specified for an
 <a href=#html-elements title="HTML elements">HTML element</a> for the purpose of the
-conformance checking.<!-- They <em class=rfc2119>MUST NOT</em> be
-specified for an <span title="HTML elements">HTML
-element</span>. (This requirement is redundant, since they are not
-allowed at all, they are non-conforming.) --><!-- RDFa (DTD) -->
+conformance checking.<!-- RDFa (DTD) -->
 
 </p></div>
 
@@ -2392,10 +2396,7 @@ referenced element must be a repetition template. -->
 </p><p>Attributes <code id=attr-global-repeat title=attr-global-repeat>repeat</code>, <code id=attr-global-repeat-min title=attr-global-repeat-min>repeat-min</code>, <code id=attr-global-repeat-max title=attr-global-repeat-max>repeat-max</code>, <code id=attr-global-repeat-start title=attr-global-repeat-start>repeat-start</code>, and <code id=attr-global-repeat-template title=attr-global-repeat-template>repeat-template</code> in the
 <a href=#html-namespace>HTML namespace</a> <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <em class=rfc2119>MUST</em> be treated
 as equivalent to attributes in no namespace specified for an <a href=#html-elements title="HTML elements">HTML element</a> for the purpose of the
-conformance checking.<!-- They <em class=rfc2119>MUST NOT</em> be
-specified for an <span title="HTML elements">HTML
-element</span>. (This requirement is redundant, since they are not
-allowed at all, they are non-conforming.) --><!--
+conformance checking.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#definitions> -->
 
 </p></div>
@@ -2480,7 +2481,8 @@ architecture of HTML, XML, and DOM.
 
 <dl>
 
-<dt>Attributes in the <a href=#html-namespace>HTML namespace</a>
+<dt><a href=#namespaced-global-attr>Attributes in the <span>HTML
+namespace</span></a>
 
 </dt><dd><a href=#attr-global-about><code>about</code></a>
 </dd><dd><a href=#attr-global-class><code>class</code></a>
@@ -2585,6 +2587,7 @@ architecture of HTML, XML, and DOM.
 </dd><dd><a href=#attr-rev><code>rev</code></a>
 </dd><dd><a href=#attr-typeof><code>typeof</code></a>
 </dd><dd><a href=#attr-unselectable><code>unselectable</code></a>
+</dd><dd><a href=#attr-xmlspace><code>xml:space</code></a>
 
 </dd><dt>The <code>a</code> element
 
