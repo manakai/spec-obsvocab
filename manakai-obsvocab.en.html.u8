@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 28 March 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 3 April 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -497,7 +497,8 @@ CURIE or CURIEs -->
 <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite>
 of an <span>HTML element</span>, if present, <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
 space-separated tokens</a>.<!-- HTML4, RDFa (reserved word | CURIE)
--> HTML5 <a rel> -->
+-> HTML5 <a rel>; HTML5 allows rel="up up" as exception, but we don't
+copy that requirement here. -->
 
 </p><p>Attributes <code id=attr-global-about title=attr-global-about>about</code>, <code id=attr-global-typeof title=attr-global-typeof>typeof</code>, <code id=attr-global-property title=attr-global-property>property</code>, <code id=attr-global-resource title=attr-global-resource>resource</code>,
 <code id=attr-global-content title=attr-global-content>content</code>,
@@ -2362,19 +2363,20 @@ element.<!-- WA1 parsing -->
 <p>If the <code id=attr-repeat title=attr-repeat>repeat</code>
 attribute <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> of an <span>element</span> is present,
 its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a>
-or equal to <code title="">template</code>.<!--
+or equal to <code title="">template</code>.  An element is a <dfn id=concept-repetition-template title=concept-repetition-template>repetition template</dfn> if either
+the element is an <a href=#html-elements title="HTML elements">HTML element</a> and
+the element has the <code title=attr-repeat>repeat</code> attribute in
+no namespace whoes value is equal to <code title="">template</code> or
+the element is not an <a href=#html-elements title="HTML elements">HTML element</a>
+and the element has the <code title=attr-global-repeat>repeat</code>
+attribute in the <a href=#html-namespace>HTML namespace</a> whoes value is equal to
+<code title="">template</code>.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#repeat> -->
 
 </p><p>If <code id=attr-repeat-min title=attr-repeat-min>repeat-min</code>, <code id=attr-repeat-max title=attr-repeat-max>repeat-max</code>, or <code id=attr-repeat-start title=attr-repeat-start>repeat-start</code> attribute <cite class="bibref
 informative">[<a href=#ref-WF2>WF2</a>]</cite> of an
 <span>element</span> is present, its value <em class=rfc2119>MUST</em>
-be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.  These attributes <em class=rfc2119>MUST NOT</em> be specified unless either the element is
-an <a href=#html-elements title="HTML elements">HTML element</a> and the element has
-the <code title=attr-repeat>repeat</code> attribute in no namespace
-whoes value is equal to <code title="">template</code> or the element is
-not an <a href=#html-elements title="HTML elements">HTML element</a> and the element
-has the <code title=attr-global-repeat>repeat</code> attribute in the
-<a href=#html-namespace>HTML namespace</a> whoes value is equal to <code title="">template</code>.<!--
+be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.  These attributes <em class=rfc2119>MUST NOT</em> be specified unless the element is a <a href=#concept-repetition-template title=concept-repetition-template>repetition template</a>.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#the-repeat-min>,
 <http://www.whatwg.org/specs/web-forms/current-work/#repeat-start> -->
 
@@ -2390,7 +2392,8 @@ conformance checking, unless otherwise stated, these states <em class=rfc2119>MU
 or the <code title=attr-input-template>template</code> attribute of
 <code>input</code> or <code>button</code> element <cite class="bibref
 informative">[<a href=#ref-WF2>WF2</a>]</cite> is present, its value
-<em class=rfc2119>MUST</em> be the ID of an element.  The <code title=attr-input-template>template</code> attribute of
+<em class=rfc2119>MUST</em> be the ID of a <a href=#concept-repetition-template title=concept-repetition-template>repetition template</a>.  The
+<code title=attr-input-template>template</code> attribute of
 <code>input</code> or <code>button</code> element applies only to
 elements whoes <code title="">type</code> attribute is in the <span title=attr-input-type-text>Add Button</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#repeat-template>,
