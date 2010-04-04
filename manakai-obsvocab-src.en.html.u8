@@ -465,9 +465,9 @@ informative">[<a href="#ref-SOFTBANK">SOFTBANK</a>]</cite> is a
 title=attr-resource id=attr-resource>resource</code> attribute <cite
 class="bibref informative">[<a href="#ref-RDFA">RDFA</a>]</cite> of an
 <span>HTML element</span> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid URL</span> or a string whoes
+class=rfc2119>MUST</em> be a <span>valid URL</span> or a string whose
 first character is a U+005B <code class=charname>LEFT SQUARE
-BRACKET</code> character ([) and whoes last character is a U+005D
+BRACKET</code> character ([) and whose last character is a U+005D
 <code class=charname>RIGHT SQUARE BRACKET</code> character (]).<!--
 RDFa; URIorSafeCURIE -->
 
@@ -869,7 +869,7 @@ was toppadding, rightpadding, bottompadding, and leftpadding -->
 <code title=attr-vspace id=attr-vspace>vspace</code> attribute of an
 <code>applet</code>, <code>embed</code>, <code>iframe</code>,
 <code>img</code>, <code>object</code>, or <code>marquee</code>
-element, or of an <code>input</code> element whoes <code
+element, or of an <code>input</code> element whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-image>Image Button</span> state, is specified,
 its value <em class=rfc2119>MUST</em> be a <span>valid dimension
@@ -922,7 +922,7 @@ integer</span>.<!--
 attribute of an <code>embed</code> <cite class="bibref
 informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite>,
 <code>img</code>, or <code>object</code> element, or an
-<code>input</code> element whoes <code
+<code>input</code> element whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-image>Image Button</span> state is specified,
 its value <em class=rfc2119>MUST</em> be a <span>valid non-negative
@@ -1138,7 +1138,7 @@ id=attr-objects-align>align</code> attribute of an
 <code>applet</code>, <code>embed</code>, <code>iframe</code>,
 <code>img</code>, <code>object</code>, or <code>spacer</code> <cite
 class="bibref informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite>
-element, or of an <code>input</code> element whoes <code
+element, or of an <code>input</code> element whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-image>Image Button</span> state, is an
 <span>enumerated attribute</span> with keywords <code
@@ -1176,7 +1176,7 @@ attribute of a <code>col</code>, <code>colgroup</code> <cite
 class="bibref informative">[<a href="#ref-HTML4">HTML4</a>]</cite>,
 <code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
 <code>tr</code>, <code>th</code>, or <code>td</code> element is
-present, its value <em class=rfc2119>MUST</em> be a string whoes
+present, its value <em class=rfc2119>MUST</em> be a string whose
 length is one (1), i.e. a character.<!-- HTML4 --> If the <code
 title=attr-tables-ch id=attr-tables-ch>ch</code> attribute of a
 <code>col</code>, <code>colgroup</code> <cite class="bibref
@@ -1184,7 +1184,7 @@ informative">[IE]</cite>, <code>thead</code>, <code>tbody</code>,
 <code>tfoot</code>, <code>tr</code>, <code>th</code>, or
 <code>td</code> element <cite class="bibref informative">[<a
 href="#ref-MSDN">MSDN</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a string whoes length is one (1), i.e. a
+class=rfc2119>MUST</em> be a string whose length is one (1), i.e. a
 character..<!--
 <http://msdn.microsoft.com/en-us/library/ms533552%28VS.85%29.aspx> -->
 
@@ -1552,7 +1552,7 @@ title=attr-a-email>email</code> attribute is specified, the
 <code>a</code> element <em class=rfc2119>MUST</em> have its <code
 title=attr-hyperlink-href>href</code> attribute specified and its
 value <em class=rfc2119>MUST</em> be an <span>absolute URL</span>
-whoes <span title=url-scheme>&lt;scheme></span> <span title="ASCII
+whose <span title=url-scheme>&lt;scheme></span> <span title="ASCII
 case-insensitive">ASCII case-insensitively</span> matches to <code
 title="mailto:">mailto</code>.<!-- Softbank 3.9.1., has to be less
 than or equal to 128 bytes -->
@@ -1595,7 +1595,7 @@ title=attr-a-kana>kana</code> attribute is specified, the
 <code>a</code> element <em class=rfc2119>MUST</em> have its <code
 title=attr-hyperlink-href>href</code> attribute specified and its
 value <em class=rfc2119>MUST</em> be an <span>absolute URL</span>
-whoes <span title=url-scheme>&lt;scheme></span> <span title="ASCII
+whose <span title=url-scheme>&lt;scheme></span> <span title="ASCII
 case-insensitive">ASCII case-insensitively</span> matches to <code
 title="tel:">tel</code>, <code title="tel-av:">tel-av</code>, or <code
 title="mailto:">mailto</code>.<!--
@@ -1612,7 +1612,7 @@ address</span>.  If <code title=attr-a-email>email</code> attribute is
 specified, the <code>a</code> element <em class=rfc2119>MUST</em> have
 its <code title=attr-hyperlink-href>href</code> attribute specified
 and its value <em class=rfc2119>MUST</em> be an <span>absolute
-URL</span> whoes <span title=url-scheme>&lt;scheme></span> <span
+URL</span> whose <span title=url-scheme>&lt;scheme></span> <span
 title="ASCII case-insensitive">ASCII case-insensitively</span> matches
 to <code title="tel:">tel</code> or <code
 title="tel-av:">tel-av</code>.<!--
@@ -1624,14 +1624,14 @@ title="tel-av:">tel-av</code>.<!--
 id=attr-a-memoryname>memoryname</code> attribute of an <code>a</code>
 element <cite class="bibref informative">[<a
 href="#ref-SOFTBANK">SOFTBANK</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a string whoes length is greater than two
+class=rfc2119>MUST</em> be a string whose length is greater than two
 (2).  The attribute value <em class=rfc2119>MUST</em> contain a <code
 class=charname>U+002D HYPHEN-MINUS</code> character (-) in the middle.
 If <code title=attr-a-memoryname>memoryname</code> attribute is
 specified, the <code>a</code> element <em class=rfc2119>MUST</em> have
 its <code title=attr-hyperlink-href>href</code> attribute specified
 and its value <em class=rfc2119>MUST</em> be an <span>absolute
-URL</span> whoes <span title=url-scheme>&lt;scheme></span> <span
+URL</span> whose <span title=url-scheme>&lt;scheme></span> <span
 title="ASCII case-insensitive">ASCII case-insensitively</span> matches
 to <code title="tel:">tel</code> or <code
 title="mailto:">mailto</code>.<!-- Softbank 3.9.1.; Kana-or-kanji
@@ -1650,7 +1650,7 @@ class=rfc2119>MUST</em> be a string that is syntactically valid as an
 <code title=attr-accesskey>accesskey</code> attribute value.  The
 <code title=attr-directkey>directkey</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-submit>Submit Button</span> state.  If the
 <code title=attr-directkey>directkey</code> attribute is specified for
 an <code>input</code> element, the <code title>value</code> attribute
@@ -1666,7 +1666,7 @@ specified unless the <code title=attr-directkey>directkey</code>
 attribute is also specified.  The <code
 title=attr-nonumber>nonumber</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-submit>Submit Button</span> state.<!--
 Softbank 3.9.1., 3.12.2. -->
 
@@ -1718,7 +1718,7 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 <span>valid hash-name reference</span> to a <code>map</code> element.
 The <code title=attr-input-usemap>usemap</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-image>Image Button</span> state.<!-- Old
 HTML5 definition -->
 
@@ -1743,7 +1743,7 @@ class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.  The
 <code title=attr-dynsrc>dynsrc</code>, <code
 title=attr-lowsrc>lowsrc</code>, or <code title=attr-vrml>vrml</code>
 attribute of the <code>input</code> element applies only to
-<code>input</code> elements whoes <code
+<code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-image>Image Button</span> state.<!-- lowsrc
 <http://web.archive.org/web/20030622172358/devedge.netscape.com/library/manuals/1998/htmlguide/tags8.html#1455241>,
@@ -2041,7 +2041,7 @@ informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
 <span>enumerated attribute</span> with keywords <code
 title>fileopen</code> and <code title>mouseover</code>.  The <code
 title=attr-start>start</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code
+element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-image>Image Button</span> state.  The attribute
 <em class=rfc2119>MUST NOT</em> be specified unless the element also
@@ -2060,7 +2060,7 @@ title=attr-input-src>src</code> attribute of the <code>input</code>
 element is also specified.  The <code
 title=attr-soundstart>soundstart</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-submit>Submit Button</span> state.<!--
 Softbank 3.9.1., 3.12.2. -->
 
@@ -2071,7 +2071,7 @@ href="#ref-MSDN">MSDN</a>]</cite> is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid integer</span> that
 represents an integer greater than or equal to &minus;1.  The <code
 title=attr-loop>loop</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code
+element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-image>Image Button</span> state.<!--
 <http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
@@ -2093,7 +2093,7 @@ title=attr-a-href>href</code> attribute of the <code>a</code> element
 or the <code title=attr-input-src>src</code> attribute of the
 <code>input</code> element is also specified.<!-- The <code
 title=attr-a-loop>loop</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code
+element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-submit>Submit Button</span> state.--><!--
 Softbank 3.9.1., 3.12.2. -->
@@ -2125,7 +2125,7 @@ title=attr-a-href>href</code> attribute of the <code>a</code> element
 or the <code title=attr-input-src>src</code> attribute of the
 <code>input</code> element is also specified.  The <code
 title=attr-volume>volume</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code
+element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-submit>Submit Button</span> state.<!-- Softbank
 3.9.1., 3.12.2. -->
@@ -2172,7 +2172,7 @@ href="#ref-SOFTBANK">SOFTBANK</a>]</cite> are an <span>enumerated
 attribute</span> with keywords <code title>select</code> and <code
 title>focus</code>.  The <code title=attr-a-vibration>vibration</code>
 attribute of the <code>input</code> element applies only to
-<code>input</code> elements whoes <code
+<code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is <em>not</em> in the
 <span title=attr-input-type-hidden>Hidden</span> state.<!-- Softbank
 3.9.1., 3.12.2. -->
@@ -2194,7 +2194,7 @@ integer</span> that represents a number in the range 1 to 9
 specified unless the <code title>vibration</code> attribute is also
 specified.  The <code title=attr-viblength>viblength</code> attribute
 of the <code>input</code> element applies only to <code>input</code>
-elements whoes <code title=attr-input-type>type</code> attribute is
+elements whose <code title=attr-input-type>type</code> attribute is
 <em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
 state.<!-- Softbank 3.9.1., 3.10.1., 3.12.2. -->
 
@@ -2566,7 +2566,7 @@ keywords <code title>on</code> and <code title>off</code>.  Attributes
 <code title=attr-input-autocapitalize>autocapitalize</code> and <code
 title=attr-input-autocorrect>autocorrect</code> of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-text>Text</span> state<!-- only?? or,
 type=url and type=email and type=search? -->.<!-- autocapitalize
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize>,
@@ -2579,7 +2579,7 @@ attribute of a <code>form</code> element <cite class="bibref
 informative">[<a href="#ref-WF2">WF2</a>]</cite> is present, its value
 <em class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.
 The <span>URL</span> <em class=rfc2119>MUST</em> reference an
-<span>XML document</span> whoes <span>root element</span> is the <code
+<span>XML document</span> whose <span>root element</span> is the <code
 title=formdata-formdata>formdata</code> element in the <code
 title>http://n.whatwg.org/formdata</code> namespace.  The document <em
 class=rfc2119>MUST</em> be labeled using a <span>XML MIME type</span>.
@@ -2592,7 +2592,7 @@ attribute of a <code>select</code> or <code>datalist</code> element
 <cite class="bibref informative">[<a href="#ref-WF2">WF2</a>]</cite>
 is present, its value <em class=rfc2119>MUST</em> be a <span>valid
 non-empty URL</span>.  The <span>URL</span> <em
-class=rfc2119>MUST</em> reference an <span>XML document</span> whoes
+class=rfc2119>MUST</em> reference an <span>XML document</span> whose
 <span>root element</span> is the <code>select</code> element.  It is
 encouraged to use the MIME type <code>application/xml</code>.  It <em
 class=rfc2119>SHOULD NOT</em> be labeled by media type
@@ -2616,7 +2616,7 @@ href="#ref-WF2">WF2</a>]</cite> are <span title="enumerated
 attribute">enumerated attributes</span> with keywords <code
 title>document</code> and <code title>values</code>.  The <code
 title=attr-fs-replace>replace</code> attribute of <code>input</code>
-or <code>button</code> element applies only to elements whoes <code
+or <code>button</code> element applies only to elements whose <code
 title>type</code> attribute is in the <span title>Submit Button</span>
 state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#replace> -->
@@ -2656,7 +2656,7 @@ class=charname>LATIN SMALL LETTER Z</code>, or a <span>valid non-empty
 URL</span> that is an <span>absolute URL</span>.  The <code
 title=attr-inputmode>inputmode</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in <span
+whose <code title=attr-input-type>type</code> attribute is in <span
 title=attr-input-type-text>Text</span>, <span
 title=attr-input-type-search>Search</span>, <span
 title=attr-input-type-password>Password</span>, <span
@@ -2678,7 +2678,7 @@ keyword <code title>integer</code>, or keyword <code
 title>float</code>.  The <code
 title=attr-input-precision>precision</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-number>Number</span> or <span
 title=attr-input-type-range>Range</span> state.<!--
 <http://hixie.ch/specs/html/forms/web-forms-3#precision>,
@@ -2692,7 +2692,7 @@ an <span>enumerated attribute</span> with keywords <code
 title>1</code>, <code title>2</code>, <code title>3</code>, and <code
 title>4</code>.  The <code title=attr-istyle>istyle</code> attribute
 of the <code>input</code> element applies only to <code>input</code>
-elements whoes <code title=attr-input-type>type</code> attribute is in
+elements whose <code title=attr-input-type>type</code> attribute is in
 the <span title=attr-input-type-text>Text</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>;
 au and emobile also implements this.  Softbank allows this attribute
@@ -2708,7 +2708,7 @@ title>alphabet</code>, <code title>numeric</code>, <code
 title>any</code>, <code title>emailaddr</code>, <code
 title>phonenumber</code>, and <code title>url</code>.  The <code
 title=attr-mode>mode</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code
+element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-text>Text</span> or <span
 title=attr-input-type-password>Password</span> state.  If the <code
@@ -2735,7 +2735,7 @@ Alternatively, a <span>format code</span> can be a U+005C <code
 class=charname>REVERSE SOLIDUS</code> character (\) followed by a
 character.  The <code title=attr-format>format</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-text>Text</span> state.<!--
 <http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
 2.0
@@ -2801,7 +2801,7 @@ href="#ref-SAFARI">SAFARI</a>]</cite> is present, its value <em
 class=rfc2119>MAY</em> be any string.  The <code
 title=attr-input-autosave>autosave</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-search>Search</span> state.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autosave>,
 <http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005890>
@@ -2814,7 +2814,7 @@ href="#ref-SAFARI">SAFARI</a>]</cite> is a <span>boolean
 attribute</span>. The <code
 title=attr-input-incremental>incremental</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-search>Search</span> state.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/incremental>,
 <http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005890>
@@ -2827,7 +2827,7 @@ href="#ref-SAFARI">SAFARI</a>]</cite> is present, its value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
 The <code title=attr-input-results>results</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
-whoes <code title=attr-input-type>type</code> attribute is in the
+whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-search>Search</span> state.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/results>
 -->
@@ -2869,7 +2869,7 @@ with keywords
 
 The <code title=attr-input-vcard_name>vcard_name</code> attribute of
 the <code>input</code> element applies only to <code>input</code>
-elements whoes <code title=attr-input-type>type</code> attribute is in
+elements whose <code title=attr-input-type>type</code> attribute is in
 the <span title=attr-input-type-text>Text</span> or <span
 title=attr-input-type-password>Password</span> state.<!--
 <http://msdn.microsoft.com/en-us/library/ms535130%28VS.85%29.aspx>.
@@ -2891,7 +2891,7 @@ title>address4</code>, <code title>address</code>, <code
 title>birthday1</code>, <code title>birthday2</code>, <code
 title>birthday3</code>, and <code title>birthday</code>.  The <code
 title=attr-iprof>iprof</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whoes <code
+element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-text>Text</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
@@ -2985,10 +2985,10 @@ or equal to <code title>template</code>.  An element is a <dfn
 title=concept-repetition-template>repetition template</dfn> if either
 the element is an <span title="HTML elements">HTML element</span> and
 the element has the <code title=attr-repeat>repeat</code> attribute in
-no namespace whoes value is equal to <code title>template</code> or
+no namespace whose value is equal to <code title>template</code> or
 the element is not an <span title="HTML elements">HTML element</span>
 and the element has the <code title=attr-global-repeat>repeat</code>
-attribute in the <span>HTML namespace</span> whoes value is equal to
+attribute in the <span>HTML namespace</span> whose value is equal to
 <code title>template</code>.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#repeat> -->
 
@@ -3035,7 +3035,7 @@ informative">[<a href="#ref-WF2">WF2</a>]</cite> is present, its value
 title=concept-repetition-template>repetition template</span>.  The
 <code title=attr-input-template>template</code> attribute of
 <code>input</code> or <code>button</code> element applies only to
-elements whoes <code title>type</code> attribute is in the <span
+elements whose <code title>type</code> attribute is in the <span
 title=attr-input-type-text>Add Button</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#repeat-template>,
 <http://www.whatwg.org/specs/web-forms/current-work/#template>; the
@@ -3157,6 +3157,8 @@ architecture of HTML, XML, and DOM.
 
 <div class=section>
 <h2 class=no-num>Index</h2>
+
+<p><em>This section is non‐normative.</em>
 
 <dl>
 
@@ -3292,8 +3294,8 @@ namespace</span></a>
 <dd><a href="#attr-hyperlink-methods"><code>methods</code></a>
 <dd><a href="#attr-nonumber"><code>nonumber</code></a>
 <dd><a href="#attr-a-shape"><code>shape</code></a>
-<dd><a href="#attr-a-src"><code>src</code></a>
 <dd><a href="#attr-soundstart"><code>soundstart</code></a>
+<dd><a href="#attr-a-src"><code>src</code></a>
 <dd><a href="#attr-a-telbook"><code>telbook</code></a>
 <dd><a href="#attr-hyperlink-urn"><code>urn</code></a>
 <dd><a href="#attr-utn"><code>utn</code></a>
