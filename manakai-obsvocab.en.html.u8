@@ -1243,9 +1243,10 @@ NOT</em> be specified.<!--
 </p><p>The <code id=attr-lcs title=attr-lcs>lcs</code> attribute of
 <code>a</code> and <code>form</code> elements <cite class="bibref
 informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is a
-<a href=#boolean-attribute>boolean attribute</a>.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
-<code title=attr-lcs>lcs</code> attribute <em class=rfc2119>MUST
-NOT</em> be specified.<!--
+<a href=#boolean-attribute>boolean attribute</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-lcs>lcs</code> attribute of the <code>a</code> element is
+specified.  If the <code title=attr-hyperlink-target>target</code>
+attribute is specified, the <code title=attr-lcs>lcs</code> attribute
+<em class=rfc2119>MUST NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/location_info.html#p03>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p13>
 -->
@@ -1253,12 +1254,12 @@ NOT</em> be specified.<!--
 </p><p>The <code id=attr-z title=attr-z>z</code> attribute of
 <code>a</code> and <code>form</code> elements <cite class="bibref
 informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a
-<a href=#boolean-attribute>boolean attribute</a>.<!-- Softbank 3.9.1.,
-3.12.1. (historical) -->
+<a href=#boolean-attribute>boolean attribute</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-z>z</code> attribute of the <code>a</code> element is
+specified.<!-- Softbank 3.9.1., 3.12.1. (historical) -->
 
 </p><p>The <code id=attr-measure title=attr-measure>measure</code>
 attribute of <code>a</code> and <code>form</code> elements <cite class="bibref informative">[<a href=#ref-EMNET>EMNET</a>]</cite> is
-an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">cid</code> and <code title="">auto</code>.  If the <code title=attr-measure>measure</code> attribute of an <code>a</code>
+an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">cid</code> and <code title="">auto</code>.  If the <code title=attr-measure>measure</code> attribute of the <code>a</code>
 element is specified, the <code title=attr-hyperlink-href>href</code>
 attribute <em class=rfc2119>MUST</em> also be specified.  If the <code title=attr-measure>measure</code> attribute of a <code>form</code>
 element is specified, the <code title=attr-fs-action>action</code>
