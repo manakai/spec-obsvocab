@@ -212,8 +212,6 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#unordered-set-of-unique-space-separated-tokens><dfn id=unordered-set-of-unique-space-separated-tokens>unordered set of unique space-separated tokens</dfn></a>,
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-hash-name-reference><dfn id=valid-hash-name-reference>valid hash-name reference</dfn></a>,
-
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-browsing-context-name-or-keyword><dfn id=valid-brosing-context-name-or-keyword>valid brosing context name or keyword</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#boolean-attribute><dfn id=boolean-attribute>boolean attribute</dfn></a>,
@@ -1146,7 +1144,14 @@ that represents a number <code title="">100</code>, <code title="">200</code>, <
 <div class=section>
 <h3 id=hyperlinks><span class=secno>4.9 </span>Hyperlinks</h3>
 
-<div class=section>
+<p>A <dfn id=valid-hash-id-reference>valid hash-ID reference</dfn> to an element of type <var title="">type</var> is a string consisting of a U+0023 <code class=charname>NUMBER SIGN</code> character (#) followed by a string
+which exactly matches the ID of an element with type <var>type</var>
+in the same document.<!-- See also <span>valid hash-name
+reference</span>
+<http://www.whatwg.org/specs/web-apps/current-work/#valid-hash-name-reference>
+-->
+
+</p><div class=section>
 <h4 id=link-destinations><span class=secno>4.9.1 </span>Link destinations</h4>
 
 <p>If the <code id=attr-hyperlink-urn title=attr-hyperlink-urn>urn</code> attribute of an <code>link</code>
@@ -1176,7 +1181,7 @@ the attribute value.  The length of the attribute value <em class=rfc2119>MUST N
 
 </p><p>If the <code id=attr-a-ijam title=attr-a-ijam>ijam</code> attribute
 of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element or
-a <a href=#valid-hash-name-reference>valid hash-name reference</a> to an <code>object</code>
+a <a href=#valid-hash-id-reference>valid hash-ID reference</a> to an <code>object</code>
 element.  The <code title=attr-hyperlink-href>href</code> attribute
 <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ijam>ijam</code> attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
 <code title=attr-a-ijam>ijam</code> attribute <em class=rfc2119>MUST
@@ -1198,7 +1203,7 @@ NOT</em> be specified.<!--
 -->
 
 </p><p>If <code id=attr-a-ilet title=attr-a-ilet>ilet</code>, <code id=attr-a-iswf title=attr-a-iswf>iswf</code>, or <code id=attr-a-irst title=attr-a-irst>irst</code> attribute of the
-<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
+<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-id-reference>valid hash-ID reference</a> to
 an <code>object</code> element.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or
 <code title=attr-a-irst>irst</code> attribute is specified.  If the
 <code title=attr-hyperlink-target>target</code> attribute is
@@ -1211,7 +1216,7 @@ attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
 -->
 
 </p><p>If the <code id=attr-a-eswf title=attr-a-eswf>eswf</code> attribute
-of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-EMNET>EMNET</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-name-reference>valid hash-name reference</a> to
+of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-EMNET>EMNET</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-id-reference>valid hash-ID reference</a> to
 an <code>object</code> element.<!--
 <http://developer.emnet.ne.jp/flashlite3.html> -->
 
@@ -1396,7 +1401,7 @@ parsing; only affects XHTML -->
 
 </p><p>If the <code id=attr-input-usemap title=attr-input-usemap>usemap</code> attribute of the <code>input</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
-<a href=#valid-hash-name-reference>valid hash-name reference</a> to a <code>map</code> element.
+<a href=#valid-hash-id-reference>valid hash-ID reference</a> to a <code>map</code> element.
 The <code title=attr-input-usemap>usemap</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whose <code title=attr-input-type>type</code> attribute is in the

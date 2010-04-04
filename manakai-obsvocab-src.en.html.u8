@@ -144,8 +144,6 @@ href="#ref-WA1">WA1</a>]</cite> to define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#unordered-set-of-unique-space-separated-tokens"><dfn>unordered set of unique space-separated tokens</dfn></a>,
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-hash-name-reference"><dfn>valid hash-name reference</dfn></a>,
-
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-browsing-context-name-or-keyword"><dfn>valid brosing context name or keyword</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#boolean-attribute"><dfn>boolean attribute</dfn></a>,
@@ -1382,6 +1380,15 @@ title>900</code>.<!--
 <div class=section>
 <h3>Hyperlinks</h3>
 
+<p>A <dfn>valid hash-ID reference</dfn> to an element of type <var
+title>type</var> is a string consisting of a U+0023 <code
+class=charname>NUMBER SIGN</code> character (#) followed by a string
+which exactly matches the ID of an element with type <var>type</var>
+in the same document.<!-- See also <span>valid hash-name
+reference</span>
+<http://www.whatwg.org/specs/web-apps/current-work/#valid-hash-name-reference>
+-->
+
 <div class=section>
 <h4>Link destinations</h4>
 
@@ -1428,7 +1435,7 @@ class=rfc2119>MUST NOT</em> be greater than 128.<!--
 of the <code>a</code> element <cite class="bibref informative">[<a
 href="#ref-IMODE">IMODE</a>]</cite> is present, its value <em
 class=rfc2119>MUST</em> be the ID of an <code>object</code> element or
-a <span>valid hash-name reference</span> to an <code>object</code>
+a <span>valid hash-ID reference</span> to an <code>object</code>
 element.  The <code title=attr-hyperlink-href>href</code> attribute
 <em class=rfc2119>MUST</em> be specified if the <code
 title=attr-a-ijam>ijam</code> attribute is specified.  If the <code
@@ -1462,7 +1469,7 @@ title=attr-a-iswf id=attr-a-iswf>iswf</code>, or <code
 title=attr-a-irst id=attr-a-irst>irst</code> attribute of the
 <code>a</code> element <cite class="bibref informative">[<a
 href="#ref-IMODE">IMODE</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid hash-name reference</span> to
+class=rfc2119>MUST</em> be a <span>valid hash-ID reference</span> to
 an <code>object</code> element.  The <code
 title=attr-hyperlink-href>href</code> attribute <em
 class=rfc2119>MUST</em> be specified if <code
@@ -1481,7 +1488,7 @@ attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
 <p>If the <code title=attr-a-eswf id=attr-a-eswf>eswf</code> attribute
 of the <code>a</code> element <cite class="bibref informative">[<a
 href="#ref-EMNET">EMNET</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid hash-name reference</span> to
+class=rfc2119>MUST</em> be a <span>valid hash-ID reference</span> to
 an <code>object</code> element.<!--
 <http://developer.emnet.ne.jp/flashlite3.html> -->
 
@@ -1715,7 +1722,7 @@ parsing; only affects XHTML -->
 <p>If the <code title=attr-input-usemap
 id=attr-input-usemap>usemap</code> attribute of the <code>input</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
-<span>valid hash-name reference</span> to a <code>map</code> element.
+<span>valid hash-ID reference</span> to a <code>map</code> element.
 The <code title=attr-input-usemap>usemap</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whose <code title=attr-input-type>type</code> attribute is in the
