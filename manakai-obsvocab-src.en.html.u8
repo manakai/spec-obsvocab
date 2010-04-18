@@ -1695,10 +1695,10 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 id=attr-objects-name>name</code> attributes specified, those elements
 <em class=rfc2119>MUST</em> be treated as if they were <code>a</code>
 elements for the purpose of conformance of <code title>name</code>
-attributes of <code>a</code>, <code>applet</code>, and
-<code>img</code> elements and the <code title=attr-nextid-n>n</code>
-attribute of the <code>nextid</code> element in the document.<!-- WA1
-UA reqs
+attributes of <code>a</code>, <code>applet</code>, <code>embed</code>,
+and <code>img</code> elements and the <code
+title=attr-nextid-n>n</code> attribute of the <code>nextid</code>
+element in the document.<!-- WA1 UA reqs
 e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
 WA1 obsolete, HTML4 --><!-- There was <layer name> according to
 <http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> -->
