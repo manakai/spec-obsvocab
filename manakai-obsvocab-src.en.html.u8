@@ -1333,9 +1333,11 @@ attribute of a <code>font</code> or <code>basefont</code> element is
 present, its value <em class=rfc2119>MUST</em> be an optional U+002B
 <code class=charname>PLUS SIGN</code> character (+) or an optional
 <code class=charname>U+002D HYPHEN-MINUS</code> character (-),
-followed by a character in the range U+0030 <code class=charname>DIGIT
-ZERO</code> (0) to U+0037 <code class=charname>DIGIT SEVEN</code>
-(7).<!-- WA1 rendering of <font size>, HTML4 -->
+followed by a character in the range U+0031 <code class=charname>DIGIT
+ONE</code> (1) to U+0037 <code class=charname>DIGIT SEVEN</code>
+(7).<!-- WA1 rendering of <font size>
+<http://www.whatwg.org/specs/web-apps/current-work/complete.html#fonts-and-colors>,
+HTML4 -->
 
 <p>If the <code title=attr-font-point-size
 id=attr-font-point-size>point-size</code> attribute <cite
