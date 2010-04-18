@@ -964,9 +964,8 @@ attribute of a <code>col</code>, <code>colgroup</code> <cite class="bibref infor
 <code>img</code>, <code>input</code>, <code>object</code>, or
 <code>spacer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> element is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, <code title="">bottom</code>,
-<code title="">baseline</code>, <code title="">center</code>, <code title="">middle</code>, <code title="">texttop</code> <code title="">absmiddle</code>, <code title="">abscenter</code>, and <code title="">bottom</code>.  Keywords other than <code title="">left</code>,
-<code title="">right</code>, <code title="">top</code>, <code title="">middle</code>, and <code title="">bottom</code> are non-conforming.
-The <code title=attr-objects-align>align</code> attribute of the
+<code title="">baseline</code>, <code title="">center</code>, <code title="">middle</code>, <code title="">texttop</code>, <code title="">absmiddle</code>, <code title="">abscenter</code>.  Keywords other
+than <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, <code title="">middle</code>, and <code title="">bottom</code> are non-conforming.  The <code title=attr-objects-align>align</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-image>Image Button</span> state.<!-- WA1
