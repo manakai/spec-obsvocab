@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 4 April 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 18 April 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -1024,19 +1024,14 @@ wrap
 Softbank 3.8.1. (historical) -->
 
 </p><p>The <code id=attr-br-clear title=attr-br-clear>clear</code>
-attribute of a <code>br</code>, <code>address</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>,
-<code>blockquote</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>center</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>,
-<code>h1</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>h2</code> <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>h3</code>
-<cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>h4</code> <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>h5</code>
-<cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>h6</code> <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite>,
-<code>listing</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>p</code> <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite>,
-<code>plaintext</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>pre</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, or
-<code>xmp</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> element is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">all</code>, and <code title="">both</code>, where <code title="">both</code> is
+attribute of the <code>br</code> element and <code>address</code>,
+<code>blockquote</code>, <code>center</code>, <code>h1</code>,
+<code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>,
+<code>h6</code>, <code>listing</code>, <code>p</code>,
+<code>plaintext</code>, <code>pre</code>, and <code>xmp</code>
+elements <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an <a href=#enumerated-attribute>enumerated
+attribute</a> with keywords <code title="">none</code>, <code title="">left</code>, <code title="">right</code>, <code title="">all</code>,
+and <code title="">both</code>, where <code title="">both</code> is
 non-conforming.<!-- WA1 rendering, HTML4,
 <http://msdn.microsoft.com/en-us/library/ms533562%28VS.85%29.aspx> -->
 
@@ -1268,7 +1263,7 @@ attribute <em class=rfc2119>MUST</em> also be specified.<!--
 
 </p><p>If the <code id=attr-a-mailbody title=attr-a-mailbody>mailbody</code> attribute of the <code>a</code>
 element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> element is present, its
-value <em class=rfc2119>MAY</em> be any string.  If <code title=attr-a-email>email</code> attribute is specified, the
+value <em class=rfc2119>MAY</em> be any string.  If the <code title=attr-a-mailbody>mailbody</code> attribute is specified, the
 <code>a</code> element <em class=rfc2119>MUST</em> have its <code title=attr-hyperlink-href>href</code> attribute specified and its
 value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>
 whose <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII
@@ -1353,7 +1348,7 @@ an <code>input</code> element, the <code title="">value</code> attribute
 3.12.2. -->
 
 </p><p>The <code id=attr-nonumber title=attr-nonumber>nonumber</code>
-attribute of the <code>a</code> and <code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a <a href=#boolean-attribute>boolean
+attribute of <code>a</code> and <code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a <a href=#boolean-attribute>boolean
 attribute</a>.  This attribute <em class=rfc2119>MUST NOT</em> be
 specified unless the <code title=attr-directkey>directkey</code>
 attribute is also specified.  The <code title=attr-nonumber>nonumber</code> attribute of the
@@ -1679,8 +1674,8 @@ language according to MSDN.
 of the <code>a</code> <!-- or <code>input</code> --> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
 integer</a><!-- that represents a number less than or equal to
 50,--> or a string <code title="">infinite</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-a-href>href</code> attribute of the <code>a</code> element
-or the <code title=attr-input-src>src</code> attribute of the
-<code>input</code> element is also specified.<!-- The <code
+<!-- or the <code title=attr-input-src>src</code> attribute of the
+<code>input</code> element --> is also specified.<!-- The <code
 title=attr-a-loop>loop</code> attribute of the <code>input</code>
 element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
@@ -1713,8 +1708,8 @@ element applies only to <code>input</code> elements whose <code title=attr-input
 <http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
 
 </p><p>The <code id=attr-media-autobuffer title=attr-media-autobuffer>autobuffer</code> attribute of
-<code>audio</code> and <code>video</code> elements is a <span>booelan
-attribute</span>.<!-- HTML5 dropped -->
+<code>audio</code> and <code>video</code> elements is a <a href=#boolean-attribute>boolean
+attribute</a>.<!-- HTML5 dropped -->
 
 </p><p>If <code id=attr-media-start title=attr-media-start>start</code>,
 <code id=attr-media-end title=attr-media-end>end</code>, <code id=attr-media-loopstart title=attr-media-loopstart>loopstart</code>,
