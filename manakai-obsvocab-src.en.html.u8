@@ -430,7 +430,8 @@ id=bgsound>bgsound</code> element is <i>empty</i>.<!-- WA1 parsing -->
 attribute of a <code>bgsound</code> element <cite class="bibref
 informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is present, its
 value <em class=rfc2119>MUST</em> be a <span>valid non-empty
-URL</span>.<!--
+URL</span>.  The <code title=attr-bgsound-src>src</code> attribute <em
+class=rfc2119>MUST</em> be present.<!--
 <http://msdn.microsoft.com/en-us/library/ms534641%28VS.85%29.aspx> -->
 
 <p>If the <code title=attr-bgsound-balance

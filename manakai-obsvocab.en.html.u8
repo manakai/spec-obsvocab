@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 18 April 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 21 April 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -458,7 +458,7 @@ string.<!-- HTML4,
 attribute of a <code>bgsound</code> element <cite class="bibref
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is present, its
 value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty
-URL</a>.<!--
+URL</a>.  The <code title=attr-bgsound-src>src</code> attribute <em class=rfc2119>MUST</em> be present.<!--
 <http://msdn.microsoft.com/en-us/library/ms534641%28VS.85%29.aspx> -->
 
 </p><p>If the <code id=attr-bgsound-balance title=attr-bgsound-balance>balance</code> attribute of a
