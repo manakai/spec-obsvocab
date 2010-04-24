@@ -1099,22 +1099,16 @@ title>right</code>, and <code title>center</code>.<!-- WA1 rendering
 -->
 
 <p>The <code title=attr-align id=attr-align>align</code> attribute of
-an <code>address</code> <cite class="bibref informative">[<a
-href="#ref-HTML2x">HTML2x</a>]</cite>, <code>blockquote</code> <cite
-class="bibref informative">[<a href="#ref-HTML2x">HTML2x</a>]</cite>,
-<code>div</code>, <code>dir</code> <cite class="bibref
-informative">[<a href="#ref-HTML2x">HTML2x</a>]</cite>,
+elements <code>address</code>, <code>blockquote</code>,
+<code>dir</code>, <code>li</code>, <code>menu</code>, <code>ol</code>,
+and <code>ul</code> <cite class="bibref informative">[<a
+href="#ref-HTML2x">HTML2x</a>]</cite>, and elements <code>div</code>,
 <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>,
-<code>h5</code>, <code>h6</code>, <code>li</code> <cite class="bibref
-informative">[<a href="#ref-HTML2x">HTML2x</a>]</cite>,
-<code>menu</code> <cite class="bibref informative">[<a
-href="#ref-HTML2x">HTML2x</a>]</cite>, <code>ol</code> <cite
-class="bibref informative">[<a href="#ref-HTML2x">HTML2x</a>]</cite>,
-<code>p</code>, <code>ul</code> <cite class="bibref informative">[<a
-href="#ref-HTML2x">HTML2x</a>]</cite> element is an <span>enumerated
-attribute</span> with keywords <code title>left</code>, <code
-title>right</code>, <code title>center</code>, and <code
-title>justify</code>.<!-- WA1 rendering -->
+<code>h5</code>, <code>h6</code>, and <code>p</code>, is an
+<span>enumerated attribute</span> with keywords <code
+title>left</code>, <code title>right</code>, <code
+title>center</code>, and <code title>justify</code>.<!-- WA1 rendering
+-->
 
 <p>The <code title=attr-hr-align id=attr-hr-align>align</code>
 attribute of a <code>hr</code> element is an <span>enumerated
