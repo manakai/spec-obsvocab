@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 21 April 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 24 April 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -466,7 +466,7 @@ URL</a>.  The <code title=attr-bgsound-src>src</code> attribute <em class=rfc211
 represents an integer in the range −10,000 to 10,000.<!--
 <http://msdn.microsoft.com/en-us/library/ms533500%28VS.85%29.aspx> -->
 
-</p><p><code id=attr-bgsound-volume title=attr-bgsound-volume>volume</code> attribute of the
+</p><p>The <code id=attr-bgsound-volume title=attr-bgsound-volume>volume</code> attribute of the
 <code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">high</code>, <code title="">middle</code>, <code title="">low</code>, and <code title="">0</code>.<!-- Softbank 3.10.2. -->
 
