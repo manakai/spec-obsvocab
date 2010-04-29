@@ -3023,10 +3023,11 @@ title=attr-input-type-button>Button</span> state.<!--
 
 <p>If the <code title=attr-repeat-template
 id=attr-repeat-template>repeat-template</code> attribute of an element
-or the <code title=attr-input-template>template</code> attribute of
-<code>input</code> or <code>button</code> element <cite class="bibref
-informative">[<a href="#ref-WF2">WF2</a>]</cite> is present, its value
-<em class=rfc2119>MUST</em> be the ID of a <span
+or the <code title=attr-input-template
+id=attr-input-template>template</code> attribute of <code>input</code>
+or <code>button</code> element <cite class="bibref informative">[<a
+href="#ref-WF2">WF2</a>]</cite> is present, its value <em
+class=rfc2119>MUST</em> be the ID of a <span
 title=concept-repetition-template>repetition template</span>.  The
 <code title=attr-input-template>template</code> attribute of
 <code>input</code> or <code>button</code> element applies only to
@@ -3385,6 +3386,7 @@ namespace</span></a>
 <dd><a href="#attr-fs-method"><code>method</code></a>
 <dd><a href="#attr-fs-replace"><code>replace</code></a>
 <dd><a href="#attr-fs-target"><code>target</code></a>
+<dd><a href="#attr-input-template"><code>template</code></a>
 
 <dt>The <code>caption</code> element
 
@@ -3691,6 +3693,7 @@ namespace</span></a>
 <dd><a href="#attr-soundstart"><code>soundstart</code></a>
 <dd><a href="#attr-start"><code>start</code></a>
 <dd><a href="#attr-fs-target"><code>target</code></a>
+<dd><a href="#attr-input-template"><code>template</code></a>
 <dd><a href="#attr-input-usemap"><code>usemap</code></a>
 <dd><a href="#attr-input-vcard_name"><code>vcard_name</code></a>
 <dd><a href="#attr-viblength"><code>viblength</code></a>
