@@ -1206,22 +1206,20 @@ non-negative integer</span>.<!--
 <h3>Line breaks</h3>
 
 <p>The <code title=attr-tdth-nowrap id=attr-tdth-nowrap>nowrap</code>
-attributes of <code>td</code>, <code>th</code>, <code>body</code>
-<cite class="bibref informative">[<a
-href="#ref-MSDN">MSDN</a>]</cite>, <code>dt</code> <cite class="bibref
-informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, <code>dd</code>
-<cite class="bibref informative">[<a
-href="#ref-MSDN">MSDN</a>]</cite>, <code>div</code> <cite
-class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite>, and
-<code>table</code> <cite class="bibref informative">[<a
-href="#ref-SOFTBANK">SOFTBANK</a>]</cite> elements and the <code
-title=attr-pre-wrap id=attr-pre-wrap>wrap</code> attribute of the
-<code>pre</code> element are <span title="boolean attribute">boolean
-attributes</span>.<!-- nowrap
+attribute of <code>body</code>, <code>dt</code>, <code>dd</code>, and
+<code>div</code> elements <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>, <code>table</code> <cite
+class="bibref informative">[<a
+href="#ref-SOFTBANK">SOFTBANK</a>]</cite> element, and <code>td</code>
+and <code>th</code> elements, is a <span>boolean attribute</span>.<!--
 <http://msdn.microsoft.com/en-us/library/ms534196%28VS.85%29.aspx>,
-wrap
-<http://web.archive.org/web/20030610040341/devedge.netscape.com/library/manuals/1998/htmlguide/tags4.html#1838240>,
 Softbank 3.8.1. (historical) -->
+
+<p>The <code title=attr-pre-wrap id=attr-pre-wrap>wrap</code>
+attribute of the <code>pre</code> element is a <span>boolean
+attribute</span>.<!--
+<http://web.archive.org/web/20030610040341/devedge.netscape.com/library/manuals/1998/htmlguide/tags4.html#1838240>
+-->
 
 <p>The <code title=attr-br-clear id=attr-br-clear>clear</code>
 attribute of the <code>br</code> element and <code>address</code>,

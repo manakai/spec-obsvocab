@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 24 April 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 29 April 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -1013,17 +1013,17 @@ non-negative integer</a>.<!--
 <h3 id=line-breaks><span class=secno>4.7 </span>Line breaks</h3>
 
 <p>The <code id=attr-tdth-nowrap title=attr-tdth-nowrap>nowrap</code>
-attributes of <code>td</code>, <code>th</code>, <code>body</code>
-<cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>dt</code> <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>dd</code>
-<cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>div</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, and
-<code>table</code> <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> elements and the <code id=attr-pre-wrap title=attr-pre-wrap>wrap</code> attribute of the
-<code>pre</code> element are <a href=#boolean-attribute title="boolean attribute">boolean
-attributes</a>.<!-- nowrap
+attribute of <code>body</code>, <code>dt</code>, <code>dd</code>, and
+<code>div</code> elements <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>table</code> <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> element, and <code>td</code>
+and <code>th</code> elements, is a <a href=#boolean-attribute>boolean attribute</a>.<!--
 <http://msdn.microsoft.com/en-us/library/ms534196%28VS.85%29.aspx>,
-wrap
-<http://web.archive.org/web/20030610040341/devedge.netscape.com/library/manuals/1998/htmlguide/tags4.html#1838240>,
 Softbank 3.8.1. (historical) -->
+
+</p><p>The <code id=attr-pre-wrap title=attr-pre-wrap>wrap</code>
+attribute of the <code>pre</code> element is a <a href=#boolean-attribute>boolean
+attribute</a>.<!--
+<http://web.archive.org/web/20030610040341/devedge.netscape.com/library/manuals/1998/htmlguide/tags4.html#1838240>
+-->
 
 </p><p>The <code id=attr-br-clear title=attr-br-clear>clear</code>
 attribute of the <code>br</code> element and <code>address</code>,
