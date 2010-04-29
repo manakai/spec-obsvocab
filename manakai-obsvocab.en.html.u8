@@ -2118,16 +2118,19 @@ content attributes">event handler content attribute</a>.<!--
 </p><p>The <code id=attr-fs-replace title=attr-fs-replace>replace</code>
 attribute of <code>form</code>, <code>input</code>, and
 <code>button</code> elements <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> are <a href=#enumerated-attribute title="enumerated
-attribute">enumerated attributes</a> with keywords <code title="">document</code> and <code title="">values</code>.  The <code title=attr-fs-replace>replace</code> attribute of <code>input</code>
-or <code>button</code> element applies only to elements whose <code title="">type</code> attribute is in the <span title="">Submit Button</span>
-state.<!--
+attribute">enumerated attributes</a> with keywords <code title="">document</code> and <code title="">values</code>.  The <code title=attr-fs-replace>replace</code> attribute of the
+<code>input</code> element applies only to elements whoes <code title=attr-input-type>type</code> attribute is in <span title=attr-input-type-submit>Submit Button</span> or <span title=attr-input-type-image>Image Button</span> state.  The <code title=attr-fs-replace>replace</code> attribute of the
+<code>button</code> element applies only to elements whose <code title=attr-button-type>type</code> attribute is in the <span title=attr-button-type-submit>Submit Button</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#replace> -->
 
 </p><p>Attributes <code id=attr-fs-action title=attr-fs-action>action</code>, <code id=attr-fs-enctype title=attr-fs-enctype>enctype</code>, <code id=attr-fs-method title=attr-fs-method>method</code>, and <code id=attr-fs-target title=attr-fs-target>target</code>, of <code>input</code> and
 <code>button</code> elements <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <!-- and merged into HTML5, then
 renamed --> <em class=rfc2119>MUST</em> be treated as equivalent to
 <code title=attr-fs-formaction>formaction</code>, <code title=attr-fs-formenctype>formenctype</code>, <code title=attr-fs-formmethod>formmethod</code>, and <code title=attr-fs-formtarget>formtarget</code> elements, respectively, for
-the purpose of conformance checking of values of these attributes.
+the purpose of conformance checking of values of these attributes.<!--
+Therefore, in addition to their attribute value constraints, they must
+not be specified for an element which has the |type| value the
+attribute does not apply. -->
 
 </p></div>
 
