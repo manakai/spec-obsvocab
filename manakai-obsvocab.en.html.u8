@@ -2092,8 +2092,8 @@ attribute of a <code>form</code> element <cite class="bibref
 informative">[<a href=#ref-WF2>WF2</a>]</cite> is present, its value
 <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.
 The <span>URL</span> <em class=rfc2119>MUST</em> reference an
-<span>XML document</span> whose <span>root element</span> is the <code title=formdata-formdata>formdata</code> element in the <code title="">http://n.whatwg.org/formdata</code> namespace.  The document <em class=rfc2119>MUST</em> be labeled using a <a href=#xml-mime-type>XML MIME type</a>.
-It is encouraged to use the MIME type
+<span>XML document</span> whose <span>root element</span> is the <code title=formdata-formdata>formdata</code> element in the <code title="">http://n.whatwg.org/formdata</code> namespace.  The document <em class=rfc2119>MUST</em> be labeled using an <a href=#xml-mime-type>XML MIME
+type</a>.  It is encouraged to use the MIME type
 <code>application/xml</code>.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#data0> -->
 
@@ -2102,9 +2102,11 @@ attribute of a <code>select</code> or <code>datalist</code> element
 <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite>
 is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid
 non-empty URL</a>.  The <span>URL</span> <em class=rfc2119>MUST</em> reference an <span>XML document</span> whose
-<span>root element</span> is the <code>select</code> element.  It is
-encouraged to use the MIME type <code>application/xml</code>.  It <em class=rfc2119>SHOULD NOT</em> be labeled by media type
-<code>application/xhtml+xml</code>.<!--
+<span>root element</span> is the <code>select</code> element.  The
+document <em class=rfc2119>MUST</em> be labeled using an <a href=#xml-mime-type>XML
+MIME type</a>.  It is encouraged to use the MIME type
+<code>application/xml</code>.  It <em class=rfc2119>SHOULD NOT</em> be
+labeled by media type <code>application/xhtml+xml</code>.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#data> -->
 
 </p><div class=section>
