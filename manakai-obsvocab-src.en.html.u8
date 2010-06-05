@@ -662,8 +662,8 @@ class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
 
 <p>The <code title=attr-multicol-baseline
 id=attr-multicol-baseline>baseline</code> attribute of a
-<code>multicol</code> element <code class="bibref
-informative">[JUSTVIEW]</code> is an <span>enumerated attribute</span>
+<code>multicol</code> element <cite class="bibref
+informative">[JUSTVIEW]</cite> is an <span>enumerated attribute</span>
 with the keyword <code title>vert</code>.
 
 </div>
@@ -790,8 +790,8 @@ class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
 <p>The <code>multicol</code> element's <code title=attr-multicol-width
 id=attr-multicol-width>width</code> <cite class="bibref
 informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> and <code
-title=attr-multicol-height id=attr-multicol-height>height</code> <code
-cite="bibref informative">[JUSTVIEW]</code> attribute values <em
+title=attr-multicol-height id=attr-multicol-height>height</code> <cite
+class="bibref informative">[JUSTVIEW]</cite> attribute values <em
 class=rfc2119>MUST</em> be a <span>valid non-negative
 integer</span>.<!--
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077956>
