@@ -546,13 +546,12 @@ present, its value <em class=rfc2119>MUST</em> be equal to one of
 <code title>disc</code>, <code title>circle</code>, and <code
 title>square</code>, <span title="ASCII case-insensitive">ASCII
 case-insensitively</span>.  If the <code title=attr-li-type
-id=attr-li-type>type</code> attribute of an <code>li</code>,
+id=attr-li-type>type</code> attribute of an <code>li</code> or
 <code>dir</code> <cite class="bibref informative">[<a
-href="#ref-IMODE">IMODE</a>]</cite>, or <code>menu</code> <cite
-class="bibref informative">[<a href="#ref-IMODE">IMODE</a>]</cite>
-element is present, its value <em class=rfc2119>MUST</em> be one of
-values allowed for <code title>type</code> attribute of a
-<code>ul</code> or <code>ol</code> element.<!-- WA1 rendering,
+href="#ref-IMODE">IMODE</a>]</cite> element is present, its value <em
+class=rfc2119>MUST</em> be one of values allowed for <code
+title>type</code> attribute of a <code>ul</code> or <code>ol</code>
+element.<!-- WA1 rendering,
 <http://code.google.com/p/doctype/wiki/DirTypeAttribute>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/type4.html>
 -->
@@ -3784,7 +3783,6 @@ title=attr-input-type>type</code> attribute values
 
 <dd><a href="#attr-align"><code>align</code></a>
 <dd><a href="#attr-compact"><code>compact</code></a>
-<dd><a href="#attr-li-type"><code>type</code></a>
 
 <dt>The <code>meta</code> element
 

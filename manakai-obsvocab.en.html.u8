@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 5 June 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 26 June 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -538,11 +538,9 @@ obsolete -->
 attribute of an <code>ol</code> element is present, its value <em class=rfc2119>MUST</em> be one of <code title="">1</code>, <code title="">a</code>, <code title="">A</code>, <code title="">i</code>, and <code title="">I</code>.  If the <code id=attr-ul-type title=attr-ul-type>type</code> attribute of a <code>ul</code> element is
 present, its value <em class=rfc2119>MUST</em> be equal to one of
 <code title="">disc</code>, <code title="">circle</code>, and <code title="">square</code>, <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII
-case-insensitively</a>.  If the <code id=attr-li-type title=attr-li-type>type</code> attribute of an <code>li</code>,
-<code>dir</code> <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite>, or <code>menu</code> <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite>
-element is present, its value <em class=rfc2119>MUST</em> be one of
-values allowed for <code title="">type</code> attribute of a
-<code>ul</code> or <code>ol</code> element.<!-- WA1 rendering,
+case-insensitively</a>.  If the <code id=attr-li-type title=attr-li-type>type</code> attribute of an <code>li</code> or
+<code>dir</code> <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> element is present, its value <em class=rfc2119>MUST</em> be one of values allowed for <code title="">type</code> attribute of a <code>ul</code> or <code>ol</code>
+element.<!-- WA1 rendering,
 <http://code.google.com/p/doctype/wiki/DirTypeAttribute>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/type4.html>
 -->
@@ -3113,7 +3111,6 @@ namespace</span></a>
 
 </dt><dd><a href=#attr-align><code>align</code></a>
 </dd><dd><a href=#attr-compact><code>compact</code></a>
-</dd><dd><a href=#attr-li-type><code>type</code></a>
 
 </dd><dt>The <code>meta</code> element
 
