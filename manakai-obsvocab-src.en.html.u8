@@ -925,8 +925,9 @@ title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-image>Image Button</span> state is specified,
 its value <em class=rfc2119>MUST</em> be a <span>valid non-negative
 integer</span>.<!-- WA1 rendering, embed
-<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1286394>
--->
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1286394>;
+though <img border=0> is obsolete but conforming according to WA1, it
+does not conflict with this requirement.  -->
 
 <p>The <code>hr</code> element's <code title=attr-hr-noshade
 id=attr-hr-noshade>noshade</code> attribute is a <span>boolean

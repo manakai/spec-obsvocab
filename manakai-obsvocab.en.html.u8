@@ -818,8 +818,9 @@ informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>,
 <code>input</code> element whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state is specified,
 its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
 integer</a>.<!-- WA1 rendering, embed
-<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1286394>
--->
+<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1286394>;
+though <img border=0> is obsolete but conforming according to WA1, it
+does not conflict with this requirement.  -->
 
 </p><p>The <code>hr</code> element's <code id=attr-hr-noshade title=attr-hr-noshade>noshade</code> attribute is a <a href=#boolean-attribute>boolean
 attribute</a>.<!-- WA1 rendering -->
