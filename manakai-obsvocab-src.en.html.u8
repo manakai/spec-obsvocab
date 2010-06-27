@@ -681,7 +681,7 @@ Only WebKit has |layer| element support:
 <p>The <span>content model</span> of the <code
 id=nolayer>nolayer</code> element <cite class="bibref informative">[<a
 href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is same as the
-<code>span</code> element.<!--
+<code>div</code> element.<!--
 <http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1323433>;
 Only WebKit has |nolayer| element support:
 <http://suika.fam.cx/~wakaba/wiki/sw/n/nolayer> -->
