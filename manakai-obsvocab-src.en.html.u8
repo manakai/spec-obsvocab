@@ -3613,8 +3613,8 @@ namespace</span></a>
 
 <dd><a href="#attr-hr-align"><code>align</code></a>
 <dd><a href="#attr-hr-color"><code>color</code></a>
-<dd><a href="#attr-hr-size"><code>size</code></a>
 <dd><a href="#attr-hr-noshade"><code>noshade</code></a>
+<dd><a href="#attr-hr-size"><code>size</code></a>
 <dd><a href="#attr-hr-width"><code>width</code></a>
 
 <dt>The <code>html</code> element

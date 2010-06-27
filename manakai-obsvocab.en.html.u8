@@ -2941,8 +2941,8 @@ namespace</span></a>
 
 </dt><dd><a href=#attr-hr-align><code>align</code></a>
 </dd><dd><a href=#attr-hr-color><code>color</code></a>
-</dd><dd><a href=#attr-hr-size><code>size</code></a>
 </dd><dd><a href=#attr-hr-noshade><code>noshade</code></a>
+</dd><dd><a href=#attr-hr-size><code>size</code></a>
 </dd><dd><a href=#attr-hr-width><code>width</code></a>
 
 </dd><dt>The <code>html</code> element
