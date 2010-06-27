@@ -2292,10 +2292,11 @@ calculated by |rows| and |cols| attributes... -->
 
 <p>A <dfn>valid list of dimensions</dfn> is a <span>set of
 comma-separated tokens</span>, each of which <em
-class=rfc2119>MUST</em> be a <span>valid dimension value</span> or an
-optional <span>valid non-negative integer</span> followed by a U+002A
-<code class=charname>ASTERISK</code> character (*).<!-- WA1 rendering,
-HTML4 -->
+class=rfc2119>MUST</em> be one of a <span>valid dimension
+value</span>, an optional <span>valid non-negative integer</span>
+followed by a U+002A <code class=charname>ASTERISK</code> character
+(*), or a U+002A <code class=charname>ASTERISK</code> character
+(*).<!-- WA1 rendering, HTML4 -->
 
 <p>If the <code title=attr-frameset-cols
 id=attr-frameset-cols>cols</code> or <code title=attr-frameset-rows

@@ -1852,10 +1852,11 @@ calculated by |rows| and |cols| attributes... -->
 </p><hr>
 
 <p>A <dfn id=valid-list-of-dimensions>valid list of dimensions</dfn> is a <a href=#set-of-comma-separated-tokens>set of
-comma-separated tokens</a>, each of which <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension value</a> or an
-optional <a href=#valid-non-negative-integer>valid non-negative integer</a> followed by a U+002A
-<code class=charname>ASTERISK</code> character (*).<!-- WA1 rendering,
-HTML4 -->
+comma-separated tokens</a>, each of which <em class=rfc2119>MUST</em> be one of a <a href=#valid-dimension-value>valid dimension
+value</a>, an optional <a href=#valid-non-negative-integer>valid non-negative integer</a>
+followed by a U+002A <code class=charname>ASTERISK</code> character
+(*), or a U+002A <code class=charname>ASTERISK</code> character
+(*).<!-- WA1 rendering, HTML4 -->
 
 </p><p>If the <code id=attr-frameset-cols title=attr-frameset-cols>cols</code> or <code id=attr-frameset-rows title=attr-frameset-rows>rows</code> attribute of a <code>frameset</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
