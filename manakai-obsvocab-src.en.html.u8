@@ -668,83 +668,23 @@ with the keyword <code title>vert</code>.
 </div>
 
 <div class=section>
-<h4>The <code>layer</code> and <code>ilayer</code> elements</h4>
+<h4>The <code>layer</code> and <code>nolayer</code> elements</h4>
 
 <p>The <span>content model</span> of the <code id=layer>layer</code>
 element <cite class="bibref informative">[<a
 href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is same as the
 <code>div</code> element.<!--
-<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1703974>
--->
-
-<p>The <span>content model</span> of the <code id=ilayer>ilayer</code>
-element <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is same as the
-<code>span</code> element.<!--
-<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1703710>
--->
-
-<p>If the <code title=attr-layer-left id=attr-layer-left>left</code>,
-<code title=attr-layer-top id=attr-layer-top>top</code>, <code
-title=attr-layer-pagex id=attr-layer-pagex>pagex</code>, or <code
-title=attr-layer-pagey id=attr-layer-pagey>pagey</code> attribute of a
-<code>layer</code> or <code>ilayer</code> element is present, its
-value <em class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.
-
-<p>If the <code title=attr-layer-src id=attr-layer-src>src</code>
-attribute of a <code>layer</code> or <code>ilayer</code> element is
-present, its value <em class=rfc2119>MUST</em> be a <span>valid
-non-empty URL</span>.
-
-<p>If the <code title=attr-layer-z-index
-id=attr-layer-z-index>z-index</code> attribute of a <code>layer</code>
-or <code>ilayer</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>
-that represents an integer greater than zero (0).
-
-<p>If the <code title=attr-layer-above
-id=attr-layer-above>above</code> or <code title=attr-layer-below
-id=attr-layer-below>below</code> attribute of a <code>layer</code> or
-<code>ilayer</code> element is present, its value <em
-class=rfc2119>MUST</em> be the ID of a <code>layer</code> or
-<code>ilayer</code> element.
-
-<p>At most one of <code title=attr-layer-above>above</code>, <code
-title=attr-layer-below>below</code>, and <code
-title=attr-layer-z-index>z-index</code> attributes <em
-class=rfc2119>MUST</em> be specified for a <code>layer</code> or
-<code>ilayer</code> element.
-
-<p>If the <code title=attr-layer-clip id=attr-layer-clip>clip</code>
-attribute of a <code>layer</code> or <code>ilayer</code> element is
-present, its value <em class=rfc2119>MUST</em> be four (4) <span
-title="valid non-negative integer">valid non-negative integers</span>
-separated by U+002C <code class=charname>COMMA</code> character
-(,).<!-- "can be less than the width and height of the content of the
-layer" - this is not phrased out as a conformance requirement in this
-specification -->
-
-<p>The <code title=attr-layer-visibility
-id=attr-layer-visibility>visibility</code> attribute of a
-<code>layer</code> or <code>ilayer</code> element is an
-<span>enumerated attribute</span> with keywords <code
-title>show</code><!-- not shown -->, <code title>hidden</code>, and
-<code title>inherit</code>.
-
-<!-- There was <layer overflow=none|clip> according to
-<http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> and
-<http://code.google.com/p/doctype/wiki/IlayerElement> but no in
-[DEVEDGE] -->
-
-<hr>
+<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1703974>;
+Only WebKit has |layer| element support:
+<http://suika.fam.cx/~wakaba/wiki/sw/n/layer> -->
 
 <p>The <span>content model</span> of the <code
 id=nolayer>nolayer</code> element <cite class="bibref informative">[<a
 href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is same as the
 <code>span</code> element.<!--
-<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1323433>
--->
+<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1323433>;
+Only WebKit has |nolayer| element support:
+<http://suika.fam.cx/~wakaba/wiki/sw/n/nolayer> -->
 
 </div>
 
@@ -768,13 +708,10 @@ says there is <nobr height>, but maybe it is wrong),
 <http://msdn.microsoft.com/en-us/library/ms535147%28VS.85%29.aspx> -->
 
 <p>If the <code title>height</code> or <code title>width</code>
-attribute of a <code>layer</code>, <code>ilayer</code>, or
-<code>spacer</code> element <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is specified, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.<!-- layer/ilayer
-<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1701761>,
-spacer
+attribute of a <code>spacer</code> element <cite class="bibref
+informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is specified,
+its value <em class=rfc2119>MUST</em> be a <span>valid non-negative
+integer</span>.<!-- spacer
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
 
@@ -968,16 +905,10 @@ and <body scroll> should not be allowed in no quirks mode -->
 
 <p>The <code>body</code>, <code>table</code>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
-<code>td</code>, <code>th</code>, <code>layer</code> <cite
-class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite>, and <code>ilayer</code> <cite
-class="bibref informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite>
-elements' <code title=attr-background
-id=attr-background>background</code> attribute values <em
-class=rfc2119>MUST</em> be <span title="valid non-empty URL">valid
-non-empty URLs</span>.<!-- WA1 rendering, layer/ilayer
-<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1701769>
--->
+<code>td</code>, and <code>th</code> elements' <code
+title=attr-background id=attr-background>background</code> attribute
+values <em class=rfc2119>MUST</em> be <span title="valid non-empty
+URL">valid non-empty URLs</span>.<!-- WA1 rendering -->
 
 <p>A <dfn>valid legacy color value</dfn> is either a U+0023 <code
 class=charname>NUMBER SIGN</code> character (#) followed by six (6)
@@ -1000,17 +931,10 @@ Color specification.)  -->
 
 <p>The <code>body</code>, <code>table</code>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
-<code>td</code>, <code>th</code>, <code>layer</code> <cite
-class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite>, <code>ilayer</code> <cite
-class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite>, and <code>marquee</code>
-elements' <code title=attr-bgcolor id=attr-bgcolor>bgcolor</code>
-attribute values <em class=rfc2119>MUST</em> be <span title="valid
-legacy color value">valid legacy color values</span>.<!-- WA1
-rendering, HTML4, layer/ilayer
-<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1701768>
--->
+<code>td</code>, <code>th</code>, and <code>marquee</code> elements'
+<code title=attr-bgcolor id=attr-bgcolor>bgcolor</code> attribute
+values <em class=rfc2119>MUST</em> be <span title="valid legacy color
+value">valid legacy color values</span>.<!-- WA1 rendering, HTML4 -->
 
 <p>The <code>body</code> element's <code title=attr-body-text
 id=attr-body-text>text</code>, <code title=attr-body-link
@@ -3642,23 +3566,6 @@ namespace</span></a>
 <dd><a href="#attr-frames-security"><code>security</code></a>
 <dd><a href="#attr-vspace"><code>vspace</code></a>
 
-<dt>The <a href="#ilayer"><code>ilayer</code></a> element
-
-<dd><a href="#attr-layer-above"><code>above</code></a>
-<dd><a href="#attr-background"><code>background</code></a>
-<dd><a href="#attr-layer-below"><code>below</code></a>
-<dd><a href="#attr-bgcolor"><code>bgcolor</code></a>
-<dd><a href="#attr-layer-clip"><code>clip</code></a>
-<dd><a href="#attr-height"><code>height</code></a>
-<dd><a href="#attr-layer-left"><code>left</code></a>
-<dd><a href="#attr-layer-pagex"><code>pagex</code></a>
-<dd><a href="#attr-layer-pagey"><code>pagey</code></a>
-<dd><a href="#attr-layer-src"><code>src</code></a>
-<dd><a href="#attr-layer-top"><code>top</code></a>
-<dd><a href="#attr-layer-visibility"><code>visibility</code></a>
-<dd><a href="#attr-width"><code>width</code></a>
-<dd><a href="#attr-layer-z-index"><code>z-index</code></a>
-
 <dt>The <a href="#image"><code>image</code></a> element
 <dt>The <code>img</code> element
 
@@ -3748,20 +3655,7 @@ title=attr-input-type>type</code> attribute values
 
 <dt>The <a href="#layer"><code>layer</code></a> element
 
-<dd><a href="#attr-layer-above"><code>above</code></a>
-<dd><a href="#attr-background"><code>background</code></a>
-<dd><a href="#attr-bgcolor"><code>bgcolor</code></a>
-<dd><a href="#attr-layer-below"><code>below</code></a>
-<dd><a href="#attr-layer-clip"><code>clip</code></a>
-<dd><a href="#attr-height"><code>height</code></a>
-<dd><a href="#attr-layer-left"><code>left</code></a>
-<dd><a href="#attr-layer-pagex"><code>pagex</code></a>
-<dd><a href="#attr-layer-pagey"><code>pagey</code></a>
-<dd><a href="#attr-layer-src"><code>src</code></a>
-<dd><a href="#attr-layer-top"><code>top</code></a>
-<dd><a href="#attr-layer-visibility"><code>visibility</code></a>
-<dd><a href="#attr-width"><code>width</code></a>
-<dd><a href="#attr-layer-z-index"><code>z-index</code></a>
+<dd>No element-specific attribute.
 
 <dt>The <code>legend</code> element
 
