@@ -841,7 +841,10 @@ non-conforming.<!-- WA1 rendering, HTML4 -->
 </p><p>The <code id=attr-scroll title=attr-scroll>scroll</code> attribute
 of a <code>body</code> or <code>html</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
 <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">yes</code>, <code title="">no</code>, and <code title="">auto</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms534393%28VS.85%29.aspx> -->
+<http://msdn.microsoft.com/en-us/library/ms534393%28VS.85%29.aspx>
+--><!-- XXX maybe <html scroll> should not be allowed in quirks mode
+and <body scroll> should not be allowed in no quirks mode -->
+
 
 </p></div>
 
@@ -2953,12 +2956,12 @@ namespace</span></a>
 </dd><dt>The <code>iframe</code> element
 
 </dt><dd><a href=#attr-objects-align><code>align</code></a>
-</dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-frames-allowtransparency><code>allowtransparency</code></a>
 </dd><dd><a href=#attr-frames-application><code>application</code></a>
 </dd><dd><a href=#attr-frames-border><code>border</code></a>
 </dd><dd><a href=#attr-frames-frameborder><code>frameborder</code></a>
 </dd><dd><a href=#attr-frames-framespacing><code>framespacing</code></a>
+</dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-longdesc><code>longdesc</code></a>
 </dd><dd><a href=#attr-frames-marginheight><code>marginheight</code></a>
 </dd><dd><a href=#attr-frames-marginwidth><code>marginwidth</code></a>

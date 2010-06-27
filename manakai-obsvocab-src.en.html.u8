@@ -954,7 +954,10 @@ class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
 <span>enumerated attribute</span> with keywords <code
 title>yes</code>, <code title>no</code>, and <code
 title>auto</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms534393%28VS.85%29.aspx> -->
+<http://msdn.microsoft.com/en-us/library/ms534393%28VS.85%29.aspx>
+--><!-- XXX maybe <html scroll> should not be allowed in quirks mode
+and <body scroll> should not be allowed in no quirks mode -->
+
 
 </div>
 
@@ -3625,12 +3628,12 @@ namespace</span></a>
 <dt>The <code>iframe</code> element
 
 <dd><a href="#attr-objects-align"><code>align</code></a>
-<dd><a href="#attr-hspace"><code>hspace</code></a>
 <dd><a href="#attr-frames-allowtransparency"><code>allowtransparency</code></a>
 <dd><a href="#attr-frames-application"><code>application</code></a>
 <dd><a href="#attr-frames-border"><code>border</code></a>
 <dd><a href="#attr-frames-frameborder"><code>frameborder</code></a>
 <dd><a href="#attr-frames-framespacing"><code>framespacing</code></a>
+<dd><a href="#attr-hspace"><code>hspace</code></a>
 <dd><a href="#attr-longdesc"><code>longdesc</code></a>
 <dd><a href="#attr-frames-marginheight"><code>marginheight</code></a>
 <dd><a href="#attr-frames-marginwidth"><code>marginwidth</code></a>
