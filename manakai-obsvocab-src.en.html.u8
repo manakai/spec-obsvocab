@@ -1693,7 +1693,12 @@ elements for the purpose of conformance of <code title>name</code>
 attributes of <code>a</code>, <code>applet</code>, <code>embed</code>,
 and <code>img</code> elements and the <code
 title=attr-nextid-n>n</code> attribute of the <code>nextid</code>
-element in the document.<!-- WA1 UA reqs
+element in the document, except that use of the <code
+title=attr-objects-name>name</code> attributes for these elements are
+always non-conforming.  (Use of the <code
+title=attr-a-name>name</code> attribute for the <code>a</code> element
+is sometimes <i>obsolete but conforming</i> according to Web
+Applications 1.0.)<!-- WA1 UA reqs
 e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
 WA1 obsolete, HTML4 --><!-- There was <layer name> according to
 <http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> -->
@@ -2271,20 +2276,14 @@ time2
 <div class=section>
 <h3>Frames</h3>
 
-<p>The <span>content model</span> of the <code
-id=noframes>noframes</code> element is same as the <code>iframe</code>
-element.
-
 <div class=section>
 <h4>The <code>frameset</code> element</h4>
 
 <p>The <span>content model</span> of the <code
 id=frameset>frameset</code> element is one or more <code>frame</code>
-or <code>frameset</code> elements.  Additionally, if the
-<code>frameset</code> element is a child of a <code>html</code>
-element, the element <em class=rfc2119>MAY</em> contain a
-<code>noframes</code> element as a child.<!-- WA1 parsing, WA1
-rendering, HTML4 -->
+or <code>frameset</code> elements.  Additionally, there can be a
+<code>noframes</code> element <a href="#noframes-context">in some
+case</a>.<!-- WA1 parsing, WA1 rendering, HTML4 -->
 
 <!-- Maybe the number of child elements has to match to the slots
 calculated by |rows| and |cols| attributes... -->
@@ -2409,6 +2408,19 @@ class=rfc2119>MUST</em> be a <span>valid non-negative
 integer</span>.<!--
 <http://msdn.microsoft.com/en-us/library/ms533772%28VS.85%29.aspx> -->
 
+
+</div>
+
+<div class=section id=noframes>
+<h4>The <code>noframes</code> element</h4>
+
+<p>The <span>content model</span> of the <code>noframes</code> element
+is same as the <code>iframe</code> element.
+
+<p id=noframes-context>The <code>noframes</code> element <em
+class=rfc2119>MAY</em> be used as a child of the <code>frameset</code>
+element.  However, it <em class=rfc2119>MUST NOT</em> have more than
+one ancestor <code>noframes</code> elements.
 
 </div>
 
