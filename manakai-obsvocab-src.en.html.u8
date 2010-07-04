@@ -1594,12 +1594,6 @@ WA1 obsolete, HTML4 --><!-- There was <layer name> according to
 <div class=section>
 <h4>The <code>img</code> element</h4>
 
-<p>The <code id=image>image</code> element <em class=rfc2119>MUST</em>
-be treated as equivalent to the <code>img</code> element for the
-purpose of conformance checking of <span title="content
-model">content</span> and attributes of the element.<!-- HTML5
-parsing; only affects XHTML -->
-
 <p>If the <code title=attr-input-usemap
 id=attr-input-usemap>usemap</code> attribute of the <code>input</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
@@ -3527,7 +3521,6 @@ namespace</span></a>
 <dd><a href="#attr-frames-security"><code>security</code></a>
 <dd><a href="#attr-vspace"><code>vspace</code></a>
 
-<dt>The <a href="#image"><code>image</code></a> element
 <dt>The <code>img</code> element
 
 <dd><a href="#attr-objects-align"><code>align</code></a>
