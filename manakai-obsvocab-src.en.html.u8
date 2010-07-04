@@ -3678,9 +3678,10 @@ title=attr-input-type>type</code> attribute values
 
 <dd><a href="#attr-br-clear"><code>clear</code></a>
 
-<dt>The <code>marquee</code> element
+<dt>The <a href="#marquee"><code>marquee</code></a> element
 
 <dd><a href="#attr-height"><code>height</code></a>
+<dd><a href="#attr-hspace"><code>hspace</code></a>
 <dd><a href="#attr-marquee-scrollamount"><code>scrollamount</code></a>
 <dd><a href="#attr-marquee-scrolldelay"><code>scrolldelay</code></a>
 <dd><a href="#attr-marquee-loop"><code>loop</code></a>
@@ -3688,6 +3689,7 @@ title=attr-input-type>type</code> attribute values
 <dd><a href="#handler-marquee-onfinish"><code>onfinish</code></a>
 <dd><a href="#handler-marquee-onstart"><code>onstart</code></a>
 <dd><a href="#attr-marquee-truespeed"><code>truespeed</code></a>
+<dd><a href="#attr-vspace"><code>vspace</code></a>
 <dd><a href="#attr-width"><code>width</code></a>
 
 <dt>The <code>menu</code> element

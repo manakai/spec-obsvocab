@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 27 June 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 4 July 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -3029,9 +3029,10 @@ namespace</span></a>
 
 </dt><dd><a href=#attr-br-clear><code>clear</code></a>
 
-</dd><dt>The <code>marquee</code> element
+</dd><dt>The <a href=#marquee><code>marquee</code></a> element
 
 </dt><dd><a href=#attr-height><code>height</code></a>
+</dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-marquee-scrollamount><code>scrollamount</code></a>
 </dd><dd><a href=#attr-marquee-scrolldelay><code>scrolldelay</code></a>
 </dd><dd><a href=#attr-marquee-loop><code>loop</code></a>
@@ -3039,6 +3040,7 @@ namespace</span></a>
 </dd><dd><a href=#handler-marquee-onfinish><code>onfinish</code></a>
 </dd><dd><a href=#handler-marquee-onstart><code>onstart</code></a>
 </dd><dd><a href=#attr-marquee-truespeed><code>truespeed</code></a>
+</dd><dd><a href=#attr-vspace><code>vspace</code></a>
 </dd><dd><a href=#attr-width><code>width</code></a>
 
 </dd><dt>The <code>menu</code> element
