@@ -3033,12 +3033,12 @@ namespace</span></a>
 
 </dt><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
-</dd><dd><a href=#attr-marquee-scrollamount><code>scrollamount</code></a>
-</dd><dd><a href=#attr-marquee-scrolldelay><code>scrolldelay</code></a>
 </dd><dd><a href=#attr-marquee-loop><code>loop</code></a>
 </dd><dd><a href=#handler-marquee-onbounce><code>onbounce</code></a>
 </dd><dd><a href=#handler-marquee-onfinish><code>onfinish</code></a>
 </dd><dd><a href=#handler-marquee-onstart><code>onstart</code></a>
+</dd><dd><a href=#attr-marquee-scrollamount><code>scrollamount</code></a>
+</dd><dd><a href=#attr-marquee-scrolldelay><code>scrolldelay</code></a>
 </dd><dd><a href=#attr-marquee-truespeed><code>truespeed</code></a>
 </dd><dd><a href=#attr-vspace><code>vspace</code></a>
 </dd><dd><a href=#attr-width><code>width</code></a>
