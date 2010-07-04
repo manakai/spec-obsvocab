@@ -3062,8 +3062,6 @@ namespace</span></a>
 </dd><dd><a href=#attr-multicol-col><code>col</code></a>
 </dd><dd><a href=#attr-multicol-gutter><code>gutter</code></a>
 </dd><dd><a href=#attr-multicol-height><code>height</code></a>
-</dd><dd><a href=#attr-hspace><code>hspace</code></a>
-</dd><dd><a href=#attr-vspace><code>vspace</code></a>
 </dd><dd><a href=#attr-multicol-width><code>width</code></a>
 
 </dd><dt>The <a href=#nextid><code>nextid</code></a> element
