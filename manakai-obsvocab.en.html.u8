@@ -464,11 +464,6 @@ represents an integer in the range −10,000 to 10,000.<!--
 <code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">high</code>, <code title="">middle</code>, <code title="">low</code>, and <code title="">0</code>.<!-- Softbank 3.10.2. -->
 
-</p><p>The <code id=attr-bgsound-as title=attr-bgsound-as>as</code>
-attribute of the <code>bgsound</code> element <cite class="bibref
-informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a
-<a href=#boolean-attribute>boolean attribute</a>.<!-- Softbank 3.10.2. -->
-
 </p></div>
 
 <div class=section>
@@ -941,8 +936,8 @@ dimension value</a>.<!--
 
 <p>The <code id=attr-tdth-nowrap title=attr-tdth-nowrap>nowrap</code>
 attribute of <code>body</code>, <code>dt</code>, <code>dd</code>, and
-<code>div</code> elements <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, <code>table</code> <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> element, and <code>td</code>
-and <code>th</code> elements, is a <a href=#boolean-attribute>boolean attribute</a>.<!--
+<code>div</code> elements <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>, as well as of <code>td</code> and
+<code>th</code> elements, is a <a href=#boolean-attribute>boolean attribute</a>.<!--
 <http://msdn.microsoft.com/en-us/library/ms534196%28VS.85%29.aspx>,
 Softbank 3.8.1. (historical) -->
 
@@ -1177,12 +1172,6 @@ attribute is specified, the <code title=attr-lcs>lcs</code> attribute
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p13>
 -->
 
-</p><p>The <code id=attr-z title=attr-z>z</code> attribute of
-<code>a</code> and <code>form</code> elements <cite class="bibref
-informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a
-<a href=#boolean-attribute>boolean attribute</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-z>z</code> attribute of the <code>a</code> element is
-specified.<!-- Softbank 3.9.1., 3.12.1. (historical) -->
-
 </p><p>The <code id=attr-measure title=attr-measure>measure</code>
 attribute of <code>a</code> and <code>form</code> elements <cite class="bibref informative">[<a href=#ref-EMNET>EMNET</a>]</cite> is
 an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">cid</code> and <code title="">auto</code>.  If the <code title=attr-measure>measure</code> attribute of the <code>a</code>
@@ -1191,15 +1180,6 @@ attribute <em class=rfc2119>MUST</em> also be specified.  If the <code title=att
 element is specified, the <code title=attr-fs-action>action</code>
 attribute <em class=rfc2119>MUST</em> also be specified.<!--
 <http://developer.emnet.ne.jp/browser3-1.html> -->
-
-</p><p>If the <code id=attr-a-mailbody title=attr-a-mailbody>mailbody</code> attribute of the <code>a</code>
-element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> element is present, its
-value <em class=rfc2119>MAY</em> be any string.  If the <code title=attr-a-mailbody>mailbody</code> attribute is specified, the
-<code>a</code> element <em class=rfc2119>MUST</em> have its <code title=attr-hyperlink-href>href</code> attribute specified and its
-value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>
-whose <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII
-case-insensitive">ASCII case-insensitively</a> matches to <code title=mailto:>mailto</code>.<!-- Softbank 3.9.1., has to be less
-than or equal to 128 bytes -->
 
 </p><p>The <code id=attr-area-nohref title=attr-area-nohref>nohref</code>
 attribute of the <code>area</code> element is a <a href=#boolean-attribute>boolean
@@ -1277,16 +1257,6 @@ whose <code title=attr-input-type>type</code> attribute is in the
 an <code>input</code> element, the <code title="">value</code> attribute
 <em class=rfc2119>MUST</em> also be specified.<!-- Softbank 3.9.1.,
 3.12.2. -->
-
-</p><p>The <code id=attr-nonumber title=attr-nonumber>nonumber</code>
-attribute of <code>a</code> and <code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is a <a href=#boolean-attribute>boolean
-attribute</a>.  This attribute <em class=rfc2119>MUST NOT</em> be
-specified unless the <code title=attr-directkey>directkey</code>
-attribute is also specified.  The <code title=attr-nonumber>nonumber</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-submit>Submit Button</span> state.<!--
-Softbank 3.9.1., 3.12.2. -->
 
 </p><p>If the <code id=attr-a-coords title=attr-a-coords>coords</code>
 attribute and/or the <code id=attr-a-shape title=attr-a-shape>shape</code> attribute of an <code>a</code> element is
@@ -1374,16 +1344,6 @@ The latest emoji list page
 are included in older versions of the list - see
 <http://web.archive.org/web/*/www.au.kddi.com/ezfactory/tec/spec/3.html>.
 See also WML 2.0 |wml:localsrc|.  -->
-
-</p><p>If the <code id=attr-img-motion title=attr-img-motion>motion</code>
-attribute of the <code>img</code> element <cite class="bibref
-informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present,
-its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty
-URL</a>.  The attribute <em class=rfc2119>MUST NOT</em> be
-specified if the <code title=attr-img-src>src</code> attribute is
-specified.<!-- Softbank 3.10.1. (historical); used like <img
-motion=frame1 motion=frame2 motion=frame3 ...> and at least two
-motion="" attribute must be specified (!) -->
 
 <!-- Softbank allows <input type=submit src> [SOFTBANK] 3.12.2. -->
 
@@ -1586,10 +1546,13 @@ whose <code title=attr-input-type>type</code> attribute is in the
 Softbank 3.9.1., 3.12.2. -->
 
 </p><p>If the <code id=attr-loop title=attr-loop>loop</code> attribute of
-the <code>img</code>, <code>input</code>, or <code>bgsound</code>
-element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a> that
-represents an integer greater than or equal to −1.  The <code title=attr-loop>loop</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.<!--
+the <code>input</code>, or <code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is
+present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid
+integer</a> that represents an integer greater than or equal to
+−1.  The <code title=attr-loop>loop</code> attribute of the
+<code>input</code> element applies only to <code>input</code> elements
+whose <code title=attr-input-type>type</code> attribute is in the
+<span title=attr-input-type-image>Image Button</span> state.<!--
 <http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
 <img loop=""> (the empty string) is equivalent to loop=1 according to
 MSDN but not match the syntax of MSDN.  |infinite| is not part of the
@@ -1608,20 +1571,6 @@ element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-submit>Submit Button</span> state.--><!--
 Softbank 3.9.1., 3.12.2. -->
-
-</p><p>The <code id=attr-img-direction title=attr-img-direction>direction</code> attribute of the
-<code>img</code> element is an <a href=#enumerated-attribute>enumerated attribute</a> with
-keywords <code title="">left</code> and <code title="">right</code>.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified unless the
-<code title=attr-img-motion>motion</code> attribute is also
-specified.<!-- Softbank 3.10.1. (historical) -->
-
-</p><p>The <code id=attr-img-flash title=attr-img-flash>flash</code>
-attribute of the <code>img</code> element is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">0</code>, <code title="">1</code>, <code title="">2</code>, and <code title="">3</code>.  The
-attribute <em class=rfc2119>MUST NOT</em> be specified unless the
-<code title=attr-img-motion>motion</code> attribute is also
-specified.<!-- Softbank 3.10.1. (historical) -->
 
 </p><p>The <code id=attr-volume title=attr-volume>volume</code> attribute
 of the <code>a</code> and <code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
@@ -1669,18 +1618,11 @@ attribute of the <code>input</code> element applies only to
 <span title=attr-input-type-hidden>Hidden</span> state.<!-- Softbank
 3.9.1., 3.12.2. -->
 
-</p><p>The <code id=attr-img-vibration title=attr-img-vibration>vibration</code> attribute of the
-<code>img</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">focus</code>.<!-- Softbank
-3.10.1.; spec's |force| is typo of |focus| -->
-
-</p><p>If the <code id=attr-viblength title=attr-viblength>viblength</code> attribute of <code>a</code>,
-<code>input</code>, and <code>img</code> elements <cite class="bibref
-informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present,
-its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
-integer</a> that represents a number in the range 1 to 9
-(inclusive).  This attribute <em class=rfc2119>MUST NOT</em> be
-specified unless the <code title="">vibration</code> attribute is also
+</p><p>If the <code id=attr-viblength title=attr-viblength>viblength</code> attribute of <code>a</code> and
+<code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
+that represents a number in the range 1 to 9 (inclusive).  This
+attribute <em class=rfc2119>MUST NOT</em> be specified unless the
+<code title=attr-a-vibration>vibration</code> attribute is also
 specified.  The <code title=attr-viblength>viblength</code> attribute
 of the <code>input</code> element applies only to <code>input</code>
 elements whose <code title=attr-input-type>type</code> attribute is
@@ -2106,7 +2048,7 @@ also to <input type=password>.  -->
 
 </p><p>The <code id=attr-mode title=attr-mode>mode</code> attribute of
 <code>input</code> and <code>textarea</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">hiragana</code>, <code title="">katakana</code>, <code title="">hankakukana</code>, <code title="">alphabet</code>, <code title="">numeric</code>, <code title="">any</code>, <code title="">emailaddr</code>, <code title="">phonenumber</code>, and <code title="">url</code>.  The <code title=attr-mode>mode</code> attribute of the <code>input</code>
+attribute</a> with keywords <code title="">hiragana</code>, <code title="">katakana</code>, <code title="">hankakukana</code>, <code title="">alphabet</code>, and <code title="">numeric</code>.  The <code title=attr-mode>mode</code> attribute of the <code>input</code>
 element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span> or <span title=attr-input-type-password>Password</span> state.  If the <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-password>Password</span> state, keywords other
 than <code title="">alphanet</code> and <code title="">numeric</code> <em class=rfc2119>MUST NOT</em> be specified.<!-- Softbank 3.12.2.,
 3.12.5. -->
@@ -2555,11 +2497,9 @@ namespace</span></a>
 </dd><dd><a href=#attr-a-kana><code>kana</code></a>
 </dd><dd><a href=#attr-lcs><code>lcs</code></a>
 </dd><dd><a href=#attr-a-loop><code>loop</code></a>
-</dd><dd><a href=#attr-a-mailbody><code>mailbody</code></a>
 </dd><dd><a href=#attr-measure><code>measure</code></a>
 </dd><dd><a href=#attr-a-memoryname><code>memoryname</code></a>
 </dd><dd><a href=#attr-hyperlink-methods><code>methods</code></a>
-</dd><dd><a href=#attr-nonumber><code>nonumber</code></a>
 </dd><dd><a href=#attr-a-shape><code>shape</code></a>
 </dd><dd><a href=#attr-soundstart><code>soundstart</code></a>
 </dd><dd><a href=#attr-a-src><code>src</code></a>
@@ -2569,7 +2509,6 @@ namespace</span></a>
 </dd><dd><a href=#attr-viblength><code>viblength</code></a>
 </dd><dd><a href=#attr-a-vibration><code>vibration</code></a>
 </dd><dd><a href=#attr-volume><code>volume</code></a>
-</dd><dd><a href=#attr-z><code>z</code></a>
 
 </dd><dt>The <a href=#acronym><code>acronym</code></a> element
 
@@ -2616,8 +2555,7 @@ namespace</span></a>
 
 </dd><dt>The <a href=#bgsound><code>bgsound</code></a> element
 
-</dt><dd><a href=#attr-bgsound-as><code>as</code></a>
-</dd><dd><a href=#attr-bgsound-balance><code>balance</code></a>
+</dt><dd><a href=#attr-bgsound-balance><code>balance</code></a>
 </dd><dd><a href=#attr-loop><code>loop</code></a>
 </dd><dd><a href=#attr-bgsound-src><code>src</code></a>
 </dd><dd><a href=#attr-bgsound-volume><code>volume</code></a>
@@ -2778,7 +2716,6 @@ namespace</span></a>
 </dd><dd><a href=#handler-form-onreceived><code>onreceived</code></a>
 </dd><dd><a href=#attr-fs-replace><code>replace</code></a>
 </dd><dd><a href=#attr-utn><code>utn</code></a>
-</dd><dd><a href=#attr-z><code>z</code></a>
 
 </dd><dt>The <a href=#frame><code>frame</code></a> element
 
@@ -2894,25 +2831,19 @@ namespace</span></a>
 </dd><dd><a href=#attr-dim-border><code>border</code></a>
 </dd><dd><a href=#attr-img-composite><code>composite</code></a>
 </dd><dd><a href=#attr-img-copyright><code>copyright</code></a>
-</dd><dd><a href=#attr-img-direction><code>direction</code></a>
 </dd><dd><a href=#attr-dynsrc><code>dynsrc</code></a>
-</dd><dd><a href=#attr-img-flash><code>flash</code></a>
 </dd><dd><a href=#attr-img-galleryimg><code>galleryimg</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-img-localsrc><code>localsrc</code></a>
 </dd><dd><a href=#attr-longdesc><code>longdesc</code></a>
-</dd><dd><a href=#attr-loop><code>loop</code></a>
 </dd><dd><a href=#attr-lowsrc><code>lowsrc</code></a>
 </dd><dd><a href=#attr-img-mediaout><code>mediaout</code></a>
-</dd><dd><a href=#attr-img-motion><code>motion</code></a>
 </dd><dd><a href=#attr-objects-name><code>name</code></a>
 </dd><dd><a href=#attr-img-nosave><code>nosave</code></a>
 </dd><dd><a href=#attr-img-oversrc><code>oversrc</code></a>
 </dd><dd><a href=#attr-img-private><code>private</code></a>
 </dd><dd><a href=#attr-start><code>start</code></a>
 </dd><dd><a href=#attr-img-suppress><code>suppress</code></a>
-</dd><dd><a href=#attr-viblength><code>viblength</code></a>
-</dd><dd><a href=#attr-img-vibration><code>vibration</code></a>
 </dd><dd><a href=#attr-vrml><code>vrml</code></a>
 </dd><dd><a href=#attr-vspace><code>vspace</code></a>
 
@@ -2939,7 +2870,6 @@ namespace</span></a>
 </dd><dd><a href=#attr-lowsrc><code>lowsrc</code></a>
 </dd><dd><a href=#attr-fs-method><code>method</code></a>
 </dd><dd><a href=#attr-mode><code>mode</code></a>
-</dd><dd><a href=#attr-nonumber><code>nonumber</code></a>
 </dd><dd><a href=#attr-input-precision><code>precision</code></a>
 </dd><dd><a href=#attr-fs-replace><code>replace</code></a>
 </dd><dd><a href=#attr-input-results><code>results</code></a>
@@ -3156,7 +3086,6 @@ namespace</span></a>
 </dd><dd><a href=#attr-table-datapagesize><code>datapagesize</code></a>
 </dd><dd><a href=#attr-table-frame><code>frame</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
-</dd><dd><a href=#attr-tdth-nowrap><code>nowrap</code></a>
 </dd><dd><a href=#attr-table-rules><code>rules</code></a>
 </dd><dd><a href=#attr-table-tableborder><code>tableborder</code></a>
 </dd><dd><a href=#attr-width><code>width</code></a>
@@ -3459,8 +3388,8 @@ November 2009</time>.
 </dd><dt id=ref-SOFTBANK>SOFTBANK
 
 </dt><dd><cite lang=en>ウェブコンテンツ開発ガイド [HTML 編] Version
-2.0.2</cite> (Web Content Development Guide [HTML] Version 2.0.2),
-<span lang=en>ソフトバンクモバイル株式会社</span>, <time datetime=2009-11-26>26 November 2009</time>.  Available from MC
+2.1.0</cite> (Web Content Development Guide [HTML] Version 2.1.0),
+<span lang=en>ソフトバンクモバイル株式会社</span>, <time datetime=2010-04-01>1 April 2010</time>.  Available from MC
 (Mobile Creation), <a href=http://creation.mb.softbank.jp/web/web_doc.html lang=ja>WEB &amp;
 NETWORK 技術資料</a>. (In Japanese)
 
