@@ -405,11 +405,12 @@ title=attr-nextid-n id=attr-nextid-n>n</code> attribute <cite
 class="bibref informative">[<a href="#ref-HTML20">HTML20</a>]</cite>
 specified, the element <em class=rfc2119>MUST</em> be treated as if
 the element were an <code>a</code> element and the attribute was the
-<code>name</code> attribute for the purpose of conformance of <code
-title>name</code> attributes of <code>a</code>, <code>applet</code>,
-and <code>img</code> elements and the <code
-title=attr-nextid-n>n</code> attribute of the <code>nextid</code>
-element in the document.<!-- HTML2 -->
+<code title=attr-objects-name>name</code> attribute for the purpose of
+conformance of <code title=attr-objects-name>name</code> attributes of
+<code>a</code>, <code>applet</code>, <code>embed</code>, and
+<code>img</code> elements and the <code title=attr-nextid-n>n</code>
+attribute of the <code>nextid</code> element in the document.<!--
+HTML2 -->
 
 <p>If the <code title=attr-meta-scheme
 id=attr-meta-scheme>scheme</code> attribute of the <code>meta</code>
