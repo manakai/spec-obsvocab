@@ -400,18 +400,6 @@ don't copy that usage. -->
 and <code id=nextid>nextid</code> elements are <i>empty</i>.<!-- WA1
 parsing -->
 
-<p>If there is a <code>nextid</code> element element with its <code
-title=attr-nextid-n id=attr-nextid-n>n</code> attribute <cite
-class="bibref informative">[<a href="#ref-HTML20">HTML20</a>]</cite>
-specified, the element <em class=rfc2119>MUST</em> be treated as if
-the element were an <code>a</code> element and the attribute was the
-<code title=attr-objects-name>name</code> attribute for the purpose of
-conformance of <code title=attr-objects-name>name</code> attributes of
-<code>a</code>, <code>applet</code>, <code>embed</code>, and
-<code>img</code> elements and the <code title=attr-nextid-n>n</code>
-attribute of the <code>nextid</code> element in the document.<!--
-HTML2 -->
-
 <p>If the <code title=attr-meta-scheme
 id=attr-meta-scheme>scheme</code> attribute of the <code>meta</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
@@ -1593,11 +1581,9 @@ id=attr-objects-name>name</code> attributes specified, those elements
 <em class=rfc2119>MUST</em> be treated as if they were <code>a</code>
 elements for the purpose of conformance of <code title>name</code>
 attributes of <code>a</code>, <code>applet</code>, <code>embed</code>,
-and <code>img</code> elements and the <code
-title=attr-nextid-n>n</code> attribute of the <code>nextid</code>
-element in the document, except that use of the <code
-title=attr-objects-name>name</code> attributes for these elements are
-always non-conforming.  (Use of the <code
+and <code>img</code> elements in the document, except that use of the
+<code title=attr-objects-name>name</code> attributes for these
+elements are always non-conforming.  (Use of the <code
 title=attr-a-name>name</code> attribute for the <code>a</code> element
 is sometimes <i>obsolete but conforming</i> according to Web
 Applications 1.0.)<!-- WA1 UA reqs
@@ -3684,7 +3670,7 @@ title=attr-input-type>type</code> attribute values
 
 <dt>The <a href="#nextid"><code>nextid</code></a> element
 
-<dd><a href="#attr-nextid-n"><code>n</code></a>
+<dd>No element-specific attribute.
 
 <dt>The <a href="#nobr"><code>nobr</code></a> element
 
