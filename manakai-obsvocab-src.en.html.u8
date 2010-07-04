@@ -649,28 +649,6 @@ element.<!--
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077197>
 -->
 
-<p>If the <code title=attr-multicol-col
-id=attr-multicol-col>col</code> attribute of a <code>multicol</code>
-element <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>
-that represents an integer greater than zero (0).  The <code
-title=attr-multicol-col>col</code> attribute <em
-class=rfc2119>MUST</em> be specified for a <code>multicol</code>
-element.
-
-<p>If the <code title=attr-multicol-gutter
-id=attr-multicol-gutter>gutter</code> attribute of a
-<code>multicol</code> element <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
-
-<p>The <code title=attr-multicol-baseline
-id=attr-multicol-baseline>baseline</code> attribute of a
-<code>multicol</code> element <cite class="bibref
-informative">[JUSTVIEW]</cite> is an <span>enumerated attribute</span>
-with the keyword <code title>vert</code>.
-
 </div>
 
 <div class=section>
@@ -728,16 +706,6 @@ class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
 <p>The <code>hr</code> element's <code title=attr-hr-width
 id=attr-hr-width>width</code> attribute value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
-
-<p>The <code>multicol</code> element's <code title=attr-multicol-width
-id=attr-multicol-width>width</code> <cite class="bibref
-informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> and <code
-title=attr-multicol-height id=attr-multicol-height>height</code> <cite
-class="bibref informative">[JUSTVIEW]</cite> attribute values <em
-class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.<!--
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077956>
--->
 
 <p>The <code>tr</code> element's <code title=attr-tr-height
 id=attr-tr-height>height</code> attribute value <em
@@ -3711,11 +3679,7 @@ title=attr-input-type>type</code> attribute values
 
 <dt>The <a href="#multicol"><code>multicol</code></a> element
 
-<dd><a href="#attr-multicol-baseline"><code>baseline</code></a>
-<dd><a href="#attr-multicol-col"><code>col</code></a>
-<dd><a href="#attr-multicol-gutter"><code>gutter</code></a>
-<dd><a href="#attr-multicol-height"><code>height</code></a>
-<dd><a href="#attr-multicol-width"><code>width</code></a>
+<dd>No element-specific attribute.
 
 <dt>The <a href="#nextid"><code>nextid</code></a> element
 

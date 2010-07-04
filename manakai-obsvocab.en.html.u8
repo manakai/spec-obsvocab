@@ -619,19 +619,6 @@ element.<!--
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077197>
 -->
 
-</p><p>If the <code id=attr-multicol-col title=attr-multicol-col>col</code> attribute of a <code>multicol</code>
-element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
-that represents an integer greater than zero (0).  The <code title=attr-multicol-col>col</code> attribute <em class=rfc2119>MUST</em> be specified for a <code>multicol</code>
-element.
-
-</p><p>If the <code id=attr-multicol-gutter title=attr-multicol-gutter>gutter</code> attribute of a
-<code>multicol</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
-
-</p><p>The <code id=attr-multicol-baseline title=attr-multicol-baseline>baseline</code> attribute of a
-<code>multicol</code> element <cite class="bibref
-informative">[JUSTVIEW]</cite> is an <a href=#enumerated-attribute>enumerated attribute</a>
-with the keyword <code title="">vert</code>.
-
 </p></div>
 
 <div class=section>
@@ -680,12 +667,6 @@ integer</a>.<!-- spacer
 </p><p>The <code>col</code> element's <code id=attr-col-width title=attr-col-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
 
 </p><p>The <code>hr</code> element's <code id=attr-hr-width title=attr-hr-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
-
-</p><p>The <code>multicol</code> element's <code id=attr-multicol-width title=attr-multicol-width>width</code> <cite class="bibref
-informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> and <code id=attr-multicol-height title=attr-multicol-height>height</code> <cite class="bibref informative">[JUSTVIEW]</cite> attribute values <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
-integer</a>.<!--
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077956>
--->
 
 </p><p>The <code>tr</code> element's <code id=attr-tr-height title=attr-tr-height>height</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
 
@@ -3058,11 +3039,7 @@ namespace</span></a>
 
 </dd><dt>The <a href=#multicol><code>multicol</code></a> element
 
-</dt><dd><a href=#attr-multicol-baseline><code>baseline</code></a>
-</dd><dd><a href=#attr-multicol-col><code>col</code></a>
-</dd><dd><a href=#attr-multicol-gutter><code>gutter</code></a>
-</dd><dd><a href=#attr-multicol-height><code>height</code></a>
-</dd><dd><a href=#attr-multicol-width><code>width</code></a>
+</dt><dd>No element-specific attribute.
 
 </dd><dt>The <a href=#nextid><code>nextid</code></a> element
 
