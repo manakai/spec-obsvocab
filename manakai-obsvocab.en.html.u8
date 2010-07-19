@@ -2057,11 +2057,11 @@ than <code title="">alphanet</code> and <code title="">numeric</code> <em class=
 attribute of an <code>input</code> or <code>textarea</code> element
 <cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-input-mask>valid input mask</a>.  A
 <dfn id=valid-input-mask>valid input mask</dfn> is a string consist of one or more <a href=#format-code title="format code">format codes</a>.  A <dfn id=format-code>format code</dfn> is
-an optional sequence of either a U+002A <code class=charname>ASTERISK</code> character (*) or characters in the
-range U+0030 <code class=charname>DIGIT ZERO</code> (0) to U+0039
-<code class=charname>DIGIT NINE</code> (9), followed by a character
-<code>A</code>, <code>a</code>, <code>N</code>, <code>n</code>,
-<code>X</code>, <code>x</code>, <code>M</code>, <code>m</code>.
+one of characters <code>A</code>, <code>a</code>, <code>N</code>,
+<code>n</code>, <code>X</code>, <code>x</code>, <code>M</code>, and
+<code>m</code>, optionally preceded either by a U+002A <code class=charname>ASTERISK</code> character (*) or by one or more
+characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
+(0) to U+0039 <code class=charname>DIGIT NINE</code> (9).
 Alternatively, a <a href=#format-code>format code</a> can be a U+005C <code class=charname>REVERSE SOLIDUS</code> character (\) followed by a
 character.  The <code title=attr-format>format</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
@@ -2073,8 +2073,10 @@ whose <code title=attr-input-type>type</code> attribute is in the
 6.5.2.1. The |wml:format| Attribute, except that <lang:class> format
 is not supported; \c format is not mentioned in au's documentation but
 is supported by implementation according to
-<http://www001.upp.so-net.ne.jp/hdml/wap2/xhtml/input.html>; also in
-Softbank 3.12.2./3.12.5. (historical); type=text. -->
+<http://www001.upp.so-net.ne.jp/hdml/wap2/xhtml/input.html>; according
+to WML's "Note" (!) */f/ and /n//f/ forms are only allowed at the end
+of the string; also in Softbank 3.12.2./3.12.5. (historical);
+type=text. -->
 
 </p><p>The <code id=attr-emptyok title=attr-emptyok>emptyok</code>
 attribute of an <code>input</code> or <code>textarea</code> element
