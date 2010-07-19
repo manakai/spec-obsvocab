@@ -2380,8 +2380,13 @@ keywords <code title>on</code> and <code title>off</code>.  Attributes
 title=attr-input-autocorrect>autocorrect</code> of the
 <code>input</code> element applies only to <code>input</code> elements
 whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-text>Text</span> state<!-- only?? or,
-type=url and type=email and type=search? -->.<!-- autocapitalize
+<span title=attr-input-type-text>Text</span>, <span
+title=attr-input-type-search>Search</span>, <span
+title=attr-input-type-url>URL</span>, <span
+title=attr-input-type-email>E-mail</span>, <span
+title=attr-input-type-tel>Telephone</span>, or <span
+title=attr-input-type-password>Password</span> state.<!--
+autocapitalize
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize>,
 autocorrect
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>
