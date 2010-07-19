@@ -2723,12 +2723,17 @@ with keywords
 The <code title=attr-input-vcard_name>vcard_name</code> attribute of
 the <code>input</code> element applies only to <code>input</code>
 elements whose <code title=attr-input-type>type</code> attribute is in
-the <span title=attr-input-type-text>Text</span> or <span
-title=attr-input-type-password>Password</span> state.<!--
+the <span title=attr-input-type-text>Text</span>, <span
+title=attr-input-type-search>Search</span>, <span
+title=attr-input-type-password>Password</span>, <span
+title=attr-input-type-url>URL</span>, <span
+title=attr-input-type-email>E-mail</span>, or <span
+title=attr-input-type-tel>Telephone</span> state.<!--
 <http://msdn.microsoft.com/en-us/library/ms535130%28VS.85%29.aspx>.
 It says multiple values can be specified, but does not say how to
 (space-separated?) and HTML refereneces in the wild do not describe
-how to encode mutliple values, neither. -->
+how to encode mutliple values, neither; type=text and
+type=password. -->
 
 <p>The <code title=attr-iprof id=attr-iprof>iprof</code> attribute of
 an <code>input</code> or <code>textarea</code> element <cite
@@ -2746,9 +2751,14 @@ title>birthday3</code>, and <code title>birthday</code>.  The <code
 title=attr-iprof>iprof</code> attribute of the <code>input</code>
 element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-text>Text</span> state.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
--->
+title=attr-input-type-text>Text</span>, <span
+title=attr-input-type-search>Search</span>, <span
+title=attr-input-type-password>Password</span>, <span
+title=attr-input-type-url>URL</span>, <span
+title=attr-input-type-email>E-mail</span>, or <span
+title=attr-input-type-tel>Telephone</span> state.<!--
+<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>;
+type=text.  -->
 
 <p>The <code title=attr-input-type>type</code> attribute of the
 <code>input</code> element <em class=rfc2119>MUST</em> be treated as
