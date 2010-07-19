@@ -2548,11 +2548,11 @@ title=attr-input-type-search>Search</span>, <span
 title=attr-input-type-password>Password</span>, <span
 title=attr-input-type-url>URL</span>, <span
 title=attr-input-type-email>E-mail</span>, or <span
-title=attr-input-type-tel>Telephone</span> state.  If the <code
+title=attr-input-type-tel>Telephone</span> state.<!-- If the <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-password>Password</span> state, keywords other
 than <code title>alphanet</code> and <code title>numeric</code> <em
-class=rfc2119>MUST NOT</em> be specified.<!-- Softbank 3.12.2.,
+class=rfc2119>MUST NOT</em> be specified.--><!-- Softbank 3.12.2.,
 3.12.5.: type=text and type=password. -->
 
 <p>If the <code title=attr-format id=attr-format>format</code>

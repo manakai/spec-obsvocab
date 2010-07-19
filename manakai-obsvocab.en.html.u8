@@ -2050,8 +2050,11 @@ Softbank allows this attribute also to <input type=password>.  -->
 </p><p>The <code id=attr-mode title=attr-mode>mode</code> attribute of
 <code>input</code> and <code>textarea</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">hiragana</code>, <code title="">katakana</code>, <code title="">hankakukana</code>, <code title="">alphabet</code>, and <code title="">numeric</code>.  The <code title=attr-mode>mode</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.  If the <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-password>Password</span> state, keywords other
-than <code title="">alphanet</code> and <code title="">numeric</code> <em class=rfc2119>MUST NOT</em> be specified.<!-- Softbank 3.12.2.,
+element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.<!-- If the <code
+title=attr-input-type>type</code> attribute is in the <span
+title=attr-input-type-password>Password</span> state, keywords other
+than <code title>alphanet</code> and <code title>numeric</code> <em
+class=rfc2119>MUST NOT</em> be specified.--><!-- Softbank 3.12.2.,
 3.12.5.: type=text and type=password. -->
 
 </p><p>If the <code id=attr-format title=attr-format>format</code>
