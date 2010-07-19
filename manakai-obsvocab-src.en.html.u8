@@ -2520,10 +2520,15 @@ title>1</code>, <code title>2</code>, <code title>3</code>, and <code
 title>4</code>.  The <code title=attr-istyle>istyle</code> attribute
 of the <code>input</code> element applies only to <code>input</code>
 elements whose <code title=attr-input-type>type</code> attribute is in
-the <span title=attr-input-type-text>Text</span> state.<!--
+the <span title=attr-input-type-text>Text</span>, <span
+title=attr-input-type-search>Search</span>, <span
+title=attr-input-type-password>Password</span>, <span
+title=attr-input-type-url>URL</span>, <span
+title=attr-input-type-email>E-mail</span>, or <span
+title=attr-input-type-tel>Telephone</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>;
-au and emobile also implements this.  Softbank allows this attribute
-also to <input type=password>.  -->
+au and emobile also implements this (<input type=text istyle>).
+Softbank allows this attribute also to <input type=password>.  -->
 
 <p>The <code title=attr-mode id=attr-mode>mode</code> attribute of
 <code>input</code> and <code>textarea</code> elements <cite
@@ -2535,13 +2540,17 @@ title>alphabet</code>, and <code title>numeric</code>.  The <code
 title=attr-mode>mode</code> attribute of the <code>input</code>
 element applies only to <code>input</code> elements whose <code
 title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-text>Text</span> or <span
-title=attr-input-type-password>Password</span> state.  If the <code
+title=attr-input-type-text>Text</span>, <span
+title=attr-input-type-search>Search</span>, <span
+title=attr-input-type-password>Password</span>, <span
+title=attr-input-type-url>URL</span>, <span
+title=attr-input-type-email>E-mail</span>, or <span
+title=attr-input-type-tel>Telephone</span> state.  If the <code
 title=attr-input-type>type</code> attribute is in the <span
 title=attr-input-type-password>Password</span> state, keywords other
 than <code title>alphanet</code> and <code title>numeric</code> <em
 class=rfc2119>MUST NOT</em> be specified.<!-- Softbank 3.12.2.,
-3.12.5. -->
+3.12.5.: type=text and type=password. -->
 
 <p>If the <code title=attr-format id=attr-format>format</code>
 attribute of an <code>input</code> or <code>textarea</code> element
@@ -2561,7 +2570,12 @@ class=charname>REVERSE SOLIDUS</code> character (\) followed by a
 character.  The <code title=attr-format>format</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-text>Text</span> state.<!--
+<span title=attr-input-type-text>Text</span>, <span
+title=attr-input-type-search>Search</span>, <span
+title=attr-input-type-password>Password</span>, <span
+title=attr-input-type-url>URL</span>, <span
+title=attr-input-type-email>E-mail</span>, or <span
+title=attr-input-type-tel>Telephone</span> state.<!--
 <http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
 2.0
 <http://www.google.com/search?q=cache%3AlUL3jRY2WmwJ%3Awww.openmobilealliance.org%2Ftech%2Faffiliates%2Fwap%2Fwap-238-wml-20010911-a.pdf>
@@ -2569,17 +2583,26 @@ whose <code title=attr-input-type>type</code> attribute is in the
 is not supported; \c format is not mentioned in au's documentation but
 is supported by implementation according to
 <http://www001.upp.so-net.ne.jp/hdml/wap2/xhtml/input.html>; also in
-Softbank 3.12.2./3.12.5. (historical) -->
+Softbank 3.12.2./3.12.5. (historical); type=text. -->
 
 <p>The <code title=attr-emptyok id=attr-emptyok>emptyok</code>
 attribute of an <code>input</code> or <code>textarea</code> element
 <cite class="bibref informative">[<a
 href="#ref-EZWEB">EZWEB</a>]</cite> is an <span>enumerated
 attribute</span> with keywords <code title>true</code> and <code
-title>false</code>.<!--
+title>false</code>.  The <code title=attr-emptyok>emptyok</code>
+attribute of the <code>input</code> element applies only to
+<code>input</code> elements whoes <code
+title=attr-input-type>type</code> attribute is in the <span
+title=attr-input-type-text>Text</span>, <span
+title=attr-input-type-search>Search</span>, <span
+title=attr-input-type-password>Password</span>, <span
+title=attr-input-type-url>URL</span>, <span
+title=attr-input-type-email>E-mail</span>, or <span
+title=attr-input-type-tel>Telephone</span> state.<!--
 <http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
 2.0 6.5.2.2. The |wml:emptyok| Attribute; also in Softbank
-3.12.2. (historical) -->
+3.12.2. (historical); type=text. -->
 
 <p>If the <code title=attr-accept-charset
 id=attr-accept-charset>accept-charset</code> attribute of an
@@ -2610,7 +2633,7 @@ id=attr-textarea-pattern>pattern</code> attribute of a
 <code>textarea</code> element <cite class="bibref informative">[<a
 href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but immediately dropped
 after introduction --> is present, its value <em
-class=rfc2119>MUST</em> be a string tha is a valid as an <code
+class=rfc2119>MUST</em> be a string that is a valid as an <code
 title=attr-input-pattern>pattern</code> attribute value of the
 <code>input</code> element.
 
@@ -3472,11 +3495,11 @@ namespace</span></a>
 <dd><a href="#attr-input-autocapitalize"><code>autocapitalize</code></a>
 <dd><a href="#attr-input-autocorrect"><code>autocorrect</code></a>
 <dd><a href="#attr-input-autosave"><code>autosave</code></a>
-<dd><a href="#attr-fs-enctype"><code>enctype</code></a>
 <dd><a href="#attr-dim-border"><code>border</code></a>
 <dd><a href="#attr-directkey"><code>directkey</code></a>
 <dd><a href="#attr-dynsrc"><code>dynsrc</code></a>
 <dd><a href="#attr-emptyok"><code>emptyok</code></a>
+<dd><a href="#attr-fs-enctype"><code>enctype</code></a>
 <dd><a href="#attr-format"><code>format</code></a>
 <dd><a href="#attr-hspace"><code>hspace</code></a>
 <dd><a href="#attr-input-incremental"><code>incremental</code></a>
