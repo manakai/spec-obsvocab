@@ -699,10 +699,11 @@ was toppadding, rightpadding, bottompadding, and leftpadding -->
 </p><p>If the <code id=attr-hspace title=attr-hspace>hspace</code> or
 <code id=attr-vspace title=attr-vspace>vspace</code> attribute of an
 <code>applet</code>, <code>embed</code>, <code>iframe</code>,
-<code>img</code>, <code>object</code>, or <code>marquee</code>
-element, or of an <code>input</code> element whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state, is specified,
-its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension
-value</a>.<!-- WA1 rendering -->
+<code>img</code>, <code>input</code>, <code>object</code>, or
+<code>marquee</code> element is specified, its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension value</a>.  The
+<code title=attr-hspace>hspace</code> and <code title=attr-vspace>vspace</code> attributes of the <code>input</code>
+element apply only to elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.<!-- WA1
+rendering -->
 
 </p><p>The <code id=attr-embed-units title=attr-embed-units>units</code>
 attribute of the <code>embed</code> element <cite class="bibref
