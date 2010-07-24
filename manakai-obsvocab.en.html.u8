@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 19 July 2010</h2>
+<h2 class="no-toc no-num" id=working-draft-date>Working Draft 24 July 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -155,13 +155,13 @@ specifications</a>.  In particular, the Web Applications 1.0
 specification identifies a number of non-conforming elements and
 attributes as <i>obsolete</i>.  It does not define any specific
 conformance requirement for such elements and attributes, as the use
-of them is by itself non-conforming.
+of them is by definition <em>non-conforming</em>.
 
 </p><p>However, authors are sometimes forced to use such non-conforming
 elements and attributes, for compatibility with legacy or <i lang=es>Galápagos</i> user agents and/or historical authoring
 practices.  A conformance checker that reports a non-conforming
 elements and attributes just as <i>non-conforming</i> is not useful
-enough to ease the authoring process in such legacy circumstances.
+enough to ease authoring processes in such legacy circumstances.
 
 </p><p>This specification defines conformance requirements for elements
 and attributes not defined in the Web Applications 1.0 specification
@@ -177,8 +177,9 @@ specification.
 
 </p><p>This specification is developed as part of the <a href=http://suika.fam.cx/www/manakai-core/doc/web/>manakai</a>
 project.  Although it might be useful to other parties, the only
-intended audiences of this specification are contributors for the
-project.  This specification does not define any kind of standard.
+intended audiences of this specification are contributors of the
+project.  This specification does not define or describe any kind of
+standard.
 
 </p></div>
 
@@ -225,11 +226,15 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#xml-mime-type><dfn id=xml-mime-type>XML MIME type</dfn></a>,
 
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#url><dfn id=url>URL</dfn></a>,
+
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-url><dfn id=valid-url>valid URL</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-empty-url><dfn id=valid-non-empty-url>valid non-empty URL</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#absolute-url><dfn id=absolute-url>absolute URL</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#resolve-a-url><dfn id=resolve-a-url>resolve a URL</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#url-scheme><dfn id=url-scheme title=url-scheme>&lt;scheme&gt;</dfn></a>,
 
@@ -1456,6 +1461,12 @@ tokens</a>, each of which <em class=rfc2119>MUST</em> be a
 tokens</a>, each of which <em class=rfc2119>MUST</em> be a
 <a href=#valid-non-empty-url>valid non-empty URL</a>.<!-- HTML4 -->
 
+</p><p>When a <a href=#url>URL</a> specified within the <code title="">archive</code> attribute of the <code>applet</code> or
+<code>object</code> element is <a href=#resolve-a-url title="resolve a
+URL">resolved</a>, the <a href=#url>URL</a> obtained by <a href=#resolve-a-url title="resolve a URL">resolving</a> the value of the <code title=attr-objects-codebase>codebase</code> attribute of the element,
+if any, <em class=rfc2119>MUST</em> be used as the <i>base
+URL</i>.<!-- HTML4 -->
+
 </p><p>If the <code id=attr-object-classid title=attr-object-classid>classid</code> attribute of an
 <code>object</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a> and <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>.<!-- WA1 UA
 reqs and HTML4 def -->
@@ -1480,8 +1491,10 @@ HTML4 -->
 HTML4 -->
 
 </p><p>If the <code id=attr-object-codetype title=attr-object-codetype>codetype</code> attribute of an
-<code>object</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-mime-type>valid MIME type</a>.<!-- HTML4
--->
+<code>object</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-mime-type>valid MIME type</a>.  This
+attribute <em class=rfc2119>SHOULD</em> be presented if the element
+has a <code title=attr-object-classid>classid</code> attribute.<!--
+HTML4 -->
 
 <!-- <object basehref> is not a content attribute in fact.
 <http://msdn.microsoft.com/en-us/library/ms533501%28VS.85%29.aspx> -->
@@ -1966,7 +1979,7 @@ autocorrect
 attribute of a <code>form</code> element <cite class="bibref
 informative">[<a href=#ref-WF2>WF2</a>]</cite> is present, its value
 <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.
-The <span>URL</span> <em class=rfc2119>MUST</em> reference an
+The <a href=#url>URL</a> <em class=rfc2119>MUST</em> reference an
 <span>XML document</span> whose <span>root element</span> is the <code title=formdata-formdata>formdata</code> element in the <code title="">http://n.whatwg.org/formdata</code> namespace.  The document <em class=rfc2119>MUST</em> be labeled using an <a href=#xml-mime-type>XML MIME
 type</a>.  It is encouraged to use the MIME type
 <code>application/xml</code>.<!--
@@ -1976,7 +1989,7 @@ type</a>.  It is encouraged to use the MIME type
 attribute of a <code>select</code> or <code>datalist</code> element
 <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite>
 is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid
-non-empty URL</a>.  The <span>URL</span> <em class=rfc2119>MUST</em> reference an <span>XML document</span> whose
+non-empty URL</a>.  The <a href=#url>URL</a> <em class=rfc2119>MUST</em> reference an <span>XML document</span> whose
 <span>root element</span> is the <code>select</code> element.  The
 document <em class=rfc2119>MUST</em> be labeled using an <a href=#xml-mime-type>XML
 MIME type</a>.  It is encouraged to use the MIME type
