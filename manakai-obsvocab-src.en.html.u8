@@ -1131,6 +1131,7 @@ title>block</code>.<!--
 the <code>spacer</code> element does <em>not</em> <span title="ASCII
 case-insensitive">ASCII case-insensitively</span> match to <code
 title>block</code>, the <code title=attr-spacer-size>size</code>
+attribute and the <code title=attr-objects-align>align</code>
 attribute <em class=rfc2119>MUST NOT</em> be specified.  Otherwise,
 the <code title=attr-spacer-width>width</code> and <code
 title=attr-spacer-height>height</code> attributes <em
