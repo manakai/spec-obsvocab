@@ -2109,7 +2109,9 @@ after introduction --> is present, its value <em class=rfc2119>MUST</em> be a st
 
 </p><p>If the <code id=attr-textarea-accept title=attr-textarea-accept>accept</code> attribute of a
 <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <!-- and HTML5 but immediately dropped
-after introduction --> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-mime-type>valid MIME type</a>.
+after introduction --> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-mime-type>valid MIME type</a> that
+represents a <span>text-based MIME type</span>.<!-- What is the
+"text-based" is intentionally left undefined for now. -->
 
 </p><p>If the <code id=attr-textarea-pattern title=attr-textarea-pattern>pattern</code> attribute of a
 <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <!-- and HTML5 but immediately dropped

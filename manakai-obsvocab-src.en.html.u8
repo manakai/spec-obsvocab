@@ -2633,7 +2633,9 @@ id=attr-textarea-accept>accept</code> attribute of a
 <code>textarea</code> element <cite class="bibref informative">[<a
 href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but immediately dropped
 after introduction --> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid MIME type</span>.
+class=rfc2119>MUST</em> be a <span>valid MIME type</span> that
+represents a <span>text-based MIME type</span>.<!-- What is the
+"text-based" is intentionally left undefined for now. -->
 
 <p>If the <code title=attr-textarea-pattern
 id=attr-textarea-pattern>pattern</code> attribute of a
