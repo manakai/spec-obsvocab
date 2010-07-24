@@ -1136,8 +1136,8 @@ title=attr-objects-align>align</code> attributes <em
 class=rfc2119>MUST NOT</em> be specified.  Otherwise, the <code
 title=attr-spacer-size>size</code> attribute <em class=rfc2119>MUST
 NOT</em> be specified.<!--
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
--->
+<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>;
+|type|'s default is |horizontal| -->
 
 </div>
 
