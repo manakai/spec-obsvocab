@@ -391,13 +391,6 @@ is "cdata".  Various DTDs of versions of HTML and XHTML define their
 |version| attribute as |#FIXED| and gives their public identifiers as
 the value, but it had not been speced anywhere at all. -->
 
-<p>The <span>content model</span> of the <code
-id=pre-html>pre-html</code> element <cite class="bibref
-informative">[<a href="#ref-ISOHTMLUG">ISOHTMLUG</a>]</cite> is same
-as the <code>html</code> element.<!-- ISOHTMLUG; pre-html was also
-reused by some HTML geeks to emulate tagsoup in SGML framework, but we
-don't copy that usage. -->
-
 <div class=section>
 <h4>Metadata elements</h4>
 
@@ -502,14 +495,6 @@ conformance checking.<!-- RDFa (DTD) -->
 <p>The <span>content model</span> of the <code id=center>center</code>
 element is same as the <code>div</code> element.<!-- WA1 parsing, WA1
 rendering -->
-
-<p>The <span>content model</span> of <code id=div1>div1</code>, <code
-id=div2>div2</code>, <code id=div3>div3</code>, <code
-id=div4>div4</code>, <code id=div5>div5</code>, and <code
-id=div6>div6</code> elements <cite class="bibref informative">[<a
-href="#ref-ISOHTMLUG">ISOHTMLUG</a>]</cite> is same as the
-<code>div</code> element.<!-- ISOHTMLUG; divn requires hn+1, e.g. div1
-requires h2 child, but we don't copy it.  -->
 
 <p>The <span>content model</span> of <code id=xmp>xmp</code>, <code
 id=listing>listing</code>, and <code id=plaintext>plaintext</code>
@@ -3320,30 +3305,6 @@ namespace</span></a>
 <dd><a href="#attr-align"><code>align</code></a>
 <dd><a href="#attr-tdth-nowrap"><code>nowrap</code></a>
 
-<dt>The <a href="#div1"><code>div1</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#div2"><code>div2</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#div3"><code>div3</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#div4"><code>div4</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#div5"><code>div5</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#div6"><code>div6</code></a> element
-
-<dd>No element-specific attribute.
-
 <dt>The <code>dl</code> element
 
 <dd><a href="#attr-compact"><code>compact</code></a>
@@ -3692,10 +3653,6 @@ title=attr-input-type>type</code> attribute values
 <dd><a href="#attr-pre-width"><code>width</code></a>
 <dd><a href="#attr-pre-wrap"><code>wrap</code></a>
 
-<dt>The <a href="#pre-html"><code>pre-html</code></a> element
-
-<dd>No element-specific attribute.
-
 <dt>The <a href="#rb"><code>rb</code></a> element
 
 <dd>No element-specific attribute.
@@ -4004,14 +3961,6 @@ of the HTML+ Document Format</a></cite>, David Raggett.
 href="http://www.nttdocomo.co.jp/service/imode/make/content/browser/index.html"
 lang=ja>iモードブラウザ</a></cite> (i-mode browser), NTT docomo. (In
 Japanese)
-
-<dt id=ref-ISOHTMLUG>ISOHTMLUG
-
-<dd><cite><a
-href="http://purl.org/NET/ISO+IEC.15445/Users-Guide.html">User's Guide
-to ISO/IEC 15445:2000 HyperText Markup Language (HTML)</a></cite>,
-David M. Abrahamson, Roger Price, <time datetime=2003-04-24>24 April
-2003</time>.
 
 <dt id=ref-M12N11>M12N11
 
