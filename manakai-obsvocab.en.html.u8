@@ -2868,6 +2868,7 @@ namespace</span></a>
 </dd><dd><a href=#attr-start><code>start</code></a>
 </dd><dd><a href=#attr-fs-target><code>target</code></a>
 </dd><dd><a href=#attr-input-template><code>template</code></a>
+<!-- type -->
 </dd><dd><a href=#attr-input-usemap><code>usemap</code></a>
 </dd><dd><a href=#attr-input-vcard_name><code>vcard_name</code></a>
 </dd><dd><a href=#attr-viblength><code>viblength</code></a>
@@ -3113,6 +3114,8 @@ namespace</span></a>
 
 </dt><dd><a href=#attr-textarea-accept><code>accept</code></a>
 </dd><dd><a href=#attr-accept-charset><code>accept-charset</code></a>
+</dd><dd><a href=#attr-input-autocapitalize><code>autocapitalize</code></a>
+</dd><dd><a href=#attr-input-autocorrect><code>autocorrect</code></a>
 </dd><dd><a href=#attr-emptyok><code>emptyok</code></a>
 </dd><dd><a href=#attr-format><code>format</code></a>
 </dd><dd><a href=#attr-inputmode><code>inputmode</code></a>
@@ -3120,7 +3123,7 @@ namespace</span></a>
 </dd><dd><a href=#attr-istyle><code>istyle</code></a>
 </dd><dd><a href=#attr-mode><code>mode</code></a>
 </dd><dd><a href=#attr-textarea-pattern><code>pattern</code></a>
-</dd><dd><a href=#attr-textarea-wrap><code>wrap</code></a>
+<!--<dd><a href="#attr-textarea-wrap"><code>wrap</code></a>-->
 
 </dd><dt>The <code>tfoot</code> element
 
