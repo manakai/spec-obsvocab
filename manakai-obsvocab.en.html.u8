@@ -971,10 +971,9 @@ informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is an
 
 </p><p>If the <code title=attr-spacer-type>type</code> attribute value of
 the <code>spacer</code> element does <em>not</em> <a href=#ascii-case-insensitive title="ASCII
-case-insensitive">ASCII case-insensitively</a> match to <code title="">block</code>, the <code title=attr-spacer-size>size</code>
-attribute and the <code title=attr-objects-align>align</code>
-attribute <em class=rfc2119>MUST NOT</em> be specified.  Otherwise,
-the <code title=attr-spacer-width>width</code> and <code title=attr-spacer-height>height</code> attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
+case-insensitive">ASCII case-insensitively</a> match to <code title="">block</code>, then <code title=attr-spacer-width>width</code>,
+<code title=attr-spacer-height>height</code>, and <code title=attr-objects-align>align</code> attributes <em class=rfc2119>MUST NOT</em> be specified.  Otherwise, the <code title=attr-spacer-size>size</code> attribute <em class=rfc2119>MUST
+NOT</em> be specified.<!--
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
 
