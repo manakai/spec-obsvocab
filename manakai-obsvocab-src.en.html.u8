@@ -751,10 +751,10 @@ was toppadding, rightpadding, bottompadding, and leftpadding -->
 <p>If the <code title=attr-hspace id=attr-hspace>hspace</code> or
 <code title=attr-vspace id=attr-vspace>vspace</code> attribute of an
 <code>applet</code>, <code>embed</code>, <code>iframe</code>,
-<code>img</code>, <code>input</code>, <code>object</code>, or
-<code>marquee</code> element is specified, its value <em
-class=rfc2119>MUST</em> be a <span>valid dimension value</span>.  The
-<code title=attr-hspace>hspace</code> and <code
+<code>img</code>, <code>input</code>, <code>marquee</code>,
+<code>object</code>, or <code>table</code> element is specified, its
+value <em class=rfc2119>MUST</em> be a <span>valid dimension
+value</span>.  The <code title=attr-hspace>hspace</code> and <code
 title=attr-vspace>vspace</code> attributes of the <code>input</code>
 element apply only to elements whoes <code
 title=attr-input-type>type</code> attribute is in the <span
@@ -3716,8 +3716,10 @@ title=attr-input-type>type</code> attribute values
 <dd><a href="#attr-table-datapagesize"><code>datapagesize</code></a>
 <dd><a href="#attr-table-frame"><code>frame</code></a>
 <dd><a href="#attr-height"><code>height</code></a>
+<dd><a href="#attr-hspace"><code>hspace</code></a>
 <dd><a href="#attr-table-rules"><code>rules</code></a>
 <dd><a href="#attr-table-tableborder"><code>tableborder</code></a>
+<dd><a href="#attr-vspace"><code>vspace</code></a>
 <dd><a href="#attr-width"><code>width</code></a>
 
 <dt>The <code>tbody</code> element

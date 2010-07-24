@@ -694,9 +694,10 @@ was toppadding, rightpadding, bottompadding, and leftpadding -->
 </p><p>If the <code id=attr-hspace title=attr-hspace>hspace</code> or
 <code id=attr-vspace title=attr-vspace>vspace</code> attribute of an
 <code>applet</code>, <code>embed</code>, <code>iframe</code>,
-<code>img</code>, <code>input</code>, <code>object</code>, or
-<code>marquee</code> element is specified, its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension value</a>.  The
-<code title=attr-hspace>hspace</code> and <code title=attr-vspace>vspace</code> attributes of the <code>input</code>
+<code>img</code>, <code>input</code>, <code>marquee</code>,
+<code>object</code>, or <code>table</code> element is specified, its
+value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension
+value</a>.  The <code title=attr-hspace>hspace</code> and <code title=attr-vspace>vspace</code> attributes of the <code>input</code>
 element apply only to elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.<!-- WA1
 rendering -->
 
@@ -3070,8 +3071,10 @@ namespace</span></a>
 </dd><dd><a href=#attr-table-datapagesize><code>datapagesize</code></a>
 </dd><dd><a href=#attr-table-frame><code>frame</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
+</dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-table-rules><code>rules</code></a>
 </dd><dd><a href=#attr-table-tableborder><code>tableborder</code></a>
+</dd><dd><a href=#attr-vspace><code>vspace</code></a>
 </dd><dd><a href=#attr-width><code>width</code></a>
 
 </dd><dt>The <code>tbody</code> element
