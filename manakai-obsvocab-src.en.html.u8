@@ -559,6 +559,24 @@ its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 </div>
 
 <div class=section>
+<h4>Datagrids</h4>
+
+<p>The <span>content model</span> of the <code
+id=datagrid>datagrid</code> element is same as the <code>div</code>
+element.
+
+<p>The <code title=attr-datagrid-disabled>disabled</code> attribute
+and the <code title=attr-datagrid-multiple>multiple</code> attribute
+of the <code>datagrid</code> element are <span title="boolean
+attribute">boolean attributes</span>.
+
+<!-- WA1
+<http://html5.org/tools/web-apps-tracker?from=3554&to=3555&context=>
+-->
+
+</div>
+
+<div class=section>
 <h4>The <code>marquee</code> element</h4>
 
 <p>The <span>content model</span> of the <code
@@ -3288,6 +3306,11 @@ namespace</span></a>
 <dt>The <a href="#comment"><code>comment</code></a> element
 
 <dd>No element-specific attribute.
+
+<dt>The <code>datagrid</code> element
+
+<dd><a href="#attr-datagrid-disabled"><code>disabled</code></a>
+<dd><a href="#attr-datagrid-multiple"><code>multiple</code></a>
 
 <dt>The <code>datalist</code> element
 

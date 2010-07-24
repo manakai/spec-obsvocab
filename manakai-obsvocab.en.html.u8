@@ -81,9 +81,10 @@ and attributes</a></li>
     <ol>
      <li><a href=#lists><span class=secno>4.3.1 </span>Lists</a></li>
      <li><a href=#tables><span class=secno>4.3.2 </span>Tables</a></li>
-     <li><a href=#the-marquee-element><span class=secno>4.3.3 </span>The <code>marquee</code> element</a></li>
-     <li><a href=#the-multicol-element><span class=secno>4.3.4 </span>The <code>multicol</code> element</a></li>
-     <li><a href=#the-layer-and-nolayer-elements><span class=secno>4.3.5 </span>The <code>layer</code> and <code>nolayer</code> elements</a></li></ol></li>
+     <li><a href=#datagrids><span class=secno>4.3.3 </span>Datagrids</a></li>
+     <li><a href=#the-marquee-element><span class=secno>4.3.4 </span>The <code>marquee</code> element</a></li>
+     <li><a href=#the-multicol-element><span class=secno>4.3.5 </span>The <code>multicol</code> element</a></li>
+     <li><a href=#the-layer-and-nolayer-elements><span class=secno>4.3.6 </span>The <code>layer</code> and <code>nolayer</code> elements</a></li></ol></li>
    <li><a href=#boxes><span class=secno>4.4 </span>Boxes</a>
     <ol>
      <li><a href=#dimension><span class=secno>4.4.1 </span>Dimension</a></li>
@@ -557,7 +558,24 @@ its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 </p></div>
 
 <div class=section>
-<h4 id=the-marquee-element><span class=secno>4.3.3 </span>The <code>marquee</code> element</h4>
+<h4 id=datagrids><span class=secno>4.3.3 </span>Datagrids</h4>
+
+<p>The <a href=#content-model>content model</a> of the <code id=datagrid>datagrid</code> element is same as the <code>div</code>
+element.
+
+</p><p>The <code title=attr-datagrid-disabled>disabled</code> attribute
+and the <code title=attr-datagrid-multiple>multiple</code> attribute
+of the <code>datagrid</code> element are <a href=#boolean-attribute title="boolean
+attribute">boolean attributes</a>.
+
+<!-- WA1
+<http://html5.org/tools/web-apps-tracker?from=3554&to=3555&context=>
+-->
+
+</p></div>
+
+<div class=section>
+<h4 id=the-marquee-element><span class=secno>4.3.4 </span>The <code>marquee</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=marquee>marquee</code> element is same as the <code>div</code>
 element.<!-- WA1 parsing, WA1 rendering -->
@@ -595,7 +613,7 @@ attributes</a>.<!-- Normatively defined in WA1 - HTML5 obsolete
 </p></div>
 
 <div class=section>
-<h4 id=the-multicol-element><span class=secno>4.3.4 </span>The <code>multicol</code> element</h4>
+<h4 id=the-multicol-element><span class=secno>4.3.5 </span>The <code>multicol</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> element of the <code id=multicol>multicol</code> element is same as the <code>div</code>
 element.<!--
@@ -605,7 +623,7 @@ element.<!--
 </p></div>
 
 <div class=section>
-<h4 id=the-layer-and-nolayer-elements><span class=secno>4.3.5 </span>The <code>layer</code> and <code>nolayer</code> elements</h4>
+<h4 id=the-layer-and-nolayer-elements><span class=secno>4.3.6 </span>The <code>layer</code> and <code>nolayer</code> elements</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=layer>layer</code>
 element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is same as the
@@ -2644,6 +2662,11 @@ namespace</span></a>
 </dd><dt>The <a href=#comment><code>comment</code></a> element
 
 </dt><dd>No element-specific attribute.
+
+</dd><dt>The <code>datagrid</code> element
+
+</dt><dd><a href=#attr-datagrid-disabled><code>disabled</code></a>
+</dd><dd><a href=#attr-datagrid-multiple><code>multiple</code></a>
 
 </dd><dt>The <code>datalist</code> element
 
