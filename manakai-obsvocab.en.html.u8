@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="formal-specification status-work-in-progress anolis" lang=en><head><meta charset=utf-8>
+<!DOCTYPE html><html class="formal-specification anolis" lang=en><head><meta charset=utf-8>
 
 <title>manakai's Conformance Checking Guideline for Obsolete HTML
 Elements and Attributes</title>
@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=working-draft-date>Working Draft 24 July 2010</h2>
+<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 25 July 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -31,7 +31,27 @@ this document.
 <div class=section id=abstract>
 <h2 class="no-toc no-num" id=abstract-0>Abstract</h2>
 
-<p class=ed>...
+<p>This specification defines authors' requirements for historical
+HTML elements and attributes, which are <em>not</em> defined in the
+Web Applications 1.0 specification or listed but marked as
+<i>obsolete</i>, such that conformance checkers can find authoring
+errors against these requirements.  Use of such non‐conforming
+elements and attributes are sometimes necessary for compatibility with
+legacy or <i lang=es>Galápagos</i> user agents and/or
+historical authoring practices.  A conformance checker that reports a
+non‐conforming elements and attributes just as <i>non‐conforming</i>
+is not useful enough to ease authoring processes in such legacy
+circumstances.  The scope of this specification is explicitly limited
+to the conformance checking of documents (or parts of documents) that
+contains obsolete elements and attributes for the purpose of
+comaptibility.
+
+</p><p>This specification is developed as part of the <a href=http://suika.fam.cx/www/manakai-core/doc/web/>manakai</a>
+project.  Although it might be useful to other parties, the only
+intended audiences of this specification are contributors of the
+project.  This specification does not define or describe any kind of
+standard.
+
 </p></div>
 
 <div class=section id=status>
@@ -41,12 +61,13 @@ this document.
 document at the time of its publication.  Other documents might
 supersede this document.</em></p>
 
-<p>This document is a working draft, produced as part of the <a href=http://suika.fam.cx/www/manakai-core/doc/web/>manakai</a>
+<p>This document is a <!-- working draft --> technical specification,
+produced as part of the <a href=http://suika.fam.cx/www/manakai-core/doc/web/>manakai</a>
 project.  It might be updated, replaced, or obsoleted by other
-documents at any time.  It is inappropriate to cite this document as
-other than <q>work in progress</q>.</p>
+documents at any time.<!-- It is inappropriate to cite this document
+as other than <q>work in progress</q>. -->
 
-<p>Comments on this document are welcome and may be sent to the <a href=#author>author</a>.</p>
+</p><p>Comments on this document are welcome and may be sent to the <a href=#author>author</a>.</p>
 
 <p>Translations of thie document might be available.  The English
 version of the document is the only normative version.</p>
@@ -65,13 +86,14 @@ version of the document is the only normative version.</p>
    <li><a href=#terminology><span class=secno>2.1 </span>Terminology</a></li>
    <li><a href=#conformance-requirements><span class=secno>2.2 </span>Conformance requirements</a></li>
    <li><a href=#namespaces><span class=secno>2.3 </span>Namespaces</a></li></ol></li>
- <li><a href=#how-to-define-conformance-requirements-for-non-conforming-elements-and-attributes><span class=secno>3 </span>How to define conformance requirements for non-conforming elements
-and attributes</a></li>
+ <li><a href=#how-to-define-requirements-for-non‐conforming-elements-and-attributes><span class=secno>3 </span>How to define requirements for non‐conforming elements and
+attributes</a></li>
  <li><a href=#obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</a>
   <ol>
    <li><a href=#global-attributes><span class=secno>4.1 </span>Global attributes</a>
     <ol>
-     <li><a href=#user-interaction><span class=secno>4.1.1 </span>User interaction</a></li></ol></li>
+     <li><a href=#namespaced-attributes><span class=secno>4.1.1 </span>Namespaced attributes</a></li>
+     <li><a href=#user-interaction><span class=secno>4.1.2 </span>User interaction</a></li></ol></li>
    <li><a href=#metadata><span class=secno>4.2 </span>Metadata</a>
     <ol>
      <li><a href=#metadata-elements><span class=secno>4.2.1 </span>Metadata elements</a></li>
@@ -145,34 +167,36 @@ and attributes</a></li>
 <div class=section>
 <h2 id=introduction><span class=secno>1 </span>Introduction</h2>
 
-<p><em>This section is non‐normative.</em>
+<p class=section-info><em>This section is non‐normative.</em>
 
 </p><p>The Web Applications 1.0 specification <cite class="bibref
 normative">[<a href=#ref-WA1>WA1</a>]</cite> defines the language
 vocabulary of HTML, i.e. a set of conforming HTML elements and
-attributes.  Any other elements and attributes are non-conforming
-unless otherwise defined by <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications>applicable
-specifications</a>.  In particular, the Web Applications 1.0
-specification identifies a number of non-conforming elements and
-attributes as <i>obsolete</i>.  It does not define any specific
-conformance requirement for such elements and attributes, as the use
-of them is by definition <em>non-conforming</em>.
+attributes.  Any other HTML elements and attributes are non‐conforming
+unless otherwise defined by some <a href=#applicable-specifications title="applicable
+specifications">applicable specification</a>.  In particular, the
+Web Applications 1.0 specification identifies a number of
+non‐conforming elements and attributes as <i>obsolete</i>.  It does
+not define any specific conformance requirement for such elements and
+attributes, as the use of them is by definition
+<em>non‐conforming</em>.
 
-</p><p>However, authors are sometimes forced to use such non-conforming
+</p><p>However, authors are sometimes forced to use such non‐conforming
 elements and attributes, for compatibility with legacy or <i lang=es>Galápagos</i> user agents and/or historical authoring
-practices.  A conformance checker that reports a non-conforming
-elements and attributes just as <i>non-conforming</i> is not useful
+practices.  A conformance checker that reports a non‐conforming
+elements and attributes just as <i>non‐conforming</i> is not useful
 enough to ease authoring processes in such legacy circumstances.
 
-</p><p>This specification defines conformance requirements for elements
-and attributes not defined in the Web Applications 1.0 specification
-or those marked as <i>obsolete</i>, such that conformance checkers can
-find authoring errors against these requirements.  The scope of this
-specification is explicitly limited to the conformance checking of
-documents (or parts of documents) that contains obsolete elements and
-attributes for comaptibility.  Elements and attributes conforming to
-these requirements are still non-conforming.  Especially, this
-specification is <em>not</em> an <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications>applicable
+</p><p>This specification defines authors' requirements for HTML elements
+and attributes <em>not</em> defined in the Web Applications 1.0
+specification or those marked as <i>obsolete</i>, such that
+conformance checkers can find authoring errors against these
+requirements.  The scope of this specification is explicitly limited
+to the conformance checking of documents (or parts of documents) that
+contains obsolete elements and attributes for the purpose of
+comaptibility.  Elements and attributes conforming to these
+requirements are still non‐conforming.  Especially, this specification
+is <em>not</em> an <a href=#applicable-specifications title="applicable specifications">applicable
 specification</a> in the context of the Web Applications 1.0
 specification.
 
@@ -195,6 +219,8 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 </p><p>Web Applications 1.0 defines the terms
 
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications><dfn id=applicable-specifications>applicable specifications</dfn></a>,
+
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#willful-violation><dfn id=willful-violation>willful violation</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#ascii-case-insensitive><dfn id=ascii-case-insensitive>ASCII case-insensitive</dfn></a>,
@@ -202,6 +228,8 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-namespace-0><dfn id=html-namespace>HTML namespace</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-elements><dfn id=html-elements>HTML elements</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#xml-documents><dfn id=xml-documents>XML documents</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-integer><dfn id=valid-integer>valid integer</dfn></a>,
 
@@ -215,13 +243,17 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#unordered-set-of-unique-space-separated-tokens><dfn id=unordered-set-of-unique-space-separated-tokens>unordered set of unique space-separated tokens</dfn></a>,
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-browsing-context-name-or-keyword><dfn id=valid-brosing-context-name-or-keyword>valid brosing context name or keyword</dfn></a>,
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-browsing-context-name><dfn id=valid-browsing-context-name>valid browsing context name</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-browsing-context-name-or-keyword><dfn id=valid-browsing-context-name-or-keyword>valid browsing context name or keyword</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#boolean-attribute><dfn id=boolean-attribute>boolean attribute</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#enumerated-attribute><dfn id=enumerated-attribute>enumerated attribute</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handler-content-attributes><dfn id=event-handler-content-attributes>event handler content attributes</dfn></a>,
+
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#mime-type><dfn id=mime-type>MIME type</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-mime-type><dfn id=valid-mime-type>valid MIME type</dfn></a>,
 
@@ -241,11 +273,11 @@ specification <cite class="bibref normative">[<a href=#ref-WA1>WA1</a>]</cite> t
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-e-mail-address><dfn id=valid-e-mail-address>valid e-mail address</dfn></a>,
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-pixel-length-property><dfn id=maps-to-pixel-length-property>maps to pixel length property</dfn></a>,
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-pixel-length-property><dfn id=maps-to-the-pixel-length-property>maps to the pixel length property</dfn></a>,
 
 and
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-dimension-property><dfn id=maps-to-dimension-property>maps to dimension property</dfn></a>.
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-dimension-property><dfn id=maps-to-the-dimension-property>maps to the dimension property</dfn></a>.
 
 </p><p>The term <dfn id=valid-dimension-value>valid dimension value</dfn> is <a href="http://html5.org/tools/web-apps-tracker?from=2749&amp;to=2750">defined
 in a commented out paragraph</a> of the Web Applications 1.0
@@ -260,8 +292,8 @@ Web Applications 1.0 specification.
 <div class=section>
 <h3 id=conformance-requirements><span class=secno>2.2 </span>Conformance requirements</h3>
 
-<p>All diagrams, examples, and notes in this specification are
-non-normative, as are all sections explicitly marked
+<p>All <!-- diagrams, examples, and --> notes in this specification
+are non-normative, as are all sections explicitly marked
 non-normative. Everything else in this specification is normative.
 
 </p><p>The key words “<em class=rfc2119>MUST</em>”, “<em class=rfc2119>MUST NOT</em>”, “<em class=rfc2119>SHOULD</em>”, and 
@@ -269,17 +301,19 @@ non-normative. Everything else in this specification is normative.
 are to be interpreted as described in RFC 2119 <cite class="bibref
 normative">[<a href=#ref-RFC2119>RFC2119</a>]</cite>.
 
-</p><p>Requirements phrased in the imperative as part of algorithms (such
+<!--
+<p>Requirements phrased in the imperative as part of algorithms (such
 as “strip any leading space characters” or “return false and abort
 these steps”) are to be interpreted with the meaning of the key word
 (e.g. “<em class=rfc2119>MUST</em>”) used in introducing the
 algorithm.
 
-</p><p>Conformance requirements phrased as algorithms or specific steps
+<p>Conformance requirements phrased as algorithms or specific steps
 <em class=rfc2119>MAY</em> be implemented in any manner, so long as
 the end result is equivalent. (In particular, the algorithms defined
 in this specification are intended to be easy to follow, and not
 intended to be performant.)
+-->
 
 </p><p>User agents may impose implementation-specific limits on otherwise
 unconstrained inputs, e.g. to prevent denial of service attacks, to
@@ -291,9 +325,10 @@ expands all entity references, and therefore does not include entity
 reference nodes in the DOM. If user agents do include entity reference
 nodes in the DOM, then user agents <em class=rfc2119>MUST</em> handle
 them as if they were fully expanded when implementing this
-specification.  Entity references to unknown entities <em class=rfc2119>MUST</em> be treated as if they contained just an empty
+specification.<!-- Entity references to unknown entities <em
+class=rfc2119>MUST</em> be treated as if they contained just an empty
 text node for the purposes of the algorithms defined in this
-specification.
+specification. -->
 
 </p></div>
 
@@ -310,10 +345,10 @@ namespace.
 </div>
 
 <div class=section>
-<h2 id=how-to-define-conformance-requirements-for-non-conforming-elements-and-attributes><span class=secno>3 </span>How to define conformance requirements for non-conforming elements
-and attributes</h2>
+<h2 id=how-to-define-requirements-for-non‐conforming-elements-and-attributes><span class=secno>3 </span>How to define requirements for non‐conforming elements and
+attributes</h2>
 
-<p><em>This section is non‐normative.</em>
+<p class=section-info><em>This section is non‐normative.</em>
 
 </p><p>As a general guideline, requirements for non‐conforming elements
 and attributes can be constructed by the following rules in most
@@ -333,8 +368,8 @@ should be derived from them.
   </li><li>Otherwise, if there is an element or attribute <var>b</var> that
 shares the definition or requirements with <var>a</var> in the
 specification, and <var>b</var> is defined in the Web Applications 1.0
-specification, <var>b</var> should share same requirements with
-<var>a</var> in the Web Applications 1.0 specification.
+specification, then <var>b</var> should share the same requirements as
+<var>a</var>'s in the Web Applications 1.0 specification.
 
   </li><li>Otherwise, <var>a</var>'s expected syntax in the specification
 should be used as requirements.
@@ -348,11 +383,11 @@ requirements.
 
 </li></ol>
 
-<p>If an attribute <span>maps to the pixel length property</span>, the
+<p>If an attribute <a href=#maps-to-the-pixel-length-property>maps to the pixel length property</a>, the
 attribute value has to be a <a href=#valid-non-negative-integer>valid non-negative
 integer</a>. <!-- WA1 rendering -->
 
-</p><p>If an attribute <span>maps to the dimension property</span>, the
+</p><p>If an attribute <a href=#maps-to-the-dimension-property>maps to the dimension property</a>, the
 attribute value has to be a <a href=#valid-dimension-value>valid dimension value</a>.<!--
 WA1 rendering -->
 
@@ -363,6 +398,9 @@ WA1 rendering -->
 
 <div class=section>
 <h3 id=global-attributes><span class=secno>4.1 </span>Global attributes</h3>
+
+<div class=section>
+<h4 id=namespaced-attributes><span class=secno>4.1.1 </span>Namespaced attributes</h4>
 
 <p id=namespaced-global-attr>Attributes in the <a href=#html-namespace>HTML
 namespace</a> <em class=rfc2119>MUST NOT</em> be specified for
@@ -381,9 +419,10 @@ attribute <em>in no namespace</em> specified for an <span>HTML
 element</span> is an <a href=#enumerated-attribute>enumerated attribute</a> with keywords
 <code title="">default</code> and <code title="">preserve</code>.<!-- M12N
 1.1, XHTML 1.1, XML 1.0 -->
+</p></div>
 
-</p><div class=section>
-<h4 id=user-interaction><span class=secno>4.1.1 </span>User interaction</h4>
+<div class=section>
+<h4 id=user-interaction><span class=secno>4.1.2 </span>User interaction</h4>
 
 <p>The <code id=attr-atomicselection title=attr-atomicselection>atomicselection</code> attribute of an <a href=#html-elements title="HTML elements">HTML element</a> <cite class="bibref
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
@@ -401,11 +440,11 @@ informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
 and <code title="">off</code>.<!--
 <http://msdn.microsoft.com/en-us/library/ms537840%28VS.85%29.aspx> -->
 
-</p><p>The <code id=attr-disabled title=attr-disabled>disabled</code>
-attribute of an <a href=#html-elements title="HTML elements">HTML element</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> that
-the <code title="">disabled</code> attribute is not applied according to
-Web Applications 1.0 is a <a href=#boolean-attribute>boolean attribute</a>.<!--
-<http://msdn.microsoft.com/en-us/library/ms533734%28VS.85%29.aspx> -->
+</p><p>Unless otherwise specified, the <code id=attr-disabled title=attr-disabled>disabled</code> attribute of an <a href=#html-elements title="HTML
+elements">HTML element</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> which the <code title="">disabled</code> attribute is not applied according to Web
+Applications 1.0 is a <a href=#boolean-attribute>boolean attribute</a>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533734%28VS.85%29.aspx>;
+<embed disabled>? -->
 
 </p></div>
 
@@ -457,7 +496,8 @@ URL</a>.  The <code title=attr-bgsound-src>src</code> attribute <em class=rfc211
 
 </p><p>If the <code id=attr-bgsound-balance title=attr-bgsound-balance>balance</code> attribute of a
 <code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a> that
-represents an integer in the range −10,000 to 10,000.<!--
+represents an integer in the range −10,000 to 10,000,
+inclusive.<!--
 <http://msdn.microsoft.com/en-us/library/ms533500%28VS.85%29.aspx> -->
 
 </p><p>The <code id=attr-bgsound-volume title=attr-bgsound-volume>volume</code> attribute of the
@@ -469,20 +509,21 @@ attribute</a> with keywords <code title="">high</code>, <code title="">middle</c
 <div class=section>
 <h4 id=hidden-metadata><span class=secno>4.2.3 </span>Hidden metadata</h4>
 
-<p>If <code id=attr-about title=attr-about>about</code> or <code id=attr-resource title=attr-resource>resource</code> attribute <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> of an
-<span>HTML element</span> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a> or a string whose
-first character is a U+005B <code class=charname>LEFT SQUARE
-BRACKET</code> character ([) and whose last character is a U+005D
-<code class=charname>RIGHT SQUARE BRACKET</code> character (]).<!--
-RDFa; URIorSafeCURIE -->
+<p>If attribute <code id=attr-about title=attr-about>about</code> or
+<code id=attr-resource title=attr-resource>resource</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> is
+present for an <a href=#html-elements title="HTML elements">HTML element</a>, its
+value <em class=rfc2119>MUST</em> be either a <a href=#valid-url>valid URL</a>
+or a string which begin with a U+005B <code class=charname>LEFT SQUARE
+BRACKET</code> character ([) and ends by a U+005D <code class=charname>RIGHT SQUARE BRACKET</code> character (]).<!-- RDFa;
+URIorSafeCURIE -->
 
-</p><p>Unless otherwise specified, attributes <code id=attr-content title=attr-content>content</code>, <code id=attr-datatype title=attr-datatype>datatype</code>, <code id=attr-typeof title=attr-typeof>typeof</code>, and <code id=attr-property title=attr-property>property</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> of an <span>HTML element</span>, if
-present, <em class=rfc2119>MAY</em> have any value.<!-- RDFa; CDATA or
-CURIE or CURIEs -->
+</p><p>Unless otherwise specified, attributes <code id=attr-content title=attr-content>content</code>, <code id=attr-datatype title=attr-datatype>datatype</code>, <code id=attr-typeof title=attr-typeof>typeof</code>, and <code id=attr-property title=attr-property>property</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> of an <a href=#html-elements title="HTML
+elements">HTML element</a>, if present, <em class=rfc2119>MAY</em>
+have any value.<!-- RDFa; CDATA or CURIE or CURIEs -->
 
 </p><p>Unless otherwise specified, attributes <code id=attr-rel title=attr-rel>rel</code> and <code id=attr-rev title=attr-rev>rev</code>
 <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite>
-of an <span>HTML element</span>, if present, <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
+of an <a href=#html-elements title="HTML elements">HTML element</a>, if present, <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
 space-separated tokens</a>.<!-- HTML4, RDFa (reserved word | CURIE)
 -> HTML5 <a rel>; HTML5 allows rel="up up" as exception, but we don't
 copy that requirement here. -->
@@ -515,17 +556,17 @@ elements are <i>text</i>.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
 
 <p>The <a href=#content-model>content model</a> of the <code id=dir>dir</code>
 element, including the <a href=#content-model>content model</a> of the child
-<code>li</code> elements of the <code>dir</code> elements, is same as
-the <code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1
-obsolete -->
+<code>li</code> elements of the elements, is same as the
+<code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
+-->
 
 </p><p>If the <code id=attr-ol-type title=attr-ol-type>type</code>
 attribute of an <code>ol</code> element is present, its value <em class=rfc2119>MUST</em> be one of <code title="">1</code>, <code title="">a</code>, <code title="">A</code>, <code title="">i</code>, and <code title="">I</code>.  If the <code id=attr-ul-type title=attr-ul-type>type</code> attribute of a <code>ul</code> element is
 present, its value <em class=rfc2119>MUST</em> be equal to one of
 <code title="">disc</code>, <code title="">circle</code>, and <code title="">square</code>, <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII
 case-insensitively</a>.  If the <code id=attr-li-type title=attr-li-type>type</code> attribute of an <code>li</code> or
-<code>dir</code> <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> element is present, its value <em class=rfc2119>MUST</em> be one of values allowed for <code title="">type</code> attribute of a <code>ul</code> or <code>ol</code>
-element.<!-- WA1 rendering,
+<code>dir</code> <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> element is present, its value <em class=rfc2119>MUST</em> be one of values allowed for <code title="">type</code> attributes of <code>ul</code> and <code>ol</code>
+elements.<!-- WA1 rendering,
 <http://code.google.com/p/doctype/wiki/DirTypeAttribute>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/type4.html>
 -->
@@ -554,6 +595,10 @@ its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
 </p><p>If the <code id=attr-tdth-axis title=attr-tdth-axis>axis</code>
 attribute of a <code>td</code> or <code>th</code> element is present,
 its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
+
+</p><p>If the <code id=attr-td-scope title=attr-td-scope>scope</code>
+attribute of a <code>td</code> element is present, its value <em class=rfc2119>MUST</em> be a syntactically valid value of the <code title=attr-th-scope>scope</code> attribute of the <code>th</code>
+element.
 
 </p></div>
 
@@ -593,7 +638,7 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 <a href=#valid-integer>valid integer</a> that represents −1 or an integer
 greater than 0.<!-- HTML5 obsolete attribute.  According to MSDN (and
 HTML5) loop="" (the empty string) and loop=0 are equivalent to
-loop=-1, but they are considered non-conforming in this specification
+loop=-1, but they are considered non‐conforming in this specification
 because they does not seem to be explicitly
 allowed. <http://msdn.microsoft.com/en-us/library/ms534135%28VS.85%29.aspx>
 (|infinite| is not part of the langauge (au, emobile, and softbank
@@ -775,7 +820,7 @@ attribute</a>.<!-- WA1 rendering -->
 <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">on</code>,
 <code title="">scroll</code>, <code title="">yes</code>, <code title="">off</code>, <code title="">noscroll</code>, <code title="">no</code>,
 and <code title="">auto</code>. Keywords other than <code title="">yes</code>, <code title="">no</code>, and <code>auto</code> are
-non-conforming.<!-- WA1 rendering, HTML4 -->
+non‐conforming.<!-- WA1 rendering, HTML4 -->
 
 </p><p>The <code id=attr-scroll title=attr-scroll>scroll</code> attribute
 of a <code>body</code> or <code>html</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
@@ -863,7 +908,7 @@ empty string.<!--
 <p>The <code id=attr-table-align title=attr-table-align>align</code>
 attribute of a <code>table</code> element is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">center</code>, <code title="">middle</code>, <code title="">abscenter</code>, and <code title="">absmiddle</code>.  Keywords <code title="">middle</code>, <code title="">abscenter</code>, and <code title="">absmiddle</code> are
-non-conforming.<!-- WA1 rendering , HTML4 -->
+non‐conforming.<!-- WA1 rendering , HTML4 -->
 
 </p><p>The <code id=attr-caption-align title=attr-caption-align>align</code> attribute of a <code>caption</code>
 element is an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">top</code>,
@@ -900,7 +945,7 @@ attribute of a <code>col</code>, <code>colgroup</code> <cite class="bibref infor
 <code>spacer</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> element is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, <code title="">bottom</code>,
 <code title="">baseline</code>, <code title="">center</code>, <code title="">middle</code>, <code title="">texttop</code>, <code title="">absmiddle</code>, <code title="">abscenter</code>.  Keywords other
-than <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, <code title="">middle</code>, and <code title="">bottom</code> are non-conforming.  The <code title=attr-objects-align>align</code> attribute of the
+than <code title="">left</code>, <code title="">right</code>, <code title="">top</code>, <code title="">middle</code>, and <code title="">bottom</code> are non‐conforming.  The <code title=attr-objects-align>align</code> attribute of the
 <code>input</code> element applies only to <code>input</code> elements
 whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-image>Image Button</span> state.<!-- WA1
@@ -971,10 +1016,12 @@ attribute of the <code>br</code> element and <code>address</code>,
 elements <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">none</code>, <code title="">left</code>, <code title="">right</code>, <code title="">all</code>,
 and <code title="">both</code>, where <code title="">both</code> is
-non-conforming.<!-- WA1 rendering, HTML4,
+non‐conforming.<!-- WA1 rendering, HTML4,
 <http://msdn.microsoft.com/en-us/library/ms533562%28VS.85%29.aspx> -->
 
-</p><p>The <a href=#content-model>content model</a> of <code id=spacer>spacer</code> and
+</p><hr>
+
+<p>The <a href=#content-model>content model</a> of <code id=spacer>spacer</code> and
 <code id=wbr>wbr</code> elements is <i>empty</i>.<!-- WA1 parsing, wbr
 <http://web.archive.org/web/20020607005007/http://wp.netscape.com/home/services_docs/html-extensions.html>,
 spacer
@@ -1281,7 +1328,7 @@ present, their values, and their presence themselves, <em class=rfc2119>MUST</em
 
 </p><p>If the <code id=attr-link-target title=attr-link-target>target</code> attribute of a <code>link</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
-<span>valid browsing context name or keyword</span>.<!-- HTML4 -->
+<a href=#valid-browsing-context-name-or-keyword>valid browsing context name or keyword</a>.<!-- HTML4 -->
 
 </p></div>
 
@@ -1297,7 +1344,7 @@ elements for the purpose of conformance of <code title="">name</code>
 attributes of <code>a</code>, <code>applet</code>, <code>embed</code>,
 and <code>img</code> elements in the document, except that use of the
 <code title=attr-objects-name>name</code> attributes for these
-elements are always non-conforming.  (Use of the <code title=attr-a-name>name</code> attribute for the <code>a</code> element
+elements are always non‐conforming.  (Use of the <code title=attr-a-name>name</code> attribute for the <code>a</code> element
 is sometimes <i>obsolete but conforming</i> according to Web
 Applications 1.0.)<!-- WA1 UA reqs
 e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
@@ -1680,7 +1727,9 @@ see also <http://suika.fam.cx/%7Ewakaba/wiki/sw/n/dataformatas> -->
 integer</a>.<!--
 <http://msdn.microsoft.com/en-us/library/ms533708%28VS.85%29.aspx> -->
 
-</p><p>The <a href=#content-model>content model</a> of the <code id=xml>xml</code>
+</p><hr>
+
+<p>The <a href=#content-model>content model</a> of the <code id=xml>xml</code>
 element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is <i>text</i>.<!--
 <http://msdn.microsoft.com/en-us/library/ms535918%28VS.85%29.aspx> -->
 
@@ -1789,8 +1838,8 @@ attribute of a <code>frame</code> element is present, its value <em class=rfc211
 obsolete; not required to align with <iframe src>. -->
 
 </p><p>If the <code id=attr-frame-name title=attr-frame-name>name</code>
-attribute of a <code>frame</code> element is present, its value <em class=rfc2119>MUST</em> be a <span>valid browsing context
-name</span>.<!-- WA1 obsolete -->
+attribute of a <code>frame</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-browsing-context-name>valid browsing context
+name</a>.<!-- WA1 obsolete -->
 
 </p><p>The <code id=attr-frames-noresize title=attr-frames-noresize>noresize</code> attribute of
 <code>frame</code> and <code>iframe</code> elements <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is
@@ -1813,7 +1862,7 @@ rendering,
 <code>embed</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> element is an <a href=#enumerated-attribute>enumerated
 attribute</a>, with keywords <code title="">1</code>, <code title="">yes</code>, <code title="">0</code>, and <code title="">no</code>,
 where keywords <code title="">yes</code> and <code title="">no</code> are
-non-conforming.<!-- WA1 rendering, HTML4, embed
+non‐conforming.<!-- WA1 rendering, HTML4, embed
 <http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1286396>
 -->
 
@@ -1858,9 +1907,10 @@ one ancestor <code>noframes</code> elements.
 id=attr-script-language>language</code> attribute of the
 <code>script</code> element is defined in Web Applications 1.0
 specification, as an obsolete but conforming feature.  -->Unless
-otherwise specified, the <code id=attr-language title=attr-language>language</code> attribute of <!--the other--> <span title="HTML element">HTML elements</span>, if present, <em class=rfc2119>MUST</em> have a value that is <a href=#ascii-case-insensitive title="ASCII
-case-insensitive">ASCII case-insensitively</a> equal to
-<code>JavaScript</code>.<!--
+otherwise specified, the <code id=attr-language title=attr-language>language</code> attribute of <!--the other-->
+<a href=#html-elements>HTML elements</a>, if present, <em class=rfc2119>MUST</em>
+have a value that is <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII
+case-insensitively</a> equal to <code>JavaScript</code>.<!--
 <http://msdn.microsoft.com/en-us/library/ms533940%28VS.85%29.aspx> -->
 
 </p><p>If the <code id=attr-script-for title=attr-script-for>for</code>
@@ -1965,7 +2015,7 @@ applies to the element.
 element, for the purpose of conformance checking, <em class=rfc2119>MUST</em> be treated as if there are additional
 keywords: <code title="">off</code>, <code title="">virtual</code>, and
 <code title="">physical</code>.  However, these keywords are
-non-conforming.<!-- WA1 rendering,
+non‐conforming.<!-- WA1 rendering,
 <http://web.archive.org/web/19970613222237/www82.netscape.com/assist/net_sites/new_html3_prop.html>,
 <http://web.archive.org/web/20030607191146/http://devedge.netscape.com/library/manuals/1998/htmlguide/tags10.html#1340390>
 -->
@@ -1988,22 +2038,24 @@ autocorrect
 attribute of a <code>form</code> element <cite class="bibref
 informative">[<a href=#ref-WF2>WF2</a>]</cite> is present, its value
 <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.
-The <a href=#url>URL</a> <em class=rfc2119>MUST</em> reference an
-<span>XML document</span> whose <span>root element</span> is the <code title=formdata-formdata>formdata</code> element in the <code title="">http://n.whatwg.org/formdata</code> namespace.  The document <em class=rfc2119>MUST</em> be labeled using an <a href=#xml-mime-type>XML MIME
-type</a>.  It is encouraged to use the MIME type
-<code>application/xml</code>.<!--
+The <a href=#url>URL</a> <em class=rfc2119>MUST</em> reference an <a href=#xml-documents title="XML documents">XML document</a> whose <span>root
+element</span> is the <code title=formdata-formdata>formdata</code>
+element in the <code title="">http://n.whatwg.org/formdata</code>
+namespace.  The document <em class=rfc2119>MUST</em> be labeled using
+an <a href=#xml-mime-type>XML MIME type</a>.  It is encouraged to use the <a href=#mime-type>MIME
+type</a> <code>application/xml</code>.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#data0> -->
 
 </p><p>If the <code id=attr-select-data title=attr-select-data>data</code>
 attribute of a <code>select</code> or <code>datalist</code> element
 <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite>
 is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid
-non-empty URL</a>.  The <a href=#url>URL</a> <em class=rfc2119>MUST</em> reference an <span>XML document</span> whose
-<span>root element</span> is the <code>select</code> element.  The
-document <em class=rfc2119>MUST</em> be labeled using an <a href=#xml-mime-type>XML
-MIME type</a>.  It is encouraged to use the MIME type
-<code>application/xml</code>.  It <em class=rfc2119>SHOULD NOT</em> be
-labeled by media type <code>application/xhtml+xml</code>.<!--
+non-empty URL</a>.  The <a href=#url>URL</a> <em class=rfc2119>MUST</em> reference an <a href=#xml-documents title="XML documents">XML
+document</a> whose <span>root element</span> is the
+<code>select</code> element.  The document <em class=rfc2119>MUST</em>
+be labeled using an <a href=#xml-mime-type>XML MIME type</a>.  It is encouraged to
+use the <a href=#mime-type>MIME type</a> <code>application/xml</code>.  It <em class=rfc2119>SHOULD NOT</em> be labeled by <a href=#mime-type>MIME type</a>
+<code>application/xhtml+xml</code>.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#data> -->
 
 </p><div class=section>
@@ -2227,7 +2279,7 @@ type=text.  -->
 if there is an additional keyword <code id=attr-input-type-quote-keyword title=attr-input-type-quote-keyword>quote</code> <cite class="bibref
 informative">[<a href=#ref-IMODE>IMODE</a>]</cite>, which is mapped
 to the <span title=attr-input-type-quote>Quote</span> state.  This
-keyword is non-conforming.  For the purpose of conformance checking,
+keyword is non‐conforming.  For the purpose of conformance checking,
 the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-button>Button</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
 -->
@@ -2242,7 +2294,7 @@ the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST<
 <em class=rfc2119>MUST</em> be treated as if there are additional
 keywords: <code title="">dsa</code> <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> <cite class="bibref
 informative">[<a href=#ref-MDC>MDC</a>]</cite> and <code title="">ec</code> <cite class="bibref informative">[<a href=#ref-MDC>MDC</a>]</cite>.  These keywords are
-non-conforming.<!--
+non‐conforming.<!--
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-keytype>,
 <https://developer.mozilla.org/En/HTML/Element/keygen> -->
 
@@ -2299,8 +2351,8 @@ be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.  These 
 </p><p>The <code title="">type</code> attribute of <code>input</code> or
 <code>button</code> element <em class=rfc2119>MUST</em> be treated as
 if there are additional keywords <code id=attr-input-type-add-keyword title=attr-input-type-add-keyword>add</code>, <code id=attr-input-type-remove-keyword title=attr-input-type-remove-keyword>remove</code>, <code id=attr-input-type-move-up-keyword title=attr-input-type-move-up-keyword>move-up</code>, and <code id=attr-input-type-move-down-keyword title=attr-input-type-move-down-keyword>move-down</code> <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite>, which
-are mapped to <span title=attr-input-type-add>Add Button</span>, <span title=attr-input-type-remove>Remove Button</span>, <span title=attr-input-type-move-up>Move-up Button</span>, <span title=attr-input-type-move-down>Move-down Button</span> state,
-respectively.  These keywords are non-conforming.  For the purpose of
+are mapped to <span title=attr-input-type-add>Add Button</span>, <span title=attr-input-type-remove>Remove Button</span>, <span title=attr-input-type-move-up>Move-up Button</span>, and <span title=attr-input-type-move-down>Move-down Button</span> states,
+respectively.  These keywords are non‐conforming.  For the purpose of
 conformance checking, unless otherwise stated, these states <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-button>Button</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#new-form> -->
 
@@ -2331,8 +2383,8 @@ conformance checking.<!--
 
 <p>Elements and attributes defined by the following specifications are
 not included in this specification, because they have not been
-implemented at all (or might have been implemented in some minor user
-agents but has not affect the Web) and are not useful any more.
+implemented at all (or had only been implemented in historical or
+experimental user agents) and are not useful anymore:
 
 </p><ul>
 
@@ -2358,16 +2410,20 @@ specification:
 <li>Proprietary elements and attributes for WebTV, WebExplorer, mosaic
 variants, or authoring tools
 
-</li><li>Elements and attributes that has defined in earlier HTML5
-specification but then dropped, including but not limited to:
-attributes <code title=attr-irrlevant>irrelevant</code>, <code title=attr-active>active</code>, <code title=attr-command-default>default</code>, <code title=attr-menu-autosubmit>autosubmit</code>, the <code title="">cite</code> attribute of some sectioning elements, elements
-<code>eventsource</code>, <code>dialog</code>, and
-<code>sidebar</code>, <code>bb</code>, and the data template feature.
+</li><li>Attributes of the <code>multicol</code> element
+
+</li><li>The <code>ilayer</code> element
+
+</li><li>Elements and attributes that had been defined in earlier Web
+Applications 1.0 specification but then dropped, including but not
+limited to: attributes <code title=attr-irrlevant>irrelevant</code>,
+<code title=attr-active>active</code>, <code title=attr-command-default>default</code>, <code title=attr-menu-autosubmit>autosubmit</code>, the <code title="">cite</code> attribute of some sectioning elements, elements
+<code>eventsource</code>, <code>dialog</code>, <code>sidebar</code>,
+and <code>bb</code>, and the data template feature.
 
 </li></ul>
 
-<p>Elements in the <code title="">http://www.w3.org/2002/06</code> and
-<code title="">http://www.w3.org/2002/06/</code> <cite class="bibref
+<p>Elements and attributes in the <code title="">http://www.w3.org/2002/06</code> and <code title="">http://www.w3.org/2002/06/</code> <cite class="bibref
 informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite>
 namespaces are outside of the scope of this specification (but there
 is <a href=#xhtml2-role>an exception</a>).
@@ -2379,15 +2435,17 @@ attributes and therefore not included in this specification.
 </p><p>Attributes <code title=attr-htnames>htnames</code>, <code title=attr-htsupp>htsupp</code>, and <code title=attr-htign>htign</code> <cite class="bibref informative">[<a href=#ref-M12N11>M12N11</a>]</cite> are not real attributes and
 therefore not included in this specification.
 
-</p><p>There has not been a <code>server</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>
-in HTML.<!--
+</p><p>The <code>server</code> element <cite class="bibref
+informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is not an
+<a href=#html-elements title="HTML elements">HTML element</a>.<!--
 <http://web.archive.org/web/20030610034441/devedge.netscape.com/library/manuals/1998/htmlguide/tags13.html#1324086>
--->
+--> The <code title=attr-runat>runat</code> attribute is not an
+attribute of the HTML language.
 
 </p><p>The <a href=http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx><code>IMPORT</code>
 processing instruction</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is not supported by this
-specification, as the HTML syntax as per Web Applications 1.0 cannot
-support processing instructions.
+specification, as processing instructions cannot be encoded in the
+HTML syntax according to Web Applications 1.0.
 
 </p><p>The <a href=http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx><code>xmlns:<var>*</var></code>
 attributes</a> for Internet Explorer's namespace mechanism <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> are
@@ -2400,7 +2458,7 @@ architecture of HTML, XML, and DOM.
 <div class=section>
 <h2 class=no-num id=index>Index</h2>
 
-<p><em>This section is non‐normative.</em>
+<p class=section-info><em>This section is non‐normative.</em>
 
 </p><dl>
 
@@ -3130,6 +3188,7 @@ namespace</span></a>
 </dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-tdth-nowrap><code>nowrap</code></a>
+</dd><dd><a href=#attr-td-scope><code>scope</code></a>
 </dd><dd><a href=#attr-tables-valign><code>valign</code></a>
 </dd><dd><a href=#attr-width><code>width</code></a>
 
