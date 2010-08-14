@@ -1750,9 +1750,7 @@ title>yes</code> and <code title>no</code>.<!--
 <div class=section>
 <h4>The <code>embed</code> element</h4>
 
-<p>Attributes <code title=attr-hspace>hspace</code>, <code
-title=attr-vspace>vspace</code>, <code
-title=attr-embed-units>units</code>, <code
+<p>Attributes <code title=attr-embed-units>units</code>, <code
 title=attr-dim-border>border</code>, <code
 title=attr-embed-pluginpage>pluginpage</code>, <code
 title=attr-embed-pluginspage>pluginspage</code>, <code
