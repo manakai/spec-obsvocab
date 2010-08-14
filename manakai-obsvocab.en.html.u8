@@ -937,7 +937,9 @@ attribute</a> with keywords <code title="">left</code>, <code title="">right</co
 attribute of a <code>col</code>, <code>colgroup</code> <cite class="bibref informative">[<a href=#ref-HTML4>HTML4</a>]</cite>,
 <code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
 <code>tr</code>, <code>th</code>, or <code>td</code> element is an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">center</code>, <code title="">right</code>, <code title="">justify</code>, and <code title="">char</code>.<!-- WA1 rendering, HTML4 -->
+<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">center</code>, <code>middle</code>,
+<code title="">right</code>, <code title="">justify</code>, and <code title="">char</code>, where <code title="">middle</code> is
+non-conforming.<!-- WA1 rendering, HTML4 -->
 
 </p><p>The <code id=attr-objects-align title=attr-objects-align>align</code> attribute of an
 <code>applet</code>, <code>embed</code>, <code>iframe</code>,
