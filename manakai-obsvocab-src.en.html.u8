@@ -1064,8 +1064,9 @@ class="bibref informative">[<a href="#ref-HTML4">HTML4</a>]</cite>,
 <code>tr</code>, <code>th</code>, or <code>td</code> element is an
 <span>enumerated attribute</span> with keywords <code
 title>left</code>, <code title>center</code>, <code>middle</code>,
-<code title>right</code>, <code title>justify</code>, and <code
-title>char</code>, where <code title>middle</code> is
+<code title>absmiddle</code>, <code title>right</code>, <code
+title>justify</code>, and <code title>char</code>, where <code
+title>middle</code> and <code title>absmiddle</code> are
 non-conforming.<!-- WA1 rendering, HTML4 -->
 
 <p>The <code title=attr-objects-align
