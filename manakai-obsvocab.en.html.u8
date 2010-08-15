@@ -1023,10 +1023,8 @@ non‐conforming.<!-- WA1 rendering, HTML4,
 
 </p><hr>
 
-<p>The <a href=#content-model>content model</a> of <code id=spacer>spacer</code> and
-<code id=wbr>wbr</code> elements is <i>empty</i>.<!-- WA1 parsing, wbr
-<http://web.archive.org/web/20020607005007/http://wp.netscape.com/home/services_docs/html-extensions.html>,
-spacer
+<p>The <a href=#content-model>content model</a> of the <code id=spacer>spacer</code>
+element is <i>empty</i>.<!-- WA1 parsing, spacer
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
 
@@ -3354,10 +3352,6 @@ namespace</span></a>
 </dd><dd><a href=#attr-media-loopstart><code>loopstart</code></a>
 </dd><dd><a href=#attr-media-playcount><code>playcount</code></a>
 </dd><dd><a href=#attr-media-start><code>start</code></a>
-
-</dd><dt>The <a href=#wbr><code>wbr</code></a> element
-
-</dt><dd>No element-specific attribute.
 
 </dd><dt>The <a href=#xml><code>xml</code></a> element
 
