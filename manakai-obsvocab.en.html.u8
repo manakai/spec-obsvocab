@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 14 August 2010</h2>
+<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 15 August 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -1707,20 +1707,34 @@ state.<!-- Softbank 3.9.1., 3.10.1., 3.12.2. -->
 <h4 id=embedded-data><span class=secno>4.10.6 </span>Embedded data</h4>
 
 <p>If the <code id=attr-datasrc title=attr-datasrc>datasrc</code>
-attribute of an <a href=#html-elements title="HTML elements">HTML element</a> is
+attribute of an element <code>a</code>, <code>applet</code>,
+<code>button</code>, <code>div</code>, <code>frame</code>,
+<code>iframe</code>, <code>img</code>, <code>input</code>,
+<code>label</code>, <code>legend</code>, <code>marquee</code>,
+<code>object</code>, <code>option</code>, <code>select</code>,
+<code>span</code>, <code>table</code>, or <code>textarea</code> is
 present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid
-non-empty URL</a>.<!-- HTML4,
+non-empty URL</a>.<!-- HTML4, WA1 obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533709%28VS.85%29.aspx> -->
 
 </p><p>If the <code id=attr-datafld title=attr-datafld>datafld</code>
-attribute of an <a href=#html-elements title="HTML elements">HTML element</a> is
+attribute of an element code&gt;a, <code>applet</code>,
+<code>button</code>, <code>div</code>, <code>fieldset</code>,
+<code>frame</code>, <code>iframe</code>, <code>img</code>,
+<code>input</code>, <code>label</code>, <code>legend</code>,
+<code>marquee</code>, <code>object</code>, <code>param</code>,
+<code>select</code>, <code>span</code>, or <code>textarea</code> is
 present, its value <em class=rfc2119>MAY</em> be any string.<!--
-HTML4,
+HTML4, WA1 obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533703%28VS.85%29.aspx> -->
 
-</p><p>The <code id=attr-dataformatas title=attr-dataformatas>dataformatas</code> attribute of an <a href=#html-elements title="HTML elements">HTML element</a> is an <a href=#enumerated-attribute>enumerated
+</p><p>The <code id=attr-dataformatas title=attr-dataformatas>dataformatas</code> attribute of an element
+<code>button</code>, <code>div</code>, <code>input</code>,
+<code>label</code>, <code>legend</code>, <code>marquee</code>,
+<code>object</code>, <code>option</code>, <code>select</code>,
+<code>span</code>, or <code>table</code> is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">text</code>, <code title="">html</code>, and <code title="">localized-text</code>.<!-- HTML4
-reserved (broken),
+reserved (broken), WA1 obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533706%28VS.85%29.aspx>;
 see also <http://suika.fam.cx/%7Ewakaba/wiki/sw/n/dataformatas> -->
 
@@ -2505,9 +2519,6 @@ namespace</span></a>
 </dt><dd><a href=#attr-about><code>about</code></a>
 </dd><dd><a href=#attr-atomicselection><code>atomicselection</code></a>
 </dd><dd><a href=#attr-content><code>content</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-datatype><code>datatype</code></a>
 </dd><dd><a href=#attr-disabled><code>disabled</code></a>
 </dd><dd><a href=#attr-hidefocus><code>hidefocus</code></a>
@@ -2577,6 +2588,8 @@ namespace</span></a>
 </dt><dd><a href=#attr-hyperlink-charset><code>charset</code></a>
 </dd><dd><a href=#attr-a-coords><code>coords</code></a>
 </dd><dd><a href=#attr-a-cti><code>cti</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-directkey><code>directkey</code></a>
 </dd><dd><a href=#attr-a-email><code>email</code></a>
 </dd><dd><a href=#attr-a-eswf><code>eswf</code></a>
@@ -2619,6 +2632,8 @@ namespace</span></a>
 </dd><dd><a href=#attr-applet-archive><code>archive</code></a>
 </dd><dd><a href=#attr-objects-code><code>code</code></a>
 </dd><dd><a href=#attr-objects-codebase><code>codebase</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-applet-mayscript><code>mayscript</code></a>
@@ -2684,6 +2699,9 @@ namespace</span></a>
 </dd><dt>The <code>button</code> element
 
 </dt><dd><a href=#attr-fs-action><code>action</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-fs-enctype><code>enctype</code></a>
 </dd><dd><a href=#attr-fs-method><code>method</code></a>
 </dd><dd><a href=#attr-fs-replace><code>replace</code></a>
@@ -2745,6 +2763,9 @@ namespace</span></a>
 </dd><dt>The <code>div</code> element
 
 </dt><dd><a href=#attr-align><code>align</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-tdth-nowrap><code>nowrap</code></a>
 
 </dd><dt>The <code>dl</code> element
@@ -2773,6 +2794,10 @@ namespace</span></a>
 
 </dt><dd><a href=#attr-event-source-src><code>src</code></a>
 
+</dd><dt>The <code>fieldset</code> element
+
+</dt><dd><a href=#attr-datafld><code>datafld</code></a>
+
 </dd><dt>The <a href=#font><code>font</code></a> element
 
 </dt><dd><a href=#attr-font-color><code>color</code></a>
@@ -2796,6 +2821,8 @@ namespace</span></a>
 </dt><dd><a href=#attr-frames-allowtransparency><code>allowtransparency</code></a>
 </dd><dd><a href=#attr-frames-application><code>application</code></a>
 </dd><dd><a href=#attr-frames-bordercolor><code>bordercolor</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-frames-frameborder><code>frameborder</code></a>
 </dd><dd><a href=#attr-frames-framespacing><code>framespacing</code></a>
 </dd><dd><a href=#attr-longdesc><code>longdesc</code></a>
@@ -2888,6 +2915,8 @@ namespace</span></a>
 </dd><dd><a href=#attr-frames-allowtransparency><code>allowtransparency</code></a>
 </dd><dd><a href=#attr-frames-application><code>application</code></a>
 </dd><dd><a href=#attr-frames-border><code>border</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-frames-frameborder><code>frameborder</code></a>
 </dd><dd><a href=#attr-frames-framespacing><code>framespacing</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
@@ -2905,6 +2934,8 @@ namespace</span></a>
 </dd><dd><a href=#attr-dim-border><code>border</code></a>
 </dd><dd><a href=#attr-img-composite><code>composite</code></a>
 </dd><dd><a href=#attr-img-copyright><code>copyright</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-dynsrc><code>dynsrc</code></a>
 </dd><dd><a href=#attr-img-galleryimg><code>galleryimg</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
@@ -2930,6 +2961,9 @@ namespace</span></a>
 </dd><dd><a href=#attr-input-autocorrect><code>autocorrect</code></a>
 </dd><dd><a href=#attr-input-autosave><code>autosave</code></a>
 </dd><dd><a href=#attr-dim-border><code>border</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-directkey><code>directkey</code></a>
 </dd><dd><a href=#attr-dynsrc><code>dynsrc</code></a>
 </dd><dd><a href=#attr-emptyok><code>emptyok</code></a>
@@ -2978,6 +3012,12 @@ namespace</span></a>
 </dt><dd><a href=#attr-keygen-keyparams><code>keyparams</code></a>
 </dd><dd><a href=#attr-keygen-pqg><code>pqg</code></a>
 
+</dd><dt>The <code>label</code> element
+
+</dt><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
+
 </dd><dt>The <a href=#layer><code>layer</code></a> element
 
 </dt><dd>No element-specific attribute.
@@ -2985,6 +3025,9 @@ namespace</span></a>
 </dd><dt>The <code>legend</code> element
 
 </dt><dd><a href=#attr-legend-align><code>align</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
 </dd><dt>The <code>li</code> element
 
@@ -3006,6 +3049,9 @@ namespace</span></a>
 </dd><dt>The <a href=#marquee><code>marquee</code></a> element
 
 </dt><dd><a href=#attr-marquee-behavior><code>behavior</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-marquee-direction><code>direction</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
@@ -3062,6 +3108,9 @@ namespace</span></a>
 </dd><dd><a href=#attr-objects-codebase><code>codebase</code></a>
 </dd><dd><a href=#attr-object-codetype><code>codetype</code></a>
 </dd><dd><a href=#attr-img-copyright><code>copyright</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-object-declare><code>declare</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-img-mediaout><code>mediaout</code></a>
@@ -3074,6 +3123,11 @@ namespace</span></a>
 </dt><dd><a href=#attr-align><code>align</code></a>
 </dd><dd><a href=#attr-compact><code>compact</code></a>
 </dd><dd><a href=#attr-ol-type><code>type</code></a>
+
+</dd><dt>The <code>option</code> element
+
+</dt><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
 </dd><dt>The <code>p</code> element
 
@@ -3124,6 +3178,9 @@ namespace</span></a>
 </dd><dt>The <code>select</code> element
 
 </dt><dd><a href=#attr-select-data><code>data</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
 </dd><dt>The <code>source</code> element
 
@@ -3136,6 +3193,12 @@ namespace</span></a>
 </dd><dd><a href=#attr-spacer-size><code>size</code></a>
 </dd><dd><a href=#attr-spacer-type><code>type</code></a>
 </dd><dd><a href=#attr-width><code>width</code></a>
+
+</dd><dt>The <code>span</code> element
+
+</dt><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
 </dd><dt>The <a href=#strike><code>strike</code></a> element
 
@@ -3154,7 +3217,9 @@ namespace</span></a>
 </dd><dd><a href=#attr-table-cellpadding><code>cellpadding</code></a>
 </dd><dd><a href=#attr-table-cellspacing><code>cellspacing</code></a>
 </dd><dd><a href=#attr-table-cols><code>cols</code></a>
+</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
 </dd><dd><a href=#attr-table-datapagesize><code>datapagesize</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-table-frame><code>frame</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
@@ -3200,6 +3265,8 @@ namespace</span></a>
 </dd><dd><a href=#attr-accept-charset><code>accept-charset</code></a>
 </dd><dd><a href=#attr-input-autocapitalize><code>autocapitalize</code></a>
 </dd><dd><a href=#attr-input-autocorrect><code>autocorrect</code></a>
+</dd><dd><a href=#attr-datafld><code>datafld</code></a>
+</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-emptyok><code>emptyok</code></a>
 </dd><dd><a href=#attr-format><code>format</code></a>
 </dd><dd><a href=#attr-inputmode><code>inputmode</code></a>
