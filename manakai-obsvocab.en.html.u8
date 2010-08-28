@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 15 August 2010</h2>
+<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 28 August 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -2200,7 +2200,8 @@ represents a <span>text-based MIME type</span>.<!-- What is the
 </p><p>If the <code id=attr-textarea-pattern title=attr-textarea-pattern>pattern</code> attribute of a
 <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <!-- and HTML5 but immediately dropped
 after introduction --> is present, its value <em class=rfc2119>MUST</em> be a string that is a valid as an <code title=attr-input-pattern>pattern</code> attribute value of the
-<code>input</code> element.
+<code>input</code> element.  If the attribute is present, the <code title="">title</code> attribute <em class=rfc2119>SHOULD</em> also be
+present.<!-- WF2 -->
 
 </p></div>
 

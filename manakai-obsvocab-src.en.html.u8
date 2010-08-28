@@ -2722,7 +2722,9 @@ href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but immediately dropped
 after introduction --> is present, its value <em
 class=rfc2119>MUST</em> be a string that is a valid as an <code
 title=attr-input-pattern>pattern</code> attribute value of the
-<code>input</code> element.
+<code>input</code> element.  If the attribute is present, the <code
+title>title</code> attribute <em class=rfc2119>SHOULD</em> also be
+present.<!-- WF2 -->
 
 </div>
 
