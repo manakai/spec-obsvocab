@@ -1212,7 +1212,7 @@ NOT</em> be specified.<!--
 
 <p>The <span>content model</span> of <code id=acronym>acronym</code>,
 <code id=big>big</code>, <code id=blink>blink</code>, <code
-id=nobr>nobr</code>, <code id=rb>rb</code>, <code id=s>s</code>, <code
+id=nobr>nobr</code>, <code id=rb>rb</code>, <code
 id=strike>strike</code>, <code id=tt>tt</code>, and <code
 id=u>u</code> elements are same as the <code>span</code> element.<!--
 WA1 parsing, WA1 rendering, WA1 obsolete, nobr
@@ -3802,10 +3802,6 @@ title=attr-input-type>type</code> attribute values
 <dd><a href="#attr-rt-rbspan"><code>rbspan</code></a>
 
 <dt>The <a href="#rtc"><code>rtc</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#s"><code>s</code></a> element
 
 <dd>No element-specific attribute.
 

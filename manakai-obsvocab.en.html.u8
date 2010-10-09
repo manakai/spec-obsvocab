@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 20 September 2010</h2>
+<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 9 October 2010</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -1051,7 +1051,7 @@ NOT</em> be specified.<!--
 <h3 id=phrasing-content><span class=secno>4.8 </span>Phrasing content</h3>
 
 <p>The <a href=#content-model>content model</a> of <code id=acronym>acronym</code>,
-<code id=big>big</code>, <code id=blink>blink</code>, <code id=nobr>nobr</code>, <code id=rb>rb</code>, <code id=s>s</code>, <code id=strike>strike</code>, <code id=tt>tt</code>, and <code id=u>u</code> elements are same as the <code>span</code> element.<!--
+<code id=big>big</code>, <code id=blink>blink</code>, <code id=nobr>nobr</code>, <code id=rb>rb</code>, <code id=strike>strike</code>, <code id=tt>tt</code>, and <code id=u>u</code> elements are same as the <code>span</code> element.<!--
 WA1 parsing, WA1 rendering, WA1 obsolete, nobr
 <http://web.archive.org/web/20020607005007/http://wp.netscape.com/home/services_docs/html-extensions.html>,
 blink
@@ -3163,10 +3163,6 @@ namespace</span></a>
 </dt><dd><a href=#attr-rt-rbspan><code>rbspan</code></a>
 
 </dd><dt>The <a href=#rtc><code>rtc</code></a> element
-
-</dt><dd>No element-specific attribute.
-
-</dd><dt>The <a href=#s><code>s</code></a> element
 
 </dt><dd>No element-specific attribute.
 
