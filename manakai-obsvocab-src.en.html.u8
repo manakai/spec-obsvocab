@@ -549,22 +549,17 @@ element, including the <span>content model</span> of the child
 <code>ul</code> element.<!-- WA1 parsing, WA1 rendering, WA1 obsolete
 -->
 
-<p>If the <code title=attr-ol-type id=attr-ol-type>type</code>
-attribute of an <code>ol</code> element is present, its value <em
-class=rfc2119>MUST</em> be one of <code title>1</code>, <code
-title>a</code>, <code title>A</code>, <code title>i</code>, and <code
-title>I</code>.  If the <code title=attr-ul-type
-id=attr-ul-type>type</code> attribute of a <code>ul</code> element is
-present, its value <em class=rfc2119>MUST</em> be equal to one of
-<code title>disc</code>, <code title>circle</code>, and <code
-title>square</code>, <span title="ASCII case-insensitive">ASCII
-case-insensitively</span>.  If the <code title=attr-li-type
-id=attr-li-type>type</code> attribute of an <code>li</code> or
-<code>dir</code> <cite class="bibref informative">[<a
-href="#ref-IMODE">IMODE</a>]</cite> element is present, its value <em
-class=rfc2119>MUST</em> be one of values allowed for <code
-title>type</code> attributes of <code>ul</code> and <code>ol</code>
-elements.<!-- WA1 rendering,
+<p>If the <code title=attr-ul-type id=attr-ul-type>type</code>
+attribute of a <code>ul</code> element is present, its value <em
+class=rfc2119>MUST</em> be equal to one of <code title>disc</code>,
+<code title>circle</code>, and <code title>square</code>, <span
+title="ASCII case-insensitive">ASCII case-insensitively</span>.  If
+the <code title=attr-li-type id=attr-li-type>type</code> attribute of
+an <code>li</code> or <code>dir</code> <cite class="bibref
+informative">[<a href="#ref-IMODE">IMODE</a>]</cite> element is
+present, its value <em class=rfc2119>MUST</em> be one of values
+allowed for <code title>type</code> attributes of <code>ul</code> and
+<code>ol</code> elements.<!-- WA1 rendering,
 <http://code.google.com/p/doctype/wiki/DirTypeAttribute>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/type4.html>
 -->
@@ -3762,7 +3757,6 @@ title=attr-input-type>type</code> attribute values
 
 <dd><a href="#attr-align"><code>align</code></a>
 <dd><a href="#attr-compact"><code>compact</code></a>
-<dd><a href="#attr-ol-type"><code>type</code></a>
 
 <dt>The <code>option</code> element
 
