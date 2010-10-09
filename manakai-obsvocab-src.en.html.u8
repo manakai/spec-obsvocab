@@ -2855,7 +2855,7 @@ to the <span title=attr-input-type-quote>Quote</span> state.  This
 keyword is non‐conforming.  For the purpose of conformance checking,
 the <span title=attr-input-type-quote>Quote</span> state <em
 class=rfc2119>MUST</em> be treated as equivalent to the <span
-title=attr-input-type-button>Button</span> state.<!--
+title=attr-input-type-reset>Reset Button</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
 -->
 
@@ -2971,7 +2971,7 @@ title=attr-input-type-move-down>Move-down Button</span> states,
 respectively.  These keywords are non‐conforming.  For the purpose of
 conformance checking, unless otherwise stated, these states <em
 class=rfc2119>MUST</em> be treated as equivalent to the <span
-title=attr-input-type-button>Button</span> state.<!--
+title=attr-input-type-reset>Reset Button</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#new-form> -->
 
 <p>If the <code title=attr-repeat-template

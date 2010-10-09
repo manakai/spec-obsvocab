@@ -2297,7 +2297,7 @@ if there is an additional keyword <code id=attr-input-type-quote-keyword title=a
 informative">[<a href=#ref-IMODE>IMODE</a>]</cite>, which is mapped
 to the <span title=attr-input-type-quote>Quote</span> state.  This
 keyword is non‐conforming.  For the purpose of conformance checking,
-the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-button>Button</span> state.<!--
+the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-reset>Reset Button</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
 -->
 
@@ -2370,7 +2370,7 @@ be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.  These 
 if there are additional keywords <code id=attr-input-type-add-keyword title=attr-input-type-add-keyword>add</code>, <code id=attr-input-type-remove-keyword title=attr-input-type-remove-keyword>remove</code>, <code id=attr-input-type-move-up-keyword title=attr-input-type-move-up-keyword>move-up</code>, and <code id=attr-input-type-move-down-keyword title=attr-input-type-move-down-keyword>move-down</code> <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite>, which
 are mapped to <span title=attr-input-type-add>Add Button</span>, <span title=attr-input-type-remove>Remove Button</span>, <span title=attr-input-type-move-up>Move-up Button</span>, and <span title=attr-input-type-move-down>Move-down Button</span> states,
 respectively.  These keywords are non‐conforming.  For the purpose of
-conformance checking, unless otherwise stated, these states <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-button>Button</span> state.<!--
+conformance checking, unless otherwise stated, these states <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-reset>Reset Button</span> state.<!--
 <http://www.whatwg.org/specs/web-forms/current-work/#new-form> -->
 
 </p><p>If the <code id=attr-repeat-template title=attr-repeat-template>repeat-template</code> attribute of an element
