@@ -115,16 +115,63 @@ specification is explicitly limited to the conformance checking of
 documents (or parts of documents) that contains obsolete elements and
 attributes for the purpose of comaptibility.  Elements and attributes
 conforming to these requirements are still non‐conforming.
-Especially, this specification is <em>not</em> an <span
+Especially, this specification <em>cannot</em> be an <span
 title="applicable specifications">applicable specification</span> in
-the context of the HTML Standard.
+the context of the HTML Standard for the purpose of authors'
+requirements.
 
 <p>This specification is developed as part of the <a
-href="http://suika.suikawiki.org/www/manakai-core/doc/web/">manakai</a>
-project.  Although it might be useful to other parties, the only
-intended audiences of this specification are contributors of the
-project.  This specification does not define or describe any kind of
-standard.
+href="https://github.com/manakai/">manakai project</a>.  Although it
+might be useful to other parties, the only intended audiences of this
+specification are contributors of the project.  This specification
+does not define or describe any kind of standard.
+
+<div class=section>
+<h3>How requirements for non‐conforming elements and attributes are defined</h3>
+
+<p class=section-info><em>This section is non‐normative.</em>
+
+<p>As a general rule, requirements for non‐conforming elements and
+attributes are derived by the following rules:
+
+<ol>
+
+<li>If an element or attribute <var>a</var> is defined in a historical
+standard specification:
+
+  <ul>
+
+  <li>If the HTML Standard defines user agent requirements for
+<var>a</var>, author requirements for <var>a</var> should be derived
+from them.
+
+  <li>Otherwise, if there is an element or attribute <var>b</var> that
+shares the definition or requirements with <var>a</var> in the
+specification, and <var>b</var> is defined in the HTML Standard, then
+<var>b</var> should share the same requirements as <var>a</var>'s in
+the HTML Standard.
+
+  <li>Otherwise, <var>a</var>'s expected syntax in the specification
+should be used as requirements.
+
+  </ul>
+
+<li>Otherwise, if <var>a</var> is described in the first implementor's
+official reference documentation, a best effort attempt should be made
+to formalize <var>a</var>'s expected usage documented there as
+requirements.
+
+</ol>
+
+<p>If an attribute <span>maps to the pixel length property</span>, the
+attribute value has to be a <span>valid non-negative
+integer</span>. <!-- HTML Standard rendering -->
+
+<p>If an attribute <span>maps to the dimension property</span>, the
+attribute value has to be a <span>valid dimension value</span>.<!--
+HTML Standard rendering -->
+
+</div>
 
 </div>
 
@@ -262,55 +309,6 @@ attributes deinfed or mentioned in this specification have no
 namespace.
 
 </div>
-
-</div>
-
-<div class=section>
-<h2>How to define requirements for non‐conforming elements and
-attributes</h2>
-
-<p class=section-info><em>This section is non‐normative.</em>
-
-<p>As a general guideline, requirements for non‐conforming elements
-and attributes can be constructed by the following rules in most
-cases:
-
-<ol>
-
-<li>If an element or attribute <var>a</var> is defined in a historical
-standard specification:
-
-  <ul>
-
-  <li>If the HTML Standard defines user agent requirements for
-<var>a</var>, author requirements for <var>a</var> should be derived
-from them.
-
-  <li>Otherwise, if there is an element or attribute <var>b</var> that
-shares the definition or requirements with <var>a</var> in the
-specification, and <var>b</var> is defined in the HTML Standard, then
-<var>b</var> should share the same requirements as <var>a</var>'s in
-the HTML Standard.
-
-  <li>Otherwise, <var>a</var>'s expected syntax in the specification
-should be used as requirements.
-
-  </ul>
-
-<li>Otherwise, if <var>a</var> is described in the first implementor's
-official reference documentation, a best effort attempt should be made
-to formalize <var>a</var>'s expected usage documented there as
-requirements.
-
-</ol>
-
-<p>If an attribute <span>maps to the pixel length property</span>, the
-attribute value has to be a <span>valid non-negative
-integer</span>. <!-- HTML Standard rendering -->
-
-<p>If an attribute <span>maps to the dimension property</span>, the
-attribute value has to be a <span>valid dimension value</span>.<!--
-HTML Standard rendering -->
 
 </div>
 

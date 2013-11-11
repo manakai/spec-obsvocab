@@ -74,73 +74,73 @@ version of the document is the only normative version.</p>
 
 <!--begin-toc-->
 <ol class=toc>
- <li><a href=#introduction><span class=secno>1 </span>Introduction</a></li>
+ <li><a href=#introduction><span class=secno>1 </span>Introduction</a>
+  <ol>
+   <li><a href=#how-requirements-for-non‐conforming-elements-and-attributes-are-defined><span class=secno>1.1 </span>How requirements for non‐conforming elements and attributes are defined</a></li></ol></li>
  <li><a href=#common-infrastructure><span class=secno>2 </span>Common infrastructure</a>
   <ol>
    <li><a href=#terminology><span class=secno>2.1 </span>Terminology</a></li>
    <li><a href=#conformance-requirements><span class=secno>2.2 </span>Conformance requirements</a></li>
    <li><a href=#namespaces><span class=secno>2.3 </span>Namespaces</a></li></ol></li>
- <li><a href=#how-to-define-requirements-for-non‐conforming-elements-and-attributes><span class=secno>3 </span>How to define requirements for non‐conforming elements and
-attributes</a></li>
- <li><a href=#obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</a>
+ <li><a href=#obsolete-html-elements-and-attributes><span class=secno>3 </span>Obsolete HTML elements and attributes</a>
   <ol>
-   <li><a href=#global-attributes><span class=secno>4.1 </span>Global attributes</a>
+   <li><a href=#global-attributes><span class=secno>3.1 </span>Global attributes</a>
     <ol>
-     <li><a href=#user-interaction><span class=secno>4.1.1 </span>User interaction</a></li></ol></li>
-   <li><a href=#metadata><span class=secno>4.2 </span>Metadata</a>
+     <li><a href=#user-interaction><span class=secno>3.1.1 </span>User interaction</a></li></ol></li>
+   <li><a href=#metadata><span class=secno>3.2 </span>Metadata</a>
     <ol>
-     <li><a href=#metadata-elements><span class=secno>4.2.1 </span>Metadata elements</a></li>
-     <li><a href=#the-bgsound-element><span class=secno>4.2.2 </span>The <code>bgsound</code> element</a></li>
-     <li><a href=#hidden-metadata><span class=secno>4.2.3 </span>Hidden metadata</a></li></ol></li>
-   <li><a href=#flow-content><span class=secno>4.3 </span>Flow content</a>
+     <li><a href=#metadata-elements><span class=secno>3.2.1 </span>Metadata elements</a></li>
+     <li><a href=#the-bgsound-element><span class=secno>3.2.2 </span>The <code>bgsound</code> element</a></li>
+     <li><a href=#hidden-metadata><span class=secno>3.2.3 </span>Hidden metadata</a></li></ol></li>
+   <li><a href=#flow-content><span class=secno>3.3 </span>Flow content</a>
     <ol>
-     <li><a href=#lists><span class=secno>4.3.1 </span>Lists</a></li>
-     <li><a href=#tables><span class=secno>4.3.2 </span>Tables</a></li>
-     <li><a href=#the-marquee-element><span class=secno>4.3.3 </span>The <code>marquee</code> element</a></li></ol></li>
-   <li><a href=#boxes><span class=secno>4.4 </span>Boxes</a>
+     <li><a href=#lists><span class=secno>3.3.1 </span>Lists</a></li>
+     <li><a href=#tables><span class=secno>3.3.2 </span>Tables</a></li>
+     <li><a href=#the-marquee-element><span class=secno>3.3.3 </span>The <code>marquee</code> element</a></li></ol></li>
+   <li><a href=#boxes><span class=secno>3.4 </span>Boxes</a>
     <ol>
-     <li><a href=#dimension><span class=secno>4.4.1 </span>Dimension</a></li>
-     <li><a href=#margin-and-padding><span class=secno>4.4.2 </span>Margin and padding</a></li>
-     <li><a href=#borders><span class=secno>4.4.3 </span>Borders</a></li>
-     <li><a href=#overflow><span class=secno>4.4.4 </span>Overflow</a></li></ol></li>
-   <li><a href=#background-images-and-colors><span class=secno>4.5 </span>Background images and colors</a></li>
-   <li><a href=#alignments><span class=secno>4.6 </span>Alignments</a></li>
-   <li><a href=#line-breaks><span class=secno>4.7 </span>Line breaks</a></li>
-   <li><a href=#phrasing-content><span class=secno>4.8 </span>Phrasing content</a>
+     <li><a href=#dimension><span class=secno>3.4.1 </span>Dimension</a></li>
+     <li><a href=#margin-and-padding><span class=secno>3.4.2 </span>Margin and padding</a></li>
+     <li><a href=#borders><span class=secno>3.4.3 </span>Borders</a></li>
+     <li><a href=#overflow><span class=secno>3.4.4 </span>Overflow</a></li></ol></li>
+   <li><a href=#background-images-and-colors><span class=secno>3.5 </span>Background images and colors</a></li>
+   <li><a href=#alignments><span class=secno>3.6 </span>Alignments</a></li>
+   <li><a href=#line-breaks><span class=secno>3.7 </span>Line breaks</a></li>
+   <li><a href=#phrasing-content><span class=secno>3.8 </span>Phrasing content</a>
     <ol>
-     <li><a href=#ruby><span class=secno>4.8.1 </span>Ruby</a></li>
-     <li><a href=#the-font-element><span class=secno>4.8.2 </span>The <code>font</code> element</a></li></ol></li>
-   <li><a href=#hyperlinks><span class=secno>4.9 </span>Hyperlinks</a>
+     <li><a href=#ruby><span class=secno>3.8.1 </span>Ruby</a></li>
+     <li><a href=#the-font-element><span class=secno>3.8.2 </span>The <code>font</code> element</a></li></ol></li>
+   <li><a href=#hyperlinks><span class=secno>3.9 </span>Hyperlinks</a>
     <ol>
-     <li><a href=#link-destinations><span class=secno>4.9.1 </span>Link destinations</a></li>
-     <li><a href=#metadata-0><span class=secno>4.9.2 </span>Metadata</a></li>
-     <li><a href=#profile-data><span class=secno>4.9.3 </span>Profile data</a></li>
-     <li><a href=#activation-and-presentation><span class=secno>4.9.4 </span>Activation and presentation</a></li></ol></li>
-   <li><a href=#embedded-content><span class=secno>4.10 </span>Embedded content</a>
+     <li><a href=#link-destinations><span class=secno>3.9.1 </span>Link destinations</a></li>
+     <li><a href=#metadata-0><span class=secno>3.9.2 </span>Metadata</a></li>
+     <li><a href=#profile-data><span class=secno>3.9.3 </span>Profile data</a></li>
+     <li><a href=#activation-and-presentation><span class=secno>3.9.4 </span>Activation and presentation</a></li></ol></li>
+   <li><a href=#embedded-content><span class=secno>3.10 </span>Embedded content</a>
     <ol>
-     <li><a href=#the-img-element><span class=secno>4.10.1 </span>The <code>img</code> element</a>
+     <li><a href=#the-img-element><span class=secno>3.10.1 </span>The <code>img</code> element</a>
       <ol>
-       <li><a href=#image-sources><span class=secno>4.10.1.1 </span>Image sources</a></li>
-       <li><a href=#presentation><span class=secno>4.10.1.2 </span>Presentation</a></li></ol></li>
-     <li><a href=#the-embed-element><span class=secno>4.10.2 </span>The <code>embed</code> element</a></li>
-     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>4.10.3 </span>The <code>applet</code>, <code>object</code>, and
+       <li><a href=#image-sources><span class=secno>3.10.1.1 </span>Image sources</a></li>
+       <li><a href=#presentation><span class=secno>3.10.1.2 </span>Presentation</a></li></ol></li>
+     <li><a href=#the-embed-element><span class=secno>3.10.2 </span>The <code>embed</code> element</a></li>
+     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>3.10.3 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</a></li>
-     <li><a href=#audio-and-video><span class=secno>4.10.4 </span>Audio and video</a></li>
-     <li><a href=#vibration><span class=secno>4.10.5 </span>Vibration</a></li>
-     <li><a href=#embedded-data><span class=secno>4.10.6 </span>Embedded data</a></li></ol></li>
-   <li><a href=#frames><span class=secno>4.11 </span>Frames</a>
+     <li><a href=#audio-and-video><span class=secno>3.10.4 </span>Audio and video</a></li>
+     <li><a href=#vibration><span class=secno>3.10.5 </span>Vibration</a></li>
+     <li><a href=#embedded-data><span class=secno>3.10.6 </span>Embedded data</a></li></ol></li>
+   <li><a href=#frames><span class=secno>3.11 </span>Frames</a>
     <ol>
-     <li><a href=#the-frameset-element><span class=secno>4.11.1 </span>The <code>frameset</code> element</a></li>
-     <li><a href=#the-frame-element><span class=secno>4.11.2 </span>The <code>frame</code> element</a></li>
-     <li><a href=#frame-borders><span class=secno>4.11.3 </span>Frame borders</a></li>
-     <li><a href=#the-noframes-element><span class=secno>4.11.4 </span>The <code>noframes</code> element</a></li></ol></li>
-   <li><a href=#scripting><span class=secno>4.12 </span>Scripting</a></li>
-   <li><a href=#forms><span class=secno>4.13 </span>Forms</a>
+     <li><a href=#the-frameset-element><span class=secno>3.11.1 </span>The <code>frameset</code> element</a></li>
+     <li><a href=#the-frame-element><span class=secno>3.11.2 </span>The <code>frame</code> element</a></li>
+     <li><a href=#frame-borders><span class=secno>3.11.3 </span>Frame borders</a></li>
+     <li><a href=#the-noframes-element><span class=secno>3.11.4 </span>The <code>noframes</code> element</a></li></ol></li>
+   <li><a href=#scripting><span class=secno>3.12 </span>Scripting</a></li>
+   <li><a href=#forms><span class=secno>3.13 </span>Forms</a>
     <ol>
-     <li><a href=#value-constraints-and-input-mode><span class=secno>4.13.1 </span>Value constraints and input mode</a></li>
-     <li><a href=#autocomplete><span class=secno>4.13.2 </span>Autocomplete</a></li>
-     <li><a href=#the-keygen-element><span class=secno>4.13.3 </span>The <code>keygen</code> element</a></li></ol></li></ol></li>
- <li><a href=#elements-and-attributes-not-convered-by-this-specification><span class=secno>5 </span>Elements and attributes not convered by this specification</a></li>
+     <li><a href=#value-constraints-and-input-mode><span class=secno>3.13.1 </span>Value constraints and input mode</a></li>
+     <li><a href=#autocomplete><span class=secno>3.13.2 </span>Autocomplete</a></li>
+     <li><a href=#the-keygen-element><span class=secno>3.13.3 </span>The <code>keygen</code> element</a></li></ol></li></ol></li>
+ <li><a href=#elements-and-attributes-not-convered-by-this-specification><span class=secno>4 </span>Elements and attributes not convered by this specification</a></li>
  <li><a class=no-num href=#index>Index</a></li>
  <li><a class=no-num href=#references>References</a>
   <ol>
@@ -178,16 +178,63 @@ specification is explicitly limited to the conformance checking of
 documents (or parts of documents) that contains obsolete elements and
 attributes for the purpose of comaptibility.  Elements and attributes
 conforming to these requirements are still non‐conforming.
-Especially, this specification is <em>not</em> an <a href=#applicable-specifications title="applicable specifications">applicable specification</a> in
-the context of the HTML Standard.
+Especially, this specification <em>cannot</em> be an <a href=#applicable-specifications title="applicable specifications">applicable specification</a> in
+the context of the HTML Standard for the purpose of authors'
+requirements.
 
-</p><p>This specification is developed as part of the <a href=http://suika.suikawiki.org/www/manakai-core/doc/web/>manakai</a>
-project.  Although it might be useful to other parties, the only
-intended audiences of this specification are contributors of the
-project.  This specification does not define or describe any kind of
-standard.
+</p><p>This specification is developed as part of the <a href=https://github.com/manakai/>manakai project</a>.  Although it
+might be useful to other parties, the only intended audiences of this
+specification are contributors of the project.  This specification
+does not define or describe any kind of standard.
+
+</p><div class=section>
+<h3 id=how-requirements-for-non‐conforming-elements-and-attributes-are-defined><span class=secno>1.1 </span>How requirements for non‐conforming elements and attributes are defined</h3>
+
+<p class=section-info><em>This section is non‐normative.</em>
+
+</p><p>As a general rule, requirements for non‐conforming elements and
+attributes are derived by the following rules:
+
+</p><ol>
+
+<li>If an element or attribute <var>a</var> is defined in a historical
+standard specification:
+
+  <ul>
+
+  <li>If the HTML Standard defines user agent requirements for
+<var>a</var>, author requirements for <var>a</var> should be derived
+from them.
+
+  </li><li>Otherwise, if there is an element or attribute <var>b</var> that
+shares the definition or requirements with <var>a</var> in the
+specification, and <var>b</var> is defined in the HTML Standard, then
+<var>b</var> should share the same requirements as <var>a</var>'s in
+the HTML Standard.
+
+  </li><li>Otherwise, <var>a</var>'s expected syntax in the specification
+should be used as requirements.
+
+  </li></ul>
+
+</li><li>Otherwise, if <var>a</var> is described in the first implementor's
+official reference documentation, a best effort attempt should be made
+to formalize <var>a</var>'s expected usage documented there as
+requirements.
+
+</li></ol>
+
+<p>If an attribute <a href=#maps-to-the-pixel-length-property>maps to the pixel length property</a>, the
+attribute value has to be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>. <!-- HTML Standard rendering -->
+
+</p><p>If an attribute <a href=#maps-to-the-dimension-property>maps to the dimension property</a>, the
+attribute value has to be a <a href=#valid-dimension-value>valid dimension value</a>.<!--
+HTML Standard rendering -->
 
 </p></div>
+
+</div>
 
 <div class=section>
 <h2 id=common-infrastructure><span class=secno>2 </span>Common infrastructure</h2>
@@ -323,62 +370,13 @@ namespace.
 </div>
 
 <div class=section>
-<h2 id=how-to-define-requirements-for-non‐conforming-elements-and-attributes><span class=secno>3 </span>How to define requirements for non‐conforming elements and
-attributes</h2>
-
-<p class=section-info><em>This section is non‐normative.</em>
-
-</p><p>As a general guideline, requirements for non‐conforming elements
-and attributes can be constructed by the following rules in most
-cases:
-
-</p><ol>
-
-<li>If an element or attribute <var>a</var> is defined in a historical
-standard specification:
-
-  <ul>
-
-  <li>If the HTML Standard defines user agent requirements for
-<var>a</var>, author requirements for <var>a</var> should be derived
-from them.
-
-  </li><li>Otherwise, if there is an element or attribute <var>b</var> that
-shares the definition or requirements with <var>a</var> in the
-specification, and <var>b</var> is defined in the HTML Standard, then
-<var>b</var> should share the same requirements as <var>a</var>'s in
-the HTML Standard.
-
-  </li><li>Otherwise, <var>a</var>'s expected syntax in the specification
-should be used as requirements.
-
-  </li></ul>
-
-</li><li>Otherwise, if <var>a</var> is described in the first implementor's
-official reference documentation, a best effort attempt should be made
-to formalize <var>a</var>'s expected usage documented there as
-requirements.
-
-</li></ol>
-
-<p>If an attribute <a href=#maps-to-the-pixel-length-property>maps to the pixel length property</a>, the
-attribute value has to be a <a href=#valid-non-negative-integer>valid non-negative
-integer</a>. <!-- HTML Standard rendering -->
-
-</p><p>If an attribute <a href=#maps-to-the-dimension-property>maps to the dimension property</a>, the
-attribute value has to be a <a href=#valid-dimension-value>valid dimension value</a>.<!--
-HTML Standard rendering -->
-
-</p></div>
+<h2 id=obsolete-html-elements-and-attributes><span class=secno>3 </span>Obsolete HTML elements and attributes</h2>
 
 <div class=section>
-<h2 id=obsolete-html-elements-and-attributes><span class=secno>4 </span>Obsolete HTML elements and attributes</h2>
+<h3 id=global-attributes><span class=secno>3.1 </span>Global attributes</h3>
 
 <div class=section>
-<h3 id=global-attributes><span class=secno>4.1 </span>Global attributes</h3>
-
-<div class=section>
-<h4 id=user-interaction><span class=secno>4.1.1 </span>User interaction</h4>
+<h4 id=user-interaction><span class=secno>3.1.1 </span>User interaction</h4>
 
 <p>The <code id=attr-atomicselection title=attr-atomicselection>atomicselection</code> attribute of an <a href=#html-elements title="HTML elements">HTML element</a> <cite class="bibref
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
@@ -407,7 +405,7 @@ Applications 1.0 is a <a href=#boolean-attribute>boolean attribute</a>.<!--
 </div>
 
 <div class=section>
-<h3 id=metadata><span class=secno>4.2 </span>Metadata</h3>
+<h3 id=metadata><span class=secno>3.2 </span>Metadata</h3>
 
 <p>If the <code id=attr-head-profile title=attr-head-profile>profile</code> attribute of the <code>head</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
@@ -424,7 +422,7 @@ is "cdata".  Various DTDs of versions of HTML and XHTML define their
 the value, but it had not been speced anywhere at all. -->
 
 </p><div class=section>
-<h4 id=metadata-elements><span class=secno>4.2.1 </span>Metadata elements</h4>
+<h4 id=metadata-elements><span class=secno>3.2.1 </span>Metadata elements</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=basefont>basefont</code> element is <i>empty</i>.<!-- HTML Standard
 parsing -->
@@ -437,7 +435,7 @@ string.<!-- HTML4,
 </p></div>
 
 <div class=section>
-<h4 id=the-bgsound-element><span class=secno>4.2.2 </span>The <code>bgsound</code> element</h4>
+<h4 id=the-bgsound-element><span class=secno>3.2.2 </span>The <code>bgsound</code> element</h4>
 <!-- <http://msdn.microsoft.com/en-us/library/ms535198%28VS.85%29.aspx> -->
 
 <p>The <a href=#content-model>content model</a> of the <code id=bgsound>bgsound</code> element is <i>empty</i>.<!-- HTML Standard
@@ -463,7 +461,7 @@ attribute</a> with keywords <code title="">high</code>, <code title="">middle</c
 </p></div>
 
 <div class=section>
-<h4 id=hidden-metadata><span class=secno>4.2.3 </span>Hidden metadata</h4>
+<h4 id=hidden-metadata><span class=secno>3.2.3 </span>Hidden metadata</h4>
 
 <p>If attribute <code id=attr-about title=attr-about>about</code> or
 <code id=attr-resource title=attr-resource>resource</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> is
@@ -489,7 +487,7 @@ copy that requirement here. -->
 </div>
 
 <div class=section>
-<h3 id=flow-content><span class=secno>4.3 </span>Flow content</h3>
+<h3 id=flow-content><span class=secno>3.3 </span>Flow content</h3>
 
 <p>The <a href=#content-model>content model</a> of the <code id=center>center</code>
 element is same as the <code>div</code> element.<!-- HTML Standard
@@ -500,7 +498,7 @@ elements are <i>text</i>.<!-- HTML Standard parsing, HTML Standard
 rendering, HTML Standard obsolete -->
 
 </p><div class=section>
-<h4 id=lists><span class=secno>4.3.1 </span>Lists</h4>
+<h4 id=lists><span class=secno>3.3.1 </span>Lists</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=dir>dir</code>
 element, including the <a href=#content-model>content model</a> of the child
@@ -529,7 +527,7 @@ attribute</a>.<!-- HTML4 -->
 </p></div>
 
 <div class=section>
-<h4 id=tables><span class=secno>4.3.2 </span>Tables</h4>
+<h4 id=tables><span class=secno>3.3.2 </span>Tables</h4>
 
 <p>If the <code id=attr-table-cols title=attr-table-cols>cols</code>
 attribute <cite class="bibref informative">[<a href=#ref-RFC1942>RFC1942</a>]</cite> of a <code>table</code>
@@ -553,7 +551,7 @@ element.
 </p></div>
 
 <div class=section>
-<h4 id=the-marquee-element><span class=secno>4.3.3 </span>The <code>marquee</code> element</h4>
+<h4 id=the-marquee-element><span class=secno>3.3.3 </span>The <code>marquee</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=marquee>marquee</code> element is same as the <code>div</code>
 element.<!-- HTML Standard parsing, HTML Standard rendering -->
@@ -595,10 +593,10 @@ in HTML Standard - HTML5 obsolete
 </div>
 
 <div class=section>
-<h3 id=boxes><span class=secno>4.4 </span>Boxes</h3>
+<h3 id=boxes><span class=secno>3.4 </span>Boxes</h3>
 
 <div class=section>
-<h4 id=dimension><span class=secno>4.4.1 </span>Dimension</h4>
+<h4 id=dimension><span class=secno>3.4.1 </span>Dimension</h4>
 
 <p>If the <code id=attr-height title="">height</code> or <code id=attr-width title="">width</code> attribute of an <code>applet</code>,
 <code>table</code>, <code>td</code>, <code>th</code>, or
@@ -628,7 +626,7 @@ HTML4 -->
 </p></div>
 
 <div class=section>
-<h4 id=margin-and-padding><span class=secno>4.4.2 </span>Margin and padding</h4>
+<h4 id=margin-and-padding><span class=secno>3.4.2 </span>Margin and padding</h4>
 
 <p>The <code>body</code> element's <code id=attr-body-marginheight title=attr-body-marginheight>marginheight</code>, <code id=attr-body-marginwidth title=attr-body-marginwidth>marginwidth</code>, <code id=attr-body-topmargin title=attr-body-topmargin>topmargin</code>, and
 <code id=attr-body-rightmargin title=attr-body-rightmargin>rightmargin</code> attribute values <em class=rfc2119>MUST</em> be <a href=#valid-non-negative-integer title="valid non-negative
@@ -669,7 +667,7 @@ informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> <cite class="bibref infor
 </p></div>
 
 <div class=section>
-<h4 id=borders><span class=secno>4.4.3 </span>Borders</h4>
+<h4 id=borders><span class=secno>3.4.3 </span>Borders</h4>
 
 <p>The <code id=attr-table-rules title=attr-table-rules>rules</code>
 attribute of a <code>table</code> element is an <a href=#enumerated-attribute>enumerated
@@ -707,7 +705,7 @@ attribute</a>.<!-- HTML Standard rendering -->
 </p></div>
 
 <div class=section>
-<h4 id=overflow><span class=secno>4.4.4 </span>Overflow</h4>
+<h4 id=overflow><span class=secno>3.4.4 </span>Overflow</h4>
 
 <p>The <code id=attr-frames-scrolling title=attr-frames-scrolling>scrolling</code> attribute of a
 <code>frame</code> or <code>iframe</code> element is an
@@ -729,7 +727,7 @@ and <body scroll> should not be allowed in no quirks mode -->
 </div>
 
 <div class=section>
-<h3 id=background-images-and-colors><span class=secno>4.5 </span>Background images and colors</h3>
+<h3 id=background-images-and-colors><span class=secno>3.5 </span>Background images and colors</h3>
 
 <p>The <code>body</code>, <code>table</code>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
@@ -800,7 +798,7 @@ empty string.<!--
 </p></div>
 
 <div class=section>
-<h3 id=alignments><span class=secno>4.6 </span>Alignments</h3>
+<h3 id=alignments><span class=secno>3.6 </span>Alignments</h3>
 
 <p>The <code id=attr-table-align title=attr-table-align>align</code>
 attribute of a <code>table</code> element is an <a href=#enumerated-attribute>enumerated
@@ -891,7 +889,7 @@ dimension value</a>.<!--
 </p></div>
 
 <div class=section>
-<h3 id=line-breaks><span class=secno>4.7 </span>Line breaks</h3>
+<h3 id=line-breaks><span class=secno>3.7 </span>Line breaks</h3>
 
 <p>The <code id=attr-tdth-nowrap title=attr-tdth-nowrap>nowrap</code>
 attribute of <code>body</code>, <code>dt</code>, <code>dd</code>, and
@@ -921,7 +919,7 @@ conforming.<!-- HTML Standard rendering, HTML4,
 </p></div>
 
 <div class=section>
-<h3 id=phrasing-content><span class=secno>4.8 </span>Phrasing content</h3>
+<h3 id=phrasing-content><span class=secno>3.8 </span>Phrasing content</h3>
 
 <p>The <a href=#content-model>content model</a> of <code id=acronym>acronym</code>,
 <code id=big>big</code>, <code id=blink>blink</code>, <code id=nobr>nobr</code>, <code id=rb>rb</code>, <code id=strike>strike</code>, and <code id=tt>tt</code> elements are same
@@ -933,7 +931,7 @@ blink
 -->
 
 </p><div class=section>
-<h4 id=ruby><span class=secno>4.8.1 </span>Ruby</h4>
+<h4 id=ruby><span class=secno>3.8.1 </span>Ruby</h4>
 
 <p>If the <code id=attr-rt-rbspan title=attr-rt-rbspan>rbspan</code>
 attribute <cite class="bibref informative">[<a href=#ref-RUBY>RUBY</a>]</cite> of an <code>rt</code> element is
@@ -952,7 +950,7 @@ elements.<!-- RUBY -->
 </p></div>
 
 <div class=section>
-<h4 id=the-font-element><span class=secno>4.8.2 </span>The <code>font</code> element</h4>
+<h4 id=the-font-element><span class=secno>3.8.2 </span>The <code>font</code> element</h4>
 
 <p><a href=#content-model>Content model</a> of the <code id=font>font</code> element
 is <i>transparent</i>.<!-- HTML Standard parsing, Old HTML5 definition
@@ -980,7 +978,7 @@ HTML4 -->
 </div>
 
 <div class=section>
-<h3 id=hyperlinks><span class=secno>4.9 </span>Hyperlinks</h3>
+<h3 id=hyperlinks><span class=secno>3.9 </span>Hyperlinks</h3>
 
 <p>A <dfn id=valid-hash-id-reference>valid hash-ID reference</dfn> to an element of type <var title="">type</var> is a string consisting of a U+0023 <code class=charname>NUMBER SIGN</code> character (#) followed by a string
 which exactly matches the ID of an element with type <var>type</var>
@@ -990,7 +988,7 @@ reference</span>
 -->
 
 </p><div class=section>
-<h4 id=link-destinations><span class=secno>4.9.1 </span>Link destinations</h4>
+<h4 id=link-destinations><span class=secno>3.9.1 </span>Link destinations</h4>
 
 <p>If the <code id=attr-a-src title=attr-a-src>src</code> attribute of
 the <code>a</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
@@ -1092,7 +1090,7 @@ attribute</a>.<!-- HTML4 -->
 </p></div>
 
 <div class=section>
-<h4 id=metadata-0><span class=secno>4.9.2 </span>Metadata</h4>
+<h4 id=metadata-0><span class=secno>3.9.2 </span>Metadata</h4>
 
 <p>If the <code id=attr-hyperlink-charset title=attr-hyperlink-charset>charset</code> attribute of an
 <code>a</code> or <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-script-charset>charset</code> attribute value for a
@@ -1101,7 +1099,7 @@ attribute</a>.<!-- HTML4 -->
 </p></div>
 
 <div class=section>
-<h4 id=profile-data><span class=secno>4.9.3 </span>Profile data</h4>
+<h4 id=profile-data><span class=secno>3.9.3 </span>Profile data</h4>
 
 <p>If <code id=attr-a-telbook title=attr-a-telbook>telbook</code> or
 <code id=attr-a-kana title=attr-a-kana>kana</code> attribute of an
@@ -1143,7 +1141,7 @@ name, followed by a "-", followed by katakana name -->
 </p></div>
 
 <div class=section>
-<h4 id=activation-and-presentation><span class=secno>4.9.4 </span>Activation and presentation</h4>
+<h4 id=activation-and-presentation><span class=secno>3.9.4 </span>Activation and presentation</h4>
 
 <p>If the <code id=attr-directkey title=attr-directkey>directkey</code> attribute of an <code>a</code> or
 <code>input</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a string that is syntactically valid as an
@@ -1168,7 +1166,7 @@ present, their values, and their presence themselves, <em class=rfc2119>MUST</em
 </div>
 
 <div class=section>
-<h3 id=embedded-content><span class=secno>4.10 </span>Embedded content</h3>
+<h3 id=embedded-content><span class=secno>3.10 </span>Embedded content</h3>
 
 <p>If there are <code>applet</code>, <code>embed</code>, and/or
 <code>img</code> elements with their <code id=attr-objects-name title=attr-objects-name>name</code> attributes specified, those elements
@@ -1185,7 +1183,7 @@ HTML Standard obsolete, HTML4 --><!-- There was <layer name> according
 to <http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> -->
 
 </p><div class=section>
-<h4 id=the-img-element><span class=secno>4.10.1 </span>The <code>img</code> element</h4>
+<h4 id=the-img-element><span class=secno>3.10.1 </span>The <code>img</code> element</h4>
 
 <p>If the <code id=attr-input-usemap title=attr-input-usemap>usemap</code> attribute of the <code>input</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
@@ -1201,7 +1199,7 @@ attribute of the <code>frame</code>, <code>iframe</code>, or
 <code>img</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid URL</a>.<!-- HTML4 -->
 
 </p><div class=section>
-<h5 id=image-sources><span class=secno>4.10.1.1 </span>Image sources</h5>
+<h5 id=image-sources><span class=secno>3.10.1.1 </span>Image sources</h5>
 
 <p>If the <code id=attr-dynsrc title=attr-dynsrc>dynsrc</code> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>,
 <code id=attr-lowsrc title=attr-lowsrc>lowsrc</code> <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>
@@ -1245,7 +1243,7 @@ See also WML 2.0 |wml:localsrc|.  -->
 </p></div>
 
 <div class=section>
-<h5 id=presentation><span class=secno>4.10.1.2 </span>Presentation</h5>
+<h5 id=presentation><span class=secno>3.10.1.2 </span>Presentation</h5>
 
 <p>The <code id=attr-img-suppress title=attr-img-suppress>suppress</code> attribute of the <code>img</code>
 element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is a <a href=#boolean-attribute>boolean
@@ -1289,7 +1287,7 @@ attribute">enumerated attributes</a> with keywords <code title="">yes</code> and
 </div>
 
 <div class=section>
-<h4 id=the-embed-element><span class=secno>4.10.2 </span>The <code>embed</code> element</h4>
+<h4 id=the-embed-element><span class=secno>3.10.2 </span>The <code>embed</code> element</h4>
 
 <p>If the <code id=attr-embed-pluginpage title=attr-embed-pluginpage>pluginpage</code> <cite class="bibref
 informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite>, <code id=attr-embed-pluginspage title=attr-embed-pluginspage>pluginspage</code>, or <code id=attr-embed-pluginurl title=attr-embed-pluginurl>pluginurl</code>
@@ -1311,7 +1309,7 @@ element.
 </p></div>
 
 <div class=section>
-<h4 id=the-applet,-object,-and-param-elements><span class=secno>4.10.3 </span>The <code>applet</code>, <code>object</code>, and
+<h4 id=the-applet,-object,-and-param-elements><span class=secno>3.10.3 </span>The <code>applet</code>, <code>object</code>, and
 <code>param</code> elements</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=applet>applet</code>
@@ -1415,7 +1413,7 @@ with keywords <code title="">data</code>, <code title="">ref</code>, and
 </p></div>
 
 <div class=section>
-<h4 id=audio-and-video><span class=secno>4.10.4 </span>Audio and video</h4>
+<h4 id=audio-and-video><span class=secno>3.10.4 </span>Audio and video</h4>
 
 <p>The <code id=attr-start title=attr-start>start</code> attribute of
 the <code>img</code> or <code>input</code> element <cite class="bibref
@@ -1500,7 +1498,7 @@ that represents a positive number.<!-- HTML5 dropped -->
 </p></div>
 
 <div class=section>
-<h4 id=vibration><span class=secno>4.10.5 </span>Vibration</h4>
+<h4 id=vibration><span class=secno>3.10.5 </span>Vibration</h4>
 
 <p>The <code id=attr-a-vibration title=attr-a-vibration>vibration</code> attribute of <code>a</code> and
 <code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> are an <a href=#enumerated-attribute>enumerated
@@ -1524,7 +1522,7 @@ state.<!-- Softbank 3.9.1., 3.10.1., 3.12.2. -->
 </p></div>
 
 <div class=section>
-<h4 id=embedded-data><span class=secno>4.10.6 </span>Embedded data</h4>
+<h4 id=embedded-data><span class=secno>3.10.6 </span>Embedded data</h4>
 
 <p>If the <code id=attr-datasrc title=attr-datasrc>datasrc</code>
 attribute of an element <code>a</code>, <code>applet</code>,
@@ -1569,10 +1567,10 @@ integer</a>.<!--
 </div>
 
 <div class=section>
-<h3 id=frames><span class=secno>4.11 </span>Frames</h3>
+<h3 id=frames><span class=secno>3.11 </span>Frames</h3>
 
 <div class=section>
-<h4 id=the-frameset-element><span class=secno>4.11.1 </span>The <code>frameset</code> element</h4>
+<h4 id=the-frameset-element><span class=secno>3.11.1 </span>The <code>frameset</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=frameset>frameset</code> element is one or more <code>frame</code>
 or <code>frameset</code> elements.  Additionally, there can be a
@@ -1627,7 +1625,7 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 </p></div>
 
 <div class=section>
-<h4 id=the-frame-element><span class=secno>4.11.2 </span>The <code>frame</code> element</h4>
+<h4 id=the-frame-element><span class=secno>3.11.2 </span>The <code>frame</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=frame>frame</code>
 element is <i>empty</i>.<!-- HTML Standard parsing, HTML Standard
@@ -1655,7 +1653,7 @@ Standard rendering,
 </p></div>
 
 <div class=section>
-<h4 id=frame-borders><span class=secno>4.11.3 </span>Frame borders</h4>
+<h4 id=frame-borders><span class=secno>3.11.3 </span>Frame borders</h4>
 
 <p>The <code id=attr-frames-frameborder title=attr-frames-frameborder>frameborder</code> attribute of a
 <code>frame</code>, <code>frameset</code>, <code>iframe</code>, or
@@ -1688,7 +1686,7 @@ integer</a>.<!--
 </p></div>
 
 <div class=section id=noframes>
-<h4 id=the-noframes-element><span class=secno>4.11.4 </span>The <code>noframes</code> element</h4>
+<h4 id=the-noframes-element><span class=secno>3.11.4 </span>The <code>noframes</code> element</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code>noframes</code> element
 is same as the <code>iframe</code> element.
@@ -1702,7 +1700,7 @@ one ancestor <code>noframes</code> elements.
 </div>
 
 <div class=section>
-<h3 id=scripting><span class=secno>4.12 </span>Scripting</h3>
+<h3 id=scripting><span class=secno>3.12 </span>Scripting</h3>
 
 <p><!--Requirements for the <code title=attr-script-language
 id=attr-script-language>language</code> attribute of the
@@ -1792,7 +1790,7 @@ attributes</a>:
 </p></div>
 
 <div class=section>
-<h3 id=forms><span class=secno>4.13 </span>Forms</h3>
+<h3 id=forms><span class=secno>3.13 </span>Forms</h3>
 
 <p>If this specification says an attribute applies to certain states
 of <code>input</code> or <code>button</code> elements, the attribute
@@ -1823,7 +1821,7 @@ autocorrect
 -->
 
 </p><div class=section>
-<h4 id=value-constraints-and-input-mode><span class=secno>4.13.1 </span>Value constraints and input mode</h4>
+<h4 id=value-constraints-and-input-mode><span class=secno>3.13.1 </span>Value constraints and input mode</h4>
 
 <p>If the <code id=attr-input-precision title=attr-input-precision>precision</code> attribute of an
 <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be given in one of the following forms: one or
@@ -1896,7 +1894,7 @@ attribute of the <code>input</code> element applies only to
 </p></div>
 
 <div class=section>
-<h4 id=autocomplete><span class=secno>4.13.2 </span>Autocomplete</h4>
+<h4 id=autocomplete><span class=secno>3.13.2 </span>Autocomplete</h4>
 
 <p>If the <code id=attr-input-autosave title=attr-input-autosave>autosave</code> attribute of an
 <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  The <code title=attr-input-autosave>autosave</code> attribute of the
@@ -1992,7 +1990,7 @@ the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST<
 </p></div>
 
 <div class=section>
-<h4 id=the-keygen-element><span class=secno>4.13.3 </span>The <code>keygen</code> element</h4>
+<h4 id=the-keygen-element><span class=secno>3.13.3 </span>The <code>keygen</code> element</h4>
 
 <p>The <code id=attr-keygen-keytype title=attr-keygen-keytype>keytype</code> attribute of a
 <code>keygen</code> element, for the purpose of conformance checking,
@@ -2020,7 +2018,7 @@ NOT</em> be specified.  Otherwise, these two attributes <em class=rfc2119>MUST N
 </div>
 
 <div class=section>
-<h2 id=elements-and-attributes-not-convered-by-this-specification><span class=secno>5 </span>Elements and attributes not convered by this specification</h2>
+<h2 id=elements-and-attributes-not-convered-by-this-specification><span class=secno>4 </span>Elements and attributes not convered by this specification</h2>
 
 <p>Elements and attributes defined by the following specifications are
 not included in this specification, because they have not been (or are
