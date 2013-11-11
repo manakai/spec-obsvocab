@@ -86,8 +86,7 @@ attributes</a></li>
   <ol>
    <li><a href=#global-attributes><span class=secno>4.1 </span>Global attributes</a>
     <ol>
-     <li><a href=#namespaced-attributes><span class=secno>4.1.1 </span>Namespaced attributes</a></li>
-     <li><a href=#user-interaction><span class=secno>4.1.2 </span>User interaction</a></li></ol></li>
+     <li><a href=#user-interaction><span class=secno>4.1.1 </span>User interaction</a></li></ol></li>
    <li><a href=#metadata><span class=secno>4.2 </span>Metadata</a>
     <ol>
      <li><a href=#metadata-elements><span class=secno>4.2.1 </span>Metadata elements</a></li>
@@ -147,8 +146,7 @@ attributes</a></li>
      <li><a href=#value-constraints-and-input-mode><span class=secno>4.13.2 </span>Value constraints and input mode</a></li>
      <li><a href=#autocomplete><span class=secno>4.13.3 </span>Autocomplete</a></li>
      <li><a href=#the-keygen-element><span class=secno>4.13.4 </span>The <code>keygen</code> element</a></li>
-     <li><a href=#the-isindex-element><span class=secno>4.13.5 </span>The <code>isindex</code> element</a></li>
-     <li><a href=#the-repetition-templates><span class=secno>4.13.6 </span>The repetition templates</a></li></ol></li></ol></li>
+     <li><a href=#the-isindex-element><span class=secno>4.13.5 </span>The <code>isindex</code> element</a></li></ol></li></ol></li>
  <li><a href=#elements-and-attributes-not-convered-by-this-specification><span class=secno>5 </span>Elements and attributes not convered by this specification</a></li>
  <li><a class=no-num href=#index>Index</a></li>
  <li><a class=no-num href=#references>References</a>
@@ -389,29 +387,7 @@ HTML Standard rendering -->
 <h3 id=global-attributes><span class=secno>4.1 </span>Global attributes</h3>
 
 <div class=section>
-<h4 id=namespaced-attributes><span class=secno>4.1.1 </span>Namespaced attributes</h4>
-
-<p id=namespaced-global-attr>Attributes in the <a href=#html-namespace>HTML
-namespace</a> <em class=rfc2119>MUST NOT</em> be specified for
-<a href=#html-elements>HTML elements</a>.
-
-</p><p>Attributes <code id=attr-global-class title="">class</code>, <code id=attr-global-dir title="">dir</code>, <code id=attr-global-id title="">id</code>, <code id=attr-global-title title="">title</code>, <code id=attr-global-onclick title="">onclick</code>, <code id=attr-global-ondblclick title="">ondblclick</code>, <code id=attr-global-onmousedown title="">onmousedown</code>, <code id=attr-global-onmouseup title="">onmouseup</code>, <code id=attr-global-onmouseover title="">onmouseover</code>, <code id=attr-global-onmousemove title="">onmousemove</code>, <code id=attr-global-onmouseout title="">onmouseout</code>, <code id=attr-global-onkeypress title="">onkeypress</code>, <code id=attr-global-onkeydown title="">onkeydown</code>, and <code id=attr-global-onkeyup title="">onkeyup</code> in the <a href=#html-namespace>HTML
-namespace</a> <cite class="bibref informative">[<a href=#ref-M12N11>M12N11</a>]</cite>, and the <code id=attr-global-role title="">role</code> attribute in the <a href=#html-namespace>HTML
-namespace</a> <cite class="bibref informative">[<a href=#ref-ROLE>ROLE</a>]</cite> and <span id=xhtml2-role>in the
-<code title="">http://www.w3.org/2002/06/xhtml2/</code> namespace <cite class="bibref informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite></span>, <em class=rfc2119>MUST</em> be treated as equivalent to attributes in no
-namespace specified for an <a href=#html-elements title="HTML elements">HTML
-element</a> for the purpose of the conformance checking.<!-- M12N
-1.1, ROLE, XHTML2 -->
-
-</p><p>The <code id=attr-xmlspace title=attr-xmlspace>xml:space</code>
-attribute <em>in no namespace</em> specified for an <span>HTML
-element</span> is an <a href=#enumerated-attribute>enumerated attribute</a> with keywords
-<code title="">default</code> and <code title="">preserve</code>.<!-- M12N
-1.1, XHTML 1.1, XML 1.0 -->
-</p></div>
-
-<div class=section>
-<h4 id=user-interaction><span class=secno>4.1.2 </span>User interaction</h4>
+<h4 id=user-interaction><span class=secno>4.1.1 </span>User interaction</h4>
 
 <p>The <code id=attr-atomicselection title=attr-atomicselection>atomicselection</code> attribute of an <a href=#html-elements title="HTML elements">HTML element</a> <cite class="bibref
 informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
@@ -517,14 +493,6 @@ of an <a href=#html-elements title="HTML elements">HTML element</a>, if present,
 space-separated tokens</a>.<!-- HTML4, RDFa (reserved word | CURIE)
 -> HTML5 <a rel>; HTML5 allows rel="up up" as exception, but we don't
 copy that requirement here. -->
-
-</p><p>Attributes <code id=attr-global-about title=attr-global-about>about</code>, <code id=attr-global-typeof title=attr-global-typeof>typeof</code>, <code id=attr-global-property title=attr-global-property>property</code>, <code id=attr-global-resource title=attr-global-resource>resource</code>,
-<code id=attr-global-content title=attr-global-content>content</code>,
-<code title=attr-global-datatype>datatype</code>, <code id=attr-global-rel title=attr-global-rel>rel</code>, and <code id=attr-global-rev title=attr-global-rev>rev</code> in the <a href=#html-namespace>HTML
-namespace</a> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> <em class=rfc2119>MUST</em> be
-treated as equivalent to attributes in no namespace specified for an
-<a href=#html-elements title="HTML elements">HTML element</a> for the purpose of the
-conformance checking.<!-- RDFa (DTD) -->
 
 </p></div>
 
@@ -2344,55 +2312,6 @@ element.<!-- HTML Standard parsing -->
 
 </p></div>
 
-<div class=section>
-<h4 id=the-repetition-templates><span class=secno>4.13.6 </span>The repetition templates</h4>
-
-<p>If the <code id=attr-repeat title=attr-repeat>repeat</code>
-attribute <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> of an <span>element</span> is present,
-its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a>
-or equal to <code title="">template</code>.  An element is a <dfn id=concept-repetition-template title=concept-repetition-template>repetition template</dfn> if either
-the element is an <a href=#html-elements title="HTML elements">HTML element</a> and
-the element has the <code title=attr-repeat>repeat</code> attribute in
-no namespace whose value is equal to <code title="">template</code> or
-the element is not an <a href=#html-elements title="HTML elements">HTML element</a>
-and the element has the <code title=attr-global-repeat>repeat</code>
-attribute in the <a href=#html-namespace>HTML namespace</a> whose value is equal to
-<code title="">template</code>.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#repeat> -->
-
-</p><p>If <code id=attr-repeat-min title=attr-repeat-min>repeat-min</code>, <code id=attr-repeat-max title=attr-repeat-max>repeat-max</code>, or <code id=attr-repeat-start title=attr-repeat-start>repeat-start</code> attribute <cite class="bibref
-informative">[<a href=#ref-WF2>WF2</a>]</cite> of an
-<span>element</span> is present, its value <em class=rfc2119>MUST</em>
-be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.  These attributes <em class=rfc2119>MUST NOT</em> be specified unless the element is a <a href=#concept-repetition-template title=concept-repetition-template>repetition template</a>.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#the-repeat-min>,
-<http://www.whatwg.org/specs/web-forms/current-work/#repeat-start> -->
-
-</p><p>The <code title="">type</code> attribute of <code>input</code> or
-<code>button</code> element <em class=rfc2119>MUST</em> be treated as
-if there are additional keywords <code id=attr-input-type-add-keyword title=attr-input-type-add-keyword>add</code>, <code id=attr-input-type-remove-keyword title=attr-input-type-remove-keyword>remove</code>, <code id=attr-input-type-move-up-keyword title=attr-input-type-move-up-keyword>move-up</code>, and <code id=attr-input-type-move-down-keyword title=attr-input-type-move-down-keyword>move-down</code> <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite>, which
-are mapped to <span title=attr-input-type-add>Add Button</span>, <span title=attr-input-type-remove>Remove Button</span>, <span title=attr-input-type-move-up>Move-up Button</span>, and <span title=attr-input-type-move-down>Move-down Button</span> states,
-respectively.  These keywords are non‐conforming.  For the purpose of
-conformance checking, unless otherwise stated, these states <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-reset>Reset Button</span> state.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#new-form> -->
-
-</p><p>If the <code id=attr-repeat-template title=attr-repeat-template>repeat-template</code> attribute of an element
-or the <code id=attr-input-template title=attr-input-template>template</code> attribute of <code>input</code>
-or <code>button</code> element <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of a <a href=#concept-repetition-template title=concept-repetition-template>repetition template</a>.  The
-<code title=attr-input-template>template</code> attribute of
-<code>input</code> or <code>button</code> element applies only to
-elements whose <code title="">type</code> attribute is in the <span title=attr-input-type-text>Add Button</span> state.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#repeat-template>,
-<http://www.whatwg.org/specs/web-forms/current-work/#template>; the
-referenced element must be a repetition template. -->
-
-</p><p>Attributes <code id=attr-global-repeat title=attr-global-repeat>repeat</code>, <code id=attr-global-repeat-min title=attr-global-repeat-min>repeat-min</code>, <code id=attr-global-repeat-max title=attr-global-repeat-max>repeat-max</code>, <code id=attr-global-repeat-start title=attr-global-repeat-start>repeat-start</code>, and <code id=attr-global-repeat-template title=attr-global-repeat-template>repeat-template</code> in the
-<a href=#html-namespace>HTML namespace</a> <cite class="bibref informative">[<a href=#ref-WF2>WF2</a>]</cite> <em class=rfc2119>MUST</em> be treated
-as equivalent to attributes in no namespace specified for an <a href=#html-elements title="HTML elements">HTML element</a> for the purpose of the
-conformance checking.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#definitions> -->
-
-</p></div>
-
 </div>
 
 </div>
@@ -2401,9 +2320,8 @@ conformance checking.<!--
 <h2 id=elements-and-attributes-not-convered-by-this-specification><span class=secno>5 </span>Elements and attributes not convered by this specification</h2>
 
 <p>Elements and attributes defined by the following specifications are
-not included in this specification, because they have not been
-implemented at all (or had only been implemented in historical or
-experimental user agents) and are not useful anymore:
+not included in this specification, because they have not been (or are
+no longer) implemented such that validation does not help anyone:
 
 </p><ul>
 
@@ -2412,12 +2330,14 @@ HTML+ <cite class="bibref informative">[<a href=#ref-HTMLPLUS>HTMLPLUS</a>]</cit
 
 </li><li>RFC 2659 <cite class="bibref informative">[<a href=#ref-RFC2659>RFC2659</a>]</cite>
 
-</li><li>XHTML 2.0 which defines elements and attributes in the <a href=#html-namespace>HTML
-namespace</a> <cite class="bibref informative">[<a href=#ref-XHTML2ED>XHTML2ED</a>]</cite>
+</li><li>XHTML 2.0 which defines elements and attributes in namespaces
+<code title="">http://www.w3.org/2002/06/xhtml2</code>, <code title="">http://www.w3.org/2002/06/xhtml2/</code>, or the <a href=#html-namespace>HTML
+namespace</a> <cite class="bibref informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite> <cite class="bibref
+informative">[<a href=#ref-XHTML2ED>XHTML2ED</a>]</cite>
 
 </li><li>XHTML Access Module <cite class="bibref informative">[<a href=#ref-ACCESS>ACCESS</a>]</cite>
 
-</li><li>Any other early informal proposals
+</li><li>Any other informal proposals
 
 </li></ul>
 
@@ -2429,25 +2349,25 @@ specification:
 <li>Proprietary elements and attributes for WebTV, WebExplorer, mosaic
 variants, or authoring tools
 
-</li><li>Attributes of the <code>multicol</code> element
+</li><li>Proprietary elements and attributes for earlier generations of
+Japanese mobile phones (wihch are no longer in use).
 
-</li><li>The <code>ilayer</code> element
+</li><li>Attributes of the <code>multicol</code> element.
 
-</li><li>Elements and attributes that had been defined in earlier Web
-Applications 1.0 specification but then dropped, including but not
-limited to: attributes <code title=attr-irrlevant>irrelevant</code>,
-<code title=attr-active>active</code>, <code title=attr-command-default>default</code>, <code title=attr-menu-autosubmit>autosubmit</code>, the <code title="">cite</code> attribute of some sectioning elements, elements
+</li><li>The <code>ilayer</code> element.
+
+</li><li>Elements and attributes that had been defined in earlier revisions
+of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
+then dropped, including but not limited to: attributes <code title=attr-irrlevant>irrelevant</code>, <code title=attr-active>active</code>, <code title=attr-command-default>default</code>, <code title=attr-menu-autosubmit>autosubmit</code>, the <code title="">cite</code> attribute of some sectioning elements, elements
 <code>eventsource</code>, <code>dialog</code>, <code>sidebar</code>,
-and <code>bb</code>, and the data template feature.
+and <code>bb</code>, and repetition template and data template
+features.
+
+</li><li>Attributes in the <a href=#html-namespace>HTML namespace</a>.
 
 </li></ul>
 
-<p>Elements and attributes in the <code title="">http://www.w3.org/2002/06</code> and <code title="">http://www.w3.org/2002/06/</code> <cite class="bibref
-informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite>
-namespaces are outside of the scope of this specification (but there
-is <a href=#xhtml2-role>an exception</a>).
-
-</p><p>Attributes <code title=attr-sdaform>sdaform</code>, <code title=attr-sdapref>sdapref</code>, and <code title=attr-sdasuff>sdasuff</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> <cite class="bibref
+<p>Attributes <code title=attr-sdaform>sdaform</code>, <code title=attr-sdapref>sdapref</code>, and <code title=attr-sdasuff>sdasuff</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> <cite class="bibref
 informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite> are not real
 attributes and therefore not included in this specification.
 
@@ -2461,16 +2381,10 @@ informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is not an
 --> The <code title=attr-runat>runat</code> attribute is not an
 attribute of the HTML language.
 
-</p><p>The <a href=http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx><code>IMPORT</code>
-processing instruction</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is not supported by this
-specification, as processing instructions cannot be encoded in the
-HTML syntax according to HTML Standard.
-
-</p><p>The <a href=http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx><code>xmlns:<var>*</var></code>
-attributes</a> for Internet Explorer's namespace mechanism <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> are
-not supported by this specification.  Likewise, namespaced elements
-are not supported.  They do not fit the standard namespacing
-architecture of HTML, XML, and DOM.
+</p><p>Conditional comments, the <a href=http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx><code>IMPORT</code>
+processing instruction</a>, and <a href=http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx>namespace
+syntax <cite class="bibref informative">[</cite></a><a href=#ref-MSDN>MSDN</a>] are not included, as the HTML syntax
+is incompatible with them.
 
 </p></div>
 
@@ -2481,43 +2395,7 @@ architecture of HTML, XML, and DOM.
 
 </p><dl>
 
-<dt><a href=#namespaced-global-attr>Attributes in the <span>HTML
-namespace</span></a>
-
-</dt><dd><a href=#attr-global-about><code>about</code></a>
-</dd><dd><a href=#attr-global-class><code>class</code></a>
-</dd><dd><a href=#attr-global-content><code>content</code></a>
-</dd><dd><a href=#attr-global-datatype><code>datatype</code></a>
-</dd><dd><a href=#attr-global-dir><code>dir</code></a>
-</dd><dd><a href=#attr-global-id><code>id</code></a>
-</dd><dd><a href=#attr-global-onclick><code>onclick</code></a>
-</dd><dd><a href=#attr-global-ondblclick><code>ondblclick</code></a>
-</dd><dd><a href=#attr-global-onkeydown><code>onkeydown</code></a>
-</dd><dd><a href=#attr-global-onkeypress><code>onkeypress</code></a>
-</dd><dd><a href=#attr-global-onkeyup><code>onkeyup</code></a>
-</dd><dd><a href=#attr-global-onmousedown><code>onmousedown</code></a>
-</dd><dd><a href=#attr-global-onmousemove><code>onmousemove</code></a>
-</dd><dd><a href=#attr-global-onmouseout><code>onmouseout</code></a>
-</dd><dd><a href=#attr-global-onmouseover><code>onmouseover</code></a>
-</dd><dd><a href=#attr-global-onmouseup><code>onmouseup</code></a>
-</dd><dd><a href=#attr-global-property><code>property</code></a>
-</dd><dd><a href=#attr-global-rel><code>rel</code></a>
-</dd><dd><a href=#attr-global-repeat><code>repeat</code></a>
-</dd><dd><a href=#attr-global-repeat-max><code>repeat-max</code></a>
-</dd><dd><a href=#attr-global-repeat-min><code>repeat-min</code></a>
-</dd><dd><a href=#attr-global-repeat-start><code>repeat-start</code></a>
-</dd><dd><a href=#attr-global-repeat-template><code>repeat-template</code></a>
-</dd><dd><a href=#attr-global-resource><code>resource</code></a>
-</dd><dd><a href=#attr-global-rev><code>rev</code></a>
-</dd><dd><a href=#attr-global-role><code>role</code></a>
-</dd><dd><a href=#attr-global-title><code>title</code></a>
-</dd><dd><a href=#attr-global-typeof><code>typeof</code></a>
-
-</dd><dt>Attribute in the namespace <code>http://www.w3.org/2002/06/xhtml2/</code>
-
-</dt><dd><a href=#attr-global-role><code>role</code></a>
-
-</dd><dt>Common attributes of <a href=#html-elements>HTML elements</a>
+<dt>Common attributes of <a href=#html-elements>HTML elements</a>
 
 </dt><dd><a href=#attr-about><code>about</code></a>
 </dd><dd><a href=#attr-atomicselection><code>atomicselection</code></a>
@@ -2575,11 +2453,6 @@ namespace</span></a>
 </dd><dd><a href=#handler-ontouchstart><code>ontouchstart</code></a>
 </dd><dd><a href=#attr-property><code>property</code></a>
 </dd><dd><a href=#attr-rel><code>rel</code></a>
-</dd><dd><a href=#attr-repeat><code>repeat</code></a>
-</dd><dd><a href=#attr-repeat-max><code>repeat-max</code></a>
-</dd><dd><a href=#attr-repeat-min><code>repeat-min</code></a>
-</dd><dd><a href=#attr-repeat-start><code>repeat-start</code></a>
-</dd><dd><a href=#attr-repeat-template><code>repeat-template</code></a>
 </dd><dd><a href=#attr-resource><code>resource</code></a>
 </dd><dd><a href=#attr-rev><code>rev</code></a>
 </dd><dd><a href=#attr-typeof><code>typeof</code></a>
@@ -2709,7 +2582,6 @@ namespace</span></a>
 </dd><dd><a href=#attr-fs-method><code>method</code></a>
 </dd><dd><a href=#attr-fs-replace><code>replace</code></a>
 </dd><dd><a href=#attr-fs-target><code>target</code></a>
-</dd><dd><a href=#attr-input-template><code>template</code></a>
 
 </dd><dt>The <code>caption</code> element
 
