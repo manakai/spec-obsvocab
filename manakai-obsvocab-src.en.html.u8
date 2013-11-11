@@ -256,9 +256,11 @@ define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#url"><dfn>URL</dfn></a>,
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-url"><dfn>valid URL</dfn></a>,
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-url-potentially-surrounded-by-spaces"><dfn>valid URL potentially surrounded by spaces</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-empty-url"><dfn>valid non-empty URL</dfn></a>,
+
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-empty-url-potentially-surrounded-by-spaces"><dfn>valid non-empty URL potentially surrounded by spaces</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#absolute-url"><dfn>absolute URL</dfn></a>,
 
@@ -421,8 +423,9 @@ parsing -->
 <p>If the <code title=attr-bgsound-src id=attr-bgsound-src>src</code>
 attribute of a <code>bgsound</code> element <cite class="bibref
 informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is present, its
-value <em class=rfc2119>MUST</em> be a <span>valid non-empty
-URL</span>.  The <code title=attr-bgsound-src>src</code> attribute <em
+value <em class=rfc2119>MUST</em> be a <span>valid non-empty URL
+potentially surrounded by spaces</span>.  The <code
+title=attr-bgsound-src>src</code> attribute <em
 class=rfc2119>MUST</em> be present.<!--
 <http://msdn.microsoft.com/en-us/library/ms534641%28VS.85%29.aspx> -->
 
@@ -452,11 +455,11 @@ title>0</code>.<!-- Softbank 3.10.2. -->
 <code title=attr-resource id=attr-resource>resource</code> <cite
 class="bibref informative">[<a href="#ref-RDFA">RDFA</a>]</cite> is
 present for an <span title="HTML elements">HTML element</span>, its
-value <em class=rfc2119>MUST</em> be either a <span>valid URL</span>
-or a string which begin with a U+005B <code class=charname>LEFT SQUARE
-BRACKET</code> character ([) and ends by a U+005D <code
-class=charname>RIGHT SQUARE BRACKET</code> character (]).<!-- RDFa;
-URIorSafeCURIE -->
+value <em class=rfc2119>MUST</em> be either a <span>valid URL
+potentially surrounded by spaces</span> or a string which begin with a
+U+005B <code class=charname>LEFT SQUARE BRACKET</code> character ([)
+and ends by a U+005D <code class=charname>RIGHT SQUARE BRACKET</code>
+character (]).<!-- RDFa; URIorSafeCURIE -->
 
 <p>Unless otherwise specified, attributes <code title=attr-content
 id=attr-content>content</code>, <code title=attr-datatype
@@ -534,9 +537,11 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 <http://web.archive.org/web/20030805031411/devedge.netscape.com/library/manuals/1998/htmlguide/tags9.html#1770509>,
 <http://msdn.microsoft.com/en-us/library/ms533583%28VS.85%29.aspx> -->
 
-<p>If the <code title=attr-tdth-abbr id=attr-tdth-abbr>abbr</code>
-attribute of a <code>td</code> or <code>th</code> element is present,
-its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
+<p>If the <code title=attr-tdth-abbr id=attr-tdth-abbr>scope</code>
+attribute of a <code>td</code> element is present, its value <em
+class=rfc2119>MUST</em> be a syntactically valid value of the <code
+title=attr-th-abbr>abbr</code> attribute of the <code>th</code>
+element.
 
 <p>If the <code title=attr-tdth-axis id=attr-tdth-axis>axis</code>
 attribute of a <code>td</code> or <code>th</code> element is present,
@@ -804,8 +809,9 @@ and <body scroll> should not be allowed in no quirks mode -->
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
 <code>td</code>, and <code>th</code> elements' <code
 title=attr-background id=attr-background>background</code> attribute
-values <em class=rfc2119>MUST</em> be <span title="valid non-empty
-URL">valid non-empty URLs</span>.<!-- HTML Standard rendering -->
+values <em class=rfc2119>MUST</em> be <span title="valid non-empty URL
+potentially surrounded by spaces">valid non-empty URLs potentially
+surrounded by spaces</span>.<!-- HTML Standard rendering -->
 
 <p>A <dfn>valid legacy color value</dfn> is either a U+0023 <code
 class=charname>NUMBER SIGN</code> character (#) followed by six (6)
@@ -1144,8 +1150,8 @@ reference</span>
 <p>If the <code title=attr-a-src id=attr-a-src>src</code> attribute of
 the <code>a</code> element <cite class="bibref informative">[<a
 href="#ref-SOFTBANK">SOFTBANK</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
-Softbank 3.9.1. -->
+class=rfc2119>MUST</em> be a <span>valid non-empty URL potentially
+surrounded by spaces</span>.<!-- Softbank 3.9.1. -->
 
 <p>If the <code title=attr-a-cti id=attr-a-cti>cti</code> attribute of
 the <code>a</code> element <cite class="bibref informative">[<a
@@ -1230,9 +1236,9 @@ an <code>object</code> element.<!--
 title=attr-a-ib id=attr-a-ib>ib</code> attribute of the <code>a</code>
 element <cite class="bibref informative">[<a
 href="#ref-IMODE">IMODE</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid URL</span>.  The <code
-title=attr-hyperlink-href>href</code> attribute <em
-class=rfc2119>MUST</em> be specified if <code
+class=rfc2119>MUST</em> be a <span>valid URL potentially surrounded by
+spaces</span>.  The <code title=attr-hyperlink-href>href</code>
+attribute <em class=rfc2119>MUST</em> be specified if <code
 title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code>
 attribute is specified.  If the <code
 title=attr-hyperlink-target>target</code> attribute is specified,
@@ -1421,7 +1427,8 @@ HTML5 definition -->
 <p>If the <code title=attr-longdesc id=attr-longdesc>longdesc</code>
 attribute of the <code>frame</code>, <code>iframe</code>, or
 <code>img</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid URL</span>.<!-- HTML4 -->
+class=rfc2119>MUST</em> be a <span>valid URL potentially surrounded by
+spaces</span>.<!-- HTML4 -->
 
 <div class=section>
 <h5>Image sources</h5>
@@ -1435,8 +1442,9 @@ href="#ref-MSDN">MSDN</a>]</cite>, or <code title=attr-vrml
 id=attr-vrml>vrml</code> <cite class="bibref informative">[<a
 href="#ref-MSDN">MSDN</a>]</cite> attribute of the <code>img</code> or
 <code>input</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.  The
-<code title=attr-dynsrc>dynsrc</code>, <code
+class=rfc2119>MUST</em> be a <span>valid non-empty URL potentially
+surrounded by spaces</span>.  The <code
+title=attr-dynsrc>dynsrc</code>, <code
 title=attr-lowsrc>lowsrc</code>, or <code title=attr-vrml>vrml</code>
 attribute of the <code>input</code> element applies only to
 <code>input</code> elements whose <code
@@ -1454,8 +1462,8 @@ title=attr-input-type-image>Image Button</span> state.<!-- lowsrc
 id=attr-img-oversrc>oversrc</code> <cite class="bibref
 informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite> attribute of
 the <code>img</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
-oversrc
+class=rfc2119>MUST</em> be a <span>valid non-empty URL potentially
+surrounded by spaces</span>.<!-- oversrc
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-oversrc>
 -->
 
@@ -1556,8 +1564,8 @@ id=attr-embed-pluginspage>pluginspage</code>, or <code
 title=attr-embed-pluginurl id=attr-embed-pluginurl>pluginurl</code>
 attribute of the <code>embed</code> element <cite class="bibref
 informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present,
-its value <em class=rfc2119>MUST</em> be a <span>valid URL</span>.<!--
-pluginpage/pluginspage/pluginurl
+its value <em class=rfc2119>MUST</em> be a <span>valid URL potentially
+surrounded by spaces</span>.<!-- pluginpage/pluginspage/pluginurl
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-pluginpage>,
 pluginspage/pluginurl
 <http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1552022>,
@@ -1619,16 +1627,17 @@ URL</i>.<!-- HTML4 -->
 <p>If the <code title=attr-object-classid
 id=attr-object-classid>classid</code> attribute of an
 <code>object</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span> and <em
-class=rfc2119>MUST</em> be an <span>absolute URL</span>.<!-- HTML
-Standard UA reqs and HTML4 def -->
+class=rfc2119>MUST</em> be a <span>valid non-empty URL potentially
+surrounded by spaces</span> and <em class=rfc2119>MUST</em> be an
+<span>absolute URL</span>.<!-- HTML Standard UA reqs and HTML4 def -->
 
 <p>If the <code title=attr-objects-code
 id=attr-objects-code>code</code> attribute of an <code>applet</code>,
 <code>embed</code> <cite class="bibref informative">[<a
 href="#ref-SAFARI">SAFARI</a>]</cite>, or <code>object</code> element
 is present, its <em class=rfc2119>MUST</em> be a <span>valid non-empty
-URL</span>.<!-- HTML Standard obsolete,
+URL potentially surrounded by spaces</span>.<!-- HTML Standard
+obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533575%28VS.85%29.aspx>,
 embed
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/HTMLTags.html#//apple_ref/doc/uid/30001262-embed>
@@ -1637,8 +1646,8 @@ embed
 <p>If the <code title=attr-applet-object
 id=attr-applet-object>object</code> attribute of an
 <code>applet</code> element is present, its <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
-HTML4 -->
+class=rfc2119>MUST</em> be a <span>valid non-empty URL potentially
+surrounded by spaces</span>.<!-- HTML4 -->
 
 <p>For an <code>applet</code> element at least one of <code
 title=attr-applet-code>code</code> and <code
@@ -1648,8 +1657,8 @@ class=rfc2119>MUST</em> be specified.<!-- HTML4 -->
 <p>If the <code title=attr-objects-codebase
 id=attr-objects-codebase>codebase</code> attribute of an
 <code>applet</code> or <code>object</code> element is present, its <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
-HTML4 -->
+class=rfc2119>MUST</em> be a <span>valid non-empty URL potentially
+surrounded by spaces</span>.<!-- HTML4 -->
 
 <p>If the <code title=attr-object-codetype
 id=attr-object-codetype>codetype</code> attribute of an
@@ -1864,7 +1873,8 @@ attribute of an element <code>a</code>, <code>applet</code>,
 <code>object</code>, <code>option</code>, <code>select</code>,
 <code>span</code>, <code>table</code>, or <code>textarea</code> is
 present, its value <em class=rfc2119>MUST</em> be a <span>valid
-non-empty URL</span>.<!-- HTML4, HTML Standard obsolete,
+non-empty URL potentially surrounded by spaces</span>.<!-- HTML4, HTML
+Standard obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533709%28VS.85%29.aspx> -->
 
 <p>If the <code title=attr-datafld id=attr-datafld>datafld</code>
@@ -1974,8 +1984,9 @@ rendering -->
 
 <p>If the <code title=attr-frame-src id=attr-frame-src>src</code>
 attribute of a <code>frame</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
-HTML Standard obsolete; not required to align with <iframe src>. -->
+class=rfc2119>MUST</em> be a <span>valid non-empty URL potentially
+surrounded by spaces</span>.<!-- HTML Standard obsolete; not required
+to align with <iframe src>. -->
 
 <p>If the <code title=attr-frame-name id=attr-frame-name>name</code>
 attribute of a <code>frame</code> element is present, its value <em
@@ -2091,7 +2102,8 @@ string.<!-- HTML4,
 id=attr-script-archive>archive</code> attribute of a
 <code>script</code> element <cite class="bibref informative">[<a
 href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
+class=rfc2119>MUST</em> be a <span>valid non-empty URL potentially
+surrounded by spaces</span>.<!--
 <http://web.archive.org/web/20030415223352/http://devedge.netscape.com/library/manuals/2000/javascript/1.3/guide/sec.html>
 -->
 
