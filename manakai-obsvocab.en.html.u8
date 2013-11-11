@@ -15,7 +15,7 @@ Obsolete HTML Elements and Attributes</h1>
 <dl class=versions-uri>
 <dt>Latest Version</dt>
   <dd><code class=URI>&lt;<a href=http://suika.suikawiki.org/www/markup/html/exts/manakai-obsvocab>http://suika.suikawiki.org/www/markup/html/exts/manakai-obsvocab</a>&gt;</code></dd>
-<dt>Version History</dt>
+<dt id=version-history>Version History</dt>
   <dd><code class=URI>&lt;<a href=http://suika.suikawiki.org/gate/git/wi/markup/htmlexts.git/history/HEAD:/manakai-obsvocab-src.en.html.u8>http://suika.suikawiki.org/gate/git/wi/markup/htmlexts.git/history/HEAD:/manakai-obsvocab-src.en.html.u8</a>&gt;</code></dd>
 <dt id=author>Author</dt>
   <dd><a href=http://suika.suikawiki.org/~wakaba/who? lang=ja rel=author>Wakaba</a>
@@ -76,7 +76,8 @@ version of the document is the only normative version.</p>
 <ol class=toc>
  <li><a href=#introduction><span class=secno>1 </span>Introduction</a>
   <ol>
-   <li><a href=#how-requirements-for-non‐conforming-elements-and-attributes-are-defined><span class=secno>1.1 </span>How requirements for non‐conforming elements and attributes are defined</a></li></ol></li>
+   <li><a href=#how-requirements-for-non‐conforming-elements-and-attributes-are-defined><span class=secno>1.1 </span>How requirements for non‐conforming elements and attributes are defined</a></li>
+   <li><a href=#stability-of-this-document><span class=secno>1.2 </span>Stability of this document</a></li></ol></li>
  <li><a href=#common-infrastructure><span class=secno>2 </span>Common infrastructure</a>
   <ol>
    <li><a href=#terminology><span class=secno>2.1 </span>Terminology</a></li>
@@ -190,7 +191,7 @@ does not define or describe any kind of standard.
 </p><div class=section>
 <h3 id=how-requirements-for-non‐conforming-elements-and-attributes-are-defined><span class=secno>1.1 </span>How requirements for non‐conforming elements and attributes are defined</h3>
 
-<p class=section-info><em>This section is non‐normative.</em>
+<p class=section-info><em>This section is non-normative.</em>
 
 </p><p>As a general rule, requirements for non‐conforming elements and
 attributes are derived by the following rules:
@@ -233,6 +234,35 @@ attribute value has to be a <a href=#valid-dimension-value>valid dimension value
 HTML Standard rendering -->
 
 </p></div>
+
+<div class=section>
+<h3 id=stability-of-this-document><span class=secno>1.2 </span>Stability of this document</h3>
+
+<p class=section-info><em>This section is non-normative.</em>
+
+</p><p>This document is a Living Standard.  That is, requirements in this
+document could be modified at any time.  Earlier revisions of this
+document is available from the <a href=#version-history>version
+history</a> page.
+
+</p><p>Requirements in this document are modified, sometimes incompatibly,
+for several reasons, including but not limited to:
+
+  </p><ul>
+
+  <li>Add new proprietary features.
+
+  </li><li>Delete features that are no longer supported by any major
+  browser.
+
+  </li><li>Delete features that are re-added to the standard (with same or
+  different semantics) so it is now conforming.
+
+  </li><li>Delete features that are rather confusing for validator users.
+
+  </li></ul>
+
+</div>
 
 </div>
 
@@ -344,16 +374,6 @@ intended to be performant.)
 unconstrained inputs, e.g. to prevent denial of service attacks, to
 guard against running out of memory, or to work around
 platform-specific limitations.
-
-</p><p>The language in this specification assumes that the user agent
-expands all entity references, and therefore does not include entity
-reference nodes in the DOM. If user agents do include entity reference
-nodes in the DOM, then user agents <em class=rfc2119>MUST</em> handle
-them as if they were fully expanded when implementing this
-specification.<!-- Entity references to unknown entities <em
-class=rfc2119>MUST</em> be treated as if they contained just an empty
-text node for the purposes of the algorithms defined in this
-specification. -->
 
 </p></div>
 
@@ -2088,17 +2108,24 @@ attribute of the HTML language.
 </p><p>Conditional comments, the <a href=http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx><code>IMPORT</code>
 processing instruction</a>, <code>comment</code> and <code>xml</code>
 elements, <a href=http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx>namespace
-syntax, VML, and HTML+TIME <cite class="bibref informative">[</cite></a><a href=#ref-MSDN>MSDN</a>] are not included, as the HTML syntax
+syntax</a>, VML, and HTML+TIME <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> are not included, as the HTML syntax
 is incompatible with them.
 
 </p></div>
 
 <div class=section>
+<style scoped="">
+  .index-list {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+</style>
 <h2 class=no-num id=index>Index</h2>
 
 <p class=section-info><em>This section is non‐normative.</em>
 
-</p><dl>
+</p><dl class=index-list>
 
 <dt>Common attributes of <a href=#html-elements>HTML elements</a>
 
