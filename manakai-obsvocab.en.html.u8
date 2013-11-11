@@ -932,13 +932,6 @@ blink
 <http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1595094>
 -->
 
-</p><p>The <a href=#content-model>content model</a> of the <code id=comment>comment</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is <i>text</i>.<!--
-<http://msdn.microsoft.com/en-us/library/ms535229%28VS.85%29.aspx> -->
-
-<!-- <comment data>
-<http://msdn.microsoft.com/en-us/library/ms533711%28VS.85%29.aspx> is
-not a real attribute. -->
-
 </p><div class=section>
 <h4 id=ruby><span class=secno>4.8.1 </span>Ruby</h4>
 
@@ -982,21 +975,6 @@ ONE</code> (1) to U+0037 <code class=charname>DIGIT SEVEN</code>
 <http://www.whatwg.org/specs/web-apps/current-work/complete.html#fonts-and-colors>,
 HTML4 -->
 
-</p><p>If the <code id=attr-font-point-size title=attr-font-point-size>point-size</code> attribute <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite>
-of a <code>font</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
-that represents a number greater than zero (0).<!--
-<http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1288958>,
-<font pointsize>
-<http://html5.org/tools/web-apps-tracker?from=4024&to=4025> -->
-
-</p><p>If the <code id=attr-font-weight title=attr-font-weight>weight</code> attribute <cite class="bibref
-informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> of a
-<code>font</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
-that represents a number <code title="">100</code>, <code title="">200</code>, <code title="">300</code>, <code title="">400</code>,
-<code title="">500</code>, <code title="">600</code>, <code title="">700</code>, <code title="">800</code>, or <code title="">900</code>.<!--
-<http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1748506>
--->
-
 </p></div>
 
 </div>
@@ -1014,20 +992,7 @@ reference</span>
 </p><div class=section>
 <h4 id=link-destinations><span class=secno>4.9.1 </span>Link destinations</h4>
 
-<p>If the <code id=attr-hyperlink-urn title=attr-hyperlink-urn>urn</code> attribute of an <code>link</code>
-<cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
-present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url>valid
-URL</a>.<!-- HTML 2.0 -->
-
-</p><p>If the <code id=attr-link-src title=attr-link-src>src</code>
-attribute of the <code>link</code> element <cite class="bibref
-informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present,
-its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty
-URL</a>.<!--
-<http://web.archive.org/web/20030610040238/devedge.netscape.com/library/manuals/1998/htmlguide/tags3.html#1808466>
--->
-
-</p><p>If the <code id=attr-a-src title=attr-a-src>src</code> attribute of
+<p>If the <code id=attr-a-src title=attr-a-src>src</code> attribute of
 the <code>a</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
 Softbank 3.9.1. -->
 
@@ -1133,11 +1098,6 @@ attribute</a>.<!-- HTML4 -->
 <code>a</code> or <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-script-charset>charset</code> attribute value for a
 <code>script</code> element.<!-- HTML4 -->
 
-</p><p>If the <code id=attr-hyperlink-methods title=attr-hyperlink-methods>methods</code> attribute of an
-<code>link</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> or <code>a</code> element is
-present, its value <em class=rfc2119>MAY</em> be any string.<!-- It is
-a "space-separeted values" according to HTML2 -->
-
 </p></div>
 
 <div class=section>
@@ -1202,10 +1162,6 @@ attribute and/or the <code id=attr-a-shape title=attr-a-shape>shape</code> attri
 present, their values, and their presence themselves, <em class=rfc2119>MUST</em> be valid if they were specified for an
 <code>area</code> element with appropriate <code>href</code> and
 <code>alt</code> attributes specified.<!-- HTML4, HTML5 obsolete -->
-
-</p><p>If the <code id=attr-link-target title=attr-link-target>target</code> attribute of a <code>link</code>
-element is present, its value <em class=rfc2119>MUST</em> be a
-<a href=#valid-browsing-context-name-or-keyword>valid browsing context name or keyword</a>.<!-- HTML4 -->
 
 </p></div>
 
@@ -2132,7 +2088,8 @@ informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is not an
 attribute of the HTML language.
 
 </p><p>Conditional comments, the <a href=http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx><code>IMPORT</code>
-processing instruction</a>, the <code>xml</code> element, <a href=http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx>namespace
+processing instruction</a>, <code>comment</code> and <code>xml</code>
+elements, <a href=http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx>namespace
 syntax, VML, and HTML+TIME <cite class="bibref informative">[</cite></a><a href=#ref-MSDN>MSDN</a>] are not included, as the HTML syntax
 is incompatible with them.
 
@@ -2230,12 +2187,10 @@ is incompatible with them.
 </dd><dd><a href=#attr-a-loop><code>loop</code></a>
 </dd><dd><a href=#attr-measure><code>measure</code></a>
 </dd><dd><a href=#attr-a-memoryname><code>memoryname</code></a>
-</dd><dd><a href=#attr-hyperlink-methods><code>methods</code></a>
 </dd><dd><a href=#attr-a-shape><code>shape</code></a>
 </dd><dd><a href=#attr-soundstart><code>soundstart</code></a>
 </dd><dd><a href=#attr-a-src><code>src</code></a>
 </dd><dd><a href=#attr-a-telbook><code>telbook</code></a>
-</dd><dd><a href=#attr-hyperlink-urn><code>urn</code></a>
 </dd><dd><a href=#attr-utn><code>utn</code></a>
 </dd><dd><a href=#attr-viblength><code>viblength</code></a>
 </dd><dd><a href=#attr-a-vibration><code>vibration</code></a>
@@ -2405,8 +2360,6 @@ is incompatible with them.
 </dt><dd><a href=#attr-font-color><code>color</code></a>
 </dd><dd><a href=#attr-font-face><code>face</code></a>
 </dd><dd><a href=#attr-font-size><code>size</code></a>
-</dd><dd><a href=#attr-font-point-size><code>point-size</code></a>
-</dd><dd><a href=#attr-font-weight><code>weight</code></a>
 
 </dd><dt>The <code>form</code> element
 
@@ -2613,10 +2566,6 @@ is incompatible with them.
 </dd><dt>The <code>link</code> element
 
 </dt><dd><a href=#attr-hyperlink-charset><code>charset</code></a>
-</dd><dd><a href=#attr-hyperlink-methods><code>methods</code></a>
-</dd><dd><a href=#attr-link-src><code>src</code></a>
-</dd><dd><a href=#attr-link-target><code>target</code></a>
-</dd><dd><a href=#attr-hyperlink-urn><code>urn</code></a>
 
 </dd><dt>The <a href=#listing><code>listing</code></a> element
 

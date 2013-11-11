@@ -1059,15 +1059,6 @@ blink
 <http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1595094>
 -->
 
-<p>The <span>content model</span> of the <code
-id=comment>comment</code> element <cite class="bibref informative">[<a
-href="#ref-MSDN">MSDN</a>]</cite> is <i>text</i>.<!--
-<http://msdn.microsoft.com/en-us/library/ms535229%28VS.85%29.aspx> -->
-
-<!-- <comment data>
-<http://msdn.microsoft.com/en-us/library/ms533711%28VS.85%29.aspx> is
-not a real attribute. -->
-
 <div class=section>
 <h4>Ruby</h4>
 
@@ -1114,29 +1105,6 @@ ONE</code> (1) to U+0037 <code class=charname>DIGIT SEVEN</code>
 <http://www.whatwg.org/specs/web-apps/current-work/complete.html#fonts-and-colors>,
 HTML4 -->
 
-<p>If the <code title=attr-font-point-size
-id=attr-font-point-size>point-size</code> attribute <cite
-class="bibref informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite>
-of a <code>font</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>
-that represents a number greater than zero (0).<!--
-<http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1288958>,
-<font pointsize>
-<http://html5.org/tools/web-apps-tracker?from=4024&to=4025> -->
-
-<p>If the <code title=attr-font-weight
-id=attr-font-weight>weight</code> attribute <cite class="bibref
-informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> of a
-<code>font</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>
-that represents a number <code title>100</code>, <code
-title>200</code>, <code title>300</code>, <code title>400</code>,
-<code title>500</code>, <code title>600</code>, <code
-title>700</code>, <code title>800</code>, or <code
-title>900</code>.<!--
-<http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1748506>
--->
-
 </div>
 
 </div>
@@ -1155,21 +1123,6 @@ reference</span>
 
 <div class=section>
 <h4>Link destinations</h4>
-
-<p>If the <code title=attr-hyperlink-urn
-id=attr-hyperlink-urn>urn</code> attribute of an <code>link</code>
-<cite class="bibref informative">[<a
-href="#ref-HTML20">HTML20</a>]</cite> or <code>a</code> element is
-present, its value <em class=rfc2119>MUST</em> be a <span>valid
-URL</span>.<!-- HTML 2.0 -->
-
-<p>If the <code title=attr-link-src id=attr-link-src>src</code>
-attribute of the <code>link</code> element <cite class="bibref
-informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is present,
-its value <em class=rfc2119>MUST</em> be a <span>valid non-empty
-URL</span>.<!--
-<http://web.archive.org/web/20030610040238/devedge.netscape.com/library/manuals/1998/htmlguide/tags3.html#1808466>
--->
 
 <p>If the <code title=attr-a-src id=attr-a-src>src</code> attribute of
 the <code>a</code> element <cite class="bibref informative">[<a
@@ -1327,13 +1280,6 @@ class=rfc2119>MUST</em> be syntactically valid <code
 title=attr-script-charset>charset</code> attribute value for a
 <code>script</code> element.<!-- HTML4 -->
 
-<p>If the <code title=attr-hyperlink-methods
-id=attr-hyperlink-methods>methods</code> attribute of an
-<code>link</code> <cite class="bibref informative">[<a
-href="#ref-HTML20">HTML20</a>]</cite> or <code>a</code> element is
-present, its value <em class=rfc2119>MAY</em> be any string.<!-- It is
-a "space-separeted values" according to HTML2 -->
-
 </div>
 
 <div class=section>
@@ -1418,11 +1364,6 @@ present, their values, and their presence themselves, <em
 class=rfc2119>MUST</em> be valid if they were specified for an
 <code>area</code> element with appropriate <code>href</code> and
 <code>alt</code> attributes specified.<!-- HTML4, HTML5 obsolete -->
-
-<p>If the <code title=attr-link-target
-id=attr-link-target>target</code> attribute of a <code>link</code>
-element is present, its value <em class=rfc2119>MUST</em> be a
-<span>valid browsing context name or keyword</span>.<!-- HTML4 -->
 
 </div>
 
@@ -2625,7 +2566,8 @@ attribute of the HTML language.
 
 <p>Conditional comments, the <a
 href="http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx"><code>IMPORT</code>
-processing instruction</a>, the <code>xml</code> element, <a
+processing instruction</a>, <code>comment</code> and <code>xml</code>
+elements, <a
 href="http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx">namespace
 syntax</code>, VML, and HTML+TIME <cite class="bibref informative">[<a
 href="#ref-MSDN">MSDN</a>]</cite> are not included, as the HTML syntax
@@ -2725,12 +2667,10 @@ is incompatible with them.
 <dd><a href="#attr-a-loop"><code>loop</code></a>
 <dd><a href="#attr-measure"><code>measure</code></a>
 <dd><a href="#attr-a-memoryname"><code>memoryname</code></a>
-<dd><a href="#attr-hyperlink-methods"><code>methods</code></a>
 <dd><a href="#attr-a-shape"><code>shape</code></a>
 <dd><a href="#attr-soundstart"><code>soundstart</code></a>
 <dd><a href="#attr-a-src"><code>src</code></a>
 <dd><a href="#attr-a-telbook"><code>telbook</code></a>
-<dd><a href="#attr-hyperlink-urn"><code>urn</code></a>
 <dd><a href="#attr-utn"><code>utn</code></a>
 <dd><a href="#attr-viblength"><code>viblength</code></a>
 <dd><a href="#attr-a-vibration"><code>vibration</code></a>
@@ -2900,8 +2840,6 @@ is incompatible with them.
 <dd><a href="#attr-font-color"><code>color</code></a>
 <dd><a href="#attr-font-face"><code>face</code></a>
 <dd><a href="#attr-font-size"><code>size</code></a>
-<dd><a href="#attr-font-point-size"><code>point-size</code></a>
-<dd><a href="#attr-font-weight"><code>weight</code></a>
 
 <dt>The <code>form</code> element
 
@@ -3109,10 +3047,6 @@ title=attr-input-type>type</code> attribute value
 <dt>The <code>link</code> element
 
 <dd><a href="#attr-hyperlink-charset"><code>charset</code></a>
-<dd><a href="#attr-hyperlink-methods"><code>methods</code></a>
-<dd><a href="#attr-link-src"><code>src</code></a>
-<dd><a href="#attr-link-target"><code>target</code></a>
-<dd><a href="#attr-hyperlink-urn"><code>urn</code></a>
 
 <dt>The <a href="#listing"><code>listing</code></a> element
 
