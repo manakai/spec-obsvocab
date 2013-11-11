@@ -10,19 +10,19 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 9 October 2010</h2>
+<h2 class="no-toc no-num" id=manakai-project-specification-date>manakai Project Specification 11 November 2013</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
-  <dd><code class=URI>&lt;<a href=http://suika.fam.cx/www/markup/html/exts/manakai-obsvocab>http://suika.fam.cx/www/markup/html/exts/manakai-obsvocab</a>&gt;</code></dd>
+  <dd><code class=URI>&lt;<a href=http://suika.suikawiki.org/www/markup/html/exts/manakai-obsvocab>http://suika.suikawiki.org/www/markup/html/exts/manakai-obsvocab</a>&gt;</code></dd>
 <dt>Version History</dt>
-  <dd><code class=URI>&lt;<a href=http://suika.fam.cx/gate/git/wi/markup/htmlexts.git/history/HEAD:/manakai-obsvocab-src.en.html.u8>http://suika.fam.cx/gate/git/wi/markup/htmlexts.git/history/HEAD:/manakai-obsvocab-src.en.html.u8</a>&gt;</code></dd>
+  <dd><code class=URI>&lt;<a href=http://suika.suikawiki.org/gate/git/wi/markup/htmlexts.git/history/HEAD:/manakai-obsvocab-src.en.html.u8>http://suika.suikawiki.org/gate/git/wi/markup/htmlexts.git/history/HEAD:/manakai-obsvocab-src.en.html.u8</a>&gt;</code></dd>
 <dt id=author>Author</dt>
-  <dd><a href=http://suika.fam.cx/~wakaba/who? lang=ja rel=author>Wakaba</a>
-  <code class=mail>&lt;<a href=mailto:w@suika.fam.cx rel=author>w@suika.fam.cx</a>&gt;</code></dd>
+  <dd><a href=http://suika.suikawiki.org/~wakaba/who? lang=ja rel=author>Wakaba</a>
+  <code class=mail>&lt;<a href=mailto:wakaba@suikawiki.org rel=author>wakaba@suikawiki.org</a>&gt;</code></dd>
 </dl>
 
-<p class=copyright lang=en>© 2010 <a href=http://suika.fam.cx/~wakaba/who? rel=author>Wakaba</a>.  You
+<p class=copyright lang=en>© 2010 <a href=http://suika.suikawiki.org/~wakaba/who? rel=author>Wakaba</a>.  You
 are granted a license to use, reproduce and create derivative works of
 this document.
 
@@ -46,7 +46,7 @@ to the conformance checking of documents (or parts of documents) that
 contains obsolete elements and attributes for the purpose of
 comaptibility.
 
-</p><p>This specification is developed as part of the <a href=http://suika.fam.cx/www/manakai-core/doc/web/>manakai</a>
+</p><p>This specification is developed as part of the <a href=http://suika.suikawiki.org/www/manakai-core/doc/web/>manakai</a>
 project.  Although it might be useful to other parties, the only
 intended audiences of this specification are contributors of the
 project.  This specification does not define or describe any kind of
@@ -62,7 +62,7 @@ document at the time of its publication.  Other documents might
 supersede this document.</em></p>
 
 <p>This document is a <!-- working draft --> technical specification,
-produced as part of the <a href=http://suika.fam.cx/www/manakai-core/doc/web/>manakai</a>
+produced as part of the <a href=http://suika.suikawiki.org/www/manakai-core/doc/web/>manakai</a>
 project.  It might be updated, replaced, or obsoleted by other
 documents at any time.<!-- It is inappropriate to cite this document
 as other than <q>work in progress</q>. -->
@@ -200,7 +200,7 @@ is <em>not</em> an <a href=#applicable-specifications title="applicable specific
 specification</a> in the context of the Web Applications 1.0
 specification.
 
-</p><p>This specification is developed as part of the <a href=http://suika.fam.cx/www/manakai-core/doc/web/>manakai</a>
+</p><p>This specification is developed as part of the <a href=http://suika.suikawiki.org/www/manakai-core/doc/web/>manakai</a>
 project.  Although it might be useful to other parties, the only
 intended audiences of this specification are contributors of the
 project.  This specification does not define or describe any kind of
@@ -477,7 +477,7 @@ parsing -->
 </p><p>If the <code id=attr-meta-scheme title=attr-meta-scheme>scheme</code> attribute of the <code>meta</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
 string.<!-- HTML4,
-<http://suika.fam.cx/2007/html/standards#html-meta-scheme> -->
+<http://suika.suikawiki.org/2007/html/standards#html-meta-scheme> -->
 
 </p></div>
 
@@ -679,13 +679,13 @@ element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cit
 <code>div</code> element.<!--
 <http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1703974>;
 Only WebKit has |layer| element support:
-<http://suika.fam.cx/~wakaba/wiki/sw/n/layer> -->
+<http://suika.suikawiki.org/~wakaba/wiki/sw/n/layer> -->
 
 </p><p>The <a href=#content-model>content model</a> of the <code id=nolayer>nolayer</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is same as the
 <code>div</code> element.<!--
 <http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1323433>;
 Only WebKit has |nolayer| element support:
-<http://suika.fam.cx/~wakaba/wiki/sw/n/nolayer> -->
+<http://suika.suikawiki.org/~wakaba/wiki/sw/n/nolayer> -->
 
 </p></div>
 
@@ -1738,7 +1738,7 @@ HTML4, WA1 obsolete,
 attribute</a> with keywords <code title="">text</code>, <code title="">html</code>, and <code title="">localized-text</code>.<!-- HTML4
 reserved (broken), WA1 obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533706%28VS.85%29.aspx>;
-see also <http://suika.fam.cx/%7Ewakaba/wiki/sw/n/dataformatas> -->
+see also <http://suika.suikawiki.org/%7Ewakaba/wiki/sw/n/dataformatas> -->
 
 </p><p>If the <code id=attr-table-datapagesize title=attr-table-datapagesize>datapagesize</code> attribute of a
 <code>table</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
