@@ -142,8 +142,6 @@ define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications"><dfn>applicable specifications</dfn></a>,
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#willful-violation"><dfn>willful violation</dfn></a>,
-
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#ascii-case-insensitive"><dfn>ASCII case-insensitive</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-namespace-0"><dfn>HTML namespace</dfn></a>,
@@ -383,9 +381,9 @@ the value, but it had not been speced anywhere at all. -->
 <div class=section>
 <h4>Metadata elements</h4>
 
-<p>The <span>content model</span> of <code id=basefont>basefont</code>
-and <code id=nextid>nextid</code> elements are <i>empty</i>.<!-- HTML
-Standard parsing -->
+<p>The <span>content model</span> of the <code
+id=basefont>basefont</code> element is <i>empty</i>.<!-- HTML Standard
+parsing -->
 
 <p>If the <code title=attr-meta-scheme
 id=attr-meta-scheme>scheme</code> attribute of the <code>meta</code>
@@ -536,24 +534,6 @@ element.
 </div>
 
 <div class=section>
-<h4>Datagrids</h4>
-
-<p>The <span>content model</span> of the <code
-id=datagrid>datagrid</code> element is same as the <code>div</code>
-element.
-
-<p>The <code title=attr-datagrid-disabled>disabled</code> attribute
-and the <code title=attr-datagrid-multiple>multiple</code> attribute
-of the <code>datagrid</code> element are <span title="boolean
-attribute">boolean attributes</span>.
-
-<!-- HTML Standard
-<http://html5.org/tools/web-apps-tracker?from=3554&to=3555&context=>
--->
-
-</div>
-
-<div class=section>
 <h4>The <code>marquee</code> element</h4>
 
 <p>The <span>content model</span> of the <code
@@ -610,38 +590,6 @@ id=handler-marquee-onstart>onstart</code>.
 
 </div>
 
-<div class=section>
-<h4>The <code>multicol</code> element</h4>
-
-<p>The <span>content model</span> element of the <code
-id=multicol>multicol</code> element is same as the <code>div</code>
-element.<!--
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1077197>
--->
-
-</div>
-
-<div class=section>
-<h4>The <code>layer</code> and <code>nolayer</code> elements</h4>
-
-<p>The <span>content model</span> of the <code id=layer>layer</code>
-element <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is same as the
-<code>div</code> element.<!--
-<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1703974>;
-Only WebKit has |layer| element support:
-<http://suika.suikawiki.org/~wakaba/wiki/sw/n/layer> -->
-
-<p>The <span>content model</span> of the <code
-id=nolayer>nolayer</code> element <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is same as the
-<code>div</code> element.<!--
-<http://web.archive.org/web/20030610034421/devedge.netscape.com/library/manuals/1998/htmlguide/tags12.html#1323433>;
-Only WebKit has |nolayer| element support:
-<http://suika.suikawiki.org/~wakaba/wiki/sw/n/nolayer> -->
-
-</div>
-
 </div>
 
 <div class=section>
@@ -660,14 +608,6 @@ attributes,
 <http://msdn.microsoft.com/en-us/library/ms533781%28VS.85%29.aspx> (it
 says there is <nobr height>, but maybe it is wrong),
 <http://msdn.microsoft.com/en-us/library/ms535147%28VS.85%29.aspx> -->
-
-<p>If the <code title>height</code> or <code title>width</code>
-attribute of a <code>spacer</code> element <cite class="bibref
-informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is specified,
-its value <em class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.<!-- spacer
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
--->
 
 <p>The <code>col</code> element's <code title=attr-col-width
 id=attr-col-width>width</code> attribute value <em
@@ -697,14 +637,6 @@ HTML4 -->
 <p>The <code>hr</code> element's <code title=attr-hr-size
 id=attr-hr-size>size</code> attribute value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>.
-
-<p>The <code>spacer</code> element's <code title=attr-spacer-size
-id=attr-spacer-size>size</code> attribute value <cite class="bibref
-informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> <em
-class=rfc2119>MUST</em> be a <span>valid non-negative
-integer</span>.<!--
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
--->
 
 </div>
 
@@ -1009,22 +941,20 @@ non-conforming.<!-- HTML Standard rendering, HTML4 -->
 <p>The <code title=attr-objects-align
 id=attr-objects-align>align</code> attribute of an
 <code>applet</code>, <code>embed</code>, <code>iframe</code>,
-<code>img</code>, <code>input</code>, <code>object</code>, or
-<code>spacer</code> <cite class="bibref informative">[<a
-href="#ref-DEVEDGE">DEVEDGE</a>]</cite> element is an <span>enumerated
-attribute</span> with keywords <code title>left</code>, <code
-title>right</code>, <code title>top</code>, <code title>bottom</code>,
-<code title>baseline</code>, <code title>center</code>, <code
-title>middle</code>, <code title>texttop</code>, <code
-title>absmiddle</code>, <code title>abscenter</code>.  Keywords other
-than <code title>left</code>, <code title>right</code>, <code
-title>top</code>, <code title>middle</code>, and <code
-title>bottom</code> are non‐conforming.  The <code
-title=attr-objects-align>align</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-image>Image Button</span> state.<!-- HTML
-Standard rendering,
+<code>img</code>, <code>input</code>, or <code>object</code> element
+is an <span>enumerated attribute</span> with keywords <code
+title>left</code>, <code title>right</code>, <code title>top</code>,
+<code title>bottom</code>, <code title>baseline</code>, <code
+title>center</code>, <code title>middle</code>, <code
+title>texttop</code>, <code title>absmiddle</code>, <code
+title>abscenter</code>.  Keywords other than <code title>left</code>,
+<code title>right</code>, <code title>top</code>, <code
+title>middle</code>, and <code title>bottom</code> are non‐
+conforming.  The <code title=attr-objects-align>align</code> attribute
+of the <code>input</code> element applies only to <code>input</code>
+elements whose <code title=attr-input-type>type</code> attribute is in
+the <span title=attr-input-type-image>Image Button</span> state.<!--
+HTML Standard rendering,
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
 
@@ -1113,34 +1043,6 @@ and <code title>both</code>, where <code title>both</code> is non‐
 conforming.<!-- HTML Standard rendering, HTML4,
 <http://msdn.microsoft.com/en-us/library/ms533562%28VS.85%29.aspx> -->
 
-<hr>
-
-<p>The <span>content model</span> of the <code id=spacer>spacer</code>
-element is <i>empty</i>.<!-- HTML Standard parsing, spacer
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
--->
-
-<p>The <code title=attr-spacer-type id=attr-spacer-type>type</code>
-attribute of a <code>spacer</code> element <cite class="bibref
-informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is an
-<span>enumerated attribute</span> with keywords <code
-title>horizontal</code>, <code title>vertical</code>, and <code
-title>block</code>.<!--
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>;
-|horizontal| is default (according to actual implementations) -->
-
-<p>If the <code title=attr-spacer-type>type</code> attribute value of
-the <code>spacer</code> element does <em>not</em> <span title="ASCII
-case-insensitive">ASCII case-insensitively</span> match to <code
-title>block</code>, then <code title=attr-spacer-width>width</code>,
-<code title=attr-spacer-height>height</code>, and <code
-title=attr-objects-align>align</code> attributes <em
-class=rfc2119>MUST NOT</em> be specified.  Otherwise, the <code
-title=attr-spacer-size>size</code> attribute <em class=rfc2119>MUST
-NOT</em> be specified.<!--
-<http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>;
-|type|'s default is |horizontal| -->
-
 </div>
 
 <div class=section>
@@ -1149,10 +1051,9 @@ NOT</em> be specified.<!--
 <p>The <span>content model</span> of <code id=acronym>acronym</code>,
 <code id=big>big</code>, <code id=blink>blink</code>, <code
 id=nobr>nobr</code>, <code id=rb>rb</code>, <code
-id=strike>strike</code>, <code id=tt>tt</code>, and <code
-id=u>u</code> elements are same as the <code>span</code> element.<!--
-HTML Standard parsing, HTML Standard rendering, HTML Standard
-obsolete, nobr
+id=strike>strike</code>, and <code id=tt>tt</code> elements are same
+as the <code>span</code> element.<!-- HTML Standard parsing, HTML
+Standard rendering, HTML Standard obsolete, nobr
 <http://web.archive.org/web/20020607005007/http://wp.netscape.com/home/services_docs/html-extensions.html>,
 blink
 <http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1595094>
@@ -1689,24 +1590,6 @@ title>yes</code> and <code title>no</code>.<!--
 <div class=section>
 <h4>The <code>embed</code> element</h4>
 
-<p>Attributes <code title=attr-embed-units>units</code>, <code
-title=attr-dim-border>border</code>, <code
-title=attr-embed-pluginpage>pluginpage</code>, <code
-title=attr-embed-pluginspage>pluginspage</code>, <code
-title-attr-pluginurl>pluginurl</code>, <code
-title=attr-object-code>code</code>, <code
-title-attr-embed-border>palette</code>, <code
-title=attr-frames-frameborder>frameborder</code> of the
-<code>embed</code> element <em class=rfc2119>MUST NOT</em> be
-specified.
-
-<div class="note memo">
-
-<p>This is a <span>willful violation</span> of the HTML Standard,
-which does not prohibit use of these attributes.
-
-</div>
-
 <p>If the <code title=attr-embed-pluginpage
 id=attr-embed-pluginpage>pluginpage</code> <cite class="bibref
 informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite>, <code
@@ -2057,47 +1940,7 @@ class=rfc2119>MUST</em> be a <span>valid non-negative
 integer</span>.<!--
 <http://msdn.microsoft.com/en-us/library/ms533708%28VS.85%29.aspx> -->
 
-<hr>
-
-<p>The <span>content model</span> of the <code id=xml>xml</code>
-element <cite class="bibref informative">[<a
-href="#ref-MSDN">MSDN</a>]</cite> is <i>text</i>.<!--
-<http://msdn.microsoft.com/en-us/library/ms535918%28VS.85%29.aspx> -->
-
-<p>If the <code title=attr-xml-src id=attr-xml-src>src</code>
-attribute of an <code>xml</code> element <cite class="bibref
-informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is present, its
-value <em class=rfc2119>MUST</em> be a <span>valid URL</span>.<!--
-<http://msdn.microsoft.com/en-us/library/ms534643%28VS.85%29.aspx> -->
-
 </div>
-
-<!-- HTML+TIME
-
-time2
-  accelerate http://msdn.microsoft.com/en-us/library/ms533127%28VS.85%29.aspx
-  autoreverse http://msdn.microsoft.com/en-us/library/ms533135(VS.85).aspx
-  begin http://msdn.microsoft.com/en-us/library/ms533140(VS.85).aspx
-  decelerate http://msdn.microsoft.com/en-us/library/ms533156(VS.85).aspx
-  dur http://msdn.microsoft.com/en-us/library/ms533159(VS.85).aspx
-  end http://msdn.microsoft.com/en-us/library/ms533163(VS.85).aspx
-  fill http://msdn.microsoft.com/en-us/library/ms533168(VS.85).aspx
-  mute http://msdn.microsoft.com/en-us/library/ms533296(VS.85).aspx
-  repeatcount http://msdn.microsoft.com/en-us/library/ms533407(VS.85).aspx
-  repeatdur http://msdn.microsoft.com/en-us/library/ms533408(VS.85).aspx
-  restart http://msdn.microsoft.com/en-us/library/ms533409(VS.85).aspx
-  speed http://msdn.microsoft.com/en-us/library/ms533415(VS.85).aspx
-  syncbehavior http://msdn.microsoft.com/en-us/library/ms533421(VS.85).aspx
-  syncmaster http://msdn.microsoft.com/en-us/library/ms533422(VS.85).aspx
-  timeaction http://msdn.microsoft.com/en-us/library/ms533429(VS.85).aspx
-  timecontainer http://msdn.microsoft.com/en-us/library/ms533430(VS.85).aspx
-  volume http://msdn.microsoft.com/en-us/library/ms533446(VS.85).aspx
-  systembitrate http://msdn.microsoft.com/en-us/library/ms533424(VS.85).aspx
-  systemcaptions http://msdn.microsoft.com/en-us/library/ms533425(VS.85).aspx
-  systemlanguage http://msdn.microsoft.com/en-us/library/ms533426(VS.85).aspx
-  systemoverduborsubtitle http://msdn.microsoft.com/en-us/library/ms533427(VS.85).aspx
-
--->
 
 </div>
 
@@ -2356,22 +2199,6 @@ attributes</span>:
 <code title=handler-ontouchmove id=handler-ontouchmove>ontouchmove</code>, and
 <code title=handler-ontouchstart id=handler-ontouchstart>ontouchstart</code>.
 
-<div class=section>
-<h4>The <code>event-source</code> element</h4>
-
-<!-- <http://html5.org/tools/web-apps-tracker?from=2869&to=2870>
-(eventsource) -->
-
-<p>The <span>content model</span> of the <code
-id=event-source>event-source</code> element is <i>empty</i>.
-
-<p>If the <code title=attr-event-source-src
-id=attr-event-source-src>src</code> attribute of the
-<code>event-source</code> element is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.
-
-</div>
-
 </div>
 
 <div class=section>
@@ -2417,107 +2244,8 @@ autocorrect
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>
 -->
 
-<p>If the <code title=attr-form-data id=attr-form-data>data</code>
-attribute of a <code>form</code> element <cite class="bibref
-informative">[<a href="#ref-WF2">WF2</a>]</cite> is present, its value
-<em class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.
-The <span>URL</span> <em class=rfc2119>MUST</em> reference an <span
-title="XML documents">XML document</span> whose <span>root
-element</span> is the <code title=formdata-formdata>formdata</code>
-element in the <code title>http://n.whatwg.org/formdata</code>
-namespace.  The document <em class=rfc2119>MUST</em> be labeled using
-an <span>XML MIME type</span>.  It is encouraged to use the <span>MIME
-type</span> <code>application/xml</code>.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#data0> -->
-
-<p>If the <code title=attr-select-data id=attr-select-data>data</code>
-attribute of a <code>select</code> or <code>datalist</code> element
-<cite class="bibref informative">[<a href="#ref-WF2">WF2</a>]</cite>
-is present, its value <em class=rfc2119>MUST</em> be a <span>valid
-non-empty URL</span>.  The <span>URL</span> <em
-class=rfc2119>MUST</em> reference an <span title="XML documents">XML
-document</span> whose <span>root element</span> is the
-<code>select</code> element.  The document <em class=rfc2119>MUST</em>
-be labeled using an <span>XML MIME type</span>.  It is encouraged to
-use the <span>MIME type</span> <code>application/xml</code>.  It <em
-class=rfc2119>SHOULD NOT</em> be labeled by <span>MIME type</span>
-<code>application/xhtml+xml</code>.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#data> -->
-
-<div class=section>
-<h4>Form submission</h4>
-
-<p>The <code title=handler-form-onreceived
-id=handler-form-onreceived>onreceived</code> attribute of the
-<code>form</code> element <cite class="bibref informative">[<a
-href="#ref-WF2">WF2</a>]</cite> is an <span title="event handler
-content attributes">event handler content attribute</span>.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#onreceived> -->
-
-<p>The <code title=attr-fs-replace id=attr-fs-replace>replace</code>
-attribute of <code>form</code>, <code>input</code>, and
-<code>button</code> elements <cite class="bibref informative">[<a
-href="#ref-WF2">WF2</a>]</cite> are <span title="enumerated
-attribute">enumerated attributes</span> with keywords <code
-title>document</code> and <code title>values</code>.  The <code
-title=attr-fs-replace>replace</code> attribute of the
-<code>input</code> element applies only to elements whoes <code
-title=attr-input-type>type</code> attribute is in <span
-title=attr-input-type-submit>Submit Button</span> or <span
-title=attr-input-type-image>Image Button</span> state.  The <code
-title=attr-fs-replace>replace</code> attribute of the
-<code>button</code> element applies only to elements whose <code
-title=attr-button-type>type</code> attribute is in the <span
-title=attr-button-type-submit>Submit Button</span> state.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#replace> -->
-
-<p>Attributes <code title=attr-fs-action
-id=attr-fs-action>action</code>, <code title=attr-fs-enctype
-id=attr-fs-enctype>enctype</code>, <code title=attr-fs-method
-id=attr-fs-method>method</code>, and <code title=attr-fs-target
-id=attr-fs-target>target</code>, of <code>input</code> and
-<code>button</code> elements <cite class="bibref informative">[<a
-href="#ref-WF2">WF2</a>]</cite> <!-- and merged into HTML5, then
-renamed --> <em class=rfc2119>MUST</em> be treated as equivalent to
-<code title=attr-fs-formaction>formaction</code>, <code
-title=attr-fs-formenctype>formenctype</code>, <code
-title=attr-fs-formmethod>formmethod</code>, and <code
-title=attr-fs-formtarget>formtarget</code> elements, respectively, for
-the purpose of conformance checking of values of these attributes.<!--
-Therefore, in addition to their attribute value constraints, they must
-not be specified for an element which has the |type| value the
-attribute does not apply. -->
-
-</div>
-
 <div class=section>
 <h4>Value constraints and input mode</h4>
-
-<p>If the <code title=attr-inputmode
-id=attr-inputmode>inputmode</code> attribute of an <code>input</code>
-or <code>textarea</code> element <cite class="bibref informative">[<a
-href="#ref-WF2">WF2</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>set of space-separated
-tokens</span>, each of which <em class=rfc2119>MUST</em> be a string
-consist of one or more characters in the range U+0030 <code
-class=charname>DIGIT ZERO</code> (0) to U+0039 <code
-class=charname>DIGIT NINE</code> (9), U+0041 <code
-class=charname>LATIN CAPITAL LETTER A</code> to U+005A <code
-class=charname>LATIN CAPITAL LETTER Z</code>, and U+0061 <code
-class=charname>LATIN SMALL LETTER A</code> to U+007A <code
-class=charname>LATIN SMALL LETTER Z</code>, or a <span>valid non-empty
-URL</span> that is an <span>absolute URL</span>.  The <code
-title=attr-inputmode>inputmode</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whose <code title=attr-input-type>type</code> attribute is in <span
-title=attr-input-type-text>Text</span>, <span
-title=attr-input-type-search>Search</span>, <span
-title=attr-input-type-password>Password</span>, <span
-title=attr-input-type-url>URL</span>, <span
-title=attr-input-type-email>E-mail</span>, or <span
-title=attr-input-type-tel>Telephone</span> state.<!--
-<http://www.whatwg.org/specs/web-forms/current-work/#the-inputmode>
-and XForms 1.0 -->
 
 <p>If the <code title=attr-input-precision
 id=attr-input-precision>precision</code> attribute of an
@@ -2631,43 +2359,6 @@ title=attr-input-type-tel>Telephone</span> state.<!--
 <http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
 2.0 6.5.2.2. The |wml:emptyok| Attribute; also in Softbank
 3.12.2. (historical); type=text. -->
-
-<p>If the <code title=attr-accept-charset
-id=attr-accept-charset>accept-charset</code> attribute of an
-<code>input</code> or <code>textarea</code> element <cite
-class="bibref informative">[<a href="#ref-HTML2x">HTML2x</a>]</cite>
-is present, its value <em class=rfc2119>MUST</em> be syntactically
-valid <code title=attr-form-accept-charset>accept-charset</code>
-attribute value for a <code>form</code> element.<!-- HTML 2.x -->
-
-<p>If the <code title=attr-form-accept
-id=attr-form-accept>accept</code> attribute of a <code>form</code>
-element <cite class="bibref informative">[<a
-href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but immediately dropped
-after introduction --> is present, its value <em
-class=rfc2119>MUST</em> be a string that is a valid as an <code
-title=attr-input-accept>accept</code> attribute value of the
-<code>input</code> element.
-
-<p>If the <code title=attr-textarea-accept
-id=attr-textarea-accept>accept</code> attribute of a
-<code>textarea</code> element <cite class="bibref informative">[<a
-href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but immediately dropped
-after introduction --> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid MIME type</span> that
-represents a <span>text-based MIME type</span>.<!-- What is the
-"text-based" is intentionally left undefined for now. -->
-
-<p>If the <code title=attr-textarea-pattern
-id=attr-textarea-pattern>pattern</code> attribute of a
-<code>textarea</code> element <cite class="bibref informative">[<a
-href="#ref-WF2">WF2</a>]</cite> <!-- and HTML5 but immediately dropped
-after introduction --> is present, its value <em
-class=rfc2119>MUST</em> be a string that is a valid as an <code
-title=attr-input-pattern>pattern</code> attribute value of the
-<code>input</code> element.  If the attribute is present, the <code
-title>title</code> attribute <em class=rfc2119>SHOULD</em> also be
-present.<!-- WF2 -->
 
 </div>
 
@@ -2843,27 +2534,6 @@ class=rfc2119>MUST NOT</em> be specified.<!--
 
 </div>
 
-<div class=section>
-<h4>The <code>isindex</code> element</h4>
-
-<p>The <span>content model</span> of the <code
-id=isindex>isindex</code> element is <i>empty</i>.<!-- HTML Standard
-parsing, only affects XHTML -->
-
-<p>If the <code title=attr-isindex-prompt
-id=attr-isindex-prompt>prompt</code> attribute of an
-<code>isindex</code> element is present, its value <em
-class=rfc2119>MAY</em> be any string.<!-- HTML Standard parsing -->
-
-<p>If the <code title=attr-isindex-action
-id=attr-isindex-action>action</code> attribute of an
-<code>isindex</code> element is present, its value <em
-class=rfc2119>MUST</em> obey the requirements for the <code
-title=attr-fs-action>action</code> attribute of the <code>form</code>
-element.<!-- HTML Standard parsing -->
-
-</div>
-
 </div>
 
 </div>
@@ -2910,9 +2580,12 @@ variants, or authoring tools
 <li>Proprietary elements and attributes for earlier generations of
 Japanese mobile phones (wihch are no longer in use).
 
-<li>Attributes of the <code>multicol</code> element.
+<li>The <code>nextid</code> element.
 
-<li>The <code>ilayer</code> element.
+<li>Elements <code>multicol</code>, <code>spacer</code>,
+<code>layer</code>, <code>ilayer</code>, and <code>nolayer</code>.
+
+<li>Elements <code>image</code> and <code>isindex</code>.
 
 <li>Elements and attributes that had been defined in earlier revisions
 of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
@@ -2922,9 +2595,9 @@ title=attr-active>active</code>, <code
 title=attr-command-default>default</code>, <code
 title=attr-menu-autosubmit>autosubmit</code>, the <code
 title>cite</code> attribute of some sectioning elements, elements
-<code>eventsource</code>, <code>dialog</code>, <code>sidebar</code>,
-and <code>bb</code>, and repetition template and data template
-features.
+<code>event-source</code>, <code>eventsource</code>,
+<code>sidebar</code>, <code>datagrid</code>, and <code>bb</code>, and
+repetition template and data template features.
 
 <li>Attributes in the <span>HTML namespace</span>.
 
@@ -2952,9 +2625,9 @@ attribute of the HTML language.
 
 <p>Conditional comments, the <a
 href="http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx"><code>IMPORT</code>
-processing instruction</a>, and <a
+processing instruction</a>, the <code>xml</code> element, <a
 href="http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx">namespace
-syntax</code> <cite class="bibref informative">[<a
+syntax</code>, VML, and HTML+TIME <cite class="bibref informative">[<a
 href="#ref-MSDN">MSDN</a>]</cite> are not included, as the HTML syntax
 is incompatible with them.
 
@@ -3029,7 +2702,6 @@ is incompatible with them.
 <dd><a href="#attr-rev"><code>rev</code></a>
 <dd><a href="#attr-typeof"><code>typeof</code></a>
 <dd><a href="#attr-unselectable"><code>unselectable</code></a>
-<dd><a href="#attr-xmlspace"><code>xml:space</code></a>
 
 <dt>The <code>a</code> element
 
@@ -3146,14 +2818,9 @@ is incompatible with them.
 
 <dt>The <code>button</code> element
 
-<dd><a href="#attr-fs-action"><code>action</code></a>
 <dd><a href="#attr-datafld"><code>datafld</code></a>
 <dd><a href="#attr-dataformatas"><code>dataformatas</code></a>
 <dd><a href="#attr-datasrc"><code>datasrc</code></a>
-<dd><a href="#attr-fs-enctype"><code>enctype</code></a>
-<dd><a href="#attr-fs-method"><code>method</code></a>
-<dd><a href="#attr-fs-replace"><code>replace</code></a>
-<dd><a href="#attr-fs-target"><code>target</code></a>
 
 <dt>The <code>caption</code> element
 
@@ -3183,19 +2850,6 @@ is incompatible with them.
 <dd><a href="#attr-tables-choff"><code>choff</code></a>
 <dd><a href="#attr-tables-valign"><code>valign</code></a>
 <dd><a href="#attr-colgroup-width"><code>width</code></a>
-
-<dt>The <a href="#comment"><code>comment</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <code>datagrid</code> element
-
-<dd><a href="#attr-datagrid-disabled"><code>disabled</code></a>
-<dd><a href="#attr-datagrid-multiple"><code>multiple</code></a>
-
-<dt>The <code>datalist</code> element
-
-<dd><a href="#attr-select-data"><code>data</code></a>
 
 <dt>The <code>dd</code> element
 
@@ -3237,10 +2891,6 @@ is incompatible with them.
 <dd><a href="#attr-embed-units"><code>units</code></a>
 <dd><a href="#attr-vspace"><code>vspace</code></a>
 
-<dt>The <a href="#event-source"><code>event-source</code></a> element
-
-<dd><a href="#attr-event-source-src"><code>src</code></a>
-
 <dt>The <code>fieldset</code> element
 
 <dd><a href="#attr-datafld"><code>datafld</code></a>
@@ -3255,12 +2905,8 @@ is incompatible with them.
 
 <dt>The <code>form</code> element
 
-<dd><a href="#attr-form-accept"><code>accept</code></a>
-<dd><a href="#attr-form-data"><code>data</code></a>
 <dd><a href="#attr-lcs"><code>lcs</code></a>
 <dd><a href="#attr-measure"><code>measure</code></a>
-<dd><a href="#handler-form-onreceived"><code>onreceived</code></a>
-<dd><a href="#attr-fs-replace"><code>replace</code></a>
 <dd><a href="#attr-utn"><code>utn</code></a>
 
 <dt>The <a href="#frame"><code>frame</code></a> element
@@ -3401,8 +3047,6 @@ is incompatible with them.
 
 <dt>The <code>input</code> element's attributes
 
-<dd><a href="#attr-accept-charset"><code>accept-charset</code></a>
-<dd><a href="#attr-fs-action"><code>action</code></a>
 <dd><a href="#attr-objects-align"><code>align</code></a>
 <dd><a href="#attr-input-autocapitalize"><code>autocapitalize</code></a>
 <dd><a href="#attr-input-autocorrect"><code>autocorrect</code></a>
@@ -3414,25 +3058,18 @@ is incompatible with them.
 <dd><a href="#attr-directkey"><code>directkey</code></a>
 <dd><a href="#attr-dynsrc"><code>dynsrc</code></a>
 <dd><a href="#attr-emptyok"><code>emptyok</code></a>
-<dd><a href="#attr-fs-enctype"><code>enctype</code></a>
 <dd><a href="#attr-format"><code>format</code></a>
 <dd><a href="#attr-hspace"><code>hspace</code></a>
 <dd><a href="#attr-input-incremental"><code>incremental</code></a>
-<dd><a href="#attr-inputmode"><code>inputmode</code></a>
 <dd><a href="#attr-iprof"><code>iprof</code></a>
 <dd><a href="#attr-istyle"><code>istyle</code></a>
 <dd><a href="#attr-loop"><code>loop</code></a>
 <dd><a href="#attr-lowsrc"><code>lowsrc</code></a>
-<dd><a href="#attr-fs-method"><code>method</code></a>
 <dd><a href="#attr-mode"><code>mode</code></a>
 <dd><a href="#attr-input-precision"><code>precision</code></a>
-<dd><a href="#attr-fs-replace"><code>replace</code></a>
 <dd><a href="#attr-input-results"><code>results</code></a>
 <dd><a href="#attr-soundstart"><code>soundstart</code></a>
 <dd><a href="#attr-start"><code>start</code></a>
-<dd><a href="#attr-fs-target"><code>target</code></a>
-<dd><a href="#attr-input-template"><code>template</code></a>
-<!-- type -->
 <dd><a href="#attr-input-usemap"><code>usemap</code></a>
 <dd><a href="#attr-input-vcard_name"><code>vcard_name</code></a>
 <dd><a href="#attr-viblength"><code>viblength</code></a>
@@ -3442,18 +3079,9 @@ is incompatible with them.
 <dd><a href="#attr-vspace"><code>vspace</code></a>
 
 <dt>The <code>input</code> element's <code
-title=attr-input-type>type</code> attribute values
+title=attr-input-type>type</code> attribute value
 
-<dd><a href="#attr-input-type-add-keyword"><code>add</code></a>
-<dd><a href="#attr-input-type-move-down-keyword"><code>move-down</code></a>
-<dd><a href="#attr-input-type-move-up-keyword"><code>move-up</code></a>
 <dd><a href="#attr-input-type-quote-keyword"><code>quote</code></a>
-<dd><a href="#attr-input-type-remove-keyword"><code>remove</code></a>
-
-<dt>The <a href="#isindex"><code>isindex</code></a> element
-
-<dd><a href="#attr-isindex-action"><code>action</code></a>
-<dd><a href="#attr-isindex-prompt"><code>prompt</code></a>
 
 <dt>The <code>keygen</code> element
 
@@ -3465,10 +3093,6 @@ title=attr-input-type>type</code> attribute values
 <dd><a href="#attr-datafld"><code>datafld</code></a>
 <dd><a href="#attr-dataformatas"><code>dataformatas</code></a>
 <dd><a href="#attr-datasrc"><code>datasrc</code></a>
-
-<dt>The <a href="#layer"><code>layer</code></a> element
-
-<dd>No element-specific attribute.
 
 <dt>The <code>legend</code> element
 
@@ -3522,14 +3146,6 @@ title=attr-input-type>type</code> attribute values
 
 <dd><a href="#attr-meta-scheme"><code>scheme</code></a>
 
-<dt>The <a href="#multicol"><code>multicol</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#nextid"><code>nextid</code></a> element
-
-<dd>No element-specific attribute.
-
 <dt>The <a href="#nobr"><code>nobr</code></a> element
 
 <dd>No element-specific attribute.
@@ -3539,10 +3155,6 @@ title=attr-input-type>type</code> attribute values
 <dd>No element-specific attribute.
 
 <dt>The <a href="#noframes"><code>noframes</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#nolayer"><code>nolayer</code></a> element
 
 <dd>No element-specific attribute.
 
@@ -3629,14 +3241,6 @@ title=attr-input-type>type</code> attribute values
 
 <dd><a href="#attr-source-pixelratio"><code>pixelratio</code></a>
 
-<dt>The <a href="#spacer"><code>spacer</code></a> element
-
-<dd><a href="#attr-objects-align"><code>align</code></a>
-<dd><a href="#attr-height"><code>height</code></a>
-<dd><a href="#attr-spacer-size"><code>size</code></a>
-<dd><a href="#attr-spacer-type"><code>type</code></a>
-<dd><a href="#attr-width"><code>width</code></a>
-
 <dt>The <code>span</code> element
 
 <dd><a href="#attr-datafld"><code>datafld</code></a>
@@ -3704,19 +3308,15 @@ title=attr-input-type>type</code> attribute values
 
 <dt>The <code>textarea</code> element
 
-<dd><a href="#attr-textarea-accept"><code>accept</code></a>
-<dd><a href="#attr-accept-charset"><code>accept-charset</code></a>
 <dd><a href="#attr-input-autocapitalize"><code>autocapitalize</code></a>
 <dd><a href="#attr-input-autocorrect"><code>autocorrect</code></a>
 <dd><a href="#attr-datafld"><code>datafld</code></a>
 <dd><a href="#attr-datasrc"><code>datasrc</code></a>
 <dd><a href="#attr-emptyok"><code>emptyok</code></a>
 <dd><a href="#attr-format"><code>format</code></a>
-<dd><a href="#attr-inputmode"><code>inputmode</code></a>
 <dd><a href="#attr-iprof"><code>iprof</code></a>
 <dd><a href="#attr-istyle"><code>istyle</code></a>
 <dd><a href="#attr-mode"><code>mode</code></a>
-<dd><a href="#attr-textarea-pattern"><code>pattern</code></a>
 <!--<dd><a href="#attr-textarea-wrap"><code>wrap</code></a>-->
 
 <dt>The <code>tfoot</code> element
@@ -3733,7 +3333,6 @@ title=attr-input-type>type</code> attribute values
 <dt>The <code>th</code> element
 
 <dd><a href="#attr-tables-align"><code>align</code></a>
-<dd><a href="#attr-tdth-abbr"><code>abbr</code></a>
 <dd><a href="#attr-tdth-axis"><code>axis</code></a>
 <dd><a href="#attr-background"><code>background</code></a>
 <dd><a href="#attr-bgcolor"><code>bgcolor</code></a>
@@ -3779,10 +3378,6 @@ title=attr-input-type>type</code> attribute values
 
 <dd>No element-specific attribute.
 
-<dt>The <a href="#u"><code>u</code></a> element
-
-<dd>No element-specific attribute.
-
 <dt>The <code>ul</code> element
 
 <dd><a href="#attr-align"><code>align</code></a>
@@ -3797,10 +3392,6 @@ title=attr-input-type>type</code> attribute values
 <dd><a href="#attr-media-loopstart"><code>loopstart</code></a>
 <dd><a href="#attr-media-playcount"><code>playcount</code></a>
 <dd><a href="#attr-media-start"><code>start</code></a>
-
-<dt>The <a href="#xml"><code>xml</code></a> element
-
-<dd><a href="#attr-xml-src"><code>src</code></a>
 
 <dt>The <a href="#xmp"><code>xmp</code></a> element
 
