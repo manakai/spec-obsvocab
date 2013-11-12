@@ -337,54 +337,6 @@ namespace.
 <h2>Obsolete HTML elements and attributes</h2>
 
 <div class=section>
-<h3>Global attributes</h3>
-
-<div class=section>
-<h4>User interaction</h4>
-
-<p>The <code title=attr-atomicselection
-id=attr-atomicselection>atomicselection</code> attribute of an <span
-title="HTML elements">HTML element</span> <cite class="bibref
-informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
-<span>enumerated attribute</span> with keywords <code
-title>true</code> and <code title>false</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms537835%28VS.85%29.aspx> -->
-
-<p>The <code title=attr-hidefocus id=attr-hidefocus>hidefocus</code>
-attribute of an <span title="HTML elements">HTML element</span> <cite
-class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is a
-<span>boolean attribute</span>.<!--
-<http://msdn.microsoft.com/en-us/library/ms533783%28VS.85%29.aspx> -->
-
-<p>The <code title=attr-unselectable
-id=attr-unselectable>unselectable</code> attribute of an <span
-title="HTML elements">HTML element</span> <cite class="bibref
-informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
-<span>enumerated attribute</span> with keywords <code title>on</code>
-and <code title>off</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms537840%28VS.85%29.aspx> -->
-
-<p>The <code title=attr-disabled id=attr-disabled>disabled</code>
-attribute of an <span title="HTML elements">HTML element</span> <cite
-class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is a
-<span>boolean attribute</span>.<!--
-<http://msdn.microsoft.com/en-us/library/ms533734%28VS.85%29.aspx>;
-<embed disabled>? -->
-
-<div class="note memo">
-
-<p>The HTML Standard defines the (conforming) <code
-title>disabled</code> attribute for several <span>HTML
-elements</span>.  This requirement does not (or in fact cannot)
-override it in any way.
-
-</div>
-
-</div>
-
-</div>
-
-<div class=section>
 <h3>Metadata</h3>
 
 <p>If the <code title=attr-head-profile
@@ -2482,6 +2434,49 @@ title=attr-keygen-pqg>pqg</code> attribute <em class=rfc2119>MUST
 NOT</em> be specified.  Otherwise, these two attributes <em
 class=rfc2119>MUST NOT</em> be specified.<!--
 <https://developer.mozilla.org/En/HTML/Element/keygen> -->
+
+</div>
+
+</div>
+
+<div class=section>
+<h3>User interaction</h3>
+
+<p>The <code title=attr-atomicselection
+id=attr-atomicselection>atomicselection</code> attribute of an <span
+title="HTML elements">HTML element</span> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code
+title>true</code> and <code title>false</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms537835%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-hidefocus id=attr-hidefocus>hidefocus</code>
+attribute of an <span title="HTML elements">HTML element</span> <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is a
+<span>boolean attribute</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533783%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-unselectable
+id=attr-unselectable>unselectable</code> attribute of an <span
+title="HTML elements">HTML element</span> <cite class="bibref
+informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is an
+<span>enumerated attribute</span> with keywords <code title>on</code>
+and <code title>off</code>.<!--
+<http://msdn.microsoft.com/en-us/library/ms537840%28VS.85%29.aspx> -->
+
+<p>The <code title=attr-disabled id=attr-disabled>disabled</code>
+attribute of an <span title="HTML elements">HTML element</span> <cite
+class="bibref informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is a
+<span>boolean attribute</span>.<!--
+<http://msdn.microsoft.com/en-us/library/ms533734%28VS.85%29.aspx>;
+<embed disabled>? -->
+
+<div class="note memo">
+
+<p>The HTML Standard defines the (conforming) <code
+title>disabled</code> attribute for several <span>HTML
+elements</span>.  This requirement does not (or in fact cannot)
+override it in any way.
 
 </div>
 
