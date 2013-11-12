@@ -1225,13 +1225,6 @@ attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p08>
 -->
 
-<p>If the <code title=attr-a-eswf id=attr-a-eswf>eswf</code> attribute
-of the <code>a</code> element <cite class="bibref informative">[<a
-href="#ref-EMNET">EMNET</a>]</cite> is present, its value <em
-class=rfc2119>MUST</em> be a <span>valid hash-ID reference</span> to
-an <code>object</code> element.<!--
-<http://developer.emnet.ne.jp/flashlite3.html> -->
-
 <p>If <code title=attr-a-ifb id=attr-a-ifb>ifb</code> or <code
 title=attr-a-ib id=attr-a-ib>ib</code> attribute of the <code>a</code>
 element <cite class="bibref informative">[<a
@@ -1273,19 +1266,6 @@ attribute is specified, the <code title=attr-lcs>lcs</code> attribute
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/location_info.html#p03>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p13>
 -->
-
-<p>The <code title=attr-measure id=attr-measure>measure</code>
-attribute of <code>a</code> and <code>form</code> elements <cite
-class="bibref informative">[<a href="#ref-EMNET">EMNET</a>]</cite> is
-an <span>enumerated attribute</span> with keywords <code
-title>cid</code> and <code title>auto</code>.  If the <code
-title=attr-measure>measure</code> attribute of the <code>a</code>
-element is specified, the <code title=attr-hyperlink-href>href</code>
-attribute <em class=rfc2119>MUST</em> also be specified.  If the <code
-title=attr-measure>measure</code> attribute of a <code>form</code>
-element is specified, the <code title=attr-fs-action>action</code>
-attribute <em class=rfc2119>MUST</em> also be specified.<!--
-<http://developer.emnet.ne.jp/browser3-1.html> -->
 
 <p>The <code title=attr-area-nohref id=attr-area-nohref>nohref</code>
 attribute of the <code>area</code> element is a <span>boolean
@@ -1535,19 +1515,13 @@ informative">[<a href="#ref-SAFARI">SAFARI</a>]</cite> is a
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/nosave>
 -->
 
-<p>Attributes <code title=attr-img-copyright
-id=attr-img-copyright>copyright</code> <cite class="bibref
-informative">[<a href="#ref-EZWEB">EZWEB</a>]</cite>, <code
-title=attr-img-private id=attr-img-private>private</code> <cite
-class="bibref informative">[<a href="#ref-EMNET">EMNET</a>]</cite>,
-and <code title=attr-img-mediaout id=attr-img-mediaout>mediaout</code>
-<cite class="bibref informative">[<a
-href="#ref-EMNET">EMNET</a>]</cite> of <code>img</code> and
-<code>object</code> elements are <span title="enumerated
-attribute">enumerated attributes</span> with keywords <code
-title>yes</code> and <code title>no</code>.<!--
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag4.html>,
-<http://developer.emnet.ne.jp/browser3-1.html> -->
+<p>The <code title=attr-img-copyright
+id=attr-img-copyright>copyright</code> attribute <cite class="bibref
+informative">[<a href="#ref-EZWEB">EZWEB</a>]</cite> of
+<code>img</code> and <code>object</code> elements is <span>enumerated
+attribute</span> with keywords <code title>yes</code> and <code
+title>no</code>.<!--
+<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag4.html> -->
 
 </div>
 
@@ -2545,7 +2519,9 @@ specification:
 <ul>
 
 <li>Proprietary elements and attributes for WebTV, WebExplorer, mosaic
-variants, or authoring tools
+variants, <a
+href="http://developer.emnet.ne.jp/index.html">EMOBILE</a>'s browser,
+and/or authoring tools.
 
 <li>Proprietary elements and attributes for earlier generations of
 Japanese mobile phones (wihch are no longer in use).
@@ -2690,7 +2666,6 @@ is incompatible with them.
 <dd><a href="#attr-datasrc"><code>datasrc</code></a>
 <dd><a href="#attr-directkey"><code>directkey</code></a>
 <dd><a href="#attr-a-email"><code>email</code></a>
-<dd><a href="#attr-a-eswf"><code>eswf</code></a>
 <dd><a href="#attr-a-ib"><code>ib</code></a>
 <dd><a href="#attr-a-ifb"><code>ifb</code></a>
 <dd><a href="#attr-a-ijam"><code>ijam</code></a>
@@ -2701,7 +2676,6 @@ is incompatible with them.
 <dd><a href="#attr-a-kana"><code>kana</code></a>
 <dd><a href="#attr-lcs"><code>lcs</code></a>
 <dd><a href="#attr-a-loop"><code>loop</code></a>
-<dd><a href="#attr-measure"><code>measure</code></a>
 <dd><a href="#attr-a-memoryname"><code>memoryname</code></a>
 <dd><a href="#attr-a-shape"><code>shape</code></a>
 <dd><a href="#attr-soundstart"><code>soundstart</code></a>
@@ -2880,7 +2854,6 @@ is incompatible with them.
 <dt>The <code>form</code> element
 
 <dd><a href="#attr-lcs"><code>lcs</code></a>
-<dd><a href="#attr-measure"><code>measure</code></a>
 <dd><a href="#attr-utn"><code>utn</code></a>
 
 <dt>The <a href="#frame"><code>frame</code></a> element
@@ -3422,11 +3395,6 @@ Tag Reference</a></cite>, <a
 href="http://web.archive.org/web/20030604191931/http://devedge.netscape.com/">netscape
 devedge</a>, Netscape, <time datetime=1998-01-26>26 January
 1998</time>.
-
-<dt id=ref-EMNET>EMNET
-
-<dd><cite><a href="http://developer.emnet.ne.jp/index.html" lang=ja>技術情報
-TECHNICAL INFO</a></cite>, EMOBILE Ltd, 2007.  (In Japanese)
 
 <dt id=ref-EZWEB>EZWEB
 
