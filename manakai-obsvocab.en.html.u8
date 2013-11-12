@@ -416,13 +416,21 @@ informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
 and <code title="">off</code>.<!--
 <http://msdn.microsoft.com/en-us/library/ms537840%28VS.85%29.aspx> -->
 
-</p><p>Unless otherwise specified, the <code id=attr-disabled title=attr-disabled>disabled</code> attribute of an <a href=#html-elements title="HTML
-elements">HTML element</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> which the <code title="">disabled</code> attribute is not applied according to Web
-Applications 1.0 is a <a href=#boolean-attribute>boolean attribute</a>.<!--
+</p><p>The <code id=attr-disabled title=attr-disabled>disabled</code>
+attribute of an <a href=#html-elements title="HTML elements">HTML element</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is a
+<a href=#boolean-attribute>boolean attribute</a>.<!--
 <http://msdn.microsoft.com/en-us/library/ms533734%28VS.85%29.aspx>;
 <embed disabled>? -->
 
+</p><div class="note memo">
+
+<p>The HTML Standard defines the (conforming) <code title="">disabled</code> attribute for several <a href=#html-elements>HTML
+elements</a>.  This requirement does not (or in fact cannot)
+override it in any way.
+
 </p></div>
+
+</div>
 
 </div>
 
