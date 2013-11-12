@@ -400,25 +400,28 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 <a href=#set-of-space-separated-tokens>set of space-separated tokens</a>, each of which <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
 HTML5 old definition
 <http://html5.org/tools/web-apps-tracker?from=421&to=422>, HTML5
-obsolete -->
+obsolete --><!-- HTMLHeadElement -->
 
 </p><p>If the <code id=attr-html-version title=attr-html-version>version</code> attribute of an <code>html</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
 string.<!-- According to HTML4 prose, the |version| attribute's value
 is "cdata".  Various DTDs of versions of HTML and XHTML define their
 |version| attribute as |#FIXED| and gives their public identifiers as
-the value, but it had not been speced anywhere at all. -->
+the value, but it had not been speced anywhere at all. --><!--
+HTMLHtmlElement -->
 
 </p><div class=section>
 <h4 id=metadata-elements><span class=secno>3.1.1 </span>Metadata elements</h4>
 
 <p>The <a href=#content-model>content model</a> of the <code id=basefont>basefont</code> element is <i>empty</i>.<!-- HTML Standard
-parsing -->
+parsing --><!-- No attribute (no browser supports attributes any
+longer) -->
 
 </p><p>If the <code id=attr-meta-scheme title=attr-meta-scheme>scheme</code> attribute of the <code>meta</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
 string.<!-- HTML4,
-<http://suika.suikawiki.org/2007/html/standards#html-meta-scheme> -->
+<http://suika.suikawiki.org/2007/html/standards#html-meta-scheme>
+--><!-- HTMLMetaElement -->
 
 </p></div>
 
@@ -451,27 +454,29 @@ attribute</a> with keywords <code title="">high</code>, <code title="">middle</c
 <div class=section>
 <h4 id=hidden-metadata><span class=secno>3.1.3 </span>Hidden metadata</h4>
 
-<p>If attribute <code id=attr-about title=attr-about>about</code> or
-<code id=attr-resource title=attr-resource>resource</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> is
-present for an <a href=#html-elements title="HTML elements">HTML element</a>, its
-value <em class=rfc2119>MUST</em> be either a <a href=#valid-url-potentially-surrounded-by-spaces>valid URL
-potentially surrounded by spaces</a> or a string which begin with a
-U+005B <code class=charname>LEFT SQUARE BRACKET</code> character ([)
-and ends by a U+005D <code class=charname>RIGHT SQUARE BRACKET</code>
-character (]).<!-- RDFa; URIorSafeCURIE -->
+<p>Attributes <code id=attr-about title=attr-about>about</code>, <code id=attr-resource title=attr-resource>resource</code>, <code id=attr-content title=attr-content>content</code>, <code id=attr-datatype title=attr-datatype>datatype</code>, <code id=attr-typeof title=attr-typeof>typeof</code>, <code id=attr-property title=attr-property>property</code>, <code id=attr-rel title=attr-rel>rel</code>, and <code id=attr-rev title=attr-rev>rev</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>, <a href=#ref-XHTMLRDFA11>XHTMLRDFA11</a>]</cite> of an <a href=#html-elements title="HTML elements">HTML element</a>, if present, <em class=rfc2119>MAY</em> have any value.<!-- RDFa 1.0/1.1 -->
 
-</p><p>Unless otherwise specified, attributes <code id=attr-content title=attr-content>content</code>, <code id=attr-datatype title=attr-datatype>datatype</code>, <code id=attr-typeof title=attr-typeof>typeof</code>, and <code id=attr-property title=attr-property>property</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite> of an <a href=#html-elements title="HTML
-elements">HTML element</a>, if present, <em class=rfc2119>MAY</em>
-have any value.<!-- RDFa; CDATA or CURIE or CURIEs -->
+</p><p>Attributes <code id=attr-prefix title=attr-prefix>prefix</code> and
+<code title=attr-vocab>vocab</code> of an <a href=#html-elements title="HTML
+elements">HTML element</a> <cite class="bibref informative">[<a href=#ref-XHTMLRDFA11>XHTMLRDFA11</a>]</cite>, if present, <em class=rfc2119>MAY</em> have any value.<!-- RDFa 1.1 -->
 
-</p><p>Unless otherwise specified, attributes <code id=attr-rel title=attr-rel>rel</code> and <code id=attr-rev title=attr-rev>rev</code>
-<cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>]</cite>
-of an <a href=#html-elements title="HTML elements">HTML element</a>, if present, <em class=rfc2119>MUST</em> be an <a href=#unordered-set-of-unique-space-separated-tokens>unordered set of unique
-space-separated tokens</a>.<!-- HTML4, RDFa (reserved word | CURIE)
--> HTML5 <a rel>; HTML5 allows rel="up up" as exception, but we don't
-copy that requirement here. -->
+<!-- xmlns:*="" typeof="" property="" content="" rel=""
+<https://support.google.com/webmasters/answer/146898> -->
+<!-- vocab="" typeof="" property=""
+<http://schema.org/docs/datamodel.html> -->
+<!-- property="" <http://ogp.me/> -->
+<!-- RDFa 1.0 + RDFa 1.1
+<http://www.google.com/webmasters/tools/richsnippets> -->
+
+</p><div class="note memo">
+
+<p>The HTML Standard defines the (conforming) <code title="">content</code> and <code title="">rel</code> attributes for several
+<a href=#html-elements>HTML elements</a>.  This requirement does not (or in fact
+cannot) override them in any way.
 
 </p></div>
+
+</div>
 
 </div>
 
@@ -2180,12 +2185,14 @@ is incompatible with them.
 </dd><dd><a href=#handler-ontouchend><code>ontouchend</code></a>
 </dd><dd><a href=#handler-ontouchmove><code>ontouchmove</code></a>
 </dd><dd><a href=#handler-ontouchstart><code>ontouchstart</code></a>
+</dd><dd><a href=#attr-prefix><code>prefix</code></a>
 </dd><dd><a href=#attr-property><code>property</code></a>
 </dd><dd><a href=#attr-rel><code>rel</code></a>
 </dd><dd><a href=#attr-resource><code>resource</code></a>
 </dd><dd><a href=#attr-rev><code>rev</code></a>
 </dd><dd><a href=#attr-typeof><code>typeof</code></a>
 </dd><dd><a href=#attr-unselectable><code>unselectable</code></a>
+</dd><dd><a href=#attr-vocab><code>vocab</code></a>
 
 </dd><dt>The <code>a</code> element
 
@@ -3046,6 +3053,11 @@ Pemberton, W3C Working Draft, <time datetime=2006-07-26>26 July
 Epperson, Masayasu Ishikawa, Shane McCarron, Ann Navarro, Steven
 Pemberton, W3C Editor's Draft, <time datetime=2010-03-06>6 March
 2010</time>.
+
+</dd><dt id=ref-XHTMLRDFA11>XHTMLRDFA11
+
+</dt><dd><cite><a href=http://www.w3.org/TR/xhtml-rdfa/>XHTML+RDFa
+1.1</a></cite>, Shane McCarron, W3C Recommendation, <time datetime=2012-06-07>7 June 2012</time>.
 
 </dd></dl>
 

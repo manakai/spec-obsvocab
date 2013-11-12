@@ -346,7 +346,7 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 class=rfc2119>MUST</em> be a <span>valid non-empty URL</span>.<!--
 HTML5 old definition
 <http://html5.org/tools/web-apps-tracker?from=421&to=422>, HTML5
-obsolete -->
+obsolete --><!-- HTMLHeadElement -->
 
 <p>If the <code title=attr-html-version
 id=attr-html-version>version</code> attribute of an <code>html</code>
@@ -354,20 +354,23 @@ element is present, its value <em class=rfc2119>MAY</em> be any
 string.<!-- According to HTML4 prose, the |version| attribute's value
 is "cdata".  Various DTDs of versions of HTML and XHTML define their
 |version| attribute as |#FIXED| and gives their public identifiers as
-the value, but it had not been speced anywhere at all. -->
+the value, but it had not been speced anywhere at all. --><!--
+HTMLHtmlElement -->
 
 <div class=section>
 <h4>Metadata elements</h4>
 
 <p>The <span>content model</span> of the <code
 id=basefont>basefont</code> element is <i>empty</i>.<!-- HTML Standard
-parsing -->
+parsing --><!-- No attribute (no browser supports attributes any
+longer) -->
 
 <p>If the <code title=attr-meta-scheme
 id=attr-meta-scheme>scheme</code> attribute of the <code>meta</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
 string.<!-- HTML4,
-<http://suika.suikawiki.org/2007/html/standards#html-meta-scheme> -->
+<http://suika.suikawiki.org/2007/html/standards#html-meta-scheme>
+--><!-- HTMLMetaElement -->
 
 </div>
 
@@ -410,33 +413,41 @@ title>0</code>.<!-- Softbank 3.10.2. -->
 <div class=section>
 <h4>Hidden metadata</h4>
 
-<p>If attribute <code title=attr-about id=attr-about>about</code> or
-<code title=attr-resource id=attr-resource>resource</code> <cite
-class="bibref informative">[<a href="#ref-RDFA">RDFA</a>]</cite> is
-present for an <span title="HTML elements">HTML element</span>, its
-value <em class=rfc2119>MUST</em> be either a <span>valid URL
-potentially surrounded by spaces</span> or a string which begin with a
-U+005B <code class=charname>LEFT SQUARE BRACKET</code> character ([)
-and ends by a U+005D <code class=charname>RIGHT SQUARE BRACKET</code>
-character (]).<!-- RDFa; URIorSafeCURIE -->
+<p>Attributes <code title=attr-about id=attr-about>about</code>, <code
+title=attr-resource id=attr-resource>resource</code>, <code
+title=attr-content id=attr-content>content</code>, <code
+title=attr-datatype id=attr-datatype>datatype</code>, <code
+title=attr-typeof id=attr-typeof>typeof</code>, <code
+title=attr-property id=attr-property>property</code>, <code
+title=attr-rel id=attr-rel>rel</code>, and <code title=attr-rev
+id=attr-rev>rev</code> <cite class="bibref informative">[<a
+href="#ref-RDFA">RDFA</a>, <a
+href="#ref-XHTMLRDFA11">XHTMLRDFA11</a>]</cite> of an <span
+title="HTML elements">HTML element</span>, if present, <em
+class=rfc2119>MAY</em> have any value.<!-- RDFa 1.0/1.1 -->
 
-<p>Unless otherwise specified, attributes <code title=attr-content
-id=attr-content>content</code>, <code title=attr-datatype
-id=attr-datatype>datatype</code>, <code title=attr-typeof
-id=attr-typeof>typeof</code>, and <code title=attr-property
-id=attr-property>property</code> <cite class="bibref informative">[<a
-href="#ref-RDFA">RDFA</a>]</cite> of an <span title="HTML
-elements">HTML element</span>, if present, <em class=rfc2119>MAY</em>
-have any value.<!-- RDFa; CDATA or CURIE or CURIEs -->
+<p>Attributes <code title=attr-prefix id=attr-prefix>prefix</code> and
+<code title=attr-vocab>vocab</code> of an <span title="HTML
+elements">HTML element</span> <cite class="bibref informative">[<a
+href="#ref-XHTMLRDFA11">XHTMLRDFA11</a>]</cite>, if present, <em
+class=rfc2119>MAY</em> have any value.<!-- RDFa 1.1 -->
 
-<p>Unless otherwise specified, attributes <code title=attr-rel
-id=attr-rel>rel</code> and <code title=attr-rev id=attr-rev>rev</code>
-<cite class="bibref informative">[<a href="#ref-RDFA">RDFA</a>]</cite>
-of an <span title="HTML elements">HTML element</span>, if present, <em
-class=rfc2119>MUST</em> be an <span>unordered set of unique
-space-separated tokens</span>.<!-- HTML4, RDFa (reserved word | CURIE)
--> HTML5 <a rel>; HTML5 allows rel="up up" as exception, but we don't
-copy that requirement here. -->
+<!-- xmlns:*="" typeof="" property="" content="" rel=""
+<https://support.google.com/webmasters/answer/146898> -->
+<!-- vocab="" typeof="" property=""
+<http://schema.org/docs/datamodel.html> -->
+<!-- property="" <http://ogp.me/> -->
+<!-- RDFa 1.0 + RDFa 1.1
+<http://www.google.com/webmasters/tools/richsnippets> -->
+
+<div class="note memo">
+
+<p>The HTML Standard defines the (conforming) <code
+title>content</code> and <code title>rel</code> attributes for several
+<span>HTML elements</span>.  This requirement does not (or in fact
+cannot) override them in any way.
+
+</div>
 
 </div>
 
@@ -2652,12 +2663,14 @@ is incompatible with them.
 <dd><a href="#handler-ontouchend"><code>ontouchend</code></a>
 <dd><a href="#handler-ontouchmove"><code>ontouchmove</code></a>
 <dd><a href="#handler-ontouchstart"><code>ontouchstart</code></a>
+<dd><a href="#attr-prefix"><code>prefix</code></a>
 <dd><a href="#attr-property"><code>property</code></a>
 <dd><a href="#attr-rel"><code>rel</code></a>
 <dd><a href="#attr-resource"><code>resource</code></a>
 <dd><a href="#attr-rev"><code>rev</code></a>
 <dd><a href="#attr-typeof"><code>typeof</code></a>
 <dd><a href="#attr-unselectable"><code>unselectable</code></a>
+<dd><a href="#attr-vocab"><code>vocab</code></a>
 
 <dt>The <code>a</code> element
 
@@ -3544,6 +3557,12 @@ href="http://www.w3.org/MarkUp/2010/ED-xhtml2-20100306/">XHTML<sup>TM</sup>
 Epperson, Masayasu Ishikawa, Shane McCarron, Ann Navarro, Steven
 Pemberton, W3C Editor's Draft, <time datetime=2010-03-06>6 March
 2010</time>.
+
+<dt id=ref-XHTMLRDFA11>XHTMLRDFA11
+
+<dd><cite><a href="http://www.w3.org/TR/xhtml-rdfa/">XHTML+RDFa
+1.1</a></cite>, Shane McCarron, W3C Recommendation, <time
+datetime=2012-06-07>7 June 2012</time>.
 
 </dl>
 
