@@ -612,8 +612,8 @@ says there is <nobr height>, but maybe it is wrong),
 optional <a href=#valid-non-negative-integer>valid non-negative integer</a> followed by a U+002A
 <code class=charname>ASTERISK</code> character (*).<!-- HTML4 -->
 
-</p><p>The <code>pre</code> element's <code id=attr-pre-width title=attr-pre-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <span>non-negative integer</span>.<!--
-HTML4 -->
+</p><p>The <code>pre</code> element's <code id=attr-pre-width title=attr-pre-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
+integer</a>.<!-- HTML4/HTMLPreElement -->
 
 </p><p>The <code>hr</code> element's <code id=attr-hr-size title=attr-hr-size>size</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>.
 
@@ -1159,8 +1159,8 @@ attributes of <code>a</code>, <code>applet</code>, <code>embed</code>,
 and <code>img</code> elements in the document, except that use of the
 <code title=attr-objects-name>name</code> attributes for these
 elements are always non‐conforming.  (Use of the <code title=attr-a-name>name</code> attribute for the <code>a</code> element
-is sometimes <i>obsolete but conforming</i> according to Web
-Applications 1.0.)<!-- HTML Standard UA reqs
+is sometimes <i>obsolete but conforming</i> according to HTML
+Standard.)<!-- HTML Standard UA reqs
 e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
 HTML Standard obsolete, HTML4 --><!-- There was <layer name> according
 to <http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> -->
@@ -1963,16 +1963,6 @@ element applies only to <code>input</code> elements whose <code title=attr-input
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>;
 type=text.  -->
 
-</p><p>The <code title=attr-input-type>type</code> attribute of the
-<code>input</code> element <em class=rfc2119>MUST</em> be treated as
-if there is an additional keyword <code id=attr-input-type-quote-keyword title=attr-input-type-quote-keyword>quote</code> <cite class="bibref
-informative">[<a href=#ref-IMODE>IMODE</a>]</cite>, which is mapped
-to the <span title=attr-input-type-quote>Quote</span> state.  This
-keyword is non‐conforming.  For the purpose of conformance checking,
-the <span title=attr-input-type-quote>Quote</span> state <em class=rfc2119>MUST</em> be treated as equivalent to the <span title=attr-input-type-reset>Reset Button</span> state.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>
--->
-
 </p></div>
 
 <div class=section>
@@ -2561,10 +2551,6 @@ is incompatible with them.
 </dd><dd><a href=#attr-volume><code>volume</code></a>
 </dd><dd><a href=#attr-vrml><code>vrml</code></a>
 </dd><dd><a href=#attr-vspace><code>vspace</code></a>
-
-</dd><dt>The <code>input</code> element's <code title=attr-input-type>type</code> attribute value
-
-</dt><dd><a href=#attr-input-type-quote-keyword><code>quote</code></a>
 
 </dd><dt>The <code>keygen</code> element
 
