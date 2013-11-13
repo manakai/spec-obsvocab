@@ -324,8 +324,6 @@ define underlying terms.
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#resolve-a-url><dfn id=resolve-a-url>resolve a URL</dfn></a>,
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#url-scheme><dfn id=url-scheme title=url-scheme>&lt;scheme&gt;</dfn></a>,
-
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-e-mail-address><dfn id=valid-e-mail-address>valid e-mail address</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-pixel-length-property><dfn id=maps-to-the-pixel-length-property>maps to the pixel length property</dfn></a>,
@@ -1066,11 +1064,7 @@ attribute</a>.<!-- HTML4 -->
 
 <p>If <code id=attr-a-telbook title=attr-a-telbook>telbook</code> or
 <code id=attr-a-kana title=attr-a-kana>kana</code> attribute of an
-<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  If <code title=attr-a-telbook>telbook</code> or <code title=attr-a-kana>kana</code> attribute is specified, the
-<code>a</code> element <em class=rfc2119>MUST</em> have its <code title=attr-hyperlink-href>href</code> attribute specified and its
-value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute URL</a>
-whose <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII
-case-insensitive">ASCII case-insensitively</a> matches to <code title=tel:>tel</code>, <code title=tel-av:>tel-av</code>, or <code title=mailto:>mailto</code>.<!--
+<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel.html>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel-av.html>
 - telbook cannot contain emoji symbols; kana can only contain
@@ -1080,26 +1074,16 @@ halfwidth katakana characters; they have length constraint -->
 attribute of an <code>a</code> element <cite class="bibref
 informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its
 value <em class=rfc2119>MUST</em> be a <a href=#valid-e-mail-address>valid e-mail
-address</a>.  If <code title=attr-a-email>email</code> attribute is
-specified, the <code>a</code> element <em class=rfc2119>MUST</em> have
-its <code title=attr-hyperlink-href>href</code> attribute specified
-and its value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute
-URL</a> whose <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a> matches
-to <code title=tel:>tel</code> or <code title=tel-av:>tel-av</code>.<!--
+address</a>.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel.html>,
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel-av.html>
 - it has length constraint -->
 
 </p><p>If the <code id=attr-a-memoryname title=attr-a-memoryname>memoryname</code> attribute of an <code>a</code>
 element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a string whose length is greater than two
-(2).  The attribute value <em class=rfc2119>MUST</em> contain a <code class=charname>U+002D HYPHEN-MINUS</code> character (-) in the middle.
-If <code title=attr-a-memoryname>memoryname</code> attribute is
-specified, the <code>a</code> element <em class=rfc2119>MUST</em> have
-its <code title=attr-hyperlink-href>href</code> attribute specified
-and its value <em class=rfc2119>MUST</em> be an <a href=#absolute-url>absolute
-URL</a> whose <a href=#url-scheme title=url-scheme>&lt;scheme&gt;</a> <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a> matches
-to <code title=tel:>tel</code> or <code title=mailto:>mailto</code>.<!-- Softbank 3.9.1.; Kana-or-kanji
-name, followed by a "-", followed by katakana name -->
+(2).  The attribute value <em class=rfc2119>MUST</em> contain a <code class=charname>U+002D HYPHEN-MINUS</code> character (-) in the
+middle.<!-- Softbank 3.9.1.; Kana-or-kanji name, followed by a "-",
+followed by katakana name -->
 
 </p></div>
 
