@@ -173,7 +173,7 @@ HTML Standard rendering -->
 
 </div>
 
-<div class=section>
+<div class=section id=history>
 <h3>Stability of this document</h3>
 
 <p class=section-info><em>This section is non-normative.</em>
@@ -499,7 +499,7 @@ attribute</span>.<!-- HTML4 -->
 <div class=section>
 <h4>Tables</h4>
 
-<p>If the <code title=attr-tdth-abbr id=attr-tdth-abbr>scope</code>
+<p>If the <code title=attr-tdth-abbr id=attr-tdth-abbr>abbr</code>
 attribute of a <code>td</code> element is present, its value <em
 class=rfc2119>MUST</em> be a syntactically valid value of the <code
 title=attr-th-abbr>abbr</code> attribute of the <code>th</code>
@@ -548,15 +548,20 @@ allowed. <http://msdn.microsoft.com/en-us/library/ms534135%28VS.85%29.aspx>
 (|infinite| is not part of the langauge (au, emobile, and softbank
 allows it and disallow -1).)  -->
 
-<p>Attributes <code title=attr-marquee-behavior
-id=attr-marquee-behavior>behavior</code> and <code
+<p>Attributes <a
+href="http://www.whatwg.org/specs/web-apps/current-work/#attr-marquee-behavior"><code
+title=attr-marquee-behavior
+id=attr-marquee-behavior>behavior</code></a> and <a
+href="http://www.whatwg.org/specs/web-apps/current-work/#attr-marquee-direction"><code
 title=attr-marquee-direction
-id=attr-marquee-direction>direction</code> of the <code>marquee</code>
-element are <span title="enumerated attribute">enumerated
-attributes</span>.  Attribute <code title=attr-marquee-truespeed
-id=attr-marquee-truespeed>truespeed</code> of the <code>marquee</code>
-element is a <span>boolean attribute</span>.<!-- Normatively defined
-in HTML Standard - HTML5 obsolete
+id=attr-marquee-direction>direction</code></a> of the
+<code>marquee</code> element are <span title="enumerated
+attribute">enumerated attributes</span>.  Attribute <a
+href="http://www.whatwg.org/specs/web-apps/current-work/#attr-marquee-truespeed"><code
+title=attr-marquee-truespeed
+id=attr-marquee-truespeed>truespeed</code></a> of the
+<code>marquee</code> element is a <span>boolean attribute</span>.<!--
+Normatively defined in HTML Standard - HTML5 obsolete
 <http://www.whatwg.org/specs/web-apps/current-work/complete.html#marquee>
 -->
 
@@ -1035,36 +1040,14 @@ conforming.<!-- HTML Standard rendering, HTML4,
 
 <p>The <span>content model</span> of <code id=acronym>acronym</code>,
 <code id=big>big</code>, <code id=blink>blink</code>, <code
-id=nobr>nobr</code>, <code id=rb>rb</code>, <code
-id=strike>strike</code>, and <code id=tt>tt</code> elements are same
-as the <code>span</code> element.<!-- HTML Standard parsing, HTML
-Standard rendering, HTML Standard obsolete, nobr
+id=nobr>nobr</code>, <code id=strike>strike</code>, and <code
+id=tt>tt</code> elements are same as the <code>span</code>
+element.<!-- HTML Standard parsing, HTML Standard rendering, HTML
+Standard obsolete, nobr
 <http://web.archive.org/web/20020607005007/http://wp.netscape.com/home/services_docs/html-extensions.html>,
 blink
 <http://web.archive.org/web/20030610040547/devedge.netscape.com/library/manuals/1998/htmlguide/tags6.html#1595094>
 -->
-
-<div class=section>
-<h4>Ruby</h4>
-
-<p>If the <code title=attr-rt-rbspan id=attr-rt-rbspan>rbspan</code>
-attribute <cite class="bibref informative">[<a
-href="#ref-RUBY">RUBY</a>]</cite> of an <code>rt</code> element is
-present, its value <em class=rfc2119>MUST</em> be a <span>valid
-non-negative integer</span> that represents a number greater than zero
-(0).<!-- RUBY -->
-
-<p>The <span>content model</span> of the <code id=rbc>rbc</code>
-element <cite class="bibref informative">[<a
-href="#ref-RUBY">RUBY</a>]</cite> is one or more <code>rb</code>
-elements.<!-- RUBY -->
-
-<p>The <span>content model</span> of the <code id=rtc>rtc</code>
-element <cite class="bibref informative">[<a
-href="#ref-RUBY">RUBY</a>]</cite> is one or more <code>rt</code>
-elements.<!-- RUBY -->
-
-</div>
 
 <div class=section>
 <h4>The <code>font</code> element</h4>
@@ -2455,57 +2438,33 @@ override it in any way.
 <div class=section>
 <h2>Elements and attributes not convered by this specification</h2>
 
-<p>Elements and attributes defined by the following specifications are
-not included in this specification, because they have not been (or are
-no longer) implemented such that validation does not help anyone:
+<p class=section-info><em>This section is non-normative.</em>
+
+<p>Following features are not included in this specification, as they
+are not implemented by current Web browsers such that checking against
+them in validators will not help anyone:
 
 <ul>
 
-<li>Historical Internet Drafts and Working Drafts of HTML, including
-HTML+ <cite class="bibref informative">[<a
-href="#ref-HTMLPLUS">HTMLPLUS</a>]</cite> and HTML 3.0 <cite
-class="bibref informative">[<a href="#ref-HTML30">HTML30</a>]</cite>
+<li>Features specified in historical drafts of HTML, including but not
+limited to: HTML+ <cite class="bibref informative">[<a
+href="#ref-HTMLPLUS">HTMLPLUS</a>]</cite>, HTML 3.0 <cite
+class="bibref informative">[<a href="#ref-HTML30">HTML30</a>]</cite>,
+RFC 2659 <cite class="bibref informative">[<a
+href="#ref-RFC2659">RFC2659</a>]</cite>, and XHTML Access Module <cite
+class="bibref informative">[<a href="#ref-ACCESS">ACCESS</a>]</cite>.
 
-<li>RFC 2659 <cite class="bibref informative">[<a
-href="#ref-RFC2659">RFC2659</a>]</cite>
+<li>Historical ruby elements which had only been implemented by some
+browser extensions, i.e. <code>rb</code>, <code>rbc</code>, and
+<code>rtc</code> <cite class="bibref informative">[<a
+href="#ref-RUBY">RUBY</a>]</cite>.
 
-<li>XHTML 2.0 which defines elements and attributes in namespaces
-<code title>http://www.w3.org/2002/06/xhtml2</code>, <code
+<li>Features specified in XHTML 2.0 drafts, including features in
+namespaces <code title>http://www.w3.org/2002/06/xhtml2</code>, <code
 title>http://www.w3.org/2002/06/xhtml2/</code>, or the <span>HTML
 namespace</span> <cite class="bibref informative">[<a
 href="#ref-XHTML2">XHTML2</a>]</cite> <cite class="bibref
-informative">[<a href="#ref-XHTML2ED">XHTML2ED</a>]</cite>
-
-<li>XHTML Access Module <cite class="bibref informative">[<a
-href="#ref-ACCESS">ACCESS</a>]</cite>
-
-<li>Any other informal proposals
-
-</ul>
-
-<p>For the same reason, following features are not included in this
-specification:
-
-<ul>
-
-<li>Proprietary elements and attributes for WebTV, WebExplorer, mosaic
-variants, <a
-href="http://developer.emnet.ne.jp/index.html">EMOBILE</a>'s browser,
-and/or authoring tools.
-
-<li>Proprietary elements and attributes for earlier generations of
-Japanese mobile phones (wihch are no longer in use).
-
-<li>The <code>nextid</code> element.
-
-<li>Elements <code>multicol</code>, <code>spacer</code>,
-<code>layer</code>, <code>ilayer</code>, and <code>nolayer</code>.
-
-<li>Elements <code>image</code> and <code>isindex</code>.
-
-<li>The <code>x-ms-webview</code> element<!--
-<http://msdn.microsoft.com/en-us/library/windows/apps/dn301831.aspx>
--->.
+informative">[<a href="#ref-XHTML2ED">XHTML2ED</a>]</cite>.
 
 <li>Elements and attributes that had been defined in earlier revisions
 of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
@@ -2521,36 +2480,62 @@ repetition template and data template features.
 
 <li>Attributes in the <span>HTML namespace</span>.
 
-</ul>
+<li>Proprietary elements and attributes implemented in WebTV,
+WebExplorer, various Mosaic variants, <a
+href="http://developer.emnet.ne.jp/index.html">EMOBILE</a>'s browser,
+and/or authoring tools.
 
-<p>Attributes <code title=attr-sdaform>sdaform</code>, <code
-title=attr-sdapref>sdapref</code>, and <code
+<li>Proprietary elements and attributes implemented by browsers of
+earlier generations of Japanese mobile phones (which are no longer in
+use).
+
+<li>The <code>nextid</code> element.
+
+<li>Elements <code>multicol</code>, <code>spacer</code>,
+<code>layer</code>, <code>ilayer</code>, and <code>nolayer</code>.
+
+<li>Elements <code>image</code> and <code>isindex</code>.
+
+<li>The <code>x-ms-webview</code> element<!--
+<http://msdn.microsoft.com/en-us/library/windows/apps/dn301831.aspx>
+-->.
+
+<li>Attributes <code title=attr-sdaform>sdaform</code>, <code
+title=attr-sdapref>sdapref</code>, <code
 title=attr-sdasuff>sdasuff</code> <cite class="bibref informative">[<a
 href="#ref-HTML20">HTML20</a>]</cite> <cite class="bibref
-informative">[<a href="#ref-HTML2x">HTML2x</a>]</cite> are not real
-attributes and therefore not included in this specification.
-
-<p>Attributes <code title=attr-htnames>htnames</code>, <code
+informative">[<a href="#ref-HTML2x">HTML2x</a>]</cite>, <code
+title=attr-htnames>htnames</code>, <code
 title=attr-htsupp>htsupp</code>, and <code
 title=attr-htign>htign</code> <cite class="bibref informative">[<a
-href="#ref-M12N11">M12N11</a>]</cite> are not real attributes and
-therefore not included in this specification.
+href="#ref-M12N11">M12N11</a>]</cite>, which are not real attributes
+but theoretical SGML techniques.
 
-<p>The <code>server</code> element <cite class="bibref
-informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite> is not an
-<span title="HTML elements">HTML element</span>.<!--
+<li>The <code>server</code> element <cite class="bibref
+informative">[<a href="#ref-DEVEDGE">DEVEDGE</a>]</cite><!--
 <http://web.archive.org/web/20030610034441/devedge.netscape.com/library/manuals/1998/htmlguide/tags13.html#1324086>
---> The <code title=attr-runat>runat</code> attribute is not an
-attribute of the HTML language.
+--> and the <code title=attr-runat>runat</code> attribute, which are
+features of server-side template languages and not part of the HTML
+language.
 
-<p>Conditional comments, the <a
+<li>Features not compatible with current standard HTML parsing rules,
+including conditional comments, the <a
 href="http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx"><code>IMPORT</code>
 processing instruction</a>, <code>comment</code> and <code>xml</code>
 elements, <a
 href="http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx">namespace
 syntax</a>, VML, and HTML+TIME <cite class="bibref informative">[<a
-href="#ref-MSDN">MSDN</a>]</cite> are not included, as the HTML syntax
-is incompatible with them.
+href="#ref-MSDN">MSDN</a>]</cite>.
+
+</ul>
+
+<div class="note memo">
+
+<p>Some of features listed in this section were defined in this
+specification but <a href="#history">dropped as described in an
+earlier section</a>.
+
+</div>
 
 </div>
 
@@ -3113,22 +3098,6 @@ is incompatible with them.
 <dd><a href="#attr-br-clear"><code>clear</code></a>
 <dd><a href="#attr-pre-width"><code>width</code></a>
 <dd><a href="#attr-pre-wrap"><code>wrap</code></a>
-
-<dt>The <a href="#rb"><code>rb</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <a href="#rbc"><code>rbc</code></a> element
-
-<dd>No element-specific attribute.
-
-<dt>The <code>rt</code> element
-
-<dd><a href="#attr-rt-rbspan"><code>rbspan</code></a>
-
-<dt>The <a href="#rtc"><code>rtc</code></a> element
-
-<dd>No element-specific attribute.
 
 <dt>The <code>script</code> element
 
