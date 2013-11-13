@@ -1106,6 +1106,15 @@ reference</span>
 <http://www.whatwg.org/specs/web-apps/current-work/#valid-hash-name-reference>
 -->
 
+<p>The <code title=attr-x-ms-format-detection
+id=attr-x-ms-format-detection>x-ms-format-detection</code> attribute
+of <span>HTML elements</span> <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite> is <span>enumerated attribute</span>
+with keywords <code>all</code>, <code>none</code>, and
+<code>phone</code>.<!-- IE11
+<http://msdn.microsoft.com/en-us/library/ie/dn337007(v=vs.85).aspx>
+-->
+
 <div class=section>
 <h4>Link destinations</h4>
 
@@ -2494,6 +2503,10 @@ Japanese mobile phones (wihch are no longer in use).
 
 <li>Elements <code>image</code> and <code>isindex</code>.
 
+<li>The <code>x-ms-webview</code> element<!--
+<http://msdn.microsoft.com/en-us/library/windows/apps/dn301831.aspx>
+-->.
+
 <li>Elements and attributes that had been defined in earlier revisions
 of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
 then dropped, including but not limited to: attributes <code
@@ -2619,6 +2632,7 @@ is incompatible with them.
 <dd><a href="#attr-typeof"><code>typeof</code></a>
 <dd><a href="#attr-unselectable"><code>unselectable</code></a>
 <dd><a href="#attr-vocab"><code>vocab</code></a>
+<dd><a href="#attr-x-ms-format-detection"><code>x-ms-format-detection</code></a>
 
 <dt>The <code>a</code> element
 

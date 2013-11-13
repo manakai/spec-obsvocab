@@ -975,6 +975,13 @@ reference</span>
 <http://www.whatwg.org/specs/web-apps/current-work/#valid-hash-name-reference>
 -->
 
+</p><p>The <code id=attr-x-ms-format-detection title=attr-x-ms-format-detection>x-ms-format-detection</code> attribute
+of <a href=#html-elements>HTML elements</a> <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is <a href=#enumerated-attribute>enumerated attribute</a>
+with keywords <code>all</code>, <code>none</code>, and
+<code>phone</code>.<!-- IE11
+<http://msdn.microsoft.com/en-us/library/ie/dn337007(v=vs.85).aspx>
+-->
+
 </p><div class=section>
 <h4 id=link-destinations><span class=secno>3.8.1 </span>Link destinations</h4>
 
@@ -2040,6 +2047,10 @@ Japanese mobile phones (wihch are no longer in use).
 
 </li><li>Elements <code>image</code> and <code>isindex</code>.
 
+</li><li>The <code>x-ms-webview</code> element<!--
+<http://msdn.microsoft.com/en-us/library/windows/apps/dn301831.aspx>
+-->.
+
 </li><li>Elements and attributes that had been defined in earlier revisions
 of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
 then dropped, including but not limited to: attributes <code title=attr-irrlevant>irrelevant</code>, <code title=attr-active>active</code>, <code title=attr-command-default>default</code>, <code title=attr-menu-autosubmit>autosubmit</code>, the <code title="">cite</code> attribute of some sectioning elements, elements
@@ -2151,6 +2162,7 @@ is incompatible with them.
 </dd><dd><a href=#attr-typeof><code>typeof</code></a>
 </dd><dd><a href=#attr-unselectable><code>unselectable</code></a>
 </dd><dd><a href=#attr-vocab><code>vocab</code></a>
+</dd><dd><a href=#attr-x-ms-format-detection><code>x-ms-format-detection</code></a>
 
 </dd><dt>The <code>a</code> element
 
