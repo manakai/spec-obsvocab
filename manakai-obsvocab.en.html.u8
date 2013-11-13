@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 12 November 2013</h2>
+<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 13 November 2013</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -523,14 +523,7 @@ attribute</a>.<!-- HTML4 -->
 <div class=section>
 <h4 id=tables><span class=secno>3.2.2 </span>Tables</h4>
 
-<p>If the <code id=attr-table-cols title=attr-table-cols>cols</code>
-attribute <cite class="bibref informative">[<a href=#ref-RFC1942>RFC1942</a>]</cite> of a <code>table</code>
-element is present, its value <em class=rfc2119>MUST</em> be a
-<a href=#valid-non-negative-integer>valid non-negative integer</a>.<!-- RFC1942,
-<http://web.archive.org/web/20030805031411/devedge.netscape.com/library/manuals/1998/htmlguide/tags9.html#1770509>,
-<http://msdn.microsoft.com/en-us/library/ms533583%28VS.85%29.aspx> -->
-
-</p><p>If the <code id=attr-tdth-abbr title=attr-tdth-abbr>scope</code>
+<p>If the <code id=attr-tdth-abbr title=attr-tdth-abbr>scope</code>
 attribute of a <code>td</code> element is present, its value <em class=rfc2119>MUST</em> be a syntactically valid value of the <code title=attr-th-abbr>abbr</code> attribute of the <code>th</code>
 element.
 
@@ -1453,31 +1446,6 @@ or the <code title=attr-input-src>src</code> attribute of the
 element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.<!-- Softbank
 3.9.1., 3.12.2. -->
 
-<!-- There was <img controls> according to
-<http://www.blooberry.com/indexdot/html/tagpages/i/image.htm> -->
-
-</p><p>The <code id=attr-media-autobuffer title=attr-media-autobuffer>autobuffer</code> attribute of
-<code>audio</code> and <code>video</code> elements is a <a href=#boolean-attribute>boolean
-attribute</a>.<!-- HTML5 dropped -->
-
-</p><p>If <code id=attr-media-start title=attr-media-start>start</code>,
-<code id=attr-media-end title=attr-media-end>end</code>, <code id=attr-media-loopstart title=attr-media-loopstart>loopstart</code>,
-or <code id=attr-media-loopend title=attr-media-loopend>loopend</code>
-attribute of <code>audio</code> and <code>video</code> elements is
-present, its value <em class=rfc2119>MUST</em> be a string consist of
-one or more characters in the range U+0030 <code class=charname>DIGIT
-ZERO</code> (0) to U+0039 <code class=charname>DIGIT NINE</code> (9),
-and U+003A <code>COLON</code>.<!-- HTML5 dropped -->
-
-</p><p>If the <code id=attr-media-playcount title=attr-media-playcount>playcount</code> attribute of
-<code>audio</code> and <code>video</code> elements is present, its
-value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a>.<!--
-HTML5 dropped -->
-
-</p><p>If the <code id=attr-source-pixelratio title=attr-source-pixelratio>pixelratio</code> attribute of the
-<code>source</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-floating-point-number>valid floating point number</a>
-that represents a positive number.<!-- HTML5 dropped -->
-
 </p></div>
 
 <div class=section>
@@ -2243,15 +2211,6 @@ is incompatible with them.
 
 </dt><dd><a href=#attr-area-nohref><code>nohref</code></a>
 
-</dd><dt>The <code>audio</code> element
-
-</dt><dd><a href=#attr-media-autobuffer><code>autobuffer</code></a>
-</dd><dd><a href=#attr-media-end><code>end</code></a>
-</dd><dd><a href=#attr-media-loopend><code>loopend</code></a>
-</dd><dd><a href=#attr-media-loopstart><code>loopstart</code></a>
-</dd><dd><a href=#attr-media-playcount><code>playcount</code></a>
-</dd><dd><a href=#attr-media-start><code>start</code></a>
-
 </dd><dt>The <a href=#basefont><code>basefont</code></a> element
 
 </dt><dd><a href=#attr-font-color><code>color</code></a>
@@ -2702,10 +2661,6 @@ is incompatible with them.
 </dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
 </dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
-</dd><dt>The <code>source</code> element
-
-</dt><dd><a href=#attr-source-pixelratio><code>pixelratio</code></a>
-
 </dd><dt>The <code>span</code> element
 
 </dt><dd><a href=#attr-datafld><code>datafld</code></a>
@@ -2728,7 +2683,6 @@ is incompatible with them.
 </dd><dd><a href=#attr-table-cellborder><code>cellborder</code></a>
 </dd><dd><a href=#attr-table-cellpadding><code>cellpadding</code></a>
 </dd><dd><a href=#attr-table-cellspacing><code>cellspacing</code></a>
-</dd><dd><a href=#attr-table-cols><code>cols</code></a>
 </dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
 </dd><dd><a href=#attr-table-datapagesize><code>datapagesize</code></a>
 </dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
@@ -2848,15 +2802,6 @@ is incompatible with them.
 </dt><dd><a href=#attr-align><code>align</code></a>
 </dd><dd><a href=#attr-compact><code>compact</code></a>
 </dd><dd><a href=#attr-ul-type><code>type</code></a>
-
-</dd><dt>The <code>video</code> element
-
-</dt><dd><a href=#attr-media-autobuffer><code>autobuffer</code></a>
-</dd><dd><a href=#attr-media-end><code>end</code></a>
-</dd><dd><a href=#attr-media-loopend><code>loopend</code></a>
-</dd><dd><a href=#attr-media-loopstart><code>loopstart</code></a>
-</dd><dd><a href=#attr-media-playcount><code>playcount</code></a>
-</dd><dd><a href=#attr-media-start><code>start</code></a>
 
 </dd><dt>The <a href=#xmp><code>xmp</code></a> element
 
