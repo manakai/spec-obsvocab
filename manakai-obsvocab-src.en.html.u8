@@ -454,9 +454,10 @@ cannot) override them in any way.
 <div class=section>
 <h3>Flow content</h3>
 
-<p>The <span>content model</span> of the <code id=center>center</code>
-element is same as the <code>div</code> element.<!-- HTML Standard
-parsing, HTML Standard rendering -->
+<p>The <span>content model</span> of the <code
+id=center>center</code><!-- HTML Standard parsing, HTML Standard
+rendering --> and <code id=multicol>multicol</code><!-- HTML Standard
+rendering --> elements is same as the <code>div</code> element.
 
 <p>The <span>content model</span> of <code id=xmp>xmp</code>, <code
 id=listing>listing</code>, and <code id=plaintext>plaintext</code>
@@ -2465,8 +2466,8 @@ use).
 
 <li>The <code>nextid</code> element.
 
-<li>Elements <code>multicol</code>, <code>spacer</code>,
-<code>layer</code>, <code>ilayer</code>, and <code>nolayer</code>.
+<li>Elements <code>spacer</code>, <code>layer</code>,
+<code>ilayer</code>, and <code>nolayer</code>.
 
 <li>Elements <code>image</code> and <code>isindex</code>.
 
@@ -3008,6 +3009,10 @@ earlier section</a>.
 <dt>The <code>meta</code> element
 
 <dd><a href="#attr-meta-scheme"><code>scheme</code></a>
+
+<dt>The <a href="#multicol"><code>multicol</code></a> element
+
+<dd>No element-specific attribute.
 
 <dt>The <a href="#nobr"><code>nobr</code></a> element
 

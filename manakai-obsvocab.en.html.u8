@@ -480,9 +480,9 @@ cannot) override them in any way.
 <div class=section>
 <h3 id=flow-content><span class=secno>3.2 </span>Flow content</h3>
 
-<p>The <a href=#content-model>content model</a> of the <code id=center>center</code>
-element is same as the <code>div</code> element.<!-- HTML Standard
-parsing, HTML Standard rendering -->
+<p>The <a href=#content-model>content model</a> of the <code id=center>center</code><!-- HTML Standard parsing, HTML Standard
+rendering --> and <code id=multicol>multicol</code><!-- HTML Standard
+rendering --> elements is same as the <code>div</code> element.
 
 </p><p>The <a href=#content-model>content model</a> of <code id=xmp>xmp</code>, <code id=listing>listing</code>, and <code id=plaintext>plaintext</code>
 elements are <i>text</i>.<!-- HTML Standard parsing, HTML Standard
@@ -2005,8 +2005,8 @@ use).
 
 </li><li>The <code>nextid</code> element.
 
-</li><li>Elements <code>multicol</code>, <code>spacer</code>,
-<code>layer</code>, <code>ilayer</code>, and <code>nolayer</code>.
+</li><li>Elements <code>spacer</code>, <code>layer</code>,
+<code>ilayer</code>, and <code>nolayer</code>.
 
 </li><li>Elements <code>image</code> and <code>isindex</code>.
 
@@ -2538,6 +2538,10 @@ earlier section</a>.
 </dd><dt>The <code>meta</code> element
 
 </dt><dd><a href=#attr-meta-scheme><code>scheme</code></a>
+
+</dd><dt>The <a href=#multicol><code>multicol</code></a> element
+
+</dt><dd>No element-specific attribute.
 
 </dd><dt>The <a href=#nobr><code>nobr</code></a> element
 
