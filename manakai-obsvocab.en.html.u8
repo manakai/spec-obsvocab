@@ -848,25 +848,13 @@ attribute of a <code>col</code>, <code>colgroup</code> <cite class="bibref infor
 <code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
 <code>tr</code>, <code>th</code>, or <code>td</code> element is
 present, its value <em class=rfc2119>MUST</em> be a string whose
-length is one (1), i.e. a character.<!-- HTML4 --> If the <code id=attr-tables-ch title=attr-tables-ch>ch</code> attribute of a
-<code>col</code>, <code>colgroup</code> <cite class="bibref
-informative">[IE]</cite>, <code>thead</code>, <code>tbody</code>,
-<code>tfoot</code>, <code>tr</code>, <code>th</code>, or
-<code>td</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a string whose length is one (1), i.e. a
-character..<!--
-<http://msdn.microsoft.com/en-us/library/ms533552%28VS.85%29.aspx> -->
+length is one (1), i.e. a character.<!-- HTML4 -->
 
 </p><p>If the <code id=attr-tables-charoff title=attr-tables-charoff>charoff</code> attribute of a <code>col</code>,
 <code>colgroup</code> <cite class="bibref informative">[<a href=#ref-HTML4>HTML4</a>]</cite>, <code>thead</code>,
 <code>tbody</code>, <code>tfoot</code>, <code>tr</code>,
 <code>th</code>, or <code>td</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension value</a>.<!--
-HTML4 --> If the <code id=attr-tables-choff title=attr-tables-choff>choff</code> attribute of a <code>col</code>,
-<code>colgroup</code> <cite class="bibref informative">[IE]</cite>,
-<code>thead</code>, <code>tbody</code>, <code>tfoot</code>,
-<code>tr</code>, <code>th</code>, or <code>td</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is
-present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid
-dimension value</a>.<!--
-<http://msdn2.microsoft.com/en-us/library/ms533557.aspx> -->
+HTML4 -->
 
 </p></div>
 
@@ -2232,20 +2220,16 @@ earlier section</a>.
 </dd><dt>The <code>col</code> element
 
 </dt><dd><a href=#attr-tables-align><code>align</code></a>
-</dd><dd><a href=#attr-tables-ch><code>ch</code></a>
 </dd><dd><a href=#attr-tables-char><code>char</code></a>
 </dd><dd><a href=#attr-tables-charoff><code>charoff</code></a>
-</dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-tables-valign><code>valign</code></a>
 </dd><dd><a href=#attr-col-width><code>width</code></a>
 
 </dd><dt>The <code>colgroup</code> element
 
 </dt><dd><a href=#attr-tables-align><code>align</code></a>
-</dd><dd><a href=#attr-tables-ch><code>ch</code></a>
 </dd><dd><a href=#attr-tables-char><code>char</code></a>
 </dd><dd><a href=#attr-tables-charoff><code>charoff</code></a>
-</dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-tables-valign><code>valign</code></a>
 </dd><dd><a href=#attr-colgroup-width><code>width</code></a>
 
@@ -2645,10 +2629,8 @@ earlier section</a>.
 </dt><dd><a href=#attr-tables-align><code>align</code></a>
 </dd><dd><a href=#attr-background><code>background</code></a>
 </dd><dd><a href=#attr-bgcolor><code>bgcolor</code></a>
-</dd><dd><a href=#attr-tables-ch><code>ch</code></a>
 </dd><dd><a href=#attr-tables-char><code>char</code></a>
 </dd><dd><a href=#attr-tables-charoff><code>charoff</code></a>
-</dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-tables-valign><code>valign</code></a>
 
 </dd><dt>The <code>td</code> element
@@ -2661,10 +2643,8 @@ earlier section</a>.
 </dd><dd><a href=#attr-table-bordercolor><code>bordercolor</code></a>
 </dd><dd><a href=#attr-table-bordercolordark><code>bordercolordark</code></a>
 </dd><dd><a href=#attr-table-bordercolorlight><code>bordercolorlight</code></a>
-</dd><dd><a href=#attr-tables-ch><code>ch</code></a>
 </dd><dd><a href=#attr-tables-char><code>char</code></a>
 </dd><dd><a href=#attr-tables-charoff><code>charoff</code></a>
-</dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-tdth-nowrap><code>nowrap</code></a>
 </dd><dd><a href=#attr-td-scope><code>scope</code></a>
@@ -2689,10 +2669,8 @@ earlier section</a>.
 </dt><dd><a href=#attr-tables-align><code>align</code></a>
 </dd><dd><a href=#attr-background><code>background</code></a>
 </dd><dd><a href=#attr-bgcolor><code>bgcolor</code></a>
-</dd><dd><a href=#attr-tables-ch><code>ch</code></a>
 </dd><dd><a href=#attr-tables-char><code>char</code></a>
 </dd><dd><a href=#attr-tables-charoff><code>charoff</code></a>
-</dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-tables-valign><code>valign</code></a>
 
 </dd><dt>The <code>th</code> element
@@ -2704,10 +2682,8 @@ earlier section</a>.
 </dd><dd><a href=#attr-table-bordercolor><code>bordercolor</code></a>
 </dd><dd><a href=#attr-table-bordercolordark><code>bordercolordark</code></a>
 </dd><dd><a href=#attr-table-bordercolorlight><code>bordercolorlight</code></a>
-</dd><dd><a href=#attr-tables-ch><code>ch</code></a>
 </dd><dd><a href=#attr-tables-char><code>char</code></a>
 </dd><dd><a href=#attr-tables-charoff><code>charoff</code></a>
-</dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-tdth-nowrap><code>nowrap</code></a>
 </dd><dd><a href=#attr-tables-valign><code>valign</code></a>
@@ -2718,10 +2694,8 @@ earlier section</a>.
 </dt><dd><a href=#attr-tables-align><code>align</code></a>
 </dd><dd><a href=#attr-background><code>background</code></a>
 </dd><dd><a href=#attr-bgcolor><code>bgcolor</code></a>
-</dd><dd><a href=#attr-tables-ch><code>ch</code></a>
 </dd><dd><a href=#attr-tables-char><code>char</code></a>
 </dd><dd><a href=#attr-tables-charoff><code>charoff</code></a>
-</dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-tables-valign><code>valign</code></a>
 
 </dd><dt>The <code>tr</code> element
@@ -2732,10 +2706,8 @@ earlier section</a>.
 </dd><dd><a href=#attr-table-bordercolor><code>bordercolor</code></a>
 </dd><dd><a href=#attr-table-bordercolordark><code>bordercolordark</code></a>
 </dd><dd><a href=#attr-table-bordercolorlight><code>bordercolorlight</code></a>
-</dd><dd><a href=#attr-tables-ch><code>ch</code></a>
 </dd><dd><a href=#attr-tables-char><code>char</code></a>
 </dd><dd><a href=#attr-tables-charoff><code>charoff</code></a>
-</dd><dd><a href=#attr-tables-choff><code>choff</code></a>
 </dd><dd><a href=#attr-tr-height><code>height</code></a>
 </dd><dd><a href=#attr-tables-valign><code>valign</code></a>
 
