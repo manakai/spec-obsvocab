@@ -2492,6 +2492,23 @@ earlier section</a>.
 </div>
 
 <div class=section>
+<h2>Machine-readable data</h2>
+
+<p class=section-info><em>This section is non-normative.</em>
+
+<p>Some of data for elements and attributes in this specification are
+<a
+href="https://raw.github.com/manakai/data-web-defs/master/data/elements.json">available
+as JSON data in the data-web-defs repository</a> (<a
+href="https://raw.github.com/manakai/data-web-defs/master/doc/elements.txt">documentation</a>).
+
+<p>Test data for validators are also <a
+href="https://github.com/wakaba/tests-web/tree/master/html/validation">available
+in the tests-web repository</a>.
+
+</div>
+
+<div class=section>
 <style scoped>
   .index-list {
     -moz-column-count: 3;
@@ -2501,7 +2518,7 @@ earlier section</a>.
 </style>
 <h2 class=no-num>Index</h2>
 
-<p class=section-info><em>This section is non‐normative.</em>
+<p class=section-info><em>This section is non-normative.</em>
 
 <dl class=index-list>
 
