@@ -284,6 +284,8 @@ define underlying terms.
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#xml-documents><dfn id=xml-documents>XML documents</dfn></a>,
 
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#home-subtree><dfn id=home-subtree>home subtree</dfn></a>,
+
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-integer><dfn id=valid-integer>valid integer</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-floating-point-number><dfn id=valid-floating-point-number>valid floating point number</dfn></a>,
@@ -929,8 +931,8 @@ HTML4 -->
 
 <p>A <dfn id=valid-hash-id-reference>valid hash-ID reference</dfn> to an element of type <var title="">type</var> is a string consisting of a U+0023 <code class=charname>NUMBER SIGN</code> character (#) followed by a string
 which exactly matches the ID of an element with type <var>type</var>
-in the same document.<!-- See also <span>valid hash-name
-reference</span>
+in the same <a href=#home-subtree>home subtree</a>.<!-- See also <span>valid
+hash-name reference</span>
 <http://www.whatwg.org/specs/web-apps/current-work/#valid-hash-name-reference>
 -->
 
@@ -957,10 +959,9 @@ the attribute value.  The length of the attribute value <em class=rfc2119>MUST N
 -->
 
 </p><p>If the <code id=attr-a-ijam title=attr-a-ijam>ijam</code> attribute
-of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element or
-a <a href=#valid-hash-id-reference>valid hash-ID reference</a> to an <code>object</code>
-element.  The <code title=attr-hyperlink-href>href</code> attribute
-<em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ijam>ijam</code> attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
+of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element in
+the same <a href=#home-subtree>home subtree</a> or a <a href=#valid-hash-id-reference>valid hash-ID
+reference</a> to an <code>object</code> element.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ijam>ijam</code> attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
 <code title=attr-a-ijam>ijam</code> attribute <em class=rfc2119>MUST
 NOT</em> be specified.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/object.html#p02>,
@@ -969,8 +970,8 @@ NOT</em> be specified.<!--
 -->
 
 </p><p>If the <code id=attr-a-ista title=attr-a-ista>ista</code> attribute
-of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element.
-The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ista>ista</code> attribute is specified.  The <code title=attr-a-ista>ista</code> attribute <em class=rfc2119>MUST
+of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element in
+the same <a href=#home-subtree>home subtree</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ista>ista</code> attribute is specified.  The <code title=attr-a-ista>ista</code> attribute <em class=rfc2119>MUST
 NOT</em> be specified if the <code title=attr-a-ijam>ijam</code>
 attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
 <code title=attr-a-ista>ista</code> attribute <em class=rfc2119>MUST
@@ -1440,7 +1441,7 @@ Standard obsolete,
 <http://msdn.microsoft.com/en-us/library/ms533709%28VS.85%29.aspx> -->
 
 </p><p>If the <code id=attr-datafld title=attr-datafld>datafld</code>
-attribute of an element code&gt;a, <code>applet</code>,
+attribute of an element <code>a</code>, <code>applet</code>,
 <code>button</code>, <code>div</code>, <code>fieldset</code>,
 <code>frame</code>, <code>iframe</code>, <code>img</code>,
 <code>input</code>, <code>label</code>, <code>legend</code>,
@@ -1507,23 +1508,17 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 <code id=handler-window-onafterprint title=handler-window-onafterprint>onafterprint</code>,
 <code id=handler-window-onbeforeprint title=handler-window-onbeforeprint>onbeforeprint</code>,
 <code id=handler-window-onbeforeunload title=handler-window-onbeforeunload>onbeforeunload</code>,
-<code id=handler-window-onblur title=handler-window-onblur>onblur</code>,
-<code id=handler-window-onerror title=handler-window-onerror>onerror</code>,
-<code id=handler-window-onfocus title=handler-window-onfocus>onfocus</code>,
 <code id=handler-window-onhashchange title=handler-window-onhashchange>onhashchange</code>,
-<code id=handler-window-onload title=handler-window-onload>onload</code>,
 <code id=handler-window-onmessage title=handler-window-onmessage>onmessage</code>,
 <code id=handler-window-onoffline title=handler-window-onoffline>onoffline</code>,
 <code id=handler-window-ononline title=handler-window-ononline>ononline</code>,
 <code id=handler-window-onpagehide title=handler-window-onpagehide>onpagehide</code>,
 <code id=handler-window-onpageshow title=handler-window-onpageshow>onpageshow</code>,
 <code id=handler-window-onpopstate title=handler-window-onpopstate>onpopstate</code>,
-<code id=handler-window-onredo title=handler-window-onredo>onredo</code>,
 <code id=handler-window-onresize title=handler-window-onresize>onresize</code>,
 <code id=handler-window-onstorage title=handler-window-onstorage>onstorage</code>,
-<code id=handler-window-onundo title=handler-window-onundo>onundo</code>, and
-<code id=handler-window-onunload title=handler-window-onunload>onunload</code>.
-<!-- But in fact has no effect if the |frameset| element is not
+and <code id=handler-window-onunload title=handler-window-onunload>onunload</code>.
+<!-- But in fact they have no effect if the |frameset| element is not
 "the body element". -->
 
 </p></div>
@@ -1598,7 +1593,7 @@ is same as the <code>iframe</code> element.
 
 </p><p id=noframes-context>The <code>noframes</code> element <em class=rfc2119>MAY</em> be used as a child of the <code>frameset</code>
 element.  However, it <em class=rfc2119>MUST NOT</em> have more than
-one ancestor <code>noframes</code> elements.
+one ancestor <code>frameset</code> elements.
 
 </p></div>
 
@@ -1619,7 +1614,7 @@ case-insensitive">ASCII case-insensitively</a> equal to
 
 </p><p>If the <code id=attr-script-for title=attr-script-for>for</code>
 attribute of a <code>script</code> element is present, its value <em class=rfc2119>MUST</em> be the <span>ID</span> of an element in the
-same document.<!-- HTML Standard UA reqs,
+same <a href=#home-subtree>home subtree</a>.<!-- HTML Standard UA reqs,
 <http://msdn.microsoft.com/en-us/library/ms533870%28VS.85%29.aspx>.
 HTML4 said this was a URL, but it is wrong. -->
 
@@ -2315,21 +2310,15 @@ earlier section</a>.
 </dd><dd><a href=#handler-window-onafterprint><code>onafterprint</code></a>
 </dd><dd><a href=#handler-window-onbeforeprint><code>onbeforeprint</code></a>
 </dd><dd><a href=#handler-window-onbeforeunload><code>onbeforeunload</code></a>
-</dd><dd><a href=#handler-window-onblur><code>onblur</code></a>
-</dd><dd><a href=#handler-window-onerror><code>onerror</code></a>
-</dd><dd><a href=#handler-window-onfocus><code>onfocus</code></a>
 </dd><dd><a href=#handler-window-onhashchange><code>onhashchange</code></a>
-</dd><dd><a href=#handler-window-onload><code>onload</code></a>
 </dd><dd><a href=#handler-window-onmessage><code>onmessage</code></a>
 </dd><dd><a href=#handler-window-onoffline><code>onoffline</code></a>
 </dd><dd><a href=#handler-window-ononline><code>ononline</code></a>
 </dd><dd><a href=#handler-window-onpagehide><code>onpagehide</code></a>
 </dd><dd><a href=#handler-window-onpageshow><code>onpageshow</code></a>
 </dd><dd><a href=#handler-window-onpopstate><code>onpopstate</code></a>
-</dd><dd><a href=#handler-window-onredo><code>onredo</code></a>
 </dd><dd><a href=#handler-window-onresize><code>onresize</code></a>
 </dd><dd><a href=#handler-window-onstorage><code>onstorage</code></a>
-</dd><dd><a href=#handler-window-onundo><code>onundo</code></a>
 </dd><dd><a href=#handler-window-onunload><code>onunload</code></a>
 </dd><dd><a href=#attr-frameset-rows><code>rows</code></a>
 
