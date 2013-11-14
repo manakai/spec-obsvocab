@@ -799,12 +799,10 @@ attribute</a> with keywords <code title="">left</code>, <code title="">right</co
 rendering -->
 
 </p><p>The <code id=attr-align title=attr-align>align</code> attribute of
-elements <code>address</code>, <code>blockquote</code>,
-<code>dir</code>, <code>li</code>, <code>menu</code>, <code>ol</code>,
-and <code>ul</code> <cite class="bibref informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>, and elements <code>div</code>,
-<code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>,
-<code>h5</code>, <code>h6</code>, and <code>p</code>, is an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">center</code>, and <code title="">justify</code>.<!-- HTML Standard
+elements <code>div</code>, <code>h1</code>, <code>h2</code>,
+<code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>,
+and <code>p</code>, is an <a href=#enumerated-attribute>enumerated attribute</a> with
+keywords <code title="">left</code>, <code title="">right</code>, <code title="">center</code>, and <code title="">justify</code>.<!-- HTML Standard
 rendering -->
 
 </p><p>The <code id=attr-hr-align title=attr-hr-align>align</code>
@@ -896,8 +894,8 @@ attribute of the <code>br</code> element and <code>address</code>,
 <code>plaintext</code>, <code>pre</code>, and <code>xmp</code>
 elements <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an <a href=#enumerated-attribute>enumerated
 attribute</a> with keywords <code title="">none</code>, <code title="">left</code>, <code title="">right</code>, <code title="">all</code>,
-and <code title="">both</code>, where <code title="">both</code> is non‐
-conforming.<!-- HTML Standard rendering, HTML4,
+and <code title="">both</code>, where <code title="">both</code> is
+non-conforming.<!-- HTML Standard rendering, HTML4,
 <http://msdn.microsoft.com/en-us/library/ms533562%28VS.85%29.aspx> -->
 
 </p></div>
@@ -2158,8 +2156,7 @@ earlier section</a>.
 
 </dd><dt>The <code>address</code> element
 
-</dt><dd><a href=#attr-align><code>align</code></a>
-</dd><dd><a href=#attr-br-clear><code>clear</code></a>
+</dt><dd><a href=#attr-br-clear><code>clear</code></a>
 
 </dd><dt>The <a href=#applet><code>applet</code></a> element
 
@@ -2196,10 +2193,6 @@ earlier section</a>.
 </dd><dt>The <a href=#blink><code>blink</code></a> element
 
 </dt><dd>No element-specific attribute.
-
-</dd><dt>The <code>blockquote</code> element
-
-</dt><dd><a href=#attr-align><code>align</code></a>
 
 </dd><dt>The <code>body</code> element
 
@@ -2262,8 +2255,7 @@ earlier section</a>.
 
 </dd><dt>The <a href=#dir><code>dir</code></a> element
 
-</dt><dd><a href=#attr-align><code>align</code></a>
-</dd><dd><a href=#attr-compact><code>compact</code></a>
+</dt><dd><a href=#attr-compact><code>compact</code></a>
 </dd><dd><a href=#attr-li-type><code>type</code></a>
 
 </dd><dt>The <code>div</code> element
@@ -2500,8 +2492,7 @@ earlier section</a>.
 
 </dd><dt>The <code>li</code> element
 
-</dt><dd><a href=#attr-align><code>align</code></a>
-</dd><dd><a href=#attr-li-type><code>type</code></a>
+</dt><dd><a href=#attr-li-type><code>type</code></a>
 
 </dd><dt>The <code>link</code> element
 
@@ -2532,8 +2523,7 @@ earlier section</a>.
 
 </dd><dt>The <code>menu</code> element
 
-</dt><dd><a href=#attr-align><code>align</code></a>
-</dd><dd><a href=#attr-compact><code>compact</code></a>
+</dt><dd><a href=#attr-compact><code>compact</code></a>
 
 </dd><dt>The <code>meta</code> element
 
@@ -2577,8 +2567,7 @@ earlier section</a>.
 
 </dd><dt>The <code>ol</code> element
 
-</dt><dd><a href=#attr-align><code>align</code></a>
-</dd><dd><a href=#attr-compact><code>compact</code></a>
+</dt><dd><a href=#attr-compact><code>compact</code></a>
 
 </dd><dt>The <code>option</code> element
 
@@ -2756,8 +2745,7 @@ earlier section</a>.
 
 </dd><dt>The <code>ul</code> element
 
-</dt><dd><a href=#attr-align><code>align</code></a>
-</dd><dd><a href=#attr-compact><code>compact</code></a>
+</dt><dd><a href=#attr-compact><code>compact</code></a>
 </dd><dd><a href=#attr-ul-type><code>type</code></a>
 
 </dd><dt>The <a href=#xmp><code>xmp</code></a> element
