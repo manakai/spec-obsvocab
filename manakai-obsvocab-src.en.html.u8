@@ -2508,7 +2508,7 @@ in the tests-web repository</a>.
 
 </div>
 
-<div class=section>
+<div class=section id=index>
 <style scoped>
   .index-list {
     -moz-column-count: 3;
