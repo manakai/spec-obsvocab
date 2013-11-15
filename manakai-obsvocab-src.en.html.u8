@@ -2657,6 +2657,10 @@ in the tests-web repository</a>.
 <dd><a href="#attr-bgsound-src"><code>src</code></a>
 <dd><a href="#attr-bgsound-volume"><code>volume</code></a>
 
+<dt>The <a href="#big"><code>big</code></a> element
+
+<dd>No element-specific attribute.
+
 <dt>The <a href="#blink"><code>blink</code></a> element
 
 <dd>No element-specific attribute.
