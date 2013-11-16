@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 15 November 2013</h2>
+<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 16 November 2013</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -2421,11 +2421,9 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-img-localsrc><code>localsrc</code></a>
 </dd><dd><a href=#attr-longdesc><code>longdesc</code></a>
 </dd><dd><a href=#attr-lowsrc><code>lowsrc</code></a>
-</dd><dd><a href=#attr-img-mediaout><code>mediaout</code></a>
 </dd><dd><a href=#attr-objects-name><code>name</code></a>
 </dd><dd><a href=#attr-img-nosave><code>nosave</code></a>
 </dd><dd><a href=#attr-img-oversrc><code>oversrc</code></a>
-</dd><dd><a href=#attr-img-private><code>private</code></a>
 </dd><dd><a href=#attr-start><code>start</code></a>
 </dd><dd><a href=#attr-img-suppress><code>suppress</code></a>
 </dd><dd><a href=#attr-vrml><code>vrml</code></a>
@@ -2552,8 +2550,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-object-declare><code>declare</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
-</dd><dd><a href=#attr-img-mediaout><code>mediaout</code></a>
-</dd><dd><a href=#attr-img-private><code>private</code></a>
 </dd><dd><a href=#attr-object-standby><code>standby</code></a>
 </dd><dd><a href=#attr-vspace><code>vspace</code></a>
 

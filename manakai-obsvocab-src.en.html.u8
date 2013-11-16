@@ -2890,11 +2890,9 @@ in the tests-web repository</a>.
 <dd><a href="#attr-img-localsrc"><code>localsrc</code></a>
 <dd><a href="#attr-longdesc"><code>longdesc</code></a>
 <dd><a href="#attr-lowsrc"><code>lowsrc</code></a>
-<dd><a href="#attr-img-mediaout"><code>mediaout</code></a>
 <dd><a href="#attr-objects-name"><code>name</code></a>
 <dd><a href="#attr-img-nosave"><code>nosave</code></a>
 <dd><a href="#attr-img-oversrc"><code>oversrc</code></a>
-<dd><a href="#attr-img-private"><code>private</code></a>
 <dd><a href="#attr-start"><code>start</code></a>
 <dd><a href="#attr-img-suppress"><code>suppress</code></a>
 <dd><a href="#attr-vrml"><code>vrml</code></a>
@@ -3021,8 +3019,6 @@ in the tests-web repository</a>.
 <dd><a href="#attr-datasrc"><code>datasrc</code></a>
 <dd><a href="#attr-object-declare"><code>declare</code></a>
 <dd><a href="#attr-hspace"><code>hspace</code></a>
-<dd><a href="#attr-img-mediaout"><code>mediaout</code></a>
-<dd><a href="#attr-img-private"><code>private</code></a>
 <dd><a href="#attr-object-standby"><code>standby</code></a>
 <dd><a href="#attr-vspace"><code>vspace</code></a>
 
