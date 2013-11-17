@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 16 November 2013</h2>
+<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 17 November 2013</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -1956,8 +1956,31 @@ them in validators will not help anyone:
 </p><ul>
 
 <li>Features specified in historical drafts of HTML, including but not
-limited to: HTML+ <cite class="bibref informative">[<a href=#ref-HTMLPLUS>HTMLPLUS</a>]</cite>, HTML 3.0 <cite class="bibref informative">[<a href=#ref-HTML30>HTML30</a>]</cite>,
-RFC 2659 <cite class="bibref informative">[<a href=#ref-RFC2659>RFC2659</a>]</cite>, and XHTML Access Module <cite class="bibref informative">[<a href=#ref-ACCESS>ACCESS</a>]</cite>.
+limited to: HTML+ <cite class="bibref informative">[<a href=#ref-HTMLPLUS>HTMLPLUS</a>]</cite> (<code>abstract</code>,
+<code>arg</code>, <code>changed</code>, <code>cmd</code>,
+<code>epilogue</code>, <code>footnote</code>, <code>hide</code>,
+<code>htmlplus</code>, <code>margin</code>, <code>message</code>,
+<code>prologue</code>, <code>quote</code>, <code>removed</code>,
+<code>render</code>, and <code>rev</code> elements), HTML 3.0 <cite class="bibref informative">[<a href=#ref-HTML30>HTML30</a>]</cite>
+(<code>note</code>, <code>fn</code>, <code>banner</code>,
+<code>lh</code>, <code>bodytext</code>, <code>abbrev</code>,
+<code>au</code>, <code>bq</code>, <code>bt</code>,
+<code>credit</code>, <code>fig</code>, <code>figtext</code>,
+<code>person</code>, <code>lang</code>, <code>tab</code>,
+<code>math</code>, <code>above</code>, <code>added</code>,
+<code>array</code>, <code>atop</code>, <code>bar</code>,
+<code>below</code>, <code>box</code>, <code>ddot</code>,
+<code>dot</code>, <code>hat</code>, <code>left</code>,
+<code>of</code>, <code>over</code>, <code>overlay</code>,
+<code>range</code>, <code>right</code>, <code>root</code>,
+<code>row</code>, <code>spot</code>, <code>sqrt</code>,
+<code>tilde</code>, and <code>vec</code> elements),
+<code>pre-html</code>, <code>div1</code>, <code>div2</code>,
+<code>div3</code>, <code>div4</code>, <code>div5</code>, and
+<code>div6</code> elements<!-- ISOHTMLUG -->, RFC 2659 <cite class="bibref informative">[<a href=#ref-RFC2659>RFC2659</a>]</cite>, XHTML Access Module <cite class="bibref informative">[<a href=#ref-ACCESS>ACCESS</a>]</cite>
+(the <code>access</code> element), elements <code>yomi</code>,
+<code>key</code>, <code>tbl</code>, <code>fn-contents</code>, and
+<code>module</code>, and the <code title=attr-instanceof>instanceof</code> attribute.
 
 </li><li>Historical ruby elements which had only been implemented by some
 browser extensions, i.e. <code>rb</code>, <code>rbc</code>, and
@@ -1965,21 +1988,45 @@ browser extensions, i.e. <code>rb</code>, <code>rbc</code>, and
 
 </li><li>Features specified in XHTML 2.0 drafts, including features in
 namespaces <code title="">http://www.w3.org/2002/06/xhtml2</code>, <code title="">http://www.w3.org/2002/06/xhtml2/</code>, or the <a href=#html-namespace>HTML
-namespace</a> <cite class="bibref informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite> <cite class="bibref
-informative">[<a href=#ref-XHTML2ED>XHTML2ED</a>]</cite>.
+namespace</a> (including but not limted to: elements
+<code>blockcode</code>, <code>standby</code>, <code>nl</code>,
+<code>l</code>, <code>h</code>, and <code>separator</code> elements,
+global attributes <code title=attr-active>active</code>, <code title=attr-cite>cite</code>, <code title=attr-coords>coords</code>,
+<code title=attr-datetime>datetime</code>, <code title=attr-edit>edit</code>, <code title=attr-encoding>encoding</code>, <code title=attr-href>href</code>, <code title=attr-hreflang>hreflang</code>, <code title=attr-hrefmedia>hrefmedia</code>, <code title=attr-hreftype>hreftype</code>, <code title=attr-ismap>ismap</code>, <code title=attr-layout>layout</code>,
+<code title=attr-media>media</code>, <code title=attr-nextfocus>nextfocus</code>, <code title=attr-prevfocus>prevfocus</code>, <code title=attr-shape>shape</code>, <code title=attr-src>src</code>, <code title=attr-srctype>srctype</code>, <code title=attr-target>target</code>, and <code title=attr-usemap>usemap</code>, the <code title=attr-abbr-full>full</code> attribute of the <code>abbr</code>
+element, the <code title=attr-object-content-length>content-length</code> attribute of
+the <code>object</code> element, and the <code>implements</code>
+attribute of the <code>script</code> element) <cite class="bibref
+informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite> <cite class="bibref informative">[<a href=#ref-XHTML2ED>XHTML2ED</a>]</cite>.
 
 </li><li>Elements and attributes that had been defined in earlier revisions
 of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
-then dropped, including but not limited to: attributes <code title=attr-irrlevant>irrelevant</code>, <code title=attr-active>active</code>, <code title=attr-command-default>default</code>, <code title=attr-menu-autosubmit>autosubmit</code>, the <code title="">cite</code> attribute of some sectioning elements, elements
-<code>event-source</code>, <code>eventsource</code>,
-<code>sidebar</code>, <code>datagrid</code>, and <code>bb</code>, and
-repetition template and data template features.
+then dropped, including but not limited to: global attributes <code title=attr-irrlevant>irrelevant</code>, <code title=attr-active>active</code>, <code title=handler-beforeunload>onbeforeunload</code>, <code title=handler-hashchange>onhashchange</code>, <code title=handler-resize>onresize</code>, <code title=handler-storage>onstorage</code>, <code title=handler-unload>onunload</code>, <code title=handler-dataunavailable>ondataunavailable</code>, and <code title=handler-message>onmessage</code>, and the <code title=attr-command-default>default</code> attribute of the
+<code>command</code> element, the <code title=attr-menu-autosubmit>autosubmit</code> attribute of the
+<code>menu</code> attribute, the <code title="">cite</code> attribute of
+<code>section</code> and <code>article</code> elements, the <code title="">pubdate</code> attribute of <code>article</code> and
+<code>time</code> elements, attributes <code title=handler-forminput>onforminput</code> and <code title=handler-formchange>onformchange</code>, elements <code>m</code>,
+<code>x</code>, <code>t</code>, <code>dc</code>, <code>ds</code>,
+<code>date</code>, <code>calendar</code>, <code>card</code>,
+<code>switch</code>, <code>command</code>, <code>event-source</code>,
+<code>eventsource</code>, <code>sidebar</code>, <code>datagrid</code>,
+and <code>bb</code>, and repetition template (attributes <code title=attr-repeat>repeat</code>, <code title="">repeat-<var>*</var></code>, <code title=attr-template>template</code> and several button types) and data
+template features (elements <code>datatemplate</code>,
+<code>rule</code>, and <code>nest</code> and related attributes).
 
 </li><li>Attributes in the <a href=#html-namespace>HTML namespace</a>.
 
 </li><li>Proprietary elements and attributes implemented in WebTV,
 WebExplorer, various Mosaic variants, <a href=http://developer.emnet.ne.jp/index.html>EMOBILE</a>'s browser,
-and/or authoring tools.
+and/or authoring tools, including but not limited to: elements
+<code>app</code>, <code>htmlarea</code>, <code>animate</code>,
+<code>h7</code>, <code>h8</code>, <code>h9</code>, <code>hype</code>,
+<code>audioscope</code>, <code>limittext</code>,
+<code>nosmartquotes</code>, <code>shadow</code>, <code>sound</code>,
+<code>csactionitem</code>, <code>csactions</code>,
+<code>csaction</code>, <code>csscriptdict</code>,
+<code>csactiondict</code>, <code>csobj</code>, <code>madebywz</code>,
+and <code>x-sas-window</code>.
 
 </li><li>Proprietary elements and attributes implemented by browsers of
 earlier generations of Japanese mobile phones (which are no longer in
@@ -1992,9 +2039,18 @@ use).
 
 </li><li>Elements <code>image</code> and <code>isindex</code>.
 
+</li><li>The <code title=attr-dl-type>type</code> attribute of the
+<code>dl</code> element.  The <code title=attr-font-point-size>point-size</code>, <code title=attr-font-pointsize>pointsize</code>, <code title=attr-font-weight>weight</code> attributes of the
+<code>font</code> element.  The <code title=attr-option-name>name</code> attribute of the
+<code>option</code> element.  The <code title=attr-style-disabled>disabled</code> attribute of the
+<code>style</code> element.  Attributes of the <code>multicol</code>
+element.
+
 </li><li>The <code>x-ms-webview</code> element<!--
 <http://msdn.microsoft.com/en-us/library/windows/apps/dn301831.aspx>
 -->.
+
+</li><li>The <code>textflow</code> element.
 
 </li><li>Attributes <code title=attr-sdaform>sdaform</code>, <code title=attr-sdapref>sdapref</code>, <code title=attr-sdasuff>sdasuff</code> <cite class="bibref informative">[<a href=#ref-HTML20>HTML20</a>]</cite> <cite class="bibref
 informative">[<a href=#ref-HTML2x>HTML2x</a>]</cite>, <code title=attr-htnames>htnames</code>, <code title=attr-htsupp>htsupp</code>, and <code title=attr-htign>htign</code> <cite class="bibref informative">[<a href=#ref-M12N11>M12N11</a>]</cite>, which are not real attributes
@@ -2013,6 +2069,10 @@ processing instruction</a>, <code>comment</code> and <code>xml</code>
 elements, <a href=http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx>namespace
 syntax</a>, VML, and HTML+TIME <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>.
 
+</li><li>Elements <code>centre</code>, <code>noflames</code>,
+<code>noframe</code>, <code>noimg</code>, <code>element</code>,
+<code>entity</code>, and <code>attrib</code>.
+
 </li></ul>
 
 <div class="note memo">
@@ -2020,6 +2080,13 @@ syntax</a>, VML, and HTML+TIME <cite class="bibref informative">[<a href=#ref-MS
 <p>Some of features listed in this section were defined in this
 specification but <a href=#history>dropped as described in an
 earlier section</a>.
+
+</p></div>
+
+<div class="note memo">
+
+<p>This section does not intend to enumerate all obsolete HTML
+features.
 
 </p></div>
 
