@@ -10,7 +10,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 17 November 2013</h2>
+<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 18 November 2013</h2>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -144,7 +144,7 @@ version of the document is the only normative version.</p>
  <li><a class=no-num href=#references>References</a>
   <ol>
    <li><a class=no-num href=#normative-references>Normative references</a></li>
-   <li><a class=no-num href=#non‐normative-references>Non‐normative references</a></li></ol></li></ol>
+   <li><a class=no-num href=#non-normative-references>Non-normative references</a></li></ol></li></ol>
 <!--end-toc-->
 </div>
 
@@ -338,6 +338,10 @@ and
 </p><p>The term <dfn id=valid-dimension-value>valid dimension value</dfn> is <a href="http://html5.org/tools/web-apps-tracker?from=2749&amp;to=2750">defined
 in a commented out paragraph</a> of the HTML Standard.
 
+</p><p>A string is a <dfn id=valid-bcp-47-language-tag>valid BCP 47 language tag</dfn> if it is a valid
+<i>language tag</i> as defined by the IETF Language Tag specification
+<cite class="bibref normative">[<a href=#ref-BCP47>BCP47</a>]</cite>.
+
 </p><p>The concept of <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#content-models><dfn id=content-model>content
 model</dfn></a>, as well as the way to interpret it, is defined in the
 HTML Standard.
@@ -409,6 +413,20 @@ is "cdata".  Various DTDs of versions of HTML and XHTML define their
 |version| attribute as |#FIXED| and gives their public identifiers as
 the value, but it had not been speced anywhere at all. --><!--
 HTMLHtmlElement -->
+
+</p><p>If the <code title=attr-meta-http-equiv>http-equiv</code> attribute
+of a <code>meta</code> element is in the <span title=attr-meta-http-equiv-content-language>content-language</span>
+state, the <code title=attr-meta-content>content</code> attribute
+value <em class=rfc2119>MUST</em> be a <a href=#valid-bcp-47-language-tag>valid BCP 47 language
+tag</a>.<!--
+<http://www.whatwg.org/specs/web-apps/current-work/#attr-meta-http-equiv-content-language>
+<http://html5.org/tools/web-apps-tracker?from=5979&to=5980> -->
+
+</p><p>If the <code title=attr-meta-http-equiv>http-equiv</code> attribute
+of a <code>meta</code> element is in the <span title=attr-meta-http-equiv-set-cookie>cookie</span> state, the <code title=attr-meta-content>content</code> attribute value <em class=rfc2119>MUST</em> be a <a href=http://tools.ietf.org/html/rfc6265#section-4.1><code>set-cookie-string</code></a>
+<cite class="bibref normative">[<a href=#ref-COOKIES>COOKIES</a>]</cite>.  For the purpose of
+validation of this attribute value, the character set of the ABNF
+production rule of the <code>set-cookie-string</code> is Unicode.
 
 </p><div class=section>
 <h4 id=metadata-elements><span class=secno>3.1.1 </span>Metadata elements</h4>
@@ -2011,8 +2029,8 @@ then dropped, including but not limited to: global attributes <code title=attr-i
 <code>switch</code>, <code>command</code>, <code>event-source</code>,
 <code>eventsource</code>, <code>sidebar</code>, <code>datagrid</code>,
 and <code>bb</code>, and repetition template (attributes <code title=attr-repeat>repeat</code>, <code title="">repeat-<var>*</var></code>, <code title=attr-template>template</code> and several button types) and data
-template features (elements <code>datatemplate</code>,
-<code>rule</code>, and <code>nest</code> and related attributes).
+template (elements <code>datatemplate</code>, <code>rule</code>, and
+<code>nest</code> and related attributes) features.
 
 </li><li>Attributes in the <a href=#html-namespace>HTML namespace</a>.
 
@@ -2046,6 +2064,8 @@ use).
 <code>style</code> element.  Attributes of the <code>multicol</code>
 element.
 
+</li><li>The <code title="">ng-<var>*</var></code> attributes.
+
 </li><li>The <code>x-ms-webview</code> element<!--
 <http://msdn.microsoft.com/en-us/library/windows/apps/dn301831.aspx>
 -->.
@@ -2067,7 +2087,9 @@ language.
 including conditional comments, the <a href=http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx><code>IMPORT</code>
 processing instruction</a>, <code>comment</code> and <code>xml</code>
 elements, <a href=http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx>namespace
-syntax</a>, VML, and HTML+TIME <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>.
+syntax</a> (the <code>xmlns:<var>*</var></code> attributes), VML, and
+HTML+TIME <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite>.  Also, the <code title="">xml:space</code> attribute in no namespace<!-- often used in
+pseudo-XHTML documents served as text/html -->.
 
 </li><li>Elements <code>centre</code>, <code>noflames</code>,
 <code>noframe</code>, <code>noimg</code>, <code>element</code>,
@@ -2807,29 +2829,40 @@ in the tests-web repository</a>.
 
 <dl>
 
-<dt id=ref-CSSCOLOR>CSSCOLOR
+<dt id=ref-BCP47>BCP47
+
+</dt><dd><cite><a href=https://tools.ietf.org/html/bcp47>Tags for
+Identifying Languages; Matching of Language Tags</a></cite>,
+A. Phillips, M. Davis.  IETF BCP 47.
+
+</dd><dt id=ref-COOKIES>COOKIES
+
+</dt><dd><cite><a href=https://tools.ietf.org/html/rfc6265>HTTP State
+Management Mechanism</a></cite>, A. Barth.  IETF RFC 6265.
+
+</dd><dt id=ref-CSSCOLOR>CSSCOLOR
 
 </dt><dd><cite><a href=http://dev.w3.org/csswg/css3-color/>CSS Color
-Module Level 3</a></cite>, Tantek Çelik, Chris Lilley, L. David Baron,
+Module Level 3</a></cite>, Tantek Çelik, Chris Lilley, L. David Baron.
 W3C Editor's Draft.
 
 </dd><dt id=ref-HTML>HTML
 
 </dt><dd><cite><a href=http://www.whatwg.org/specs/web-apps/current-work/>HTML
-Standard</a></cite>, Ian Hickson, WHATWG.
+Standard</a></cite>, Ian Hickson.  WHATWG Living Standard.
 
 </dd><dt id=ref-RFC2119>RFC2119
 
 </dt><dd><cite><a href=http://tools.ietf.org/html/rfc2119>Key words for
 use in RFCs to Indicate Requirement Levels</a></cite>, Scott Bradner,
-RFC 2119, IETF BCP 14, March 1997.
+<time datetime=1997-03>March 1997</time>.  IETF RFC 2119, BCP 14.
 
 </dd></dl>
 
 </div>
 
 <div class="section informative reference">
-<h3 class=no-num id=non‐normative-references>Non‐normative references</h3>
+<h3 class=no-num id=non-normative-references>Non-normative references</h3>
 
 <dl>
 

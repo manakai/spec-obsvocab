@@ -280,6 +280,11 @@ and
 href="http://html5.org/tools/web-apps-tracker?from=2749&to=2750">defined
 in a commented out paragraph</a> of the HTML Standard.
 
+<p>A string is a <dfn>valid BCP 47 language tag</dfn> if it is a valid
+<i>language tag</i> as defined by the IETF Language Tag specification
+<cite class="bibref normative">[<a
+href="#ref-BCP47">BCP47</a>]</cite>.
+
 <p>The concept of <a
 href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#content-models"><dfn>content
 model</dfn></a>, as well as the way to interpret it, is defined in the
@@ -356,6 +361,26 @@ is "cdata".  Various DTDs of versions of HTML and XHTML define their
 |version| attribute as |#FIXED| and gives their public identifiers as
 the value, but it had not been speced anywhere at all. --><!--
 HTMLHtmlElement -->
+
+<p>If the <code title=attr-meta-http-equiv>http-equiv</code> attribute
+of a <code>meta</code> element is in the <span
+title=attr-meta-http-equiv-content-language>content-language</span>
+state, the <code title=attr-meta-content>content</code> attribute
+value <em class=rfc2119>MUST</em> be a <span>valid BCP 47 language
+tag</span>.<!--
+<http://www.whatwg.org/specs/web-apps/current-work/#attr-meta-http-equiv-content-language>
+<http://html5.org/tools/web-apps-tracker?from=5979&to=5980> -->
+
+<p>If the <code title=attr-meta-http-equiv>http-equiv</code> attribute
+of a <code>meta</code> element is in the <span
+title=attr-meta-http-equiv-set-cookie>cookie</span> state, the <code
+title=attr-meta-content>content</code> attribute value <em
+class=rfc2119>MUST</em> be a <a
+href="http://tools.ietf.org/html/rfc6265#section-4.1"><code>set-cookie-string</code></a>
+<cite class="bibref normative">[<a
+href="#ref-COOKIES">COOKIES</a>]</cite>.  For the purpose of
+validation of this attribute value, the character set of the ABNF
+production rule of the <code>set-cookie-string</code> is Unicode.
 
 <div class=section>
 <h4>Metadata elements</h4>
@@ -2497,8 +2522,8 @@ and <code>bb</code>, and repetition template (attributes <code
 title=attr-repeat>repeat</code>, <code
 title>repeat-<var>*</var></code>, <code
 title=attr-template>template</code> and several button types) and data
-template features (elements <code>datatemplate</code>,
-<code>rule</code>, and <code>nest</code> and related attributes).
+template (elements <code>datatemplate</code>, <code>rule</code>, and
+<code>nest</code> and related attributes) features.
 
 <li>Attributes in the <span>HTML namespace</span>.
 
@@ -2538,6 +2563,8 @@ title=attr-style-disabled>disabled</code> attribute of the
 <code>style</code> element.  Attributes of the <code>multicol</code>
 element.
 
+<li>The <code title>ng-<var>*</var></code> attributes.
+
 <li>The <code>x-ms-webview</code> element<!--
 <http://msdn.microsoft.com/en-us/library/windows/apps/dn301831.aspx>
 -->.
@@ -2568,8 +2595,11 @@ href="http://msdn.microsoft.com/en-us/library/ms535171%28VS.85%29.aspx"><code>IM
 processing instruction</a>, <code>comment</code> and <code>xml</code>
 elements, <a
 href="http://msdn.microsoft.com/en-us/library/ms535160%28VS.85%29.aspx">namespace
-syntax</a>, VML, and HTML+TIME <cite class="bibref informative">[<a
-href="#ref-MSDN">MSDN</a>]</cite>.
+syntax</a> (the <code>xmlns:<var>*</var></code> attributes), VML, and
+HTML+TIME <cite class="bibref informative">[<a
+href="#ref-MSDN">MSDN</a>]</cite>.  Also, the <code
+title>xml:space</code> attribute in no namespace<!-- often used in
+pseudo-XHTML documents served as text/html -->.
 
 <li>Elements <code>centre</code>, <code>noflames</code>,
 <code>noframe</code>, <code>noimg</code>, <code>element</code>,
@@ -3312,30 +3342,41 @@ in the tests-web repository</a>.
 
 <dl>
 
+<dt id=ref-BCP47>BCP47
+
+<dd><cite><a href="https://tools.ietf.org/html/bcp47">Tags for
+Identifying Languages; Matching of Language Tags</a></cite>,
+A. Phillips, M. Davis.  IETF BCP 47.
+
+<dt id=ref-COOKIES>COOKIES
+
+<dd><cite><a href="https://tools.ietf.org/html/rfc6265">HTTP State
+Management Mechanism</a></cite>, A. Barth.  IETF RFC 6265.
+
 <dt id=ref-CSSCOLOR>CSSCOLOR
 
 <dd><cite><a href="http://dev.w3.org/csswg/css3-color/">CSS Color
-Module Level 3</a></cite>, Tantek Çelik, Chris Lilley, L. David Baron,
+Module Level 3</a></cite>, Tantek Çelik, Chris Lilley, L. David Baron.
 W3C Editor's Draft.
 
 <dt id=ref-HTML>HTML
 
 <dd><cite><a
 href="http://www.whatwg.org/specs/web-apps/current-work/">HTML
-Standard</a></cite>, Ian Hickson, WHATWG.
+Standard</a></cite>, Ian Hickson.  WHATWG Living Standard.
 
 <dt id=ref-RFC2119>RFC2119
 
 <dd><cite><a href="http://tools.ietf.org/html/rfc2119">Key words for
 use in RFCs to Indicate Requirement Levels</a></cite>, Scott Bradner,
-RFC 2119, IETF BCP 14, March 1997.
+<time datetime=1997-03>March 1997</time>.  IETF RFC 2119, BCP 14.
 
 </dl>
 
 </div>
 
 <div class="section informative reference">
-<h3 class="no-num">Non‐normative references</h3>
+<h3 class="no-num">Non-normative references</h3>
 
 <dl>
 
