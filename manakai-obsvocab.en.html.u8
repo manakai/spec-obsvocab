@@ -401,10 +401,12 @@ namespace.
 
 <p>If the <code id=attr-head-profile title=attr-head-profile>profile</code> attribute of the <code>head</code>
 element is present, its value <em class=rfc2119>MUST</em> be a
-<a href=#set-of-space-separated-tokens>set of space-separated tokens</a>, each of which <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.<!--
-HTML5 old definition
+<a href=#set-of-space-separated-tokens>set of space-separated tokens</a>, each of which <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.  For
+the purpose of conformance of the <code>base</code> element, however,
+this is not an attribute defined as taking <a href=#url title=URL>URLs</a><!-- This means that <head profile=...><base
+href=...> is not an error. -->.<!-- HTML5 old definition
 <http://html5.org/tools/web-apps-tracker?from=421&to=422>, HTML5
-obsolete --><!-- HTMLHeadElement -->
+obsolete -->
 
 </p><p>If the <code id=attr-html-version title=attr-html-version>version</code> attribute of an <code>html</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
