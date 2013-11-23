@@ -230,8 +230,6 @@ define underlying terms.
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-integer"><dfn>valid integer</dfn></a>,
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-floating-point-number"><dfn>valid floating point number</dfn></a>,
-
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-non-negative-integer"><dfn>valid non-negative integer</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#set-of-comma-separated-tokens"><dfn>set of comma-separated tokens</dfn></a>,
@@ -740,8 +738,9 @@ title>border</code>.<!-- HTML Standard rendering -->
 
 <p>The <code>table</code> element's <code title=attr-table-border
 id=attr-table-border>border</code> attribute value <em
-class=rfc2119>MUST</em> be a <span>valid non-negative integer</span>
-or the empty string.<!-- HTML Standard rendering, HTML4 -->
+class=rfc2119>MUST</em> either be the empty string or the value <code
+title>1</code>.<!-- HTML Standard rendering,
+<http://html5.org/tools/web-apps-tracker?from=7188&to=7189> -->
 
 <p>The <code>table</code> element's <code title=attr-table-tableborder
 id=attr-table-tableborder>tableborder</code> attribute value <cite
@@ -2501,27 +2500,29 @@ of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
 then dropped, including but not limited to: global attributes <code
 title=attr-irrlevant>irrelevant</code>, <code
 title=attr-active>active</code>, <code
-title=handler-beforeunload>onbeforeunload</code>, <code
-title=handler-hashchange>onhashchange</code>, <code
-title=handler-resize>onresize</code>, <code
-title=handler-storage>onstorage</code>, <code
-title=handler-unload>onunload</code>, <code
-title=handler-dataunavailable>ondataunavailable</code>, and <code
-title=handler-message>onmessage</code>, and the <code
-title=attr-command-default>default</code> attribute of the
+title=handler-onbeforeunload>onbeforeunload</code>, <code
+title=handler-onhashchange>onhashchange</code>, <code
+title=handler-onresize>onresize</code>, <code
+title=handler-onstorage>onstorage</code>, <code
+title=handler-onunload>onunload</code>, <code
+title=handler-ondataunavailable>ondataunavailable</code>, <code
+title=handler-onmessage>onmessage</code>, and <code
+title=handler-onreadystatechange>onreadystatechange</code>, and the
+<code title=attr-command-default>default</code> attribute of the
 <code>command</code> element, the <code
 title=attr-menu-autosubmit>autosubmit</code> attribute of the
 <code>menu</code> attribute, the <code title>cite</code> attribute of
 <code>section</code> and <code>article</code> elements, the <code
 title>pubdate</code> attribute of <code>article</code> and
 <code>time</code> elements, attributes <code
-title=handler-forminput>onforminput</code> and <code
-title=handler-formchange>onformchange</code>, elements <code>m</code>,
-<code>x</code>, <code>t</code>, <code>dc</code>, <code>ds</code>,
-<code>date</code>, <code>calendar</code>, <code>card</code>,
-<code>switch</code>, <code>command</code>, <code>event-source</code>,
-<code>eventsource</code>, <code>sidebar</code>, <code>datagrid</code>,
-and <code>bb</code>, and repetition template (attributes <code
+title=handler-onforminput>onforminput</code> and <code
+title=handler-onformchange>onformchange</code>, elements
+<code>m</code>, <code>x</code>, <code>t</code>, <code>dc</code>,
+<code>ds</code>, <code>date</code>, <code>calendar</code>,
+<code>card</code>, <code>switch</code>, <code>command</code>,
+<code>event-source</code>, <code>eventsource</code>,
+<code>sidebar</code>, <code>datagrid</code>, <code>device</code>, and
+<code>bb</code>, and repetition template (attributes <code
 title=attr-repeat>repeat</code>, <code
 title>repeat-<var>*</var></code>, <code
 title=attr-template>template</code> and several button types) and data
