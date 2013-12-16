@@ -7,10 +7,12 @@ Elements and Attributes</title>
 
 </head><body><div class=header>
 
+<hgroup>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num" id=manakai-project-living-standard-date>manakai Project Living Standard 23 November 2013</h2>
+<h2 class="no-toc no-num">manakai Project Living Standard 16 December 2013</h2>
+</hgroup>
 
 <dl class=versions-uri>
 <dt>Latest Version</dt>
@@ -1534,7 +1536,6 @@ element is present, its value <em class=rfc2119>MUST</em> be a
 <code id=handler-window-onpagehide title=handler-window-onpagehide>onpagehide</code>,
 <code id=handler-window-onpageshow title=handler-window-onpageshow>onpageshow</code>,
 <code id=handler-window-onpopstate title=handler-window-onpopstate>onpopstate</code>,
-<code id=handler-window-onresize title=handler-window-onresize>onresize</code>,
 <code id=handler-window-onstorage title=handler-window-onstorage>onstorage</code>,
 and <code id=handler-window-onunload title=handler-window-onunload>onunload</code>.
 <!-- But in fact they have no effect if the |frameset| element is not
@@ -2019,7 +2020,7 @@ informative">[<a href=#ref-XHTML2>XHTML2</a>]</cite> <cite class="bibref informa
 
 </li><li>Elements and attributes that had been defined in earlier revisions
 of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
-then dropped, including but not limited to: global attributes <code title=attr-irrlevant>irrelevant</code>, <code title=attr-active>active</code>, <code title=handler-onbeforeunload>onbeforeunload</code>, <code title=handler-onhashchange>onhashchange</code>, <code title=handler-onresize>onresize</code>, <code title=handler-onstorage>onstorage</code>, <code title=handler-onunload>onunload</code>, <code title=handler-ondataunavailable>ondataunavailable</code>, <code title=handler-onmessage>onmessage</code>, and <code title=handler-onreadystatechange>onreadystatechange</code>, and the
+then dropped, including but not limited to: global attributes <code title=attr-irrlevant>irrelevant</code>, <code title=attr-active>active</code>, <code title=handler-onbeforeunload>onbeforeunload</code>, <code title=handler-onhashchange>onhashchange</code>, <code title=handler-onstorage>onstorage</code>, <code title=handler-onunload>onunload</code>, <code title=handler-ondataunavailable>ondataunavailable</code>, <code title=handler-onmessage>onmessage</code>, and <code title=handler-onreadystatechange>onreadystatechange</code>, and the
 <code title=attr-command-default>default</code> attribute of the
 <code>command</code> element, the <code title=attr-menu-autosubmit>autosubmit</code> attribute of the
 <code>menu</code> attribute, the <code title="">cite</code> attribute of
@@ -2427,7 +2428,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#handler-window-onpagehide><code>onpagehide</code></a>
 </dd><dd><a href=#handler-window-onpageshow><code>onpageshow</code></a>
 </dd><dd><a href=#handler-window-onpopstate><code>onpopstate</code></a>
-</dd><dd><a href=#handler-window-onresize><code>onresize</code></a>
 </dd><dd><a href=#handler-window-onstorage><code>onstorage</code></a>
 </dd><dd><a href=#handler-window-onunload><code>onunload</code></a>
 </dd><dd><a href=#attr-frameset-rows><code>rows</code></a>

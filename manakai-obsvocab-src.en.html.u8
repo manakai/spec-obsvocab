@@ -9,10 +9,12 @@ Elements and Attributes</title>
 
 <div class="header">
 
+<hgroup>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
 <h2 class="no-toc no-num">manakai Project Living Standard [DATE]</h2>
+</hgroup>
 
 <dl class="versions-uri">
 <dt>Latest Version</dt>
@@ -1844,7 +1846,6 @@ href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-hand
 <code title=handler-window-onpagehide id=handler-window-onpagehide>onpagehide</code>,
 <code title=handler-window-onpageshow id=handler-window-onpageshow>onpageshow</code>,
 <code title=handler-window-onpopstate id=handler-window-onpopstate>onpopstate</code>,
-<code title=handler-window-onresize id=handler-window-onresize>onresize</code>,
 <code title=handler-window-onstorage id=handler-window-onstorage>onstorage</code>,
 and <code title=handler-window-onunload id=handler-window-onunload>onunload</code>.
 <!-- But in fact they have no effect if the |frameset| element is not
@@ -2502,7 +2503,6 @@ title=attr-irrlevant>irrelevant</code>, <code
 title=attr-active>active</code>, <code
 title=handler-onbeforeunload>onbeforeunload</code>, <code
 title=handler-onhashchange>onhashchange</code>, <code
-title=handler-onresize>onresize</code>, <code
 title=handler-onstorage>onstorage</code>, <code
 title=handler-onunload>onunload</code>, <code
 title=handler-ondataunavailable>ondataunavailable</code>, <code
@@ -2942,7 +2942,6 @@ in the tests-web repository</a>.
 <dd><a href="#handler-window-onpagehide"><code>onpagehide</code></a>
 <dd><a href="#handler-window-onpageshow"><code>onpageshow</code></a>
 <dd><a href="#handler-window-onpopstate"><code>onpopstate</code></a>
-<dd><a href="#handler-window-onresize"><code>onresize</code></a>
 <dd><a href="#handler-window-onstorage"><code>onstorage</code></a>
 <dd><a href="#handler-window-onunload"><code>onunload</code></a>
 <dd><a href="#attr-frameset-rows"><code>rows</code></a>
