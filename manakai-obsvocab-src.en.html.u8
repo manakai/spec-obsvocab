@@ -2492,36 +2492,37 @@ href="#ref-XHTML2ED">XHTML2ED</a>]</cite>.
 
 <li>Elements and attributes that had been defined in earlier revisions
 of Web Forms 2.0, Web Applications 1.0, HTML5, or HTML Standard but
-then dropped, including but not limited to: global attributes <code
-title=attr-irrlevant>irrelevant</code>, <code
-title=attr-active>active</code>, <code
-title=handler-onbeforeunload>onbeforeunload</code>, <code
-title=handler-onhashchange>onhashchange</code>, <code
-title=handler-onstorage>onstorage</code>, <code
-title=handler-onunload>onunload</code>, <code
-title=handler-ondataunavailable>ondataunavailable</code>, <code
-title=handler-onmessage>onmessage</code>, and <code
-title=handler-onreadystatechange>onreadystatechange</code>, and the
-<code title=attr-command-default>default</code> attribute of the
-<code>command</code> element, the <code
-title=attr-menu-autosubmit>autosubmit</code> attribute of the
-<code>menu</code> attribute, the <code title>cite</code> attribute of
-<code>section</code> and <code>article</code> elements, the <code
-title>pubdate</code> attribute of <code>article</code> and
-<code>time</code> elements, attributes <code
-title=handler-onforminput>onforminput</code> and <code
-title=handler-onformchange>onformchange</code>, elements
-<code>m</code>, <code>x</code>, <code>t</code>, <code>dc</code>,
-<code>ds</code>, <code>date</code>, <code>calendar</code>,
-<code>card</code>, <code>switch</code>, <code>command</code>,
-<code>event-source</code>, <code>eventsource</code>,
-<code>sidebar</code>, <code>datagrid</code>, <code>device</code>, and
-<code>bb</code>, and repetition template (attributes <code
-title=attr-repeat>repeat</code>, <code
-title>repeat-<var>*</var></code>, <code
-title=attr-template>template</code> and several button types) and data
-template (elements <code>datatemplate</code>, <code>rule</code>, and
-<code>nest</code> and related attributes) features.
+then dropped, including but not limited to:
+  <ul>
+  <li>Global attributes <code title=attr-irrlevant>irrelevant</code>,
+  <code title=attr-active>active</code>, <code title=handler-onbeforeunload>onbeforeunload</code>, <code title=handler-onhashchange>onhashchange</code>, <code title=handler-onstorage>onstorage</code>, <code title=handler-onunload>onunload</code>, <code title=handler-ondataunavailable>ondataunavailable</code>, <code title=handler-onmessage>onmessage</code>,
+  and <code title=handler-onreadystatechange>onreadystatechange</code>,
+  <li>The <code title=attr-command-default>default</code> attribute of
+  the <code>command</code> element,
+  <li>The <code title=attr-menu-autosubmit>autosubmit</code> attribute
+  of the <code>menu</code> attribute,
+  <li>The <code title>cite</code> attribute of
+  <code>section</code> and <code>article</code> elements,
+  <li>The <code title>pubdate</code> attribute of <code>article</code>
+  and
+  <code>time</code> elements,
+  <li>The <code>hreflang</code> and <code>type</code> attributes
+  of the <code>area</code> element,
+  <li>Attributes <code title=handler-onforminput>onforminput</code>
+  and <code title=handler-onformchange>onformchange</code>,
+  <li>Elements <code>m</code>, <code>x</code>, <code>t</code>,
+  <code>dc</code>, <code>ds</code>, <code>date</code>, <code>calendar</code>,
+  <code>card</code>, <code>switch</code>, <code>command</code>,
+  <code>event-source</code>, <code>eventsource</code>,
+  <code>sidebar</code>, <code>datagrid</code>, <code>device</code>, and
+  <code>bb</code>,
+  <li>Repetition template
+  (attributes <code title=attr-repeat>repeat</code>, <code title>repeat-<var>*</var></code>, <code title=attr-template>template</code>
+  and several button types), and
+  <li>Data template
+  (elements <code>datatemplate</code>, <code>rule</code>, and
+  <code>nest</code> and related attributes)
+  </ul>
 
 <li>Attributes in the <span>HTML namespace</span>.
 
@@ -2616,7 +2617,11 @@ earlier section</a>.
 <div class="note memo">
 
 <p>This section does not intend to enumerate all obsolete HTML
-features.
+features.  A
+<a href="https://raw.github.com/manakai/data-web-defs/master/data/elements.json">JSON
+data file in the data-web-defs repository</a>
+(<a href="https://raw.github.com/manakai/data-web-defs/master/doc/elements.txt">documentation</a>)
+is trying to list any known obsolete HTML elements and attributes.
 
 </div>
 
