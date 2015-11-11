@@ -1,6 +1,6 @@
-all: manakai-obsvocab.en.html.u8
+all: index.html
 
-manakai-obsvocab.en.html.u8: manakai-obsvocab-src.en.html.u8
+index.html: manakai-obsvocab-src.en.html.u8
 	anolis $< $@
 
 ## License: Public Domain.
