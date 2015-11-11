@@ -2496,11 +2496,12 @@ then dropped, including but not limited to:
   <ul>
   <li>Global attributes <code title=attr-irrlevant>irrelevant</code>,
   <code title=attr-active>active</code>, <code title=handler-onbeforeunload>onbeforeunload</code>, <code title=handler-onhashchange>onhashchange</code>, <code title=handler-onstorage>onstorage</code>, <code title=handler-onunload>onunload</code>, <code title=handler-ondataunavailable>ondataunavailable</code>, <code title=handler-onmessage>onmessage</code>,
+  <code title=handler-onmousehweel>onmousewheel</code>,
   and <code title=handler-onreadystatechange>onreadystatechange</code>,
-  <li>The <code title=attr-command-default>default</code> attribute of
-  the <code>command</code> element,
   <li>The <code title=attr-menu-autosubmit>autosubmit</code> attribute
-  of the <code>menu</code> attribute,
+  of the <code>menu</code> element,
+  <li>The <code title=attr-menuitem-command>command</code> attribute
+  of the <code>menuitem</code> element,
   <li>The <code title>cite</code> attribute of
   <code>section</code> and <code>article</code> elements,
   <li>The <code title>pubdate</code> attribute of <code>article</code>
