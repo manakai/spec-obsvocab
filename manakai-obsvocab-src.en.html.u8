@@ -1997,8 +1997,6 @@ attributes</span>:
 <code title=handler-onbeforeupdate id=handler-onbeforeupdate>onbeforeupdate</code>,
 <code title=handler-oncellchange id=handler-oncellchange>oncellchange</code>,
 <code title=handler-oncontrolselect id=handler-oncontrolselect>oncontrolselect</code>,
-<code title=handler-oncopy id=handler-oncopy>oncopy</code>,
-<code title=handler-oncut id=handler-oncut>oncut</code>,
 <code title=handler-ondataavailable id=handler-ondataavailable>ondataavailable</code>,
 <code title=handler-ondatasetchanged id=handler-ondatasetchanged>ondatasetchanged</code>,
 <code title=handler-ondatasetcomplete id=handler-ondatasetcomplete>ondatasetcomplete</code>,
@@ -2015,7 +2013,6 @@ attributes</span>:
 <code title=handler-onmove id=handler-onmove>onmove</code>,
 <code title=handler-onmoveend id=handler-onmoveend>onmoveend</code>,
 <code title=handler-onmovestart id=handler-onmovestart>onmovestart</code>,
-<code title=handler-onpaste id=handler-onpaste>onpaste</code>,
 <code title=handler-onpropertychange id=handler-onpropertychange>onpropertychange</code>,
 <code title=handler-onresizeend id=handler-onresizeend>onresizeend</code>,
 <code title=handler-onresizestart id=handler-onresizestart>onresizestart</code>,
@@ -2410,7 +2407,7 @@ override it in any way.
 </section>
 
 <section>
-<h1>Elements and attributes not convered by this specification</h1>
+<h1>Elements and attributes not included in this specification</h1>
 
 <p class=section-info><em>This section is non-normative.</em>
 
@@ -2673,8 +2670,6 @@ in the tests-web repository</a>.
 <dd><a href="#handler-onbeforeupdate"><code>onbeforeupdate</code></a>
 <dd><a href="#handler-oncellchange"><code>oncellchange</code></a>
 <dd><a href="#handler-oncontrolselect"><code>oncontrolselect</code></a>
-<dd><a href="#handler-oncopy"><code>oncopy</code></a>
-<dd><a href="#handler-oncut"><code>oncut</code></a>
 <dd><a href="#handler-ondataavailable"><code>ondataavailable</code></a>
 <dd><a href="#handler-ondatasetchanged"><code>ondatasetchanged</code></a>
 <dd><a href="#handler-ondatasetcomplete"><code>ondatasetcomplete</code></a>
@@ -2695,7 +2690,6 @@ in the tests-web repository</a>.
 <dd><a href="#handler-onmoveend"><code>onmoveend</code></a>
 <dd><a href="#handler-onmovestart"><code>onmovestart</code></a>
 <dd><a href="#handler-onorientationchange"><code>onorientationchange</code></a>
-<dd><a href="#handler-onpaste"><code>onpaste</code></a>
 <dd><a href="#handler-onpropertychange"><code>onpropertychange</code></a>
 <dd><a href="#handler-onresizeend"><code>onresizeend</code></a>
 <dd><a href="#handler-onresizestart"><code>onresizestart</code></a>
@@ -3552,8 +3546,8 @@ datetime=2012-06-07>7 June 2012</time>.
 <section>
 <h1 class=no-num id=author>Author</h1>
 
-<p>This document is written
-by <a href=http://suika.suikawiki.org/~wakaba/who?>Wakaba</a>
+<p>This document is written by
+<a href=https://suika.suikawiki.org/~wakaba/who?>Wakaba</a>
 &lt;wakaba@suikawiki.org&gt;.
 
 <p>This document is developed as part of the
