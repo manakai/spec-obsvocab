@@ -253,6 +253,8 @@ Standard</cite></a>.
 
 <a href=https://html.spec.whatwg.org/#concept-content-nothing><dfn>nothing</dfn></a>,
 
+<a href=https://html.spec.whatwg.org/#text-content><dfn>text</dfn></a>,
+
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#mime-type"><dfn>MIME type</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-mime-type"><dfn>valid MIME type</dfn></a>,
@@ -458,8 +460,8 @@ element.
 
 <p>The <span>content model</span> of <code id=xmp>xmp</code>, <code
 id=listing>listing</code>, and <code id=plaintext>plaintext</code>
-elements are <i>text</i>.<!-- HTML Standard parsing, HTML Standard
-rendering, HTML Standard obsolete -->
+<span title=element>elements</span> are <span>text</span>.<!-- HTML
+Standard parsing, HTML Standard rendering, HTML Standard obsolete -->
 
 <section>
 <h1>Lists</h1>
@@ -1456,9 +1458,9 @@ pluginspage
 
 <hr>
 
-<p>The <span>content model</span> of the <code
-id=noembed>noembed</code> element is same as the <code>iframe</code>
-element.
+<p>The <span>content model</span> of
+the <code id=noembed>noembed</code> <san>element</span>
+is <span>text</span>.<!-- HTML Standard parsing -->
 
 </section>
 
@@ -1903,8 +1905,9 @@ integer</span>.<!--
 <section id=noframes>
 <h1>The <code>noframes</code> element</h1>
 
-<p>The <span>content model</span> of the <code>noframes</code> element
-is same as the <code>iframe</code> element.
+<p>The <span>content model</span> of
+the <code>noframes</code> <span>element</span>
+is <span>text</span>.<!-- HTML Standard parsing -->
 
 <p id=noframes-context>The <code>noframes</code> element <em
 class=rfc2119>MAY</em> be used as a child of the <code>frameset</code>
