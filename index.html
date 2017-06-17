@@ -11,7 +11,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num">The manakai project, 24 February 2016</h2>
+<h2 class="no-toc no-num">The manakai project, 17 June 2017</h2>
 </hgroup>
 
 <dl>
@@ -134,8 +134,7 @@ version of the document is the only normative version.</p>
    <li><a href=#forms><span class=secno>3.12 </span>Forms</a>
     <ol>
      <li><a href=#value-constraints-and-input-mode><span class=secno>3.12.1 </span>Value constraints and input mode</a></li>
-     <li><a href=#autocomplete><span class=secno>3.12.2 </span>Autocomplete</a></li>
-     <li><a href=#the-keygen-element><span class=secno>3.12.3 </span>The <code>keygen</code> element</a></li></ol></li>
+     <li><a href=#autocomplete><span class=secno>3.12.2 </span>Autocomplete</a></li></ol></li>
    <li><a href=#user-interaction><span class=secno>3.13 </span>User interaction</a></li></ol></li>
  <li><a href=#elements-and-attributes-not-included-in-this-specification><span class=secno>4 </span>Elements and attributes not included in this specification</a></li>
  <li><a href=#machine-readable-data><span class=secno>5 </span>Machine-readable data</a></li>
@@ -309,6 +308,10 @@ define underlying terms.
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handler-content-attributes><dfn id=event-handler-content-attributes>event handler content attributes</dfn></a>,
 
+<a href=https://www.whatwg.org/specs/web-apps/current-work/complete.html#content-models><dfn id=content-model>content model</dfn></a>,
+
+<a href=https://html.spec.whatwg.org/#concept-content-nothing><dfn id=nothing>nothing</dfn></a>,
+
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#mime-type><dfn id=mime-type>MIME type</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-mime-type><dfn id=valid-mime-type>valid MIME type</dfn></a>,
@@ -341,10 +344,6 @@ in a commented out paragraph</a> of the HTML Standard.
 </p><p>A string is a <dfn id=valid-bcp-47-language-tag>valid BCP 47 language tag</dfn> if it is a valid
 <i>language tag</i> as defined by the IETF Language Tag specification
 <cite class="bibref normative">[<a href=#ref-BCP47>BCP47</a>]</cite>.
-
-</p><p>The concept of <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#content-models><dfn id=content-model>content
-model</dfn></a>, as well as the way to interpret it, is defined in the
-HTML Standard.
 
 </p></section>
 
@@ -433,9 +432,10 @@ production rule of the <code>set-cookie-string</code> is Unicode.
 </p><section>
 <h1 id=metadata-elements><span class=secno>3.1.1 </span>Metadata elements</h1>
 
-<p>The <a href=#content-model>content model</a> of the <code id=basefont>basefont</code> element is <i>empty</i>.<!-- HTML Standard
-parsing --><!-- No attribute (no browser supports attributes any
-longer) -->
+<p>The <a href=#content-model>content model</a> of
+the <code id=basefont>basefont</code> element
+is <a href=#nothing>nothing</a>.<!-- HTML Standard parsing --><!-- No
+attribute (no browser supports attributes any longer) -->
 
 </p><p>If the <code id=attr-meta-scheme title=attr-meta-scheme>scheme</code> attribute of the <code>meta</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
@@ -449,8 +449,9 @@ string.<!-- HTML4,
 <h1 id=the-bgsound-element><span class=secno>3.1.2 </span>The <code>bgsound</code> element</h1>
 <!-- <http://msdn.microsoft.com/en-us/library/ms535198%28VS.85%29.aspx> -->
 
-<p>The <a href=#content-model>content model</a> of the <code id=bgsound>bgsound</code> element is <i>empty</i>.<!-- HTML Standard
-parsing -->
+<p>The <a href=#content-model>content model</a> of
+the <code id=bgsound>bgsound</code> element
+is <a href=#nothing>nothing</a>.<!-- HTML Standard parsing -->
 
 </p><p>If the <code id=attr-bgsound-src title=attr-bgsound-src>src</code>
 attribute of a <code>bgsound</code> element <cite class="bibref
@@ -1548,8 +1549,8 @@ and <code id=handler-window-onunload title=handler-window-onunload>onunload</cod
 <h1 id=the-frame-element><span class=secno>3.10.2 </span>The <code>frame</code> element</h1>
 
 <p>The <a href=#content-model>content model</a> of the <code id=frame>frame</code>
-element is <i>empty</i>.<!-- HTML Standard parsing, HTML Standard
-rendering -->
+element is <a href=#nothing>nothing</a>.<!-- HTML Standard parsing, HTML
+Standard rendering -->
 
 </p><p>If the <code id=attr-frame-src title=attr-frame-src>src</code>
 attribute of a <code>frame</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL potentially
@@ -1739,6 +1740,9 @@ autocorrect
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocorrect>
 -->
 
+</p><p>The <a href=#content-model>content model</a> of the <code id=keygen>keygen</code>
+element is <a href=#nothing>nothing</a>.<!-- HTML Standard parsing -->
+
 </p><section>
 <h1 id=value-constraints-and-input-mode><span class=secno>3.12.1 </span>Value constraints and input mode</h1>
 
@@ -1895,30 +1899,6 @@ an <a href=#enumerated-attribute>enumerated attribute</a> with keywords: <code t
 element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.<!--
 <http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>;
 type=text.  -->
-
-</p></section>
-
-<section>
-<h1 id=the-keygen-element><span class=secno>3.12.3 </span>The <code>keygen</code> element</h1>
-
-<p>The <code id=attr-keygen-keytype title=attr-keygen-keytype>keytype</code> attribute of a
-<code>keygen</code> element, for the purpose of conformance checking,
-<em class=rfc2119>MUST</em> be treated as if there are additional
-keywords: <code title="">dsa</code> <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> <cite class="bibref
-informative">[<a href=#ref-MDC>MDC</a>]</cite> and <code title="">ec</code> <cite class="bibref informative">[<a href=#ref-MDC>MDC</a>]</cite>.  These keywords are
-non‐conforming.<!--
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-keytype>,
-<https://developer.mozilla.org/En/HTML/Element/keygen> -->
-
-</p><p>If <code id=attr-keygen-keyparams title=attr-keygen-keyparams>keyparams</code> or <code id=attr-keygen-pqg title=attr-keygen-pqg>pqg</code> attribute of an
-<code>keygen</code> element <cite class="bibref informative">[<a href=#ref-MDC>MDC</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  If the <code title=attr-keygen-keytype>keytype</code> attribute of the same element
-<a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a>
-matches to <code title="">dsa</code>, exactly one of <code title=attr-keygen-keyparams>keyparams</code> or <code title=attr-keygen-pqg>pqg</code> attribute <em class=rfc2119>MUST</em>
-be specified.  Otherwise, if the <code title=attr-keygen-keytype>keytype</code> attribute of the element
-<a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a>
-matches to <code title="">ec</code>, the <code title=attr-keygen-keyparams>keyparams</code> attribute <em class=rfc2119>MUST</em> be specified and the <code title=attr-keygen-pqg>pqg</code> attribute <em class=rfc2119>MUST
-NOT</em> be specified.  Otherwise, these two attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
-<https://developer.mozilla.org/En/HTML/Element/keygen> -->
 
 </p></section>
 
@@ -2114,6 +2094,9 @@ pseudo-XHTML documents served as text/html -->.
 </li><li>Elements <code>centre</code>, <code>noflames</code>,
 <code>noframe</code>, <code>noimg</code>, <code>element</code>,
 <code>entity</code>, and <code>attrib</code>.
+
+</li><li><span title=attribute>Attributes</span> of
+the <code>keygen</code> <span>element</span>.
 
 </li></ul>
 
@@ -2566,8 +2549,7 @@ in the tests-web repository</a>.
 
 </dd><dt>The <code>keygen</code> element
 
-</dt><dd><a href=#attr-keygen-keyparams><code>keyparams</code></a>
-</dd><dd><a href=#attr-keygen-pqg><code>pqg</code></a>
+</dt><dd>No element-specific attribute.
 
 </dd><dt>The <code>label</code> element
 
