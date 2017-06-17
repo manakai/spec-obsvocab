@@ -83,16 +83,16 @@ version of the document is the only normative version.</p>
 
 <p class=section-info><em>This section is non‐normative.</em>
 
-<p>The HTML Standard <cite class="bibref normative">[<a
-href="#ref-HTML">HTML</a>]</cite> defines the language vocabulary of
-HTML, i.e. a set of conforming HTML elements and attributes.  Any
-other HTML elements and attributes are non‐conforming unless
-otherwise defined by some <span title="applicable
-specifications">applicable specification</span>.  In particular, the
-HTML Standard identifies a number of non‐conforming elements and
-attributes as <i>obsolete</i>.  It does not define any specific
-conformance requirement for such elements and attributes, as the use
-of them is by definition <em>non‐conforming</em>.
+<p>The <a href=https://html.spec.whatwg.org/><cite>HTML
+Standard</cite></a> defines the language vocabulary of HTML, i.e. a
+set of conforming HTML elements and attributes.  Any other HTML
+elements and attributes are non‐conforming unless otherwise defined
+by some <span title="applicable specifications">applicable
+specification</span>.  In particular, the HTML Standard identifies a
+number of non‐conforming elements and attributes as <i>obsolete</i>.
+It does not define any specific conformance requirement for such
+elements and attributes, as the use of them is by
+definition <em>non‐conforming</em>.
 
 <p>However, authors are sometimes forced to use such non‐conforming
 elements and attributes, for compatibility with legacy or <i
@@ -201,20 +201,25 @@ for several reasons, including but not limited to:
 <section>
 <h1>Common infrastructure</h1>
 
+<p>This specification depends on the
+<a href=https://infra.spec.whatwg.org/><cite>Infra
+Standard</cite></a>.
+
 <section>
 <h1>Terminology</h1>
 
-<p>This specification relies heavily on the HTML Standard <cite
-class="bibref normative">[<a href="#ref-HTML">HTML</a>]</cite> to
-define underlying terms.
+<p>The term
 
-<p>HTML Standard defines the terms
+<a href=https://infra.spec.whatwg.org/#html-namespace><dfn>HTML namespace</dfn></a>
+
+is defined by the <a href=https://infra.spec.whatwg.org/><cite>Infra
+Standard</cite></a>.
+
+<p>Terms
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications"><dfn>applicable specifications</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#ascii-case-insensitive"><dfn>ASCII case-insensitive</dfn></a>,
-
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-namespace-0"><dfn>HTML namespace</dfn></a>,
 
 <a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-elements"><dfn>HTML elements</dfn></a>,
 
@@ -272,7 +277,10 @@ define underlying terms.
 
 and
 
-<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-dimension-property"><dfn>maps to the dimension property</dfn></a>.
+<a href="http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-dimension-property"><dfn>maps to the dimension property</dfn></a>
+
+are defined by the <a href=https://html.spec.whatwg.org/><cite>HTML
+Standard</cite></a>.
 
 <p>The term <dfn>valid dimension value</dfn> is <a
 href="http://html5.org/tools/web-apps-tracker?from=2749&to=2750">defined
@@ -282,40 +290,6 @@ in a commented out paragraph</a> of the HTML Standard.
 <i>language tag</i> as defined by the IETF Language Tag specification
 <cite class="bibref normative">[<a
 href="#ref-BCP47">BCP47</a>]</cite>.
-
-</section>
-
-<section>
-<h1>Conformance requirements</h1>
-
-<p>All <!-- diagrams, examples, and --> notes in this specification
-are non-normative, as are all sections explicitly marked
-non-normative. Everything else in this specification is normative.
-
-<p>The key words “<em class=rfc2119>MUST</em>”, “<em
-class=rfc2119>MUST NOT</em>”, “<em class=rfc2119>SHOULD</em>”, and 
-“<em class=rfc2119>MAY</em>” in the normative parts of this document
-are to be interpreted as described in RFC 2119 <cite class="bibref
-normative">[<a href="#ref-RFC2119">RFC2119</a>]</cite>.
-
-<!--
-<p>Requirements phrased in the imperative as part of algorithms (such
-as “strip any leading space characters” or “return false and abort
-these steps”) are to be interpreted with the meaning of the key word
-(e.g. “<em class=rfc2119>MUST</em>”) used in introducing the
-algorithm.
-
-<p>Conformance requirements phrased as algorithms or specific steps
-<em class=rfc2119>MAY</em> be implemented in any manner, so long as
-the end result is equivalent. (In particular, the algorithms defined
-in this specification are intended to be easy to follow, and not
-intended to be performant.)
--->
-
-<p>User agents may impose implementation-specific limits on otherwise
-unconstrained inputs, e.g. to prevent denial of service attacks, to
-guard against running out of memory, or to work around
-platform-specific limitations.
 
 </section>
 
@@ -3309,18 +3283,6 @@ Management Mechanism</a></cite>, A. Barth.  IETF RFC 6265.
 <dd><cite><a href="http://dev.w3.org/csswg/css3-color/">CSS Color
 Module Level 3</a></cite>, Tantek Çelik, Chris Lilley, L. David Baron.
 W3C Editor's Draft.
-
-<dt id=ref-HTML>HTML</dt>
-
-<dd><cite><a
-href="http://www.whatwg.org/specs/web-apps/current-work/">HTML
-Standard</a></cite>, Ian Hickson.  WHATWG Living Standard.
-
-<dt id=ref-RFC2119>RFC2119</dt>
-
-<dd><cite><a href="http://tools.ietf.org/html/rfc2119">Key words for
-use in RFCs to Indicate Requirement Levels</a></cite>, Scott Bradner,
-<time datetime=1997-03>March 1997</time>.  IETF RFC 2119, BCP 14.
 
 </dl>
 

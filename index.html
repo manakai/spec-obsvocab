@@ -80,8 +80,7 @@ version of the document is the only normative version.</p>
  <li><a href=#common-infrastructure><span class=secno>2 </span>Common infrastructure</a>
   <ol>
    <li><a href=#terminology><span class=secno>2.1 </span>Terminology</a></li>
-   <li><a href=#conformance-requirements><span class=secno>2.2 </span>Conformance requirements</a></li>
-   <li><a href=#namespaces><span class=secno>2.3 </span>Namespaces</a></li></ol></li>
+   <li><a href=#namespaces><span class=secno>2.2 </span>Namespaces</a></li></ol></li>
  <li><a href=#obsolete-html-elements-and-attributes><span class=secno>3 </span>Obsolete HTML elements and attributes</a>
   <ol>
    <li><a href=#metadata><span class=secno>3.1 </span>Metadata</a>
@@ -152,15 +151,16 @@ version of the document is the only normative version.</p>
 
 <p class=section-info><em>This section is non‐normative.</em>
 
-</p><p>The HTML Standard <cite class="bibref normative">[<a href=#ref-HTML>HTML</a>]</cite> defines the language vocabulary of
-HTML, i.e. a set of conforming HTML elements and attributes.  Any
-other HTML elements and attributes are non‐conforming unless
-otherwise defined by some <a href=#applicable-specifications title="applicable
-specifications">applicable specification</a>.  In particular, the
-HTML Standard identifies a number of non‐conforming elements and
-attributes as <i>obsolete</i>.  It does not define any specific
-conformance requirement for such elements and attributes, as the use
-of them is by definition <em>non‐conforming</em>.
+</p><p>The <a href=https://html.spec.whatwg.org/><cite>HTML
+Standard</cite></a> defines the language vocabulary of HTML, i.e. a
+set of conforming HTML elements and attributes.  Any other HTML
+elements and attributes are non‐conforming unless otherwise defined
+by some <a href=#applicable-specifications title="applicable specifications">applicable
+specification</a>.  In particular, the HTML Standard identifies a
+number of non‐conforming elements and attributes as <i>obsolete</i>.
+It does not define any specific conformance requirement for such
+elements and attributes, as the use of them is by
+definition <em>non‐conforming</em>.
 
 </p><p>However, authors are sometimes forced to use such non‐conforming
 elements and attributes, for compatibility with legacy or <i lang=es>Galápagos</i> user agents and/or historical authoring
@@ -266,19 +266,25 @@ for several reasons, including but not limited to:
 <section>
 <h1 id=common-infrastructure><span class=secno>2 </span>Common infrastructure</h1>
 
-<section>
+<p>This specification depends on the
+<a href=https://infra.spec.whatwg.org/><cite>Infra
+Standard</cite></a>.
+
+</p><section>
 <h1 id=terminology><span class=secno>2.1 </span>Terminology</h1>
 
-<p>This specification relies heavily on the HTML Standard <cite class="bibref normative">[<a href=#ref-HTML>HTML</a>]</cite> to
-define underlying terms.
+<p>The term
 
-</p><p>HTML Standard defines the terms
+<a href=https://infra.spec.whatwg.org/#html-namespace><dfn id=html-namespace>HTML namespace</dfn></a>
+
+is defined by the <a href=https://infra.spec.whatwg.org/><cite>Infra
+Standard</cite></a>.
+
+</p><p>Terms
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#other-applicable-specifications><dfn id=applicable-specifications>applicable specifications</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#ascii-case-insensitive><dfn id=ascii-case-insensitive>ASCII case-insensitive</dfn></a>,
-
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-namespace-0><dfn id=html-namespace>HTML namespace</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#html-elements><dfn id=html-elements>HTML elements</dfn></a>,
 
@@ -336,7 +342,10 @@ define underlying terms.
 
 and
 
-<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-dimension-property><dfn id=maps-to-the-dimension-property>maps to the dimension property</dfn></a>.
+<a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#maps-to-the-dimension-property><dfn id=maps-to-the-dimension-property>maps to the dimension property</dfn></a>
+
+are defined by the <a href=https://html.spec.whatwg.org/><cite>HTML
+Standard</cite></a>.
 
 </p><p>The term <dfn id=valid-dimension-value>valid dimension value</dfn> is <a href="http://html5.org/tools/web-apps-tracker?from=2749&amp;to=2750">defined
 in a commented out paragraph</a> of the HTML Standard.
@@ -348,40 +357,7 @@ in a commented out paragraph</a> of the HTML Standard.
 </p></section>
 
 <section>
-<h1 id=conformance-requirements><span class=secno>2.2 </span>Conformance requirements</h1>
-
-<p>All <!-- diagrams, examples, and --> notes in this specification
-are non-normative, as are all sections explicitly marked
-non-normative. Everything else in this specification is normative.
-
-</p><p>The key words “<em class=rfc2119>MUST</em>”, “<em class=rfc2119>MUST NOT</em>”, “<em class=rfc2119>SHOULD</em>”, and 
-“<em class=rfc2119>MAY</em>” in the normative parts of this document
-are to be interpreted as described in RFC 2119 <cite class="bibref
-normative">[<a href=#ref-RFC2119>RFC2119</a>]</cite>.
-
-<!--
-<p>Requirements phrased in the imperative as part of algorithms (such
-as “strip any leading space characters” or “return false and abort
-these steps”) are to be interpreted with the meaning of the key word
-(e.g. “<em class=rfc2119>MUST</em>”) used in introducing the
-algorithm.
-
-<p>Conformance requirements phrased as algorithms or specific steps
-<em class=rfc2119>MAY</em> be implemented in any manner, so long as
-the end result is equivalent. (In particular, the algorithms defined
-in this specification are intended to be easy to follow, and not
-intended to be performant.)
--->
-
-</p><p>User agents may impose implementation-specific limits on otherwise
-unconstrained inputs, e.g. to prevent denial of service attacks, to
-guard against running out of memory, or to work around
-platform-specific limitations.
-
-</p></section>
-
-<section>
-<h1 id=namespaces><span class=secno>2.3 </span>Namespaces</h1>
+<h1 id=namespaces><span class=secno>2.2 </span>Namespaces</h1>
 
 <p>Except where otherwise stated, all elements defined or mentioned in
 this specification are in the <a href=#html-namespace>HTML namespace</a>, and all
@@ -2836,17 +2812,6 @@ Management Mechanism</a></cite>, A. Barth.  IETF RFC 6265.
 <dd><cite><a href=http://dev.w3.org/csswg/css3-color/>CSS Color
 Module Level 3</a></cite>, Tantek Çelik, Chris Lilley, L. David Baron.
 W3C Editor's Draft.
-
-</dd><dt id=ref-HTML>HTML</dt>
-
-<dd><cite><a href=http://www.whatwg.org/specs/web-apps/current-work/>HTML
-Standard</a></cite>, Ian Hickson.  WHATWG Living Standard.
-
-</dd><dt id=ref-RFC2119>RFC2119</dt>
-
-<dd><cite><a href=http://tools.ietf.org/html/rfc2119>Key words for
-use in RFCs to Indicate Requirement Levels</a></cite>, Scott Bradner,
-<time datetime=1997-03>March 1997</time>.  IETF RFC 2119, BCP 14.
 
 </dd></dl>
 
