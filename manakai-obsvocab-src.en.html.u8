@@ -195,6 +195,12 @@ to:
 
   </ul>
 
+<div class="note memo">
+<p>Support for non-standard extensions implemented by Japanese
+mobile phones (<i lang=ja>garakei</i>) are dropped in 
+<time datetime=2017-11>November 2017</time>.
+</div>
+
 </section>
 
 </section>
@@ -1245,22 +1251,6 @@ title=attr-input-type-image>Image Button</span> state.  The attribute
 has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
 <http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
 
-<p>If the <dfn title=attr-loop><code>loop</code></dfn> attribute of
-an <code>input</code> element <cite class="bibref
-informative">[<a href="#ref-MSDN">MSDN</a>]</cite> is present, its
-value <em class=rfc2119>MUST</em> be a <span>valid integer</span> that
-represents an integer greater than or equal to &minus;1.
-The <code title=attr-loop>loop</code> attribute applies only
-to <code>input</code> elements
-whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-image>Image Button</span> state.<!--
-<http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
-<img loop=""> (the empty string) is equivalent to loop=1 according to
-MSDN but not match the syntax of MSDN.  |infinite| is not part of the
-language according to MSDN.
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag6.html> allows
-|infinite|. -->
-
 </section>
 
 </section>
@@ -1817,7 +1807,8 @@ Japanese mobile phones, including but not limited to:
 <dfn title=attr-a-iswf><code>iswf</code></dfn>,
 <dfn title=attr-a-kana><code>kana</code></dfn>,
 <dfn title=attr-lcs><code>lcs</code></dfn>,
-<dfn title=attr-a-loop><code>loop</code></dfn>,
+<dfn title=attr-loop><code>loop</code></dfn>,
+<dfn title=attr-a-loop><code>loop</code></dfn> (<code>a</code>),
 <dfn title=attr-a-memoryname><code>memoryname</code></dfn>,
 <dfn title=attr-soundstart><code>soundstart</code></dfn>,
 <dfn title=attr-a-src><code>src</code></dfn>,
@@ -1845,7 +1836,8 @@ Japanese mobile phones, including but not limited to:
 <dfn title=attr-img-suppress><code>suppress</code></dfn>,
 <dfn title=attr-frames-security><code>security</code></dfn>,
 <dfn title=attr-head-profile><code>profile</code></dfn>,
-<dfn title=attr-script-archive><code>archive</code></dfn>.
+<dfn title=attr-script-archive><code>archive</code></dfn>,
+<dfn title=attr-scroll><code>scroll</code></dfn>.
 
 <li>Elements <code>image</code> and <code>isindex</code>.
 
@@ -2092,7 +2084,6 @@ in the tests-web repository</a>.
 <dd><a href="#attr-body-marginwidth"><code>marginwidth</code></a>
 <dd><a href="#attr-tdth-nowrap"><code>nowrap</code></a>
 <dd><a href="#attr-body-rightmargin"><code>rightmargin</code></a>
-<dd><a href="#attr-scroll"><code>scroll</code></a>
 <dd><a href="#attr-body-text"><code>text</code></a>
 <dd><a href="#attr-body-topmargin"><code>topmargin</code></a>
 <dd><a href="#attr-body-vlink"><code>vlink</code></a>
@@ -2231,7 +2222,6 @@ in the tests-web repository</a>.
 
 <dt>The <code>html</code> element
 
-<dd><a href="#attr-scroll"><code>scroll</code></a>
 <dd><a href="#attr-html-version"><code>version</code></a>
 
 <dt>The <code>iframe</code> element
@@ -2276,7 +2266,6 @@ in the tests-web repository</a>.
 <dd><a href="#attr-dynsrc"><code>dynsrc</code></a>
 <dd><a href="#attr-hspace"><code>hspace</code></a>
 <dd><a href="#attr-input-incremental"><code>incremental</code></a>
-<dd><a href="#attr-loop"><code>loop</code></a>
 <dd><a href="#attr-lowsrc"><code>lowsrc</code></a>
 <dd><a href="#attr-input-precision"><code>precision</code></a>
 <dd><a href="#attr-input-results"><code>results</code></a>

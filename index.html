@@ -248,6 +248,12 @@ to:
 
   </li></ul>
 
+<div class="note memo">
+<p>Support for non-standard extensions implemented by Japanese
+mobile phones (<i lang=ja>garakei</i>) are dropped in 
+<time datetime=2017-11>November 2017</time>.
+</p></div>
+
 </section>
 
 </section>
@@ -966,8 +972,6 @@ surrounded by spaces</a>.<!-- oversrc
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-oversrc>
 -->
 
-<!-- Softbank allows <input type=submit src> [SOFTBANK] 3.12.2. -->
-
 </p></section>
 
 </section>
@@ -1085,22 +1089,6 @@ element applies only to <code>input</code> elements whose <code title=attr-input
 <em class=rfc2119>MUST NOT</em> be specified unless the element also
 has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
 <http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
-
-</p><p>If the <dfn id=attr-loop title=attr-loop><code>loop</code></dfn> attribute of
-an <code>input</code> element <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is present, its
-value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a> that
-represents an integer greater than or equal to −1.
-The <a href=#attr-loop><code title=attr-loop>loop</code></a> attribute applies only
-to <code>input</code> elements
-whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-image>Image Button</span> state.<!--
-<http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
-<img loop=""> (the empty string) is equivalent to loop=1 according to
-MSDN but not match the syntax of MSDN.  |infinite| is not part of the
-language according to MSDN.
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag6.html> allows
-|infinite|. -->
 
 </p></section>
 
@@ -1563,7 +1551,8 @@ Japanese mobile phones, including but not limited to:
 <dfn id=attr-a-iswf title=attr-a-iswf><code>iswf</code></dfn>,
 <dfn id=attr-a-kana title=attr-a-kana><code>kana</code></dfn>,
 <dfn id=attr-lcs title=attr-lcs><code>lcs</code></dfn>,
-<dfn id=attr-a-loop title=attr-a-loop><code>loop</code></dfn>,
+<dfn id=attr-loop title=attr-loop><code>loop</code></dfn>,
+<dfn id=attr-a-loop title=attr-a-loop><code>loop</code></dfn> (<code>a</code>),
 <dfn id=attr-a-memoryname title=attr-a-memoryname><code>memoryname</code></dfn>,
 <dfn id=attr-soundstart title=attr-soundstart><code>soundstart</code></dfn>,
 <dfn id=attr-a-src title=attr-a-src><code>src</code></dfn>,
@@ -1591,7 +1580,8 @@ Japanese mobile phones, including but not limited to:
 <dfn id=attr-img-suppress title=attr-img-suppress><code>suppress</code></dfn>,
 <dfn id=attr-frames-security title=attr-frames-security><code>security</code></dfn>,
 <dfn id=attr-head-profile title=attr-head-profile><code>profile</code></dfn>,
-<dfn id=attr-script-archive title=attr-script-archive><code>archive</code></dfn>.
+<dfn id=attr-script-archive title=attr-script-archive><code>archive</code></dfn>,
+<dfn id=attr-scroll title=attr-scroll><code>scroll</code></dfn>.
 
 </li><li>Elements <code>image</code> and <code>isindex</code>.
 
@@ -1819,7 +1809,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-body-marginwidth><code>marginwidth</code></a>
 </dd><dd><a href=#attr-tdth-nowrap><code>nowrap</code></a>
 </dd><dd><a href=#attr-body-rightmargin><code>rightmargin</code></a>
-</dd><dd><a href=#attr-scroll><code>scroll</code></a>
 </dd><dd><a href=#attr-body-text><code>text</code></a>
 </dd><dd><a href=#attr-body-topmargin><code>topmargin</code></a>
 </dd><dd><a href=#attr-body-vlink><code>vlink</code></a>
@@ -1958,8 +1947,7 @@ in the tests-web repository</a>.
 
 </dd><dt>The <code>html</code> element
 
-</dt><dd><a href=#attr-scroll><code>scroll</code></a>
-</dd><dd><a href=#attr-html-version><code>version</code></a>
+</dt><dd><a href=#attr-html-version><code>version</code></a>
 
 </dd><dt>The <code>iframe</code> element
 
@@ -2003,7 +1991,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-dynsrc><code>dynsrc</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-input-incremental><code>incremental</code></a>
-</dd><dd><a href=#attr-loop><code>loop</code></a>
 </dd><dd><a href=#attr-lowsrc><code>lowsrc</code></a>
 </dd><dd><a href=#attr-input-precision><code>precision</code></a>
 </dd><dd><a href=#attr-input-results><code>results</code></a>
@@ -2281,11 +2268,6 @@ Tag Reference</a></cite>, <a href=http://web.archive.org/web/20030604191931/http
 devedge</a>, Netscape, <time datetime=1998-01-26>26 January
 1998</time>.
 
-</dd><dt id=ref-EZWEB>EZWEB</dt>
-
-<dd><cite><a href=http://www.au.kddi.com/ezfactory/tec/spec/xhtml.html lang=ja>XHTML Basic について</a></cite> (About XHTML Basic), KDDI.
-(In Japanese)
-
 </dd><dt id=ref-HTML20>HTML20</dt>
 
 <dd><cite><a href=http://tools.ietf.org/html/rfc1866>Hypertext
@@ -2315,11 +2297,6 @@ W3C Recommendation, <time datetime=1999-12-24>24 December 1999</time>.
 
 <dd><cite><a href=http://www.w3.org/MarkUp/htmlplus_paper/htmlplus.html>A Review
 of the HTML+ Document Format</a></cite>, David Raggett.
-
-</dd><dt id=ref-IMODE>IMODE</dt>
-
-<dd><cite><a href=http://www.nttdocomo.co.jp/service/imode/make/content/browser/index.html lang=ja>iモードブラウザ</a></cite> (i-mode browser), NTT docomo. (In
-Japanese)
 
 </dd><dt id=ref-M12N11>M12N11</dt>
 
@@ -2377,14 +2354,6 @@ Martin Dürst, Tex Texin, W3C Recommendation, <time datetime=2008-06-25>25 June 
 <dd><cite><a href=http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Introduction.html>Safari
 HTML Reference</a></cite>, Apple, <time datetime=2009-11-17>17
 November 2009</time>.
-
-</dd><dt id=ref-SOFTBANK>SOFTBANK</dt>
-
-<dd><cite lang=en>ウェブコンテンツ開発ガイド [HTML 編] Version
-2.1.0</cite> (Web Content Development Guide [HTML] Version 2.1.0),
-<span lang=en>ソフトバンクモバイル株式会社</span>, <time datetime=2010-04-01>1 April 2010</time>.  Available from MC
-(Mobile Creation), <a href=http://creation.mb.softbank.jp/web/web_doc.html lang=ja>WEB &amp;
-NETWORK 技術資料</a>. (In Japanese)
 
 </dd><dt id=ref-WF2>WF2</dt>
 
