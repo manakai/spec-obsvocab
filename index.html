@@ -11,7 +11,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num">The manakai project, 17 June 2017</h2>
+<h2 class="no-toc no-num">The manakai project, 3 November 2017</h2>
 </hgroup>
 
 <dl>
@@ -83,11 +83,7 @@ version of the document is the only normative version.</p>
    <li><a href=#namespaces><span class=secno>2.2 </span>Namespaces</a></li></ol></li>
  <li><a href=#obsolete-html-elements-and-attributes><span class=secno>3 </span>Obsolete HTML elements and attributes</a>
   <ol>
-   <li><a href=#metadata><span class=secno>3.1 </span>Metadata</a>
-    <ol>
-     <li><a href=#metadata-elements><span class=secno>3.1.1 </span>Metadata elements</a></li>
-     <li><a href=#the-bgsound-element><span class=secno>3.1.2 </span>The <code>bgsound</code> element</a></li>
-     <li><a href=#hidden-metadata><span class=secno>3.1.3 </span>Hidden metadata</a></li></ol></li>
+   <li><a href=#metadata><span class=secno>3.1 </span>Metadata</a></li>
    <li><a href=#flow-content><span class=secno>3.2 </span>Flow content</a>
     <ol>
      <li><a href=#lists><span class=secno>3.2.1 </span>Lists</a></li>
@@ -105,24 +101,16 @@ version of the document is the only normative version.</p>
    <li><a href=#phrasing-content><span class=secno>3.7 </span>Phrasing content</a>
     <ol>
      <li><a href=#the-font-element><span class=secno>3.7.1 </span>The <code>font</code> element</a></li></ol></li>
-   <li><a href=#hyperlinks><span class=secno>3.8 </span>Hyperlinks</a>
-    <ol>
-     <li><a href=#link-destinations><span class=secno>3.8.1 </span>Link destinations</a></li>
-     <li><a href=#metadata-0><span class=secno>3.8.2 </span>Metadata</a></li>
-     <li><a href=#profile-data><span class=secno>3.8.3 </span>Profile data</a></li>
-     <li><a href=#activation-and-presentation><span class=secno>3.8.4 </span>Activation and presentation</a></li></ol></li>
+   <li><a href=#hyperlinks><span class=secno>3.8 </span>Hyperlinks</a></li>
    <li><a href=#embedded-content><span class=secno>3.9 </span>Embedded content</a>
     <ol>
      <li><a href=#the-img-element><span class=secno>3.9.1 </span>The <code>img</code> element</a>
       <ol>
-       <li><a href=#image-sources><span class=secno>3.9.1.1 </span>Image sources</a></li>
-       <li><a href=#presentation><span class=secno>3.9.1.2 </span>Presentation</a></li></ol></li>
+       <li><a href=#image-sources><span class=secno>3.9.1.1 </span>Image sources</a></li></ol></li>
      <li><a href=#the-embed-element><span class=secno>3.9.2 </span>The <code>embed</code> element</a></li>
-     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>3.9.3 </span>The <code>applet</code>, <code>object</code>, and
-<code>param</code> elements</a></li>
-     <li><a href=#audio-and-video><span class=secno>3.9.4 </span>Audio and video</a></li>
-     <li><a href=#vibration><span class=secno>3.9.5 </span>Vibration</a></li>
-     <li><a href=#embedded-data><span class=secno>3.9.6 </span>Embedded data</a></li></ol></li>
+     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>3.9.3 </span>The <code>applet</code>, <code>object</code>,
+and <code>param</code> elements</a></li>
+     <li><a href=#audio-and-video><span class=secno>3.9.4 </span>Audio and video</a></li></ol></li>
    <li><a href=#frames><span class=secno>3.10 </span>Frames</a>
     <ol>
      <li><a href=#the-frameset-element><span class=secno>3.10.1 </span>The <code>frameset</code> element</a></li>
@@ -132,8 +120,7 @@ version of the document is the only normative version.</p>
    <li><a href=#scripting><span class=secno>3.11 </span>Scripting</a></li>
    <li><a href=#forms><span class=secno>3.12 </span>Forms</a>
     <ol>
-     <li><a href=#value-constraints-and-input-mode><span class=secno>3.12.1 </span>Value constraints and input mode</a></li>
-     <li><a href=#autocomplete><span class=secno>3.12.2 </span>Autocomplete</a></li></ol></li>
+     <li><a href=#autocomplete><span class=secno>3.12.1 </span>Autocomplete</a></li></ol></li>
    <li><a href=#user-interaction><span class=secno>3.13 </span>User interaction</a></li></ol></li>
  <li><a href=#elements-and-attributes-not-included-in-this-specification><span class=secno>4 </span>Elements and attributes not included in this specification</a></li>
  <li><a href=#machine-readable-data><span class=secno>5 </span>Machine-readable data</a></li>
@@ -160,13 +147,14 @@ specification</a>.  In particular, the HTML Standard identifies a
 number of non‐conforming elements and attributes as <i>obsolete</i>.
 It does not define any specific conformance requirement for such
 elements and attributes, as the use of them is by
-definition <em>non‐conforming</em>.
+definition <em>non-conforming</em>.
 
 </p><p>However, authors are sometimes forced to use such non‐conforming
-elements and attributes, for compatibility with legacy or <i lang=es>Galápagos</i> user agents and/or historical authoring
-practices.  A conformance checker that reports a non‐conforming
-elements and attributes just as <i>non‐conforming</i> is not useful
-enough to ease authoring processes in such legacy circumstances.
+elements and attributes, for compatibility with legacy user agents
+and/or historical authoring practices.  A conformance checker that
+reports a non-conforming elements and attributes just
+as <i>non-conforming</i> is not useful enough to ease authoring
+processes in such legacy circumstances.
 
 </p><p>This specification defines authors' requirements for HTML elements
 and attributes <em>not</em> defined in the HTML Standard or those
@@ -242,20 +230,21 @@ document could be modified at any time.  Earlier revisions of this
 document is available from the <a href=#version-history>version
 history</a> page.
 
-</p><p>Requirements in this document are modified, sometimes incompatibly,
-for several reasons, including but not limited to:
+</p><p>Requirements in this document might be modified in future
+revisions, sometimes incompatibly, in ways including but not limited
+to:
 
   </p><ul>
 
-  <li>Add new proprietary features.
+  <li>Adding new proprietary features.
 
-  </li><li>Delete features that are no longer supported by any major
-  browser.
+  </li><li>Deleting features that are no longer supported by any major
+  browser's current release.
 
-  </li><li>Delete features that are re-added to the standard (with same or
-  different semantics) so it is now conforming.
+  </li><li>Deleting features that are re-added to the standard (with same
+  or different semantics) so it is now conforming.
 
-  </li><li>Delete features that are rather confusing for validator users.
+  </li><li>Deleting features that are rather confusing for validator users.
 
   </li></ul>
 
@@ -376,16 +365,7 @@ namespace.
 <section>
 <h1 id=metadata><span class=secno>3.1 </span>Metadata</h1>
 
-<p>If the <code id=attr-head-profile title=attr-head-profile>profile</code> attribute of the <code>head</code>
-element is present, its value <em class=rfc2119>MUST</em> be a
-<a href=#set-of-space-separated-tokens>set of space-separated tokens</a>, each of which <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url>valid non-empty URL</a>.  For
-the purpose of conformance of the <code>base</code> element, however,
-this is not an attribute defined as taking <a href=#url title=URL>URLs</a><!-- This means that <head profile=...><base
-href=...> is not an error. -->.<!-- HTML5 old definition
-<http://html5.org/tools/web-apps-tracker?from=421&to=422>, HTML5
-obsolete -->
-
-</p><p>If the <code id=attr-html-version title=attr-html-version>version</code> attribute of an <code>html</code>
+<p>If the <code id=attr-html-version title=attr-html-version>version</code> attribute of an <code>html</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
 string.<!-- According to HTML4 prose, the |version| attribute's value
 is "cdata".  Various DTDs of versions of HTML and XHTML define their
@@ -407,13 +387,13 @@ of a <code>meta</code> element is in the <span title=attr-meta-http-equiv-set-co
 validation of this attribute value, the character set of the ABNF
 production rule of the <code>set-cookie-string</code> is Unicode.
 
-</p><section>
-<h1 id=metadata-elements><span class=secno>3.1.1 </span>Metadata elements</h1>
-
-<p>The <a href=#content-model>content model</a> of
-the <code id=basefont>basefont</code> element
-is <a href=#nothing>nothing</a>.<!-- HTML Standard parsing --><!-- No
-attribute (no browser supports attributes any longer) -->
+<!--
+The |basefont| element
+  - attributes       - no processing model
+  - content model    - HTML Standard's parsing algorithm
+-->
+</p><p>The <a href=#content-model>content model</a> of
+the <code id=basefont>basefont</code> element is <a href=#nothing>nothing</a>.
 
 </p><p>If the <code id=attr-meta-scheme title=attr-meta-scheme>scheme</code> attribute of the <code>meta</code>
 element is present, its value <em class=rfc2119>MAY</em> be any
@@ -421,61 +401,26 @@ string.<!-- HTML4,
 <http://suika.suikawiki.org/2007/html/standards#html-meta-scheme>
 --><!-- HTMLMetaElement -->
 
-</p></section>
-
-<section>
-<h1 id=the-bgsound-element><span class=secno>3.1.2 </span>The <code>bgsound</code> element</h1>
-<!-- <http://msdn.microsoft.com/en-us/library/ms535198%28VS.85%29.aspx> -->
-
-<p>The <a href=#content-model>content model</a> of
+<!--
+The |bgsound| element
+  - attributes       - no processing model
+  - content model    - HTML Standard's parsing algorithm
+-->
+</p><p>The <a href=#content-model>content model</a> of
 the <code id=bgsound>bgsound</code> element
-is <a href=#nothing>nothing</a>.<!-- HTML Standard parsing -->
+is <a href=#nothing>nothing</a>.
 
-</p><p>If the <code id=attr-bgsound-src title=attr-bgsound-src>src</code>
-attribute of a <code>bgsound</code> element <cite class="bibref
-informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is present, its
-value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL
-potentially surrounded by spaces</a>.  The <code title=attr-bgsound-src>src</code> attribute <em class=rfc2119>MUST</em> be present.<!--
-<http://msdn.microsoft.com/en-us/library/ms534641%28VS.85%29.aspx> -->
-
-</p><p>If the <code id=attr-bgsound-balance title=attr-bgsound-balance>balance</code> attribute of a
-<code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a> that
-represents an integer in the range −10,000 to 10,000,
-inclusive.<!--
-<http://msdn.microsoft.com/en-us/library/ms533500%28VS.85%29.aspx> -->
-
-</p><p>The <code id=attr-bgsound-volume title=attr-bgsound-volume>volume</code> attribute of the
-<code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">high</code>, <code title="">middle</code>, <code title="">low</code>, and <code title="">0</code>.<!-- Softbank 3.10.2. -->
-
-</p></section>
-
-<section>
-<h1 id=hidden-metadata><span class=secno>3.1.3 </span>Hidden metadata</h1>
-
-<p>Attributes <code id=attr-about title=attr-about>about</code>, <code id=attr-resource title=attr-resource>resource</code>, <code id=attr-content title=attr-content>content</code>, <code id=attr-datatype title=attr-datatype>datatype</code>, <code id=attr-typeof title=attr-typeof>typeof</code>, <code id=attr-property title=attr-property>property</code>, <code id=attr-rel title=attr-rel>rel</code>, and <code id=attr-rev title=attr-rev>rev</code> <cite class="bibref informative">[<a href=#ref-RDFA>RDFA</a>, <a href=#ref-XHTMLRDFA11>XHTMLRDFA11</a>]</cite> of an <a href=#html-elements title="HTML elements">HTML element</a>, if present, <em class=rfc2119>MAY</em> have any value.<!-- RDFa 1.0/1.1 -->
-
-</p><p>Attributes <code id=attr-prefix title=attr-prefix>prefix</code> and
-<code title=attr-vocab>vocab</code> of an <a href=#html-elements title="HTML
-elements">HTML element</a> <cite class="bibref informative">[<a href=#ref-XHTMLRDFA11>XHTMLRDFA11</a>]</cite>, if present, <em class=rfc2119>MAY</em> have any value.<!-- RDFa 1.1 -->
-
-<!-- xmlns:*="" typeof="" property="" content="" rel=""
-<https://support.google.com/webmasters/answer/146898> -->
-<!-- vocab="" typeof="" property=""
-<http://schema.org/docs/datamodel.html> -->
-<!-- property="" <http://ogp.me/> -->
-<!-- RDFa 1.0 + RDFa 1.1
-<http://www.google.com/webmasters/tools/richsnippets> -->
+</p><p>If the <code id=attr-prefix title=attr-prefix>prefix</code>
+attribute of an <code>html</code> or <code>head</code> element is
+specified, it <em class=rfc2119>MAY</em> have any value.<!-- RDFa 1.1
+-->
 
 </p><div class="note memo">
 
-<p>The HTML Standard defines the (conforming) <code title="">content</code> and <code title="">rel</code> attributes for several
-<a href=#html-elements>HTML elements</a>.  This requirement does not (or in fact
-cannot) override them in any way.
+<p>The <code>property</code> attribute might be used as part of
+<a href=https://suika.suikawiki.org/www/markup/xml/validation-langs#ogp>OGP</a>.
 
 </p></div>
-
-</section>
 
 </section>
 
@@ -504,14 +449,10 @@ rendering, HTML Standard obsolete -->
 attribute of a <code>ul</code> element is present, its value <em class=rfc2119>MUST</em> be equal to one of <code title="">disc</code>,
 <code title="">circle</code>, and <code title="">square</code>, <a href=#ascii-case-insensitive title="ASCII case-insensitive">ASCII case-insensitively</a>.  If
 the <code id=attr-li-type title=attr-li-type>type</code> attribute of
-an <code>li</code> or <code>dir</code> <cite class="bibref
-informative">[<a href=#ref-IMODE>IMODE</a>]</cite> element is
+an <code>li</code>  element is
 present, its value <em class=rfc2119>MUST</em> be one of values
 allowed for <code title="">type</code> attributes of <code>ul</code> and
-<code>ol</code> elements.<!-- HTML Standard rendering,
-<http://code.google.com/p/doctype/wiki/DirTypeAttribute>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/type4.html>
--->
+<code>ol</code> elements.<!-- HTML Standard rendering -->
 
 </p><p>The <code id=attr-compact title=attr-compact>compact</code>
 attribute of the <code>dir</code>, <code>dl</code>, <code>menu</code>,
@@ -603,7 +544,8 @@ says there is <nobr height>, but maybe it is wrong),
 </p><p>If the <code id=attr-colgroup-width title=attr-colgroup-width>width</code> attribute of a
 <code>colgroup</code> element <cite class="bibref informative">[<a href=#ref-HTML4>HTML4</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension value</a> or an
 optional <a href=#valid-non-negative-integer>valid non-negative integer</a> followed by a U+002A
-<code class=charname>ASTERISK</code> character (*).<!-- HTML4 -->
+<code class=charname>ASTERISK</code> character (*).<!-- HTML4
+--><!-- There is HTMLTableColElement.width -->
 
 </p><p>The <code>pre</code> element's <code id=attr-pre-width title=attr-pre-width>width</code> attribute value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
 integer</a>.<!-- HTML4/HTMLPreElement -->
@@ -700,14 +642,6 @@ attribute</a>.<!-- HTML Standard rendering -->
 <code title="">scroll</code>, <code title="">yes</code>, <code title="">off</code>, <code title="">noscroll</code>, <code title="">no</code>,
 and <code title="">auto</code>. Keywords other than <code title="">yes</code>, <code title="">no</code>, and <code>auto</code> are non‐
 conforming.<!-- HTML Standard rendering, HTML4 -->
-
-</p><p>The <code id=attr-scroll title=attr-scroll>scroll</code> attribute
-of a <code>body</code> or <code>html</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
-<a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">yes</code>, <code title="">no</code>, and <code title="">auto</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms534393%28VS.85%29.aspx>
---><!-- XXX maybe <html scroll> should not be allowed in quirks mode
-and <body scroll> should not be allowed in no quirks mode -->
-
 
 </p></section>
 
@@ -944,146 +878,18 @@ with keywords <code>all</code>, <code>none</code>, and
 <http://msdn.microsoft.com/en-us/library/ie/dn337007(v=vs.85).aspx>
 -->
 
-</p><section>
-<h1 id=link-destinations><span class=secno>3.8.1 </span>Link destinations</h1>
-
-<p>If the <code id=attr-a-src title=attr-a-src>src</code> attribute of
-the <code>a</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL potentially
-surrounded by spaces</a>.<!-- Softbank 3.9.1. -->
-
-</p><p>If the <code id=attr-a-cti title=attr-a-cti>cti</code> attribute of
-the <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be one or more characters in the range U+0030
-<code class=charname>DIGIT ZERO</code> (0) to U+0039 <code class=charname>DIGIT NINE</code> (9), U+002A <code class=charname>ASTERISK</code> character (*), U+0023 <code class=charname>NUMBER SIGN</code> character (#), U+002C <code class=charname>COMMA</code> character (,), or U+002F <code class=charname>SOLIDUS</code> character (/).  There <em class=rfc2119>MUST NOT</em> be a U+002F <code class=charname>SOLIDUS</code> character (/) immediately following
-another U+002F <code class=charname>SOLIDUS</code> character (/) in
-the attribute value.  The length of the attribute value <em class=rfc2119>MUST NOT</em> be greater than 128.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/cti.html>
--->
-
-</p><p>If the <code id=attr-a-ijam title=attr-a-ijam>ijam</code> attribute
-of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element in
-the same <a href=#home-subtree>home subtree</a> or a <a href=#valid-hash-id-reference>valid hash-ID
-reference</a> to an <code>object</code> element.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ijam>ijam</code> attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
-<code title=attr-a-ijam>ijam</code> attribute <em class=rfc2119>MUST
-NOT</em> be specified.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/object.html#p02>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/object3.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p07>
--->
-
-</p><p>If the <code id=attr-a-ista title=attr-a-ista>ista</code> attribute
-of the <code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be the ID of an <code>object</code> element in
-the same <a href=#home-subtree>home subtree</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-a-ista>ista</code> attribute is specified.  The <code title=attr-a-ista>ista</code> attribute <em class=rfc2119>MUST
-NOT</em> be specified if the <code title=attr-a-ijam>ijam</code>
-attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
-<code title=attr-a-ista>ista</code> attribute <em class=rfc2119>MUST
-NOT</em> be specified.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/ista.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p16>
--->
-
-</p><p>If <code id=attr-a-ilet title=attr-a-ilet>ilet</code>, <code id=attr-a-iswf title=attr-a-iswf>iswf</code>, or <code id=attr-a-irst title=attr-a-irst>irst</code> attribute of the
-<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-hash-id-reference>valid hash-ID reference</a> to
-an <code>object</code> element.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, or
-<code title=attr-a-irst>irst</code> attribute is specified.  If the
-<code title=attr-hyperlink-target>target</code> attribute is
-specified, <code title=attr-a-ilet>ilet</code>, <code title=attr-a-iswf>iswf</code>, and <code title=attr-a-irst>irst</code>
-attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/ilet.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/iswf.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tagshitei.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p08>
--->
-
-</p><p>If <code id=attr-a-ifb title=attr-a-ifb>ifb</code> or <code id=attr-a-ib title=attr-a-ib>ib</code> attribute of the <code>a</code>
-element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url-potentially-surrounded-by-spaces>valid URL potentially surrounded by
-spaces</a>.  The <code title=attr-hyperlink-href>href</code>
-attribute <em class=rfc2119>MUST</em> be specified if <code title=attr-a-ifb>ifb</code> or <code title=attr-a-ib>ib</code>
-attribute is specified.  If the <code title=attr-hyperlink-target>target</code> attribute is specified,
-<code title=attr-a-ifb>ifb</code> and <code title=attr-a-ib>ib</code>
-attributes <em class=rfc2119>MUST NOT</em> be specified.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/ifb.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p05>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p06>
--->
-
-</p><p>The <code id=attr-utn title=attr-utn>utn</code> attribute of the
-<code>a</code> or <code>form</code> element <cite class="bibref
-informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is a
-<a href=#boolean-attribute>boolean attribute</a>.  If the <code title=attr-hyperlink-target>target</code> attribute is specified, the
-<code title=attr-utn>utn</code> attribute <em class=rfc2119>MUST
-NOT</em> be specified.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/utn.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p18>
--->
-
-</p><p>The <code id=attr-lcs title=attr-lcs>lcs</code> attribute of
-<code>a</code> and <code>form</code> elements <cite class="bibref
-informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is a
-<a href=#boolean-attribute>boolean attribute</a>.  The <code title=attr-hyperlink-href>href</code> attribute <em class=rfc2119>MUST</em> be specified if the <code title=attr-lcs>lcs</code> attribute of the <code>a</code> element is
-specified.  If the <code title=attr-hyperlink-target>target</code>
-attribute is specified, the <code title=attr-lcs>lcs</code> attribute
-<em class=rfc2119>MUST NOT</em> be specified.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/location_info.html#p03>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/browser2/tag/a.html#p13>
--->
-
 </p><p>The <code id=attr-area-nohref title=attr-area-nohref>nohref</code>
 attribute of the <code>area</code> element is a <a href=#boolean-attribute>boolean
 attribute</a>.<!-- HTML4 -->
 
-</p></section>
-
-<section>
-<h1 id=metadata-0><span class=secno>3.8.2 </span>Metadata</h1>
-
-<p>If the <code id=attr-hyperlink-charset title=attr-hyperlink-charset>charset</code> attribute of an
-<code>a</code> or <code>link</code> element is present, its value <em class=rfc2119>MUST</em> be syntactically valid <code title=attr-script-charset>charset</code> attribute value for a
-<code>script</code> element.<!-- HTML4 -->
-
-</p></section>
-
-<section>
-<h1 id=profile-data><span class=secno>3.8.3 </span>Profile data</h1>
-
-<p>If <code id=attr-a-telbook title=attr-a-telbook>telbook</code> or
-<code id=attr-a-kana title=attr-a-kana>kana</code> attribute of an
-<code>a</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel-av.html>
-- telbook cannot contain emoji symbols; kana can only contain
-halfwidth katakana characters; they have length constraint -->
-
-</p><p>If the <code id=attr-a-email title=attr-a-email>email</code>
-attribute of an <code>a</code> element <cite class="bibref
-informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is present, its
-value <em class=rfc2119>MUST</em> be a <a href=#valid-e-mail-address>valid e-mail
-address</a>.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel.html>,
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/tel-av.html>
-- it has length constraint -->
-
-</p><p>If the <code id=attr-a-memoryname title=attr-a-memoryname>memoryname</code> attribute of an <code>a</code>
-element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a string whose length is greater than two
-(2).  The attribute value <em class=rfc2119>MUST</em> contain a <code class=charname>U+002D HYPHEN-MINUS</code> character (-) in the
-middle.<!-- Softbank 3.9.1.; Kana-or-kanji name, followed by a "-",
-followed by katakana name -->
-
-</p></section>
-
-<section>
-<h1 id=activation-and-presentation><span class=secno>3.8.4 </span>Activation and presentation</h1>
-
-<p>If the <code id=attr-directkey title=attr-directkey>directkey</code> attribute of an <code>a</code> or
-<code>input</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a string that is syntactically valid as an
-<code title=attr-accesskey>accesskey</code> attribute value.  The
-<code title=attr-directkey>directkey</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-submit>Submit Button</span> state.  If the
-<code title=attr-directkey>directkey</code> attribute is specified for
-an <code>input</code> element, the <code title="">value</code> attribute
-<em class=rfc2119>MUST</em> also be specified.<!-- Softbank 3.9.1.,
-3.12.2. -->
+</p><p>If the <code id=attr-hyperlink-charset title=attr-hyperlink-charset>charset</code> attribute of an
+<code>a</code> or <code>link</code> element is present, its
+value <em class=rfc2119>MUST</em> be a <a href=#encoding-label title="encoding
+label">label</a>.<!-- HTML4 -->  The term
+<a href=https://encoding.spec.whatwg.org/#label><dfn id=encoding-label title="encoding
+label">label</dfn></a> is defined by the
+<a href=https://encoding.spec.whatwg.org/><cite>Encoding
+Standard</cite></a>.
 
 </p><p>If the <code id=attr-a-coords title=attr-a-coords>coords</code>
 attribute and/or the <code id=attr-a-shape title=attr-a-shape>shape</code> attribute of an <code>a</code> element is
@@ -1093,22 +899,21 @@ present, their values, and their presence themselves, <em class=rfc2119>MUST</em
 
 </p></section>
 
-</section>
-
 <section>
 <h1 id=embedded-content><span class=secno>3.9 </span>Embedded content</h1>
 
-<p>If there are <code>applet</code>, <code>embed</code>, and/or
-<code>img</code> elements with their <code id=attr-objects-name title=attr-objects-name>name</code> attributes specified, those elements
+<p>If there are <code>embed</code>, and/or <code>img</code> elements
+with their <code id=attr-objects-name title=attr-objects-name>name</code> attributes specified, those elements
 <em class=rfc2119>MUST</em> be treated as if they were <code>a</code>
 elements for the purpose of conformance of <code title="">name</code>
-attributes of <code>a</code>, <code>applet</code>, <code>embed</code>,
+attributes of <code>a</code>,  <code>embed</code>,
 and <code>img</code> elements in the document, except that use of the
 <code title=attr-objects-name>name</code> attributes for these
-elements are always non‐conforming.  (Use of the <code title=attr-a-name>name</code> attribute for the <code>a</code> element
-is sometimes <i>obsolete but conforming</i> according to HTML
-Standard.)<!-- HTML Standard UA reqs
-e.g. <http://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
+elements are always non-conforming.  (Use of
+the <code title=attr-a-name>name</code> attribute for
+the <code>a</code> element is sometimes <i>obsolete but conforming</i>
+according to HTML Standard.)<!-- HTML Standard UA reqs
+e.g. <https://www.whatwg.org/specs/web-apps/current-work/complete.html#dom-window-nameditem-filter>,
 HTML Standard obsolete, HTML4 --><!-- There was <layer name> according
 to <http://www.blooberry.com/indexdot/html/tagpages/l/layer.htm> -->
 
@@ -1128,6 +933,13 @@ HTML5 definition -->
 attribute of the <code>frame</code>, <code>iframe</code>, or
 <code>img</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-url-potentially-surrounded-by-spaces>valid URL potentially surrounded by
 spaces</a>.<!-- HTML4 -->
+
+</p><p>The <code id=attr-img-composite title=attr-img-composite>composite</code> attribute of the
+<code>img</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is a <a href=#enumerated-attribute>enumerated
+attribute</a> with the keyword <code>source-over</code>.<!--
+<http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913>,
+<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-composite>
+-->
 
 </p><section>
 <h1 id=image-sources><span class=secno>3.9.1.1 </span>Image sources</h1>
@@ -1154,61 +966,7 @@ surrounded by spaces</a>.<!-- oversrc
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-oversrc>
 -->
 
-</p><p>If the <code id=attr-img-localsrc title=attr-img-localsrc>localsrc</code> attribute of the <code>img</code>
-element <cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a string consist of one or more characters
-in the range U+0030 <code class=charname>DIGIT ZERO</code> (0) to
-U+0039 <code class=charname>DIGIT NINE</code> (9), U+0041 <code class=charname>LATIN CAPITAL LETTER A</code> to U+005A <code class=charname>LATIN CAPITAL LETTER Z</code>, and U+0061 <code class=charname>LATIN SMALL LETTER A</code> to U+007A <code class=charname>LATIN SMALL LETTER Z</code>.  The value <em class=rfc2119>SHOULD</em> be a character in the range U+0031 <code class=charname>DIGIT ONE</code> (1) to U+0039 <code class=charname>DIGIT NINE</code> (9), followed by zero or more
-characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
-(0) to U+0039 <code class=charname>DIGIT NINE</code> (9)<!--
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag7.html> - according
-to this page, localsrc value is either "icon number" or "symbol name".
-The latest emoji list page
-<http://www.au.kddi.com/ezfactory/tec/spec/3.html> contains list of
-"icon numbers", but does not contain "symbol names".  "Symbol names"
-are included in older versions of the list - see
-<http://web.archive.org/web/*/www.au.kddi.com/ezfactory/tec/spec/3.html>.
-See also WML 2.0 |wml:localsrc|.  -->
-
 <!-- Softbank allows <input type=submit src> [SOFTBANK] 3.12.2. -->
-
-</p></section>
-
-<section>
-<h1 id=presentation><span class=secno>3.9.1.2 </span>Presentation</h1>
-
-<p>The <code id=attr-img-suppress title=attr-img-suppress>suppress</code> attribute of the <code>img</code>
-element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is a <a href=#boolean-attribute>boolean
-attribute</a>.<!--
-<http://web.archive.org/web/20030622172358/devedge.netscape.com/library/manuals/1998/htmlguide/tags8.html#1310461>
--->
-
-</p><p>The <code id=attr-img-composite title=attr-img-composite>composite</code> attribute of the
-<code>img</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is a <a href=#enumerated-attribute>enumerated
-attribute</a> with the keyword <code>source-over</code>.<!--
-<http://weblogs.mozillazine.org/hyatt/archives/2004_07.html#005913>,
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-composite>
--->
-
-</p><p>The <code id=attr-img-galleryimg title=attr-img-galleryimg>galleryimg</code> attribute of the
-<code>img</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is a <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">yes</code>, <code title="">true</code>, <code title="">no</code>, and <code title="">false</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms533774%28VS.85%29.aspx>
-(historical) -->
-
-</p><hr>
-
-<p>The <code id=attr-img-nosave title=attr-img-nosave>nosave</code>
-attribute of the <code>img</code> element <cite class="bibref
-informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is a
-<a href=#boolean-attribute>boolean attribute</a>.<!--
-<http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/nosave>
--->
-
-</p><p>The <code id=attr-img-copyright title=attr-img-copyright>copyright</code> attribute <cite class="bibref
-informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> of
-<code>img</code> and <code>object</code> elements is <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">yes</code> and <code title="">no</code>.<!--
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag4.html> -->
 
 </p></section>
 
@@ -1238,35 +996,22 @@ is <a href=#text>text</a>.<!-- HTML Standard parsing -->
 </san></p></section>
 
 <section>
-<h1 id=the-applet,-object,-and-param-elements><span class=secno>3.9.3 </span>The <code>applet</code>, <code>object</code>, and
-<code>param</code> elements</h1>
+<h1 id=the-applet,-object,-and-param-elements><span class=secno>3.9.3 </span>The <code>applet</code>, <code>object</code>,
+and <code>param</code> elements</h1>
 
 <p>The <a href=#content-model>content model</a> of the <code id=applet>applet</code>
 element is same as the <code>object</code> element.<!-- HTML Standard
 obsolete, HTML4 -->
 
-</p><p>If the <code id=attr-applet-alt title=attr-applet-alt>alt</code>
-attribute of the <code>applet</code> element is present, its value <em class=rfc2119>MAY</em> be any string.  This is not a required
-attribute.<!-- HTML4 (In HTML4 |alt| is REQUIRED. -->
-
-</p><p>The <code title=attr-applet-width>width</code> attribute and the
-<code title=attr-applet-height>height</code> attribute of the
-<code>applet</code> element <em class=rfc2119>MUST</em> be
-specified.<!-- HTML4 -->
-
 </p><hr>
 
-<p>If the <code id=attr-applet-archive title=attr-applet-archive>archive</code> attribute of the
-<code>applet</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#set-of-comma-separated-tokens>set of comma-separated
-tokens</a>, each of which <em class=rfc2119>MUST</em> be a
-<a href=#valid-non-empty-url>valid non-empty URL</a> that contains no U+002C <code class=charname>COMMA</code> character (,).<!-- HTML4 -->
-
-</p><p>If the <code id=attr-object-archive title=attr-object-archive>archive</code> attribute of the
+<p>If the <code id=attr-object-archive title=attr-object-archive>archive</code> attribute of the
 <code>object</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#set-of-space-separated-tokens>set of space-separated
 tokens</a>, each of which <em class=rfc2119>MUST</em> be a
 <a href=#valid-non-empty-url>valid non-empty URL</a>.<!-- HTML4 -->
 
-</p><p>When a <a href=#url>URL</a> specified within the <code title="">archive</code> attribute of the <code>applet</code> or
+</p><p>When a <a href=#url>URL</a> specified within
+the <code title="">archive</code> attribute of the
 <code>object</code> element is <a href=#resolve-a-url title="resolve a
 URL">resolved</a>, the <a href=#url>URL</a> obtained by <a href=#resolve-a-url title="resolve a URL">resolving</a> the value of the <code title=attr-objects-codebase>codebase</code> attribute of the element,
 if any, <em class=rfc2119>MUST</em> be used as the <i>base
@@ -1277,7 +1022,7 @@ URL</i>.<!-- HTML4 -->
 surrounded by spaces</a> and <em class=rfc2119>MUST</em> be an
 <a href=#absolute-url>absolute URL</a>.<!-- HTML Standard UA reqs and HTML4 def -->
 
-</p><p>If the <code id=attr-objects-code title=attr-objects-code>code</code> attribute of an <code>applet</code>,
+</p><p>If the <code id=attr-objects-code title=attr-objects-code>code</code> attribute of an
 <code>embed</code> <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite>, or <code>object</code> element
 is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty
 URL potentially surrounded by spaces</a>.<!-- HTML Standard
@@ -1287,15 +1032,10 @@ embed
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/HTMLTags.html#//apple_ref/doc/uid/30001262-embed>
 -->
 
-</p><p>If the <code id=attr-applet-object title=attr-applet-object>object</code> attribute of an
-<code>applet</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL potentially
-surrounded by spaces</a>.<!-- HTML4 -->
-
-</p><p>For an <code>applet</code> element at least one of <code title=attr-applet-code>code</code> and <code title=attr-applet-object>object</code> attribute <em class=rfc2119>MUST</em> be specified.<!-- HTML4 -->
-
 </p><p>If the <code id=attr-objects-codebase title=attr-objects-codebase>codebase</code> attribute of an
-<code>applet</code> or <code>object</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL potentially
-surrounded by spaces</a>.<!-- HTML4 -->
+<code>object</code> element is present,
+its <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL
+potentially surrounded by spaces</a>.<!-- HTML4 -->
 
 </p><p>If the <code id=attr-object-codetype title=attr-object-codetype>codetype</code> attribute of an
 <code>object</code> element is present, its <em class=rfc2119>MUST</em> be a <a href=#valid-mime-type>valid MIME type</a>.  This
@@ -1306,9 +1046,6 @@ HTML4 -->
 <!-- <object basehref> is not a content attribute in fact.
 <http://msdn.microsoft.com/en-us/library/ms533501%28VS.85%29.aspx> -->
 
-<!-- <applet src> is maybe not exist
-<http://msdn.microsoft.com/en-us/library/ms534643%28VS.85%29.aspx> -->
-
 </p><hr>
 
 <p>The <code id=attr-object-declare title=attr-object-declare>declare</code> attribute of the
@@ -1317,12 +1054,6 @@ HTML4 -->
 
 </p><p>If the <code id=attr-object-standby title=attr-object-standby>standby</code> attribute of the
 <code>object</code> element is present, its value <em class=rfc2119>MAY</em> be any string.<!-- HTML4 -->
-
-</p><p>The <code id=attr-applet-mayscript title=attr-applet-mayscript>mayscript</code> attribute of the
-<code>applet</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is a <a href=#boolean-attribute>boolean
-attribute</a>.<!--
-<http://web.archive.org/web/20030610034455/devedge.netscape.com/library/manuals/1998/htmlguide/tags14.html#1237148>
--->
 
 </p><p>The <code id=attr-embed-palette title=attr-embed-palette>palette</code> attribute of the
 <code>embed</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is an <a href=#enumerated-attribute>enumerated
@@ -1355,23 +1086,13 @@ element applies only to <code>input</code> elements whose <code title=attr-input
 has the <code title=attr-dynsrc>dynsrc</code> attribute specified.<!--
 <http://msdn.microsoft.com/en-us/library/ms534646%28VS.85%29.aspx> -->
 
-</p><p>The <code id=attr-soundstart title=attr-soundstart>soundstart</code> attribute of <code>a</code> or
-<code>input</code> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">select</code> and <code title="">focus</code>.  This attribute <em class=rfc2119>MUST NOT</em> be
-specified unless the <code title=attr-hyperlink-href>href</code>
-attribute of the <code>a</code> element or the <code title=attr-input-src>src</code> attribute of the <code>input</code>
-element is also specified.  The <code title=attr-soundstart>soundstart</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-submit>Submit Button</span> state.<!--
-Softbank 3.9.1., 3.12.2. -->
-
-</p><p>If the <code id=attr-loop title=attr-loop>loop</code> attribute of
-the <code>input</code>, or <code>bgsound</code> element <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is
-present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid
-integer</a> that represents an integer greater than or equal to
-−1.  The <code title=attr-loop>loop</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
+</p><p>If the <dfn id=attr-loop title=attr-loop><code>loop</code></dfn> attribute of
+an <code>input</code> element <cite class="bibref
+informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is present, its
+value <em class=rfc2119>MUST</em> be a <a href=#valid-integer>valid integer</a> that
+represents an integer greater than or equal to −1.
+The <a href=#attr-loop><code title=attr-loop>loop</code></a> attribute applies only
+to <code>input</code> elements
 whose <code title=attr-input-type>type</code> attribute is in the
 <span title=attr-input-type-image>Image Button</span> state.<!--
 <http://msdn.microsoft.com/en-us/library/ms534134%28VS.85%29.aspx>.
@@ -1380,94 +1101,6 @@ MSDN but not match the syntax of MSDN.  |infinite| is not part of the
 language according to MSDN.
 <http://www.au.kddi.com/ezfactory/tec/spec/wap_tag6.html> allows
 |infinite|. -->
-
-</p><p>If the <code id=attr-a-loop title=attr-a-loop>loop</code> attribute
-of the <code>a</code> <!-- or <code>input</code> --> element <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
-integer</a><!-- that represents a number less than or equal to
-50,--> or a string <code title="">infinite</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-a-href>href</code> attribute of the <code>a</code> element
-<!-- or the <code title=attr-input-src>src</code> attribute of the
-<code>input</code> element --> is also specified.<!-- The <code
-title=attr-a-loop>loop</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whose <code
-title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-submit>Submit Button</span> state.--><!--
-Softbank 3.9.1., 3.12.2. -->
-
-</p><p>The <code id=attr-volume title=attr-volume>volume</code> attribute
-of the <code>a</code> and <code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">high</code>, <code title="">middle</code>, and <code title="">low</code>.  This attribute <em class=rfc2119>MUST NOT</em> be specified unless the <code title=attr-a-href>href</code> attribute of the <code>a</code> element
-or the <code title=attr-input-src>src</code> attribute of the
-<code>input</code> element is also specified.  The <code title=attr-volume>volume</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-submit>Submit Button</span> state.<!-- Softbank
-3.9.1., 3.12.2. -->
-
-</p></section>
-
-<section>
-<h1 id=vibration><span class=secno>3.9.5 </span>Vibration</h1>
-
-<p>The <code id=attr-a-vibration title=attr-a-vibration>vibration</code> attribute of <code>a</code> and
-<code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> are an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">select</code> and <code title="">focus</code>.  The <code title=attr-a-vibration>vibration</code>
-attribute of the <code>input</code> element applies only to
-<code>input</code> elements whose <code title=attr-input-type>type</code> attribute is <em>not</em> in the
-<span title=attr-input-type-hidden>Hidden</span> state.<!-- Softbank
-3.9.1., 3.12.2. -->
-
-</p><p>If the <code id=attr-viblength title=attr-viblength>viblength</code> attribute of <code>a</code> and
-<code>input</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative integer</a>
-that represents a number in the range 1 to 9 (inclusive).  This
-attribute <em class=rfc2119>MUST NOT</em> be specified unless the
-<code title=attr-a-vibration>vibration</code> attribute is also
-specified.  The <code title=attr-viblength>viblength</code> attribute
-of the <code>input</code> element applies only to <code>input</code>
-elements whose <code title=attr-input-type>type</code> attribute is
-<em>not</em> in the <span title=attr-input-type-hidden>Hidden</span>
-state.<!-- Softbank 3.9.1., 3.10.1., 3.12.2. -->
-
-</p></section>
-
-<section>
-<h1 id=embedded-data><span class=secno>3.9.6 </span>Embedded data</h1>
-
-<p>If the <code id=attr-datasrc title=attr-datasrc>datasrc</code>
-attribute of an element <code>a</code>, <code>applet</code>,
-<code>button</code>, <code>div</code>, <code>frame</code>,
-<code>iframe</code>, <code>img</code>, <code>input</code>,
-<code>label</code>, <code>legend</code>, <code>marquee</code>,
-<code>object</code>, <code>option</code>, <code>select</code>,
-<code>span</code>, <code>table</code>, or <code>textarea</code> is
-present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid
-non-empty URL potentially surrounded by spaces</a>.<!-- HTML4, HTML
-Standard obsolete,
-<http://msdn.microsoft.com/en-us/library/ms533709%28VS.85%29.aspx> -->
-
-</p><p>If the <code id=attr-datafld title=attr-datafld>datafld</code>
-attribute of an element <code>a</code>, <code>applet</code>,
-<code>button</code>, <code>div</code>, <code>fieldset</code>,
-<code>frame</code>, <code>iframe</code>, <code>img</code>,
-<code>input</code>, <code>label</code>, <code>legend</code>,
-<code>marquee</code>, <code>object</code>, <code>param</code>,
-<code>select</code>, <code>span</code>, or <code>textarea</code> is
-present, its value <em class=rfc2119>MAY</em> be any string.<!--
-HTML4, HTML Standard obsolete,
-<http://msdn.microsoft.com/en-us/library/ms533703%28VS.85%29.aspx> -->
-
-</p><p>The <code id=attr-dataformatas title=attr-dataformatas>dataformatas</code> attribute of an element
-<code>button</code>, <code>div</code>, <code>input</code>,
-<code>label</code>, <code>legend</code>, <code>marquee</code>,
-<code>object</code>, <code>option</code>, <code>select</code>,
-<code>span</code>, or <code>table</code> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">text</code>, <code title="">html</code>, and <code title="">localized-text</code>.<!-- HTML4
-reserved (broken), HTML Standard obsolete,
-<http://msdn.microsoft.com/en-us/library/ms533706%28VS.85%29.aspx>;
-see also <http://suika.suikawiki.org/%7Ewakaba/wiki/sw/n/dataformatas>
--->
-
-</p><p>If the <code id=attr-table-datapagesize title=attr-table-datapagesize>datapagesize</code> attribute of a
-<code>table</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
-integer</a>.<!--
-<http://msdn.microsoft.com/en-us/library/ms533708%28VS.85%29.aspx> -->
 
 </p></section>
 
@@ -1501,27 +1134,6 @@ followed by a U+002A <code class=charname>ASTERISK</code> character
 element is present, its value <em class=rfc2119>MUST</em> be a
 <a href=#valid-list-of-dimensions>valid list of dimensions</a>.<!-- HTML Standard rendering -->
 
-</p><hr>
-
-<p>The following attributes of the <code>frameset</code> element <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#event-handlers-on-elements,-document-objects,-and-window-objects>are</a>
-<a href=#event-handler-content-attributes>event handler content attributes</a>:
-
-<!-- This is normatively defined in HTML Standard in fact. -->
-<code id=handler-window-onafterprint title=handler-window-onafterprint>onafterprint</code>,
-<code id=handler-window-onbeforeprint title=handler-window-onbeforeprint>onbeforeprint</code>,
-<code id=handler-window-onbeforeunload title=handler-window-onbeforeunload>onbeforeunload</code>,
-<code id=handler-window-onhashchange title=handler-window-onhashchange>onhashchange</code>,
-<code id=handler-window-onmessage title=handler-window-onmessage>onmessage</code>,
-<code id=handler-window-onoffline title=handler-window-onoffline>onoffline</code>,
-<code id=handler-window-ononline title=handler-window-ononline>ononline</code>,
-<code id=handler-window-onpagehide title=handler-window-onpagehide>onpagehide</code>,
-<code id=handler-window-onpageshow title=handler-window-onpageshow>onpageshow</code>,
-<code id=handler-window-onpopstate title=handler-window-onpopstate>onpopstate</code>,
-<code id=handler-window-onstorage title=handler-window-onstorage>onstorage</code>,
-and <code id=handler-window-onunload title=handler-window-onunload>onunload</code>.
-<!-- But in fact they have no effect if the |frameset| element is not
-"the body element". -->
-
 </p></section>
 
 <section>
@@ -1545,11 +1157,6 @@ name</a>.<!-- HTML Standard obsolete -->
 <a href=#boolean-attribute title="boolean attribute">boolean attributes</a>.<!-- HTML
 Standard rendering,
 <http://msdn.microsoft.com/en-us/library/ms534194%28VS.85%29.aspx> -->
-
-</p><p>The <code id=attr-frames-security title=attr-frames-security>security</code> attribute of
-<code>frame</code> and <code>iframe</code> elements <cite class="bibref informative">[<a href=#ref-MSDN>MSDN</a>]</cite> is an
-<a href=#enumerated-attribute>enumerated attribute</a> with the keyword <code title="">restricted</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms534622%28VS.85%29.aspx> -->
 
 </p></section>
 
@@ -1604,17 +1211,7 @@ one ancestor <code>frameset</code> elements.
 <section>
 <h1 id=scripting><span class=secno>3.11 </span>Scripting</h1>
 
-<p><!--Requirements for the <code title=attr-script-language
-id=attr-script-language>language</code> attribute of the
-<code>script</code> element is defined in HTML Standard, as an
-obsolete but conforming feature.  -->Unless otherwise specified, the
-<code id=attr-language title=attr-language>language</code> attribute
-of <!--the other--> <a href=#html-elements>HTML elements</a>, if present, <em class=rfc2119>MUST</em> have a value that is <a href=#ascii-case-insensitive title="ASCII
-case-insensitive">ASCII case-insensitively</a> equal to
-<code>JavaScript</code>.<!--
-<http://msdn.microsoft.com/en-us/library/ms533940%28VS.85%29.aspx> -->
-
-</p><p>If the <code id=attr-script-for title=attr-script-for>for</code>
+<p>If the <code id=attr-script-for title=attr-script-for>for</code>
 attribute of a <code>script</code> element is present, its value <em class=rfc2119>MUST</em> be the <span>ID</span> of an element in the
 same <a href=#home-subtree>home subtree</a>.<!-- HTML Standard UA reqs,
 <http://msdn.microsoft.com/en-us/library/ms533870%28VS.85%29.aspx>.
@@ -1625,12 +1222,6 @@ element is present, its value <em class=rfc2119>MAY</em> be any
 string.<!-- HTML4,
 <http://msdn.microsoft.com/en-us/library/ms533746%28VS.85%29.aspx>
 (syntax restriction is unclear and seems complex) -->
-
-</p><p>If the <code id=attr-script-archive title=attr-script-archive>archive</code> attribute of a
-<code>script</code> element <cite class="bibref informative">[<a href=#ref-DEVEDGE>DEVEDGE</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-empty-url-potentially-surrounded-by-spaces>valid non-empty URL potentially
-surrounded by spaces</a>.<!--
-<http://web.archive.org/web/20030415223352/http://devedge.netscape.com/library/manuals/2000/javascript/1.3/guide/sec.html>
--->
 
 </p><hr>
 
@@ -1723,10 +1314,8 @@ autocorrect
 </p><p>The <a href=#content-model>content model</a> of the <code id=keygen>keygen</code>
 element is <a href=#nothing>nothing</a>.<!-- HTML Standard parsing -->
 
-</p><section>
-<h1 id=value-constraints-and-input-mode><span class=secno>3.12.1 </span>Value constraints and input mode</h1>
 
-<p>If the <code id=attr-input-precision title=attr-input-precision>precision</code> attribute of an
+</p><p>If the <code id=attr-input-precision title=attr-input-precision>precision</code> attribute of an
 <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be given in one of the following forms: one or
 more of characters in the range U+0030 <code class=charname>DIGIT
 ZERO</code> (0) to U+0039 <code class=charname>DIGIT NINE</code> (9),
@@ -1739,65 +1328,9 @@ whose <code title=attr-input-type>type</code> attribute is in the
 <http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-precision>
 -->
 
-</p><p>The <code id=attr-istyle title=attr-istyle>istyle</code> attribute
-of an <code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is
-an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">1</code>, <code title="">2</code>, <code title="">3</code>, and <code title="">4</code>.  The <code title=attr-istyle>istyle</code> attribute
-of the <code>input</code> element applies only to <code>input</code>
-elements whose <code title=attr-input-type>type</code> attribute is in
-the <span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/istyle.html>;
-au and emobile also implements this (<input type=text istyle>).
-Softbank allows this attribute also to <input type=password>.  -->
 
-</p><p>The <code id=attr-mode title=attr-mode>mode</code> attribute of
-<code>input</code> and <code>textarea</code> elements <cite class="bibref informative">[<a href=#ref-SOFTBANK>SOFTBANK</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">hiragana</code>, <code title="">katakana</code>, <code title="">hankakukana</code>, <code title="">alphabet</code>, and <code title="">numeric</code>.  The <code title=attr-mode>mode</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.<!-- If the <code
-title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-password>Password</span> state, keywords other
-than <code title>alphanet</code> and <code title>numeric</code> <em
-class=rfc2119>MUST NOT</em> be specified.--><!-- Softbank 3.12.2.,
-3.12.5.: type=text and type=password. -->
-
-</p><p>If the <code id=attr-format title=attr-format>format</code>
-attribute of an <code>input</code> or <code>textarea</code> element
-<cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is present, its value <em class=rfc2119>MUST</em> be a <a href=#valid-input-mask>valid input mask</a>.  A
-<dfn id=valid-input-mask>valid input mask</dfn> is a string consist of one or more <a href=#format-code title="format code">format codes</a>.  A <dfn id=format-code>format code</dfn> is
-one of characters <code>A</code>, <code>a</code>, <code>N</code>,
-<code>n</code>, <code>X</code>, <code>x</code>, <code>M</code>, and
-<code>m</code>, optionally preceded either by a U+002A <code class=charname>ASTERISK</code> character (*) or by one or more
-characters in the range U+0030 <code class=charname>DIGIT ZERO</code>
-(0) to U+0039 <code class=charname>DIGIT NINE</code> (9).
-Alternatively, a <a href=#format-code>format code</a> can be a U+005C <code class=charname>REVERSE SOLIDUS</code> character (\) followed by a
-character.  The <code title=attr-format>format</code> attribute of the
-<code>input</code> element applies only to <code>input</code> elements
-whose <code title=attr-input-type>type</code> attribute is in the
-<span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.<!--
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
-2.0
-<http://www.google.com/search?q=cache%3AlUL3jRY2WmwJ%3Awww.openmobilealliance.org%2Ftech%2Faffiliates%2Fwap%2Fwap-238-wml-20010911-a.pdf>
-6.5.2.1. The |wml:format| Attribute, except that <lang:class> format
-is not supported; \c format is not mentioned in au's documentation but
-is supported by implementation according to
-<http://www001.upp.so-net.ne.jp/hdml/wap2/xhtml/input.html>; according
-to WML's "Note" (!) */f/ and /n//f/ forms are only allowed at the end
-of the string; also in Softbank 3.12.2./3.12.5. (historical);
-type=text. -->
-
-</p><p>The <code id=attr-emptyok title=attr-emptyok>emptyok</code>
-attribute of an <code>input</code> or <code>textarea</code> element
-<cite class="bibref informative">[<a href=#ref-EZWEB>EZWEB</a>]</cite> is an <a href=#enumerated-attribute>enumerated
-attribute</a> with keywords <code title="">true</code> and <code title="">false</code>.  The <code title=attr-emptyok>emptyok</code>
-attribute of the <code>input</code> element applies only to
-<code>input</code> elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.<!--
-<http://www.au.kddi.com/ezfactory/tec/spec/wap_tag2.html>; Same as WML
-2.0 6.5.2.2. The |wml:emptyok| Attribute; also in Softbank
-3.12.2. (historical); type=text. -->
-
-</p></section>
-
-<section>
-<h1 id=autocomplete><span class=secno>3.12.2 </span>Autocomplete</h1>
+</p><section>
+<h1 id=autocomplete><span class=secno>3.12.1 </span>Autocomplete</h1>
 
 <p>If the <code id=attr-input-autosave title=attr-input-autosave>autosave</code> attribute of an
 <code>input</code> element <cite class="bibref informative">[<a href=#ref-SAFARI>SAFARI</a>]</cite> is present, its value <em class=rfc2119>MAY</em> be any string.  The <code title=attr-input-autosave>autosave</code> attribute of the
@@ -1870,15 +1403,6 @@ It says multiple values can be specified, but does not say how to
 (space-separated?) and HTML refereneces in the wild do not describe
 how to encode mutliple values, neither; type=text and
 type=password. -->
-
-</p><p>The <code id=attr-iprof title=attr-iprof>iprof</code> attribute of
-an <code>input</code> or <code>textarea</code> element <cite class="bibref informative">[<a href=#ref-IMODE>IMODE</a>]</cite> is
-an <a href=#enumerated-attribute>enumerated attribute</a> with keywords: <code title="">name1</code>, <code title="">name2</code>, <code title="">name</code>,
-<code title="">kana1</code>, <code title="">kana2</code>, <code title="">kana</code>, <code title="">tel1</code>, <code title="">tel2</code>,
-<code title="">mail1</code>, <code title="">mail2</code>, <code title="">zip</code>, <code title="">address1</code>, <code title="">address2</code>, <code title="">address3</code>, <code title="">address4</code>, <code title="">address</code>, <code title="">birthday1</code>, <code title="">birthday2</code>, <code title="">birthday3</code>, and <code title="">birthday</code>.  The <code title=attr-iprof>iprof</code> attribute of the <code>input</code>
-element applies only to <code>input</code> elements whose <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-text>Text</span>, <span title=attr-input-type-search>Search</span>, <span title=attr-input-type-password>Password</span>, <span title=attr-input-type-url>URL</span>, <span title=attr-input-type-email>E-mail</span>, or <span title=attr-input-type-tel>Telephone</span> state.<!--
-<http://www.nttdocomo.co.jp/service/imode/make/content/browser/html/tag/myprofile.html>;
-type=text.  -->
 
 </p></section>
 
@@ -2026,13 +1550,48 @@ and/or authoring tools, including but not limited to: elements
 and <code>x-sas-window</code>.
 
 </li><li>Proprietary elements and attributes implemented by browsers of
-earlier generations of Japanese mobile phones (which are no longer in
-use).
+Japanese mobile phones, including but not limited to:
+<dfn id=attr-a-cti title=attr-a-cti><code>cti</code></dfn>,
+<dfn id=attr-directkey title=attr-directkey><code>directkey</code></dfn>,
+<dfn id=attr-a-email title=attr-a-email><code>email</code></dfn>,
+<dfn id=attr-a-ib title=attr-a-ib><code>ib</code></dfn>,
+<dfn id=attr-a-ifb title=attr-a-ifb><code>ifb</code></dfn>,
+<dfn id=attr-a-ijam title=attr-a-ijam><code>ijam</code></dfn>,
+<dfn id=attr-a-ilet title=attr-a-ilet><code>ilet</code></dfn>,
+<dfn id=attr-a-irst title=attr-a-irst><code>irst</code></dfn>,
+<dfn id=attr-a-ista title=attr-a-ista><code>ista</code></dfn>,
+<dfn id=attr-a-iswf title=attr-a-iswf><code>iswf</code></dfn>,
+<dfn id=attr-a-kana title=attr-a-kana><code>kana</code></dfn>,
+<dfn id=attr-lcs title=attr-lcs><code>lcs</code></dfn>,
+<dfn id=attr-a-loop title=attr-a-loop><code>loop</code></dfn>,
+<dfn id=attr-a-memoryname title=attr-a-memoryname><code>memoryname</code></dfn>,
+<dfn id=attr-soundstart title=attr-soundstart><code>soundstart</code></dfn>,
+<dfn id=attr-a-src title=attr-a-src><code>src</code></dfn>,
+<dfn id=attr-a-telbook title=attr-a-telbook><code>telbook</code></dfn>,
+<dfn id=attr-utn title=attr-utn><code>utn</code></dfn>,
+<dfn id=attr-viblength title=attr-viblength><code>viblength</code></dfn>,
+<dfn id=attr-a-vibration title=attr-a-vibration><code>vibration</code></dfn>,
+<dfn id=attr-volume title=attr-volume><code>volume</code></dfn>,
+<dfn id=attr-img-copyright title=attr-img-copyright><code>copyright</code></dfn>,
+<dfn id=attr-img-galleryimg title=attr-img-galleryimg><code>galleryimg</code></dfn>,
+<dfn id=attr-img-nosave title=attr-img-nosave><code>nosave</code></dfn>,
+<dfn id=attr-emptyok title=attr-emptyok><code>emptyok</code></dfn>,
+<dfn id=attr-format title=attr-format><code>format</code></dfn>,
+<dfn id=attr-iprof title=attr-iprof><code>iprof</code></dfn>,
+<dfn id=attr-istyle title=attr-istyle><code>istyle</code></dfn>,
+<dfn id=attr-mode title=attr-mode><code>mode</code></dfn>.
 
 </li><li>The <code>nextid</code> element.
 
 </li><li>Elements <code>spacer</code>, <code>layer</code>,
 <code>ilayer</code>, and <code>nolayer</code>.
+
+</li><li>Attributes
+<code title=attr-li-type>type</code> (of <code>dir</code>),
+<dfn id=attr-img-suppress title=attr-img-suppress><code>suppress</code></dfn>,
+<dfn id=attr-frames-security title=attr-frames-security><code>security</code></dfn>,
+<dfn id=attr-head-profile title=attr-head-profile><code>profile</code></dfn>,
+<dfn id=attr-script-archive title=attr-script-archive><code>archive</code></dfn>.
 
 </li><li>Elements <code>image</code> and <code>isindex</code>.
 
@@ -2075,8 +1634,44 @@ pseudo-XHTML documents served as text/html -->.
 <code>noframe</code>, <code>noimg</code>, <code>element</code>,
 <code>entity</code>, and <code>attrib</code>.
 
-</li><li><span title=attribute>Attributes</span> of
-the <code>keygen</code> <span>element</span>.
+</li><li><span title=attribute>Attributes</span> of obsolete elements:
+<code>applet</code> (including but not limited to:
+<code title=attr-objects-align>align</code>,
+<dfn id=attr-applet-alt title=attr-applet-alt><code>alt</code></dfn>,
+<dfn id=attr-applet-archive title=attr-applet-archive><code>archive</code></dfn>,
+<code title=attr-objects-code>code</code>,
+<code title=attr-objects-codebase>codebase</code>,
+<code title=attr-height>height</code>,
+<code title=attr-hspace>hspace</code>,
+<dfn id=attr-applet-mayscript title=attr-applet-mayscript><code>mayscript</code></dfn>,
+<code title=attr-objects-name>name</code>,
+<dfn id=attr-applet-object title=attr-applet-object><code>object</code></dfn>,
+<code title=attr-vspace>vspace</code>,
+<code title=attr-width>width</code>),
+<code>bgsound</code>
+(including but not limited to: 
+<dfn id=attr-bgsound-balance title=attr-bgsound-balance><code>balance</code></dfn>,
+<dfn id=attr-bgsound-src title=attr-bgsound-src><code>src</code></dfn>,
+<dfn id=attr-bgsound-volume title=attr-bgsound-volume><code>volume</code></dfn>),
+<code>keygen</code>.
+
+</li><li>Internet Explorer data binding attributes:
+<dfn id=attr-datafld title=attr-datafld><code>datafld</code></dfn>,
+<dfn id=attr-dataformatas title=attr-dataformatas><code>dataformatas</code></dfn>,
+<dfn id=attr-datasrc title=attr-datasrc><code>datasrc</code></dfn>,
+<dfn id=attr-table-datapagesize title=attr-table-datapagesize><code>datapagesize</code></dfn>.
+
+</li><li>RDFa attributes (except for OGP usages):
+<dfn id=attr-about title=attr-about><code>about</code></dfn>,
+<dfn id=attr-content title=attr-content><code>content</code></dfn>,
+<dfn id=attr-datatype title=attr-datatype><code>datatype</code></dfn>,
+<dfn id=attr-language title=attr-language><code>language</code></dfn>,
+<dfn id=attr-property title=attr-property><code>property</code></dfn>,
+<dfn id=attr-rel title=attr-rel><code>rel</code></dfn>,
+<dfn id=attr-resource title=attr-resource><code>resource</code></dfn>,
+<dfn id=attr-rev title=attr-rev><code>rev</code></dfn>,
+<dfn id=attr-typeof title=attr-typeof><code>typeof</code></dfn>,
+<dfn id=attr-vocab title=attr-vocab><code>vocab</code></dfn>.
 
 </li></ul>
 
@@ -2124,13 +1719,9 @@ in the tests-web repository</a>.
 
 <dt>Common attributes of <a href=#html-elements>HTML elements</a>
 
-</dt><dd><a href=#attr-about><code>about</code></a>
-</dd><dd><a href=#attr-atomicselection><code>atomicselection</code></a>
-</dd><dd><a href=#attr-content><code>content</code></a>
-</dd><dd><a href=#attr-datatype><code>datatype</code></a>
+</dt><dd><a href=#attr-atomicselection><code>atomicselection</code></a>
 </dd><dd><a href=#attr-disabled><code>disabled</code></a>
 </dd><dd><a href=#attr-hidefocus><code>hidefocus</code></a>
-</dd><dd><a href=#attr-language><code>language</code></a>
 </dd><dd><a href=#handler-onactivate><code>onactivate</code></a>
 </dd><dd><a href=#handler-onafterupdate><code>onafterupdate</code></a>
 </dd><dd><a href=#handler-onbeforeactivate><code>onbeforeactivate</code></a>
@@ -2176,43 +1767,14 @@ in the tests-web repository</a>.
 </dd><dd><a href=#handler-ontouchmove><code>ontouchmove</code></a>
 </dd><dd><a href=#handler-ontouchstart><code>ontouchstart</code></a>
 </dd><dd><a href=#attr-prefix><code>prefix</code></a>
-</dd><dd><a href=#attr-property><code>property</code></a>
-</dd><dd><a href=#attr-rel><code>rel</code></a>
-</dd><dd><a href=#attr-resource><code>resource</code></a>
-</dd><dd><a href=#attr-rev><code>rev</code></a>
-</dd><dd><a href=#attr-typeof><code>typeof</code></a>
 </dd><dd><a href=#attr-unselectable><code>unselectable</code></a>
-</dd><dd><a href=#attr-vocab><code>vocab</code></a>
 </dd><dd><a href=#attr-x-ms-format-detection><code>x-ms-format-detection</code></a>
 
 </dd><dt>The <code>a</code> element
 
 </dt><dd><a href=#attr-hyperlink-charset><code>charset</code></a>
 </dd><dd><a href=#attr-a-coords><code>coords</code></a>
-</dd><dd><a href=#attr-a-cti><code>cti</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
-</dd><dd><a href=#attr-directkey><code>directkey</code></a>
-</dd><dd><a href=#attr-a-email><code>email</code></a>
-</dd><dd><a href=#attr-a-ib><code>ib</code></a>
-</dd><dd><a href=#attr-a-ifb><code>ifb</code></a>
-</dd><dd><a href=#attr-a-ijam><code>ijam</code></a>
-</dd><dd><a href=#attr-a-ilet><code>ilet</code></a>
-</dd><dd><a href=#attr-a-irst><code>irst</code></a>
-</dd><dd><a href=#attr-a-ista><code>ista</code></a>
-</dd><dd><a href=#attr-a-iswf><code>iswf</code></a>
-</dd><dd><a href=#attr-a-kana><code>kana</code></a>
-</dd><dd><a href=#attr-lcs><code>lcs</code></a>
-</dd><dd><a href=#attr-a-loop><code>loop</code></a>
-</dd><dd><a href=#attr-a-memoryname><code>memoryname</code></a>
 </dd><dd><a href=#attr-a-shape><code>shape</code></a>
-</dd><dd><a href=#attr-soundstart><code>soundstart</code></a>
-</dd><dd><a href=#attr-a-src><code>src</code></a>
-</dd><dd><a href=#attr-a-telbook><code>telbook</code></a>
-</dd><dd><a href=#attr-utn><code>utn</code></a>
-</dd><dd><a href=#attr-viblength><code>viblength</code></a>
-</dd><dd><a href=#attr-a-vibration><code>vibration</code></a>
-</dd><dd><a href=#attr-volume><code>volume</code></a>
 
 </dd><dt>The <a href=#acronym><code>acronym</code></a> element
 
@@ -2224,20 +1786,7 @@ in the tests-web repository</a>.
 
 </dd><dt>The <a href=#applet><code>applet</code></a> element
 
-</dt><dd><a href=#attr-objects-align><code>align</code></a>
-</dd><dd><a href=#attr-applet-alt><code>alt</code></a>
-</dd><dd><a href=#attr-applet-archive><code>archive</code></a>
-</dd><dd><a href=#attr-objects-code><code>code</code></a>
-</dd><dd><a href=#attr-objects-codebase><code>codebase</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
-</dd><dd><a href=#attr-height><code>height</code></a>
-</dd><dd><a href=#attr-hspace><code>hspace</code></a>
-</dd><dd><a href=#attr-applet-mayscript><code>mayscript</code></a>
-</dd><dd><a href=#attr-objects-name><code>name</code></a>
-</dd><dd><a href=#attr-applet-object><code>object</code></a>
-</dd><dd><a href=#attr-vspace><code>vspace</code></a>
-</dd><dd><a href=#attr-width><code>width</code></a>
+</dt><dd>No element-specific attribute.
 
 </dd><dt>The <code>area</code> element
 
@@ -2249,10 +1798,7 @@ in the tests-web repository</a>.
 
 </dd><dt>The <a href=#bgsound><code>bgsound</code></a> element
 
-</dt><dd><a href=#attr-bgsound-balance><code>balance</code></a>
-</dd><dd><a href=#attr-loop><code>loop</code></a>
-</dd><dd><a href=#attr-bgsound-src><code>src</code></a>
-</dd><dd><a href=#attr-bgsound-volume><code>volume</code></a>
+</dt><dd>No element-specific attribute.
 
 </dd><dt>The <a href=#big><code>big</code></a> element
 
@@ -2281,12 +1827,6 @@ in the tests-web repository</a>.
 </dd><dt>The <code>br</code> element
 
 </dt><dd><a href=#attr-br-clear><code>clear</code></a>
-
-</dd><dt>The <code>button</code> element
-
-</dt><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
 </dd><dt>The <code>caption</code> element
 
@@ -2320,14 +1860,10 @@ in the tests-web repository</a>.
 </dd><dt>The <a href=#dir><code>dir</code></a> element
 
 </dt><dd><a href=#attr-compact><code>compact</code></a>
-</dd><dd><a href=#attr-li-type><code>type</code></a>
 
 </dd><dt>The <code>div</code> element
 
 </dt><dd><a href=#attr-align><code>align</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-tdth-nowrap><code>nowrap</code></a>
 
 </dd><dt>The <code>dl</code> element
@@ -2352,28 +1888,17 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-embed-units><code>units</code></a>
 </dd><dd><a href=#attr-vspace><code>vspace</code></a>
 
-</dd><dt>The <code>fieldset</code> element
-
-</dt><dd><a href=#attr-datafld><code>datafld</code></a>
-
 </dd><dt>The <a href=#font><code>font</code></a> element
 
 </dt><dd><a href=#attr-font-color><code>color</code></a>
 </dd><dd><a href=#attr-font-face><code>face</code></a>
 </dd><dd><a href=#attr-font-size><code>size</code></a>
 
-</dd><dt>The <code>form</code> element
-
-</dt><dd><a href=#attr-lcs><code>lcs</code></a>
-</dd><dd><a href=#attr-utn><code>utn</code></a>
-
 </dd><dt>The <a href=#frame><code>frame</code></a> element
 
 </dt><dd><a href=#attr-frames-allowtransparency><code>allowtransparency</code></a>
 </dd><dd><a href=#attr-frames-application><code>application</code></a>
 </dd><dd><a href=#attr-frames-bordercolor><code>bordercolor</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-frames-frameborder><code>frameborder</code></a>
 </dd><dd><a href=#attr-frames-framespacing><code>framespacing</code></a>
 </dd><dd><a href=#attr-longdesc><code>longdesc</code></a>
@@ -2382,7 +1907,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-frame-name><code>name</code></a>
 </dd><dd><a href=#attr-frames-noresize><code>noresize</code></a>
 </dd><dd><a href=#attr-frames-scrolling><code>scrolling</code></a>
-</dd><dd><a href=#attr-frames-security><code>security</code></a>
 </dd><dd><a href=#attr-frame-src><code>src</code></a>
 
 </dd><dt>The <a href=#frameset><code>frameset</code></a> element
@@ -2392,18 +1916,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-frames-bordercolor><code>bordercolor</code></a>
 </dd><dd><a href=#attr-frames-frameborder><code>frameborder</code></a>
 </dd><dd><a href=#attr-frames-framespacing><code>framespacing</code></a>
-</dd><dd><a href=#handler-window-onafterprint><code>onafterprint</code></a>
-</dd><dd><a href=#handler-window-onbeforeprint><code>onbeforeprint</code></a>
-</dd><dd><a href=#handler-window-onbeforeunload><code>onbeforeunload</code></a>
-</dd><dd><a href=#handler-window-onhashchange><code>onhashchange</code></a>
-</dd><dd><a href=#handler-window-onmessage><code>onmessage</code></a>
-</dd><dd><a href=#handler-window-onoffline><code>onoffline</code></a>
-</dd><dd><a href=#handler-window-ononline><code>ononline</code></a>
-</dd><dd><a href=#handler-window-onpagehide><code>onpagehide</code></a>
-</dd><dd><a href=#handler-window-onpageshow><code>onpageshow</code></a>
-</dd><dd><a href=#handler-window-onpopstate><code>onpopstate</code></a>
-</dd><dd><a href=#handler-window-onstorage><code>onstorage</code></a>
-</dd><dd><a href=#handler-window-onunload><code>onunload</code></a>
 </dd><dd><a href=#attr-frameset-rows><code>rows</code></a>
 
 </dd><dt>The <code>h1</code> element
@@ -2436,10 +1948,6 @@ in the tests-web repository</a>.
 </dt><dd><a href=#attr-align><code>align</code></a>
 </dd><dd><a href=#attr-br-clear><code>clear</code></a>
 
-</dd><dt>The <code>head</code> element
-
-</dt><dd><a href=#attr-head-profile><code>profile</code></a>
-
 </dd><dt>The <code>hr</code> element
 
 </dt><dd><a href=#attr-hr-align><code>align</code></a>
@@ -2459,8 +1967,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-frames-allowtransparency><code>allowtransparency</code></a>
 </dd><dd><a href=#attr-frames-application><code>application</code></a>
 </dd><dd><a href=#attr-frames-border><code>border</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-frames-frameborder><code>frameborder</code></a>
 </dd><dd><a href=#attr-frames-framespacing><code>framespacing</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
@@ -2469,7 +1975,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-frames-marginwidth><code>marginwidth</code></a>
 </dd><dd><a href=#attr-frames-noresize><code>noresize</code></a>
 </dd><dd><a href=#attr-frames-scrolling><code>scrolling</code></a>
-</dd><dd><a href=#attr-frames-security><code>security</code></a>
 </dd><dd><a href=#attr-vspace><code>vspace</code></a>
 
 </dd><dt>The <code>img</code> element
@@ -2477,20 +1982,14 @@ in the tests-web repository</a>.
 </dt><dd><a href=#attr-objects-align><code>align</code></a>
 </dd><dd><a href=#attr-dim-border><code>border</code></a>
 </dd><dd><a href=#attr-img-composite><code>composite</code></a>
-</dd><dd><a href=#attr-img-copyright><code>copyright</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-dynsrc><code>dynsrc</code></a>
-</dd><dd><a href=#attr-img-galleryimg><code>galleryimg</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-img-localsrc><code>localsrc</code></a>
 </dd><dd><a href=#attr-longdesc><code>longdesc</code></a>
 </dd><dd><a href=#attr-lowsrc><code>lowsrc</code></a>
 </dd><dd><a href=#attr-objects-name><code>name</code></a>
-</dd><dd><a href=#attr-img-nosave><code>nosave</code></a>
 </dd><dd><a href=#attr-img-oversrc><code>oversrc</code></a>
 </dd><dd><a href=#attr-start><code>start</code></a>
-</dd><dd><a href=#attr-img-suppress><code>suppress</code></a>
 </dd><dd><a href=#attr-vrml><code>vrml</code></a>
 </dd><dd><a href=#attr-vspace><code>vspace</code></a>
 
@@ -2501,29 +2000,16 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-input-autocorrect><code>autocorrect</code></a>
 </dd><dd><a href=#attr-input-autosave><code>autosave</code></a>
 </dd><dd><a href=#attr-dim-border><code>border</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
-</dd><dd><a href=#attr-directkey><code>directkey</code></a>
 </dd><dd><a href=#attr-dynsrc><code>dynsrc</code></a>
-</dd><dd><a href=#attr-emptyok><code>emptyok</code></a>
-</dd><dd><a href=#attr-format><code>format</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-input-incremental><code>incremental</code></a>
-</dd><dd><a href=#attr-iprof><code>iprof</code></a>
-</dd><dd><a href=#attr-istyle><code>istyle</code></a>
 </dd><dd><a href=#attr-loop><code>loop</code></a>
 </dd><dd><a href=#attr-lowsrc><code>lowsrc</code></a>
-</dd><dd><a href=#attr-mode><code>mode</code></a>
 </dd><dd><a href=#attr-input-precision><code>precision</code></a>
 </dd><dd><a href=#attr-input-results><code>results</code></a>
-</dd><dd><a href=#attr-soundstart><code>soundstart</code></a>
 </dd><dd><a href=#attr-start><code>start</code></a>
 </dd><dd><a href=#attr-input-usemap><code>usemap</code></a>
 </dd><dd><a href=#attr-input-vcard_name><code>vcard_name</code></a>
-</dd><dd><a href=#attr-viblength><code>viblength</code></a>
-</dd><dd><a href=#attr-a-vibration><code>vibration</code></a>
-</dd><dd><a href=#attr-volume><code>volume</code></a>
 </dd><dd><a href=#attr-vrml><code>vrml</code></a>
 </dd><dd><a href=#attr-vspace><code>vspace</code></a>
 
@@ -2531,18 +2017,9 @@ in the tests-web repository</a>.
 
 </dt><dd>No element-specific attribute.
 
-</dd><dt>The <code>label</code> element
-
-</dt><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
-
 </dd><dt>The <code>legend</code> element
 
 </dt><dd><a href=#attr-legend-align><code>align</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
 </dd><dt>The <code>li</code> element
 
@@ -2559,9 +2036,6 @@ in the tests-web repository</a>.
 </dd><dt>The <a href=#marquee><code>marquee</code></a> element
 
 </dt><dd><a href=#attr-marquee-behavior><code>behavior</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-marquee-direction><code>direction</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
@@ -2604,10 +2078,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-objects-code><code>code</code></a>
 </dd><dd><a href=#attr-objects-codebase><code>codebase</code></a>
 </dd><dd><a href=#attr-object-codetype><code>codetype</code></a>
-</dd><dd><a href=#attr-img-copyright><code>copyright</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-object-declare><code>declare</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
 </dd><dd><a href=#attr-object-standby><code>standby</code></a>
@@ -2616,11 +2086,6 @@ in the tests-web repository</a>.
 </dd><dt>The <code>ol</code> element
 
 </dt><dd><a href=#attr-compact><code>compact</code></a>
-
-</dd><dt>The <code>option</code> element
-
-</dt><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
 </dd><dt>The <code>p</code> element
 
@@ -2644,22 +2109,8 @@ in the tests-web repository</a>.
 
 </dd><dt>The <code>script</code> element
 
-</dt><dd><a href=#attr-script-archive><code>archive</code></a>
-</dd><dd><a href=#attr-script-event><code>event</code></a>
+</dt><dd><a href=#attr-script-event><code>event</code></a>
 </dd><dd><a href=#attr-script-for><code>for</code></a>
-
-</dd><dt>The <code>select</code> element
-
-</dt><dd><a href=#attr-select-data><code>data</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
-
-</dd><dt>The <code>span</code> element
-
-</dt><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 
 </dd><dt>The <a href=#strike><code>strike</code></a> element
 
@@ -2677,9 +2128,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#attr-table-cellborder><code>cellborder</code></a>
 </dd><dd><a href=#attr-table-cellpadding><code>cellpadding</code></a>
 </dd><dd><a href=#attr-table-cellspacing><code>cellspacing</code></a>
-</dd><dd><a href=#attr-dataformatas><code>dataformatas</code></a>
-</dd><dd><a href=#attr-table-datapagesize><code>datapagesize</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
 </dd><dd><a href=#attr-table-frame><code>frame</code></a>
 </dd><dd><a href=#attr-height><code>height</code></a>
 </dd><dd><a href=#attr-hspace><code>hspace</code></a>
@@ -2719,13 +2167,6 @@ in the tests-web repository</a>.
 
 </dt><dd><a href=#attr-input-autocapitalize><code>autocapitalize</code></a>
 </dd><dd><a href=#attr-input-autocorrect><code>autocorrect</code></a>
-</dd><dd><a href=#attr-datafld><code>datafld</code></a>
-</dd><dd><a href=#attr-datasrc><code>datasrc</code></a>
-</dd><dd><a href=#attr-emptyok><code>emptyok</code></a>
-</dd><dd><a href=#attr-format><code>format</code></a>
-</dd><dd><a href=#attr-iprof><code>iprof</code></a>
-</dd><dd><a href=#attr-istyle><code>istyle</code></a>
-</dd><dd><a href=#attr-mode><code>mode</code></a>
 <!--<dd><a href="#attr-textarea-wrap"><code>wrap</code></a>-->
 
 </dd><dt>The <code>tfoot</code> element
