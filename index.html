@@ -11,7 +11,7 @@ Elements and Attributes</title>
 <h1 class="no-toc no-num">manakai's Conformance Checking Guideline for
 Obsolete HTML Elements and Attributes</h1>
 
-<h2 class="no-toc no-num">The manakai project, 3 November 2017</h2>
+<h2 class="no-toc no-num">The manakai project, 4 November 2017</h2>
 </hgroup>
 
 <dl>
@@ -416,12 +416,23 @@ The |bgsound| element
 the <code id=bgsound>bgsound</code> element
 is <a href=#nothing>nothing</a>.
 
-</p><p>If the <code id=attr-prefix title=attr-prefix>prefix</code>
-attribute of an <code>html</code> or <code>head</code> element is
-specified, it <em class=rfc2119>MAY</em> have any value.<!-- RDFa 1.1
+<!--
+The |prefix| attribute, defined by RDFa 1.1 and used by OGP
+  Stats: <https://wiki.suikawiki.org/n/prefix$20138#anchor-19>
 -->
+</p><p>If the <dfn id=attr-prefix title=attr-prefix><code>prefix</code></dfn> attribute
+of an <code>html</code> or <code>head</code> element is specified, it
+value <em class=rfc2119>MUST</em> be one of these values:
 
-</p><div class="note memo">
+  </p><ul>
+
+  <li><code>og: http://ogp.me/ns#</code>
+  </li><li><code>og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#</code>
+  </li><li><code>og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#</code>
+
+  </li></ul>
+
+<div class="note memo">
 
 <p>The <code>property</code> attribute might be used as part of
 <a href=https://suika.suikawiki.org/www/markup/xml/validation-langs#ogp>OGP</a>.
@@ -1581,7 +1592,8 @@ Japanese mobile phones, including but not limited to:
 <dfn id=attr-frames-security title=attr-frames-security><code>security</code></dfn>,
 <dfn id=attr-head-profile title=attr-head-profile><code>profile</code></dfn>,
 <dfn id=attr-script-archive title=attr-script-archive><code>archive</code></dfn>,
-<dfn id=attr-scroll title=attr-scroll><code>scroll</code></dfn>.
+<dfn id=attr-scroll title=attr-scroll><code>scroll</code></dfn>,
+<dfn id=attr-language title=attr-language><code>language</code></dfn>.
 
 </li><li>Elements <code>image</code> and <code>isindex</code>.
 
@@ -1655,13 +1667,13 @@ pseudo-XHTML documents served as text/html -->.
 <dfn id=attr-about title=attr-about><code>about</code></dfn>,
 <dfn id=attr-content title=attr-content><code>content</code></dfn>,
 <dfn id=attr-datatype title=attr-datatype><code>datatype</code></dfn>,
-<dfn id=attr-language title=attr-language><code>language</code></dfn>,
 <dfn id=attr-property title=attr-property><code>property</code></dfn>,
 <dfn id=attr-rel title=attr-rel><code>rel</code></dfn>,
 <dfn id=attr-resource title=attr-resource><code>resource</code></dfn>,
 <dfn id=attr-rev title=attr-rev><code>rev</code></dfn>,
 <dfn id=attr-typeof title=attr-typeof><code>typeof</code></dfn>,
-<dfn id=attr-vocab title=attr-vocab><code>vocab</code></dfn>.
+<dfn id=attr-vocab title=attr-vocab><code>vocab</code></dfn>,
+<a href=#attr-prefix><code title=attr-prefix>prefix</code></a>.
 
 </li></ul>
 
@@ -1756,7 +1768,6 @@ in the tests-web repository</a>.
 </dd><dd><a href=#handler-ontouchend><code>ontouchend</code></a>
 </dd><dd><a href=#handler-ontouchmove><code>ontouchmove</code></a>
 </dd><dd><a href=#handler-ontouchstart><code>ontouchstart</code></a>
-</dd><dd><a href=#attr-prefix><code>prefix</code></a>
 </dd><dd><a href=#attr-unselectable><code>unselectable</code></a>
 </dd><dd><a href=#attr-x-ms-format-detection><code>x-ms-format-detection</code></a>
 
@@ -1937,6 +1948,10 @@ in the tests-web repository</a>.
 </dt><dd><a href=#attr-align><code>align</code></a>
 </dd><dd><a href=#attr-br-clear><code>clear</code></a>
 
+</dd><dt>The <code>head</code> element
+
+</dt><dd><a href=#attr-prefix><code>prefix</code></a>
+
 </dd><dt>The <code>hr</code> element
 
 </dt><dd><a href=#attr-hr-align><code>align</code></a>
@@ -1947,7 +1962,8 @@ in the tests-web repository</a>.
 
 </dd><dt>The <code>html</code> element
 
-</dt><dd><a href=#attr-html-version><code>version</code></a>
+</dt><dd><a href=#attr-prefix><code>prefix</code></a>
+</dd><dd><a href=#attr-html-version><code>version</code></a>
 
 </dd><dt>The <code>iframe</code> element
 

@@ -373,10 +373,21 @@ The |bgsound| element
 the <code id=bgsound>bgsound</code> element
 is <span>nothing</span>.
 
-<p>If the <code title=attr-prefix id=attr-prefix>prefix</code>
-attribute of an <code>html</code> or <code>head</code> element is
-specified, it <em class=rfc2119>MAY</em> have any value.<!-- RDFa 1.1
+<!--
+The |prefix| attribute, defined by RDFa 1.1 and used by OGP
+  Stats: <https://wiki.suikawiki.org/n/prefix$20138#anchor-19>
 -->
+<p>If the <dfn title=attr-prefix><code>prefix</code></dfn> attribute
+of an <code>html</code> or <code>head</code> element is specified, it
+value <em class=rfc2119>MUST</em> be one of these values:
+
+  <ul>
+
+  <li><code>og: http://ogp.me/ns#</code>
+  <li><code>og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#</code>
+  <li><code>og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#</code>
+
+  </ul>
 
 <div class="note memo">
 
@@ -1837,7 +1848,8 @@ Japanese mobile phones, including but not limited to:
 <dfn title=attr-frames-security><code>security</code></dfn>,
 <dfn title=attr-head-profile><code>profile</code></dfn>,
 <dfn title=attr-script-archive><code>archive</code></dfn>,
-<dfn title=attr-scroll><code>scroll</code></dfn>.
+<dfn title=attr-scroll><code>scroll</code></dfn>,
+<dfn title=attr-language><code>language</code></dfn>.
 
 <li>Elements <code>image</code> and <code>isindex</code>.
 
@@ -1927,13 +1939,13 @@ pseudo-XHTML documents served as text/html -->.
 <dfn title=attr-about><code>about</code></dfn>,
 <dfn title=attr-content><code>content</code></dfn>,
 <dfn title=attr-datatype><code>datatype</code></dfn>,
-<dfn title=attr-language><code>language</code></dfn>,
 <dfn title=attr-property><code>property</code></dfn>,
 <dfn title=attr-rel><code>rel</code></dfn>,
 <dfn title=attr-resource><code>resource</code></dfn>,
 <dfn title=attr-rev><code>rev</code></dfn>,
 <dfn title=attr-typeof><code>typeof</code></dfn>,
-<dfn title=attr-vocab><code>vocab</code></dfn>.
+<dfn title=attr-vocab><code>vocab</code></dfn>,
+<code title=attr-prefix>prefix</code>.
 
 </ul>
 
@@ -2031,7 +2043,6 @@ in the tests-web repository</a>.
 <dd><a href="#handler-ontouchend"><code>ontouchend</code></a>
 <dd><a href="#handler-ontouchmove"><code>ontouchmove</code></a>
 <dd><a href="#handler-ontouchstart"><code>ontouchstart</code></a>
-<dd><a href="#attr-prefix"><code>prefix</code></a>
 <dd><a href="#attr-unselectable"><code>unselectable</code></a>
 <dd><a href="#attr-x-ms-format-detection"><code>x-ms-format-detection</code></a>
 
@@ -2212,6 +2223,10 @@ in the tests-web repository</a>.
 <dd><a href="#attr-align"><code>align</code></a>
 <dd><a href="#attr-br-clear"><code>clear</code></a>
 
+<dt>The <code>head</code> element
+
+<dd><a href="#attr-prefix"><code>prefix</code></a>
+
 <dt>The <code>hr</code> element
 
 <dd><a href="#attr-hr-align"><code>align</code></a>
@@ -2222,6 +2237,7 @@ in the tests-web repository</a>.
 
 <dt>The <code>html</code> element
 
+<dd><a href="#attr-prefix"><code>prefix</code></a>
 <dd><a href="#attr-html-version"><code>version</code></a>
 
 <dt>The <code>iframe</code> element
