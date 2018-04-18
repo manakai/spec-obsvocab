@@ -108,8 +108,8 @@ version of the document is the only normative version.</p>
       <ol>
        <li><a href=#image-sources><span class=secno>3.9.1.1 </span>Image sources</a></li></ol></li>
      <li><a href=#the-embed-element><span class=secno>3.9.2 </span>The <code>embed</code> element</a></li>
-     <li><a href=#the-applet,-object,-and-param-elements><span class=secno>3.9.3 </span>The <code>applet</code>, <code>object</code>,
-and <code>param</code> elements</a></li>
+     <li><a href=#the-object-and-param-elements><span class=secno>3.9.3 </span>The <code>object</code>
+and <code>param</code> <span title=element>elements</span></a></li>
      <li><a href=#audio-and-video><span class=secno>3.9.4 </span>Audio and video</a></li></ol></li>
    <li><a href=#frames><span class=secno>3.10 </span>Frames</a>
     <ol>
@@ -289,6 +289,7 @@ Standard</cite></a>.
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#xml-documents><dfn id=xml-documents>XML documents</dfn></a>,
 
+<!-- XXX -->
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#home-subtree><dfn id=home-subtree>home subtree</dfn></a>,
 
 <a href=http://www.whatwg.org/specs/web-apps/current-work/complete.html#valid-integer><dfn id=valid-integer>valid integer</dfn></a>,
@@ -547,8 +548,8 @@ Normatively defined in HTML Standard - HTML5 obsolete
 <section>
 <h1 id=dimension><span class=secno>3.3.1 </span>Dimension</h1>
 
-<p>If the <code id=attr-height title="">height</code> or <code id=attr-width title="">width</code> attribute of an <code>applet</code>,
-<code>table</code>, <code>td</code>, <code>th</code>, or
+<p>If the <code id=attr-height title="">height</code> or <code id=attr-width title="">width</code> attribute of
+a <code>table</code>, <code>td</code>, <code>th</code>, or
 <code>marquee</code> element is specified, its value <em class=rfc2119>MUST</em> be a <a href=#valid-non-negative-integer>valid non-negative
 integer</a>.<!-- HTML5's embedded content's |width| and |height|
 attributes,
@@ -597,14 +598,17 @@ rendering, cellborder
 was toppadding, rightpadding, bottompadding, and leftpadding -->
 
 </p><p>If the <code id=attr-hspace title=attr-hspace>hspace</code> or
-<code id=attr-vspace title=attr-vspace>vspace</code> attribute of an
-<code>applet</code>, <code>embed</code>, <code>iframe</code>,
-<code>img</code>, <code>input</code>, <code>marquee</code>,
-<code>object</code>, or <code>table</code> element is specified, its
+<code id=attr-vspace title=attr-vspace>vspace</code> attribute of
+an <code>embed</code>, <code>iframe</code>, <code>img</code>, 
+<code>input</code>, <code>marquee</code>, <code>object</code>,
+or <code>table</code> element is specified, its
 value <em class=rfc2119>MUST</em> be a <a href=#valid-dimension-value>valid dimension
-value</a>.  The <code title=attr-hspace>hspace</code> and <code title=attr-vspace>vspace</code> attributes of the <code>input</code>
-element apply only to elements whoes <code title=attr-input-type>type</code> attribute is in the <span title=attr-input-type-image>Image Button</span> state.<!-- HTML
-Standard rendering -->
+value</a>.  The <code title=attr-hspace>hspace</code>
+and <code title=attr-vspace>vspace</code> attributes of
+the <code>input</code> element apply only to elements
+whoes <code title=attr-input-type>type</code> attribute is in
+the <span title=attr-input-type-image>Image Button</span>
+state.<!-- HTML Standard rendering -->
 
 </p><p>The <code id=attr-embed-units title=attr-embed-units>units</code>
 attribute of the <code>embed</code> element <cite class="bibref
@@ -776,17 +780,23 @@ attribute of a <code>col</code>, <code>colgroup</code> <cite class="bibref infor
 <code title="">absmiddle</code>, <code title="">right</code>, <code title="">justify</code>, and <code title="">char</code>, where <code title="">middle</code> and <code title="">absmiddle</code> are
 non-conforming.<!-- HTML Standard rendering, HTML4 -->
 
-</p><p>The <code id=attr-objects-align title=attr-objects-align>align</code> attribute of an
-<code>applet</code>, <code>embed</code>, <code>iframe</code>,
-<code>img</code>, <code>input</code>, or <code>object</code> element
-is an <a href=#enumerated-attribute>enumerated attribute</a> with keywords <code title="">left</code>, <code title="">right</code>, <code title="">top</code>,
-<code title="">bottom</code>, <code title="">baseline</code>, <code title="">center</code>, <code title="">middle</code>, <code title="">texttop</code>, <code title="">absmiddle</code>, <code title="">abscenter</code>.  Keywords other than <code title="">left</code>,
-<code title="">right</code>, <code title="">top</code>, <code title="">middle</code>, and <code title="">bottom</code> are non‐
-conforming.  The <code title=attr-objects-align>align</code> attribute
-of the <code>input</code> element applies only to <code>input</code>
+</p><p>The <code id=attr-objects-align title=attr-objects-align>align</code> attribute of
+an <code>embed</code>, <code>iframe</code>, <code>img</code>, 
+<code>input</code>, or <code>object</code> element is
+an <a href=#enumerated-attribute>enumerated attribute</a> with
+keywords <code title="">left</code>, <code title="">right</code>,
+<code title="">top</code>, <code title="">bottom</code>, 
+<code title="">baseline</code>, <code title="">center</code>, 
+<code title="">middle</code>, <code title="">texttop</code>, 
+<code title="">absmiddle</code>, <code title="">abscenter</code>.  Keywords
+other than <code title="">left</code>, <code title="">right</code>,
+<code title="">top</code>, <code title="">middle</code>,
+and <code title="">bottom</code> are non-conforming.
+The <code title=attr-objects-align>align</code> attribute of
+the <code>input</code> element applies only to <code>input</code>
 elements whose <code title=attr-input-type>type</code> attribute is in
-the <span title=attr-input-type-image>Image Button</span> state.<!--
-HTML Standard rendering,
+the <span title=attr-input-type-image>Image Button</span>
+state.<!-- HTML Standard rendering,
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
 
@@ -1015,14 +1025,8 @@ is <a href=#text>text</a>.<!-- HTML Standard parsing -->
 </san></p></section>
 
 <section>
-<h1 id=the-applet,-object,-and-param-elements><span class=secno>3.9.3 </span>The <code>applet</code>, <code>object</code>,
-and <code>param</code> elements</h1>
-
-<p>The <a href=#content-model>content model</a> of the <code id=applet>applet</code>
-element is same as the <code>object</code> element.<!-- HTML Standard
-obsolete, HTML4 -->
-
-</p><hr>
+<h1 id=the-object-and-param-elements><span class=secno>3.9.3 </span>The <code>object</code>
+and <code>param</code> <span title=element>elements</span></h1>
 
 <p>If the <code id=attr-object-archive title=attr-object-archive>archive</code> attribute of the
 <code>object</code> element is present, its value <em class=rfc2119>MUST</em> be a <a href=#set-of-space-separated-tokens>set of space-separated
@@ -1644,8 +1648,9 @@ pseudo-XHTML documents served as text/html -->.
 <code>noframe</code>, <code>noimg</code>, <code>element</code>,
 <code>entity</code>, and <code>attrib</code>.
 
-</li><li><span title=attribute>Attributes</span> of obsolete elements:
-<code>applet</code> (including but not limited to:
+</li><li>The <dfn id=applet><code>applet</code></dfn> <span>element</span>
+and its <span title=attribute>attributes</span> (including but not
+limited to:
 <code title=attr-objects-align>align</code>,
 <dfn id=attr-applet-alt title=attr-applet-alt><code>alt</code></dfn>,
 <dfn id=attr-applet-archive title=attr-applet-archive><code>archive</code></dfn>,
@@ -1657,7 +1662,14 @@ pseudo-XHTML documents served as text/html -->.
 <code title=attr-objects-name>name</code>,
 <dfn id=attr-applet-object title=attr-applet-object><code>object</code></dfn>,
 <code title=attr-vspace>vspace</code>,
-<code title=attr-width>width</code>),
+<code title=attr-width>width</code>).
+<!-- The HTML parser still has special behavior for the "applet"
+     element and we can treat it as if it were an "object" in theory.
+     However, keeping old special validation rules just for this
+     obsolete element seems odd.  -->
+
+</li><li><span title=attribute>Attributes</span> of
+obsolete <span title=element>elements</span>:
 <code>bgsound</code>
 (including but not limited to: 
 <dfn id=attr-bgsound-balance title=attr-bgsound-balance><code>balance</code></dfn>,
@@ -1792,10 +1804,6 @@ in the tests-web repository</a>.
 </dd><dt>The <code>address</code> element
 
 </dt><dd><a href=#attr-br-clear><code>clear</code></a>
-
-</dd><dt>The <a href=#applet><code>applet</code></a> element
-
-</dt><dd>No element-specific attribute.
 
 </dd><dt>The <code>area</code> element
 

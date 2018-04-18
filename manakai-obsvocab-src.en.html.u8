@@ -535,8 +535,8 @@ id=handler-marquee-onstart>onstart</code>.
 <h1>Dimension</h1>
 
 <p>If the <code title id=attr-height>height</code> or <code title
-id=attr-width>width</code> attribute of an <code>applet</code>,
-<code>table</code>, <code>td</code>, <code>th</code>, or
+id=attr-width>width</code> attribute of
+a <code>table</code>, <code>td</code>, <code>th</code>, or
 <code>marquee</code> element is specified, its value <em
 class=rfc2119>MUST</em> be a <span>valid non-negative
 integer</span>.<!-- HTML5's embedded content's |width| and |height|
@@ -615,17 +615,17 @@ rendering, cellborder
 was toppadding, rightpadding, bottompadding, and leftpadding -->
 
 <p>If the <code title=attr-hspace id=attr-hspace>hspace</code> or
-<code title=attr-vspace id=attr-vspace>vspace</code> attribute of an
-<code>applet</code>, <code>embed</code>, <code>iframe</code>,
-<code>img</code>, <code>input</code>, <code>marquee</code>,
-<code>object</code>, or <code>table</code> element is specified, its
+<code title=attr-vspace id=attr-vspace>vspace</code> attribute of
+an <code>embed</code>, <code>iframe</code>, <code>img</code>, 
+<code>input</code>, <code>marquee</code>, <code>object</code>,
+or <code>table</code> element is specified, its
 value <em class=rfc2119>MUST</em> be a <span>valid dimension
-value</span>.  The <code title=attr-hspace>hspace</code> and <code
-title=attr-vspace>vspace</code> attributes of the <code>input</code>
-element apply only to elements whoes <code
-title=attr-input-type>type</code> attribute is in the <span
-title=attr-input-type-image>Image Button</span> state.<!-- HTML
-Standard rendering -->
+value</span>.  The <code title=attr-hspace>hspace</code>
+and <code title=attr-vspace>vspace</code> attributes of
+the <code>input</code> element apply only to elements
+whoes <code title=attr-input-type>type</code> attribute is in
+the <span title=attr-input-type-image>Image Button</span>
+state.<!-- HTML Standard rendering -->
 
 <p>The <code title=attr-embed-units id=attr-embed-units>units</code>
 attribute of the <code>embed</code> element <cite class="bibref
@@ -862,22 +862,23 @@ title>middle</code> and <code title>absmiddle</code> are
 non-conforming.<!-- HTML Standard rendering, HTML4 -->
 
 <p>The <code title=attr-objects-align
-id=attr-objects-align>align</code> attribute of an
-<code>applet</code>, <code>embed</code>, <code>iframe</code>,
-<code>img</code>, <code>input</code>, or <code>object</code> element
-is an <span>enumerated attribute</span> with keywords <code
-title>left</code>, <code title>right</code>, <code title>top</code>,
-<code title>bottom</code>, <code title>baseline</code>, <code
-title>center</code>, <code title>middle</code>, <code
-title>texttop</code>, <code title>absmiddle</code>, <code
-title>abscenter</code>.  Keywords other than <code title>left</code>,
-<code title>right</code>, <code title>top</code>, <code
-title>middle</code>, and <code title>bottom</code> are non‐
-conforming.  The <code title=attr-objects-align>align</code> attribute
-of the <code>input</code> element applies only to <code>input</code>
+id=attr-objects-align>align</code> attribute of
+an <code>embed</code>, <code>iframe</code>, <code>img</code>, 
+<code>input</code>, or <code>object</code> element is
+an <span>enumerated attribute</span> with
+keywords <code title>left</code>, <code title>right</code>,
+<code title>top</code>, <code title>bottom</code>, 
+<code title>baseline</code>, <code title>center</code>, 
+<code title>middle</code>, <code title>texttop</code>, 
+<code title>absmiddle</code>, <code title>abscenter</code>.  Keywords
+other than <code title>left</code>, <code title>right</code>,
+<code title>top</code>, <code title>middle</code>,
+and <code title>bottom</code> are non-conforming.
+The <code title=attr-objects-align>align</code> attribute of
+the <code>input</code> element applies only to <code>input</code>
 elements whose <code title=attr-input-type>type</code> attribute is in
-the <span title=attr-input-type-image>Image Button</span> state.<!--
-HTML Standard rendering,
+the <span title=attr-input-type-image>Image Button</span>
+state.<!-- HTML Standard rendering,
 <http://web.archive.org/web/20030805031928/devedge.netscape.com/library/manuals/1998/htmlguide/tags15.html#1346050>
 -->
 
@@ -1154,14 +1155,8 @@ is <span>text</span>.<!-- HTML Standard parsing -->
 </section>
 
 <section>
-<h1>The <code>applet</code>, <code>object</code>,
-and <code>param</code> elements</h1>
-
-<p>The <span>content model</span> of the <code id=applet>applet</code>
-element is same as the <code>object</code> element.<!-- HTML Standard
-obsolete, HTML4 -->
-
-<hr>
+<h1>The <code>object</code>
+and <code>param</code> <span title=element>elements</span></h1>
 
 <p>If the <code title=attr-object-archive
 id=attr-object-archive>archive</code> attribute of the
@@ -1908,8 +1903,9 @@ pseudo-XHTML documents served as text/html -->.
 <code>noframe</code>, <code>noimg</code>, <code>element</code>,
 <code>entity</code>, and <code>attrib</code>.
 
-<li><span title=attribute>Attributes</span> of obsolete elements:
-<code>applet</code> (including but not limited to:
+<li>The <dfn id=applet><code>applet</code></dfn> <span>element</span>
+and its <span title=attribute>attributes</span> (including but not
+limited to:
 <code title=attr-objects-align>align</code>,
 <dfn title=attr-applet-alt><code>alt</code></dfn>,
 <dfn title=attr-applet-archive><code>archive</code></dfn>,
@@ -1921,7 +1917,14 @@ pseudo-XHTML documents served as text/html -->.
 <code title=attr-objects-name>name</code>,
 <dfn title=attr-applet-object><code>object</code></dfn>,
 <code title=attr-vspace>vspace</code>,
-<code title=attr-width>width</code>),
+<code title=attr-width>width</code>).
+<!-- The HTML parser still has special behavior for the "applet"
+     element and we can treat it as if it were an "object" in theory.
+     However, keeping old special validation rules just for this
+     obsolete element seems odd.  -->
+
+<li><span title=attribute>Attributes</span> of
+obsolete <span title=element>elements</span>:
 <code>bgsound</code>
 (including but not limited to: 
 <dfn title=attr-bgsound-balance><code>balance</code></dfn>,
@@ -2059,10 +2062,6 @@ in the tests-web repository</a>.
 <dt>The <code>address</code> element
 
 <dd><a href="#attr-br-clear"><code>clear</code></a>
-
-<dt>The <a href="#applet"><code>applet</code></a> element
-
-<dd>No element-specific attribute.
 
 <dt>The <code>area</code> element
 
