@@ -1,1 +1,4 @@
 Redirect 301 /www/markup/html/exts/manakai-obsvocab https://manakai.github.io/spec-obsvocab/
+Redirect 301 /www/markup/html/exts/index https://manakai.github.io/spec-obsvocab/
+Redirect 301 /www/markup/html/exts/index.html https://manakai.github.io/spec-obsvocab/
+DirectoryIndex none
